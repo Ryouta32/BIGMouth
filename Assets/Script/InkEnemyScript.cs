@@ -22,6 +22,8 @@ public class InkEnemyScript : MonoBehaviour
 
     [SerializeField]
     bool erase = false;
+
+    private bool col=false;
     void Start()
     {
 
@@ -30,69 +32,49 @@ public class InkEnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetMouseButton(0))
-        //{
-        //    var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //    bool success = true;
-        //    RaycastHit hitInfo;
-        //    if (Physics.Raycast(ray, out hitInfo))
-        //    {
-        //        var paintObject = hitInfo.transform.GetComponent<InkCanvas>();
-        //        if (paintObject != null)
-        //            switch (useMethodType)
-        //            {
-        //                case UseMethodType.RaycastHitInfo:
 
-        //                    success = erase ? paintObject.Erase(brush, hitInfo) : paintObject.Paint(brush, hitInfo);
-        //                    break;
-
-        //                case UseMethodType.WorldPoint:
-        //                    success = erase ? paintObject.Erase(brush, hitInfo.point) : paintObject.Paint(brush, hitInfo.point);
-        //                    break;
-
-        //                case UseMethodType.NearestSurfacePoint:
-        //                    success = erase ? paintObject.EraseNearestTriangleSurface(brush, hitInfo.point) : paintObject.PaintNearestTriangleSurface(brush, hitInfo.point);
-        //                    break;
-
-        //                case UseMethodType.DirectUV:
-        //                    if (!(hitInfo.collider is MeshCollider))
-        //                        Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
-        //                    success = erase ? paintObject.EraseUVDirect(brush, hitInfo.textureCoord) : paintObject.PaintUVDirect(brush, hitInfo.textureCoord);
-        //                    break;
-        //            }
-        //        if (!success)
-        //            Debug.LogError("Failed to paint.");
-        //    }
-        //}
-        Ray ray = new Ray(transform.position, -transform.up);
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        Vector3 hitPos;
         RaycastHit hit;
         bool success = true;
 
-        if (Physics.Raycast(ray, out hit))
+        foreach (ContactPoint point in collision.contacts)
         {
-            InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
-            if (paint != null)
-                switch (useMethodType)
+            hitPos = point.normal;
+            Ray ray = new Ray( transform.position,-hitPos);
+
+            Debug.DrawRay(transform.position,- hitPos, Color.blue,0.1f );
+
+            if (Physics.Raycast(ray, out hit,(transform.localScale.x/2)+0.1f))
+            {
+                InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
+
+                if (paint != null)
                 {
-                    case UseMethodType.RaycastHitInfo:
-                        success = erase ? paint.Erase(brush, hit) : paint.Paint(brush, hit);
+                    switch (useMethodType)
+                    {
+                        case UseMethodType.RaycastHitInfo:
+                            success = erase ? paint.Erase(brush, hit) : paint.Paint(brush, hit);
 
-                        break;
-                    case UseMethodType.WorldPoint:
-                        success = erase ? paint.Erase(brush, hit.point) : paint.Paint(brush, hit.point);
-                        break;
+                            break;
+                        case UseMethodType.WorldPoint:
+                            success = erase ? paint.Erase(brush, hit.point) : paint.Paint(brush, hit.point);
+                            break;
 
-                    case UseMethodType.NearestSurfacePoint:
-                        success = erase ? paint.EraseNearestTriangleSurface(brush, hit.point) : paint.PaintNearestTriangleSurface(brush, hit.point);
-                        break;
+                        case UseMethodType.NearestSurfacePoint:
+                            success = erase ? paint.EraseNearestTriangleSurface(brush, hit.point) : paint.PaintNearestTriangleSurface(brush, hit.point);
+                            break;
 
-                    case UseMethodType.DirectUV:
-                        if (!(hit.collider is MeshCollider))
-                            Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
-                        success = erase ? paint.EraseUVDirect(brush, hit.textureCoord) : paint.PaintUVDirect(brush, hit.textureCoord);
-                        break;
+                        case UseMethodType.DirectUV:
+                            if (!(hit.collider is MeshCollider))
+                                Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
+                            success = erase ? paint.EraseUVDirect(brush, hit.textureCoord) : paint.PaintUVDirect(brush, hit.textureCoord);
+                            break;
+                    }
                 }
-
+            }
         }
     }
 }

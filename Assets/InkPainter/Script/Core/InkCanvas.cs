@@ -683,6 +683,7 @@ namespace Es.InkPainter
 				brush = brush.Clone() as Brush;
 				OnPaintStart(this, brush);
 			}
+			Debug.Log(uv);
 
 			var set = materialSelector == null ? paintSet : paintSet.Where(materialSelector);
 			foreach(var p in set)
