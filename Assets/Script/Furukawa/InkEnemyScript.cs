@@ -1,10 +1,9 @@
 using Es.InkPainter;
-using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BouSakiScript : MonoBehaviour
+public class InkEnemyScript : MonoBehaviour
 {
     [System.Serializable]
     private enum UseMethodType
@@ -14,8 +13,6 @@ public class BouSakiScript : MonoBehaviour
         NearestSurfacePoint,
         DirectUV,
     }
-    [SerializeField] bouScript bouSC;
-    [SerializeField] Material material;
 
     [SerializeField]
     private Brush brush;
@@ -25,37 +22,51 @@ public class BouSakiScript : MonoBehaviour
 
     [SerializeField]
     bool erase = false;
-    // Start is called before the first frame update
+
+    Rigidbody rb;
+    private bool col=false;
+    Vector3 power=new Vector3(-2,0,0);
     void Start()
     {
-
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (rb.velocity.magnitude <= 5f&&col)
+        {
+            rb.AddForce(power);
+
+        }
+        StartCoroutine("comp");
+    }
+    IEnumerator comp()
+    {
+        yield return new WaitForSeconds(2f);
+        power = power * -1;
+        rb.velocity =Vector3.zero ;
 
     }
-
-    private void OnTriggerStay(Collider other)
+    private void OnCollisionStay(Collision collision)
     {
-        if (other.gameObject.tag == "HA")
+        Vector3 hitPos;
+        RaycastHit hit;
+        bool success = true;
+        col = true;
+        foreach (ContactPoint point in collision.contacts)
         {
-            other.gameObject.GetComponent<Renderer>().material.color = Color.green;
-        }
+            hitPos = point.normal;
+            Ray ray = new Ray( transform.position,-hitPos);
 
-        if (other.transform.GetComponent<InkCanvas>())
-        {
-            bool success = true;
-            Vector3 hitPos = other.ClosestPointOnBounds(this.transform.position);
+            Debug.DrawRay(transform.position,- hitPos, Color.blue,0.1f );
 
-            Ray ray = new Ray(transform.position, -hitPos);
-
-            foreach (RaycastHit hit in Physics.RaycastAll(ray))
+            if (Physics.Raycast(ray, out hit,(transform.localScale.x/2)+0.1f))
             {
                 InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
 
                 if (paint != null)
+                {
                     switch (useMethodType)
                     {
                         case UseMethodType.RaycastHitInfo:
@@ -76,6 +87,7 @@ public class BouSakiScript : MonoBehaviour
                             success = erase ? paint.EraseUVDirect(brush, hit.textureCoord) : paint.PaintUVDirect(brush, hit.textureCoord);
                             break;
                     }
+                }
             }
         }
     }

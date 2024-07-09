@@ -29,11 +29,11 @@ public class Bouncing : MonoBehaviour
         if (ballGrabbed && OVRInput.GetUp(actionBtn))
         {
             currentBall.transform.parent = null;
-            var ballPos = currentBall.transform.position;
-            var vel = trackingspace.rotation * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
-            var angVel = OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.RTouch);
-            currentBall.GetComponent<BouncingBallLogic>().Release(ballPos, vel, angVel);
             ballGrabbed = false;
+        }
+        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+        {
+
         }
     }
 }
