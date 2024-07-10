@@ -7,6 +7,10 @@ TagManager:
   - HA
   - FxTemporaire
   - MIMIC
+  - Wall1
+  - Floor
+  - Wall2
+  - Wall3
   layers:
   - Default
   - TransparentFX
