@@ -1750,7 +1750,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 124258, guid: 68e6cd702d40b5e42b27fa9751ff0722, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 431784, guid: 68e6cd702d40b5e42b27fa9751ff0722, type: 3}
       propertyPath: m_RootOrder
@@ -4139,7 +4139,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 1000
+    maxNumParticles: 90
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -8299,13 +8299,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042257677}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 86.375084, y: 33.3603, z: 136.13283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.55, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2089110262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 542646133629194841, guid: 3c8872c38b718d24bac70c223a744be1, type: 3}
