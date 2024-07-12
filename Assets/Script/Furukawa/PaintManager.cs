@@ -1,9 +1,10 @@
 using Es.InkPainter;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
-public class PaintManager : MonoBehaviour
+public class PaintManager 
 {
     [System.Serializable]
     public enum UseMethodType
@@ -21,19 +22,17 @@ public class PaintManager : MonoBehaviour
         {
             hitPos = point.normal;
             Ray ray = new Ray(tra.position, -hitPos);
-            Debug.Log(hitPos);
             if (col.transform.GetComponent<InkCanvas>())
             {
                 bool success = true;
 
 
 
-                Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
                 foreach (RaycastHit hit in Physics.RaycastAll(ray))
                 {
 
+                    //Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
                     InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
-
 
                     if (paint != null)
                     {
@@ -67,29 +66,31 @@ public class PaintManager : MonoBehaviour
     public void Paint(ParticleCollisionEvent col, UseMethodType useMethodType, bool erase, Brush brush, GameObject obj,Transform tra)
     {
         Vector3 hitPos;
-        //foreach (Vector3 point in col.intersection)
-        {
             hitPos = col.intersection;
-            Ray ray = new Ray(tra.position, hitPos);
             if (obj.GetComponent<InkCanvas>())
             {
                 bool success = true;
 
-
-                Debug.Log(hitPos);
-
-                Debug.DrawLine(tra.position, hitPos, Color.red, 19f);
-                hitPos = new Vector3(-hitPos.x, hitPos.y, -hitPos.z);
                 RaycastHit hit;
-                if(Physics.Raycast(tra.position, -hitPos, out hit, Mathf.Infinity))
+
+            Ray ray = new Ray(tra.position, tra.TransformDirection(hitPos));
+
+            Debug.Log(ray);
+            if (Physics.Raycast(ray,out hit,Mathf.Infinity))
                 {
+                var dir = ray.origin + ray.direction * hit.distance;
 
-                    Debug.Log("êFìhÇÍÇƒÇÈ");
-                    InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
+                Debug.DrawLine(tra.position, dir, Color.red, 1f);
+
+                Debug.Log("UV" + hit.textureCoord);
+                Debug.Log("point" + hit.point);
+                InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
 
 
-                    if (paint != null)
+                ////Debug.Log(hit.transform.gameObject.name);
+                if (paint != null)
                     {
+
                         tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
                         switch (useMethodType)
                         {
@@ -147,5 +148,3 @@ public class PaintManager : MonoBehaviour
             }
         }
     }
-}
-    

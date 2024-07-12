@@ -763,7 +763,7 @@ namespace Es.InkPainter
 
 			Vector3 p = transform.InverseTransformPoint(worldPos);
 			Matrix4x4 mvp = renderCamera.projectionMatrix * renderCamera.worldToCameraMatrix * transform.localToWorldMatrix;
-			if(MeshOperator.LocalPointToUV(p, mvp, out uv))
+			if (MeshOperator.LocalPointToUV(p, mvp, out uv))
 				return PaintUVDirect(brush, uv, materialSelector);
 			else
 			{

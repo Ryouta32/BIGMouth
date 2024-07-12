@@ -38,7 +38,5 @@ public class BouSakiScript : MonoBehaviour
     {
         PaintManager pManager = new PaintManager();
         pManager.Paint(other, useMethodType, erase, brush,transform);
-
-
     }
 }
