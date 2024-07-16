@@ -24,22 +24,26 @@ public class GravitySet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        //if (Input.GetKey(KeyCode.UpArrow))
+        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
         {
             this.transform.position += transform.forward * speed * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        //if (Input.GetKey(KeyCode.DownArrow))
+        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
         {
             this.transform.position -= transform.forward * speed * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        //if (Input.GetKey(KeyCode.LeftArrow))
+        if (OVRInput.GetDown(OVRInput.RawButton.A))
         {
             this.transform.Rotate(0, -1f, 0);
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        //if (Input.GetKey(KeyCode.RightArrow))
+        if (OVRInput.GetDown(OVRInput.RawButton.B))
         {
             this.transform.Rotate(0, 1f, 0);
         }
