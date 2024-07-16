@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 8953575995360782876}
   - component: {fileID: 3693869175048092736}
   m_Layer: 9
-  m_Name: celongPlane
+  m_Name: CeilingPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
