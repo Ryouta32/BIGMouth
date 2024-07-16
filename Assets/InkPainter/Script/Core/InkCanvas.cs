@@ -590,7 +590,7 @@ namespace Es.InkPainter
 		private Brush GetEraser(Brush brush, PaintSet paintSet, Vector2 uv, bool useMainPaint, bool useNormalPaint, bool useHeightpaint)
 		{
 			var b = brush.Clone() as Brush;
-			b.Color = Color.white;
+			b.Color = new Color(0,0,0,0);
 			b.ColorBlending = Brush.ColorBlendType.UseBrush;
 			b.NormalBlending = Brush.NormalBlendType.UseBrush;
 			b.HeightBlending = Brush.HeightBlendType.UseBrush;
@@ -683,7 +683,6 @@ namespace Es.InkPainter
 				brush = brush.Clone() as Brush;
 				OnPaintStart(this, brush);
 			}
-			//Debug.Log(uv);
 
 			var set = materialSelector == null ? paintSet : paintSet.Where(materialSelector);
 			foreach(var p in set)
@@ -764,7 +763,7 @@ namespace Es.InkPainter
 
 			Vector3 p = transform.InverseTransformPoint(worldPos);
 			Matrix4x4 mvp = renderCamera.projectionMatrix * renderCamera.worldToCameraMatrix * transform.localToWorldMatrix;
-			if(MeshOperator.LocalPointToUV(p, mvp, out uv))
+			if (MeshOperator.LocalPointToUV(p, mvp, out uv))
 				return PaintUVDirect(brush, uv, materialSelector);
 			else
 			{

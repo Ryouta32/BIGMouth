@@ -7,25 +7,26 @@ using static UnityEngine.GraphicsBuffer;
 public class bouScript : MonoBehaviour
 {
     [SerializeField] OVRCameraRig ovr;
+    Vector3 move;
+    Vector3 oldPos;
     // Start is called before the first frame update
     void Start()
     {
+        transform.position= ovr.rightHandAnchor.position;
+        oldPos = ovr.rightHandAnchor.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = ovr.rightHandAnchor.position;
+        move = oldPos -= ovr.rightHandAnchor.position;
+        transform.position -= move;
 
         transform.LookAt(ovr.leftHandAnchor.position);
+        oldPos= ovr.rightHandAnchor.position;
+        LogSC.log = move.ToString()+"\n"+transform.position.ToString();
     }
 
-    float GetAngle(Vector2 start, Vector2 target)
-    {
-        Vector2 dt = target - start;
-        float rad = Mathf.Atan2(dt.y, dt.x);
-        float degree = rad * Mathf.Rad2Deg;
+    public Vector3 pos => ovr.leftHandAnchor.position - ovr.rightHandAnchor.position;
 
-        return degree;
-    }
 }
