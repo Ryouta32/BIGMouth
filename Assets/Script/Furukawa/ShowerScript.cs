@@ -1,4 +1,5 @@
 using Es.InkPainter;
+using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering;
@@ -28,12 +29,10 @@ public class ShowerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void OnCollisionEnter(Collision col)
-    {
-    }
+
     private void OnParticleCollision(GameObject obj)
     {
         particle.GetCollisionEvents(obj, collisionEvents);

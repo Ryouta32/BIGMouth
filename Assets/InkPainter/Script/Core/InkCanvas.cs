@@ -590,7 +590,7 @@ namespace Es.InkPainter
 		private Brush GetEraser(Brush brush, PaintSet paintSet, Vector2 uv, bool useMainPaint, bool useNormalPaint, bool useHeightpaint)
 		{
 			var b = brush.Clone() as Brush;
-			b.Color = Color.white;
+			b.Color = new Color(0,0,0,0);
 			b.ColorBlending = Brush.ColorBlendType.UseBrush;
 			b.NormalBlending = Brush.NormalBlendType.UseBrush;
 			b.HeightBlending = Brush.HeightBlendType.UseBrush;

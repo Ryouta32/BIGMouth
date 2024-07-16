@@ -27,4 +27,6 @@ public class bouScript : MonoBehaviour
         LogSC.log = move.ToString()+"\n"+transform.position.ToString();
     }
 
+    public Vector3 pos => ovr.leftHandAnchor.position - ovr.rightHandAnchor.position;
+
 }
