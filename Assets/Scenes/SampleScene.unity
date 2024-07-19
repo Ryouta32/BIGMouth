@@ -1088,6 +1088,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2360129523559599188, guid: 134d6f608e379f14fad66eb0dead659a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 405872455}
+    - targetCorrespondingSourceObject: {fileID: -2360129523559599188, guid: 134d6f608e379f14fad66eb0dead659a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 405872456}
+    - targetCorrespondingSourceObject: {fileID: -2360129523559599188, guid: 134d6f608e379f14fad66eb0dead659a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 405872457}
   m_SourcePrefab: {fileID: 100100000, guid: 134d6f608e379f14fad66eb0dead659a, type: 3}
 --- !u!4 &405872452 stripped
 Transform:
@@ -1136,6 +1142,54 @@ MonoBehaviour:
   ShowerObj: {fileID: 2042257677}
   showerCube: {fileID: 5025516467825413144, guid: f1facb0529e85284bacc65622c68592d, type: 3}
   power: 200
+--- !u!65 &405872456
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405872454}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.41783836, y: 0.13687474, z: 0.2576997}
+  m_Center: {x: -7.275958e-12, y: -0.016704623, z: 0.07711712}
+--- !u!54 &405872457
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405872454}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &416088943
 PrefabInstance:
   m_ObjectHideFlags: 0

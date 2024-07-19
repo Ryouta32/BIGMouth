@@ -19,7 +19,9 @@ namespace Es.InkPainter.Effective
 
 		#region PrivateField
 
-		private const string GRAB_AREA_MATERIAL = "Es.InkPainter.Effective.GrabArea";
+		//private const string GRAB_AREA_MATERIAL = "Es.InkPainter.Effective.GrabArea";
+		private const string GRAB_AREA_MATERIAL = "toumei";
+
 		private const string CLIP = "_ClipTex";
 		private const string TARGET = "_TargetTex";
 		private const string CLIP_SCALE = "_ClipScale";
@@ -50,10 +52,11 @@ namespace Es.InkPainter.Effective
 		/// <param name="wrapMpde">Texture wrap mode.</param>
 		/// <param name="dst">Store cropped texture.</param>
 		/// <param name="replaceAlpha">Replace to clip textures alpha</param>
-		public static void Clip(Texture clipTexture, float clipScale, Texture grabTargetTexture, Vector2 targetUV,float rotateAngle, GrabTextureWrapMode wrapMode, RenderTexture dst, bool replaceAlpha = true)
+		public static void Clip(Texture clipTexture, float clipScale, Texture grabTargetTexture, Vector2 targetUV,float rotateAngle, GrabTextureWrapMode wrapMode, RenderTexture dst,bool replaceAlpha = true)
 		{
 			if(grabAreaMaterial == null)
 				InitGrabAreaMaterial();
+			
 			SetGrabAreaProperty(clipTexture, clipScale, grabTargetTexture, targetUV, rotateAngle, wrapMode, replaceAlpha);
 			var tmp = RenderTexture.GetTemporary(clipTexture.width, clipTexture.height, 0);
 			Graphics.Blit(clipTexture, tmp, grabAreaMaterial);
@@ -89,13 +92,14 @@ namespace Es.InkPainter.Effective
 			grabAreaMaterial.SetFloat(CLIP_SCALE, clipScale);
 			grabAreaMaterial.SetFloat(ROTATE, rotateAngle);
 			grabAreaMaterial.SetVector(CLIP_UV, targetUV);
-
+			
 			foreach(var key in grabAreaMaterial.shaderKeywords)
 				grabAreaMaterial.DisableKeyword(key);
 			switch(wrapMpde)
 			{
 				case GrabTextureWrapMode.Clamp:
 					grabAreaMaterial.EnableKeyword(WM_CLAMP);
+					Debug.Log(grabAreaMaterial);
 					break;
 
 				case GrabTextureWrapMode.Repeat:

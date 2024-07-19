@@ -30,7 +30,7 @@ public class PaintManager
                 foreach (RaycastHit hit in Physics.RaycastAll(ray))
                 {
 
-                    //Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
+                    Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
                     InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
 
                     if (paint != null)

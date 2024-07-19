@@ -596,11 +596,12 @@ namespace Es.InkPainter
 			b.HeightBlending = Brush.HeightBlendType.UseBrush;
 			b.NormalBlend = 1f;
 			b.HeightBlend = 1f;
-
+			Texture texture =paintSet.mainTexture;
 			if(useMainPaint)
 			{
 				var rt = RenderTexture.GetTemporary(brush.BrushTexture.width, brush.BrushTexture.height);
-				GrabArea.Clip(brush.BrushTexture, brush.Scale, paintSet.mainTexture, uv, brush.RotateAngle, GrabArea.GrabTextureWrapMode.Clamp, rt);
+				GrabArea.Clip(brush.BrushTexture, brush.Scale, texture, uv, brush.RotateAngle, GrabArea.GrabTextureWrapMode.Clamp, rt);
+				//GrabArea.Clip(brush.BrushTexture, brush.Scale, paintSet.mainTexture, uv, brush.RotateAngle, GrabArea.GrabTextureWrapMode.Clamp, rt);
 				b.BrushTexture = rt;
 			}
 			if(useNormalPaint)
