@@ -9453,7 +9453,7 @@ GameObject:
   - component: {fileID: 1102120224268424400}
   - component: {fileID: 3831756977707346662}
   m_Layer: 0
-  m_Name: WFX_BImpact Sand
+  m_Name: Sand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
