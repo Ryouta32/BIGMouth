@@ -4901,7 +4901,7 @@ GameObject:
   - component: {fileID: 3708270056798598917}
   - component: {fileID: 1607694640751502496}
   m_Layer: 0
-  m_Name: hanabi
+  m_Name: Hanabi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
