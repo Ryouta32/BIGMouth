@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8691691354806357568
 Transform:
   m_ObjectHideFlags: 0
@@ -233,8 +233,8 @@ MonoBehaviour:
     brushTexture: {fileID: 2800000, guid: 569ebdf2a56b7d44b95e18c5bf5c8aa6, type: 3}
     brushNormalTexture: {fileID: 2800000, guid: 569ebdf2a56b7d44b95e18c5bf5c8aa6, type: 3}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.1
-    rotateAngle: 0
+    brushScale: 0.106
+    rotateAngle: 19
     brushNormalBlend: 0.101
     brushHeightBlend: 0
     brushColor: {r: 0.3572805, g: 0, b: 0.46226418, a: 1}
@@ -405,7 +405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7403370322842994631
 Transform:
   m_ObjectHideFlags: 0
@@ -510,7 +510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5081368085884531767
 Transform:
   m_ObjectHideFlags: 0

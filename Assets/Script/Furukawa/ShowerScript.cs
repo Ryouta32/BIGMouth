@@ -2,7 +2,7 @@ using Es.InkPainter;
 using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Rendering;
+//using UnityEditor.Rendering;
 using UnityEngine;
 using static PaintManager;
 using static UnityEngine.ParticleSystem;

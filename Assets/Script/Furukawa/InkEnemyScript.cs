@@ -49,7 +49,7 @@ public class InkEnemyScript : MonoBehaviour
 
         PaintManager paintManager = new PaintManager();
 
-        paintManager.Paint(collision, useMethodType, erase, brush, transform);
+        paintManager.Paint(collision, useMethodType, erase, brush, transform,false);
        
         }
 }

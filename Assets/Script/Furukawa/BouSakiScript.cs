@@ -30,13 +30,14 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] float power;
 
     bool on=true;
-    // Start is called before the first frame update
+    Quaternion defaultQuaternion;
+
     void Start()
     {
+        defaultQuaternion = this.transform.rotation;
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (on&&OVRInput.Get(actionBtn)|| (on && Input.GetKey(KeyCode.Space)))
@@ -58,12 +59,17 @@ public class BouSakiScript : MonoBehaviour
 
         GameObject obj;
         obj = Instantiate(showerCube, transform.position, Quaternion.identity);
-        obj.GetComponent<Rigidbody>().AddForce( bouSC.pos.normalized*power);
+        obj.GetComponent<Rigidbody>().AddForce(bouSC.pos.normalized*power);
         on = true;
     }
     private void OnCollisionStay(Collision other)
     {
         PaintManager pManager = new PaintManager();
-        pManager.Paint(other, useMethodType, erase, brush,transform);
+        pManager.Paint(other, useMethodType, erase, brush, transform,true);
+    }
+    private void OnCollisionExit(Collision col)
+    {
+        Debug.Log(defaultQuaternion);
+        transform.rotation =  defaultQuaternion;
     }
 }
