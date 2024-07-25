@@ -5,23 +5,16 @@ using UnityEngine;
 public class BetaSpawn : MonoBehaviour
 {
     [SerializeField] GameObject spawnPrefab;
+    [SerializeField] float time = 5.0f;
 
     Vector3 objectSize;
     float x, z;
-    [SerializeField] float time = 5.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        InvokeRepeating(nameof(Spawn), 1, time);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
-        OVRScenePlane floor = sceneRoom.Floor;
+        //OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
+        //OVRScenePlane floor = sceneRoom.Floor;
 
         // オブジェクトのRendererコンポーネントを取得
         Renderer renderer = GetComponent<Renderer>();
@@ -30,16 +23,21 @@ public class BetaSpawn : MonoBehaviour
         objectSize = renderer.bounds.size;
 
         // サイズをログに出力
-        Debug.Log("Object Size: " + objectSize);
+        //Debug.Log("Object Size: " + objectSize);
 
         x = objectSize.x / 2;
         z = objectSize.z / 2;
 
+        // time秒ごとにSpawn呼び出す
+        InvokeRepeating(nameof(Spawn), 1, time);
     }
 
     void Spawn()
     {
+        // 角度ランダム生成
         int rnd = Random.Range(0, 360);
+
+        // オブジェクトを生成（位置は床の中心）
         Instantiate(spawnPrefab, new Vector3(x, objectSize.y, z), Quaternion.Euler(0, rnd, 0));
     }
 }
