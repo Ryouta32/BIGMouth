@@ -171,7 +171,7 @@ MonoBehaviour:
     normalTextureName: _BumpMap
     heightTextureName: _ParallaxMap
     useMainPaint: 1
-    useNormalPaint: 1
+    useNormalPaint: 0
     useHeightPaint: 0
 --- !u!114 &3481102203504461727
 MonoBehaviour:
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2a0be4b65a50a47a4cba5677b88881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPrefab: {fileID: 2272505081643546386, guid: c8984972632c28e4faf21a4cf5d5c3da, type: 3}
+  spawnPrefab: {fileID: 4083369751829114074, guid: c004e0adde7087c428ae708b09988ced, type: 3}
   time: 5
 --- !u!1 &2680017964643559872
 GameObject:

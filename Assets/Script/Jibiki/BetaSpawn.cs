@@ -40,6 +40,6 @@ public class BetaSpawn : MonoBehaviour
     void Spawn()
     {
         int rnd = Random.Range(0, 360);
-        Instantiate(spawnPrefab, new Vector3(x, objectSize.y, z), Quaternion.Euler(0, rnd, 0));
+        Instantiate(spawnPrefab, new Vector3(0, 2, 0), Quaternion.Euler(0, rnd, 0));
     }
 }
