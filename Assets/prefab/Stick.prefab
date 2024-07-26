@@ -57,7 +57,6 @@ GameObject:
   - component: {fileID: 6035548770177820445}
   - component: {fileID: 4267319450827844442}
   - component: {fileID: 3327503027612956360}
-  - component: {fileID: 5957269428960831055}
   m_Layer: 0
   m_Name: Shower
   m_TagString: Untagged
@@ -4877,32 +4876,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &5957269428960831055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4008012965231240048}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b254cfa8ea8d23b44b68008e889f0a2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brush:
-    brushTexture: {fileID: 2800000, guid: 569ebdf2a56b7d44b95e18c5bf5c8aa6, type: 3}
-    brushNormalTexture: {fileID: 2800000, guid: 569ebdf2a56b7d44b95e18c5bf5c8aa6, type: 3}
-    brushHeightTexture: {fileID: 0}
-    brushScale: 0.1
-    rotateAngle: 0
-    brushNormalBlend: 0.1
-    brushHeightBlend: 0
-    brushColor: {r: 0.1769247, g: 1, b: 0, a: 1}
-    colorBlendType: 0
-    normalBlendType: 0
-    heightBlendType: 0
-  useMethodType: 1
-  erase: 0
 --- !u!1001 &1413744061482091450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5026,6 +4999,10 @@ PrefabInstance:
     - target: {fileID: -2893308507147032439, guid: 134d6f608e379f14fad66eb0dead659a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2360129523559599188, guid: 134d6f608e379f14fad66eb0dead659a, type: 3}
+      propertyPath: m_TagString
+      value: Brush
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 134d6f608e379f14fad66eb0dead659a, type: 3}
       propertyPath: m_Name
