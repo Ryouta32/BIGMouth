@@ -16,6 +16,7 @@ public class ShowerCube : MonoBehaviour
     bool erase = false;
 
     private float time;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +37,10 @@ public class ShowerCube : MonoBehaviour
         PaintManager paintManager = new PaintManager();
         if (col.gameObject.GetComponent<InkCanvas>())
         {
-            paintManager.Paint(col, useMethodType, erase, brush, transform);
+            paintManager.Paint(col, useMethodType, erase, brush, transform,false);
 
             Destroy(gameObject);
         }
     }
+
 }

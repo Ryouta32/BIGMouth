@@ -14,7 +14,7 @@ public class PaintManager
         DirectUV,
     }
 
-    public void Paint(Collision col, UseMethodType useMethodType, bool erase, Brush brush,Transform tra)
+    public void Paint(Collision col, UseMethodType useMethodType, bool erase, Brush brush,Transform tra,bool rotate)
     {
         Vector3 hitPos;
         foreach (ContactPoint point in col.contacts)
@@ -24,9 +24,6 @@ public class PaintManager
             if (col.transform.GetComponent<InkCanvas>())
             {
                 bool success = true;
-
-
-
                 foreach (RaycastHit hit in Physics.RaycastAll(ray))
                 {
 
@@ -35,7 +32,10 @@ public class PaintManager
 
                     if (paint != null)
                     {
-                        tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
+                        if (rotate)
+                        {
+                            tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
+                        }
                         switch (useMethodType)
                         {
                             case UseMethodType.RaycastHitInfo:

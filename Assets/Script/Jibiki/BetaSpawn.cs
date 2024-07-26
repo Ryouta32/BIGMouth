@@ -1,4 +1,4 @@
-using System.Collections;
+7using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,8 +36,6 @@ public class BetaSpawn : MonoBehaviour
     {
         // 角度ランダム生成
         int rnd = Random.Range(0, 360);
-
-        // オブジェクトを生成（位置は床の中心）
         Instantiate(spawnPrefab, new Vector3(x, objectSize.y, z), Quaternion.Euler(0, rnd, 0));
     }
 }
