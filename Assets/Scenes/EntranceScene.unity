@@ -8283,14 +8283,22 @@ PrefabInstance:
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[1].Prefab
       value: 
-      objectReference: {fileID: 8877379326157371514, guid: 2bbfba255393b7a4ea28ecdac840be5d, type: 3}
+      objectReference: {fileID: 7494234851357096958, guid: 23cdcede61ddf964f9bf6e5a661eb1e2, type: 3}
+    - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
+      propertyPath: PrefabOverrides.Array.data[2].Prefab
+      value: 
+      objectReference: {fileID: 7494234851357096958, guid: 23cdcede61ddf964f9bf6e5a661eb1e2, type: 3}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[0].ClassificationLabel
       value: FLOOR
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[1].ClassificationLabel
-      value: FLOOR
+      value: CEILING
+      objectReference: {fileID: 0}
+    - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
+      propertyPath: PrefabOverrides.Array.data[2].ClassificationLabel
+      value: CEILING
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[0]._editorClassificationIndex
@@ -8298,7 +8306,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[1]._editorClassificationIndex
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
+      propertyPath: PrefabOverrides.Array.data[2]._editorClassificationIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477014, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: m_Name
