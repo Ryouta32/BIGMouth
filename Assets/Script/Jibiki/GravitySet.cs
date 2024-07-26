@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GravitySet : MonoBehaviour
 {
-    [SerializeField] float speed = 1.0f;
+    [SerializeField] float speed = 0.5f;
     [SerializeField] float rotatedis = 1.0f;
 
     Rigidbody rb;

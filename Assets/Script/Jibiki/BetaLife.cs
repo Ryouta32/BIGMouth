@@ -5,12 +5,7 @@ using UnityEngine;
 public class BetaLife : MonoBehaviour
 {
     [SerializeField] int life = 3;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] int damage = 1;
 
     // Update is called once per frame
     void Update()
@@ -30,7 +25,7 @@ public class BetaLife : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Brush"))
         {
-            Damage(1);
+            Damage(damage);
         }
     }
 }
