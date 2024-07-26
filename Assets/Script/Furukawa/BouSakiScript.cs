@@ -51,6 +51,9 @@ public class BouSakiScript : MonoBehaviour
             StopCoroutine("ShowerTime");
             on = true;
         }
+
+        Debug.Log(on);
+
     }
     IEnumerator ShowerTime()
     {
