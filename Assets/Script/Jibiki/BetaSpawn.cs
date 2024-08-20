@@ -30,6 +30,8 @@ public class BetaSpawn : MonoBehaviour
 
         // timeïbÇ≤Ç∆Ç…SpawnåƒÇ—èoÇ∑
         InvokeRepeating(nameof(Spawn), 1, time);
+
+        Debug.Log("x:" + x + "z:" + z);
     }
 
     void Spawn()
