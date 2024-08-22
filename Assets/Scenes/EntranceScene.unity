@@ -258,12 +258,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0
+      value: 0.06359196
       objectReference: {fileID: 0}
     - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_BackGroundColor.r
@@ -1354,6 +1358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16b4a8d17ce60f43b6db8eef4459e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PieceParent: {fileID: 0}
 --- !u!1 &299251412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,6 +2820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16b4a8d17ce60f43b6db8eef4459e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PieceParent: {fileID: 0}
 --- !u!1 &691563752
 GameObject:
   m_ObjectHideFlags: 0
@@ -6567,6 +6573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16b4a8d17ce60f43b6db8eef4459e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PieceParent: {fileID: 0}
 --- !u!1 &1724312408
 GameObject:
   m_ObjectHideFlags: 0
@@ -7838,6 +7845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16b4a8d17ce60f43b6db8eef4459e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PieceParent: {fileID: 0}
 --- !u!1 &1935607059
 GameObject:
   m_ObjectHideFlags: 0
@@ -8279,7 +8287,7 @@ PrefabInstance:
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[0].Prefab
       value: 
-      objectReference: {fileID: 7494234851357096958, guid: 6406cdafb3587d1468d10557ae67dc2b, type: 3}
+      objectReference: {fileID: 7494234851357096958, guid: ffdf32ecda731834bbfa345a66add65c, type: 3}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[1].Prefab
       value: 
