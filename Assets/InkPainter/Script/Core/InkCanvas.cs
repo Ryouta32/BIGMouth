@@ -275,11 +275,13 @@ namespace Es.InkPainter
 			SetRenderTexture();
 			if(OnInitializedAfter != null)
 				OnInitializedAfter(this);
+
+
 		}
 
 		private void OnDestroy()
 		{
-			Debug.Log("InkCanvas has been destroyed.");
+			//Debug.Log("InkCanvas has been destroyed.");
 			ReleaseRenderTexture();
 		}
 
@@ -307,11 +309,15 @@ namespace Es.InkPainter
 		{
 			var meshFilter = GetComponent<MeshFilter>();
 			var skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
-			if(meshFilter != null)
+			if (meshFilter != null)
+			{
+				Debug.Log("meshfilter　　"+gameObject.name);
 				meshOperator = new MeshOperator(meshFilter.sharedMesh);
-			else if(skinnedMeshRenderer != null)
+			}
+			else if   (skinnedMeshRenderer != null) {
+				Debug.Log("skinned");
 				meshOperator = new MeshOperator(skinnedMeshRenderer.sharedMesh);
-			else
+			}else
 				Debug.LogWarning("Sometimes if the MeshFilter or SkinnedMeshRenderer does not exist in the component part does not work correctly.");
 		}
 
