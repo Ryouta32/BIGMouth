@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 5607069554961160427}
   - component: {fileID: 235511241958310314}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Beta.kari
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
