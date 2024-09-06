@@ -31,9 +31,9 @@ public class Bouncing : MonoBehaviour
             currentBall.transform.parent = null;
             ballGrabbed = false;
         }
-        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+        if (OVRInput.GetDown(OVRInput.RawButton.A))
         {
-
+            ballGrabbed = false;
         }
     }
 }

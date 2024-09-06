@@ -112,7 +112,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f139a9bff2d864949b3ba1048442f550, type: 2}
+  - {fileID: 2100000, guid: 9dd569ce142f2744dbd3117c00d10aa0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -181,12 +181,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893183005199075683}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c2a0be4b65a50a47a4cba5677b88881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPrefab: {fileID: 4083369751829114074, guid: c004e0adde7087c428ae708b09988ced, type: 3}
+  spawnPrefab: {fileID: 4083369751829114074, guid: 2915ba04f1da3e5449aa05f915113a2c, type: 3}
   time: 5
 --- !u!1 &4693091045872076551
 GameObject:
@@ -678,6 +678,10 @@ PrefabInstance:
     - target: {fileID: 6057330950817654580, guid: 6f369d4a6c19a934a899b5cdb2bd3910, type: 3}
       propertyPath: m_Name
       value: wall2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057330950817654580, guid: 6f369d4a6c19a934a899b5cdb2bd3910, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6218475560699007062, guid: 6f369d4a6c19a934a899b5cdb2bd3910, type: 3}
       propertyPath: m_CastShadows
