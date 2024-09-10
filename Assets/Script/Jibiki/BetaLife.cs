@@ -6,12 +6,17 @@ public class BetaLife : MonoBehaviour
 {
     [SerializeField] int life = 3;
     [SerializeField] int damage = 1;
+    private EnemyScript enemySC;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        enemySC = GetComponent<EnemyScript>();
+    }
     void Update()
     {
         if(life < 0)
         {
+            enemySC.destroyObj();
             Destroy(gameObject);
         }
     }

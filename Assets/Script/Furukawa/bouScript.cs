@@ -24,6 +24,7 @@ public class bouScript : MonoBehaviour
 
         transform.LookAt(ovr.leftHandAnchor.position);
         oldPos= ovr.rightHandAnchor.position;
+        DebugText.LogText.Log2(transform.position);
     }
 
     public Vector3 pos => ovr.leftHandAnchor.position - ovr.rightHandAnchor.position;

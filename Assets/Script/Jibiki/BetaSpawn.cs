@@ -10,6 +10,8 @@ public class BetaSpawn : MonoBehaviour
     Vector3 objectSize;
     float x, z;
 
+    EnemyManager manager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,12 +34,19 @@ public class BetaSpawn : MonoBehaviour
         InvokeRepeating(nameof(Spawn), 1, time);
 
         Debug.Log("x:" + x + "z:" + z);
+
+        manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
     }
 
     void Spawn()
     {
         // 角度ランダム生成
         int rnd = Random.Range(0, 360);
-        Instantiate(spawnPrefab, new Vector3(1, 1, 1), Quaternion.Euler(0, rnd, 0));
+        GameObject obj = Instantiate(spawnPrefab, new Vector3(0, 1, 0), Quaternion.Euler(0, rnd, 0),manager.gameObject.transform);
+        obj.GetComponent<EnemyScript>().setManager(manager);
+        manager.AddEnemys(obj);//Managerのリストに追加
+        DebugText.LogText.Log2(transform.position);
+        DebugText.LogText.Log2(rnd);
+        //DebugText.Log2(transform.position);
     }
 }

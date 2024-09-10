@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 4585569091371743717}
   - component: {fileID: 5607069554961160427}
   - component: {fileID: 235511241958310314}
+  - component: {fileID: 7653069789217058087}
   m_Layer: 0
   m_Name: Beta.kari
   m_TagString: Untagged
@@ -417,6 +418,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   rotatedis: 1
+--- !u!114 &7653069789217058087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083369751829114074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53eb8779cd182c545a0cdb5208226df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4757952658368521591
 GameObject:
   m_ObjectHideFlags: 0

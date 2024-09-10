@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tagName: Brush
-  name: 1
+  name: 0
 --- !u!65 &1162460261
 BoxCollider:
   m_ObjectHideFlags: 0
