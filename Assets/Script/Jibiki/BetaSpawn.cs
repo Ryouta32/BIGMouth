@@ -45,8 +45,8 @@ public class BetaSpawn : MonoBehaviour
         GameObject obj = Instantiate(spawnPrefab, new Vector3(0, 1, 0), Quaternion.Euler(0, rnd, 0),manager.gameObject.transform);
         obj.GetComponent<EnemyScript>().setManager(manager);
         manager.AddEnemys(obj);//Manager‚ÌƒŠƒXƒg‚É’Ç‰Á
-        DebugText.LogText.Log2(transform.position);
-        DebugText.LogText.Log2(rnd);
+        DebugText.LogText.Log(transform.position);
+        DebugText.LogText.Log(rnd);
         //DebugText.Log2(transform.position);
     }
 }

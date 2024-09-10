@@ -16,7 +16,7 @@ public class DebugText : MonoBehaviour
         LogText.text = GetComponent<TextMeshProUGUI>();
     }
 
-    public void Log2<T>(T a)
+    public void Log<T>(T a)
     {
         string b;
         logtext = "";
