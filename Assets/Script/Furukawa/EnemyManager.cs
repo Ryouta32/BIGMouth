@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyManager : MonoBehaviour
 {
    [SerializeField] List<GameObject> enemys;
-
+    [SerializeField] int spawnLimit;
     public void ClearCheck() {
         if (enemys.Count == 0)
         {
@@ -18,4 +18,5 @@ public class EnemyManager : MonoBehaviour
     public void AddEnemys(GameObject obj) => enemys.Add(obj);
     public void DestroyEnemys(GameObject obj) { enemys.Remove(obj); ClearCheck(); }
     public void ResetEnemys() => enemys=new List<GameObject>();
+    public bool SpawnCheck() => enemys.Count>=spawnLimit;
 }
