@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - HA
   - FxTemporaire
   - MIMIC
   - Wall1
@@ -22,7 +21,7 @@ TagManager:
   - ShaderHole
   - "ShaderHoleMask\t"
   - Obstacle
-  - 
+  - Wall
   - 
   - 
   - 
