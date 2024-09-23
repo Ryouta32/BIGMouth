@@ -24,17 +24,15 @@ public class GravitySet : MonoBehaviour
     void Update()
     {
         // どんな向きでもベタに対して下向きに重力をかける
-        if (rb.velocity.magnitude > 20)
-            rb.AddForce(-transform.up * 9.8f, ForceMode.Acceleration);
+            rb.AddForce(-transform.up * 9.8f*Time.deltaTime, ForceMode.Acceleration);
 
         this.transform.position += transform.forward * speed * Time.deltaTime;
         distance = 100;
         RaycastHit hit;
 
          Vector3 raypos = (transform.forward*2) + (-transform.up*2);
-        Debug.Log(raypos);
         Vector3 rayStartPos = transform.position;
-        rayStartPos.z += (transform.localScale.z/1.2f);
+        rayStartPos.z += (transform.localScale.z/2f);
 
 
         //オブジェクトの下にRayを飛ばす
@@ -49,12 +47,26 @@ public class GravitySet : MonoBehaviour
                 Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
                 rb.MoveRotation(rot * transform.rotation);
                 //transform.position += transform.localScale.y / 1.98f * hit.normal;
-                Debug.Log("あたってるよー");
+                Debug.Log( "前");
                 //transform.Rotate(Vector3.right, -90f);
             }
-        }else
+        }
+        else if (Physics.Raycast(transform.position, -Vector3.up, out hit, 1f, mask))
         {
-            transform.localEulerAngles = new Vector3(0, 0, 0);
+            distance = hit.distance;
+            if (distance < rotatedis)
+            {
+                Vector3.Lerp(transform.position, hit.point, 1f);
+                Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
+                rb.MoveRotation(rot * transform.rotation);
+                Debug.Log("↓");
+            }
+
+        }
+        else
+        {
+            Debug.Log("何も当たっていない");
+            transform.transform.rotation = new Quaternion() ;
         }
         //if (Physics.Raycast(player.transform.position, player.transform.transform.forward, out hit, Mathf.Infinity))
         //{
