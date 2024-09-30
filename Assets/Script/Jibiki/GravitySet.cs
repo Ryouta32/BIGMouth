@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 using UnityEngine.UI;
 
 /* ベタの動き、重力を管理 */
@@ -47,7 +46,6 @@ public class GravitySet : MonoBehaviour
                 Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
                 rb.MoveRotation(rot * transform.rotation);
                 //transform.position += transform.localScale.y / 1.98f * hit.normal;
-                Debug.Log( "前");
                 //transform.Rotate(Vector3.right, -90f);
             }
         }
@@ -59,7 +57,6 @@ public class GravitySet : MonoBehaviour
                 Vector3.Lerp(transform.position, hit.point, 1f);
                 Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
                 rb.MoveRotation(rot * transform.rotation);
-                Debug.Log("↓");
             }
 
         }

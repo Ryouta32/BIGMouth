@@ -451,7 +451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 723.8, y: -75.7}
+  m_AnchoredPosition: {x: 165, y: -75.7}
   m_SizeDelta: {x: 2333, y: 3506.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126927234
@@ -1879,6 +1879,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 700415971}
   m_SourcePrefab: {fileID: 100100000, guid: 9ed7720bf6438d842bfaab10fda2e4e0, type: 3}
+--- !u!114 &1095949326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+  m_PrefabInstance: {fileID: 2507290124455112794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bb9d1b63275b046a6c0dceb0635b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1114040580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,6 +3091,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Brush
       objectReference: {fileID: 0}
+    - target: {fileID: 2109721694509115378, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 2260746995871809259, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_TagString
       value: Brush
@@ -3140,6 +3155,10 @@ PrefabInstance:
       propertyPath: ovr
       value: 
       objectReference: {fileID: 667388303}
+    - target: {fileID: 7732509683089046725, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: saki
+      value: 
+      objectReference: {fileID: 1095949326}
     - target: {fileID: 8432379875800564068, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_TagString
       value: Brush
