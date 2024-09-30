@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 4585569091371743717}
   - component: {fileID: 5607069554961160427}
   - component: {fileID: 235511241958310314}
+  - component: {fileID: 7653069789217058087}
   m_Layer: 0
   m_Name: Beta.kari
   m_TagString: Untagged
@@ -235,7 +236,7 @@ MonoBehaviour:
     brushTexture: {fileID: 2800000, guid: 569ebdf2a56b7d44b95e18c5bf5c8aa6, type: 3}
     brushNormalTexture: {fileID: 2800000, guid: 569ebdf2a56b7d44b95e18c5bf5c8aa6, type: 3}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.106
+    brushScale: 0.03
     rotateAngle: 19
     brushNormalBlend: 0.101
     brushHeightBlend: 0
@@ -271,7 +272,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!95 &5137857416683825067
 Animator:
   serializedVersion: 5
@@ -280,7 +281,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4083369751829114074}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c71b648a1d9e51146afab5cbc4ef9ed3, type: 2}
   m_CullingMode: 0
@@ -415,8 +416,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b9d666ba3a3b04b8402fffe789be77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  rotatedis: 1
+  speed: 1.01
+  rotatedis: 0.04
+--- !u!114 &7653069789217058087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083369751829114074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53eb8779cd182c545a0cdb5208226df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4757952658368521591
 GameObject:
   m_ObjectHideFlags: 0

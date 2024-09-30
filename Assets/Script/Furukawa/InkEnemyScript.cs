@@ -18,38 +18,25 @@ public class InkEnemyScript : MonoBehaviour
     Rigidbody rb;
     private bool col=false;
     Vector3 power=new Vector3(-2,0,0);
+    float time;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (rb.velocity.magnitude <= 5f&&col)
-        {
-            rb.AddForce(power);
-
-        }
-        StartCoroutine("comp");
-    }
-    IEnumerator comp()
-    {
-        yield return new WaitForSeconds(2f);
-        power = power * -1;
-        rb.velocity =Vector3.zero ;
-
+        time = 0;
     }
     private void OnCollisionStay(Collision collision)
     {
-        Vector3 hitPos;
-        RaycastHit hit;
-        bool success = true;
-        col = true;
+        time += Time.deltaTime;
+        if (time >= 0.4)
+        {
+            time = 0;
+            col = true;
 
-        PaintManager paintManager = new PaintManager();
+            PaintManager paintManager = new PaintManager();
 
-        paintManager.Paint(collision, useMethodType, erase, brush, transform,false);
-       
+            paintManager.Paint(collision, useMethodType, erase, brush, transform, false);
+
         }
+        else return;
+    }
 }

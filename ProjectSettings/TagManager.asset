@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - HA
   - FxTemporaire
   - MIMIC
   - Wall1
@@ -16,13 +15,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Passthrough
   - Water
   - UI
   - ShaderHole
   - "ShaderHoleMask\t"
   - Obstacle
-  - 
+  - Wall
   - 
   - 
   - 
