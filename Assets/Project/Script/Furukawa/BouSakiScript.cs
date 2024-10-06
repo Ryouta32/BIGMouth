@@ -69,7 +69,7 @@ public class BouSakiScript : MonoBehaviour
     {
 
         PaintManager pManager = new PaintManager();
-        pManager.Paint(other, useMethodType, erase, brush, transform,true);
+        pManager.Paint(other, useMethodType, erase, brush, transform,false);
     }
     private void OnCollisionExit(Collision col)
     {
@@ -80,6 +80,9 @@ public class BouSakiScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        PaintManager pManager = new PaintManager();
+
+        pManager.Paint(collision, useMethodType, erase, brush, transform, true);
 
         hitpoint = collision.contacts[0].point;
         bouSC.HitPos();

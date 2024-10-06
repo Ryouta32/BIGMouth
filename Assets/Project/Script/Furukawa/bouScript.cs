@@ -52,23 +52,23 @@ public class bouScript : MonoBehaviour
         if (saki.GetHit() == Vector3.zero)
             return oldPos - ovr.rightHandAnchor.position;
 
-        Vector3[] temp = { new Vector3(1, 1, 1), new Vector3(1, 1, 0), new Vector3(1, 0, 1), new Vector3(0, 1, 1), new Vector3(0, 1, 0), new Vector3(0, 0, 1), };
+        //Vector3[] temp = { new Vector3(1, 1, 1), new Vector3(1, 1, 0), new Vector3(1, 0, 1), new Vector3(0, 1, 1), new Vector3(0, 1, 0), new Vector3(0, 0, 1), };
         float hitdis = Vector3.Distance(hitpos, saki.GetHit()); ;
        
-        for (int i=0;i< temp.Length; i++)
-        {
-            Vector3 a = new Vector3(move.x * temp[i].x, move.y* temp[i].y, move.z* temp[i].z);
-        float dis = Vector3.Distance(a, saki.GetHit() );
+        //for (int i=0;i< temp.Length; i++)
+        //{
+        //    Vector3 a = new Vector3(move.x * temp[i].x, move.y* temp[i].y, move.z* temp[i].z);
+        //float dis = Vector3.Distance(a, saki.GetHit() );
 
-            if (dis > hitdis)
-            {
-                DebugText.LogText.Log(temp[i]);
+        //    if (dis > hitdis)
+        //    {
+        //        DebugText.LogText.Log(temp[i]);
 
-                return Vector3.Scale(temp[i], oldPos - ovr.rightHandAnchor.position);
-            }
-        }
+        //        return Vector3.Scale(temp[i], oldPos - ovr.rightHandAnchor.position);
+        //    }
+        //}
 
-        return Vector3.zero;
+        return pos;
     }
 
     public Vector3 pos => ovr.leftHandAnchor.position - ovr.rightHandAnchor.position;
