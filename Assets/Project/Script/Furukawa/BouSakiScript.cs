@@ -76,7 +76,7 @@ public class BouSakiScript : MonoBehaviour
         hitpoint = Vector3.zero;
         bouSC.ExisPos();
         Debug.Log(defaultQuaternion);
-        transform.rotation =  defaultQuaternion;
+        //transform.rotation =  defaultQuaternion;
     }
     private void OnCollisionEnter(Collision collision)
     {
