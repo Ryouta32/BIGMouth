@@ -45,12 +45,13 @@ public class BetaSpawn : MonoBehaviour
     {
         Debug.Log("waai");
         yield return new WaitForSeconds(time);
-        // 角度ランダム生成
         if (manager.SpawnCheck())
         {
             StartCoroutine("Spawn");
             yield break;
         }
+        // 角度ランダム生成
+
         int rnd = Random.Range(0, 360);
         GameObject obj = Instantiate(spawnPrefab, rightControllerPivot.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
         obj.GetComponent<EnemyScript>().setManager(manager);
