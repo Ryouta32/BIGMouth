@@ -642,7 +642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &396388162
 Animator:
   serializedVersion: 5
@@ -1634,14 +1634,14 @@ PrefabInstance:
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PlanePrefab
       value: 
-      objectReference: {fileID: 2156291709616049617, guid: 8c13d5f258c4ed142a96a946bea2e15d, type: 3}
+      objectReference: {fileID: 563714354872022062, guid: f5dcf2d28f0afc34e8bbab5b682cdbc3, type: 3}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: VolumePrefab
       value: 
       objectReference: {fileID: 8013016026686888416, guid: d9e6bf90859da5e4a99697b186a19545, type: 3}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[0].Prefab
@@ -1827,6 +1827,10 @@ PrefabInstance:
       propertyPath: ovr
       value: 
       objectReference: {fileID: 77062946}
+    - target: {fileID: 7732509683089046725, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: saki
+      value: 
+      objectReference: {fileID: 2065128126}
     - target: {fileID: 8432379875800564068, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_TagString
       value: Brush
@@ -1836,6 +1840,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+--- !u!114 &2065128126 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+  m_PrefabInstance: {fileID: 2065128125}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bb9d1b63275b046a6c0dceb0635b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
