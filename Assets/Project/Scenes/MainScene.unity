@@ -272,7 +272,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: new terxt
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -378,6 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 120990412}
   - component: {fileID: 120990413}
+  - component: {fileID: 120990414}
   m_Layer: 0
   m_Name: EnemyManager
   m_TagString: Untagged
@@ -413,7 +416,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemys: []
-  spawnLimit: 0
+  spawnLimit: 10
+--- !u!114 &120990414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120990411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2a0be4b65a50a47a4cba5677b88881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPrefab: {fileID: 4083369751829114074, guid: c004e0adde7087c428ae708b09988ced, type: 3}
+  time: 5
+  rightControllerPivot: {fileID: 1562069058}
 --- !u!1 &126927232
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +676,7 @@ PrefabInstance:
       objectReference: {fileID: 8013016026686888416, guid: d9e6bf90859da5e4a99697b186a19545, type: 3}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[0].Prefab
@@ -1533,9 +1551,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 124258, guid: 68e6cd702d40b5e42b27fa9751ff0722, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1226906143}
-    - targetCorrespondingSourceObject: {fileID: 124258, guid: 68e6cd702d40b5e42b27fa9751ff0722, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1226906148}
   m_SourcePrefab: {fileID: 100100000, guid: 68e6cd702d40b5e42b27fa9751ff0722, type: 3}
 --- !u!1001 &868870245
 PrefabInstance:
@@ -1600,6 +1615,10 @@ PrefabInstance:
     - target: {fileID: 4083369751829114074, guid: c004e0adde7087c428ae708b09988ced, type: 3}
       propertyPath: m_Name
       value: Beta.kari
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083369751829114074, guid: c004e0adde7087c428ae708b09988ced, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8683761636264091326, guid: c004e0adde7087c428ae708b09988ced, type: 3}
       propertyPath: m_UseGravity
@@ -2170,20 +2189,6 @@ MonoBehaviour:
     useMainPaint: 1
     useNormalPaint: 0
     useHeightPaint: 0
---- !u!114 &1226906148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1226906142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2a0be4b65a50a47a4cba5677b88881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPrefab: {fileID: 4083369751829114074, guid: c004e0adde7087c428ae708b09988ced, type: 3}
-  time: 5
 --- !u!1001 &1247609838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2426,6 +2431,11 @@ Transform:
 --- !u!1 &1544090200 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+  m_PrefabInstance: {fileID: 687645943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1562069058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1054112583220142, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
   m_PrefabInstance: {fileID: 687645943}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1600812346
@@ -3187,6 +3197,10 @@ PrefabInstance:
     - target: {fileID: 1274902009187765582, guid: 63997c554b3ccf54796126603bf93a52, type: 3}
       propertyPath: m_Name
       value: NormalBeta
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274902009187765582, guid: 63997c554b3ccf54796126603bf93a52, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8263823179075554978, guid: 63997c554b3ccf54796126603bf93a52, type: 3}
       propertyPath: m_LocalPosition.x
