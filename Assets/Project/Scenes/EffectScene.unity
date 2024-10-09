@@ -532,6 +532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bubble
       objectReference: {fileID: 0}
+    - target: {fileID: 477108009787917628, guid: 74b85915b5b00d044bb186a4b76119e7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2666885549858914622, guid: 74b85915b5b00d044bb186a4b76119e7, type: 3}
       propertyPath: ShapeModule.arc.spread
       value: 0
@@ -606,15 +610,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4541480518907767974, guid: 74b85915b5b00d044bb186a4b76119e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.011
+      value: -0.022
       objectReference: {fileID: 0}
     - target: {fileID: 4541480518907767974, guid: 74b85915b5b00d044bb186a4b76119e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4541480518907767974, guid: 74b85915b5b00d044bb186a4b76119e7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.152
+      value: 0.125
       objectReference: {fileID: 0}
     - target: {fileID: 4541480518907767974, guid: 74b85915b5b00d044bb186a4b76119e7, type: 3}
       propertyPath: m_LocalRotation.w
