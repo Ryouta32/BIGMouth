@@ -31,10 +31,11 @@ public class BouSakiScript : MonoBehaviour
 
     bool on=true;
     Quaternion defaultQuaternion;
-
+   Vector3 hitpoint;
     void Start()
     {
         defaultQuaternion = this.transform.rotation;
+        hitpoint = Vector3.zero;
 
     }
 
@@ -63,14 +64,29 @@ public class BouSakiScript : MonoBehaviour
         obj.GetComponent<Rigidbody>().AddForce(bouSC.pos.normalized*power);
         on = true;
     }
+
     private void OnCollisionStay(Collision other)
     {
+
         PaintManager pManager = new PaintManager();
-        pManager.Paint(other, useMethodType, erase, brush, transform,true);
+        pManager.Paint(other, useMethodType, erase, brush, transform,false);
     }
     private void OnCollisionExit(Collision col)
     {
+        hitpoint = Vector3.zero;
+        bouSC.ExisPos();
         Debug.Log(defaultQuaternion);
-        transform.rotation =  defaultQuaternion;
+        //transform.rotation =  defaultQuaternion;
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        PaintManager pManager = new PaintManager();
+
+        pManager.Paint(collision, useMethodType, erase, brush, transform, true);
+
+        hitpoint = collision.contacts[0].point;
+        bouSC.HitPos();
+    }
+    public Vector3 GetHit() => hitpoint;
+    public void SetHit(Vector3 x) => hitpoint = x;
 }
