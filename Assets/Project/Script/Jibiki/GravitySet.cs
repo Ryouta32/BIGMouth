@@ -47,7 +47,6 @@ public class GravitySet : MonoBehaviour
                 Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
                 rb.MoveRotation(rot * transform.rotation);
                 //transform.position += transform.localScale.y / 1.98f * hit.normal;
-                Debug.Log( "‘O");
                 //transform.Rotate(Vector3.right, -90f);
             }
         }
@@ -65,7 +64,6 @@ public class GravitySet : MonoBehaviour
         }
         else
         {
-            Debug.Log("‰½‚à“–‚½‚Á‚Ä‚¢‚È‚¢");
             transform.transform.rotation = new Quaternion() ;
         }
         //if (Physics.Raycast(player.transform.position, player.transform.transform.forward, out hit, Mathf.Infinity))
