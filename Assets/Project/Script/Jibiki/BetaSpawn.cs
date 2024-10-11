@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BetaSpawn : MonoBehaviour
 {
     [SerializeField] GameObject spawnPrefab;
     [SerializeField] float time = 5.0f;
+    [SerializeField] private GameObject rightControllerPivot;
 
     Vector3 objectSize;
     float x, z;
@@ -19,10 +21,10 @@ public class BetaSpawn : MonoBehaviour
         //OVRScenePlane floor = sceneRoom.Floor;
 
         // オブジェクトのRendererコンポーネントを取得
-        Renderer renderer = GetComponent<Renderer>();
+        //Renderer renderer = GetComponent<Renderer>();
 
         // オブジェクトのサイズを取得
-        objectSize = renderer.bounds.size;
+        //objectSize = renderer.bounds.size;
 
         // サイズをログに出力
         //Debug.Log("Object Size: " + objectSize);
@@ -31,20 +33,27 @@ public class BetaSpawn : MonoBehaviour
         z = objectSize.z / 2;
 
         // time秒ごとにSpawn呼び出す
-        InvokeRepeating(nameof(Spawn), 1, time);
+        //InvokeRepeating(nameof(Spawn), 1, time);
 
+        StartCoroutine("Spawn");
         Debug.Log("x:" + x + "z:" + z);
 
         manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
     }
 
-    void Spawn()
+    IEnumerator Spawn()
     {
-        // 角度ランダム生成
+        Debug.Log("waai");
+        yield return new WaitForSeconds(time);
         if (manager.SpawnCheck())
-            return;
+        {
+            StartCoroutine("Spawn");
+            yield break;
+        }
+        // 角度ランダム生成
+
         int rnd = Random.Range(0, 360);
-        GameObject obj = Instantiate(spawnPrefab, new Vector3(0, 1, 0), Quaternion.Euler(0, rnd, 0),manager.gameObject.transform);
+        GameObject obj = Instantiate(spawnPrefab, rightControllerPivot.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
         obj.GetComponent<EnemyScript>().setManager(manager);
         obj.GetComponent<EnemyScript>().initialization();
         manager.AddEnemys(obj);//Managerのリストに追加
