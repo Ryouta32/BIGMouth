@@ -28,10 +28,15 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] GameObject showerCube;
     private GameObject currentBall;
     [SerializeField] float power;
+    [Header("ãzÇ¢çûÇ›ÇÃãóó£")]
+    [SerializeField] float inHaleDis=0.5f;
+    [Header("ãzÇ¢çûÇ›ë¨ìx")]
+    [SerializeField] float inHaleSpeed=1;
 
     bool on=true;
     Quaternion defaultQuaternion;
    Vector3 hitpoint;
+   public bool OnHale;
     void Start()
     {
         defaultQuaternion = this.transform.rotation;
@@ -52,6 +57,14 @@ public class BouSakiScript : MonoBehaviour
             StopCoroutine("ShowerTime");
             on = true;
         }
+        if (OVRInput.Get(OVRInput.RawButton.B) && Input.GetMouseButton(0))
+        {
+            Inhale();
+        }
+        if(OVRInput.GetUp(OVRInput.RawButton.B) && Input.GetMouseButtonUp(0))
+        {
+            UpInhale();
+        }
 
     }
     IEnumerator ShowerTime()
@@ -63,6 +76,14 @@ public class BouSakiScript : MonoBehaviour
         obj = Instantiate(showerCube, transform.position, Quaternion.identity);
         obj.GetComponent<Rigidbody>().AddForce(bouSC.pos.normalized*power);
         on = true;
+    }
+    private void Inhale()
+    {
+        OnHale = true;
+    }
+    private void UpInhale()
+    {
+
     }
 
     private void OnCollisionStay(Collision other)
@@ -89,4 +110,7 @@ public class BouSakiScript : MonoBehaviour
     }
     public Vector3 GetHit() => hitpoint;
     public void SetHit(Vector3 x) => hitpoint = x;
+    public float GetInhaleDis() => inHaleDis;
+    public bool GetInHale() => OnHale;
+    public float GetInHaleSpeed() => inHaleSpeed;
 }

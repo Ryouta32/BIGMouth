@@ -76,6 +76,7 @@ public class bouScript : MonoBehaviour
 
     public void HitPos() => hitpos = oldPos- ovr.rightHandAnchor.position;
     public void ExisPos() => transform.position = ovr.rightHandAnchor.position;
+    public BouSakiScript GetSaki() => saki;
 
 
 }
