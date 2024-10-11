@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ovr: {fileID: 0}
+  saki: {fileID: 0}
 --- !u!1 &4008012965231240048
 GameObject:
   m_ObjectHideFlags: 0
@@ -5006,7 +5007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 134d6f608e379f14fad66eb0dead659a, type: 3}
       propertyPath: m_Name
-      value: Stick
+      value: Stickmodel
       objectReference: {fileID: 0}
     - target: {fileID: 1334611829302858483, guid: 134d6f608e379f14fad66eb0dead659a, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5080,6 +5081,8 @@ MonoBehaviour:
   ShowerObj: {fileID: 4008012965231240048}
   showerCube: {fileID: 5025516467825413144, guid: f1facb0529e85284bacc65622c68592d, type: 3}
   power: 200
+  inHaleDis: 0.5
+  inHaleSpeed: 3
 --- !u!65 &1195390217049924833
 BoxCollider:
   m_ObjectHideFlags: 0
