@@ -55,6 +55,7 @@ public class BetaSpawn : MonoBehaviour
         int rnd = Random.Range(0, 360);
         GameObject obj = Instantiate(spawnPrefab, rightControllerPivot.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
         obj.GetComponent<EnemyScript>().setManager(manager);
+        obj.GetComponent<EnemyScript>().initialization();
         manager.AddEnemys(obj);//Manager‚ÌƒŠƒXƒg‚É’Ç‰Á
         //DebugText.Log2(transform.position);
     }
