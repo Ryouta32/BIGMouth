@@ -679,7 +679,8 @@ namespace Es.InkPainter
 
 			#endregion ErrorCheck
 
-			if(OnPaintStart != null)
+
+            if (OnPaintStart != null)
 			{
 				brush = brush.Clone() as Brush;
 				OnPaintStart(this, brush);
@@ -695,10 +696,12 @@ namespace Es.InkPainter
 				if(eraseFlag)
 					brush = GetEraser(brush, p, uv, mainPaintConditions, normalPaintConditions, heightPaintConditions);
 
-				if(mainPaintConditions)
+                if (mainPaintConditions)//ここをみろ！！
 				{
 					var mainPaintTextureBuffer = RenderTexture.GetTemporary(p.paintMainTexture.width, p.paintMainTexture.height, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear);
+					
 					SetPaintMainData(brush, uv);
+					Debug.Log("ここを直せば勝ち！\nなおしたらすごい！");
 					Graphics.Blit(p.paintMainTexture, mainPaintTextureBuffer, paintMainMaterial);
 					Graphics.Blit(mainPaintTextureBuffer, p.paintMainTexture);
 					RenderTexture.ReleaseTemporary(mainPaintTextureBuffer);

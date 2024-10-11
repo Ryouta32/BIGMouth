@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BetaLife : MonoBehaviour
 {
-    [SerializeField] int life = 3;
+    //[SerializeField] int life = 3;
     [SerializeField] int damage = 1;
     private EnemyScript enemySC;
 
@@ -14,16 +14,17 @@ public class BetaLife : MonoBehaviour
     }
     void Update()
     {
-        if(life < 0)
-        {
-            enemySC.destroyObj();
-            Destroy(gameObject);
-        }
+        //if(life < 0)
+        //{
+        //    enemySC.destroyObj();
+        //    Destroy(gameObject);
+        //}
     }
 
     public void Damage(int damage)
     {
-        life -= damage;
+        //life -= damage;
+        enemySC.HitDamage();
     }
 
     public void OnCollisionEnter(Collision collision)

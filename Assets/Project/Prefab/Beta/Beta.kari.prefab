@@ -402,7 +402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d14aec7a97f8274a8f6af41829374f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
   damage: 1
 --- !u!114 &235511241958310314
 MonoBehaviour:
@@ -430,6 +429,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53eb8779cd182c545a0cdb5208226df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bouSaki: {fileID: 0}
+  _data: {fileID: 0}
 --- !u!1 &4757952658368521591
 GameObject:
   m_ObjectHideFlags: 0

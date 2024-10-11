@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: mini
   m_EditorClassIdentifier: 
   sutnCount: 2
+  sutnTime: 2
   speed: 0
   state: 0
