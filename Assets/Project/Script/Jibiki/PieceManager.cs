@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*ƒvƒŒƒC’†‚Ì•Ç‚ª•ö‚ê‚Ä‚¢‚­‹““®*/
 
 public class PieceManager : MonoBehaviour
 {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*壁エリア越えてきたらミミックオブジェクト表示させる*/
 
 public class SetActiveScript : MonoBehaviour
 {

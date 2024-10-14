@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*ƒhƒ‰ƒSƒ““oê‚Ì•Ç‚Ì‹““®*/
 
 public class Piecephysics : MonoBehaviour
 {
