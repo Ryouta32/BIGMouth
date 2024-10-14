@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -20,19 +20,19 @@ public class BetaSpawn : MonoBehaviour
         //OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
         //OVRScenePlane floor = sceneRoom.Floor;
 
-        // ƒIƒuƒWƒFƒNƒg‚ÌRendererƒRƒ“ƒ|[ƒlƒ“ƒg‚ğæ“¾
+        // Rendererã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’å–å¾—
         //Renderer renderer = GetComponent<Renderer>();
 
-        // ƒIƒuƒWƒFƒNƒg‚ÌƒTƒCƒY‚ğæ“¾
+        // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ã‚µã‚¤ã‚ºã‚’å–å¾—
         //objectSize = renderer.bounds.size;
 
-        // ƒTƒCƒY‚ğƒƒO‚Éo—Í
+        // ã‚µã‚¤ã‚ºã‚’ãƒ­ã‚°ã«å‡ºåŠ›
         //Debug.Log("Object Size: " + objectSize);
 
         x = objectSize.x / 2;
         z = objectSize.z / 2;
 
-        // time•b‚²‚Æ‚ÉSpawnŒÄ‚Ño‚·
+        // timeç§’ã”ã¨ã«Spawnå‘¼ã³å‡ºã™
         //InvokeRepeating(nameof(Spawn), 1, time);
 
         StartCoroutine("Spawn");
@@ -50,13 +50,13 @@ public class BetaSpawn : MonoBehaviour
             StartCoroutine("Spawn");
             yield break;
         }
-        // Šp“xƒ‰ƒ“ƒ_ƒ€¶¬
+        // è§’åº¦ãƒ©ãƒ³ãƒ€ãƒ ç”Ÿæˆ
 
         int rnd = Random.Range(0, 360);
         GameObject obj = Instantiate(spawnPrefab, rightControllerPivot.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
         obj.GetComponent<EnemyScript>().setManager(manager);
         obj.GetComponent<EnemyScript>().initialization();
-        manager.AddEnemys(obj);//Manager‚ÌƒŠƒXƒg‚É’Ç‰Á
+        manager.AddEnemys(obj);//Managerã®ãƒªã‚¹ãƒˆã«è¿½åŠ 
         //DebugText.Log2(transform.position);
     }
 }

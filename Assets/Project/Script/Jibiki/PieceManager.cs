@@ -1,6 +1,7 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* ãƒ—ãƒ¬ã‚¤ä¸­ã®å£ãŒå´©ã‚Œã¦ã„ãæŒ™å‹• */
 
 public class PieceManager : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class PieceManager : MonoBehaviour
 
         for (int i = 0; i < PieceParent.transform.childCount; i++)
         {
-            PieceChildren.Add(PieceParent.transform.GetChild(i)); // GetChild()‚ÅqƒIƒuƒWƒFƒNƒg‚ğæ“¾
-            //Debug.Log($"ŒŸõ•û–@‚PF {i} ”Ô–Ú‚Ìq‹Ÿ‚Í {PieceChildren[i].name} ‚Å‚·");
+            PieceChildren.Add(PieceParent.transform.GetChild(i)); // GetChild()ã§å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—
+            //Debug.Log($"æ¤œç´¢æ–¹æ³•ï¼‘ï¼š {i} ç•ªç›®ã®å­ä¾›ã¯ {PieceChildren[i].name} ã§ã™");
         }
 
         InvokeRepeating(nameof(FallPiece), 5.0f, 5.0f);

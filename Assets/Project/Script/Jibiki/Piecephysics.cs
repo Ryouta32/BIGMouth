@@ -1,6 +1,7 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* ドラゴン登場時の壁の挙動 */
 
 public class Piecephysics : MonoBehaviour
 {
