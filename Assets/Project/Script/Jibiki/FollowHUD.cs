@@ -1,7 +1,7 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*UI‚ª’x‚ê‚Ä’Ç]‚·‚é‚æ‚¤‚É‚·‚é*/
+/* UIãŒé…ã‚Œã¦è¿½å¾“ã™ã‚‹ã‚ˆã†ã«ã™ã‚‹ */
 
 public class FollowHUD : MonoBehaviour
 {

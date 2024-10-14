@@ -1,12 +1,10 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*•ÇƒGƒŠƒA‰z‚¦‚Ä‚«‚½‚çƒ~ƒ~ƒbƒNƒIƒuƒWƒFƒNƒg•\¦‚³‚¹‚é*/
+/* å£ã‚¨ãƒªã‚¢è¶Šãˆã¦ããŸã‚‰ãƒŸãƒŸãƒƒã‚¯ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆè¡¨ç¤ºã•ã›ã‚‹ */
 
 public class SetActiveScript : MonoBehaviour
 {
-    [SerializeField] GameObject mimic;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +15,14 @@ public class SetActiveScript : MonoBehaviour
     {
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Wall1"))
+        if(other.gameObject.CompareTag("MIMIC"))
         {
-            mimic.SetActive(true);
+            Debug.Log("atata");
+            Renderer rnd = other.gameObject.GetComponent<Renderer>();
+
+            rnd.enabled = true;
         }
     }
 }

@@ -1,27 +1,27 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-/*Às’†‚ÉƒtƒŒ[ƒ€ƒŒ[ƒg‚ğ•\¦‚³‚¹‚é*/
+/* å®Ÿè¡Œä¸­ã«ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆã‚’è¡¨ç¤ºã•ã›ã‚‹ */
 
 public class FpsDisplay : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textText;
 
-    // •Ï”
+    // å¤‰æ•°
     int frameCount;
     float prevTime;
     float fps;
 
-    // ‰Šú‰»ˆ—
+    // åˆæœŸåŒ–å‡¦ç†
     void Start()
     {
-        // •Ï”‚Ì‰Šú‰»
+        // å¤‰æ•°ã®åˆæœŸåŒ–
         frameCount = 0;
         prevTime = 0.0f;
     }
 
-    // XVˆ—
+    // æ›´æ–°å‡¦ç†
     void Update()
     {
         frameCount++;

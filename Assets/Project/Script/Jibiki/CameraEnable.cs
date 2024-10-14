@@ -1,7 +1,7 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*UI‚ªƒIƒuƒWƒFƒNƒg‚É–„‚à‚ê‚È‚¢‚æ‚¤‚É‚·‚é*/
+/* UIãŒã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«åŸ‹ã‚‚ã‚Œãªã„ã‚ˆã†ã«ã™ã‚‹ */
 
 public class CameraEnable : MonoBehaviour
 {

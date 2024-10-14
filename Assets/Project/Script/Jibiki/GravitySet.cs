@@ -1,10 +1,10 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //using static UnityEditor.Progress;
 using UnityEngine.UI;
 
-/* ƒxƒ^‚Ì“®‚«Ad—Í‚ğŠÇ— */
+/* ãƒ™ã‚¿ã®å‹•ãé‡åŠ›ã‚’ç®¡ç† */
 
 public class GravitySet : MonoBehaviour
 {
@@ -23,7 +23,7 @@ public class GravitySet : MonoBehaviour
 
     void Update()
     {
-        // ‚Ç‚ñ‚ÈŒü‚«‚Å‚àƒxƒ^‚É‘Î‚µ‚Ä‰ºŒü‚«‚Éd—Í‚ğ‚©‚¯‚é
+        // ã©ã‚“ãªå‘ãã§ã‚‚ãƒ™ã‚¿ã«å¯¾ã—ã¦ä¸‹å‘ãã«é‡åŠ›ã‚’ã‹ã‘ã‚‹
             rb.AddForce(-transform.up * 9.8f*Time.deltaTime, ForceMode.Acceleration);
 
         this.transform.position += transform.forward * speed * Time.deltaTime;
@@ -35,10 +35,10 @@ public class GravitySet : MonoBehaviour
         rayStartPos.z += (transform.localScale.z/2f);
 
 
-        //ƒIƒuƒWƒFƒNƒg‚Ì‰º‚ÉRay‚ğ”ò‚Î‚·
+        //ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ä¸‹ã«Rayã‚’é£›ã°ã™
         if (Physics.Raycast(rayStartPos, raypos, out hit, 1f, mask))
         {
-            // ƒqƒbƒg‚µ‚½ˆÊ’u‚Ü‚Å‚Ì‹——£‚ğæ“¾
+            // ãƒ’ãƒƒãƒˆã—ãŸä½ç½®ã¾ã§ã®è·é›¢ã‚’å–å¾—
             distance = hit.distance;
             Debug.DrawRay(rayStartPos, raypos * hit.distance, Color.blue);
             if (distance < rotatedis)
@@ -58,7 +58,7 @@ public class GravitySet : MonoBehaviour
                 Vector3.Lerp(transform.position, hit.point, 1f);
                 Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
                 rb.MoveRotation(rot * transform.rotation);
-                Debug.Log("«");
+                Debug.Log("â†“");
             }
 
         }
@@ -70,9 +70,9 @@ public class GravitySet : MonoBehaviour
         //{
         //    Debug.DrawRay(player.transform.position, player.transform.transform.forward * hit.distance, Color.yellow);
 
-        //    item1.transform.position = hit.point; // Cube‚ğƒŒƒC‚Ì“–‚½‚Á‚½‚Æ‚±‚ë‚ÉˆÚ“®
-        //    item1.transform.rotation = Quaternion.FromToRotation(item.transform.up, hit.normal); // Cube‚Ìã•ûŒü‚ğƒŒƒC‚ª“–‚½‚Á‚½‚Æ‚±‚ë‚Ì•\–Ê‚Ì•ûŒü‚É‚·‚é
-        //    item1.transform.position += item1.transform.localScale.y / 1.98f * hit.normal; // Cube‚ª–„‚Ü‚ç‚È‚¢‚æ‚¤‚ÉA•\–Ê•ûŒü‚É­‚µ“®‚©‚·
+        //    item1.transform.position = hit.point; // Cubeã‚’ãƒ¬ã‚¤ã®å½“ãŸã£ãŸã¨ã“ã‚ã«ç§»å‹•
+        //    item1.transform.rotation = Quaternion.FromToRotation(item.transform.up, hit.normal); // Cubeã®ä¸Šæ–¹å‘ã‚’ãƒ¬ã‚¤ãŒå½“ãŸã£ãŸã¨ã“ã‚ã®è¡¨é¢ã®æ–¹å‘ã«ã™ã‚‹
+        //    item1.transform.position += item1.transform.localScale.y / 1.98f * hit.normal; // CubeãŒåŸ‹ã¾ã‚‰ãªã„ã‚ˆã†ã«ã€è¡¨é¢æ–¹å‘ã«å°‘ã—å‹•ã‹ã™
         //}
 
     }

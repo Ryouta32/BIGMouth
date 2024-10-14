@@ -1,7 +1,7 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*ƒhƒ‰ƒSƒ““oê‚Ì•Ç‚Ì‹““®*/
+/* ãƒ‰ãƒ©ã‚´ãƒ³ç™»å ´æ™‚ã®å£ã®æŒ™å‹• */
 
 public class Piecephysics : MonoBehaviour
 {
