@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +20,7 @@ public class EnemyScript : MonoBehaviour
         Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
         if (diff.magnitude < bouSaki.GetInhaleDis()&&bouSaki.GetInHale()&&data.state==EnemyData.State.stun)
         {
-            //�z�����݂̏���
+            //吸い込みの処理
             transform.position = Vector3.MoveTowards(transform.position, bouSaki.gameObject.transform.position, bouSaki.GetInHaleSpeed());
         }
         time += Time.deltaTime;
@@ -36,8 +36,10 @@ public class EnemyScript : MonoBehaviour
     public void HitDamage()
     {
         time = 0;
+        //スタン状態なら消す
         if (data.state == EnemyData.State.stun)
             destroyObj();
+
         data.sutnCount--;
         if (data.sutnCount <= 0)
         {
