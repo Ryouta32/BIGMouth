@@ -167,7 +167,7 @@ Material:
     - _HorizontalSpread: 0.1
     - _LODFactor: 1
     - _LerpCoef: 0.5
-    - _Metallic: 0
+    - _Metallic: 0.899
     - _Mode: 2
     - _NormalScaleFactor: 1
     - _OcclusionStrength: 1
