@@ -1,12 +1,12 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 //[System.Serializable]
 //public struct Konsekis
 //{
-//    [Tooltip("­Õ‚Ìí—Ş‚ğ“ü—Í")] public EnemyData KonsekiData;
-//    [Tooltip("­Õ‚ğ—^‚¦‚½Û‚ÌDŠ´“x‚ğ“ü—Í")] public int like;
+//    [Tooltip("ç—•è·¡ã®ç¨®é¡ã‚’å…¥åŠ›")] public EnemyData KonsekiData;
+//    [Tooltip("ç—•è·¡ã‚’ä¸ãˆãŸéš›ã®å¥½æ„Ÿåº¦ã‚’å…¥åŠ›")] public int like;
 //}
 [CreateAssetMenu]
 
@@ -16,11 +16,11 @@ public class EnemyData : ScriptableObject
     {
         general, escape, stun
     }
-    [Tooltip("ƒXƒ^ƒ“‚Ü‚Å‚Ì‰ñ”")] public float sutnCount;
-    [Tooltip("ƒXƒ^ƒ“‚Ü‚Å‚Ì‰ñ”")] public float sutnTime;
-    [Tooltip("•œ‹AŠÔ")] public float returnTime;
-    [Tooltip("ˆÚ“®‘¬“x")] public float speed;
-    [Tooltip("ó‘Ô")] public State state;
+    [Tooltip("ã‚¹ã‚¿ãƒ³ã¾ã§ã®å›æ•°")] public float sutnCount;
+    [Tooltip("ã‚¹ã‚¿ãƒ³ã¾ã§ã®å›æ•°")] public float sutnTime;
+    [Tooltip("å¾©å¸°æ™‚é–“")] public float returnTime;
+    [Tooltip("ç§»å‹•é€Ÿåº¦")] public float speed;
+    [Tooltip("çŠ¶æ…‹")] public State state;
 
     public EnemyData(EnemyData _data)
     {

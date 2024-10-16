@@ -14,6 +14,7 @@ public class EnemyScript : MonoBehaviour
     private void Start()
     {
         initialization();
+        data = new EnemyData(_data);
     }
     private void Update()
     {
