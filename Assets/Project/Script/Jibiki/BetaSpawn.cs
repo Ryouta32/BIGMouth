@@ -45,11 +45,7 @@ public class BetaSpawn : MonoBehaviour
     {
         Debug.Log("waai");
         yield return new WaitForSeconds(time);
-        if (manager.SpawnCheck())
-        {
-            StartCoroutine("Spawn");
-            yield break;
-        }
+
         // 角度ランダム生成
 
         int rnd = Random.Range(0, 360);
@@ -57,6 +53,10 @@ public class BetaSpawn : MonoBehaviour
         obj.GetComponent<EnemyScript>().setManager(manager);
         obj.GetComponent<EnemyScript>().initialization();
         manager.AddEnemys(obj);//Managerのリストに追加
-        //DebugText.Log2(transform.position);
+                               //DebugText.Log2(transform.position);
+        if (manager.SpawnCheck())
+        {
+            StartCoroutine("Spawn");
+        }
     }
 }

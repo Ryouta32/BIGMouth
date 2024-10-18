@@ -5,29 +5,24 @@ using UnityEngine;
 
 public class Piecephysics : MonoBehaviour
 {
-    [SerializeField] Material PieceMaterial;
     GameObject obj;
     Rigidbody rb;
+    MeshRenderer mr;
 
     // Start is called before the first frame update
     void Start()
     {
-        //obj = transform.GetChild(0).gameObject;
-        rb = gameObject.GetComponent<Rigidbody>();
+        obj = transform.GetChild(0).gameObject;
+        rb = obj.GetComponent<Rigidbody>();
+        mr = obj.GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.CompareTag("Dragon"))
+        if(!rb.isKinematic)
         {
-            rb.isKinematic = false;
-            gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
+            mr.enabled = true;
         }
     }
 }
