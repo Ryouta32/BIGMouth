@@ -1,4 +1,4 @@
-using Es.InkPainter;
+﻿using Es.InkPainter;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,7 +34,7 @@ public class InkEnemyScript : MonoBehaviour
 
             PaintManager paintManager = new PaintManager();
 
-            paintManager.Paint(collision, useMethodType, erase, brush, transform, false);
+            paintManager.Paint(collision, useMethodType, erase, brush, transform ,false, collision.transform.tag);
 
         }
         else return;

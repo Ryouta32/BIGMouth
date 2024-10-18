@@ -1,4 +1,4 @@
-using Es.InkPainter;
+﻿using Es.InkPainter;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +16,7 @@ public class ShowerCube : MonoBehaviour
     bool erase = false;
 
     private float time;
+    string _tag;
 
     // Start is called before the first frame update
     void Start()
@@ -37,10 +38,11 @@ public class ShowerCube : MonoBehaviour
         PaintManager paintManager = new PaintManager();
         if (col.gameObject.GetComponent<InkCanvas>())
         {
-            paintManager.Paint(col, useMethodType, erase, brush, transform,false);
+            paintManager.Paint(col, useMethodType, erase, brush, transform,false,_tag);
 
             Destroy(gameObject);
         }
     }
 
+    public void setTag(string s) => _tag = s;
 }

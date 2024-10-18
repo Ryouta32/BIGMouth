@@ -32,7 +32,7 @@ public class EnemyScript : MonoBehaviour
     {
         bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
         data = new EnemyData(_data);
-        betaLife.GetComponent<BetaLife>();
+        betaLife = GetComponent<BetaLife>();
     }
     public void HitDamage()
     {
