@@ -1,4 +1,4 @@
-using Es.InkPainter;
+Ôªøusing Es.InkPainter;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,9 +14,11 @@ public class PaintManager
         DirectUV,
     }
 
-    public void Paint(Collision col, UseMethodType useMethodType, bool erase, Brush brush,Transform tra,bool rotate)
+    public void Paint(Collision col, UseMethodType useMethodType, bool erase, Brush brush,Transform tra,bool rotate,string tag)
     {
         Vector3 hitPos;
+        if (col.transform.tag != tag)
+            erase = !erase;
         foreach (ContactPoint point in col.contacts)
         {
             hitPos = point.normal;
@@ -115,7 +117,7 @@ public class PaintManager
                 //}
                 //foreach (RaycastHit hit in Physics.RaycastAll(ray))
                 //{
-                //    Debug.Log("êFìhÇÍÇƒÇÈ");
+                //    Debug.Log("Ëâ≤Â°ó„Çå„Å¶„Çã");
                 //    InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
 
 

@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bouSaki: {fileID: 0}
-  _data: {fileID: 0}
+  _data: {fileID: 11400000, guid: 8da10429ed97e2547a091c063e65ce05, type: 2}
 --- !u!1 &4757952658368521591
 GameObject:
   m_ObjectHideFlags: 0

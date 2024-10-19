@@ -1,4 +1,4 @@
-using Es.InkPainter;
+Ôªøusing Es.InkPainter;
 using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,11 +28,11 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] GameObject showerCube;
     private GameObject currentBall;
     [SerializeField] float power;
-    [Header("ãzÇ¢çûÇ›ÇÃãóó£")]
+    [Header("Âê∏„ÅÑËæº„Åø„ÅÆË∑ùÈõ¢")]
     [SerializeField] float inHaleDis=0.5f;
-    [Header("ãzÇ¢çûÇ›ë¨ìx")]
+    [Header("Âê∏„ÅÑËæº„ÅøÈÄüÂ∫¶")]
     [SerializeField] float inHaleSpeed=1;
-
+    [SerializeField] string objTag="MIMIC";
     bool on=true;
     Quaternion defaultQuaternion;
    Vector3 hitpoint;
@@ -75,6 +75,7 @@ public class BouSakiScript : MonoBehaviour
         GameObject obj;
         obj = Instantiate(showerCube, transform.position, Quaternion.identity);
         obj.GetComponent<Rigidbody>().AddForce(bouSC.pos.normalized*power);
+        obj.GetComponent<ShowerCube>().setTag(objTag);
         on = true;
     }
     private void Inhale()
@@ -90,20 +91,25 @@ public class BouSakiScript : MonoBehaviour
     {
 
         PaintManager pManager = new PaintManager();
-        pManager.Paint(other, useMethodType, erase, brush, transform,false);
+        if (other.gameObject.CompareTag(objTag))
+            pManager.Paint(other, useMethodType, !erase, brush, transform, true, objTag);
+        else
+            pManager.Paint(other, useMethodType, erase, brush, transform, true, objTag);
     }
     private void OnCollisionExit(Collision col)
     {
         hitpoint = Vector3.zero;
         bouSC.ExisPos();
-        Debug.Log(defaultQuaternion);
         //transform.rotation =  defaultQuaternion;
     }
     private void OnCollisionEnter(Collision collision)
     {
         PaintManager pManager = new PaintManager();
+        if(collision.gameObject.CompareTag(objTag))
+        pManager.Paint(collision, useMethodType, !erase, brush, transform, true,objTag);
+        else
+            pManager.Paint(collision, useMethodType, erase, brush, transform, true, objTag);
 
-        pManager.Paint(collision, useMethodType, erase, brush, transform, true);
 
         hitpoint = collision.contacts[0].point;
         bouSC.HitPos();

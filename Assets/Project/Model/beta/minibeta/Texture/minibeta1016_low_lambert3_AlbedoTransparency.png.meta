@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 6716ba725602c56408e2a6011d4f1029
+<<<<<<<< HEAD:Assets/Project/Model/beta/minibeta/Texture/minibeta1016_low_lambert3_AlbedoTransparency.png.meta
+guid: ee523ad22b0da9d4ba30ffd58a79ed28
+========
+guid: 50d99a2a9fe91314c9f4e9293c03d0f4
+>>>>>>>> main:Assets/Project/image/brushPaint.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

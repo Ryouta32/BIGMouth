@@ -20,41 +20,50 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: passthrough
-  m_Shader: {fileID: 4800000, guid: 8120257754b48344b8a1a0961bad0c46, type: 3}
+  m_Name: toumei
+  m_Shader: {fileID: 4800000, guid: 4ef263e8fedd79745bbfb014db5589b6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - ALPHA_NOT_REPLACE
+  - WRAP_MODE_CLIP
   m_InvalidKeywords:
-  - INK_PAINTER_HEIGHT_BLEND_USE_BRUSH
+  - COLOR_SYNTHESIS_ADD
+  - INK_PAINTER_COLOR_BLEND_USE_CONTROL
   - _ALPHABLEND_ON
-  - _EMISSION
   - _SURFACE_TYPE_TRANSPARENT
-  m_LightmapFlags: 1
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 1000
   stringTagMap: {}
   disabledShaderPasses:
   - DepthOnly
-  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseColor:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 7a79819aee23a644a9b6a7fa1e1f170e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8ec60aa801b5c6f4ea0e55703c15e8bb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Brush:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _BrushHeight:
+    - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _BumpMap:
+    - _ClipTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -70,16 +79,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DstTex:
+        m_Texture: {fileID: 2800000, guid: 7a79819aee23a644a9b6a7fa1e1f170e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7a79819aee23a644a9b6a7fa1e1f170e, type: 3}
+        m_Texture: {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 7a79819aee23a644a9b6a7fa1e1f170e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -91,6 +108,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SrcTex:
+        m_Texture: {fileID: 2800000, guid: 7a79819aee23a644a9b6a7fa1e1f170e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TargetTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _bumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -108,19 +137,24 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - INK_PAINTER_HEIGHT_BLEND: 0
+    - ALPHA: 1
+    - COLOR_SYNTHESIS: 0
+    - INK_PAINTER_COLOR_BLEND: 0
+    - WRAP_MODE: 2
+    - _Alpha: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
-    - _BlendOp: 0
+    - _Border: 0
     - _BrushRotate: 0
     - _BrushScale: 0.1
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
+    - _ClipScale: 0.1
     - _Cull: 2
-    - _Cutoff: 0.9
+    - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
@@ -129,14 +163,21 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HeightBlend: 1
-    - _Metallic: 0
+    - _HorizontalSpread: 0.1
+    - _LODFactor: 1
+    - _LerpCoef: 0.5
+    - _Metallic: 0.899
     - _Mode: 2
+    - _NormalScaleFactor: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _ParallaxScale: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SampleGI: 0
+    - _ReverseX: 1
+    - _ReverseY: 1
+    - _Rotate: 0
+    - _ScaleFactor: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -144,12 +185,18 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 1
     - _UVSec: 0
+    - _Viscosity: 0.1
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
-    - _Color: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0.6117647}
+    - _ClipUV: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ControlColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FixedColor: {r: 0, g: 0, b: 0, a: 0}
+    - _FlowDirection: {r: 0, g: 0, b: 0, a: 0}
     - _PaintUV: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _TessFactor: {r: 2, g: 2, b: 2, a: 2}
   m_BuildTextureStacks: []
