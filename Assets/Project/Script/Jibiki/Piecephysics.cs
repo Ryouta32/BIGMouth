@@ -1,28 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/* ドラゴン登場時の壁の挙動 */
+/* ドラゴンが当たってきたら色変える*/
 
 public class Piecephysics : MonoBehaviour
 {
-    GameObject obj;
-    Rigidbody rb;
+    [SerializeField] Material PieceMaterial;
     MeshRenderer mr;
 
     // Start is called before the first frame update
     void Start()
     {
-        obj = transform.GetChild(0).gameObject;
-        rb = obj.GetComponent<Rigidbody>();
-        mr = obj.GetComponent<MeshRenderer>();
+        mr = gameObject.GetComponent<MeshRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        if(!rb.isKinematic)
+        if (collision.gameObject.CompareTag("Dragon"))
         {
-            mr.enabled = true;
+            mr.material = PieceMaterial;
         }
     }
 }
