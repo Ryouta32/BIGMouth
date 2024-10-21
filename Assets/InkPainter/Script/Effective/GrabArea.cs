@@ -99,7 +99,6 @@ namespace Es.InkPainter.Effective
 			{
 				case GrabTextureWrapMode.Clamp:
 					grabAreaMaterial.EnableKeyword(WM_CLAMP);
-					Debug.Log(grabAreaMaterial);
 					break;
 
 				case GrabTextureWrapMode.Repeat:
