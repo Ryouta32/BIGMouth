@@ -34,7 +34,9 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] float inHaleSpeed=1;
     [SerializeField] string objTag="MIMIC";
     [SerializeField] GameObject ShineEffect;
+    [SerializeField] AudioManager audioM;
     bool on=true;
+    float paintTime;
     Quaternion defaultQuaternion;
    Vector3 hitpoint;
    public bool OnHale;
@@ -82,6 +84,7 @@ public class BouSakiScript : MonoBehaviour
     private void Inhale()
     {
         OnHale = true;
+        audioM.PlayPoint(audioM.data.inhale, this.gameObject);
     }
     private void UpInhale()
     {
@@ -90,17 +93,17 @@ public class BouSakiScript : MonoBehaviour
 
     private void OnCollisionStay(Collision other)
     {
-
+        paintTime += Time.deltaTime;
         PaintManager pManager = new PaintManager();
         if (other.gameObject.CompareTag(objTag))
             pManager.Paint(other, useMethodType, !erase, brush, transform, true, objTag);
         else
             pManager.Paint(other, useMethodType, erase, brush, transform, true, objTag);
 
-        this.time += Time.deltaTime;
-        if (this.time > 0.8f)
+        time += Time.deltaTime;
+        if (time > 0.8f)
         {
-            this.time = 0;
+            time = 0;
             Instantiate(ShineEffect, transform.position, transform.rotation);
         }
     }

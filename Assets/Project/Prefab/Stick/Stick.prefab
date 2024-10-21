@@ -5088,6 +5088,7 @@ MonoBehaviour:
   inHaleSpeed: 3
   objTag: MIMIC
   ShineEffect: {fileID: 8162550010733454163, guid: 1306156496910684ea076e09c68aaec2, type: 3}
+  audioM: {fileID: 0}
   OnHale: 0
 --- !u!65 &1195390217049924833
 BoxCollider:
@@ -5104,7 +5105,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
