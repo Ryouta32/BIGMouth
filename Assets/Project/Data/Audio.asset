@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefbaeb5cabb9b946885fba15d529a2d, type: 3}
+  m_Name: Audio
+  m_EditorClassIdentifier: 
+  miniMove: {fileID: 8300000, guid: 5328da89042b95840b833730768e72fc, type: 3}
+  tyuuMove: {fileID: 0}
+  bigMove: {fileID: 0}
+  attack: {fileID: 8300000, guid: 135d75db3b4760243b449a02c43946a1, type: 3}
+  sutun: {fileID: 8300000, guid: 99dd1fe9849443746b3a1b1faf56d4d3, type: 3}
+  bom: {fileID: 8300000, guid: 6a885162074df684eb9ad6e08abf41fc, type: 3}
+  inhale: {fileID: 8300000, guid: bc5bdeb571f86674f92bae0484c4241f, type: 3}
+  Inhaled: {fileID: 8300000, guid: bc5bdeb571f86674f92bae0484c4241f, type: 3}

@@ -9,12 +9,17 @@ public class EnemyScript : MonoBehaviour
     EnemyManager manager;
     public BouSakiScript bouSaki;
     [SerializeField] EnemyData _data;
+    [SerializeField] GameObject stunEffect;
+    [SerializeField] GameObject damageEffect;
+    [SerializeField] GameObject DestroyEffect;
+     AudioManager audioM;
     private EnemyData data;
     float time=0;
     private void Start()
     {
         initialization();
         data = new EnemyData(_data);
+        audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
     private void Update()
     {
@@ -34,25 +39,50 @@ public class EnemyScript : MonoBehaviour
         data = new EnemyData(_data);
         betaLife = GetComponent<BetaLife>();
     }
+    private void OnDestroy()
+    {
+        Instantiate(DestroyEffect, transform.position, Quaternion.identity);
+    }
     public void HitDamage()
     {
         time = 0;
+        audioM.PlayPoint(audioM.data.attack,this.gameObject);
+        Instantiate(damageEffect, transform.position, Quaternion.identity);
+        if(bouSaki.GetInHale() && data.state == EnemyData.State.stun)
+        {
+            destroyObj();
+            AudioSource.PlayClipAtPoint(audioM.data.bom, this.gameObject.transform.position);
+            Destroy(this.gameObject);
+        }
         //スタン状態なら消す
         if (data.state == EnemyData.State.stun)
+        {
             destroyObj();
+            Debug.Log("削除");
+            AudioSource.PlayClipAtPoint(audioM.data.bom, this.gameObject.transform.position);
 
+            Destroy(this.gameObject);
+        }
         data.sutnCount--;
         if (data.sutnCount <= 0)
         {
             SetState(EnemyData.State.stun);
             StartCoroutine("Stun");
-        }
+        }else
         SetState(EnemyData.State.escape);
     }
-    IEnumerator Stun()
+    IEnumerator Stun()//スタン中の処理
     {
+        stunEffect.SetActive(true);
+        audioM.PlayPoint(audioM.data.sutun,this.gameObject);
         yield return new WaitForSeconds(data.sutnTime);
         SetState(EnemyData.State.general);
+        StunReturn();
+        stunEffect.SetActive(false);
+    }
+    public void MoveAudio()
+    {
+        audioM.PlayPoint(audioM.data.miniMove,this.gameObject);
     }
     public void StunReturn() => data.sutnCount = _data.sutnCount;
     public void setManager(EnemyManager x) => manager = x;
