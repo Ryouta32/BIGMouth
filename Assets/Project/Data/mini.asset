@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sutnCount: 2
   sutnTime: 2
+  returnTime: 10
   speed: 0
   state: 0

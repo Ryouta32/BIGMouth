@@ -13,7 +13,6 @@ public class BetaSpawn : MonoBehaviour
     float x, z;
 
     EnemyManager manager;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -43,20 +42,22 @@ public class BetaSpawn : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        Debug.Log("waai");
-        yield return new WaitForSeconds(time);
-
-        // 角度ランダム生成
-
-        int rnd = Random.Range(0, 360);
-        GameObject obj = Instantiate(spawnPrefab, rightControllerPivot.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
-        obj.GetComponent<EnemyScript>().setManager(manager);
-        obj.GetComponent<EnemyScript>().initialization();
-        manager.AddEnemys(obj);//Managerのリストに追加
-                               //DebugText.Log2(transform.position);
-        if (manager.SpawnCheck())
+        while (true)
         {
-            StartCoroutine("Spawn");
+
+            yield return new WaitForSeconds(time);
+
+            // 角度ランダム生成
+
+            if(manager.SpawnCheck())
+                yield break;
+            int rnd = Random.Range(0, 360);
+            GameObject obj = Instantiate(spawnPrefab, rightControllerPivot.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
+            obj.GetComponent<EnemyScript>().setManager(manager);
+            obj.GetComponent<EnemyScript>().initialization();
+            manager.AddEnemys(obj);//Managerのリストに追加
+                                   //DebugText.Log2(transform.position);
+
         }
     }
 }
