@@ -58,7 +58,6 @@ public class GravitySet : MonoBehaviour
                 Vector3.Lerp(transform.position, hit.point, 1f);
                 Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
                 rb.MoveRotation(rot * transform.rotation);
-                Debug.Log("↓");
             }
 
         }
