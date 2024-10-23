@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Project/Prefab/Beta/NormalBeta.meta
 guid: 83344e5b0130b6147b552e2d85155f80
 folderAsset: yes
+========
+guid: 5cfa27f471a8d1746a5c7b9568a52e4e
+>>>>>>>> main:Assets/Project/Scenes/DragonEffect.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -13,6 +13,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] GameObject damageEffect;
     [SerializeField] GameObject DestroyEffect;
      AudioManager audioM;
+    Rigidbody rb;
     private EnemyData data;
     float time=0;
     private void Start()
@@ -20,6 +21,7 @@ public class EnemyScript : MonoBehaviour
         initialization();
         data = new EnemyData(_data);
         audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        rb = GetComponent<Rigidbody>();
     }
     private void Update()
     {
@@ -32,6 +34,14 @@ public class EnemyScript : MonoBehaviour
         time += Time.deltaTime;
         if (time > data.returnTime)
             SetState(EnemyData.State.general);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        rb.constraints = RigidbodyConstraints.None;
     }
     public void initialization()
     {
