@@ -36,7 +36,7 @@ public class PaintManager
                     {
                         if (rotate)
                         {
-                            tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
+                            //tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
                         }
                         switch (useMethodType)
                         {
@@ -87,7 +87,7 @@ public class PaintManager
 
                         if (rotate)
                         {
-                            tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
+                            //tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
                         }
                         switch (useMethodType)
                         {
@@ -144,7 +144,7 @@ public class PaintManager
                 if (paint != null)
                     {
 
-                        tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
+                        //tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
                         switch (useMethodType)
                         {
                             case UseMethodType.RaycastHitInfo:
