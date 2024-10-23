@@ -51,12 +51,12 @@ public class BouSakiScript : MonoBehaviour
     {
         if (on&&OVRInput.Get(actionBtn)|| (on && Input.GetKey(KeyCode.Space)))
         {
-            ShowerObj.SetActive(true);
+            //ShowerObj.SetActive(true);
             StartCoroutine("ShowerTime");
         }
         if (OVRInput.GetUp(actionBtn) || Input.GetKeyUp(KeyCode.Space))
         {
-            ShowerObj.SetActive(false);
+            //ShowerObj.SetActive(false);
             StopCoroutine("ShowerTime");
             on = true;
         }
@@ -124,6 +124,39 @@ public class BouSakiScript : MonoBehaviour
 
         hitpoint = collision.contacts[0].point;
         bouSC.HitPos();
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        paintTime += Time.deltaTime;
+        PaintManager pManager = new PaintManager();
+        if (other.gameObject.CompareTag(objTag))
+            pManager.Paint(other, useMethodType, !erase, brush, transform, true, objTag);
+        else
+            pManager.Paint(other, useMethodType, erase, brush, transform, true, objTag);
+
+        time += Time.deltaTime;
+        if (time > 0.8f)
+        {
+            time = 0;
+            Instantiate(ShineEffect, transform.position, transform.rotation);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        PaintManager pManager = new PaintManager();
+        if (other.gameObject.CompareTag(objTag))
+            pManager.Paint(other, useMethodType, !erase, brush, transform, true, objTag);
+        else
+            pManager.Paint(other, useMethodType, erase, brush, transform, true, objTag);
+
+
+        hitpoint = other.ClosestPointOnBounds(this.transform.position);
+        bouSC.HitPos();
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        hitpoint = Vector3.zero;
+        bouSC.ExisPos();
     }
     public Vector3 GetHit() => hitpoint;
     public void SetHit(Vector3 x) => hitpoint = x;

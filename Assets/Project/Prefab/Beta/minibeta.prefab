@@ -206,7 +206,7 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 8da10429ed97e2547a091c063e65ce05, type: 2}
   stunEffect: {fileID: 1626746427535111985}
   damageEffect: {fileID: 2510562678213512748, guid: 0beb1d15c494365458144cc18fef2d60, type: 3}
-  DestroyEffect: {fileID: 4676527293014402730, guid: 7e75db68ad238c24d8007be447739680, type: 3}
+  DestroyEffect: {fileID: 689374704402498535, guid: 2eeadfe0322da534899490506495a1f6, type: 3}
 --- !u!114 &4705172406876495834
 MonoBehaviour:
   m_ObjectHideFlags: 0
