@@ -35,15 +35,15 @@ public class PieceManager : MonoBehaviour
 
         int rnd = Random.Range(0, PieceChildren.Count);
 
-        obj = PieceChildren[rnd].transform.GetChild(0).gameObject.GetComponent<Rigidbody>();
+        obj = PieceChildren[rnd].gameObject.GetComponent<Rigidbody>();
 
         if(obj.isKinematic)
         {
             obj.isKinematic = false;
-            PieceChildren[rnd].transform.GetChild(0).gameObject.GetComponent<BoxCollider>().isTrigger = true;
-            PieceChildren[rnd].transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
-            PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().enabled = true;
-            PieceChildren[rnd].gameObject.GetComponent<BoxCollider>().enabled = true;
+            //PieceChildren[rnd].transform.GetChild(0).gameObject.GetComponent<BoxCollider>().isTrigger = true;
+            //PieceChildren[rnd].transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
+            //PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().enabled = true;
+            //PieceChildren[rnd].gameObject.GetComponent<BoxCollider>().enabled = true;
             obj.AddForce(power);
 
             PieceChildren.Remove(PieceChildren[rnd]);
