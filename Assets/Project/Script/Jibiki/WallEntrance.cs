@@ -21,10 +21,9 @@ public class WallEntrance : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Dragon"))
+        if(collision.gameObject.CompareTag("Wall"))
         {
-            Debug.Log("asasa");
-            rb.isKinematic = false;
+            collision.gameObject.AddComponent<Rigidbody>();
         }
     }
 }
