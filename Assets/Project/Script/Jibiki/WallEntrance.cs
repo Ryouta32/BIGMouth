@@ -10,7 +10,7 @@ public class WallEntrance : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+        //rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -21,9 +21,13 @@ public class WallEntrance : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Wall"))
-        {
-            collision.gameObject.AddComponent<Rigidbody>();
-        }
+        rb = collision.gameObject.AddComponent<Rigidbody>();
+        rb.useGravity = false;
+
+        //if (collision.gameObject.CompareTag("Wall"))
+        //{
+        //    rb = collision.gameObject.AddComponent<Rigidbody>();
+        //    rb.useGravity = false;
+        //}
     }
 }
