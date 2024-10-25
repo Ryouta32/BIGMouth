@@ -40,10 +40,10 @@ public class PieceManager : MonoBehaviour
         if(obj.isKinematic)
         {
             obj.isKinematic = false;
-            //PieceChildren[rnd].transform.GetChild(0).gameObject.GetComponent<BoxCollider>().isTrigger = true;
-            //PieceChildren[rnd].transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
-            //PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().enabled = true;
-            //PieceChildren[rnd].gameObject.GetComponent<BoxCollider>().enabled = true;
+            PieceChildren[rnd].transform.GetChild(0).gameObject.GetComponent<BoxCollider>().isTrigger = true;
+            PieceChildren[rnd].transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
+            PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().enabled = true;
+            PieceChildren[rnd].gameObject.GetComponent<BoxCollider>().enabled = true;
             obj.AddForce(power);
 
             PieceChildren.Remove(PieceChildren[rnd]);
