@@ -12,6 +12,7 @@ TagManager:
   - Wall3
   - Brush
   - Dragon
+  - Wall
   layers:
   - Default
   - TransparentFX
