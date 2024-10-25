@@ -1170,7 +1170,7 @@ PrefabInstance:
     - target: {fileID: 8574349821656423594, guid: 02a0af2b76e37054e81d56c55942a7b8, type: 3}
       propertyPath: spawnPrefab
       value: 
-      objectReference: {fileID: 837177844868554206, guid: fd74d58fcd68ee144925a11bb2ec8d45, type: 3}
+      objectReference: {fileID: 74955073074823763, guid: 774920f80001bf942917215bbf1c88ee, type: 3}
     - target: {fileID: 8574349821656423594, guid: 02a0af2b76e37054e81d56c55942a7b8, type: 3}
       propertyPath: rightControllerPivot
       value: 
