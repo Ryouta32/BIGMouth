@@ -13,7 +13,7 @@ public class BouSakiScript : MonoBehaviour
     private Brush brush;
 
     [SerializeField]
-    private PaintManager.UseMethodType useMethodType = PaintManager.UseMethodType.RaycastHitInfo;
+    private Paintr.UseMethodType useMethodType = Paintr.UseMethodType.RaycastHitInfo;
 
     [SerializeField]
     bool erase = false;
@@ -94,7 +94,7 @@ public class BouSakiScript : MonoBehaviour
     private void OnCollisionStay(Collision other)
     {
         paintTime += Time.deltaTime;
-        PaintManager pManager = new PaintManager();
+        Paintr pManager = new Paintr();
         if (other.gameObject.CompareTag(objTag))
             pManager.Paint(other, useMethodType, !erase, brush, transform, true, objTag);
         else
@@ -115,7 +115,7 @@ public class BouSakiScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        PaintManager pManager = new PaintManager();
+        Paintr pManager = new Paintr();
         if(collision.gameObject.CompareTag(objTag))
         pManager.Paint(collision, useMethodType, !erase, brush, transform, true,objTag);
         else
@@ -128,7 +128,7 @@ public class BouSakiScript : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         paintTime += Time.deltaTime;
-        PaintManager pManager = new PaintManager();
+        Paintr pManager = new Paintr();
         if (other.gameObject.CompareTag(objTag))
             pManager.Paint(other, useMethodType, !erase, brush, transform, true, objTag);
         else
@@ -143,7 +143,7 @@ public class BouSakiScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        PaintManager pManager = new PaintManager();
+        Paintr pManager = new Paintr();
         if (other.gameObject.CompareTag(objTag))
             pManager.Paint(other, useMethodType, !erase, brush, transform, true, objTag);
         else

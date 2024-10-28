@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 //using UnityEditor.Rendering;
 using UnityEngine;
-using static PaintManager;
+using static Paintr;
 using static UnityEngine.ParticleSystem;
 
 public class ShowerScript : MonoBehaviour
@@ -13,7 +13,7 @@ public class ShowerScript : MonoBehaviour
     private Brush brush;
 
     [SerializeField]
-    private PaintManager.UseMethodType useMethodType = PaintManager.UseMethodType.RaycastHitInfo;
+    private Paintr.UseMethodType useMethodType = Paintr.UseMethodType.RaycastHitInfo;
 
     [SerializeField]
     bool erase = false;
@@ -39,7 +39,7 @@ public class ShowerScript : MonoBehaviour
         foreach (var collisionEvent in collisionEvents)
         {
             //var col = collisionEvent.colliderComponent;
-        PaintManager pManager = new PaintManager();
+        Paintr pManager = new Paintr();
             //Debug.Log("“–‚½‚Á‚Ä‚¢‚é‚ÅŒã˜a‘f");
             //Collision col = obj.GetComponent<Collision>();
             pManager.Paint(collisionEvent, useMethodType, erase, brush,obj,transform);

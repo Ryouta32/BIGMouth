@@ -10,7 +10,7 @@ public class InkEnemyScript : MonoBehaviour
     private Brush brush;
 
     [SerializeField]
-    private PaintManager.UseMethodType useMethodType = PaintManager.UseMethodType.RaycastHitInfo;
+    private Paintr.UseMethodType useMethodType = Paintr.UseMethodType.RaycastHitInfo;
 
     [SerializeField]
     bool erase = false;
@@ -32,7 +32,7 @@ public class InkEnemyScript : MonoBehaviour
             time = 0;
             col = true;
 
-            PaintManager paintManager = new PaintManager();
+            Paintr paintManager = new Paintr();
 
             paintManager.Paint(collision, useMethodType, erase, brush, transform ,false, collision.transform.tag);
 

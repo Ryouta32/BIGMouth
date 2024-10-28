@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static PaintManager;
+using static Paintr;
 
 public class ShowerCube : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class ShowerCube : MonoBehaviour
     private Brush brush;
 
     [SerializeField]
-    private PaintManager.UseMethodType useMethodType = PaintManager.UseMethodType.RaycastHitInfo;
+    private Paintr.UseMethodType useMethodType = Paintr.UseMethodType.RaycastHitInfo;
 
     [SerializeField]
     bool erase = false;
@@ -35,7 +35,7 @@ public class ShowerCube : MonoBehaviour
     }
     private void OnCollisionEnter(Collision col)
     {
-        PaintManager paintManager = new PaintManager();
+        Paintr paintManager = new Paintr();
         if (col.gameObject.GetComponent<InkCanvas>())
         {
             paintManager.Paint(col, useMethodType, erase, brush, transform,false,_tag);
