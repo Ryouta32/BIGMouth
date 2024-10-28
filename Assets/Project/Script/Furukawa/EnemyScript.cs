@@ -37,7 +37,11 @@ public class EnemyScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.transform.tag=="Brush")
         rb.constraints = RigidbodyConstraints.FreezeAll;
+        else
+            rb.constraints = RigidbodyConstraints.None;
+
     }
     private void OnCollisionExit(Collision collision)
     {

@@ -9,16 +9,17 @@ public class SetActiveScript : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip sound1;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("MIMIC"))
+        if (collision.gameObject.CompareTag("Wall"))
         {
-            audioSource.PlayOneShot(sound1);
+            //audioSource.PlayOneShot(sound1);
 
             for (int i = 0; i < renderers.Length; i++)
             {
                 renderers[i].enabled = true;
             }
         }
+
     }
 }
