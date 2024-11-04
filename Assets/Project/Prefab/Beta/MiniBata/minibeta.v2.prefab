@@ -227,7 +227,7 @@ MonoBehaviour:
     normalBlendType: 0
     heightBlendType: 0
   useMethodType: 1
-  erase: 0
+  erase: 1
 --- !u!114 &2302103633329161422
 MonoBehaviour:
   m_ObjectHideFlags: 0
