@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: passthrough
-  m_Shader: {fileID: 4800000, guid: 8120257754b48344b8a1a0961bad0c46, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4a5d10b96a9f83d448b8165d639ab3f1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -75,7 +75,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7a79819aee23a644a9b6a7fa1e1f170e, type: 3}
+        m_Texture: {fileID: 2800000, guid: bb9f6826b4e8e6846831aa4e6675c591, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
