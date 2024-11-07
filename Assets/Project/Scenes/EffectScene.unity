@@ -1173,6 +1173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ripples
       objectReference: {fileID: 0}
+    - target: {fileID: 8868480382869232567, guid: 3083a0ce40b3e4d42a2e8e6d697bd544, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
