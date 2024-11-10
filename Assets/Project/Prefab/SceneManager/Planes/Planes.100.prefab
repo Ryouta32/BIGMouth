@@ -143,7 +143,6 @@ GameObject:
   - component: {fileID: 7851290185700423827}
   - component: {fileID: 2713075390324378968}
   - component: {fileID: 3352817038562613174}
-  - component: {fileID: 4030167256059217196}
   - component: {fileID: 4845068756506256944}
   m_Layer: 0
   m_Name: Piece.17
@@ -238,25 +237,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4030167256059217196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144981001948619484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4845068756506256944
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -296,7 +276,6 @@ GameObject:
   - component: {fileID: 6539383208464875187}
   - component: {fileID: 8256314373828755900}
   - component: {fileID: 31225696859836227}
-  - component: {fileID: 5288619535701300675}
   - component: {fileID: 4753023001275362427}
   m_Layer: 0
   m_Name: Piece.50
@@ -391,25 +370,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5288619535701300675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334066379165086926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4753023001275362427
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -449,7 +409,6 @@ GameObject:
   - component: {fileID: 5396532114899014059}
   - component: {fileID: 7471203600004361707}
   - component: {fileID: 7370105431635954941}
-  - component: {fileID: 7928298403695365946}
   - component: {fileID: 5740215810027658656}
   m_Layer: 0
   m_Name: Piece.28
@@ -544,25 +503,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7928298403695365946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334389513681297309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5740215810027658656
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -602,7 +542,6 @@ GameObject:
   - component: {fileID: 4927919553628645086}
   - component: {fileID: 208958680902131391}
   - component: {fileID: 8412418227536800721}
-  - component: {fileID: 3061030015479961410}
   - component: {fileID: 4144025436205065495}
   m_Layer: 0
   m_Name: Piece.15
@@ -697,25 +636,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3061030015479961410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621738861844077241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4144025436205065495
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -755,7 +675,6 @@ GameObject:
   - component: {fileID: 1432761549000110126}
   - component: {fileID: 7773390888729193705}
   - component: {fileID: 8979650199302325242}
-  - component: {fileID: 6822533443791912029}
   - component: {fileID: 2394182574448424265}
   m_Layer: 0
   m_Name: Piece.75
@@ -850,25 +769,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6822533443791912029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683656001117647027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &2394182574448424265
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -908,7 +808,6 @@ GameObject:
   - component: {fileID: 577374918717529739}
   - component: {fileID: 5024161247042856886}
   - component: {fileID: 7614557294890211516}
-  - component: {fileID: 1566560962655467443}
   - component: {fileID: 9115203885708239016}
   m_Layer: 0
   m_Name: Piece.26
@@ -1003,25 +902,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1566560962655467443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797266369092761497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &9115203885708239016
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1061,7 +941,6 @@ GameObject:
   - component: {fileID: 6830522562653088597}
   - component: {fileID: 2326112335703864375}
   - component: {fileID: 6641631662131734749}
-  - component: {fileID: 3379930682101386539}
   - component: {fileID: 7894130444868911557}
   m_Layer: 0
   m_Name: Piece.40
@@ -1156,25 +1035,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3379930682101386539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881285716488774627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &7894130444868911557
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1214,7 +1074,6 @@ GameObject:
   - component: {fileID: 155462213762163812}
   - component: {fileID: 5622608683118783457}
   - component: {fileID: 8375284961758518955}
-  - component: {fileID: 2061037126395378505}
   - component: {fileID: 7514929364345923369}
   m_Layer: 0
   m_Name: Piece.6
@@ -1309,25 +1168,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2061037126395378505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020265016270833633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &7514929364345923369
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1367,7 +1207,6 @@ GameObject:
   - component: {fileID: 8259113554418744212}
   - component: {fileID: 4180318987363939773}
   - component: {fileID: 115756485705385685}
-  - component: {fileID: 3713131895125553689}
   - component: {fileID: 1080491171356975505}
   m_Layer: 0
   m_Name: Piece.23
@@ -1462,25 +1301,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3713131895125553689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136528784115683586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &1080491171356975505
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1520,7 +1340,6 @@ GameObject:
   - component: {fileID: 6543142165743029237}
   - component: {fileID: 6310595656732012367}
   - component: {fileID: 3283996707468566079}
-  - component: {fileID: 7098833360056208476}
   - component: {fileID: 8722888561914971221}
   m_Layer: 0
   m_Name: Piece.67
@@ -1615,25 +1434,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7098833360056208476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277022824001173290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8722888561914971221
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1673,7 +1473,6 @@ GameObject:
   - component: {fileID: 5346325480011784420}
   - component: {fileID: 8219489203372478721}
   - component: {fileID: 9218064215492019273}
-  - component: {fileID: 8080547320352714021}
   - component: {fileID: 6607930558458673566}
   m_Layer: 0
   m_Name: Piece.30
@@ -1768,25 +1567,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8080547320352714021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317554484139628013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &6607930558458673566
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1826,7 +1606,6 @@ GameObject:
   - component: {fileID: 6400580207560337404}
   - component: {fileID: 4117452671704039940}
   - component: {fileID: 547612199047195948}
-  - component: {fileID: 6834181279418461526}
   - component: {fileID: 468035934948183611}
   m_Layer: 0
   m_Name: Piece.88
@@ -1921,25 +1700,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6834181279418461526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332709528231006606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &468035934948183611
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1979,7 +1739,6 @@ GameObject:
   - component: {fileID: 7668136814966725705}
   - component: {fileID: 7290250030693400493}
   - component: {fileID: 3790231853486294148}
-  - component: {fileID: 1125236066249137588}
   - component: {fileID: 3577198541990275695}
   m_Layer: 0
   m_Name: Piece.47
@@ -2074,25 +1833,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1125236066249137588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532371398005632708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3577198541990275695
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2132,7 +1872,6 @@ GameObject:
   - component: {fileID: 5460976809247935813}
   - component: {fileID: 6537596954143677297}
   - component: {fileID: 5290534963250387273}
-  - component: {fileID: 5750446280378702263}
   - component: {fileID: 1457966711507769708}
   m_Layer: 0
   m_Name: Piece.20
@@ -2227,25 +1966,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5750446280378702263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541200586637348925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &1457966711507769708
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2285,7 +2005,6 @@ GameObject:
   - component: {fileID: 4290649313035363752}
   - component: {fileID: 6904176032889307929}
   - component: {fileID: 4854863175579574256}
-  - component: {fileID: 6808479893592305278}
   - component: {fileID: 6461614170142227718}
   m_Layer: 0
   m_Name: Piece.97
@@ -2380,25 +2099,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6808479893592305278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720365306900619496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &6461614170142227718
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2438,7 +2138,6 @@ GameObject:
   - component: {fileID: 5558834478621631102}
   - component: {fileID: 3670930521568322847}
   - component: {fileID: 5756281761906314259}
-  - component: {fileID: 1238372541670316708}
   - component: {fileID: 5026246973496882633}
   m_Layer: 0
   m_Name: Piece.7
@@ -2533,25 +2232,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1238372541670316708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784377553178138779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5026246973496882633
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2591,7 +2271,6 @@ GameObject:
   - component: {fileID: 9041785802998308534}
   - component: {fileID: 7791414695157050694}
   - component: {fileID: 6398203284687227324}
-  - component: {fileID: 7574984704225325580}
   - component: {fileID: 3575418776388197608}
   m_Layer: 0
   m_Name: Piece.77
@@ -2686,25 +2365,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7574984704225325580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858021305519535839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3575418776388197608
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2744,7 +2404,6 @@ GameObject:
   - component: {fileID: 7496386515067774871}
   - component: {fileID: 625694360216748444}
   - component: {fileID: 3608878171179044441}
-  - component: {fileID: 672560808442620266}
   - component: {fileID: 3372552253547194158}
   m_Layer: 0
   m_Name: Piece.82
@@ -2839,25 +2498,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &672560808442620266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921814928193733723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3372552253547194158
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2897,7 +2537,6 @@ GameObject:
   - component: {fileID: 8441270291553926133}
   - component: {fileID: 9169446496308933024}
   - component: {fileID: 8169080469490766890}
-  - component: {fileID: 4138939973643419077}
   - component: {fileID: 1774913279815758035}
   m_Layer: 0
   m_Name: Piece.76
@@ -2992,25 +2631,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4138939973643419077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081219573441551321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &1774913279815758035
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3050,7 +2670,6 @@ GameObject:
   - component: {fileID: 1501964961566340504}
   - component: {fileID: 1175483484823782978}
   - component: {fileID: 3794095818449860466}
-  - component: {fileID: 8034000163175033774}
   - component: {fileID: 8734326529914298627}
   m_Layer: 0
   m_Name: Piece.19
@@ -3145,25 +2764,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8034000163175033774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2201598992854755144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8734326529914298627
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3203,7 +2803,6 @@ GameObject:
   - component: {fileID: 6139477498740768805}
   - component: {fileID: 8298016878036176221}
   - component: {fileID: 576551647348328486}
-  - component: {fileID: 1627661990998788703}
   - component: {fileID: 5665638495902637170}
   m_Layer: 0
   m_Name: Piece.74
@@ -3298,25 +2897,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1627661990998788703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2481990154491472552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5665638495902637170
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3356,7 +2936,6 @@ GameObject:
   - component: {fileID: 4233966789270704689}
   - component: {fileID: 8303135655665815380}
   - component: {fileID: 2859201100873313054}
-  - component: {fileID: 46860714064488765}
   - component: {fileID: 7299396536386717044}
   m_Layer: 0
   m_Name: Piece.62
@@ -3451,25 +3030,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &46860714064488765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2690357068317290051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &7299396536386717044
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3509,7 +3069,6 @@ GameObject:
   - component: {fileID: 5964640803509551103}
   - component: {fileID: 9135062427698239617}
   - component: {fileID: 4327974403817561840}
-  - component: {fileID: 7249326740222867648}
   - component: {fileID: 8485602723496416027}
   m_Layer: 0
   m_Name: Piece.80
@@ -3604,25 +3163,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7249326740222867648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2788517114283408791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8485602723496416027
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3662,7 +3202,6 @@ GameObject:
   - component: {fileID: 6320055099618445093}
   - component: {fileID: 2842680250065338740}
   - component: {fileID: 3361061813163984759}
-  - component: {fileID: 8024730456977235755}
   - component: {fileID: 5149770010771232136}
   m_Layer: 0
   m_Name: Piece.42
@@ -3757,25 +3296,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8024730456977235755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2879230982726067686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5149770010771232136
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3815,7 +3335,6 @@ GameObject:
   - component: {fileID: 8196322395871315430}
   - component: {fileID: 3144971218006996428}
   - component: {fileID: 9109618438880867754}
-  - component: {fileID: 1334500863341527807}
   - component: {fileID: 1946170817406444325}
   m_Layer: 0
   m_Name: Piece.12
@@ -3910,25 +3429,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1334500863341527807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2895294314130819467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &1946170817406444325
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3968,7 +3468,6 @@ GameObject:
   - component: {fileID: 5886950364221819005}
   - component: {fileID: 8995929992074641637}
   - component: {fileID: 1523130389734560380}
-  - component: {fileID: 4727326222710363545}
   - component: {fileID: 4322180519085954289}
   m_Layer: 0
   m_Name: Piece.8
@@ -4063,25 +3562,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4727326222710363545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2971121966782109263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4322180519085954289
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4121,7 +3601,6 @@ GameObject:
   - component: {fileID: 8512202634647396936}
   - component: {fileID: 3147904164908432067}
   - component: {fileID: 2113143703528868800}
-  - component: {fileID: 8581814924665145334}
   - component: {fileID: 6241944123106580284}
   m_Layer: 0
   m_Name: Piece.79
@@ -4216,25 +3695,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8581814924665145334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3134164301981672437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &6241944123106580284
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4274,7 +3734,6 @@ GameObject:
   - component: {fileID: 7371052928084462202}
   - component: {fileID: 7503751136742700890}
   - component: {fileID: 4891853495333427401}
-  - component: {fileID: 516462469205242361}
   - component: {fileID: 8415892841090496680}
   m_Layer: 0
   m_Name: Piece.4
@@ -4369,25 +3828,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &516462469205242361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3145549147286487620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8415892841090496680
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4427,7 +3867,6 @@ GameObject:
   - component: {fileID: 4392789444699114835}
   - component: {fileID: 5615785097701489334}
   - component: {fileID: 7277851049402097118}
-  - component: {fileID: 593936358104557059}
   - component: {fileID: 5017245499762787618}
   m_Layer: 0
   m_Name: Piece.33
@@ -4522,25 +3961,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &593936358104557059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3218054305724926606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5017245499762787618
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4580,7 +4000,6 @@ GameObject:
   - component: {fileID: 108511093094138772}
   - component: {fileID: 8081332523512963632}
   - component: {fileID: 743985711878718893}
-  - component: {fileID: 8022159698120023238}
   - component: {fileID: 276444147739074438}
   m_Layer: 0
   m_Name: Piece.87
@@ -4675,25 +4094,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8022159698120023238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3440387379293779856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &276444147739074438
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4733,7 +4133,6 @@ GameObject:
   - component: {fileID: 8873535299958062027}
   - component: {fileID: 187210045816977708}
   - component: {fileID: 2716656888368090005}
-  - component: {fileID: 3263799821387596665}
   - component: {fileID: 6005866306621318755}
   m_Layer: 0
   m_Name: Piece.29
@@ -4828,25 +4227,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3263799821387596665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3598055849988857631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &6005866306621318755
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4886,7 +4266,6 @@ GameObject:
   - component: {fileID: 1267223803218846791}
   - component: {fileID: 5735095296483271631}
   - component: {fileID: 7672914797761138447}
-  - component: {fileID: 7364443827940195830}
   - component: {fileID: 3335682417846376170}
   m_Layer: 0
   m_Name: Piece.3
@@ -4981,25 +4360,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7364443827940195830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3660845853638615762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3335682417846376170
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5039,7 +4399,6 @@ GameObject:
   - component: {fileID: 5852243174625362363}
   - component: {fileID: 8692556197137186963}
   - component: {fileID: 857490039712563323}
-  - component: {fileID: 3928667318808612679}
   - component: {fileID: 4504351406436355941}
   m_Layer: 0
   m_Name: Piece.2
@@ -5134,25 +4493,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3928667318808612679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3959757169384083524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4504351406436355941
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5192,7 +4532,6 @@ GameObject:
   - component: {fileID: 3207154552775863862}
   - component: {fileID: 3148690404173963514}
   - component: {fileID: 4906310524164565767}
-  - component: {fileID: 8517982988325172713}
   - component: {fileID: 4978008701512987649}
   m_Layer: 0
   m_Name: Piece.58
@@ -5287,25 +4626,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8517982988325172713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4007572903195245889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4978008701512987649
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5345,7 +4665,6 @@ GameObject:
   - component: {fileID: 6312850553106482411}
   - component: {fileID: 927231792590214}
   - component: {fileID: 8073934181041786794}
-  - component: {fileID: 3036028452157380629}
   - component: {fileID: 71764739292576192}
   m_Layer: 0
   m_Name: Piece.69
@@ -5440,25 +4759,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3036028452157380629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4102105979234538099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &71764739292576192
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5498,7 +4798,6 @@ GameObject:
   - component: {fileID: 5139564164726133562}
   - component: {fileID: 5056410413342505467}
   - component: {fileID: 4747282492998695555}
-  - component: {fileID: 7674114702273515644}
   - component: {fileID: 3666666761759895687}
   m_Layer: 0
   m_Name: Piece.70
@@ -5593,25 +4892,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7674114702273515644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4128749257096873743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3666666761759895687
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5651,7 +4931,6 @@ GameObject:
   - component: {fileID: 1361244127183127473}
   - component: {fileID: 3053505960266692269}
   - component: {fileID: 1409477512378706527}
-  - component: {fileID: 5164387895235809195}
   - component: {fileID: 4494221962844869382}
   m_Layer: 0
   m_Name: Piece.31
@@ -5746,25 +5025,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5164387895235809195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4180701213952170143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4494221962844869382
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5804,7 +5064,6 @@ GameObject:
   - component: {fileID: 6067857122823479707}
   - component: {fileID: 3882455847798969032}
   - component: {fileID: 9090123643289159276}
-  - component: {fileID: 9076941620582236011}
   - component: {fileID: 5008488229797992085}
   m_Layer: 0
   m_Name: Piece.41
@@ -5899,25 +5158,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9076941620582236011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4195040684587962205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5008488229797992085
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5957,7 +5197,6 @@ GameObject:
   - component: {fileID: 1363514367971882882}
   - component: {fileID: 8327127695152621010}
   - component: {fileID: 9157143831295621963}
-  - component: {fileID: 5314114183718201185}
   - component: {fileID: 8485332744121549658}
   m_Layer: 0
   m_Name: Piece.16
@@ -6052,25 +5291,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5314114183718201185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4363611984332134681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8485332744121549658
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6110,7 +5330,6 @@ GameObject:
   - component: {fileID: 1063712809502362418}
   - component: {fileID: 3296580877435574262}
   - component: {fileID: 1925443879856633663}
-  - component: {fileID: 1033386067121946172}
   - component: {fileID: 5191711779390541856}
   m_Layer: 0
   m_Name: Piece.59
@@ -6205,25 +5424,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1033386067121946172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4372255154202363044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5191711779390541856
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6263,7 +5463,6 @@ GameObject:
   - component: {fileID: 1377665028757506662}
   - component: {fileID: 5804920797738402742}
   - component: {fileID: 5953539738117937686}
-  - component: {fileID: 1716654196117770906}
   - component: {fileID: 6922945352905485860}
   m_Layer: 0
   m_Name: Piece.37
@@ -6358,25 +5557,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1716654196117770906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4427185589771570651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &6922945352905485860
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6416,7 +5596,6 @@ GameObject:
   - component: {fileID: 3287895758362939951}
   - component: {fileID: 7657142777772883863}
   - component: {fileID: 6128648653053331486}
-  - component: {fileID: 7622664461188221785}
   - component: {fileID: 3742010723195600233}
   m_Layer: 0
   m_Name: Piece.84
@@ -6511,25 +5690,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7622664461188221785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4455522933775780404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3742010723195600233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6569,7 +5729,6 @@ GameObject:
   - component: {fileID: 9135210446852775169}
   - component: {fileID: 6055686090424609786}
   - component: {fileID: 8883964696504112239}
-  - component: {fileID: 8701144472402481045}
   - component: {fileID: 3689735195791923706}
   m_Layer: 0
   m_Name: Piece.73
@@ -6664,25 +5823,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8701144472402481045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4526586254639297075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3689735195791923706
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6722,7 +5862,6 @@ GameObject:
   - component: {fileID: 4729976746567391707}
   - component: {fileID: 3504817468394515676}
   - component: {fileID: 7889356301692718260}
-  - component: {fileID: 1155977081641127446}
   - component: {fileID: 8952932618697408827}
   m_Layer: 0
   m_Name: Piece.9
@@ -6817,25 +5956,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1155977081641127446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4529952493965099679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8952932618697408827
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6875,7 +5995,6 @@ GameObject:
   - component: {fileID: 8416597725662046940}
   - component: {fileID: 6754520147630646569}
   - component: {fileID: 1256832898968950436}
-  - component: {fileID: 8004474230051319041}
   - component: {fileID: 8196319583405376222}
   m_Layer: 0
   m_Name: Piece.22
@@ -6970,25 +6089,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8004474230051319041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4558643007955600375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8196319583405376222
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7028,7 +6128,6 @@ GameObject:
   - component: {fileID: 5471198981045401757}
   - component: {fileID: 3063615105668715891}
   - component: {fileID: 5944417022650605899}
-  - component: {fileID: 900119047838403952}
   - component: {fileID: 691645750696053470}
   m_Layer: 0
   m_Name: Piece.38
@@ -7123,25 +6222,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &900119047838403952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808215522605659489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &691645750696053470
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7181,7 +6261,6 @@ GameObject:
   - component: {fileID: 4908418717392851098}
   - component: {fileID: 6244821562302967942}
   - component: {fileID: 8019133794947736128}
-  - component: {fileID: 7987342084382836}
   - component: {fileID: 2215191524855607422}
   m_Layer: 0
   m_Name: Piece.44
@@ -7276,25 +6355,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7987342084382836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4964058097267798321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &2215191524855607422
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7334,7 +6394,6 @@ GameObject:
   - component: {fileID: 5712504180152484138}
   - component: {fileID: 2112504727467418283}
   - component: {fileID: 1412906727648477542}
-  - component: {fileID: 5117552889052992332}
   - component: {fileID: 1211469237322430263}
   m_Layer: 0
   m_Name: Piece.35
@@ -7429,25 +6488,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5117552889052992332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4975334642817528433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &1211469237322430263
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7487,7 +6527,6 @@ GameObject:
   - component: {fileID: 4001193000195196254}
   - component: {fileID: 482419078259122564}
   - component: {fileID: 1132435396462482339}
-  - component: {fileID: 5236880672738321961}
   - component: {fileID: 7742714795610581975}
   m_Layer: 0
   m_Name: Piece.24
@@ -7582,25 +6621,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5236880672738321961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5016343833332746283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &7742714795610581975
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7640,7 +6660,6 @@ GameObject:
   - component: {fileID: 6564899154685071078}
   - component: {fileID: 7161765893502345337}
   - component: {fileID: 3173143949744233925}
-  - component: {fileID: 5157532479265994773}
   - component: {fileID: 1252408991002261153}
   m_Layer: 0
   m_Name: Piece.1
@@ -7735,25 +6754,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5157532479265994773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5033415643206140010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 1
-    useHeightPaint: 0
 --- !u!54 &1252408991002261153
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7793,7 +6793,6 @@ GameObject:
   - component: {fileID: 5403043079184653017}
   - component: {fileID: 2927934819473173293}
   - component: {fileID: 675650140650970654}
-  - component: {fileID: 1802122276429125607}
   - component: {fileID: 5699419599468521989}
   m_Layer: 0
   m_Name: Piece.81
@@ -7888,25 +6887,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1802122276429125607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5186814303660536561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5699419599468521989
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7946,7 +6926,6 @@ GameObject:
   - component: {fileID: 3020285668957851668}
   - component: {fileID: 5357264124184703362}
   - component: {fileID: 4126925466135429332}
-  - component: {fileID: 2002609872385336523}
   - component: {fileID: 1414224807917527388}
   m_Layer: 0
   m_Name: Piece.27
@@ -8041,25 +7020,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2002609872385336523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5299003941840713271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &1414224807917527388
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8099,7 +7059,6 @@ GameObject:
   - component: {fileID: 7556638027169376532}
   - component: {fileID: 5564300818472672500}
   - component: {fileID: 1164664489386596406}
-  - component: {fileID: 4260739575856797373}
   - component: {fileID: 6972796149890262960}
   m_Layer: 0
   m_Name: Piece.72
@@ -8194,25 +7153,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4260739575856797373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412115690507065914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &6972796149890262960
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8252,7 +7192,6 @@ GameObject:
   - component: {fileID: 630886166509719603}
   - component: {fileID: 7030819046232848054}
   - component: {fileID: 8096397998961503653}
-  - component: {fileID: 1318976502118433050}
   - component: {fileID: 4752146198307286921}
   m_Layer: 0
   m_Name: Piece.93
@@ -8347,25 +7286,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1318976502118433050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5702131715901064741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4752146198307286921
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8405,7 +7325,6 @@ GameObject:
   - component: {fileID: 7837486586376382619}
   - component: {fileID: 1465526993068663807}
   - component: {fileID: 6364934010649574627}
-  - component: {fileID: 2571453449953180056}
   - component: {fileID: 7346734892711102018}
   m_Layer: 0
   m_Name: Piece.18
@@ -8500,25 +7419,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2571453449953180056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5804419817985591250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &7346734892711102018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8558,7 +7458,6 @@ GameObject:
   - component: {fileID: 182661056148895566}
   - component: {fileID: 1327023918128438831}
   - component: {fileID: 4988288037099359588}
-  - component: {fileID: 3334389993450364553}
   - component: {fileID: 5927104208044222436}
   m_Layer: 0
   m_Name: Piece.98
@@ -8653,25 +7552,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3334389993450364553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5842557221782265627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5927104208044222436
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8711,7 +7591,6 @@ GameObject:
   - component: {fileID: 4457166761642280388}
   - component: {fileID: 8721862486146564609}
   - component: {fileID: 7485163722906877538}
-  - component: {fileID: 6817747167614026613}
   - component: {fileID: 3333014236783566549}
   m_Layer: 0
   m_Name: Piece.32
@@ -8806,25 +7685,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6817747167614026613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5872145381850381438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3333014236783566549
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8864,7 +7724,6 @@ GameObject:
   - component: {fileID: 7107000924620024331}
   - component: {fileID: 7668657434507511400}
   - component: {fileID: 301015924529780703}
-  - component: {fileID: 8929957189584389139}
   - component: {fileID: 5387109040191376101}
   m_Layer: 0
   m_Name: Piece.86
@@ -8959,25 +7818,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8929957189584389139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5921921604069936533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5387109040191376101
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9017,7 +7857,6 @@ GameObject:
   - component: {fileID: 5397234081122069319}
   - component: {fileID: 2088824829161501124}
   - component: {fileID: 588630384495500774}
-  - component: {fileID: 3504934756113346966}
   - component: {fileID: 8699792069046686167}
   m_Layer: 0
   m_Name: Piece.99
@@ -9112,25 +7951,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3504934756113346966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6063786155870804716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8699792069046686167
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9170,7 +7990,6 @@ GameObject:
   - component: {fileID: 3821058100196836440}
   - component: {fileID: 8781401762020369066}
   - component: {fileID: 7186980522307841759}
-  - component: {fileID: 8680146807219543518}
   - component: {fileID: 2290053917360312548}
   m_Layer: 0
   m_Name: Piece.78
@@ -9265,25 +8084,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8680146807219543518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6144105788830127188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &2290053917360312548
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9323,7 +8123,6 @@ GameObject:
   - component: {fileID: 3834699238429198613}
   - component: {fileID: 8317224884715911507}
   - component: {fileID: 6596928129245087083}
-  - component: {fileID: 7974281326877112185}
   - component: {fileID: 1208546279843082898}
   m_Layer: 0
   m_Name: Piece.21
@@ -9418,25 +8217,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7974281326877112185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6233201702926472420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &1208546279843082898
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9476,7 +8256,6 @@ GameObject:
   - component: {fileID: 8150997534860859169}
   - component: {fileID: 1863738958301300094}
   - component: {fileID: 4885810375772044193}
-  - component: {fileID: 8990572514663969794}
   - component: {fileID: 4884893122006294889}
   m_Layer: 0
   m_Name: Piece.71
@@ -9571,25 +8350,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8990572514663969794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6256077011469106846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4884893122006294889
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9629,7 +8389,6 @@ GameObject:
   - component: {fileID: 5016490566126135714}
   - component: {fileID: 8999097477121107206}
   - component: {fileID: 5943842022631694791}
-  - component: {fileID: 990188568478403877}
   - component: {fileID: 2290500838382944695}
   m_Layer: 0
   m_Name: Piece.14
@@ -9724,25 +8483,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &990188568478403877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6260850367293999973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &2290500838382944695
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9782,7 +8522,6 @@ GameObject:
   - component: {fileID: 6337060477120175348}
   - component: {fileID: 5394301670838055075}
   - component: {fileID: 5487212111828059867}
-  - component: {fileID: 8469089187386623364}
   - component: {fileID: 8730154923708231300}
   m_Layer: 0
   m_Name: Piece.13
@@ -9877,25 +8616,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8469089187386623364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289953955348603501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8730154923708231300
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9935,7 +8655,6 @@ GameObject:
   - component: {fileID: 1181787076113628383}
   - component: {fileID: 4784320487011268165}
   - component: {fileID: 5423478029439503803}
-  - component: {fileID: 539365596932764819}
   - component: {fileID: 4668153762914178507}
   m_Layer: 0
   m_Name: Piece.52
@@ -10030,25 +8749,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &539365596932764819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6439398962052101282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4668153762914178507
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10088,7 +8788,6 @@ GameObject:
   - component: {fileID: 3619994424916901205}
   - component: {fileID: 5655572954599551514}
   - component: {fileID: 1491569535096234752}
-  - component: {fileID: 4786893454837508809}
   - component: {fileID: 3546849705773573662}
   m_Layer: 0
   m_Name: Piece.36
@@ -10183,25 +8882,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4786893454837508809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6461368442895673983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3546849705773573662
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10241,7 +8921,6 @@ GameObject:
   - component: {fileID: 7873721631502919077}
   - component: {fileID: 5304133344662691045}
   - component: {fileID: 7803788244190156654}
-  - component: {fileID: 9002319182727485781}
   - component: {fileID: 2354358165597978884}
   m_Layer: 0
   m_Name: Piece.68
@@ -10336,25 +9015,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9002319182727485781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6646573337686909986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &2354358165597978884
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10394,7 +9054,6 @@ GameObject:
   - component: {fileID: 6081571291922023214}
   - component: {fileID: 3524630512409754298}
   - component: {fileID: 4326698742581690761}
-  - component: {fileID: 4736336867373732270}
   - component: {fileID: 4125428741485629824}
   m_Layer: 0
   m_Name: Piece.49
@@ -10489,25 +9148,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4736336867373732270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6691951352655334905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4125428741485629824
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10547,7 +9187,6 @@ GameObject:
   - component: {fileID: 3390980374935777849}
   - component: {fileID: 3140429211468377846}
   - component: {fileID: 8212620638361697545}
-  - component: {fileID: 6042744910144078441}
   - component: {fileID: 8770843924097001676}
   m_Layer: 0
   m_Name: Piece.45
@@ -10642,25 +9281,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6042744910144078441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6716481148393109312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8770843924097001676
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10700,7 +9320,6 @@ GameObject:
   - component: {fileID: 3217868096403337112}
   - component: {fileID: 5260110109142402739}
   - component: {fileID: 816809997272127616}
-  - component: {fileID: 6736437608279051538}
   - component: {fileID: 3607212364116713496}
   m_Layer: 0
   m_Name: Piece.64
@@ -10795,25 +9414,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6736437608279051538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6980085370865196428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3607212364116713496
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10853,7 +9453,6 @@ GameObject:
   - component: {fileID: 8888392515408377703}
   - component: {fileID: 281937619785832779}
   - component: {fileID: 5225752202466696328}
-  - component: {fileID: 3332456768714615371}
   - component: {fileID: 3008313404043941959}
   m_Layer: 0
   m_Name: Piece.39
@@ -10948,25 +9547,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3332456768714615371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7015485075193164376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3008313404043941959
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11006,7 +9586,6 @@ GameObject:
   - component: {fileID: 3032253768123292269}
   - component: {fileID: 2307777501799441413}
   - component: {fileID: 2930289812004932357}
-  - component: {fileID: 1399319084301020143}
   - component: {fileID: 6189000138854190511}
   m_Layer: 0
   m_Name: Piece.65
@@ -11101,25 +9680,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1399319084301020143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7051932103565466305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &6189000138854190511
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11159,7 +9719,6 @@ GameObject:
   - component: {fileID: 480130997564116594}
   - component: {fileID: 8254407730108401482}
   - component: {fileID: 43945091879802027}
-  - component: {fileID: 1868348552787919548}
   - component: {fileID: 1629586001904241035}
   m_Layer: 0
   m_Name: Piece.94
@@ -11254,25 +9813,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1868348552787919548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7092884584960774302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &1629586001904241035
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11312,7 +9852,6 @@ GameObject:
   - component: {fileID: 780929453638148786}
   - component: {fileID: 971924078100756563}
   - component: {fileID: 1652347623362759029}
-  - component: {fileID: 4996684213947427720}
   - component: {fileID: 3221656555103415867}
   m_Layer: 0
   m_Name: Piece.92
@@ -11407,25 +9946,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4996684213947427720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7141708394251722596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3221656555103415867
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11465,7 +9985,6 @@ GameObject:
   - component: {fileID: 8109701736523093957}
   - component: {fileID: 2513928571387458906}
   - component: {fileID: 5473930713950832063}
-  - component: {fileID: 5358704872606656068}
   - component: {fileID: 7360265625479561609}
   m_Layer: 0
   m_Name: Piece.85
@@ -11560,25 +10079,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5358704872606656068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7207857021376146467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &7360265625479561609
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11618,7 +10118,6 @@ GameObject:
   - component: {fileID: 4175423775729915900}
   - component: {fileID: 7148465255578741343}
   - component: {fileID: 4506723410063482058}
-  - component: {fileID: 1525519020514723679}
   - component: {fileID: 5618950744666793647}
   m_Layer: 0
   m_Name: Piece.46
@@ -11713,25 +10212,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1525519020514723679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7207986516362133360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5618950744666793647
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11771,7 +10251,6 @@ GameObject:
   - component: {fileID: 5400780988220427182}
   - component: {fileID: 8529907161461996162}
   - component: {fileID: 7444405201263112938}
-  - component: {fileID: 6180606915901557166}
   - component: {fileID: 3200906520521912741}
   m_Layer: 0
   m_Name: Piece.90
@@ -11866,25 +10345,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6180606915901557166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7248313166055416160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3200906520521912741
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11924,7 +10384,6 @@ GameObject:
   - component: {fileID: 1544910287550307836}
   - component: {fileID: 1726342722125676154}
   - component: {fileID: 4178612033530062079}
-  - component: {fileID: 7380358744004832757}
   - component: {fileID: 3340930834907592983}
   m_Layer: 0
   m_Name: Piece.66
@@ -12019,25 +10478,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7380358744004832757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7504853532197744292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3340930834907592983
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12077,7 +10517,6 @@ GameObject:
   - component: {fileID: 1521989473049461413}
   - component: {fileID: 460227530633697968}
   - component: {fileID: 4845763065847415677}
-  - component: {fileID: 216745911584866504}
   - component: {fileID: 8570274372535856143}
   m_Layer: 0
   m_Name: Piece.61
@@ -12172,25 +10611,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &216745911584866504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7521971050147672186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8570274372535856143
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12230,7 +10650,6 @@ GameObject:
   - component: {fileID: 6655566603602078991}
   - component: {fileID: 7959938442036808110}
   - component: {fileID: 5902967997679247097}
-  - component: {fileID: 794671184084802572}
   - component: {fileID: 3736050417054930391}
   m_Layer: 0
   m_Name: Piece.34
@@ -12325,25 +10744,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &794671184084802572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7570795777360380020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3736050417054930391
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12383,7 +10783,6 @@ GameObject:
   - component: {fileID: 6489120113018123562}
   - component: {fileID: 5762747363765880914}
   - component: {fileID: 6795762926206285926}
-  - component: {fileID: 4510157056619545450}
   - component: {fileID: 1993979973579040124}
   m_Layer: 0
   m_Name: Piece.48
@@ -12478,25 +10877,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4510157056619545450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7602994891292534210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &1993979973579040124
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12536,7 +10916,6 @@ GameObject:
   - component: {fileID: 835731630961875847}
   - component: {fileID: 3560274282395610173}
   - component: {fileID: 150786549487506999}
-  - component: {fileID: 3140138337816516005}
   - component: {fileID: 5679958396393269090}
   m_Layer: 0
   m_Name: Piece.89
@@ -12631,25 +11010,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3140138337816516005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7610381725756393545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5679958396393269090
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12689,7 +11049,6 @@ GameObject:
   - component: {fileID: 7125840031215291780}
   - component: {fileID: 3746181801408458142}
   - component: {fileID: 5968285839890419498}
-  - component: {fileID: 5146375377088879437}
   - component: {fileID: 5710082003138218640}
   m_Layer: 0
   m_Name: Piece.100
@@ -12784,25 +11143,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5146375377088879437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7680106608439995613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 1
-    useHeightPaint: 0
 --- !u!54 &5710082003138218640
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12842,7 +11182,6 @@ GameObject:
   - component: {fileID: 7982016031046918018}
   - component: {fileID: 3389679531247986726}
   - component: {fileID: 5403518712472898353}
-  - component: {fileID: 2995721644531260986}
   - component: {fileID: 2712891967950539313}
   m_Layer: 0
   m_Name: Piece.96
@@ -12937,25 +11276,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2995721644531260986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7928269603525080196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &2712891967950539313
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12995,7 +11315,6 @@ GameObject:
   - component: {fileID: 5685969568834584579}
   - component: {fileID: 3905363706676785177}
   - component: {fileID: 952298847129577084}
-  - component: {fileID: 2639517763284706078}
   - component: {fileID: 317129961523056647}
   m_Layer: 0
   m_Name: Piece.55
@@ -13090,25 +11409,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2639517763284706078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8025091707759483727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &317129961523056647
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13148,7 +11448,6 @@ GameObject:
   - component: {fileID: 1431628043013844854}
   - component: {fileID: 1321182570604912807}
   - component: {fileID: 3331465160131272455}
-  - component: {fileID: 4006927435004836809}
   - component: {fileID: 503007498691974487}
   m_Layer: 0
   m_Name: Piece.57
@@ -13243,25 +11542,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4006927435004836809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8036825501492012016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &503007498691974487
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13301,7 +11581,6 @@ GameObject:
   - component: {fileID: 5249845924916033271}
   - component: {fileID: 8127009881249219639}
   - component: {fileID: 3504091190524887538}
-  - component: {fileID: 8697326084214520419}
   - component: {fileID: 5453794345310900711}
   m_Layer: 0
   m_Name: Piece.53
@@ -13396,25 +11675,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8697326084214520419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8220731148460040640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5453794345310900711
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13454,7 +11714,6 @@ GameObject:
   - component: {fileID: 2264660007557015149}
   - component: {fileID: 1509770443424151127}
   - component: {fileID: 7976809581194922744}
-  - component: {fileID: 1312504390321926998}
   - component: {fileID: 460882037898406321}
   m_Layer: 0
   m_Name: Piece.25
@@ -13549,25 +11808,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1312504390321926998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8328265829036245247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &460882037898406321
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13607,7 +11847,6 @@ GameObject:
   - component: {fileID: 8808907339342689188}
   - component: {fileID: 8968729644741543231}
   - component: {fileID: 8599692167448523818}
-  - component: {fileID: 6083058655069476369}
   - component: {fileID: 9166111326443119630}
   m_Layer: 0
   m_Name: Piece.83
@@ -13702,25 +11941,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6083058655069476369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8494856026093287791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &9166111326443119630
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13760,7 +11980,6 @@ GameObject:
   - component: {fileID: 2657472228906562267}
   - component: {fileID: 2587675689439922596}
   - component: {fileID: 8885727301497365117}
-  - component: {fileID: 1808084041190020724}
   - component: {fileID: 2452546910298087119}
   m_Layer: 0
   m_Name: Piece.56
@@ -13855,25 +12074,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1808084041190020724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8511465419526573005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &2452546910298087119
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13913,7 +12113,6 @@ GameObject:
   - component: {fileID: 5926299656339492334}
   - component: {fileID: 3730468499722789686}
   - component: {fileID: 5353718961088041565}
-  - component: {fileID: 4574364420202624958}
   - component: {fileID: 3186131620023012456}
   m_Layer: 0
   m_Name: Piece.60
@@ -14008,25 +12207,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4574364420202624958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8658855746624822105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3186131620023012456
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14066,7 +12246,6 @@ GameObject:
   - component: {fileID: 5231456057398628905}
   - component: {fileID: 5503799683516693726}
   - component: {fileID: 6636132422132779063}
-  - component: {fileID: 8101437211370752359}
   - component: {fileID: 4822823338761293981}
   m_Layer: 0
   m_Name: Piece.54
@@ -14161,25 +12340,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8101437211370752359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8719920951656116068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &4822823338761293981
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14219,7 +12379,6 @@ GameObject:
   - component: {fileID: 4456592770964198643}
   - component: {fileID: 5687277908880653562}
   - component: {fileID: 5989570516852731578}
-  - component: {fileID: 200545537781948821}
   - component: {fileID: 7460603192156385678}
   m_Layer: 0
   m_Name: Piece.5
@@ -14314,25 +12473,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &200545537781948821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8728102280413733242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &7460603192156385678
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14372,7 +12512,6 @@ GameObject:
   - component: {fileID: 1755495443963923173}
   - component: {fileID: 2079833930492455639}
   - component: {fileID: 4918628936401817338}
-  - component: {fileID: 6662570427717625290}
   - component: {fileID: 1044687213749876504}
   m_Layer: 0
   m_Name: Piece.43
@@ -14467,25 +12606,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6662570427717625290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8885814431655108487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &1044687213749876504
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14525,7 +12645,6 @@ GameObject:
   - component: {fileID: 1696115583789473570}
   - component: {fileID: 4837065824246851336}
   - component: {fileID: 1746182580793056356}
-  - component: {fileID: 9218529377169355122}
   - component: {fileID: 3732137306320668160}
   m_Layer: 0
   m_Name: Piece.11
@@ -14620,25 +12739,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9218529377169355122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9045368463044542704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &3732137306320668160
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14678,7 +12778,6 @@ GameObject:
   - component: {fileID: 610191909913724629}
   - component: {fileID: 8408910718381926598}
   - component: {fileID: 5463531016271586306}
-  - component: {fileID: 4898452640589523736}
   - component: {fileID: 8018414893962683354}
   m_Layer: 0
   m_Name: Piece.95
@@ -14773,25 +12872,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4898452640589523736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9045722184546526256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &8018414893962683354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14831,7 +12911,6 @@ GameObject:
   - component: {fileID: 5118305606216397668}
   - component: {fileID: 2354117157063072126}
   - component: {fileID: 1433554914637443986}
-  - component: {fileID: 46582151328409915}
   - component: {fileID: 6029904445487701117}
   m_Layer: 0
   m_Name: Piece.10
@@ -14926,25 +13005,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &46582151328409915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9096503471688134953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &6029904445487701117
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14984,7 +13044,6 @@ GameObject:
   - component: {fileID: 6421523641425200980}
   - component: {fileID: 4316659417735604370}
   - component: {fileID: 2125145294762113598}
-  - component: {fileID: 6041432691722515670}
   - component: {fileID: 756984314541352440}
   m_Layer: 0
   m_Name: Piece.51
@@ -15079,25 +13138,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6041432691722515670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137769947384209943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &756984314541352440
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15137,7 +13177,6 @@ GameObject:
   - component: {fileID: 3929426186427486348}
   - component: {fileID: 5278722463665750922}
   - component: {fileID: 1572272848190227285}
-  - component: {fileID: 8721501779637441360}
   - component: {fileID: 5850602237403860929}
   m_Layer: 0
   m_Name: Piece.63
@@ -15232,25 +13271,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8721501779637441360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9167935100625483204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &5850602237403860929
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15290,7 +13310,6 @@ GameObject:
   - component: {fileID: 1498631000571582947}
   - component: {fileID: 6584163350945055549}
   - component: {fileID: 1848483395596949772}
-  - component: {fileID: 7032131742065832363}
   - component: {fileID: 2798846597881994281}
   m_Layer: 0
   m_Name: Piece.91
@@ -15385,25 +13404,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7032131742065832363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9172729678102541546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintSet:
-  - mainTextureName: _MainTex
-    normalTextureName: _BumpMap
-    heightTextureName: _ParallaxMap
-    useMainPaint: 1
-    useNormalPaint: 0
-    useHeightPaint: 0
 --- !u!54 &2798846597881994281
 Rigidbody:
   m_ObjectHideFlags: 0
