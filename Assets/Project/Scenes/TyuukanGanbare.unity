@@ -622,7 +622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 525938741718722760, guid: 774920f80001bf942917215bbf1c88ee, type: 3}
       propertyPath: m_Constraints
-      value: 112
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 739042862851512553, guid: 774920f80001bf942917215bbf1c88ee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -871,6 +871,14 @@ PrefabInstance:
     - target: {fileID: 8158715793226024078, guid: 774920f80001bf942917215bbf1c88ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.0635148e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724086676413102431, guid: 774920f80001bf942917215bbf1c88ee, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897333744326326655, guid: 774920f80001bf942917215bbf1c88ee, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9131328809003020103, guid: 774920f80001bf942917215bbf1c88ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1184,7 +1192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fbfdd4bfa03d1542a0b8e53f3f1d8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 6
+  walkSpeed: 0.53
   rigidbody: {fileID: 0}
 --- !u!114 &1005839796
 MonoBehaviour:
