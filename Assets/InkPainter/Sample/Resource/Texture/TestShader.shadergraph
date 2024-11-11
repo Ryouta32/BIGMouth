@@ -185,6 +185,9 @@
         },
         {
             "m_Id": "ae74a825503f4fdf9eea67485a4434a1"
+        },
+        {
+            "m_Id": "9b9933140289467394abdd0da9261463"
         }
     ],
     "m_GroupDatas": [
@@ -944,6 +947,9 @@
             },
             {
                 "m_Id": "c998e47e64ea48c1b340c803973dbd4c"
+            },
+            {
+                "m_Id": "9b9933140289467394abdd0da9261463"
             }
         ]
     },
@@ -5013,6 +5019,40 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "9b9933140289467394abdd0da9261463",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.Metallic",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "fdcfe86a9e2845899ae66a1160c3a452"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.Metallic"
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "9c0e380cd266400b9b5452e0562625bf",
     "m_Id": 2,
@@ -6706,6 +6746,21 @@
 }
 
 {
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "fdcfe86a9e2845899ae66a1160c3a452",
+    "m_Id": 0,
+    "m_DisplayName": "Metallic",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Metallic",
+    "m_StageCapability": 2,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
     "m_SGVersion": 1,
     "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
     "m_ObjectId": "fe1546b5f7554e588c890906317629f1",
@@ -6713,8 +6768,8 @@
     "m_ActiveSubTarget": {
         "m_Id": "a327adbc746643148ddce28cc09e3bc0"
     },
-    "m_AllowMaterialOverride": false,
-    "m_SurfaceType": 1,
+    "m_AllowMaterialOverride": true,
+    "m_SurfaceType": 0,
     "m_ZTestMode": 2,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
