@@ -1180,13 +1180,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4937580201969719628, guid: 3083a0ce40b3e4d42a2e8e6d697bd544, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 21665
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937580201969719628, guid: 3083a0ce40b3e4d42a2e8e6d697bd544, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0.6694118
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937580201969719628, guid: 3083a0ce40b3e4d42a2e8e6d697bd544, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937580201969719628, guid: 3083a0ce40b3e4d42a2e8e6d697bd544, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8868480382869232567, guid: 3083a0ce40b3e4d42a2e8e6d697bd544, type: 3}
       propertyPath: m_Name
       value: ripples
       objectReference: {fileID: 0}
     - target: {fileID: 8868480382869232567, guid: 3083a0ce40b3e4d42a2e8e6d697bd544, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
