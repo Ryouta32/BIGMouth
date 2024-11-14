@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* 中ベタの当たり判定 */
 
 public class NormalBetaCollision : MonoBehaviour
 {
@@ -20,9 +21,10 @@ public class NormalBetaCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //ブラシに当たったら
         if (collision.gameObject.CompareTag("Brush"))
         {
-            anim.SetTrigger("Down");
+            anim.SetBool("Down", true);
         }
     }
 }
