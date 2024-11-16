@@ -29,7 +29,6 @@ public class NormalBetaManager : MonoBehaviour
     //スポーン位置の選択
     void SpawnSelect()
     {
-        //はたしてRandomになっているのか
         number = Random.Range(0, SpawnPoint.Length);
 
         //ここのｙ座標どうしたいいのかあんまりわかってないよ

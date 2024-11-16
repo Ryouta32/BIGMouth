@@ -25,6 +25,7 @@ public class NormalBetaCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Brush"))
         {
             anim.SetBool("Down", true);
+            Debug.Log("ブラシが当たったよ");
         }
     }
 }
