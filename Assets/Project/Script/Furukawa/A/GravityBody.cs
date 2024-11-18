@@ -10,7 +10,6 @@ public class GravityBody : MonoBehaviour
 
     void Awake()
     {
-        planet = GameObject.Find("a").GetComponent<GravityAttractor>();
         rigidbody = GetComponent<Rigidbody>();
 
         // Disable rigidbody gravity and rotation as this is simulated in GravityAttractor script

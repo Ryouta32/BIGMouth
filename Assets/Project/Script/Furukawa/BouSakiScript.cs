@@ -18,6 +18,7 @@ public class BouSakiScript : MonoBehaviour
     private PaintManager.UseMethodType useMethodType = PaintManager.UseMethodType.RaycastHitInfo;
 
     [SerializeField]
+    [Tooltip("チェックついてると消えます。ないと塗れます")]
     bool erase = false;
 
     [SerializeField]
