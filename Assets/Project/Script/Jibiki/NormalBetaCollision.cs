@@ -6,26 +6,19 @@ using UnityEngine;
 public class NormalBetaCollision : MonoBehaviour
 {
     [SerializeField] Animator anim;
+    NormalBetaManager normalBetaManager;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        normalBetaManager = transform.root.gameObject.GetComponent<NormalBetaManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        //ブラシに当たったら
-        if (collision.gameObject.CompareTag("Brush"))
+        if(other.gameObject.CompareTag("Brush"))
         {
+            Debug.Log(normalBetaManager.Children.Count + "だよおおおおおおおおおおおおおおおおおおお");
             anim.SetBool("Down", true);
-            Debug.Log("ブラシが当たったよ");
         }
     }
 }
