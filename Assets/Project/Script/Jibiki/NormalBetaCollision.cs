@@ -6,6 +6,7 @@ using UnityEngine;
 public class NormalBetaCollision : MonoBehaviour
 {
     [SerializeField] Animator anim;
+    [SerializeField] EnemyScript enemyScript;
     NormalBetaManager normalBetaManager;
 
     private void Start()
@@ -17,7 +18,8 @@ public class NormalBetaCollision : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Brush"))
         {
-            Debug.Log(normalBetaManager.Children.Count + "だよおおおおおおおおおおおおおおおおおおお");
+            //Debug.Log(normalBetaManager.Children.Count + "だよおおおおおおおおおおおおおおおおおおお");
+            enemyScript.HitDamage();
             anim.SetBool("Down", true);
         }
     }
