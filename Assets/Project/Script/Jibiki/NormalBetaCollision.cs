@@ -1,28 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/* 中ベタの当たり判定 */
 
 public class NormalBetaCollision : MonoBehaviour
 {
     [SerializeField] Animator anim;
+    [SerializeField] EnemyScript enemyScript;
+    NormalBetaManager normalBetaManager;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        normalBetaManager = transform.root.gameObject.GetComponent<NormalBetaManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Brush"))
+        if(other.gameObject.CompareTag("Brush"))
         {
-            anim.SetTrigger("Down");
+            //Debug.Log(normalBetaManager.Children.Count + "だよおおおおおおおおおおおおおおおおおおお");
+            enemyScript.HitDamage();
+            anim.SetBool("Down", true);
         }
     }
 }

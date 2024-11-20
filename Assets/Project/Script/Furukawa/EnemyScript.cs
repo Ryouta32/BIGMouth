@@ -79,6 +79,7 @@ public class EnemyScript : MonoBehaviour
             Destroy(this.gameObject);
         }
         data.sutnCount--;
+        Debug.Log(data.sutnCount);
         if (data.sutnCount <= 0)
         {
             SetState(EnemyData.State.stun);
