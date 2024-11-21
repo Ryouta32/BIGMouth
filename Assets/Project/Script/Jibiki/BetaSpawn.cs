@@ -53,11 +53,14 @@ public class BetaSpawn : MonoBehaviour
                 yield break;
             int rnd = Random.Range(0, 360);
             GameObject obj = Instantiate(spawnPrefab, rightControllerPivot.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
-            obj.GetComponent<EnemyScript>().setManager(manager);
-            obj.GetComponent<EnemyScript>().initialization();
-            manager.AddEnemys(obj);//Managerのリストに追加
-                                   //DebugText.Log2(transform.position);
+            if (obj.GetComponent<EnemyScript>())
+            {
+                obj.GetComponent<EnemyScript>().setManager(manager);
+                obj.GetComponent<EnemyScript>().initialization();
+                manager.AddEnemys(obj);//Managerのリストに追加
+            }
+                                       //DebugText.Log2(transform.position);
 
+            }
         }
-    }
 }

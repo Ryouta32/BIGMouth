@@ -25,27 +25,28 @@ public class EnemyScript : MonoBehaviour
     }
     private void Update()
     {
-        Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
-        if (diff.magnitude < bouSaki.GetInhaleDis()&&bouSaki.GetInHale()&&data.state==EnemyData.State.stun)
-        {
-            //吸い込みの処理
-            transform.position = Vector3.MoveTowards(transform.position, bouSaki.gameObject.transform.position, bouSaki.GetInHaleSpeed());
-        }
-        time += Time.deltaTime;
-        if (time > data.returnTime)
-            SetState(EnemyData.State.general);
+        //Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
+        //if (diff.magnitude < bouSaki.GetInhaleDis()&&bouSaki.GetInHale()&&data.state==EnemyData.State.stun)
+        //{
+        //    //吸い込みの処理
+        //    transform.position = Vector3.MoveTowards(transform.position, bouSaki.gameObject.transform.position, bouSaki.GetInHaleSpeed());
+        //}
+        //time += Time.deltaTime;
+        //if (time > data.returnTime)
+        //    SetState(EnemyData.State.general);
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag=="Brush")
-        rb.constraints = RigidbodyConstraints.FreezeAll;
-        else
-            rb.constraints = RigidbodyConstraints.None;
+        //if(collision.transform.tag=="Brush")
+        //rb.constraints = RigidbodyConstraints.FreezeAll;
+        //else
+        //    rb.constraints = RigidbodyConstraints.None;
 
     }
     private void OnCollisionExit(Collision collision)
     {
-        rb.constraints = RigidbodyConstraints.None;
+        //if(collision.transform.tag=="Brush")
+        //rb.constraints = RigidbodyConstraints.None;
     }
     public void initialization()
     {
@@ -78,6 +79,7 @@ public class EnemyScript : MonoBehaviour
             Destroy(this.gameObject);
         }
         data.sutnCount--;
+        Debug.Log(data.sutnCount);
         if (data.sutnCount <= 0)
         {
             SetState(EnemyData.State.stun);
