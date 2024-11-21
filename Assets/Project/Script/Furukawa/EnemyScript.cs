@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-
     BetaLife betaLife;
     EnemyManager manager;
     public BouSakiScript bouSaki;
-    [SerializeField] EnemyData _data;
+    [SerializeField] public EnemyData _data;
     [SerializeField] GameObject stunEffect;
     [SerializeField] GameObject damageEffect;
     [SerializeField] GameObject DestroyEffect;
      AudioManager audioM;
     Rigidbody rb;
-    private EnemyData data;
+    public EnemyData data;
     float time=0;
     private void Start()
     {
@@ -79,7 +78,7 @@ public class EnemyScript : MonoBehaviour
             Destroy(this.gameObject);
         }
         data.sutnCount--;
-        Debug.Log(data.sutnCount);
+        //Debug.Log(data.sutnCount + "だよｙｙｙｙｙｙｙｙ");
         if (data.sutnCount <= 0)
         {
             SetState(EnemyData.State.stun);

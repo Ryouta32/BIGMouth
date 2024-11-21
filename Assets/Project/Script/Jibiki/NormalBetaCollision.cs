@@ -18,9 +18,12 @@ public class NormalBetaCollision : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Brush"))
         {
+            //残りのスポーン地の数
             //Debug.Log(normalBetaManager.Children.Count + "だよおおおおおおおおおおおおおおおおおおお");
             enemyScript.HitDamage();
             anim.SetBool("Down", true);
+
+            enemyScript.data.sutnCount = enemyScript._data.sutnCount;
         }
     }
 }
