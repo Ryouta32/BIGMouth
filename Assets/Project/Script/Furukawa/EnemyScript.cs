@@ -15,7 +15,6 @@ public class EnemyScript : MonoBehaviour
      AudioManager audioM;
     Rigidbody rb;
     private EnemyData data;
-    float time=0;
     private void Start()
     {
         initialization();
@@ -25,29 +24,28 @@ public class EnemyScript : MonoBehaviour
     }
     private void Update()
     {
-        //Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
-        //if (diff.magnitude < bouSaki.GetInhaleDis()&&bouSaki.GetInHale()&&data.state==EnemyData.State.stun)
-        //{
-        //    //吸い込みの処理
-        //    transform.position = Vector3.MoveTowards(transform.position, bouSaki.gameObject.transform.position, bouSaki.GetInHaleSpeed());
-        //}
-        //time += Time.deltaTime;
-        //if (time > data.returnTime)
-        //    SetState(EnemyData.State.general);
-        Debug.Log("sutan");
+        Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
+        if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
+        {
+            //吸い込みの処理
+            
+            bouSaki.StartOfSuction(transform.position - bouSaki.transform.position);
+            destroyObj();
+            Destroy(this.gameObject);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //if(collision.transform.tag=="Brush")
-        //rb.constraints = RigidbodyConstraints.FreezeAll;
-        //else
-        //    rb.constraints = RigidbodyConstraints.None;
+        if (collision.transform.tag == "Brush")
+            rb.constraints = RigidbodyConstraints.FreezeAll;
+        else
+            rb.constraints = RigidbodyConstraints.None;
 
     }
     private void OnCollisionExit(Collision collision)
     {
-        //if(collision.transform.tag=="Brush")
-        //rb.constraints = RigidbodyConstraints.None;
+        if (collision.transform.tag == "Brush")
+            rb.constraints = RigidbodyConstraints.None;
     }
     public void initialization()
     {
@@ -61,15 +59,17 @@ public class EnemyScript : MonoBehaviour
     }
     public void HitDamage()
     {
-        time = 0;
         audioM.PlayPoint(audioM.data.attack,this.gameObject);
         Instantiate(damageEffect, transform.position, Quaternion.identity);
-        if(bouSaki.GetInHale() && data.state == EnemyData.State.stun)
-        {
-            destroyObj();
-            AudioSource.PlayClipAtPoint(audioM.data.bom, this.gameObject.transform.position);
-            Destroy(this.gameObject);
-        }
+
+        ////吸い込み
+        //if (bouSaki.GetInHale() && data.state == EnemyData.State.stun)
+        //{
+        //    destroyObj();
+        //    bouSaki.StartOfSuction(transform.position);
+        //    AudioSource.PlayClipAtPoint(audioM.data.bom, this.gameObject.transform.position);
+        //    Destroy(this.gameObject);
+        //}
         //スタン状態なら消す
         if (data.state == EnemyData.State.stun)
         {

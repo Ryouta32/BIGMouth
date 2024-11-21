@@ -52,7 +52,6 @@ public class GravitySet : MonoBehaviour
 
             if (distance < rotatedis)
             {
-                Debug.Log("目の前に壁"+ gravityVec);
 
                 //Vector3.Lerp(transform.position, hit.point, 1f);
                 gravityVec = (transform.position - hit.point).normalized;
@@ -70,7 +69,6 @@ public class GravitySet : MonoBehaviour
             if (distance < rotatedis)
             {
                 gravityVec = (transform.position - hit.point).normalized;
-                Debug.Log("真下に壁"+ gravityVec);
 
                 //Vector3.Lerp(transform.position, hit.point, 1f);
                 //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
@@ -82,7 +80,6 @@ public class GravitySet : MonoBehaviour
         else
         {
             gravityVec = Vector3.up;
-            Debug.Log("へんこう");
             //transform.transform.rotation = new Quaternion() ;
         }
         //if (Physics.Raycast(player.transform.position, player.transform.transform.forward, out hit, Mathf.Infinity))

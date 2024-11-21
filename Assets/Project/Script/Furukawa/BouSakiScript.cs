@@ -38,6 +38,7 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] string MIMICTag = "MIMIC";
     [SerializeField] GameObject ShineEffect;
     [SerializeField] AudioManager audioM;
+    [SerializeField] GameObject SuctionObj;
     bool on=true;
     float paintTime;
     Quaternion defaultQuaternion;
@@ -52,6 +53,7 @@ public class BouSakiScript : MonoBehaviour
 
     void Update()
     {
+        //スキルの判定
         if (on&&OVRInput.Get(actionBtn)|| (on && Input.GetKey(KeyCode.Space)))
         {
             //ShowerObj.SetActive(true);
@@ -63,6 +65,8 @@ public class BouSakiScript : MonoBehaviour
             StopCoroutine("ShowerTime");
             on = true;
         }
+
+        //s\吸い込み判定
         if (OVRInput.Get(OVRInput.RawButton.B) || Input.GetMouseButton(0))
         {
             Inhale();
@@ -91,7 +95,7 @@ public class BouSakiScript : MonoBehaviour
     }
     private void UpInhale()
     {
-
+        OnHale = false;
     }
 
     private void OnCollisionStay(Collision other)
@@ -174,6 +178,15 @@ public class BouSakiScript : MonoBehaviour
                 pManager.Paint(other, useMethodType, erase, brush, transform, true, MIMICTag);
                 break;
         }
+    }
+    public void StartOfSuction(Vector3 pos)
+    {
+        GameObject obj = Instantiate(SuctionObj, transform.position, Quaternion.identity);
+        ParticleSystem psy = obj.GetComponent<ParticleSystem>();
+        var sh = psy.shape;
+
+        sh.position = pos;
+
     }
     public Vector3 GetHit() => hitpoint;
     public void SetHit(Vector3 x) => hitpoint = x;

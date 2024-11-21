@@ -16,9 +16,9 @@ public class ExplosiveScript : MonoBehaviour
     void Update()
     {
         pro += Time.deltaTime*speed;
-        tex.material.SetFloat("_Progress", pro);
+        tex.material.SetFloat("_Progress", pro);//シェーダーグラフのprogressいじってる
 
-        if (pro >= 11)
+        if (pro >= 11)//超えたら消す。変数にした方がいいかも
             Destroy(this.gameObject);
     }
 }
