@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     BetaLife betaLife;
-    EnemyManager manager;
+    [SerializeField]EnemyManager manager;
     public BouSakiScript bouSaki;
     [SerializeField] public EnemyData _data;
     [SerializeField] GameObject stunEffect;
@@ -13,6 +13,8 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] GameObject DestroyEffect;
      AudioManager audioM;
     Rigidbody rb;
+
+    [HideInInspector]
     public EnemyData data;
     float time=0;
     private void Start()
@@ -24,6 +26,10 @@ public class EnemyScript : MonoBehaviour
     }
     private void Update()
     {
+        if (data.state != EnemyData.State.general)
+        {
+
+        }
         //Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
         //if (diff.magnitude < bouSaki.GetInhaleDis()&&bouSaki.GetInHale()&&data.state==EnemyData.State.stun)
         //{
@@ -55,6 +61,7 @@ public class EnemyScript : MonoBehaviour
     }
     private void OnDestroy()
     {
+        //Destroy(DestroyEffect, 5);
         Instantiate(DestroyEffect, transform.position, Quaternion.identity);
     }
     public void HitDamage()
@@ -65,6 +72,8 @@ public class EnemyScript : MonoBehaviour
         if(bouSaki.GetInHale() && data.state == EnemyData.State.stun)
         {
             destroyObj();
+
+            DestroyEffect.transform.parent = null;
             AudioSource.PlayClipAtPoint(audioM.data.bom, this.gameObject.transform.position);
             Destroy(this.gameObject);
         }

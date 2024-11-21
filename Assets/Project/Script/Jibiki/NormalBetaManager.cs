@@ -13,11 +13,13 @@ public class NormalBetaManager : MonoBehaviour
     [HideInInspector]
     public List<Transform> Children;
 
+    public bool colsignal;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
-
+        colsignal = true;
         Children = new List<Transform>();
 
         for (int i = 0; i < SpawnPoint.transform.childCount; i++)
@@ -53,6 +55,8 @@ public class NormalBetaManager : MonoBehaviour
         gameObject.transform.position = new Vector3(Children[number].transform.position.x, 0.45f, Children[number].transform.position.z);
 
         anim.SetBool("Down", false);
+        colsignal = true;
+        //Debug.Log("colsignal：" + colsignal);
 
         //Debug.Log("number：" + number);
         //Debug.Log("移動した！");
