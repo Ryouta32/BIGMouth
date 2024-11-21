@@ -7,7 +7,7 @@ using UnityEngine.SocialPlatforms;
 
 //using static UnityEditor.Progress;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
+
 
 /* ベタの動き重力を管理 */
 
@@ -20,20 +20,20 @@ public class GravitySet : MonoBehaviour
     float distance;
     LayerMask mask;
 
-    Vector3 gravityVec=Vector3.up;
+    public Vector3 gravityVec=Vector3.up;
     Vector3 temp;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-        GetComponent<Rigidbody>().useGravity = true;
+        //GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+        //GetComponent<Rigidbody>().useGravity = true;
         mask = LayerMask.GetMask("Wall");
     }
 
     void Update()
     {
         // どんな向きでもベタに対して下向きに重力をかける
-            //rb.AddForce(-transform.up * 9.8f*Time.deltaTime, ForceMode.Acceleration);
+        //rb.AddForce(-transform.up * 9.8f*Time.deltaTime, ForceMode.Acceleration);
 
         this.transform.position += transform.forward * speed * Time.deltaTime;
         distance = 100;
@@ -41,39 +41,44 @@ public class GravitySet : MonoBehaviour
 
          Vector3 raypos = (transform.forward*4) + (-transform.up*2);
         Vector3 rayStartPos = this.transform.position;
-        rayStartPos += transform.forward * 0.01f; ;
-
+        //rayStartPos += transform.forward * 0.01f;
 
         //オブジェクトの下にRayを飛ばす
-        if (Physics.Raycast(rayStartPos, raypos, out hit, 1f, mask))
+        if (Physics.Raycast(rayStartPos, transform.forward, out hit, 1f, mask))
         {
             // ヒットした位置までの距離を取得
             distance = hit.distance;
-            Debug.DrawRay(rayStartPos, raypos * hit.distance, Color.blue);
+            Debug.DrawRay(rayStartPos, transform.forward * hit.distance, Color.blue);
 
             if (distance < rotatedis)
             {
-                Debug.Log("aaa");
-                //Vector3.Lerp(transform.position, hit.point, 1f);
-                gravityVec = (transform.position - hit.transform.position).normalized;
+                Debug.Log("目の前に壁"+ gravityVec);
 
-                Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
+                //Vector3.Lerp(transform.position, hit.point, 1f);
+                gravityVec = (transform.position - hit.point).normalized;
+
+                //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
                 //rb.MoveRotation(rot * transform.rotation);
                 //transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal);
             }
         }
-        //else if (Physics.Raycast(transform.position, -Vector3.up, out hit, 1f, mask))
-        //{
-        //    //distance = hit.distance;
-        //    //if (distance < rotatedis)
-        //    //{
-        //    //    Vector3.Lerp(transform.position, hit.point, 1f);
-        //    //    //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
-        //    //    transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
-        //    //    //rb.MoveRotation(rot * transform.rotation);
-        //    //}
+        else if (Physics.Raycast(rayStartPos, -transform.up, out hit, 1f, mask))
+        {
+            distance = hit.distance;
+            Debug.DrawRay(rayStartPos, -transform.up * hit.distance, Color.blue);
 
-        //}
+            if (distance < rotatedis)
+            {
+                gravityVec = (transform.position - hit.point).normalized;
+                Debug.Log("真下に壁"+ gravityVec);
+
+                //Vector3.Lerp(transform.position, hit.point, 1f);
+                //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
+                //transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
+                //rb.MoveRotation(rot * transform.rotation);
+            }
+
+        }
         else
         {
             gravityVec = Vector3.up;
@@ -93,7 +98,7 @@ public class GravitySet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(gravityVec * -9.8f);
+        rb.AddForce(gravityVec * -9.8f*Time.deltaTime);
         transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
 
     }

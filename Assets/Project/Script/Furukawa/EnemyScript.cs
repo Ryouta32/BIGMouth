@@ -34,6 +34,7 @@ public class EnemyScript : MonoBehaviour
         //time += Time.deltaTime;
         //if (time > data.returnTime)
         //    SetState(EnemyData.State.general);
+        Debug.Log("sutan");
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -72,10 +73,9 @@ public class EnemyScript : MonoBehaviour
         //スタン状態なら消す
         if (data.state == EnemyData.State.stun)
         {
-            destroyObj();
+            //destroyObj();
             Debug.Log("削除");
             AudioSource.PlayClipAtPoint(audioM.data.bom, this.gameObject.transform.position);
-
             Destroy(this.gameObject);
         }
         data.sutnCount--;
