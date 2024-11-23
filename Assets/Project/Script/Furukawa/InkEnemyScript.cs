@@ -42,11 +42,27 @@ public class InkEnemyScript : MonoBehaviour
                     break;
                 case "Wall":
                     paintManager.Paint(collision, useMethodType, erase, brush, transform, false, collision.transform.tag);
+                    //Debug.Log("塗りました");
                     break;
                 default:
                     break;
         }
         }
         else return;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Wall"))
+        {
+            if(gameObject.tag == "Normal")
+            {
+                PaintManager paintManager = new PaintManager();
+
+                paintManager.Paint(collision, useMethodType, erase, brush, transform, false, collision.transform.tag);
+
+                //Debug.Log("ぬったよ" + gameObject.name);
+            }
+        }
     }
 }

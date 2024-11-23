@@ -93,6 +93,7 @@ public class EnemyScript : MonoBehaviour
     IEnumerator Stun()//スタン中の処理
     {
         stunEffect.SetActive(true);
+        //Debug.Log("スタンエフェクト");
         audioM.PlayPoint(audioM.data.sutun,this.gameObject);
         yield return new WaitForSeconds(data.sutnTime);
         SetState(EnemyData.State.general);

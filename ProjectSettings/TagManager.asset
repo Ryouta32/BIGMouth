@@ -9,6 +9,7 @@ TagManager:
   - Brush
   - Dragon
   - Wall
+  - Normal
   layers:
   - Default
   - TransparentFX

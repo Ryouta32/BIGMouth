@@ -13,6 +13,7 @@ public class NormalBetaManager : MonoBehaviour
     [HideInInspector]
     public List<Transform> Children;
 
+    [HideInInspector]
     public bool colsignal;
 
     // Start is called before the first frame update
