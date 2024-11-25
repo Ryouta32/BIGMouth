@@ -7,6 +7,7 @@ public class Piecephysics : MonoBehaviour
 {
     [SerializeField] Material PieceMaterial;
     MeshRenderer mr;
+    //Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class Piecephysics : MonoBehaviour
         if (collision.gameObject.CompareTag("Dragon"))
         {
             mr.material = PieceMaterial;
+            //rb.isKinematic = false;
         }
     }
 }
