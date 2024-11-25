@@ -1,10 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BigEnemyScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] List<GameObject> weekPoints;
+    [Tooltip("弱点こする回数")][SerializeField] public int rubCount;
+    [Tooltip("弱点から出る汚れの数")][SerializeField] public int dirtCount;
+
     void Start()
     {
         
