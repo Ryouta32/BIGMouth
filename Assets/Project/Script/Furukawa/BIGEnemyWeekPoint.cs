@@ -19,12 +19,13 @@ public class BIGEnemyWeekPoint : MonoBehaviour
                 {
                     GameObject obj = Instantiate(Yogore,other.ClosestPointOnBounds(this.transform.position), Quaternion.identity);
                     obj.GetComponent<BIGEnemyChaildSC>().destination = transform.position;
+                    obj.GetComponent<BIGEnemyChaildSC>().biSC = bigSC;
                     Vector3 dir = new Vector3(Random.Range(-1f, 1f)*transform.forward.x, Random.Range(-1f, 1f)*transform.forward.y, Random.Range(-1f, 1f)*transform.forward.z).normalized;
                     Debug.Log(dir);
                     obj.GetComponent<Rigidbody>().AddForce(dir * 300f);
+                    bigSC.OBJScaleDown();
                 }
             }
-
         }
     }
 }

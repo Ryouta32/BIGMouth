@@ -1982,21 +1982,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -5267865566224933534, guid: 0c2fd76776987434c8eeedb26640cdec, type: 3}
-      propertyPath: rubCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -5267865566224933534, guid: 0c2fd76776987434c8eeedb26640cdec, type: 3}
-      propertyPath: dirtCount
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: _data
+      value: 
+      objectReference: {fileID: 11400000, guid: 7eefe789e189b3847acf04f284cf3f51, type: 2}
     - target: {fileID: 2523666926619658130, guid: 0c2fd76776987434c8eeedb26640cdec, type: 3}
       propertyPath: m_Name
       value: BigBETA
       objectReference: {fileID: 0}
-    - target: {fileID: 8031583740788272915, guid: 0c2fd76776987434c8eeedb26640cdec, type: 3}
-      propertyPath: Yogore
-      value: 
-      objectReference: {fileID: 7893398784900771752, guid: 9033df22eeb654a44a4ead39978cbe84, type: 3}
     - target: {fileID: 9191725165661403845, guid: 0c2fd76776987434c8eeedb26640cdec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

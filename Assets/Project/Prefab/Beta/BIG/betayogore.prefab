@@ -175,4 +175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {x: 0, y: 0, z: 0}
+  biSC: {fileID: 0}
   time: 10
+  _data: {fileID: 11400000, guid: e55ef39c81b940b4ba04dc17bbbb5da6, type: 2}
