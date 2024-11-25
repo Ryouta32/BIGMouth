@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: normal
   m_EditorClassIdentifier: 
   sutnCount: 3
-  sutnTime: 2
+  sutnTime: 17.95
   returnTime: 0
   speed: 0
   state: 0

@@ -33,7 +33,7 @@ public class RoomPlaneScript : MonoBehaviour
         {
             var hitNormal = _raycastHits[0].normal;
             var angle = Vector3.Angle(hitNormal, Vector3.up);
-            _isHitHorizontalPlane = angle <= _approximatelyAngle;
+            _isHitHorizontalPlane = angle >= _approximatelyAngle;
         }
         else
             _isHitHorizontalPlane = false;
