@@ -6,6 +6,8 @@ using UnityEngine;
 public class WallEntrance : MonoBehaviour
 {
     Rigidbody rb;
+    MeshRenderer mr;
+    [SerializeField] Material PieceMaterial;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,9 @@ public class WallEntrance : MonoBehaviour
     {
         rb = collision.gameObject.AddComponent<Rigidbody>();
         rb.useGravity = false;
+
+        mr = collision.gameObject.GetComponent<MeshRenderer>();
+        mr.material = PieceMaterial;
 
         //if (collision.gameObject.CompareTag("Wall"))
         //{

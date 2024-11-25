@@ -18,9 +18,44 @@ public class NormalBetaCollision : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Brush"))
         {
+            //残りのスポーン地の数
             //Debug.Log(normalBetaManager.Children.Count + "だよおおおおおおおおおおおおおおおおおおお");
-            enemyScript.HitDamage();
-            anim.SetBool("Down", true);
+            //Debug.Log("normalBetaManager.colsignal：" + normalBetaManager.colsignal);
+            //HitDamageは一回きりで呼び出す
+            if (normalBetaManager.colsignal)
+            {
+                Debug.Log("呼ばれた");
+                normalBetaManager.colsignal = false;
+                enemyScript.HitDamage();
+
+                if (normalBetaManager.Children.Count > 1)
+                {
+                    anim.SetBool("Down", true);
+                    enemyScript.data.sutnCount = enemyScript._data.sutnCount;
+                }
+                else
+                {
+                    //多分ここが原因。連続で当たっちゃう
+                    normalBetaManager.colsignal = true;
+                }
+                //Debug.Log("のち：" + normalBetaManager.colsignal);
+            }
+            else
+            {
+                return;
+            }
         }
     }
+
+    //public void OnTriggerExit(Collider other)
+    //{
+    //    Debug.Log("でた");
+    //    if(other.gameObject.CompareTag("Brush"))
+    //    {
+    //        if (normalBetaManager.Children.Count <= 1)
+    //        {
+    //            normalBetaManager.colsignal = true;
+    //        }
+    //    }
+    //}
 }
