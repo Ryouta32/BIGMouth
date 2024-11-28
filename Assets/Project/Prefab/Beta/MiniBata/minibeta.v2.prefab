@@ -131,7 +131,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74955073074823763}
   serializedVersion: 4
-  m_Mass: 0.03
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -198,11 +198,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53eb8779cd182c545a0cdb5208226df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   bouSaki: {fileID: 0}
   _data: {fileID: 11400000, guid: 8da10429ed97e2547a091c063e65ce05, type: 2}
   stunEffect: {fileID: 4698819525488582452}
   damageEffect: {fileID: 2510562678213512748, guid: 0beb1d15c494365458144cc18fef2d60, type: 3}
   DestroyEffect: {fileID: 3349963419385957901, guid: 3d971a8f0b9b77c4f8a6dd9fad3f2df4, type: 3}
+  data: {fileID: 0}
 --- !u!114 &8724086676413102431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,7 +221,7 @@ MonoBehaviour:
     brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushNormalTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushHeightTexture: {fileID: 2800000, guid: b8702b5a8624a114f82a6d09bc3ce746, type: 3}
-    brushScale: 0.01
+    brushScale: 0.005
     rotateAngle: 0
     brushNormalBlend: 0.291
     brushHeightBlend: 1

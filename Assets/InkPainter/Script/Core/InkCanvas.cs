@@ -701,8 +701,8 @@ namespace Es.InkPainter
 					var mainPaintTextureBuffer = RenderTexture.GetTemporary(p.paintMainTexture.width, p.paintMainTexture.height, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear);
 					
 					SetPaintMainData(brush, uv);
-					//Debug.Log("ここを直せば勝ち！\nなおしたらすごい！");
-					Graphics.Blit(p.paintMainTexture, mainPaintTextureBuffer, paintMainMaterial);
+                    //Debug.Log("ここを直せば勝ち！\nなおしたらすごい！");
+                    Graphics.Blit(p.paintMainTexture, mainPaintTextureBuffer, paintMainMaterial);
 					Graphics.Blit(mainPaintTextureBuffer, p.paintMainTexture);
 					RenderTexture.ReleaseTemporary(mainPaintTextureBuffer);
 				}
@@ -766,7 +766,9 @@ namespace Es.InkPainter
 				renderCamera = Camera.main;
 
 			Vector3 p = transform.InverseTransformPoint(worldPos);
-			Matrix4x4 mvp = renderCamera.projectionMatrix * renderCamera.worldToCameraMatrix * transform.localToWorldMatrix;
+          
+
+            Matrix4x4 mvp = renderCamera.projectionMatrix * renderCamera.worldToCameraMatrix * transform.localToWorldMatrix;
 			if (MeshOperator.LocalPointToUV(p, mvp, out uv))
 				return PaintUVDirect(brush, uv, materialSelector);
 			else
@@ -830,7 +832,8 @@ namespace Es.InkPainter
 		public bool Erase(Brush brush, Vector3 worldPos, Func<PaintSet, bool> materialSelector = null, Camera renderCamera = null)
 		{
 			eraseFlag = true;
-			return Paint(brush, worldPos, materialSelector, renderCamera);
+
+            return Paint(brush, worldPos, materialSelector, renderCamera);
 		}
 
 		/// <summary>
