@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 /* 中ベタのスポーン */
 
 public class NormalBetaManager : MonoBehaviour
@@ -45,7 +47,12 @@ public class NormalBetaManager : MonoBehaviour
             //Debug.Log($"検索方法１： {i} 番目の子供は {PieceChildren[i].name} です");
         }
     }
+    private void OnDestroy()
+    {
+        Debug.Log("いったん。あとでけして");
+        //SceneManager.LoadScene(SceneName.sceneName.ClearScene.ToString());
 
+    }
     //スポーン位置の選択
     void SpawnSelect()
     {
