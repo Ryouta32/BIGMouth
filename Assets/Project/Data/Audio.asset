@@ -20,3 +20,7 @@ MonoBehaviour:
   bom: {fileID: 8300000, guid: 6a885162074df684eb9ad6e08abf41fc, type: 3}
   inhale: {fileID: 8300000, guid: bc5bdeb571f86674f92bae0484c4241f, type: 3}
   Inhaled: {fileID: 8300000, guid: bc5bdeb571f86674f92bae0484c4241f, type: 3}
+  tyuuout: {fileID: 8300000, guid: 5b0455052e9fe2d45bfaaa6c2860055d, type: 3}
+  tyuuin: {fileID: 8300000, guid: 8df640388b8966f4c8027c0a56abbb08, type: 3}
+  falldown: {fileID: 8300000, guid: 081cdb32ec0ab0f4eb1f682c3d222fe0, type: 3}
+  hole: {fileID: 8300000, guid: 7daafa6026e2a8e45869474027377aed, type: 3}

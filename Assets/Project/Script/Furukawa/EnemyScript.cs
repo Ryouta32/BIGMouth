@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     BetaLife betaLife;
-    [SerializeField]EnemyManager manager;
+    [SerializeField] EnemyManager manager;
     public BouSakiScript bouSaki;
     [SerializeField] public EnemyData _data;
     [SerializeField] GameObject stunEffect;
