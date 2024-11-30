@@ -42,7 +42,6 @@ public class InkEnemyScript : MonoBehaviour
                     break;
                 case "Wall":
                     paintManager.Paint(collision, useMethodType, erase, brush, transform, false, collision.transform.tag);
-                    //Debug.Log("塗りました");
                     break;
                 default:
                     break;

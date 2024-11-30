@@ -153,10 +153,10 @@ MonoBehaviour:
     brushScale: 0.1
     rotateAngle: 0
     brushNormalBlend: 0
-    brushHeightBlend: 0
-    brushColor: {r: 0, g: 0, b: 0, a: 0.42745098}
+    brushHeightBlend: 0.245
+    brushColor: {r: 0, g: 0, b: 0, a: 0.21176471}
     colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
   useMethodType: 1
-  erase: 0
+  erase: 1

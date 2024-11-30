@@ -13,7 +13,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] GameObject DestroyEffect;
      AudioManager audioM;
     Rigidbody rb;
-
+    bool inHale;
     [HideInInspector]
     public EnemyData data;
     float time=0;
@@ -33,6 +33,7 @@ public class EnemyScript : MonoBehaviour
             
             bouSaki.StartOfSuction(transform.position - bouSaki.transform.position);
             destroyObj();
+            inHale=true;
             Destroy(this.gameObject);
         }
     }
@@ -58,6 +59,7 @@ public class EnemyScript : MonoBehaviour
     private void OnDestroy()
     {
         //Destroy(DestroyEffect, 5);
+        if(!inHale)
         Instantiate(DestroyEffect, transform.position, Quaternion.identity);
     }
     public void HitDamage()
