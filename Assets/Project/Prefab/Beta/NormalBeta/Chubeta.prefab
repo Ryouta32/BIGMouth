@@ -96,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 5632178297752662124}
   enemyScript: {fileID: 503452284899130060}
+  normalBetaManager: {fileID: 0}
 --- !u!1001 &4663152288766944556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,16 +269,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_LocalRotation.w
@@ -306,6 +319,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8513424388201257645, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_TagString
@@ -373,7 +390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_Name
-      value: Chubeta1011_v2 1
+      value: Chubeta
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_IsActive
@@ -456,9 +473,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5632178297752662124}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1119277636430172391}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       insertIndex: -1
       addedObject: {fileID: 503452284899130060}
@@ -602,6 +616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 5632178297752662124}
   enemyScript: {fileID: 503452284899130060}
+  normalBetaManager: {fileID: 0}
 --- !u!114 &5414641346857523258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,6 +711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 5632178297752662124}
   enemyScript: {fileID: 503452284899130060}
+  normalBetaManager: {fileID: 0}
 --- !u!114 &5819228426006426514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,6 +806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 5632178297752662124}
   enemyScript: {fileID: 503452284899130060}
+  normalBetaManager: {fileID: 0}
 --- !u!114 &7687442062972337902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,6 +901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 5632178297752662124}
   enemyScript: {fileID: 503452284899130060}
+  normalBetaManager: {fileID: 0}
 --- !u!114 &236213450621955602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,6 +996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 5632178297752662124}
   enemyScript: {fileID: 503452284899130060}
+  normalBetaManager: {fileID: 0}
 --- !u!114 &6726627216590844358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,6 +1091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 5632178297752662124}
   enemyScript: {fileID: 503452284899130060}
+  normalBetaManager: {fileID: 0}
 --- !u!114 &8047324609560186676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,21 +1145,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1119277636430172391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8417815194944718525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f3c1de021796a4cb1eca3a7b777b17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnPoint: {fileID: 0}
-  Children: []
-  colsignal: 0
 --- !u!114 &503452284899130060
 MonoBehaviour:
   m_ObjectHideFlags: 0
