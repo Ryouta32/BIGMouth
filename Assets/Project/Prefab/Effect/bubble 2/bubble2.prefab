@@ -44,7 +44,7 @@ ParticleSystem:
   m_GameObject: {fileID: 5921390311424609004}
   serializedVersion: 8
   lengthInSec: 2
-  simulationSpeed: 1
+  simulationSpeed: 2.93
   stopAction: 0
   cullingMode: 1
   ringBufferMode: 0
@@ -52,7 +52,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -983,7 +983,7 @@ ParticleSystem:
         serializedVersion: 2
         minMaxState: 3
         scalar: 2
-        minScalar: 1
+        minScalar: 32.77
         maxCurve:
           serializedVersion: 2
           m_Curve:
@@ -1041,7 +1041,7 @@ ParticleSystem:
         serializedVersion: 2
         minMaxState: 3
         scalar: 2
-        minScalar: 1
+        minScalar: 44.43
         maxCurve:
           serializedVersion: 2
           m_Curve:
@@ -5047,7 +5047,7 @@ ParticleSystem:
   m_GameObject: {fileID: 6894195853335399713}
   serializedVersion: 8
   lengthInSec: 2
-  simulationSpeed: 1
+  simulationSpeed: 3.56
   stopAction: 0
   cullingMode: 1
   ringBufferMode: 0
@@ -5055,7 +5055,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -5985,8 +5985,8 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 3
-        scalar: 2
-        minScalar: 1
+        scalar: 11.05
+        minScalar: 45.59
         maxCurve:
           serializedVersion: 2
           m_Curve:
@@ -6044,7 +6044,7 @@ ParticleSystem:
         serializedVersion: 2
         minMaxState: 3
         scalar: 2
-        minScalar: 1
+        minScalar: 74.87
         maxCurve:
           serializedVersion: 2
           m_Curve:

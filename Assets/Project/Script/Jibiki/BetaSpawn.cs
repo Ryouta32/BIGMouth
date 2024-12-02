@@ -39,7 +39,11 @@ public class BetaSpawn : MonoBehaviour
 
         manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
     }
+    public void StartSpawan()
+    {
+        StartCoroutine("Spawn");
 
+    }
     IEnumerator Spawn()
     {
         while (true)
