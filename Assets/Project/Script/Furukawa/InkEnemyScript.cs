@@ -30,7 +30,7 @@ public class InkEnemyScript : MonoBehaviour
     private void OnCollisionStay(Collision collision)
     {
         time += Time.deltaTime;
-        if (time >= 0.4)
+        if (time >= 2)
         {
             time = 0;
             col = true;
