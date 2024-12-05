@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d77e1fb02fb6abf488f1f7faf34fef28, type: 2}
+  - {fileID: 2100000, guid: 03bdf1e47ad802f4e908f81fb17d2ef5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,11 +119,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintSet:
-  - mainTextureName: _MainTex
+  - mainTextureName: _BaseMap
     normalTextureName: _BumpMap
     heightTextureName: _ParallaxMap
     useMainPaint: 1
-    useNormalPaint: 1
+    useNormalPaint: 0
     useHeightPaint: 0
 --- !u!1 &7060716154798578062
 GameObject:

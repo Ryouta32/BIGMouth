@@ -5,40 +5,40 @@ using UnityEngine;
 
 public class NormalBetaCollision : MonoBehaviour
 {
+    [Tooltip("触手ベタのアニメーターを付ける")]
     [SerializeField] Animator anim;
+    [Tooltip("EnemyManagerのEnemyScriptを付ける")]
     [SerializeField] EnemyScript enemyScript;
-    NormalBetaManager normalBetaManager;
+    [Tooltip("NormalBetaManagerを付ける")]
+    [SerializeField] NormalBetaManager normalBetaManager;
+
+    AudioManager audioM;
 
     private void Start()
     {
-        normalBetaManager = transform.root.gameObject.GetComponent<NormalBetaManager>();
+        audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Brush"))
         {
-            //残りのスポーン地の数
-            //Debug.Log(normalBetaManager.Children.Count + "だよおおおおおおおおおおおおおおおおおおお");
-            //Debug.Log("normalBetaManager.colsignal：" + normalBetaManager.colsignal);
-            //HitDamageは一回きりで呼び出す
             if (normalBetaManager.colsignal)
             {
-                Debug.Log("呼ばれた");
                 normalBetaManager.colsignal = false;
                 enemyScript.HitDamage();
 
                 if (normalBetaManager.Children.Count > 1)
                 {
+                    audioM.PlayPoint(audioM.data.tyuuin, this.gameObject);
                     anim.SetBool("Down", true);
                     enemyScript.data.sutnCount = enemyScript._data.sutnCount;
+
                 }
                 else
                 {
-                    //多分ここが原因。連続で当たっちゃう
                     normalBetaManager.colsignal = true;
                 }
-                //Debug.Log("のち：" + normalBetaManager.colsignal);
             }
             else
             {
@@ -46,16 +46,4 @@ public class NormalBetaCollision : MonoBehaviour
             }
         }
     }
-
-    //public void OnTriggerExit(Collider other)
-    //{
-    //    Debug.Log("でた");
-    //    if(other.gameObject.CompareTag("Brush"))
-    //    {
-    //        if (normalBetaManager.Children.Count <= 1)
-    //        {
-    //            normalBetaManager.colsignal = true;
-    //        }
-    //    }
-    //}
 }
