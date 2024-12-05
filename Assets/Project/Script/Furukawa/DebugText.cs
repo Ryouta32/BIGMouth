@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -14,6 +14,7 @@ public class DebugText : MonoBehaviour
     void Start()
     {
         LogText.text = GetComponent<TextMeshProUGUI>();
+        text = GetComponent<TextMeshProUGUI>();
     }
 
     public void Log<T>(T a)
@@ -23,7 +24,7 @@ public class DebugText : MonoBehaviour
         for (int i = 0; i < logs.Count; i++)
             logtext += logs[i] + "\n";
 
-        text.text = logtext;
+         text.text = logtext;
         if (logtext.Contains(a.ToString()))
         {
             return;

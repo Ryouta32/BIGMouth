@@ -37,9 +37,13 @@ public class BetaSpawn : MonoBehaviour
         StartCoroutine("Spawn");
         Debug.Log("x:" + x + "z:" + z);
 
-        manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
+        manager = GetComponent<EnemyManager>();
     }
+    public void StartSpawan()
+    {
+        StartCoroutine("Spawn");
 
+    }
     IEnumerator Spawn()
     {
         while (true)
@@ -52,12 +56,13 @@ public class BetaSpawn : MonoBehaviour
             if(manager.SpawnCheck())
                 yield break;
             int rnd = Random.Range(0, 360);
+            Debug.Log(spawnPos.transform.position+":"+ spawnPos.transform.forward.normalized * 300);
             GameObject obj = Instantiate(spawnPrefab, spawnPos.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
             if (obj.GetComponent<EnemyScript>())
             {
                 obj.GetComponent<EnemyScript>().setManager(manager);
                 obj.GetComponent<EnemyScript>().initialization();
-                obj.GetComponent<Rigidbody>().AddForce(spawnPos.transform.forward.normalized * 300);
+                obj.GetComponent<Rigidbody>().AddForce(spawnPos.transform.forward.normalized * 3);
                 manager.AddEnemys(obj);//Managerのリストに追加
             }
             }

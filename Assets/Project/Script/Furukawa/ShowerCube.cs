@@ -8,12 +8,15 @@ public class ShowerCube : MonoBehaviour
 {
     [SerializeField]
     private Brush brush;
+    [SerializeField]
+    private Brush draBrush;
 
     [SerializeField]
     private PaintManager.UseMethodType useMethodType = PaintManager.UseMethodType.RaycastHitInfo;
 
     [SerializeField]
     bool erase = false;
+    [SerializeField] string DragonTag = "Dragon";
 
     private float time;
     string _tag;
@@ -30,7 +33,7 @@ public class ShowerCube : MonoBehaviour
         time += Time.deltaTime;
         if (time > 01f)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
     private void OnCollisionEnter(Collision col)
@@ -38,7 +41,16 @@ public class ShowerCube : MonoBehaviour
         PaintManager paintManager = new PaintManager();
         if (col.gameObject.GetComponent<InkCanvas>())
         {
-            paintManager.Paint(col, useMethodType, erase, brush, transform,false,_tag);
+
+            switch (col.transform.tag)
+            {
+                case "Dragon":
+                    paintManager.Paint(col, useMethodType, !erase, draBrush, transform, true, DragonTag);
+                    break;
+                case "Wall":
+                    paintManager.Paint(col, useMethodType, erase, brush, transform, true, DragonTag);
+                    break;
+            }
 
             Destroy(gameObject);
         }
