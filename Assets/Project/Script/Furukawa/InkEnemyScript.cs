@@ -11,6 +11,8 @@ public class InkEnemyScript : MonoBehaviour
 
     [SerializeField]
     private PaintManager.UseMethodType useMethodType = PaintManager.UseMethodType.RaycastHitInfo;
+    [SerializeField]
+    private PaintManager.UseMethodType DrauseMethodType = PaintManager.UseMethodType.RaycastHitInfo;
 
     [SerializeField]
     bool erase = false;
@@ -19,6 +21,7 @@ public class InkEnemyScript : MonoBehaviour
     private bool col=false;
     Vector3 power=new Vector3(-2,0,0);
     float time;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -33,10 +36,32 @@ public class InkEnemyScript : MonoBehaviour
             col = true;
 
             PaintManager paintManager = new PaintManager();
-
-            paintManager.Paint(collision, useMethodType, erase, brush, transform ,false, collision.transform.tag);
-
+            switch (collision.transform.tag) {
+                case "Dragon":
+            paintManager.Paint(collision, DrauseMethodType, !erase, brush, transform, false, collision.transform.tag);
+                    break;
+                case "Wall":
+                    paintManager.Paint(collision, useMethodType, erase, brush, transform, false, collision.transform.tag);
+                    break;
+                default:
+                    break;
+        }
         }
         else return;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Wall"))
+        {
+            if(gameObject.tag == "Normal")
+            {
+                PaintManager paintManager = new PaintManager();
+
+                paintManager.Paint(collision, useMethodType, erase, brush, transform, false, collision.transform.tag);
+
+                //Debug.Log("ぬったよ" + gameObject.name);
+            }
+        }
     }
 }

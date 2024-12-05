@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-
     BetaLife betaLife;
-    EnemyManager manager;
+    [SerializeField] EnemyManager manager;
     public BouSakiScript bouSaki;
-    [SerializeField] EnemyData _data;
+    [SerializeField] public EnemyData _data;
     [SerializeField] GameObject stunEffect;
     [SerializeField] GameObject damageEffect;
     [SerializeField] GameObject DestroyEffect;
      AudioManager audioM;
     Rigidbody rb;
-    private EnemyData data;
+    bool inHale;
+    [HideInInspector]
+    public EnemyData data;
     float time=0;
     private void Start()
     {
@@ -26,26 +27,28 @@ public class EnemyScript : MonoBehaviour
     private void Update()
     {
         Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
-        if (diff.magnitude < bouSaki.GetInhaleDis()&&bouSaki.GetInHale()&&data.state==EnemyData.State.stun)
+        if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
         {
             //吸い込みの処理
-            transform.position = Vector3.MoveTowards(transform.position, bouSaki.gameObject.transform.position, bouSaki.GetInHaleSpeed());
+            
+            bouSaki.StartOfSuction(transform.position - bouSaki.transform.position);
+            destroyObj();
+            inHale=true;
+            Destroy(this.gameObject);
         }
-        time += Time.deltaTime;
-        if (time > data.returnTime)
-            SetState(EnemyData.State.general);
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag=="Brush")
-        rb.constraints = RigidbodyConstraints.FreezeAll;
+        if (collision.transform.tag == "Brush")
+            rb.constraints = RigidbodyConstraints.FreezeAll;
         else
             rb.constraints = RigidbodyConstraints.None;
 
     }
     private void OnCollisionExit(Collision collision)
     {
-        rb.constraints = RigidbodyConstraints.None;
+        if (collision.transform.tag == "Brush")
+            rb.constraints = RigidbodyConstraints.None;
     }
     public void initialization()
     {
@@ -55,29 +58,33 @@ public class EnemyScript : MonoBehaviour
     }
     private void OnDestroy()
     {
+        //Destroy(DestroyEffect, 5);
+        if(!inHale)
         Instantiate(DestroyEffect, transform.position, Quaternion.identity);
     }
     public void HitDamage()
     {
-        time = 0;
         audioM.PlayPoint(audioM.data.attack,this.gameObject);
         Instantiate(damageEffect, transform.position, Quaternion.identity);
-        if(bouSaki.GetInHale() && data.state == EnemyData.State.stun)
-        {
-            destroyObj();
-            AudioSource.PlayClipAtPoint(audioM.data.bom, this.gameObject.transform.position);
-            Destroy(this.gameObject);
-        }
+
+        ////吸い込み
+        //if (bouSaki.GetInHale() && data.state == EnemyData.State.stun)
+        //{
+        //    destroyObj();
+        //    bouSaki.StartOfSuction(transform.position);
+        //    AudioSource.PlayClipAtPoint(audioM.data.bom, this.gameObject.transform.position);
+        //    Destroy(this.gameObject);
+        //}
         //スタン状態なら消す
         if (data.state == EnemyData.State.stun)
         {
-            destroyObj();
+            //destroyObj();
             Debug.Log("削除");
             AudioSource.PlayClipAtPoint(audioM.data.bom, this.gameObject.transform.position);
-
             Destroy(this.gameObject);
         }
         data.sutnCount--;
+        //Debug.Log(data.sutnCount + "だよｙｙｙｙｙｙｙｙ");
         if (data.sutnCount <= 0)
         {
             SetState(EnemyData.State.stun);
@@ -88,6 +95,7 @@ public class EnemyScript : MonoBehaviour
     IEnumerator Stun()//スタン中の処理
     {
         stunEffect.SetActive(true);
+        //Debug.Log("スタンエフェクト");
         audioM.PlayPoint(audioM.data.sutun,this.gameObject);
         yield return new WaitForSeconds(data.sutnTime);
         SetState(EnemyData.State.general);

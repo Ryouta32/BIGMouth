@@ -7,7 +7,7 @@ public class BetaSpawn : MonoBehaviour
 {
     [SerializeField] GameObject spawnPrefab;
     [SerializeField] float time = 5.0f;
-    [SerializeField] private GameObject rightControllerPivot;
+    [SerializeField] private GameObject spawnPos;
 
     Vector3 objectSize;
     float x, z;
@@ -52,12 +52,14 @@ public class BetaSpawn : MonoBehaviour
             if(manager.SpawnCheck())
                 yield break;
             int rnd = Random.Range(0, 360);
-            GameObject obj = Instantiate(spawnPrefab, rightControllerPivot.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
-            obj.GetComponent<EnemyScript>().setManager(manager);
-            obj.GetComponent<EnemyScript>().initialization();
-            manager.AddEnemys(obj);//Managerのリストに追加
-                                   //DebugText.Log2(transform.position);
-
+            GameObject obj = Instantiate(spawnPrefab, spawnPos.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
+            if (obj.GetComponent<EnemyScript>())
+            {
+                obj.GetComponent<EnemyScript>().setManager(manager);
+                obj.GetComponent<EnemyScript>().initialization();
+                obj.GetComponent<Rigidbody>().AddForce(spawnPos.transform.forward.normalized * 300);
+                manager.AddEnemys(obj);//Managerのリストに追加
+            }
+            }
         }
-    }
 }

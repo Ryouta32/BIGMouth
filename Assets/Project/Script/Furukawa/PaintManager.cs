@@ -28,12 +28,12 @@ public class PaintManager
                 bool success = true;
                 foreach (RaycastHit hit in Physics.RaycastAll(ray))
                 {
-
                     Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
                     InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
 
                     if (paint != null)
                     {
+
                         if (rotate)
                         {
                             //tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
@@ -45,6 +45,7 @@ public class PaintManager
 
                                 break;
                             case UseMethodType.WorldPoint:
+
                                 success = erase ? paint.Erase(brush, hit.point) : paint.Paint(brush, hit.point);
                                 break;
 
@@ -79,7 +80,7 @@ public class PaintManager
                 foreach (RaycastHit hit in Physics.RaycastAll(ray))
                 {
 
-                    Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
+                    //Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
                     InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
 
                     if (paint != null)
@@ -133,7 +134,7 @@ public class PaintManager
                 {
                 var dir = ray.origin + ray.direction * hit.distance;
 
-                Debug.DrawLine(tra.position, dir, Color.red, 1f);
+                //Debug.DrawLine(tra.position, dir, Color.red, 1f);
 
                 Debug.Log("UV" + hit.textureCoord);
                 Debug.Log("point" + hit.point);

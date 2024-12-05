@@ -11,11 +11,14 @@ public class BouSakiScript : MonoBehaviour
 
     [SerializeField]
     private Brush brush;
+    [SerializeField]
+    private Brush draBrush;
 
     [SerializeField]
     private PaintManager.UseMethodType useMethodType = PaintManager.UseMethodType.RaycastHitInfo;
 
     [SerializeField]
+    [Tooltip("チェックついてると消えます。ないと塗れます")]
     bool erase = false;
 
     [SerializeField]
@@ -32,9 +35,10 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] float inHaleDis=0.5f;
     [Header("吸い込み速度")]
     [SerializeField] float inHaleSpeed=1;
-    [SerializeField] string objTag="MIMIC";
+    [SerializeField] string MIMICTag = "MIMIC";
     [SerializeField] GameObject ShineEffect;
     [SerializeField] AudioManager audioM;
+    [SerializeField] GameObject SuctionObj;
     bool on=true;
     float paintTime;
     Quaternion defaultQuaternion;
@@ -49,6 +53,7 @@ public class BouSakiScript : MonoBehaviour
 
     void Update()
     {
+        //スキルの判定
         if (on&&OVRInput.Get(actionBtn)|| (on && Input.GetKey(KeyCode.Space)))
         {
             //ShowerObj.SetActive(true);
@@ -60,6 +65,8 @@ public class BouSakiScript : MonoBehaviour
             StopCoroutine("ShowerTime");
             on = true;
         }
+
+        //s\吸い込み判定
         if (OVRInput.Get(OVRInput.RawButton.B) || Input.GetMouseButton(0))
         {
             Inhale();
@@ -78,7 +85,7 @@ public class BouSakiScript : MonoBehaviour
         GameObject obj;
         obj = Instantiate(showerCube, transform.position, Quaternion.identity);
         obj.GetComponent<Rigidbody>().AddForce(bouSC.pos.normalized*power);
-        obj.GetComponent<ShowerCube>().setTag(objTag);
+        obj.GetComponent<ShowerCube>().setTag(MIMICTag);
         on = true;
     }
     private void Inhale()
@@ -88,18 +95,13 @@ public class BouSakiScript : MonoBehaviour
     }
     private void UpInhale()
     {
-
+        OnHale = false;
     }
 
     private void OnCollisionStay(Collision other)
     {
         paintTime += Time.deltaTime;
-        PaintManager pManager = new PaintManager();
-        if (other.gameObject.CompareTag(objTag))
-            pManager.Paint(other, useMethodType, !erase, brush, transform, true, objTag);
-        else
-            pManager.Paint(other, useMethodType, erase, brush, transform, true, objTag);
-
+        Paint(other);
         time += Time.deltaTime;
         if (time > 0.8f)
         {
@@ -116,11 +118,7 @@ public class BouSakiScript : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         PaintManager pManager = new PaintManager();
-        if(collision.gameObject.CompareTag(objTag))
-        pManager.Paint(collision, useMethodType, !erase, brush, transform, true,objTag);
-        else
-            pManager.Paint(collision, useMethodType, erase, brush, transform, true, objTag);
-
+        Paint(collision);
 
         hitpoint = collision.contacts[0].point;
         bouSC.HitPos();
@@ -128,11 +126,8 @@ public class BouSakiScript : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         paintTime += Time.deltaTime;
-        PaintManager pManager = new PaintManager();
-        if (other.gameObject.CompareTag(objTag))
-            pManager.Paint(other, useMethodType, !erase, brush, transform, true, objTag);
-        else
-            pManager.Paint(other, useMethodType, erase, brush, transform, true, objTag);
+        Paint(other);
+
 
         time += Time.deltaTime;
         if (time > 0.8f)
@@ -143,11 +138,8 @@ public class BouSakiScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        PaintManager pManager = new PaintManager();
-        if (other.gameObject.CompareTag(objTag))
-            pManager.Paint(other, useMethodType, !erase, brush, transform, true, objTag);
-        else
-            pManager.Paint(other, useMethodType, erase, brush, transform, true, objTag);
+        Paint(other);
+
 
 
         hitpoint = other.ClosestPointOnBounds(this.transform.position);
@@ -157,6 +149,44 @@ public class BouSakiScript : MonoBehaviour
     {
         hitpoint = Vector3.zero;
         bouSC.ExisPos();
+    }
+
+    private void Paint(Collision other)
+    {
+        PaintManager pManager = new PaintManager();
+
+        switch (other.transform.tag)
+        {
+            case "Dragon":
+                pManager.Paint(other, useMethodType, !erase, brush, transform, true, MIMICTag);
+                break;
+            case "Wall":
+                pManager.Paint(other, useMethodType, erase, brush, transform, true, MIMICTag);
+                break;
+        }
+    }
+    private void Paint(Collider other)
+    {
+        PaintManager pManager = new PaintManager();
+
+        switch (other.transform.tag)
+        {
+            case "Dragon":
+                pManager.Paint(other, useMethodType, !erase, brush, transform, true, MIMICTag);
+                break;
+            case "Wall":
+                pManager.Paint(other, useMethodType, erase, brush, transform, true, MIMICTag);
+                break;
+        }
+    }
+    public void StartOfSuction(Vector3 pos)
+    {
+        GameObject obj = Instantiate(SuctionObj, transform.position, Quaternion.identity);
+        ParticleSystem psy = obj.GetComponent<ParticleSystem>();
+        var sh = psy.shape;
+
+        sh.position = pos;
+
     }
     public Vector3 GetHit() => hitpoint;
     public void SetHit(Vector3 x) => hitpoint = x;

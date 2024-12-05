@@ -273,6 +273,7 @@ namespace Es.InkPainter.Effective
 			}
 		}
 
+        public void SetFlowDirection(Vector2 vector2) => flowDirection = vector2;
 		#endregion UnityEventMethod
 	}
 }

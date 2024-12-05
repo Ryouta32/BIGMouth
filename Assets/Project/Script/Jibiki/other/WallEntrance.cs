@@ -6,6 +6,11 @@ using UnityEngine;
 public class WallEntrance : MonoBehaviour
 {
     Rigidbody rb;
+    MeshRenderer mr;
+    [SerializeField] Material PieceMaterial;
+
+    [Tooltip("崩れるときのちから")]
+    [SerializeField] Vector3 power;
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +24,39 @@ public class WallEntrance : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        rb = collision.gameObject.AddComponent<Rigidbody>();
-        rb.useGravity = false;
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Wall"))
+    //    {
+    //        Debug.Log("追加！！！！！！！！");
+    //        if (!collision.gameObject.GetComponent<Rigidbody>())
+    //        {
+    //            mr = collision.gameObject.GetComponent<MeshRenderer>();
+    //            mr.material = PieceMaterial;
 
-        //if (collision.gameObject.CompareTag("Wall"))
-        //{
-        //    rb = collision.gameObject.AddComponent<Rigidbody>();
-        //    rb.useGravity = false;
-        //}
+    //            rb = collision.gameObject.AddComponent<Rigidbody>();
+    //            //rb.useGravity = false;
+
+    //            rb.AddForce(power);
+    //        }
+    //    }
+    //}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            //Debug.Log("追加！！！！！！！！");
+            if (!other.gameObject.GetComponent<Rigidbody>())
+            {
+                mr = other.gameObject.GetComponent<MeshRenderer>();
+                mr.material = PieceMaterial;
+
+                rb = other.gameObject.AddComponent<Rigidbody>();
+                //rb.useGravity = false;
+
+                rb.AddForce(power);
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,12 +7,22 @@ public class EnemyManager : MonoBehaviour
 {
    [SerializeField] List<GameObject> enemys;
     [SerializeField] int spawnLimit;
+    [SerializeField] GameObject BIGBETA;
     public void ClearCheck() {
         if (enemys.Count == 0)
         {
-            //‚±‚±‚ÉƒQ[ƒ€ƒNƒŠƒA‚Ìˆ—
+            //ã“ã“ã«ã‚²ãƒ¼ãƒ ã‚¯ãƒªã‚¢ã®å‡¦ç†
             SceneManager.LoadScene(SceneName.sceneName.ClearScene.ToString());
         }
+
+        int x = 0;
+        foreach (var item in enemys)
+        {
+            if (item.GetComponent<NormalBetaManager>())
+                x++;
+        }
+        if (x != 0)
+            Instantiate(BIGBETA, transform.position, Quaternion.identity);
     }
     
     public void AddEnemys(GameObject obj) => enemys.Add(obj);

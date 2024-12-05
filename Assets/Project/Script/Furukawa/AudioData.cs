@@ -16,4 +16,10 @@ public class AudioData : ScriptableObject
     [Tooltip("吸う音")] public AudioClip inhale;
     [Tooltip("吸い込んだ音")] public AudioClip Inhaled;
 
+    [Header("中ベタ")]
+    [Tooltip("触手が穴から出るとき")] public AudioClip tyuuout;
+    [Tooltip("触手が穴に入る時")] public AudioClip tyuuin;
+    [Tooltip("触手が倒れた時")] public AudioClip falldown;
+    [Tooltip("中ベタの穴が消える")] public AudioClip hole;
+
 }
