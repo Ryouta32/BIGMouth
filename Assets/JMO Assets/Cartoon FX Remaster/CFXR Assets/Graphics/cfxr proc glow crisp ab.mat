@@ -8,17 +8,20 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: cfxr proc glow crisp ab
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 945dbd75c7a95c2489a52938c7ce5bb8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _CFXR_AMBIENT_LIGHTING
+  m_ValidKeywords:
+  - _ALPHABLEND_ON
   - _CFXR_DITHERED_SHADOWS_ON
+  - _FADING_ON
+  m_InvalidKeywords:
+  - _
+  - _CFXR_AMBIENT_LIGHTING
   - _CFXR_FWIDTH
   - _CFXR_GLOW_POW_P0
+  - _CFXR_OVERLAYTEX_OFF
   - _EDGEFADING_ON
-  - _FADING_ON
   - _SUBGLOW_ON
   - __CFXRGLOW_POW_P4
   - __CFXRGLOW_POW_P6
@@ -26,8 +29,7 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -57,6 +59,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DistortTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DitherCustom:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -77,7 +83,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _OverlayTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondColorTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -104,11 +118,15 @@ Material:
     - _AmbientColor: 0.25
     - _AmbientIntensity: 0.5
     - _AmbientLighting: 1
+    - _BacklightTransmittance: 1
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
+    - _BlendingType: 0
     - _BumpScale: 1
     - _CFXR_DITHERED_SHADOWS: 1
     - _CFXR_GLOW_POW: 0
+    - _CFXR_OVERLAYBLEND: 0
+    - _CFXR_OVERLAYTEX: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _ColorMultiply: 2
@@ -116,12 +134,18 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _DirLightScreenAtten: 1
+    - _DirectLightingRamp: 1
     - _DissolveSmooth: 0.1
-    - _DstBlend: 0
+    - _Distort: 0.1
+    - _DoubleDissolve: 0
+    - _DstBlend: 4
     - _DstBlendAlpha: 0
     - _DstBlendMode: 4
+    - _EdgeFadePow: 1
     - _EdgeFading: 1
     - _EnvironmentReflections: 1
+    - _FadeAlongU: 0
     - _FadingFalloff: 0.05
     - _Falloff: 4
     - _GlossMapScale: 1
@@ -133,8 +157,10 @@ Material:
     - _Glow_Pow: 2
     - _HdrBoost: 0
     - _HdrMultiply: 0
+    - _IndirectLightingMix: 0.5
     - _Intensity: 1
     - _InvertDissolveTex: 0
+    - _LightingWorldPosStrength: 0.2
     - _MaxValue: 1
     - _Metallic: 0
     - _Mode: 0
@@ -145,32 +171,54 @@ Material:
     - _ReceiveShadows: 1
     - _RingTopOffset: 0.05
     - _Scale: 0.055
+    - _SecondColorSmooth: 0.2
     - _ShadowStrength: 0.5
+    - _SingleChannel: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SoftParticlesFadeDistanceFar: 1
     - _SoftParticlesFadeDistanceNear: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _SrcBlendAlpha: 1
     - _SrcBlendMode: 0
     - _SubGlowMax: 6.7
     - _SubGlowMin: -2.47
     - _Surface: 0
+    - _UVDistortionAdd: 0
     - _UVSec: 0
+    - _UseAlphaClip: 0
+    - _UseBackLighting: 0
     - _UseDissolve: 0
+    - _UseDissolveOffsetUV: 0
+    - _UseEF: 0
+    - _UseEmission: 0
+    - _UseFB: 0
+    - _UseFontColor: 0
     - _UseFwidth: 1
+    - _UseLighting: 0
+    - _UseLightingWorldPosOffset: 0
+    - _UseNormalMap: 0
+    - _UseRadialUV: 0
     - _UseSG: 1
     - _UseSP: 1
+    - _UseSecondColor: 0
+    - _UseUV2Distortion: 0
+    - _UseUVDistortion: 0
     - _WorkflowMode: 1
+    - _WorldSpaceRing: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.41176468, g: 0.11764703, b: 0, a: 1}
-    - _Color: {r: 0.41176465, g: 0.117646985, b: 0, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DissolveScroll: {r: 0, g: 0, b: 0, a: 0}
+    - _DistortScrolling: {r: 0, g: 0, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _KeyboardPosition: {r: 0, g: 0, b: 0, a: 0}
     - _KeyboardRotation: {r: 0, g: 0, b: 0, a: 0}
     - _KeyboardScale: {r: 1, g: 1, b: 1, a: 0}
+    - _OverlayTex_Scroll: {r: 0.1, g: 0.1, b: 1, a: 1}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &7647840525941442304
