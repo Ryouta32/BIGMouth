@@ -23,19 +23,26 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] private OVRInput.RawButton actionBtn;
     [SerializeField] GameObject ShowerObj;
     [SerializeField] GameObject showerCube;
+    [Header("噴射の塗り判定を都飛ばす強さ")]
     [SerializeField] float power;
     [Header("吸い込みの距離")]
     [SerializeField] float inHaleDis=0.5f;
     [Header("吸い込み速度")]
     [SerializeField] float inHaleSpeed=1;
+    [Header("ドラゴンのタグ")]
     [SerializeField] string DragonTag = "Dragon";
+    [Header("ごしごしエフェクト")]
     [SerializeField] GameObject ShineEffect;
     [SerializeField] AudioManager audioM;
+    [Header("吸い込みエフェクト")]
     [SerializeField] GameObject SuctionObj;
     bool on=true;
    Vector3 hitpoint;
    public bool OnHale;
     [SerializeField] DebugText debugtext;
+    float showerPoint = 0;
+    [SerializeField] float showerLimit;
+    [SerializeField] float showerThreshold;
     void Start()
     {
         hitpoint = Vector3.zero;
@@ -44,20 +51,23 @@ public class BouSakiScript : MonoBehaviour
     void Update()
     {
 
-        debugtext.Log(ShowerObj.GetComponent<ParticleSystem>().isPlaying);
+        debugtext.Log(showerPoint);
         //スキルの判定
-        if (on&&OVRInput.Get(actionBtn)|| (on && Input.GetKey(KeyCode.Space)))
+        if (showerPoint > showerLimit)
         {
-            ShowerObj.SetActive(true);
-            StartCoroutine("ShowerTime");
+            if (on && OVRInput.Get(actionBtn) || (on && Input.GetKey(KeyCode.Space)))
+            {
+                ShowerObj.SetActive(true);
+                showerPoint -= Time.deltaTime*10;
+                StartCoroutine("ShowerTime");
+            }
+            if (OVRInput.GetUp(actionBtn) || Input.GetKeyUp(KeyCode.Space))
+            {
+                ShowerObj.SetActive(false);
+                StopCoroutine("ShowerTime");
+                on = true;
+            }
         }
-        if (OVRInput.GetUp(actionBtn) || Input.GetKeyUp(KeyCode.Space))
-        {
-            ShowerObj.SetActive(false);
-            StopCoroutine("ShowerTime");
-            on = true;
-        }
-
         //s\吸い込み判定
         if (OVRInput.Get(OVRInput.RawButton.B) || Input.GetMouseButton(0))
         {
@@ -172,6 +182,7 @@ public class BouSakiScript : MonoBehaviour
     public void StartOfSuction(Vector3 pos)
     {
         GameObject obj = Instantiate(SuctionObj, transform.position, Quaternion.identity);
+        obj.GetComponent<SuikomiScript>().SetBousaki(this);
         ParticleSystem psy = obj.GetComponent<ParticleSystem>();
         var sh = psy.shape;
 
@@ -183,4 +194,5 @@ public class BouSakiScript : MonoBehaviour
     public float GetInhaleDis() => inHaleDis;
     public bool GetInHale() => OnHale;
     public float GetInHaleSpeed() => inHaleSpeed;
+    public void AddShowerPoint(float x) => showerPoint += x;
 }
