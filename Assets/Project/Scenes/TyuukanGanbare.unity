@@ -351,7 +351,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintSet: []
+  paintSet:
+  - mainTextureName: _MainTex
+    normalTextureName: _BumpMap
+    heightTextureName: _ParallaxMap
+    useMainPaint: 1
+    useNormalPaint: 0
+    useHeightPaint: 0
+--- !u!33 &197906042
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197906037}
+  m_Mesh: {fileID: 3991324925072434172, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
 --- !u!1 &302769184
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,7 +629,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintSet: []
+  paintSet:
+  - mainTextureName: _MainTex
+    normalTextureName: _BumpMap
+    heightTextureName: _ParallaxMap
+    useMainPaint: 1
+    useNormalPaint: 0
+    useHeightPaint: 0
+--- !u!33 &446169093
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446169088}
+  m_Mesh: {fileID: -4259036420211438659, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
 --- !u!1 &539921811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4432909611529543369, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
@@ -655,7 +683,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintSet: []
+  paintSet:
+  - mainTextureName: _MainTex
+    normalTextureName: _BumpMap
+    heightTextureName: _ParallaxMap
+    useMainPaint: 1
+    useNormalPaint: 0
+    useHeightPaint: 0
+--- !u!33 &539921816
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539921811}
+  m_Mesh: {fileID: 4390302518480931943, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
 --- !u!1 &543671620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
@@ -858,7 +900,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintSet: []
+  paintSet:
+  - mainTextureName: _MainTex
+    normalTextureName: _BumpMap
+    heightTextureName: _ParallaxMap
+    useMainPaint: 1
+    useNormalPaint: 0
+    useHeightPaint: 0
+--- !u!33 &612567426
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612567421}
+  m_Mesh: {fileID: 5990026557554641824, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
 --- !u!1001 &613600994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -917,7 +973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724086676413102431, guid: 774920f80001bf942917215bbf1c88ee, type: 3}
       propertyPath: DrauseMethodType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8724086676413102431, guid: 774920f80001bf942917215bbf1c88ee, type: 3}
       propertyPath: brush.rotateAngle
@@ -1288,7 +1344,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintSet: []
+  paintSet:
+  - mainTextureName: _MainTex
+    normalTextureName: _BumpMap
+    heightTextureName: _ParallaxMap
+    useMainPaint: 1
+    useNormalPaint: 0
+    useHeightPaint: 0
+--- !u!33 &759891596
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759891591}
+  m_Mesh: {fileID: 3544529806756970424, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
 --- !u!1 &830939617 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8423496638411528758, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
@@ -1333,7 +1403,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintSet: []
+  paintSet:
+  - mainTextureName: _MainTex
+    normalTextureName: _BumpMap
+    heightTextureName: _ParallaxMap
+    useMainPaint: 1
+    useNormalPaint: 0
+    useHeightPaint: 0
+--- !u!33 &971483607
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971483602}
+  m_Mesh: {fileID: 664456749670281567, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
 --- !u!1 &1060417650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2032,7 +2116,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintSet: []
+  paintSet:
+  - mainTextureName: _MainTex
+    normalTextureName: _BumpMap
+    heightTextureName: _ParallaxMap
+    useMainPaint: 1
+    useNormalPaint: 0
+    useHeightPaint: 0
 --- !u!1001 &1383753817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2685,7 +2775,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintSet: []
+  paintSet:
+  - mainTextureName: _MainTex
+    normalTextureName: _BumpMap
+    heightTextureName: _ParallaxMap
+    useMainPaint: 1
+    useNormalPaint: 0
+    useHeightPaint: 0
+--- !u!33 &1855619799
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855619794}
+  m_Mesh: {fileID: -7299080639156617488, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
 --- !u!1 &1894411143
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,6 +3190,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2569740284282886120, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 197906041}
+    - targetCorrespondingSourceObject: {fileID: 2569740284282886120, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 197906042}
     - targetCorrespondingSourceObject: {fileID: 3293273048312515182, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1359567960}
@@ -3098,36 +3205,54 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7622793897275245890, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 612567425}
+    - targetCorrespondingSourceObject: {fileID: 7622793897275245890, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 612567426}
     - targetCorrespondingSourceObject: {fileID: 4432909611529543369, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 539921814}
     - targetCorrespondingSourceObject: {fileID: 4432909611529543369, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 539921815}
+    - targetCorrespondingSourceObject: {fileID: 4432909611529543369, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 539921816}
     - targetCorrespondingSourceObject: {fileID: 585019210299237772, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 446169091}
     - targetCorrespondingSourceObject: {fileID: 585019210299237772, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 446169092}
+    - targetCorrespondingSourceObject: {fileID: 585019210299237772, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 446169093}
     - targetCorrespondingSourceObject: {fileID: 2245860115017424824, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 759891594}
     - targetCorrespondingSourceObject: {fileID: 2245860115017424824, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 759891595}
+    - targetCorrespondingSourceObject: {fileID: 2245860115017424824, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 759891596}
     - targetCorrespondingSourceObject: {fileID: 7475622226012854178, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 971483605}
     - targetCorrespondingSourceObject: {fileID: 7475622226012854178, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 971483606}
+    - targetCorrespondingSourceObject: {fileID: 7475622226012854178, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 971483607}
     - targetCorrespondingSourceObject: {fileID: 6440919138777923762, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1855619797}
     - targetCorrespondingSourceObject: {fileID: 6440919138777923762, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1855619798}
+    - targetCorrespondingSourceObject: {fileID: 6440919138777923762, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1855619799}
   m_SourcePrefab: {fileID: 100100000, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

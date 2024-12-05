@@ -38,7 +38,6 @@ public class InkEnemyScript : MonoBehaviour
             PaintManager paintManager = new PaintManager();
             switch (collision.transform.tag) {
                 case "Dragon":
-                    Debug.Log("aaaaaa");
             paintManager.Paint(collision, DrauseMethodType, !erase, brush, transform, true, collision.transform.tag);
                     break;
                 case "Wall":
