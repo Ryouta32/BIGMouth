@@ -57,7 +57,7 @@ public class BetaSpawn : MonoBehaviour
             {
                 obj.GetComponent<EnemyScript>().setManager(manager);
                 obj.GetComponent<EnemyScript>().initialization();
-                obj.GetComponent<Rigidbody>().AddForce(spawnPos.transform.forward.normalized * 300);
+                //obj.GetComponent<Rigidbody>().AddForce(spawnPos.transform.forward.normalized * 300);
                 manager.AddEnemys(obj);//Managerのリストに追加
             }
             }

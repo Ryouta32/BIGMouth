@@ -33,7 +33,7 @@ public class DragonSpawn : MonoBehaviour
         {
             if(classification.Contains(OVRSceneManager.Classification.Floor))
             {
-                gameObject.GetComponent<MeshRenderer>().material = m;
+                classification.gameObject.GetComponent<MeshRenderer>().material = m;
             }
         }
     }
