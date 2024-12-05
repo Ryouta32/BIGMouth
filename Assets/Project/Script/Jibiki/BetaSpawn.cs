@@ -56,7 +56,6 @@ public class BetaSpawn : MonoBehaviour
             if(manager.SpawnCheck())
                 yield break;
             int rnd = Random.Range(0, 360);
-            Debug.Log(spawnPos.transform.position+":"+ spawnPos.transform.forward.normalized * 300);
             GameObject obj = Instantiate(spawnPrefab, spawnPos.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
             if (obj.GetComponent<EnemyScript>())
             {
