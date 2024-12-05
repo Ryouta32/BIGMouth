@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isHitHorizontalPlane: 0
-  _approximatelyAngle: 0
+  _approximatelyAngle: 30
 --- !u!54 &8901440900333074540
 Rigidbody:
   m_ObjectHideFlags: 0
