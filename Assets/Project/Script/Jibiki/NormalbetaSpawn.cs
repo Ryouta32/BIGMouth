@@ -14,6 +14,8 @@ public class NormalbetaSpawn : MonoBehaviour
     [SerializeField] TextMeshProUGUI textText;
     private List<OVRSceneAnchor> anchors = new List<OVRSceneAnchor>();
 
+    OVRScenePlane floor;
+
     private void Awake()
     {
         //ルーム設定の読み込みが成功した時のコールバック登録
@@ -38,7 +40,7 @@ public class NormalbetaSpawn : MonoBehaviour
         //天井
         OVRScenePlane ceiling = sceneRoom.Ceiling;
         //床
-        OVRScenePlane floor = sceneRoom.Floor;
+        floor = sceneRoom.Floor;
         //壁
         OVRScenePlane[] walls = sceneRoom.Walls;
 
@@ -48,6 +50,6 @@ public class NormalbetaSpawn : MonoBehaviour
     void floortranform()
     {
         gameObject.transform.position = new Vector3(this.transform.position.x, pos.y,this.transform.position.z);
-        textText.text = gameObject.transform.position.ToString();
+        textText.text = floor.transform.localScale.ToString();
     }
 }
