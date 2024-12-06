@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9194215214211680129}
   - component: {fileID: 5458786770261552806}
   - component: {fileID: 8574349821656423594}
-  - component: {fileID: 6030901884232700510}
   m_Layer: 0
   m_Name: EnemyManager
   m_TagString: Untagged
@@ -63,20 +62,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPrefab: {fileID: 4083369751829114074, guid: c004e0adde7087c428ae708b09988ced, type: 3}
   time: 5
-  rightControllerPivot: {fileID: 0}
---- !u!114 &6030901884232700510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6351361627570979847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f3c1de021796a4cb1eca3a7b777b17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnPoint: {fileID: 0}
-  tyubeta: {fileID: 0}
-  Children: []
-  colsignal: 0
+  spawnPos: {fileID: 0}
