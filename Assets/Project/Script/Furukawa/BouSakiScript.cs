@@ -8,60 +8,52 @@ public class BouSakiScript : MonoBehaviour
 {
 
     [SerializeField] bouScript bouSC;
-
     [SerializeField]
     private Brush brush;
     [SerializeField]
     private Brush draBrush;
-
     [SerializeField]
     private PaintManager.UseMethodType useMethodType = PaintManager.UseMethodType.RaycastHitInfo;
-
     [SerializeField]
     [Tooltip("チェックついてると消えます。ないと塗れます")]
     bool erase = false;
-
     [SerializeField]
     TextMeshProUGUI text;
     float time;
-
     [SerializeField] private OVRInput.RawButton actionBtn;
-
     [SerializeField] GameObject ShowerObj;
     [SerializeField] GameObject showerCube;
-    private GameObject currentBall;
     [SerializeField] float power;
     [Header("吸い込みの距離")]
     [SerializeField] float inHaleDis=0.5f;
     [Header("吸い込み速度")]
     [SerializeField] float inHaleSpeed=1;
-    [SerializeField] string MIMICTag = "MIMIC";
+    [SerializeField] string DragonTag = "Dragon";
     [SerializeField] GameObject ShineEffect;
     [SerializeField] AudioManager audioM;
     [SerializeField] GameObject SuctionObj;
     bool on=true;
-    float paintTime;
-    Quaternion defaultQuaternion;
    Vector3 hitpoint;
    public bool OnHale;
+    [SerializeField] DebugText debugtext;
     void Start()
     {
-        defaultQuaternion = this.transform.rotation;
         hitpoint = Vector3.zero;
-
     }
 
     void Update()
     {
+
+        debugtext.Log(ShowerObj.GetComponent<ParticleSystem>().isPlaying);
         //スキルの判定
         if (on&&OVRInput.Get(actionBtn)|| (on && Input.GetKey(KeyCode.Space)))
         {
-            //ShowerObj.SetActive(true);
+            ShowerObj.SetActive(true);
             StartCoroutine("ShowerTime");
         }
         if (OVRInput.GetUp(actionBtn) || Input.GetKeyUp(KeyCode.Space))
         {
-            //ShowerObj.SetActive(false);
+            ShowerObj.SetActive(false);
             StopCoroutine("ShowerTime");
             on = true;
         }
@@ -81,11 +73,11 @@ public class BouSakiScript : MonoBehaviour
     {
         on = false;
         yield return new WaitForSeconds(0.2f);
-
+        audioM.PlayPoint(audioM.data.injection, this.gameObject);
         GameObject obj;
         obj = Instantiate(showerCube, transform.position, Quaternion.identity);
         obj.GetComponent<Rigidbody>().AddForce(bouSC.pos.normalized*power);
-        obj.GetComponent<ShowerCube>().setTag(MIMICTag);
+        obj.GetComponent<ShowerCube>().setTag(DragonTag);
         on = true;
     }
     private void Inhale()
@@ -100,7 +92,6 @@ public class BouSakiScript : MonoBehaviour
 
     private void OnCollisionStay(Collision other)
     {
-        paintTime += Time.deltaTime;
         Paint(other);
         time += Time.deltaTime;
         if (time > 0.8f)
@@ -125,7 +116,6 @@ public class BouSakiScript : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        paintTime += Time.deltaTime;
         Paint(other);
 
 
@@ -158,10 +148,10 @@ public class BouSakiScript : MonoBehaviour
         switch (other.transform.tag)
         {
             case "Dragon":
-                pManager.Paint(other, useMethodType, !erase, brush, transform, true, MIMICTag);
+                pManager.Paint(other, useMethodType, !erase, draBrush, transform, true, DragonTag);
                 break;
             case "Wall":
-                pManager.Paint(other, useMethodType, erase, brush, transform, true, MIMICTag);
+                pManager.Paint(other, useMethodType, erase, brush, transform, true, DragonTag);
                 break;
         }
     }
@@ -172,10 +162,10 @@ public class BouSakiScript : MonoBehaviour
         switch (other.transform.tag)
         {
             case "Dragon":
-                pManager.Paint(other, useMethodType, !erase, brush, transform, true, MIMICTag);
+                pManager.Paint(other, useMethodType, !erase, draBrush, transform, true, DragonTag);
                 break;
             case "Wall":
-                pManager.Paint(other, useMethodType, erase, brush, transform, true, MIMICTag);
+                pManager.Paint(other, useMethodType, erase, brush, transform, true, DragonTag);
                 break;
         }
     }
