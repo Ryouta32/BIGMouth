@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class DragonSpawn : MonoBehaviour
 {
-    [SerializeField] OVRSceneManager ovrSceneManager;
+    OVRSceneManager ovrSceneManager;
     [SerializeField] Material m;
+    GameObject dragon;
 
     private void Awake()
     {
+        ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
+        dragon = GameObject.Find("joint1.1");
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
     }
@@ -29,11 +32,14 @@ public class DragonSpawn : MonoBehaviour
     void onAnchorsLoaded()
     {
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
+
         foreach(var classification in classifications)
         {
             if(classification.Contains(OVRSceneManager.Classification.Floor))
             {
-                classification.gameObject.GetComponent<MeshRenderer>().material = m;
+                gameObject.GetComponent<MeshRenderer>().material = m;
+
+                dragon.transform.position = gameObject.transform.position;
             }
         }
     }

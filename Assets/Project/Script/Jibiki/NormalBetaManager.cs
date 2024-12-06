@@ -20,6 +20,13 @@ public class NormalBetaManager : MonoBehaviour
 
     AudioManager audioM;
 
+    [SerializeField] GameObject InEffect;
+
+    int rot;
+
+    [SerializeField] float repeattime;
+
+    [SerializeField] BoxCollider[] col;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +46,7 @@ public class NormalBetaManager : MonoBehaviour
         gameObject.transform.position = new Vector3(Children[number].transform.position.x, SpawnPoint.transform.position.y, Children[number].transform.position.z);
 
         //Instantiate(gameObject, gameObject.transform.position, Quaternion.identity);
+        InvokeRepeating(nameof(StunStart), repeattime, repeattime);
     }
 
     // Update is called once per frame
@@ -62,6 +70,7 @@ public class NormalBetaManager : MonoBehaviour
 
         anim.SetBool("Down", false);
         colsignal = true;
+        InEffect.SetActive(false);
     }
 
     //同じところにスポーンするのを防ぐ
@@ -85,5 +94,32 @@ public class NormalBetaManager : MonoBehaviour
     void tyuuOut()
     {
         audioM.PlayPoint(audioM.data.tyuuout, this.gameObject);
+    }
+
+    void OutEnabled()
+    {
+        foreach (BoxCollider collider in col)
+        {
+            collider.enabled = true;
+        }
+    }
+    void InEnabled()
+    {
+        foreach (BoxCollider collider in col)
+        {
+            collider.enabled = false;
+        }
+    }
+
+    void InParticle()
+    {
+        InEffect.SetActive(true);
+    }
+
+    void StunStart()
+    {
+        rot = Random.Range(0, 360);
+        transform.Rotate(0, rot, 0);
+        anim.SetTrigger("Stun");
     }
 }

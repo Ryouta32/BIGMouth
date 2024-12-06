@@ -33,16 +33,11 @@ public class NormalBetaCollision : MonoBehaviour
                     audioM.PlayPoint(audioM.data.tyuuin, this.gameObject);
                     anim.SetBool("Down", true);
                     enemyScript.data.sutnCount = enemyScript._data.sutnCount;
-
                 }
                 else
                 {
                     normalBetaManager.colsignal = true;
                 }
-            }
-            else
-            {
-                return;
             }
         }
     }
