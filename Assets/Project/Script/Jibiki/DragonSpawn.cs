@@ -7,12 +7,11 @@ public class DragonSpawn : MonoBehaviour
 {
     OVRSceneManager ovrSceneManager;
     [SerializeField] Material m;
-    GameObject dragon;
+    [SerializeField] GameObject dragon;
 
     private void Awake()
     {
         ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
-        dragon = GameObject.Find("joint1.1");
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
     }
@@ -39,7 +38,7 @@ public class DragonSpawn : MonoBehaviour
             {
                 gameObject.GetComponent<MeshRenderer>().material = m;
 
-                dragon.transform.position = gameObject.transform.position;
+                dragon.transform.position = classification.transform.position;
             }
         }
     }

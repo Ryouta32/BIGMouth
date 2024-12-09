@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     BetaLife betaLife;
-    [SerializeField] EnemyManager manager;
+    EnemyManager manager;
     public BouSakiScript bouSaki;
     [SerializeField] public EnemyData _data;
     [SerializeField] GameObject stunEffect;
@@ -22,6 +22,7 @@ public class EnemyScript : MonoBehaviour
         initialization();
         data = new EnemyData(_data);
         audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
         rb = GetComponent<Rigidbody>();
     }
     private void Update()

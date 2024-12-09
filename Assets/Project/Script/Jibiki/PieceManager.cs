@@ -30,6 +30,11 @@ public class PieceManager : MonoBehaviour
     {
         PieceParent = this.gameObject;
 
+        InvokeRepeating(nameof(FallPiece), StartTime, RepeatTime);
+    }
+
+    void FallPiece()
+    {
         //初期化
         PieceChildren = new List<Transform>();
 
@@ -40,11 +45,6 @@ public class PieceManager : MonoBehaviour
             //Debug.Log($"検索方法１： {i} 番目の子供は {PieceChildren[i].name} です");
         }
 
-        InvokeRepeating(nameof(FallPiece), StartTime, RepeatTime);
-    }
-
-    void FallPiece()
-    {
         Rigidbody obj;
 
         int rnd = Random.Range(0, PieceChildren.Count);
