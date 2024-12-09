@@ -37,13 +37,9 @@ public class BetaSpawn : MonoBehaviour
         StartCoroutine("Spawn");
         Debug.Log("x:" + x + "z:" + z);
 
-        manager = GetComponent<EnemyManager>();
+        manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
     }
-    public void StartSpawan()
-    {
-        StartCoroutine("Spawn");
 
-    }
     IEnumerator Spawn()
     {
         while (true)
@@ -61,7 +57,7 @@ public class BetaSpawn : MonoBehaviour
             {
                 obj.GetComponent<EnemyScript>().setManager(manager);
                 obj.GetComponent<EnemyScript>().initialization();
-                obj.GetComponent<Rigidbody>().AddForce(spawnPos.transform.forward.normalized * 3);
+                //obj.GetComponent<Rigidbody>().AddForce(spawnPos.transform.forward.normalized * 300);
                 manager.AddEnemys(obj);//Managerのリストに追加
             }
             }

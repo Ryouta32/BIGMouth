@@ -18,13 +18,15 @@ public class ParticleCollision : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Brush"))
         {
-            if(audioflag)
+            Debug.Log("あたったよおおおおおおおおおおおおおおおおお");
+            if (audioflag)
             {
                 audioflag = false;
                 audioM.PlayPoint(audioM.data.hole, this.gameObject);
             }
-            Debug.Log("音鳴った");
-            Destroy(transform.parent.gameObject, 0.4f);
+            transform.GetChild(0).gameObject.SetActive(false);
+            //Debug.Log("音鳴った");
+            Destroy(gameObject, 1f);
         }
     }
 }

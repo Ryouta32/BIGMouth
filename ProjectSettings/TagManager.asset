@@ -10,6 +10,8 @@ TagManager:
   - Dragon
   - Wall
   - Normal
+  - Mash
+  - Ceiling
   layers:
   - Default
   - TransparentFX

@@ -28,6 +28,6 @@ public class DragonAnima : MonoBehaviour
     }
     public void Spawn()
     {
-        spawn.StartSpawan();
+        //spawn.StartSpawan();
     }
 }

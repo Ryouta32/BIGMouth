@@ -5,14 +5,18 @@ using UnityEngine;
 
 public class NormalBetaCollision : MonoBehaviour
 {
-    [Tooltip("触手ベタのアニメーターを付ける")]
+    [Tooltip("中ベタのアニメーターを付ける")]
     [SerializeField] Animator anim;
     [Tooltip("EnemyManagerのEnemyScriptを付ける")]
     [SerializeField] EnemyScript enemyScript;
     [Tooltip("NormalBetaManagerを付ける")]
     [SerializeField] NormalBetaManager normalBetaManager;
 
+    [SerializeField] float repeattime;
+
     AudioManager audioM;
+
+    BoxCollider boxCollider;
 
     private void Start()
     {
@@ -33,16 +37,11 @@ public class NormalBetaCollision : MonoBehaviour
                     audioM.PlayPoint(audioM.data.tyuuin, this.gameObject);
                     anim.SetBool("Down", true);
                     enemyScript.data.sutnCount = enemyScript._data.sutnCount;
-
                 }
                 else
                 {
                     normalBetaManager.colsignal = true;
                 }
-            }
-            else
-            {
-                return;
             }
         }
     }
