@@ -180,6 +180,7 @@ MonoBehaviour:
   anim: {fileID: 423200112629932924}
   enemyScript: {fileID: 8011091303193667494}
   normalBetaManager: {fileID: 513471606608136623}
+  repeattime: 0
 --- !u!1001 &2842625100149093487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -326,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_Name
-      value: Chubeta1011_v2
+      value: Normal_Tentacle
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_IsActive
@@ -553,7 +554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53eb8779cd182c545a0cdb5208226df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
   bouSaki: {fileID: 0}
   _data: {fileID: 11400000, guid: 52d5b6fc94646db47a392be5159cb40b, type: 2}
   stunEffect: {fileID: 8273558145407923917}
@@ -576,6 +576,13 @@ MonoBehaviour:
   Children: []
   colsignal: 0
   InEffect: {fileID: 2273197572554762787}
+  repeattime: 5
+  col:
+  - {fileID: 5990006118296283199}
+  - {fileID: 4987184773743530597}
+  - {fileID: 3944703389048032647}
+  - {fileID: 1049717184562232028}
+  - {fileID: 8351984558009861351}
 --- !u!1 &5159553088080615833 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2240151287705473546, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}

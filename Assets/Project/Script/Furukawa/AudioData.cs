@@ -23,4 +23,9 @@ public class AudioData : ScriptableObject
     [Tooltip("触手が倒れた時")] public AudioClip falldown;
     [Tooltip("中ベタの穴が消える")] public AudioClip hole;
 
+    [Header("ステージ")]
+    [Tooltip("よごれが飛び散る")] public AudioClip scatter;
+    [Tooltip("現実が割れ始める")] public AudioClip crack;
+    [Tooltip("よごれで現実が割れる")] public AudioClip sbreak;
+
 }
