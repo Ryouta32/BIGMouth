@@ -33,7 +33,8 @@ public class PaintManager
 
                     if (paint != null)
                     {
-
+                        Debug.Log("ぬれてるよー");
+                        Debug.Log(paint.gameObject.name);
                         if (rotate)
                         {
                             //tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;

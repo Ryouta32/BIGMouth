@@ -93,7 +93,7 @@ public class NormalBetaManager : MonoBehaviour
 
     void tyuuOut()
     {
-        audioM.PlayPoint(audioM.data.tyuuout, this.gameObject);
+        audioM.PlayPoint(audioM.data.miniOut, this.gameObject);
     }
 
     void OutEnabled()

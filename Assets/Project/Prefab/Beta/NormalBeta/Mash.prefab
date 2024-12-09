@@ -285,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b3daf9533d8dc8644963095f74fa9aea, type: 3}
       propertyPath: m_Name
-      value: Kinoko_D
+      value: Mash
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b3daf9533d8dc8644963095f74fa9aea, type: 3}
       propertyPath: m_IsActive
@@ -469,6 +469,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b3daf9533d8dc8644963095f74fa9aea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5467010674529535346}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b3daf9533d8dc8644963095f74fa9aea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1168133448671152189}
   m_SourcePrefab: {fileID: 100100000, guid: b3daf9533d8dc8644963095f74fa9aea, type: 3}
 --- !u!4 &7102510769429667698 stripped
 Transform:
@@ -583,3 +586,15 @@ MonoBehaviour:
   boxCollider: {fileID: 7897425514155959547}
   enemyScript: {fileID: 1797936204681533994}
   repeattime: 5
+--- !u!114 &1168133448671152189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627689597627893192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab3ec25e32ce0c4380714d75e39cb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
