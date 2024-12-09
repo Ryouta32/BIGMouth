@@ -24,15 +24,19 @@ public class BigEnemyScript : MonoBehaviour
         {
             if (collision.gameObject.tag == "Brush")
             {
-                data.sutnCount--;
-                if (data.sutnCount <= 0)
+                if (transform.localScale.x < 0.1f)
                 {
-                    //クリア演出
-                    SceneManager.LoadScene("ClereScene");
+                    data.sutnCount--;
+                    if (data.sutnCount <= 0)
+                    {
+                        //クリア演出
+                        SceneManager.LoadScene("ClereScene");
+                    }
                 }
             }
         }
     }
+
     public void OBJScaleUP()
     {
         erasedCount++;

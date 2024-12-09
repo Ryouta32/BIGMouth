@@ -8,7 +8,24 @@ public class EnemyManager : MonoBehaviour
    [SerializeField] List<GameObject> enemys;
     [SerializeField] int spawnLimit;
     [SerializeField] GameObject BIGBETA;
+    [SerializeField] Transform bossPos;
+     BetaSpawn betaSpawn;
+    [Tooltip("ボスが出るまでのキル数")][SerializeField] int bossCount;
+    [HideInInspector] public int killCount;
+    bool normal;
+    bool mash;
+
+    private void Start()
+    {
+        betaSpawn = GetComponent<BetaSpawn>();
+    }
     public void ClearCheck() {
+        if (bossCount <= killCount&&mash&&normal)
+        {
+           GameObject obj= Instantiate(BIGBETA, bossPos.position, Quaternion.identity);
+            obj.GetComponent<Rigidbody>().AddForce(obj.transform.forward.normalized * 300);
+
+        }
         if (enemys.Count == 0)
         {
             //ここにゲームクリアの処理
@@ -21,12 +38,16 @@ public class EnemyManager : MonoBehaviour
             if (item.GetComponent<NormalBetaManager>())
                 x++;
         }
-        if (x != 0)
-            Instantiate(BIGBETA, transform.position, Quaternion.identity);
     }
     
     public void AddEnemys(GameObject obj) => enemys.Add(obj);
-    public void DestroyEnemys(GameObject obj) { enemys.Remove(obj); ClearCheck(); }
+    public void DestroyEnemys(GameObject obj) { 
+        enemys.Remove(obj);
+        killCount++;
+        ClearCheck();
+    }
+    public void killNormal() =>normal=true;
+    public void killMash() =>mash=true;
     public void ResetEnemys() => enemys=new List<GameObject>();
     public bool SpawnCheck() => enemys.Count>=spawnLimit;
 }

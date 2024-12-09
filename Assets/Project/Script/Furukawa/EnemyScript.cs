@@ -79,7 +79,7 @@ public class EnemyScript : MonoBehaviour
         //スタン状態なら消す
         if (data.state == EnemyData.State.stun)
         {
-            //destroyObj();
+            destroyObj();
             Debug.Log("削除");
             AudioSource.PlayClipAtPoint(audioM.data.miniBom, this.gameObject.transform.position);
             Destroy(this.gameObject);
@@ -109,6 +109,13 @@ public class EnemyScript : MonoBehaviour
     }
     public void StunReturn() => data.sutnCount = _data.sutnCount;
     public void setManager(EnemyManager x) => manager = x;
-    public void destroyObj() => manager.DestroyEnemys(this.gameObject);
+    public void destroyObj()
+    {
+        if (GetComponent<NormalBetaManager>())
+            manager.killNormal();
+        if (GetComponent<MashroomManager>())
+            manager.killMash();
+        manager.DestroyEnemys(this.gameObject); 
+    }
     public void SetState(EnemyData.State sta)=>data.state = sta;
 }
