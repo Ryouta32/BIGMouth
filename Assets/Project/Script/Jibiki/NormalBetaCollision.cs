@@ -34,7 +34,7 @@ public class NormalBetaCollision : MonoBehaviour
 
                 if (normalBetaManager.Children.Count > 1)
                 {
-                    audioM.PlayPoint(audioM.data.tyuuin, this.gameObject);
+                    audioM.PlayPoint(audioM.data.miniIn, this.gameObject);
                     anim.SetBool("Down", true);
                     enemyScript.data.sutnCount = enemyScript._data.sutnCount;
                 }

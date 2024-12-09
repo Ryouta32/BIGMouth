@@ -12,16 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefbaeb5cabb9b946885fba15d529a2d, type: 3}
   m_Name: Audio
   m_EditorClassIdentifier: 
-  miniMove: {fileID: 8300000, guid: d1aa17003e9da884e83013c5de5252da, type: 3}
-  tyuuMove: {fileID: 0}
-  bigMove: {fileID: 0}
-  attack: {fileID: 8300000, guid: 135d75db3b4760243b449a02c43946a1, type: 3}
-  sutun: {fileID: 8300000, guid: 99dd1fe9849443746b3a1b1faf56d4d3, type: 3}
-  bom: {fileID: 8300000, guid: 6a885162074df684eb9ad6e08abf41fc, type: 3}
-  inhale: {fileID: 8300000, guid: bc5bdeb571f86674f92bae0484c4241f, type: 3}
-  Inhaled: {fileID: 8300000, guid: bc5bdeb571f86674f92bae0484c4241f, type: 3}
-  injection: {fileID: 8300000, guid: 78af72c478713194fb7c5b1a646dec0b, type: 3}
-  tyuuout: {fileID: 8300000, guid: 04ec27ef65434e2408a866f30cef4d6a, type: 3}
-  tyuuin: {fileID: 8300000, guid: 43e786f936f20d042a690e7567049b26, type: 3}
-  falldown: {fileID: 8300000, guid: b012746d8a21bfb47878776f5ed67f90, type: 3}
-  hole: {fileID: 8300000, guid: d08ab08d45d2d284dac045efbe8ede2b, type: 3}
+  miniMove: {fileID: 8300000, guid: 5328da89042b95840b833730768e72fc, type: 3}
+  miniBom: {fileID: 8300000, guid: e66466f60868da74ea5dd05ead8f7b71, type: 3}
+  miniFollDown: {fileID: 8300000, guid: b012746d8a21bfb47878776f5ed67f90, type: 3}
+  miniOut: {fileID: 8300000, guid: 04ec27ef65434e2408a866f30cef4d6a, type: 3}
+  miniIn: {fileID: 8300000, guid: 43e786f936f20d042a690e7567049b26, type: 3}
+  miniHole: {fileID: 8300000, guid: d08ab08d45d2d284dac045efbe8ede2b, type: 3}
+  miniBoss: {fileID: 8300000, guid: d94bffa1d5e686844aafeada638f2a94, type: 3}
+  miniFoimtain: {fileID: 8300000, guid: 601835b16e057cf4c886c50aa79c4787, type: 3}
+  ministun: {fileID: 8300000, guid: 99dd1fe9849443746b3a1b1faf56d4d3, type: 3}
+  cleanerClean: {fileID: 8300000, guid: 43e786f936f20d042a690e7567049b26, type: 3}
+  cleanerCharge: {fileID: 0}
+  cleanerSuction: {fileID: 0}
+  cleanerPon: {fileID: 0}
+  cleaner5: {fileID: 0}
+  cleanerSplash: {fileID: 0}
+  cleanerFix: {fileID: 0}
+  stageScatetr: {fileID: 8300000, guid: d74238cf01b519f4d98e5561c2c9361c, type: 3}
+  stageCrack: {fileID: 8300000, guid: 62cd24adafa4c014b84c23b7a7b1f561, type: 3}
+  stageBreak: {fileID: 8300000, guid: 881f32aa4eb329f4da5749c679fba2b4, type: 3}
+  stageEnergency: {fileID: 8300000, guid: 5f29ec45cb81dc64495c7ab087279fe5, type: 3}
+  stageEnergency2: {fileID: 8300000, guid: 663731989ea7f7b4c8bd8e3ebcd1b7ac, type: 3}
+  systemAbutton: {fileID: 0}
+  systemBbutton: {fileID: 0}
+  systemStage: {fileID: 0}
+  systemPointer: {fileID: 0}

@@ -65,7 +65,7 @@ public class EnemyScript : MonoBehaviour
     }
     public void HitDamage()
     {
-        audioM.PlayPoint(audioM.data.attack,this.gameObject);
+        audioM.PlayPoint(audioM.data.miniFollDown,this.gameObject);
         Instantiate(damageEffect, transform.position, Quaternion.identity);
 
         ////吸い込み
@@ -81,7 +81,7 @@ public class EnemyScript : MonoBehaviour
         {
             //destroyObj();
             Debug.Log("削除");
-            AudioSource.PlayClipAtPoint(audioM.data.bom, this.gameObject.transform.position);
+            AudioSource.PlayClipAtPoint(audioM.data.miniBom, this.gameObject.transform.position);
             Destroy(this.gameObject);
         }
         data.sutnCount--;
@@ -97,7 +97,7 @@ public class EnemyScript : MonoBehaviour
     {
         stunEffect.SetActive(true);
         //Debug.Log("スタンエフェクト");
-        audioM.PlayPoint(audioM.data.sutun,this.gameObject);
+        audioM.PlayPoint(audioM.data.ministun,this.gameObject);
         yield return new WaitForSeconds(data.sutnTime);
         SetState(EnemyData.State.general);
         StunReturn();

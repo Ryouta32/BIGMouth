@@ -83,7 +83,7 @@ public class BouSakiScript : MonoBehaviour
     {
         on = false;
         yield return new WaitForSeconds(0.2f);
-        audioM.PlayPoint(audioM.data.injection, this.gameObject);
+        audioM.PlayPoint(audioM.data.cleanerSplash, this.gameObject);
         GameObject obj;
         obj = Instantiate(showerCube, transform.position, Quaternion.identity);
         obj.GetComponent<Rigidbody>().AddForce(bouSC.pos.normalized*power);
@@ -93,7 +93,7 @@ public class BouSakiScript : MonoBehaviour
     private void Inhale()
     {
         OnHale = true;
-        audioM.PlayPoint(audioM.data.inhale, this.gameObject);
+        audioM.PlayPoint(audioM.data.cleanerSuction, this.gameObject);
     }
     private void UpInhale()
     {
