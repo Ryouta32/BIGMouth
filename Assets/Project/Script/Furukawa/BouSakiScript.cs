@@ -159,6 +159,7 @@ public class BouSakiScript : MonoBehaviour
         {
             case "Dragon":
                 pManager.Paint(other, useMethodType, !erase, draBrush, transform, true, DragonTag);
+                Debug.Log("わあ");
                 break;
             case "Wall":
                 pManager.Paint(other, useMethodType, erase, brush, transform, true, DragonTag);

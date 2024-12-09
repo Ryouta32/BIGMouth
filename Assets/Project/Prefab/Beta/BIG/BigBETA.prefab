@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6342140029764986020}
   - component: {fileID: 8031583740788272915}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: weekpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,6 +281,8 @@ MonoBehaviour:
   weekPoints: []
   rubCount: 3
   dirtCount: 1
+  erasedCount: 0
+  _data: {fileID: 0}
 --- !u!114 &3995134167472670029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,11 +295,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53eb8779cd182c545a0cdb5208226df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   bouSaki: {fileID: 0}
   _data: {fileID: 11400000, guid: 52d5b6fc94646db47a392be5159cb40b, type: 2}
   stunEffect: {fileID: 0}
   damageEffect: {fileID: 0}
   DestroyEffect: {fileID: 0}
+  data: {fileID: 0}
 --- !u!54 &1816758352693366227
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -654,7 +658,7 @@ GameObject:
   - component: {fileID: 937760446781946781}
   - component: {fileID: 5036474003055764093}
   m_Layer: 0
-  m_Name: Cube.1
+  m_Name: weekpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
