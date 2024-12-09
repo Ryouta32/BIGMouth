@@ -4742,7 +4742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &492988058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7265,6 +7265,10 @@ PrefabInstance:
     - target: {fileID: 666692682076991329, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: m_Name
       value: yokokabe
+      objectReference: {fileID: 0}
+    - target: {fileID: 666692682076991329, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 698912504587864491, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: m_Mesh
@@ -14640,7 +14644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1381115880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19236,7 +19240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6351361627570979847, guid: 02a0af2b76e37054e81d56c55942a7b8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8574349821656423594, guid: 02a0af2b76e37054e81d56c55942a7b8, type: 3}
       propertyPath: spawnPos
@@ -21161,38 +21165,38 @@ PrefabInstance:
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[0].Prefab
       value: 
-      objectReference: {fileID: 563714354872022062, guid: 7bb6b9e764e607a418443244397ee566, type: 3}
+      objectReference: {fileID: 563714354872022062, guid: f5dcf2d28f0afc34e8bbab5b682cdbc3, type: 3}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[1].Prefab
       value: 
-      objectReference: {fileID: 28112410484482396, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
+      objectReference: {fileID: 563714354872022062, guid: 7bb6b9e764e607a418443244397ee566, type: 3}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[2].Prefab
       value: 
-      objectReference: {fileID: 3641339022288157889, guid: b4e0cef93a3b9754bbde180dffea3a7d, type: 3}
+      objectReference: {fileID: 28112410484482396, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[0].ClassificationLabel
-      value: CEILING
+      value: FLOOR
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[1].ClassificationLabel
-      value: WALL_FACE
+      value: CEILING
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[2].ClassificationLabel
-      value: STORAGE
+      value: WALL_FACE
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[0]._editorClassificationIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[1]._editorClassificationIndex
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[2]._editorClassificationIndex
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477014, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: m_Name
@@ -21430,7 +21434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1929214901695738195, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3583260703045846482, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_LocalPosition.x
