@@ -214,7 +214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 85b03d135fa5bf948acea45b0921886e, type: 3}
       propertyPath: m_Name
-      value: minibeta.v2
+      value: Dowo
       objectReference: {fileID: 0}
     - target: {fileID: 1295883271574576893, guid: 85b03d135fa5bf948acea45b0921886e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -414,6 +414,7 @@ MonoBehaviour:
   speed: 0.2
   rotatedis: 0.002
   gravityVec: {x: 0, y: 1, z: 0}
+  move: 0
 --- !u!114 &8897333744326326655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53eb8779cd182c545a0cdb5208226df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
   bouSaki: {fileID: 0}
   _data: {fileID: 11400000, guid: 8da10429ed97e2547a091c063e65ce05, type: 2}
   stunEffect: {fileID: 4698819525488582452}
@@ -449,7 +449,7 @@ MonoBehaviour:
     brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushNormalTexture: {fileID: 0}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.05
+    brushScale: 0.045
     rotateAngle: 0
     brushNormalBlend: 0.291
     brushHeightBlend: 1

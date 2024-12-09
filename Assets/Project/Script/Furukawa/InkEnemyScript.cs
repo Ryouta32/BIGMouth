@@ -30,7 +30,7 @@ public class InkEnemyScript : MonoBehaviour
     private void OnCollisionStay(Collision collision)
     {
         time += Time.deltaTime;
-        if (time >= 2)
+        if (time >= 0.1f)
         {
             time = 0;
             col = true;
@@ -38,7 +38,7 @@ public class InkEnemyScript : MonoBehaviour
             PaintManager paintManager = new PaintManager();
             switch (collision.transform.tag) {
                 case "Dragon":
-            paintManager.Paint(collision, DrauseMethodType, !erase, brush, transform, false, collision.transform.tag);
+            paintManager.Paint(collision, DrauseMethodType, !erase, brush, transform, true, collision.transform.tag);
                     break;
                 case "Wall":
                     paintManager.Paint(collision, useMethodType, erase, brush, transform, false, collision.transform.tag);

@@ -22,6 +22,7 @@ public class GravitySet : MonoBehaviour
 
     public Vector3 gravityVec=Vector3.up;
     Vector3 temp;
+    public bool move;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,12 +30,20 @@ public class GravitySet : MonoBehaviour
         //GetComponent<Rigidbody>().useGravity = true;
         mask = LayerMask.GetMask("Wall");
     }
-
+    public void OnMove()
+    {
+        move = true;
+    }
+    public void OffMove()
+    {
+        move = false;
+    }
     void Update()
     {
         // どんな向きでもベタに対して下向きに重力をかける
         //rb.AddForce(-transform.up * 9.8f*Time.deltaTime, ForceMode.Acceleration);
 
+        if(move)
         this.transform.position += transform.forward * speed * Time.deltaTime;
         distance = 100;
         RaycastHit hit;
@@ -95,8 +104,8 @@ public class GravitySet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(gravityVec * -9.8f*Time.deltaTime);
-        transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
+            rb.AddForce(gravityVec * -9.8f * Time.deltaTime);
+            transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
 
     }
 }

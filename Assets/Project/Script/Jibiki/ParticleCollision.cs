@@ -22,7 +22,7 @@ public class ParticleCollision : MonoBehaviour
             if (audioflag)
             {
                 audioflag = false;
-                audioM.PlayPoint(audioM.data.hole, this.gameObject);
+                audioM.PlayPoint(audioM.data.miniHole, this.gameObject);
             }
             transform.GetChild(0).gameObject.SetActive(false);
             //Debug.Log("音鳴った");
