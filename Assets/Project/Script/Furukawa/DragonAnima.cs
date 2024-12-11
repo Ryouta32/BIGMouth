@@ -12,6 +12,8 @@ public class DragonAnima : MonoBehaviour
     {
         limit = Random.Range(0, 10);
         anima = GetComponent<Animator>();
+        transform.position = new Vector3(transform.position.x+90000,transform.position.y,transform.position.z);
+        transform.localEulerAngles=new Vector3(0, 0, 90);
     }
 
     // Update is called once per frame

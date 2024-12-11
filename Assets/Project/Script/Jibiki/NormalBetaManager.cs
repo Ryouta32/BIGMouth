@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class NormalBetaManager : MonoBehaviour
 {
-    [Tooltip("スポーン位置")]
-    [SerializeField] GameObject SpawnPoint;
+    //[Tooltip("スポーン位置")]
+    GameObject SpawnPoint;
     Animator anim;
     int number;
 
@@ -32,6 +32,7 @@ public class NormalBetaManager : MonoBehaviour
     void Start()
     {
         audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        SpawnPoint = GameObject.Find("Spawns");
         anim = gameObject.GetComponent<Animator>();
         colsignal = true;
         Children = new List<Transform>();
