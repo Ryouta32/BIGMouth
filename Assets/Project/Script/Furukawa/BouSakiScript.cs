@@ -39,7 +39,6 @@ public class BouSakiScript : MonoBehaviour
     bool on=true;
    Vector3 hitpoint;
    public bool OnHale;
-    [SerializeField] DebugText debugtext;
     float showerPoint = 0;
     [SerializeField] float showerLimit;
     [SerializeField] float showerThreshold;
@@ -51,7 +50,6 @@ public class BouSakiScript : MonoBehaviour
     void Update()
     {
 
-        debugtext.Log(showerPoint);
         //スキルの判定
         if (showerPoint > showerLimit)
         {
