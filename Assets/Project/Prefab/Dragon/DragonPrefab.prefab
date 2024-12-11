@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6591a509c1ed44fa31587281a6f862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotate: {x: 0, y: 90, z: 0}
+  rotate: {x: 0, y: 180, z: 0}
   move: {x: 0, y: 0, z: 0}
 --- !u!114 &1552063122727254247
 MonoBehaviour:
@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4483429220696219154, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4787665111718330419, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       propertyPath: m_LocalPosition.x
