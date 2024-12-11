@@ -9,12 +9,12 @@ public class RotateReset : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.localEulerAngles = rotate;
         transform.position = transform.position + move;
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.localEulerAngles = rotate;
     }
 }
