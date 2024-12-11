@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class RotateReset : MonoBehaviour
+
+public class Text_Debug : MonoBehaviour
 {
-    [SerializeField] Vector3 rotate;
-    [SerializeField] Vector3 move;
+    [SerializeField] TextMeshProUGUI textText;
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        transform.localEulerAngles = rotate;
-        transform.position = transform.position + move;
+        
     }
 
     // Update is called once per frame

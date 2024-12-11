@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Project/Scenes/StartScene.unity
     guid: cff1a30636d62e8449f5daa367588364
-  - enabled: 0
+  - enabled: 1
     path: Assets/Project/Scenes/EntranceScene.unity
     guid: 53611dfea5e5fad4aa2357802294e29a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Project/Scenes/MainScene.unity
     guid: 77f2e4cd7bb4cfa4eacb90a5cc4f94b5
   - enabled: 0

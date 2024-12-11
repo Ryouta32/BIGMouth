@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m: {fileID: 2100000, guid: d8349d9daf0bbcb418cb185b5f548f70, type: 2}
+  textText: {fileID: 0}
 --- !u!114 &3641339022288157889
 MonoBehaviour:
   m_ObjectHideFlags: 0
