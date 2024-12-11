@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.37
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54,15 +54,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -226,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
       propertyPath: m_TagString
@@ -390,7 +390,7 @@ PrefabInstance:
       addedObject: {fileID: 1927598425095657273}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 115231361496426913}
+      addedObject: {fileID: 215990884519948009}
     - targetCorrespondingSourceObject: {fileID: 4140668533725440856, guid: 2e18b643ee0c161468549e5174ecb955, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5030341733357568020}
@@ -419,7 +419,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5276781293914348169}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: adddce2b89b42944bab4494d2697d11a, type: 2}
   m_CullingMode: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 0}
---- !u!114 &115231361496426913
+--- !u!114 &215990884519948009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

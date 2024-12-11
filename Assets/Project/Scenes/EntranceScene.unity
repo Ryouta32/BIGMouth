@@ -21384,7 +21384,7 @@ PrefabInstance:
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[0].Prefab
       value: 
-      objectReference: {fileID: 115231361496426913, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
+      objectReference: {fileID: 1552063122727254247, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PrefabOverrides.Array.data[1].Prefab
       value: 
@@ -23356,6 +23356,10 @@ PrefabInstance:
     - target: {fileID: 3680326740319455547, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: m_Name
       value: DragonPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680326740319455547, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

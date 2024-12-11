@@ -50,6 +50,6 @@ public class NormalbetaSpawn : MonoBehaviour
     void floortranform()
     {
         gameObject.transform.position = new Vector3(this.transform.position.x, pos.y,this.transform.position.z);
-        textText.text = floor.transform.localScale.ToString();
+        //textText.text = floor.transform.localScale.ToString();
     }
 }
