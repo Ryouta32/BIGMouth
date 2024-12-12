@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8333750449066432663}
   - component: {fileID: 8443009577141216268}
   - component: {fileID: 9016254054720012869}
+  - component: {fileID: 4462508921625155731}
   m_Layer: 0
   m_Name: TentacleBeta
   m_TagString: Untagged
@@ -61,6 +62,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotate: {x: 0, y: 0, z: 0}
   move: {x: 0, y: 0, z: 0}
+  scale: {x: 1, y: 1, z: 1}
+--- !u!114 &4462508921625155731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268547068583936198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17c709bff1e63d4abfa6d5bc7d21aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1346293256142183818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,9 +149,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8333750449066432663}
     m_Modifications:
+    - target: {fileID: 408003737763629580, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794329289598352662, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4087128772947430984, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_Name
       value: Spawns
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155487733102048102, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233186353189512745, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4570554407888546996, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -178,6 +208,10 @@ PrefabInstance:
     - target: {fileID: 4570554407888546996, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764520186728407334, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

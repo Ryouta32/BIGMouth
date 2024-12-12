@@ -6,18 +6,17 @@ using TMPro;
 
 public class NormalbetaSpawn : MonoBehaviour
 {
-    [SerializeField]
-    private OVRSceneManager _sceneManager;
+    OVRSceneManager _sceneManager;
 
     Vector3 pos;
 
-    [SerializeField] TextMeshProUGUI textText;
-    private List<OVRSceneAnchor> anchors = new List<OVRSceneAnchor>();
+    //[SerializeField] TextMeshProUGUI textText;
 
     OVRScenePlane floor;
 
     private void Awake()
     {
+        _sceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
         //ルーム設定の読み込みが成功した時のコールバック登録
         _sceneManager.SceneModelLoadedSuccessfully += onSceneModelLoaded;
     }

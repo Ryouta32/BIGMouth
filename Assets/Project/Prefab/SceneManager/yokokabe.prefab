@@ -2702,7 +2702,7 @@ GameObject:
   - component: {fileID: 28112410484482396}
   m_Layer: 9
   m_Name: yokokabe
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17938,7 +17938,7 @@ GameObject:
   - component: {fileID: 1425542237443623898}
   m_Layer: 9
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22640,7 +22640,7 @@ GameObject:
   - component: {fileID: 8927623339611995686}
   m_Layer: 9
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
