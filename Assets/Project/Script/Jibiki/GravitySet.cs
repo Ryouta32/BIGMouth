@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
-//using static UnityEditor.Progress;
+using static UnityEditor.Progress;
 using UnityEngine.UI;
 
 
@@ -20,7 +20,7 @@ public class GravitySet : MonoBehaviour
     float distance;
     LayerMask mask;
 
-    public Vector3 gravityVec=Vector3.up;
+    public Vector3 gravityVec = Vector3.up;
     Vector3 temp;
     public bool move;
     void Start()
@@ -29,6 +29,7 @@ public class GravitySet : MonoBehaviour
         //GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
         //GetComponent<Rigidbody>().useGravity = true;
         mask = LayerMask.GetMask("Wall");
+
     }
     public void OnMove()
     {
@@ -43,25 +44,27 @@ public class GravitySet : MonoBehaviour
         // どんな向きでもベタに対して下向きに重力をかける
         //rb.AddForce(-transform.up * 9.8f*Time.deltaTime, ForceMode.Acceleration);
 
-        if(move)
-        this.transform.position += transform.forward * speed * Time.deltaTime;
+        if (move)
+            this.transform.position += transform.forward * speed * Time.deltaTime;
         distance = 100;
         RaycastHit hit;
 
-         Vector3 raypos = (transform.forward*4) + (-transform.up*2);
+        Vector3 raypos = (transform.forward * 4) + (-transform.up * 2);
         Vector3 rayStartPos = this.transform.position;
         //rayStartPos += transform.forward * 0.01f;
 
-        //オブジェクトの下にRayを飛ばす
+        //オブジェクトの前にrayを飛ばす
         if (Physics.Raycast(rayStartPos, transform.forward, out hit, 1f, mask))
         {
             // ヒットした位置までの距離を取得
             distance = hit.distance;
             Debug.DrawRay(rayStartPos, transform.forward * hit.distance, Color.blue);
-
+            Debug.Log("dis" + distance);
             if (distance < rotatedis)
             {
 
+                //transform.position = hit.point;
+                Debug.Log("前");
                 //Vector3.Lerp(transform.position, hit.point, 1f);
                 gravityVec = (transform.position - hit.point).normalized;
 
@@ -77,7 +80,14 @@ public class GravitySet : MonoBehaviour
 
             if (distance < rotatedis)
             {
-                gravityVec = (transform.position - hit.point).normalized;
+                gravityVec = (transform.position - hit.point);
+
+                if (gravityVec.x < 0.1f)
+                    gravityVec.x = 0;
+                if (gravityVec.y < 0.1f)
+                    gravityVec.y = 0;
+                if (gravityVec.z < 0.1f)
+                    gravityVec.z = 0;
 
                 //Vector3.Lerp(transform.position, hit.point, 1f);
                 //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
@@ -104,8 +114,10 @@ public class GravitySet : MonoBehaviour
 
     private void FixedUpdate()
     {
-            rb.AddForce(gravityVec * -9.8f * Time.deltaTime);
-            transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
+        rb.velocity = Vector3.zero;
+        Debug.Log(gravityVec);
+        rb.AddForce(gravityVec * -9.8f, ForceMode.Acceleration);
 
+        transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
     }
 }

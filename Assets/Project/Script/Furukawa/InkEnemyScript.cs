@@ -17,14 +17,12 @@ public class InkEnemyScript : MonoBehaviour
     [SerializeField]
     bool erase = false;
 
-    Rigidbody rb;
     private bool col=false;
     Vector3 power=new Vector3(-2,0,0);
     float time;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
         time = 0;
     }
     private void OnCollisionStay(Collision collision)
