@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
-
-using static UnityEditor.Progress;
 using UnityEngine.UI;
 
 
@@ -66,11 +64,11 @@ public class GravitySet : MonoBehaviour
                 //transform.position = hit.point;
                 Debug.Log("前");
                 //Vector3.Lerp(transform.position, hit.point, 1f);
-                gravityVec = (transform.position - hit.point).normalized;
+                gravityVec = (transform.position - hit.point);
 
                 //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
                 //rb.MoveRotation(rot * transform.rotation);
-                //transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal);
+                transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal);
             }
         }
         else if (Physics.Raycast(rayStartPos, -transform.up, out hit, 1f, mask))
@@ -82,11 +80,11 @@ public class GravitySet : MonoBehaviour
             {
                 gravityVec = (transform.position - hit.point);
 
-                if (gravityVec.x < 0.1f)
+                if (gravityVec.x < 0.001f)
                     gravityVec.x = 0;
-                if (gravityVec.y < 0.1f)
+                if (gravityVec.y < 0.001f)
                     gravityVec.y = 0;
-                if (gravityVec.z < 0.1f)
+                if (gravityVec.z < 0.001f)
                     gravityVec.z = 0;
 
                 //Vector3.Lerp(transform.position, hit.point, 1f);
@@ -115,8 +113,7 @@ public class GravitySet : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = Vector3.zero;
-        Debug.Log(gravityVec);
-        rb.AddForce(gravityVec * -9.8f, ForceMode.Acceleration);
+        rb.AddForce(gravityVec.normalized * -9.8f);
 
         transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
     }
