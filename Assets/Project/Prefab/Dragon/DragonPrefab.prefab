@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2348601602758071861}
   - component: {fileID: 2952654747617834228}
   - component: {fileID: 1552063122727254247}
+  - component: {fileID: -2807778836763784002}
+  - component: {fileID: 1539071458470048977}
   m_Layer: 0
   m_Name: DragonPrefab
   m_TagString: Untagged
@@ -47,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotate: {x: 0, y: 180, z: 0}
-  move: {x: 0, y: 0, z: 0}
+  move: {x: 0, y: 0, z: 3}
   scale: {x: 1, y: 1, z: 1}
 --- !u!114 &1552063122727254247
 MonoBehaviour:
@@ -61,6 +63,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab3ec25e32ce0c4380714d75e39cb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &-2807778836763784002
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3680326740319455547}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adddce2b89b42944bab4494d2697d11a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1539071458470048977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3680326740319455547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f0cc488053ca740b54b3f63185890c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn: {fileID: 0}
+  tobidasi: 14
 --- !u!1001 &4943611941093802362
 PrefabInstance:
   m_ObjectHideFlags: 0
