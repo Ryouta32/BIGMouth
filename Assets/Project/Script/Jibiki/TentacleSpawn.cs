@@ -5,10 +5,10 @@ using TMPro;
 
 /* 部屋のオブジェクトを取得して生成させる */
 
-public class DragonSpawn : MonoBehaviour
+public class TentacleSpawn : MonoBehaviour
 {
     OVRSceneManager ovrSceneManager;
-    [SerializeField] GameObject kinokoprefab;
+    [SerializeField] GameObject tentacleprefab;
     [SerializeField] TextMeshProUGUI textText;
 
     private void Awake()
@@ -27,20 +27,20 @@ public class DragonSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void onAnchorsLoaded()
     {
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
-        foreach(var classification in classifications)
+        foreach (var classification in classifications)
         {
-            if(classification.Contains(OVRSceneManager.Classification.Bed))
+            if (classification.Contains(OVRSceneManager.Classification.Lamp))
             {
                 //classification.GetComponent<MeshRenderer>().material = m;
 
-                Instantiate(kinokoprefab, classification.transform.position, Quaternion.identity);
+                Instantiate(tentacleprefab, classification.transform.position, Quaternion.identity);
 
                 //textText.text = classification.transform.localEulerAngles.ToString();
             }
