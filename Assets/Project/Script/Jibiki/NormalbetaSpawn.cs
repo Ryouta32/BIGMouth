@@ -43,12 +43,11 @@ public class NormalbetaSpawn : MonoBehaviour
         //壁
         OVRScenePlane[] walls = sceneRoom.Walls;
 
-        pos.y = floor.transform.position.y - 0.1f;
     }
 
     void floortranform()
     {
-        gameObject.transform.position = new Vector3(this.transform.position.x, pos.y,this.transform.position.z);
+        gameObject.transform.position = new Vector3(this.transform.position.x, -0.5f,this.transform.position.z);
         //textText.text = floor.transform.localScale.ToString();
     }
 }

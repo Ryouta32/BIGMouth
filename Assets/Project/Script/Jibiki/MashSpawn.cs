@@ -39,8 +39,9 @@ public class MashSpawn : MonoBehaviour
             if(classification.Contains(OVRSceneManager.Classification.Bed))
             {
                 //classification.GetComponent<MeshRenderer>().material = m;
+                Vector3 pos = new Vector3(classification.transform.position.x, -0.5f, classification.transform.position.z);
 
-                Instantiate(kinokoprefab, classification.transform.position, Quaternion.identity);
+                Instantiate(kinokoprefab, pos, Quaternion.identity);
 
                 //textText.text = classification.transform.localEulerAngles.ToString();
             }
