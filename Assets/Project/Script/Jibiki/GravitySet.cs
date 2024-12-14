@@ -101,7 +101,6 @@ public class GravitySet : MonoBehaviour
             else
             {
                 gravityVec = Vector3.up;
-                Debug.Log("かわりましたわーaaa" + gravityVec);
 
                 //transform.transform.rotation = new Quaternion() ;
             }

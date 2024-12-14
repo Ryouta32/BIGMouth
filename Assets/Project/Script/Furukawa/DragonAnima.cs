@@ -44,6 +44,6 @@ public class DragonAnima : MonoBehaviour
 
     public void tobidasiAnim()
     {
-        anima.SetTrigger("dragon_Breakin_Take_001");
+        //anima.SetTrigger("Dragon_BreakIn_Take_001");
     }
 }

@@ -20,6 +20,6 @@ public class EntranceAnim : MonoBehaviour
 
     public void AnimStart()
     {
-        animator.SetTrigger("dragon_Breakin_Take_001");
+        //animator.SetTrigger("dragon_Breakin_Take_001");
     }
 }
