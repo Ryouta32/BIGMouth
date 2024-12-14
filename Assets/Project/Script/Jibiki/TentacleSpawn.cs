@@ -40,7 +40,7 @@ public class TentacleSpawn : MonoBehaviour
             {
                 //classification.GetComponent<MeshRenderer>().material = m;
                 //float posy = classification.transform.localScale.y / 2; 
-                Vector3 pos = new Vector3(classification.transform.localScale.x, 5, classification.transform.localScale.z);
+                Vector3 pos = new Vector3(classification.transform.position.x, -0.5f, classification.transform.position.z);
                 Instantiate(tentacleprefab, pos, Quaternion.identity);
 
                 //textText.text = classification.transform.localEulerAngles.ToString();

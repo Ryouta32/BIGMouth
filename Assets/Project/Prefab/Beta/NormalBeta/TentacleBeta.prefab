@@ -155,7 +155,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 408003737763629580, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2794329289598352662, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_Enabled
