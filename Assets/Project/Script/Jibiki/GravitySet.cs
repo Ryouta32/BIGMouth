@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
-
-using static UnityEditor.Progress;
 using UnityEngine.UI;
 
 
@@ -14,7 +12,7 @@ using UnityEngine.UI;
 public class GravitySet : MonoBehaviour
 {
     [SerializeField] float speed = 0.5f;
-    [SerializeField] float rotatedis = 1.0f;
+    [SerializeField] float rotatedis;
 
     Rigidbody rb;
     float distance;
@@ -23,12 +21,14 @@ public class GravitySet : MonoBehaviour
     public Vector3 gravityVec = Vector3.up;
     Vector3 temp;
     public bool move;
+    private bool rotate;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         //GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
         //GetComponent<Rigidbody>().useGravity = true;
         mask = LayerMask.GetMask("Wall");
+        rotate = true;
 
     }
     public void OnMove()
@@ -54,53 +54,57 @@ public class GravitySet : MonoBehaviour
         //rayStartPos += transform.forward * 0.01f;
 
         //オブジェクトの前にrayを飛ばす
-        if (Physics.Raycast(rayStartPos, transform.forward, out hit, 1f, mask))
-        {
-            // ヒットした位置までの距離を取得
-            distance = hit.distance;
-            Debug.DrawRay(rayStartPos, transform.forward * hit.distance, Color.blue);
-            Debug.Log("dis" + distance);
-            if (distance < rotatedis)
+        if (rotate)
+            if (Physics.Raycast(rayStartPos, transform.forward, out hit, 1f, mask))
             {
+                // ヒットした位置までの距離を取得
+                distance = hit.distance;
+                Debug.DrawRay(rayStartPos, transform.forward * hit.distance, Color.blue);
+                if (distance < rotatedis)
+                {
 
-                //transform.position = hit.point;
-                Debug.Log("前");
-                //Vector3.Lerp(transform.position, hit.point, 1f);
-                gravityVec = (transform.position - hit.point).normalized;
-
-                //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
-                //rb.MoveRotation(rot * transform.rotation);
-                //transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal);
+                    //transform.position = hit.point;
+                    //Vector3.Lerp(transform.position, hit.point, 1f);
+                    gravityVec = (transform.position - hit.point);
+                    Debug.Log(gravityVec);
+                    transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation, 0.1f);
+                    StartCoroutine("TriggerOnRotate");
+                    //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
+                    //rb.MoveRotation(rot * transform.rotation);
+                    //transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal);
+                }
             }
-        }
-        else if (Physics.Raycast(rayStartPos, -transform.up, out hit, 1f, mask))
-        {
-            distance = hit.distance;
-            Debug.DrawRay(rayStartPos, -transform.up * hit.distance, Color.blue);
-
-            if (distance < rotatedis)
+            else if (Physics.Raycast(rayStartPos, -transform.up, out hit, 1f, mask))
             {
-                gravityVec = (transform.position - hit.point);
+                distance = hit.distance;
+                Debug.DrawRay(rayStartPos, -transform.up * hit.distance, Color.blue);
 
-                if (gravityVec.x < 0.1f)
-                    gravityVec.x = 0;
-                if (gravityVec.y < 0.1f)
-                    gravityVec.y = 0;
-                if (gravityVec.z < 0.1f)
-                    gravityVec.z = 0;
+                if (distance < rotatedis)
+                {
+                    gravityVec = (transform.position - hit.point);
 
-                //Vector3.Lerp(transform.position, hit.point, 1f);
-                //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
-                //transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
-                //rb.MoveRotation(rot * transform.rotation);
+                    if (gravityVec.x < 0.001f)
+                        gravityVec.x = 0;
+                    if (gravityVec.y < 0.001f)
+                        gravityVec.y = 0;
+                    if (gravityVec.z < 0.001f)
+                        gravityVec.z = 0;
+                    Debug.Log("かわりましたわー" + gravityVec);
+
+                    //Vector3.Lerp(transform.position, hit.point, 1f);
+                    //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
+                    //transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
+                    //rb.MoveRotation(rot * transform.rotation);
+                }
+
             }
+            else
+            {
+                gravityVec = Vector3.up;
+                Debug.Log("かわりましたわーaaa" + gravityVec);
 
-        }
-        else
-        {
-            gravityVec = Vector3.up;
-            //transform.transform.rotation = new Quaternion() ;
-        }
+                //transform.transform.rotation = new Quaternion() ;
+            }
         //if (Physics.Raycast(player.transform.position, player.transform.transform.forward, out hit, Mathf.Infinity))
         //{
         //    Debug.DrawRay(player.transform.position, player.transform.transform.forward * hit.distance, Color.yellow);
@@ -112,11 +116,18 @@ public class GravitySet : MonoBehaviour
 
     }
 
+    IEnumerator TriggerOnRotate()
+    {
+        rotate = false;
+        yield return new WaitForSeconds(0.1f);
+        rotate = true;
+
+    }
+
     private void FixedUpdate()
     {
         rb.velocity = Vector3.zero;
-        Debug.Log(gravityVec);
-        rb.AddForce(gravityVec * -9.8f, ForceMode.Acceleration);
+        rb.AddForce(gravityVec.normalized * -98f);
 
         transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
     }
