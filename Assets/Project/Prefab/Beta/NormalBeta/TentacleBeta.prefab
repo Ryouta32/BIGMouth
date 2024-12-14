@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tentacle
       objectReference: {fileID: 0}
+    - target: {fileID: 3907346491261959743, guid: 816da19a80377324e8d10a8544755648, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -155,7 +159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2794329289598352662, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4087128772947430984, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_Name
@@ -167,7 +171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4233186353189512745, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4570554407888546996, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -211,7 +215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8764520186728407334, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
