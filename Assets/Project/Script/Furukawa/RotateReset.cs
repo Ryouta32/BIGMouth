@@ -10,7 +10,7 @@ public class RotateReset : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = transform.position + move;
+        //transform.position = transform.position + move;
     }
 
     // Update is called once per frame

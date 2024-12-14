@@ -39,8 +39,9 @@ public class TentacleSpawn : MonoBehaviour
             if (classification.Contains(OVRSceneManager.Classification.Lamp))
             {
                 //classification.GetComponent<MeshRenderer>().material = m;
-
-                Instantiate(tentacleprefab, classification.transform.position, Quaternion.identity);
+                //float posy = classification.transform.localScale.y / 2; 
+                Vector3 pos = new Vector3(classification.transform.localScale.x, 5, classification.transform.localScale.z);
+                Instantiate(tentacleprefab, pos, Quaternion.identity);
 
                 //textText.text = classification.transform.localEulerAngles.ToString();
             }
