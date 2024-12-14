@@ -223,11 +223,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_LocalRotation.w
@@ -327,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_Name
-      value: Normal_Tentacle
+      value: Tentacle
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
       propertyPath: m_IsActive
@@ -572,7 +572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f3c1de021796a4cb1eca3a7b777b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoint: {fileID: 0}
   Children: []
   colsignal: 0
   InEffect: {fileID: 2273197572554762787}

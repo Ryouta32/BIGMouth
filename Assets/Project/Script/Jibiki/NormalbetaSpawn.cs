@@ -43,7 +43,7 @@ public class NormalbetaSpawn : MonoBehaviour
         //壁
         OVRScenePlane[] walls = sceneRoom.Walls;
 
-        pos.y = floor.transform.position.y;
+        pos.y = floor.transform.position.y - 0.1f;
     }
 
     void floortranform()
