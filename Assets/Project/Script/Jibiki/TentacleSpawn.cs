@@ -1,33 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-
 /* 部屋のオブジェクトを取得して生成させる */
 
 public class TentacleSpawn : MonoBehaviour
 {
     OVRSceneManager ovrSceneManager;
     [SerializeField] GameObject tentacleprefab;
-    [SerializeField] TextMeshProUGUI textText;
 
     private void Awake()
     {
         ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void onAnchorsLoaded()
@@ -38,12 +23,9 @@ public class TentacleSpawn : MonoBehaviour
         {
             if (classification.Contains(OVRSceneManager.Classification.Lamp))
             {
-                //classification.GetComponent<MeshRenderer>().material = m;
-                //float posy = classification.transform.localScale.y / 2; 
                 Vector3 pos = new Vector3(classification.transform.position.x, -0.5f, classification.transform.position.z);
-                Instantiate(tentacleprefab, pos, Quaternion.identity);
 
-                //textText.text = classification.transform.localEulerAngles.ToString();
+                Instantiate(tentacleprefab, pos, Quaternion.identity);
             }
         }
     }

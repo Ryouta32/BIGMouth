@@ -9,9 +9,6 @@ public class DragonAnima : MonoBehaviour
     float limit;
     [SerializeField] BetaSpawn spawn;
 
-    [SerializeField] float tobidasi;
-    bool isCalled = false;
-
     void Start()
     {
         limit = Random.Range(0, 10);
@@ -23,27 +20,15 @@ public class DragonAnima : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if (time > tobidasi && isCalled == false)
-        {
-            isCalled = true;
-            tobidasiAnim();
-        }
-
         if (time >= limit)
         {
             anima.SetTrigger("Cough");
             time = 0;
             limit = Random.Range(0, 10);
         }
-
     }
     public void Spawn()
     {
         //spawn.StartSpawan();
-    }
-
-    public void tobidasiAnim()
-    {
-        //anima.SetTrigger("Dragon_BreakIn_Take_001");
     }
 }

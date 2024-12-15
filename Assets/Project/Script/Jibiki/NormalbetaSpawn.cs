@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-/* 床の座標取得して */
+/* 床の座標取得して中ベタの位置を指定する */
 
 public class NormalbetaSpawn : MonoBehaviour
 {
     OVRSceneManager _sceneManager;
-
-    Vector3 pos;
-
-    //[SerializeField] TextMeshProUGUI textText;
 
     OVRScenePlane floor;
 
@@ -24,11 +20,6 @@ public class NormalbetaSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         floortranform();
     }
 
@@ -36,18 +27,12 @@ public class NormalbetaSpawn : MonoBehaviour
     {
         //OVRSceneRoomの参照取得
         OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
-        //天井
-        OVRScenePlane ceiling = sceneRoom.Ceiling;
         //床
         floor = sceneRoom.Floor;
-        //壁
-        OVRScenePlane[] walls = sceneRoom.Walls;
-
     }
 
     void floortranform()
     {
         gameObject.transform.position = new Vector3(this.transform.position.x, -0.5f,this.transform.position.z);
-        //textText.text = floor.transform.localScale.ToString();
     }
 }

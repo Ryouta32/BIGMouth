@@ -12,11 +12,7 @@ public class NormalBetaCollision : MonoBehaviour
     [Tooltip("NormalBetaManagerを付ける")]
     [SerializeField] NormalBetaManager normalBetaManager;
 
-    [SerializeField] float repeattime;
-
     AudioManager audioM;
-
-    BoxCollider boxCollider;
 
     private void Start()
     {
