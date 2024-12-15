@@ -1,15 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-
 /* 部屋のオブジェクトを取得して生成させる */
 
 public class MashSpawn : MonoBehaviour
 {
     OVRSceneManager ovrSceneManager;
     [SerializeField] GameObject kinokoprefab;
-    [SerializeField] TextMeshProUGUI textText;
 
     private void Awake()
     {
@@ -18,32 +15,17 @@ public class MashSpawn : MonoBehaviour
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void onAnchorsLoaded()
     {
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
-        foreach(var classification in classifications)
+        foreach　(var classification in classifications)
         {
-            if(classification.Contains(OVRSceneManager.Classification.Bed))
+            if　(classification.Contains(OVRSceneManager.Classification.Bed))
             {
-                //classification.GetComponent<MeshRenderer>().material = m;
                 Vector3 pos = new Vector3(classification.transform.position.x, -0.5f, classification.transform.position.z);
 
                 Instantiate(kinokoprefab, pos, Quaternion.identity);
-
-                //textText.text = classification.transform.localEulerAngles.ToString();
             }
         }
     }

@@ -6,27 +6,14 @@ using UnityEngine;
 
 public class EntranceManager : MonoBehaviour
 {
-    [SerializeField] AudioClip hibisound;
-    AudioManager audioM;
-    [SerializeField] Animator animator;
+    Animator animator;
 
-    [SerializeField] float time;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        animator = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AnimSet()
     {
         animator.SetTrigger("dragon_BreakIn_Take_001");
-        Debug.Log("よんでみた");
     }
 }

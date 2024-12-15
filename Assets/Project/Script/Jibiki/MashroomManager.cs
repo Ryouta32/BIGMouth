@@ -5,25 +5,19 @@ using UnityEngine;
 
 public class MashroomManager : MonoBehaviour
 {
-    [SerializeField] Animator anim;
-
-    [SerializeField] BoxCollider boxCollider;
-
-    [Tooltip("EnemyManagerのEnemyScriptを付ける")]
-    [SerializeField] EnemyScript enemyScript;
-
+    [Tooltip("キノコブロックするときの間隔")]
     [SerializeField] float repeattime;
 
-    // Start is called before the first frame update
+    Animator anim;
+    BoxCollider boxCollider;
+    EnemyScript enemyScript;
+
     void Start()
     {
+        anim = gameObject.GetComponent<Animator>();
+        boxCollider = gameObject.GetComponent<BoxCollider>();
+        enemyScript = gameObject.GetComponent<EnemyScript>();
         InvokeRepeating(nameof(AnimProtection), repeattime, repeattime);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other)

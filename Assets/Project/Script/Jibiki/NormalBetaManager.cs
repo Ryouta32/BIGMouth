@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 /* 中ベタのスポーン */
 
@@ -9,8 +8,14 @@ public class NormalBetaManager : MonoBehaviour
 {
     //[Tooltip("スポーン位置")]
     [SerializeField] GameObject SpawnPoint;
+    [SerializeField] GameObject InEffect;
+    [SerializeField] float repeattime;
+    [SerializeField] BoxCollider[] col;
+
     Animator anim;
+    AudioManager audioM;
     int number;
+    int rot;
 
     [HideInInspector]
     public List<Transform> Children;
@@ -18,21 +23,10 @@ public class NormalBetaManager : MonoBehaviour
     [HideInInspector]
     public bool colsignal;
 
-    AudioManager audioM;
-
-    [SerializeField] GameObject InEffect;
-
-    int rot;
-
-    [SerializeField] float repeattime;
-
-    [SerializeField] BoxCollider[] col;
-
     // Start is called before the first frame update
     void Start()
     {
         audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
-        //SpawnPoint = GameObject.Find("Spawns");
         anim = gameObject.GetComponent<Animator>();
         colsignal = true;
         Children = new List<Transform>();
@@ -46,7 +40,6 @@ public class NormalBetaManager : MonoBehaviour
         number = Random.Range(0, Children.Count);
         gameObject.transform.position = new Vector3(Children[number].transform.position.x, SpawnPoint.transform.position.y, Children[number].transform.position.z);
 
-        //Instantiate(gameObject, gameObject.transform.position, Quaternion.identity);
         InvokeRepeating(nameof(StunStart), repeattime, repeattime);
     }
 
