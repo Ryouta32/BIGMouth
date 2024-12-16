@@ -37,6 +37,11 @@ public class TentacleSpawn : MonoBehaviour
                     transform.position = hit.point;
                     Instantiate(tentacleprefab, transform.position, Quaternion.identity);
                 }
+                else
+                {
+                    Instantiate(tentacleprefab, pos, Quaternion.identity);
+
+                }
             }
         }
     }
