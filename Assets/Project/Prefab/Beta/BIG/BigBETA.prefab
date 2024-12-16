@@ -281,7 +281,7 @@ MonoBehaviour:
   weekPoints: []
   rubCount: 3
   dirtCount: 1
-  erasedCount: 0
+  erasedCount: 2
   _data: {fileID: 11400000, guid: 7eefe789e189b3847acf04f284cf3f51, type: 2}
 --- !u!114 &3995134167472670029
 MonoBehaviour:

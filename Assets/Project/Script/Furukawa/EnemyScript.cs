@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class EnemyScript : MonoBehaviour
         audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
         rb = GetComponent<Rigidbody>();
+
     }
     private void Update()
     {
