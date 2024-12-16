@@ -29,7 +29,7 @@ public class EnemyManager : MonoBehaviour
         if (enemys.Count == 0)
         {
             //ここにゲームクリアの処理
-            SceneManager.LoadScene(SceneName.sceneName.ClearScene.ToString());
+            //SceneManager.LoadScene(SceneName.sceneName.ClearScene.ToString());
         }
 
         int x = 0;

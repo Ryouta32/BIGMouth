@@ -24,15 +24,12 @@ public class BigEnemyScript : MonoBehaviour
         {
             if (collision.gameObject.tag == "Brush")
             {
-                if (transform.localScale.x < 0.1f)
-                {
                     data.sutnCount--;
                     if (data.sutnCount <= 0)
                     {
                         //クリア演出
                         SceneManager.LoadScene("ClereScene");
                     }
-                }
             }
         }
     }
@@ -56,7 +53,7 @@ public class BigEnemyScript : MonoBehaviour
     }
     IEnumerator ScaleUp()
     {
-        for (float i = 0; i < 0.05f; i += 0.01f)
+        for (float i = 0; i < 0.005f; i += 0.001f)
         {
             this.transform.localScale = new Vector3(this.transform.localScale.x + i, this.transform.localScale.x+ i, this.transform.localScale.x+ i);
             yield return new WaitForSeconds(0.1f);
@@ -64,7 +61,7 @@ public class BigEnemyScript : MonoBehaviour
     }
     IEnumerator ScaleDown()
     {
-        for (float i = 0.05f; i > 0; i -= 0.01f)
+        for (float i = 0.005f; i > 0; i -= 0.001f)
         {
             this.transform.localScale = new Vector3(this.transform.localScale.x - i, this.transform.localScale.x - i, this.transform.localScale.x - i);
             yield return new WaitForSeconds(0.1f);

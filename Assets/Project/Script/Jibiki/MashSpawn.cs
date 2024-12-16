@@ -25,7 +25,16 @@ public class MashSpawn : MonoBehaviour
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, -0.5f, classification.transform.position.z);
 
-                Instantiate(kinokoprefab, pos, Quaternion.identity);
+                if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
+                {
+                    transform.position = hit.point;
+                    Instantiate(kinokoprefab, transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(kinokoprefab, pos, Quaternion.identity);
+
+                }
             }
         }
     }
