@@ -28,6 +28,7 @@ public class TentacleSpawn : MonoBehaviour
         {
             if (classification.Contains(OVRSceneManager.Classification.Lamp))
             {
+                //Vector3 pos = new Vector3(classification.transform.position.x, -1f, classification.transform.position.z);
 
                 Vector3 pos = new Vector3(classification.transform.position.x, transform.position.y, classification.transform.position.z);
 
