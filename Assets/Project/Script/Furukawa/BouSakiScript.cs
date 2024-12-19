@@ -22,7 +22,6 @@ public class BouSakiScript : MonoBehaviour
     float time;
     [SerializeField] private OVRInput.RawButton actionBtn;
     [SerializeField] GameObject ShowerObj;
-    [SerializeField] GameObject showerCube;
     [Header("噴射の塗り判定を都飛ばす強さ")]
     [SerializeField] float power;
     [Header("吸い込みの距離")]
@@ -82,10 +81,6 @@ public class BouSakiScript : MonoBehaviour
         on = false;
         yield return new WaitForSeconds(0.2f);
         audioM.PlayPoint(audioM.data.cleanerSplash, this.gameObject);
-        GameObject obj;
-        obj = Instantiate(showerCube, transform.position, Quaternion.identity);
-        obj.GetComponent<Rigidbody>().AddForce(bouSC.pos.normalized*power);
-        obj.GetComponent<ShowerCube>().setTag(DragonTag);
         on = true;
     }
     private void Inhale()
