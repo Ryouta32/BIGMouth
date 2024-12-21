@@ -58,4 +58,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tentacleprefab: {fileID: 1268547068583936198, guid: f6334ca1f77d5f34f874bd10cf676596, type: 3}
-  textText: {fileID: 0}

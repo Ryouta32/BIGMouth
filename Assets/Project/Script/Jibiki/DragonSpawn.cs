@@ -7,10 +7,11 @@ using UnityEngine;
 public class DragonSpawn : MonoBehaviour
 {
     OVRSceneManager ovrSceneManager;
-    [SerializeField] GameObject dragonprefab;
+    GameObject dragonprefab;
 
     private void Awake()
     {
+        dragonprefab = GameObject.Find("DragonPrefab");
         ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
