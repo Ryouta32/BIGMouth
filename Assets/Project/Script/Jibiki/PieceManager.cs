@@ -12,6 +12,9 @@ public class PieceManager : MonoBehaviour
     [Tooltip("崩れるときのちから")]
     [SerializeField] Vector3 power;
 
+    [Tooltip("崩れるときのちから")]
+    [SerializeField] Vector3 betapower;
+
     [Tooltip("呼び出す間隔")]
     [SerializeField] float RepeatTime;
 
@@ -20,6 +23,9 @@ public class PieceManager : MonoBehaviour
 
     [Tooltip("オブジェクトを消す秒数")]
     [SerializeField] float destroytime;
+
+    [SerializeField] GameObject beta;
+    Rigidbody betarb;
 
     //ピースの親オブジェクト
     GameObject PieceParent;
@@ -79,6 +85,13 @@ public class PieceManager : MonoBehaviour
 
                 //少しちからを入れる
                 obj.AddForce(power);
+
+                if(beta != null)
+                {
+                    betarb = beta.GetComponent<Rigidbody>();
+                    Instantiate(beta, PieceChildren[rnd].gameObject.transform.position, Quaternion.Euler(180, 0, 0));
+                    betarb.AddForce(betapower);
+                }
 
                 Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
 

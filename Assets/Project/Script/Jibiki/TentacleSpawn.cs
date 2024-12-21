@@ -28,7 +28,7 @@ public class TentacleSpawn : MonoBehaviour
         {
             if (classification.Contains(OVRSceneManager.Classification.Lamp))
             {
-                Vector3 pos = new Vector3(classification.transform.position.x, -0.5f, classification.transform.position.z);
+                Vector3 pos = new Vector3(classification.transform.position.x, -0.3f, classification.transform.position.z);
 
                 if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
                 {

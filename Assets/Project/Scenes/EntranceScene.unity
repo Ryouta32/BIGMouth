@@ -7005,7 +7005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 666692682076991329, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 772400742065771944, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: m_Mesh
@@ -7653,19 +7653,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6463892256341695477, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.00023482715
       objectReference: {fileID: 0}
     - target: {fileID: 6463892256341695477, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -15.65
       objectReference: {fileID: 0}
     - target: {fileID: 6463892256341695477, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6463892256341695477, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6463892256341695477, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: m_LocalRotation.y
@@ -7677,7 +7677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6463892256341695477, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6463892256341695477, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -7907,6 +7907,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2000062613}
+    - target: {fileID: 8561543433964676263, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
+      propertyPath: RepeatTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561543433964676263, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
+      propertyPath: betapower.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561543433964676263, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
+      propertyPath: betapower.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8561543433964676263, guid: 2ac618b7f21718d4481b98b876c4fb9d, type: 3}
       propertyPath: destroytime
       value: 2
