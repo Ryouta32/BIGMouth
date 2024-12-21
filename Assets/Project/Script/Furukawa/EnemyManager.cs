@@ -50,4 +50,5 @@ public class EnemyManager : MonoBehaviour
     public void killMash() =>mash=true;
     public void ResetEnemys() => enemys=new List<GameObject>();
     public bool SpawnCheck() => enemys.Count>=spawnLimit;
+    public void SetBossPos(Transform tra) => bossPos = tra;
 }
