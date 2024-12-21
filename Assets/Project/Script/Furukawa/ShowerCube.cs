@@ -39,16 +39,16 @@ public class ShowerCube : MonoBehaviour
             //Destroy(gameObject);
         }
     }
-    private void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider col)
     {
         PaintManager paintManager = new PaintManager();
         if (col.gameObject.GetComponent<InkCanvas>())
         {
-
             switch (col.transform.tag)
             {
                 case "Dragon":
                     paintManager.Paint(col, useMethodType, !erase, draBrush, transform, true, DragonTag);
+                    Destroy(gameObject);
                     break;
                 case "Wall":
                     paintManager.Paint(col, useMethodType, erase, brush, transform, true, DragonTag);
@@ -62,7 +62,7 @@ public class ShowerCube : MonoBehaviour
                     break;
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
