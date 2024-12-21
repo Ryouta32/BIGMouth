@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 605567792195983779}
   - component: {fileID: 2995142803287631330}
   m_Layer: 0
-  m_Name: Shower_Cube
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.21, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.064385, y: 0.064385, z: 0.064385}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -159,15 +159,15 @@ MonoBehaviour:
     normalBlendType: 0
     heightBlendType: 0
   draBrush:
-    brushTexture: {fileID: 0}
+    brushTexture: {fileID: 2800000, guid: b8702b5a8624a114f82a6d09bc3ce746, type: 3}
     brushNormalTexture: {fileID: 0}
     brushHeightTexture: {fileID: 0}
     brushScale: 0.055
     rotateAngle: 0
     brushNormalBlend: 0
     brushHeightBlend: 0
-    brushColor: {r: 0, g: 0, b: 0, a: 0}
-    colorBlendType: 3
+    brushColor: {r: 0, g: 0, b: 0, a: 1}
+    colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
   useMethodType: 1
