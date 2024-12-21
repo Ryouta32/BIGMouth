@@ -73,6 +73,7 @@ public class PaintManager
         {
             hitPos = col.ClosestPointOnBounds(tra.position);
             Ray ray = new Ray(tra.position, -hitPos);
+            Debug.Log(ray);
             if (col.transform.GetComponent<InkCanvas>())
             {
                 bool success = true;
@@ -81,10 +82,9 @@ public class PaintManager
 
                     //Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
                     InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
-
+                    Debug.Log(paint);
                     if (paint != null)
                     {
-
                         if (rotate)
                         {
                             //tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
@@ -93,7 +93,6 @@ public class PaintManager
                         {
                             case UseMethodType.RaycastHitInfo:
                                 success = erase ? paint.Erase(brush, hit) : paint.Paint(brush, hit);
-                                Debug.Log("aa");
 
                                 break;
                             case UseMethodType.WorldPoint:
