@@ -351,6 +351,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
+      propertyPath: RepeatTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1446376073229783782, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Layer
       value: 9

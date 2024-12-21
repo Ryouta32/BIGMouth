@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 /* プレイ中の壁が(時間経過)崩れていく挙動 */
 
 public class PieceManager : MonoBehaviour
@@ -12,10 +13,13 @@ public class PieceManager : MonoBehaviour
     [SerializeField] Vector3 power;
 
     [Tooltip("呼び出す間隔")]
-    [SerializeField] float RepeatTime = 5.0f;
+    [SerializeField] float RepeatTime;
 
     [Tooltip("開始するまでの秒数")]
-    [SerializeField] float StartTime = 5.0f;
+    [SerializeField] float StartTime;
+
+    [Tooltip("オブジェクトを消す秒数")]
+    [SerializeField] float destroytime;
 
     //ピースの親オブジェクト
     GameObject PieceParent;
@@ -24,52 +28,73 @@ public class PieceManager : MonoBehaviour
     MeshRenderer mr;
 
     //ピースのリスト
-    List<Transform> PieceChildren;
+    [HideInInspector]
+    public List<Transform> PieceChildren;
 
     void Start()
     {
         PieceParent = this.gameObject;
 
-        InvokeRepeating(nameof(FallPiece), StartTime, RepeatTime);
-    }
-
-    void FallPiece()
-    {
         //初期化
         PieceChildren = new List<Transform>();
 
         //リスト追加
         for (int i = 0; i < PieceParent.transform.childCount; i++)
         {
-            PieceChildren.Add(PieceParent.transform.GetChild(i)); // GetChild()で子オブジェクトを取得
+            PieceChildren.Add(PieceParent.transform.GetChild(i).GetChild(0)); // GetChild()で子オブジェクトを取得
             //Debug.Log($"検索方法１： {i} 番目の子供は {PieceChildren[i].name} です");
         }
 
+        InvokeRepeating(nameof(FallPiece), StartTime, RepeatTime);
+    }
+
+    void FallPiece()
+    {
         Rigidbody obj;
 
         int rnd = Random.Range(0, PieceChildren.Count);
 
-        //落ちるオブジェクトのリジットボディ取得
-        obj = PieceChildren[rnd].gameObject.GetComponent<Rigidbody>();
-
-        if(obj.isKinematic)
+        if (PieceChildren.Count > 0)
         {
-            //キネマティックオフにして重力付ける
-            obj.isKinematic = false;
+            obj = PieceChildren[rnd].gameObject.GetComponent<Rigidbody>();
 
-            //マテリアルを壁色にする
-            PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
+            if (!obj)
+            {
+                //落ちるオブジェクトのリジットボディ取得
+                obj = PieceChildren[rnd].gameObject.AddComponent<Rigidbody>();
+                obj.isKinematic = true;
+            }
+            else
+            {
+                obj.isKinematic = true;
+            }
 
-            //少しちからを入れる
-            obj.AddForce(power);
+            if (obj.isKinematic)
+            {
+                //キネマティックオフにして重力付ける
+                obj.isKinematic = false;
 
-            //落ちたオブジェクトはリストから削除
-            PieceChildren.Remove(PieceChildren[rnd]);
+                //マテリアルを壁色にする
+                PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
+
+                //少しちからを入れる
+                obj.AddForce(power);
+
+                Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
+
+                //落ちたオブジェクトはリストから削除
+                PieceChildren.Remove(PieceChildren[rnd]);
+                Destroy(obj.gameObject, destroytime);
+            }
         }
         else
         {
+            Debug.Log("やめたーーーーーーーーー");
             //いんぼけやめる
             CancelInvoke();
+
+            //ゲームオーバーシーンに行く
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

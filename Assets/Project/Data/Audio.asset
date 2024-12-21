@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefbaeb5cabb9b946885fba15d529a2d, type: 3}
   m_Name: Audio
   m_EditorClassIdentifier: 
-  miniMove: {fileID: 8300000, guid: 5328da89042b95840b833730768e72fc, type: 3}
-  miniBom: {fileID: 8300000, guid: e66466f60868da74ea5dd05ead8f7b71, type: 3}
-  miniFollDown: {fileID: 8300000, guid: b012746d8a21bfb47878776f5ed67f90, type: 3}
-  miniOut: {fileID: 8300000, guid: 04ec27ef65434e2408a866f30cef4d6a, type: 3}
-  miniIn: {fileID: 8300000, guid: 43e786f936f20d042a690e7567049b26, type: 3}
+  miniMove: {fileID: 8300000, guid: 01ce244da7f57e245babbac7b98383c7, type: 3}
+  miniBom: {fileID: 8300000, guid: d6ced4e9dac85ef48b9932330bd6c27f, type: 3}
+  miniFollDown: {fileID: 8300000, guid: f5edf40c2177dcb4aa61ba9b2d3ae462, type: 3}
+  miniOut: {fileID: 8300000, guid: 0e57dafc1832e354f9f9b780b1b5afe9, type: 3}
+  miniIn: {fileID: 8300000, guid: b0024cfb327a6db43a379b1ffd812850, type: 3}
   miniHole: {fileID: 8300000, guid: d08ab08d45d2d284dac045efbe8ede2b, type: 3}
   miniBoss: {fileID: 8300000, guid: d94bffa1d5e686844aafeada638f2a94, type: 3}
   miniFoimtain: {fileID: 8300000, guid: 601835b16e057cf4c886c50aa79c4787, type: 3}

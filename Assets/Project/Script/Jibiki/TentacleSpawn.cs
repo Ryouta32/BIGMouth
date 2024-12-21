@@ -13,11 +13,11 @@ public class TentacleSpawn : MonoBehaviour
         ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
-        if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
-        {
-            transform.position = hit.point;
-            Instantiate(tentacleprefab, hit.point, Quaternion.identity);
-        }
+        //if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
+        //{
+        //    transform.position = hit.point;
+        //    Instantiate(tentacleprefab, hit.point, Quaternion.identity);
+        //}
     }
 
     void onAnchorsLoaded()
@@ -28,9 +28,7 @@ public class TentacleSpawn : MonoBehaviour
         {
             if (classification.Contains(OVRSceneManager.Classification.Lamp))
             {
-                //Vector3 pos = new Vector3(classification.transform.position.x, -1f, classification.transform.position.z);
-
-                Vector3 pos = new Vector3(classification.transform.position.x, transform.position.y, classification.transform.position.z);
+                Vector3 pos = new Vector3(classification.transform.position.x, -0.5f, classification.transform.position.z);
 
                 if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
                 {
@@ -40,7 +38,6 @@ public class TentacleSpawn : MonoBehaviour
                 else
                 {
                     Instantiate(tentacleprefab, pos, Quaternion.identity);
-
                 }
             }
         }
