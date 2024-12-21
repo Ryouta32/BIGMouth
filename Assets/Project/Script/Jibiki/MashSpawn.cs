@@ -33,7 +33,6 @@ public class MashSpawn : MonoBehaviour
                 else
                 {
                     Instantiate(kinokoprefab, pos, Quaternion.identity);
-
                 }
             }
         }

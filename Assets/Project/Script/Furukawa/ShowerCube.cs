@@ -18,6 +18,9 @@ public class ShowerCube : MonoBehaviour
     bool erase = false;
     [SerializeField] string DragonTag = "Dragon";
 
+    [SerializeField] Material m;
+    PieceManager pieceManager;
+
     private float time;
     string _tag;
 
@@ -49,6 +52,13 @@ public class ShowerCube : MonoBehaviour
                     break;
                 case "Wall":
                     paintManager.Paint(col, useMethodType, erase, brush, transform, true, DragonTag);
+                    break;
+
+                //ここに壁を修復するやつかく当たったタグがよこかべだったら当たったオブジェクトのメッシュレンダラーを表示
+                case "yokokabe":
+                    GameObject clone = Instantiate(col.gameObject, col.gameObject.transform.position, Quaternion.identity);
+                    clone.GetComponent<MeshRenderer>().material = m;
+                    pieceManager.PieceChildren.Add(clone.transform); // GetChild()で子オブジェクトを取得
                     break;
             }
 

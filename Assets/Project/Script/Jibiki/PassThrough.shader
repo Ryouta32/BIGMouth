@@ -4,9 +4,9 @@ Shader "Custom/Passthrough"
     {
         _MainTex("Texture", 2D) = "white" {}
     }
-        SubShader
+    SubShader
     {
-   Tags { "Queue" = "Transparent" "RenderType" = "Transparent" }
+        Tags { "Queue" = "Transparent" }
         ZWrite On
         Cull Off
         ZTest LEqual

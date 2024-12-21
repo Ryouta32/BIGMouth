@@ -25,7 +25,7 @@ public class WallEntrance : MonoBehaviour
 
                 rb.AddForce(power);
 
-                Destroy(other.gameObject, 5.0f);
+                Destroy(other.gameObject, 2.0f);
             }
         }
     }
