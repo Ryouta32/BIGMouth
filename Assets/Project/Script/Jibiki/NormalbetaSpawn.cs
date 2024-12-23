@@ -33,6 +33,6 @@ public class NormalbetaSpawn : MonoBehaviour
 
     void floortranform()
     {
-        gameObject.transform.position = new Vector3(this.transform.position.x, -0.5f,this.transform.position.z);
+        gameObject.transform.position = new Vector3(this.transform.position.x, floor.transform.position.y,this.transform.position.z);
     }
 }

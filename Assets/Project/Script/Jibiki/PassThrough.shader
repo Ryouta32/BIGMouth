@@ -6,7 +6,7 @@ Shader "Custom/Passthrough"
     }
     SubShader
     {
-        Tags { "Queue" = "Transparent" }
+        Tags { "Queue" = "Geometry" }
         ZWrite On
         Cull Off
         ZTest LEqual
