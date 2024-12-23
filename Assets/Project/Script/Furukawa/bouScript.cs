@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,6 +8,7 @@ public class bouScript : MonoBehaviour
 {
     [SerializeField] OVRCameraRig ovr;
     [SerializeField] BouSakiScript saki;
+    [SerializeField] Vector3 offset;
     Vector3 move;
     Vector3 oldPos;
     Vector3 hitpos;
@@ -32,7 +33,7 @@ public class bouScript : MonoBehaviour
         {
             transform.position -= move;
 
-            transform.LookAt(ovr.leftHandAnchor.position);
+            transform.LookAt(ovr.leftHandAnchor.position+offset);
 
         }
         //else
