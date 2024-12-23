@@ -28,7 +28,7 @@ public class ShowerEffect : MonoBehaviour
     {
         p_RefParticle = GetComponent<ParticleSystem>();
         p_CollisionEventList = new List<ParticleCollisionEvent>();
-    }
+    } 
     private void OnParticleCollision(GameObject other)
     {
         PaintManager paintManager = new PaintManager();

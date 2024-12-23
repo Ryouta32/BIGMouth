@@ -10,12 +10,16 @@ public class BigEnemyScript : MonoBehaviour
     [Tooltip("弱点から出る汚れの数")][SerializeField] public int dirtCount;
     [Tooltip("何回消せばよいか")][SerializeField] public int erasedCount;
     [SerializeField] EnemyData _data;
+    [SerializeField] GameObject Tentacle;
+    [SerializeField] GameObject Mash;
     private EnemyData data;
     private bool erase;
+    Animator anima;
     private void Start()
     {
         data = new EnemyData(_data);
 
+        anima = GetComponent<Animator>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -33,38 +37,44 @@ public class BigEnemyScript : MonoBehaviour
             }
         }
     }
-
+    public void WeekBreak(string trigger)
+    {
+        anima.SetTrigger(trigger);
+    }
+    public void Spawn(GameObject obj)
+    {
+    }
     public void OBJScaleUP()
     {
-        erasedCount++;
-        erase = false;
+        //erasedCount++;
+        //erase = false;
 
-        StartCoroutine("ScaleUp");
+        //StartCoroutine("ScaleUp");
 
     }
     public void OBJScaleDown()
     {
-        erasedCount--;
-        if (erasedCount == 0)
-            erase = true;
+        //erasedCount--;
+        //if (erasedCount == 0)
+        //    erase = true;
 
-        StartCoroutine("ScaleDown");
+        //StartCoroutine("ScaleDown");
 
     }
-    IEnumerator ScaleUp()
-    {
-        for (float i = 0; i < 0.005f; i += 0.001f)
-        {
-            this.transform.localScale = new Vector3(this.transform.localScale.x + i, this.transform.localScale.x+ i, this.transform.localScale.x+ i);
-            yield return new WaitForSeconds(0.1f);
-        }
-    }
-    IEnumerator ScaleDown()
-    {
-        for (float i = 0.005f; i > 0; i -= 0.001f)
-        {
-            this.transform.localScale = new Vector3(this.transform.localScale.x - i, this.transform.localScale.x - i, this.transform.localScale.x - i);
-            yield return new WaitForSeconds(0.1f);
-        }
-    }
+    //IEnumerator ScaleUp()
+    //{
+    //    //for (float i = 0; i < 0.005f; i += 0.001f)
+    //    //{
+    //    //    this.transform.localScale = new Vector3(this.transform.localScale.x + i, this.transform.localScale.x+ i, this.transform.localScale.x+ i);
+    //    yield return new WaitForSeconds(0.1f);
+    //    //}
+    //}
+    //IEnumerator ScaleDown()
+    //{
+    //    //for (float i = 0.005f; i > 0; i -= 0.001f)
+    //    //{
+    //    //    this.transform.localScale = new Vector3(this.transform.localScale.x - i, this.transform.localScale.x - i, this.transform.localScale.x - i);
+    //    yield return new WaitForSeconds(0.1f);
+    //    //}
+    //}
 }
