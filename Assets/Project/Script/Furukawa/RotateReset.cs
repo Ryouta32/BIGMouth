@@ -17,6 +17,6 @@ public class RotateReset : MonoBehaviour
     void Update()
     {
         transform.localEulerAngles = rotate;
-        transform.localScale = scale;
+        //transform.localScale = scale;
     }
 }
