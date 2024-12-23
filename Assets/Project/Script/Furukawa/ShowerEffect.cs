@@ -45,16 +45,6 @@ public class ShowerEffect : MonoBehaviour
                 // 今回は1つ目のヒット情報のみ処理する
                 break;
             }
-            switch (other.transform.tag)
-            {
-                case "Dragon":
-                    //paintManager.Paint(other, useMethodType, !erase, draBrush, transform, true, DragonTag);
-                    break;
-                case "Wall":
-                    //paintManager.Paint(other, useMethodType, erase, brush, transform, true, DragonTag);
-                    break;
-            }
-
         }
     }
 }

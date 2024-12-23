@@ -82,7 +82,6 @@ public class PaintManager
 
                     //Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
                     InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
-                    Debug.Log(paint);
                     if (paint != null)
                     {
                         if (rotate)
