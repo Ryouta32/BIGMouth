@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       propertyPath: m_Name
-      value: Mini_Slime
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -184,25 +184,25 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8818551056337092379}
+      addedObject: {fileID: 187467579384511779}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3863996649489339908}
+      addedObject: {fileID: 7339223789629704375}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1027623671883057788}
+      addedObject: {fileID: 7847577562945439152}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4461893852694436318}
+      addedObject: {fileID: 1942213269939431722}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4274416767424685787}
+      addedObject: {fileID: 8400567169413502199}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6340067568258569684}
+      addedObject: {fileID: 5449633111380719280}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1142039692386667666}
+      addedObject: {fileID: 3299644561088985717}
   m_SourcePrefab: {fileID: 100100000, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
 --- !u!4 &8412419435381056266 stripped
 Transform:
@@ -214,7 +214,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
   m_PrefabInstance: {fileID: 8301351936956269793}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &8818551056337092379
+--- !u!95 &187467579384511779
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -235,7 +235,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!54 &3863996649489339908
+--- !u!54 &7339223789629704375
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,7 +262,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!65 &1027623671883057788
+--- !u!65 &7847577562945439152
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,7 +283,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.015, z: 0.02}
   m_Center: {x: 0, y: 0.007, z: 0}
---- !u!114 &4461893852694436318
+--- !u!114 &1942213269939431722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,7 +298,8 @@ MonoBehaviour:
   speed: 0.2
   rotatedis: 0.002
   gravityVec: {x: 0, y: 1, z: 0}
---- !u!114 &4274416767424685787
+  move: 0
+--- !u!114 &8400567169413502199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -310,14 +311,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53eb8779cd182c545a0cdb5208226df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
   bouSaki: {fileID: 0}
   _data: {fileID: 11400000, guid: 8da10429ed97e2547a091c063e65ce05, type: 2}
   stunEffect: {fileID: 3748150955440771420}
   damageEffect: {fileID: 2510562678213512748, guid: 0beb1d15c494365458144cc18fef2d60, type: 3}
   DestroyEffect: {fileID: 3349963419385957901, guid: 3d971a8f0b9b77c4f8a6dd9fad3f2df4, type: 3}
   data: {fileID: 0}
---- !u!114 &6340067568258569684
+--- !u!114 &5449633111380719280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -344,7 +344,7 @@ MonoBehaviour:
   useMethodType: 1
   DrauseMethodType: 0
   erase: 0
---- !u!114 &1142039692386667666
+--- !u!114 &3299644561088985717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

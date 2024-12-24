@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5091801841456311247}
   - component: {fileID: 8713674752667362601}
-  - component: {fileID: 2866069037424194274}
   m_Layer: 0
   m_Name: TentacleSpawn
   m_TagString: Untagged
@@ -45,16 +44,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab3ec25e32ce0c4380714d75e39cb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2866069037424194274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5811403731019763817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c41997871e7ef84292b9e7ae8bf9e77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tentacleprefab: {fileID: 1268547068583936198, guid: f6334ca1f77d5f34f874bd10cf676596, type: 3}

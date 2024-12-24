@@ -701,7 +701,7 @@ namespace Es.InkPainter
 					var mainPaintTextureBuffer = RenderTexture.GetTemporary(p.paintMainTexture.width, p.paintMainTexture.height, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear);
 					
 					SetPaintMainData(brush, uv);
-                    Debug.Log("ここを直せば勝ち！\nなおしたらすごい！");
+                    //Debug.Log("ここを直せば勝ち！\nなおしたらすごい！");
                     Graphics.Blit(p.paintMainTexture, mainPaintTextureBuffer, paintMainMaterial);
 					Graphics.Blit(mainPaintTextureBuffer, p.paintMainTexture);
 					RenderTexture.ReleaseTemporary(mainPaintTextureBuffer);

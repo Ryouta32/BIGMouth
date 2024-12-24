@@ -11,31 +11,44 @@ public class MashroomManager : MonoBehaviour
     Animator anim;
     BoxCollider boxCollider;
     EnemyScript enemyScript;
+    AudioManager audioM;
+
+    [Tooltip("音を再生するアニメーションの名前")]
+    public string targetAnimationName;
+
+    private bool isPlayingSound = false;
 
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         boxCollider = gameObject.GetComponent<BoxCollider>();
         enemyScript = gameObject.GetComponent<EnemyScript>();
+        audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         InvokeRepeating(nameof(AnimProtection), repeattime, repeattime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Brush"))
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        if (other.gameObject.CompareTag("Brush") && stateInfo.IsName(targetAnimationName))
         {
             enemyScript.HitDamage();
+        }
+        else
+        {
+            Debug.Log("なったーーーーーーーーーーーーーーーーーーーーーー");
+            audioM.PlayPoint(audioM.data.mush, this.gameObject);
         }
     }
 
     void AnimProtection()
     {
-        boxCollider.enabled = false;
+        //boxCollider.enabled = false;
         anim.SetTrigger("Protection");
     }
 
     void ProtectionEnd()
     {
-        boxCollider.enabled = true;
+        //boxCollider.enabled = true;
     }
 }

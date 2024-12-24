@@ -16,6 +16,7 @@ public class AudioData : ScriptableObject
     [Tooltip("T-7 boss")] public AudioClip miniBoss;
     [Tooltip("T-8 fountain")] public AudioClip miniFoimtain;
     [Tooltip("T-9 stun")] public AudioClip ministun;
+    [Tooltip("T-10 mush")] public AudioClip mush;
 
     [Header("掃除機")]
     [Tooltip("C-1clean")] public AudioClip cleanerClean;

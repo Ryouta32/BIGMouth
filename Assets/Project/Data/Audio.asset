@@ -21,13 +21,14 @@ MonoBehaviour:
   miniBoss: {fileID: 8300000, guid: d94bffa1d5e686844aafeada638f2a94, type: 3}
   miniFoimtain: {fileID: 8300000, guid: 601835b16e057cf4c886c50aa79c4787, type: 3}
   ministun: {fileID: 8300000, guid: 99dd1fe9849443746b3a1b1faf56d4d3, type: 3}
-  cleanerClean: {fileID: 8300000, guid: 43e786f936f20d042a690e7567049b26, type: 3}
-  cleanerCharge: {fileID: 0}
-  cleanerSuction: {fileID: 0}
-  cleanerPon: {fileID: 0}
+  mush: {fileID: 8300000, guid: 6092004608c7bcf4eba48fcd8df11ed2, type: 3}
+  cleanerClean: {fileID: 8300000, guid: c2437e594076cc24d9357186b0769306, type: 3}
+  cleanerCharge: {fileID: 8300000, guid: 6e908f9f20b65754fb8729249ab91bfc, type: 3}
+  cleanerSuction: {fileID: 8300000, guid: d821ed87c0bed0a4a9672b8c2b328a2d, type: 3}
+  cleanerPon: {fileID: 8300000, guid: 60bf1d28a3ccd76498eba5ffd910edd1, type: 3}
   cleaner5: {fileID: 0}
-  cleanerSplash: {fileID: 0}
-  cleanerFix: {fileID: 0}
+  cleanerSplash: {fileID: 8300000, guid: 77921070a86a73d4ab0aaf7f4633c5c8, type: 3}
+  cleanerFix: {fileID: 8300000, guid: 911980698cc47664f9d53113b932e21d, type: 3}
   stageScatetr: {fileID: 8300000, guid: d74238cf01b519f4d98e5561c2c9361c, type: 3}
   stageCrack: {fileID: 8300000, guid: 62cd24adafa4c014b84c23b7a7b1f561, type: 3}
   stageBreak: {fileID: 8300000, guid: 881f32aa4eb329f4da5749c679fba2b4, type: 3}
