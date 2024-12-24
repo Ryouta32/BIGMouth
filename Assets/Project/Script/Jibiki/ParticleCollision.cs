@@ -18,7 +18,7 @@ public class ParticleCollision : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Brush"))
         {
-            Debug.Log("あたったよおおおおおおおおおおおおおおおおお");
+            //Debug.Log("あたったよおおおおおおおおおおおおおおおおお");
             if (audioflag)
             {
                 audioflag = false;
