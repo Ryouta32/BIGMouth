@@ -6,7 +6,6 @@ public class BIGEnemyWeekPoint : MonoBehaviour
 {
     [SerializeField] BigEnemyScript bigSC;
     [SerializeField] GameObject Yogore;
-    [SerializeField] string breakName;
     private int count = 0;
     private void Start()
     {
@@ -25,10 +24,9 @@ public class BIGEnemyWeekPoint : MonoBehaviour
                     obj.GetComponent<BIGEnemyChaildSC>().destination = transform.position;
                     obj.GetComponent<BIGEnemyChaildSC>().biSC = bigSC;
                     Vector3 dir = new Vector3(Random.Range(-1f, 1f)*transform.forward.x, Random.Range(-1f, 1f)*transform.forward.y, Random.Range(-1f, 1f)*transform.forward.z).normalized;
-                    Debug.Log(dir);
                     obj.GetComponent<Rigidbody>().AddForce(dir * 300f);
                     //bigSC.OBJScaleDown();
-                    bigSC.WeekBreak(breakName);
+                    bigSC.WeekBreak();
                 }
             }
         }

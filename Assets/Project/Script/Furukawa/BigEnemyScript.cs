@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Oculus.Interaction;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,14 +13,13 @@ public class BigEnemyScript : MonoBehaviour
     [SerializeField] EnemyData _data;
     [SerializeField] GameObject Tentacle;
     [SerializeField] GameObject Mash;
+    [SerializeField] BIGEnemyAnima anima;
     private EnemyData data;
     private bool erase;
-    Animator anima;
     private void Start()
     {
         data = new EnemyData(_data);
 
-        anima = GetComponent<Animator>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -37,9 +37,24 @@ public class BigEnemyScript : MonoBehaviour
             }
         }
     }
-    public void WeekBreak(string trigger)
+    private void OnTriggerEnter(Collider other)
     {
-        anima.SetTrigger(trigger);
+        if (erase)
+        {
+            if (other.gameObject.tag == "Brush")
+            {
+                data.sutnCount--;
+                if (data.sutnCount <= 0)
+                {
+                    //クリア演出
+                    SceneManager.LoadScene("ClereScene");
+                }
+            }
+        }
+    }
+    public void WeekBreak()
+    {
+        anima.Break();
     }
     public void Spawn(GameObject obj)
     {
