@@ -595,3 +595,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repeattime: 5
+  targetAnimationName: Idle

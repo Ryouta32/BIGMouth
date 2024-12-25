@@ -116,4 +116,9 @@ public class NormalBetaManager : MonoBehaviour
         transform.Rotate(0, rot, 0);
         anim.SetTrigger("Stun");
     }
+
+    void Stunsound()
+    {
+        audioM.PlayPoint(audioM.data.stageScatetr, this.gameObject);
+    }
 }

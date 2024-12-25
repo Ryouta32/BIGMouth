@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3011602862952613360}
   - component: {fileID: 5367055002418143868}
-  - component: {fileID: 5639435350293162031}
   m_Layer: 0
   m_Name: DragonSpawn
   m_TagString: Untagged
@@ -45,17 +44,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab3ec25e32ce0c4380714d75e39cb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5639435350293162031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966513662452039363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa90c7b190b88344a6b17738a69872f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dragonprefab: {fileID: 3680326740319455547, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
-  textText: {fileID: 0}

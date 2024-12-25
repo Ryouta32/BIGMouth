@@ -382,10 +382,14 @@ PrefabInstance:
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: beta
       value: 
-      objectReference: {fileID: 74955073074823763, guid: 774920f80001bf942917215bbf1c88ee, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
+      propertyPath: power.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: power.z
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Enabled
