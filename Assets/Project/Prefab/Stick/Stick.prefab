@@ -48,6 +48,7 @@ MonoBehaviour:
   ovr: {fileID: 0}
   saki: {fileID: 8784399990056825994}
   offset: {x: 0, y: -0.53, z: 0}
+  text: {fileID: 0}
 --- !u!1 &3862871813851080895
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,7 +67,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4910509503009269442
 Transform:
   m_ObjectHideFlags: 0

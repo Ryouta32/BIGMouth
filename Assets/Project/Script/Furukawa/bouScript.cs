@@ -9,6 +9,7 @@ public class bouScript : MonoBehaviour
     [SerializeField] OVRCameraRig ovr;
     [SerializeField] BouSakiScript saki;
     [SerializeField] Vector3 offset;
+    [SerializeField] LogSC text;
     Vector3 move;
     Vector3 oldPos;
     Vector3 hitpos;
@@ -28,7 +29,7 @@ public class bouScript : MonoBehaviour
         float dis = Vector3.Distance(saki.GetHit() , ovr.rightHandAnchor.position);
 
         move = hit();
-
+        LogSC.log = transform.position.ToString();
         //if(Hitdis<dis)
         {
             transform.position -= move;

@@ -91,6 +91,7 @@ public class BouSakiScript : MonoBehaviour
     private void UpInhale()
     {
         OnHale = false;
+        LogSC.log = GetComponent<Renderer>().material.name;
     }
 
     private void OnCollisionStay(Collision other)
