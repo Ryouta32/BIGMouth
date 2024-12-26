@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Project/Scenes/TmpScene.unity
     guid: d6b3aafd836ca354098677a7a3e2f0d7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Project/Scenes/StartScene.unity
     guid: cff1a30636d62e8449f5daa367588364
   - enabled: 1
@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Project/Scenes/TyuukanGanbare.unity
     guid: b9996aee14b86864d9f4f15b9923ab75
-  - enabled: 1
+  - enabled: 0
     path: Assets/Project/Scenes/ClearScene.unity
     guid: 9e7dfc1fac9153f41974a03953b17e6d
   - enabled: 0
