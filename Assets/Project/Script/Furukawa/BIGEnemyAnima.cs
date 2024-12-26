@@ -49,7 +49,7 @@ public class BIGEnemyAnima : MonoBehaviour
     }
     private void setLimit()
     {
-        limit = Random.Range(10, 20);
+        limit = Random.Range(5, 10);
         time = 0;
         Debug.Log(limit + "limi");
             }
