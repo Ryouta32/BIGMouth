@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 public class BouSakiScript : MonoBehaviour
 {
 
@@ -35,6 +36,8 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] AudioManager audioM;
     [Header("吸い込みエフェクト")]
     [SerializeField] GameObject SuctionObj;
+    [Header("シャワーパワー")]
+    [SerializeField] Slider slider;
     bool on=true;
    Vector3 hitpoint;
    public bool OnHale;
@@ -44,11 +47,12 @@ public class BouSakiScript : MonoBehaviour
     void Start()
     {
         hitpoint = Vector3.zero;
+        slider.maxValue = showerLimit;
     }
 
     void Update()
     {
-
+        slider.value = showerPoint;
         //スキルの判定
         if (showerPoint > showerLimit)
         {
