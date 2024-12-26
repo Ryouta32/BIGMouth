@@ -40,6 +40,12 @@ public class AudioData : ScriptableObject
     [Tooltip("0-6 stage")] public AudioClip systemStage;
     [Tooltip("0-7 pointer")] public AudioClip systemPointer;
 
+    [Header("BGM")]
+    [Tooltip("MainBGM")] public AudioClip mainBGM;
+    [Tooltip("チュートリアル")] public AudioClip tutorialBGM;
+    [Tooltip("クリア")] public AudioClip clearBGM;
+    [Tooltip("ゲームオーバー")] public AudioClip gameoverBGM;
+    [Tooltip("ボス")] public AudioClip bossBGM;
     //[Tooltip("中ベタ移動音")] public AudioClip tyuuMove;
     //[Tooltip("第ベタ移動音")] public AudioClip bigMove;
     //[Tooltip("打撃音")] public AudioClip attack;

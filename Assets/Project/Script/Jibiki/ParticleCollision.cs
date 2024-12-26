@@ -5,13 +5,11 @@ using UnityEngine;
 
 public class ParticleCollision : MonoBehaviour
 {
-    AudioManager audioM;
 
     bool audioflag;
 
     void Start()
     {
-        audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         audioflag = true;
     }
     private void OnTriggerEnter(Collider other)
@@ -22,7 +20,7 @@ public class ParticleCollision : MonoBehaviour
             if (audioflag)
             {
                 audioflag = false;
-                audioM.PlayPoint(audioM.data.miniHole, this.gameObject);
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.miniHole, this.gameObject);
             }
             transform.GetChild(0).gameObject.SetActive(false);
             //Debug.Log("音鳴った");

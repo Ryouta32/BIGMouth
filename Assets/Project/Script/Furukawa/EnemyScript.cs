@@ -13,7 +13,6 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] GameObject stunEffect;
     [SerializeField] GameObject damageEffect;
     [SerializeField] GameObject DestroyEffect;
-     AudioManager audioM;
     Rigidbody rb;
     bool inHale;
     [HideInInspector]
@@ -23,7 +22,6 @@ public class EnemyScript : MonoBehaviour
     {
         initialization();
         data = new EnemyData(_data);
-        audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
         rb = GetComponent<Rigidbody>();
 
@@ -68,7 +66,7 @@ public class EnemyScript : MonoBehaviour
     }
     public void HitDamage()
     {
-        audioM.PlayPoint(audioM.data.miniFollDown,this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.miniFollDown,this.gameObject);
         Instantiate(damageEffect, transform.position, Quaternion.identity);
 
         ////吸い込み
@@ -84,7 +82,7 @@ public class EnemyScript : MonoBehaviour
         {
             destroyObj();
             Debug.Log("削除");
-            AudioSource.PlayClipAtPoint(audioM.data.miniBom, this.gameObject.transform.position);
+            AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
             Destroy(this.gameObject);
         }
         data.sutnCount--;
@@ -100,7 +98,7 @@ public class EnemyScript : MonoBehaviour
     {
         stunEffect.SetActive(true);
         //Debug.Log("スタンエフェクト");
-        audioM.PlayPoint(audioM.data.ministun,this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.ministun,this.gameObject);
         yield return new WaitForSeconds(data.sutnTime);
         SetState(EnemyData.State.general);
         StunReturn();
@@ -108,7 +106,7 @@ public class EnemyScript : MonoBehaviour
     }
     public void MoveAudio()
     {
-        audioM.PlayPoint(audioM.data.miniMove,this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.miniMove,this.gameObject);
     }
     public void StunReturn() => data.sutnCount = _data.sutnCount;
     public void setManager(EnemyManager x) => manager = x;
