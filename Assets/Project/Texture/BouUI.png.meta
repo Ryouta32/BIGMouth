@@ -1,0 +1,466 @@
+fileFormatVersion: 2
+guid: 2faf94e324453f64d810f6df73ba6fa1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BouUI_13
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 1744
+        width: 266
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009edf330747e684fa33ba5db38797cc
+      internalID: -1985675992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_14
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 1744
+        width: 266
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c19b106f67928e4ab4aaf6ec79225a2
+      internalID: 1323209972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_16
+      rect:
+        serializedVersion: 2
+        x: 1826
+        y: 1813
+        width: 93
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37edc8165e6d8641aa16d6aa3287b1a
+      internalID: 618939437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1556
+        width: 549
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31236e3427323134fa736b5014c3da56
+      internalID: -482411817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_31
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 1581
+        width: 495
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b3aae4821639a48b4c62dc34899702
+      internalID: 548150379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_32
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1427
+        width: 918
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ae88f7167ad6948a6bdad8ab2975ff
+      internalID: -1953260095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_33
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 569
+        width: 922
+        height: 947
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03db9cf068cd226449c521f9ea2679c0
+      internalID: -2060385204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_34
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1301
+        width: 257
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76383743c08fee74ab7fe51b76c223aa
+      internalID: -804011686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_35
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 1330
+        width: 17
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c715252d35955ec4bad1f4dace31aff1
+      internalID: -56176204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_40
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 692
+        width: 699
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c91b1cb668543945bc10cbcad9b81b5
+      internalID: -1297418109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_42
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 64
+        width: 169
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3355c4f2e3b0da941a3a229c5e528a86
+      internalID: -1044079551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_43
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 64
+        width: 169
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7632ddda8bff054abb94594f66900c1
+      internalID: 1113981920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_44
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 35
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7046f8c9d50dc8a4c8fa04f3d8d22909
+      internalID: -1096849961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1776
+        width: 1001
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6022243a3803f8b4eac91a6e4765b5ae
+      internalID: -2028339089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4d9feef81b950b34c8932362c8141c70
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BouUI_0: -2028339089
+      BouUI_1: 2127547739
+      BouUI_10: -1754843390
+      BouUI_11: 529211306
+      BouUI_12: 990428121
+      BouUI_13: -1985675992
+      BouUI_14: 1323209972
+      BouUI_15: -149763219
+      BouUI_16: 618939437
+      BouUI_17: -1191930237
+      BouUI_18: 1577182651
+      BouUI_19: -1228591222
+      BouUI_2: 266462335
+      BouUI_20: 999670345
+      BouUI_21: 1488457478
+      BouUI_22: 815733818
+      BouUI_23: -193518952
+      BouUI_24: 2077980348
+      BouUI_25: -1928791752
+      BouUI_26: -123051618
+      BouUI_27: -1473803920
+      BouUI_28: 863253614
+      BouUI_29: 23580890
+      BouUI_3: -442073069
+      BouUI_30: -482411817
+      BouUI_31: 548150379
+      BouUI_32: -1953260095
+      BouUI_33: -2060385204
+      BouUI_34: -804011686
+      BouUI_35: -56176204
+      BouUI_36: -1762376884
+      BouUI_37: -2011680585
+      BouUI_38: -1193240316
+      BouUI_39: 1072899755
+      BouUI_4: -904812100
+      BouUI_40: -1297418109
+      BouUI_41: 1588659935
+      BouUI_42: -1044079551
+      BouUI_43: 1113981920
+      BouUI_44: -1096849961
+      BouUI_5: 1537305839
+      BouUI_6: 852067793
+      BouUI_7: 365874949
+      BouUI_8: -1416605919
+      BouUI_9: 802182850
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
