@@ -261,8 +261,16 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
-      propertyPath: StartTime
+      propertyPath: power.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
+      propertyPath: waittime
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
+      propertyPath: StartTime
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: RepeatTime
