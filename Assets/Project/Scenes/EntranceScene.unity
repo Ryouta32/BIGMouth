@@ -15313,6 +15313,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 61144894140312176, guid: 6e5d1da9d4635764ebc7636a411e239d, type: 3}
+      propertyPath: SEvol
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 61144894140312176, guid: 6e5d1da9d4635764ebc7636a411e239d, type: 3}
+      propertyPath: BGMvol
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3968973875865118918, guid: 6e5d1da9d4635764ebc7636a411e239d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

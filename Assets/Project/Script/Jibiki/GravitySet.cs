@@ -89,8 +89,7 @@ public class GravitySet : MonoBehaviour
                         gravityVec.y = 0;
                     if (gravityVec.z < 0.001f)
                         gravityVec.z = 0;
-                    Debug.Log("かわりましたわー" + gravityVec);
-
+                    
                     //Vector3.Lerp(transform.position, hit.point, 1f);
                     //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
                     //transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;

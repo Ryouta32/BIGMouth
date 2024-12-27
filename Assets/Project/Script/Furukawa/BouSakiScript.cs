@@ -26,9 +26,9 @@ public class BouSakiScript : MonoBehaviour
     [Header("噴射の塗り判定を都飛ばす強さ")]
     [SerializeField] float power;
     [Header("吸い込みの距離")]
-    [SerializeField] float inHaleDis=0.5f;
+    [SerializeField] float inHaleDis = 0.5f;
     [Header("吸い込み速度")]
-    [SerializeField] float inHaleSpeed=1;
+    [SerializeField] float inHaleSpeed = 1;
     [Header("ドラゴンのタグ")]
     [SerializeField] string DragonTag = "Dragon";
     [Header("ごしごしエフェクト")]
@@ -43,41 +43,61 @@ public class BouSakiScript : MonoBehaviour
     float showerPoint = 1;
     [SerializeField] float showerLimit;
     [SerializeField] float showerThreshold;
+    [SerializeField] float coolTime;
+    [SerializeField] SpriteRenderer image;
+    [SerializeField] Sprite InholeSp;
+    [SerializeField] Sprite NoholeSp;
+    private float cool;
+
+    AudioSource source=new AudioSource();
     void Start()
     {
         hitpoint = Vector3.zero;
         slider.maxValue = showerLimit;
+        showerPoint = showerThreshold;
     }
 
     void Update()
     {
         slider.value = showerPoint;
         //スキルの判定
-        if (showerPoint > showerLimit)
+        if (showerPoint > 0)
         {
             if (on && OVRInput.Get(actionBtn) || (on && Input.GetKey(KeyCode.Space)))
             {
                 ShowerObj.SetActive(true);
-                //showerPoint -= Time.deltaTime*10;
+                showerPoint -= Time.deltaTime * 10;
                 StartCoroutine("ShowerTime");
+                Debug.Log("waaaa");
             }
             if (OVRInput.GetUp(actionBtn) || Input.GetKeyUp(KeyCode.Space))
             {
                 ShowerObj.SetActive(false);
                 StopCoroutine("ShowerTime");
                 on = true;
+                Debug.Log("waa");
             }
         }
-        //s\吸い込み判定
-        if (OVRInput.Get(OVRInput.RawButton.B) || Input.GetMouseButton(0))
+
+        if (cool > 0)
+            cool -= Time.deltaTime;
+        else
         {
-            Inhale();
+            cool = 0;
+            image.sprite = InholeSp;
+            //s\吸い込み判定
+            if (!OnHale &&( OVRInput.Get(OVRInput.RawButton.B) || Input.GetMouseButton(0)))
+            {
+                Inhale();
+            }
         }
-        if(OVRInput.GetUp(OVRInput.RawButton.B) | Input.GetMouseButtonUp(0))
+        if (OnHale&&( OVRInput.GetUp(OVRInput.RawButton.B) || Input.GetMouseButtonUp(0)))
         {
             UpInhale();
-        }
+            image.sprite = NoholeSp;
 
+            cool = coolTime;
+        }
     }
     IEnumerator ShowerTime()
     {
@@ -93,8 +113,10 @@ public class BouSakiScript : MonoBehaviour
     }
     private void UpInhale()
     {
+        if (OnHale == false)
+            return;
         OnHale = false;
-        LogSC.log = GetComponent<Renderer>().material.name;
+        GetComponent<AudioSource>().Stop();
     }
 
     private void OnCollisionStay(Collision other)

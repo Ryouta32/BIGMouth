@@ -1,4 +1,5 @@
 ﻿using Es.InkPainter;
+using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,7 @@ public class ShowerCube : MonoBehaviour
     private Brush draBrush;
 
     [SerializeField]
-    private PaintManager.UseMethodType useMethodType = PaintManager.UseMethodType.RaycastHitInfo;
+    private PaintManager.UseMethodType useMethodType;
 
     [SerializeField]
     bool erase = false;
@@ -39,6 +40,38 @@ public class ShowerCube : MonoBehaviour
             //Destroy(gameObject);
         }
     }
+    private void OnCollisionEnter(Collision col)
+    {
+        PaintManager paintManager = new PaintManager();
+        if (col.gameObject.GetComponent<InkCanvas>())
+        {
+            switch (col.transform.tag)
+            {
+                //case "Dragon":
+                //    paintManager.Paint(col, useMethodType, !erase, draBrush, transform, true, DragonTag);
+                //    Destroy(gameObject);
+                //    break;
+                //case "Wall":
+                //    paintManager.Paint(col, useMethodType, erase, brush, transform, true, DragonTag);
+                //    break;
+
+                case "Dragon":
+                    paintManager.Paint(col, useMethodType, !erase, brush, transform, true, col.transform.tag);
+                    break;
+                case "Wall":
+                    paintManager.Paint(col, useMethodType, erase, brush, transform, false, col.transform.tag);
+                    break;
+                //ここに壁を修復するやつかく当たったタグがよこかべだったら当たったオブジェクトのメッシュレンダラーを表示
+                case "yokokabe":
+                    GameObject clone = Instantiate(col.gameObject, col.gameObject.transform.position, Quaternion.identity);
+                    clone.GetComponent<MeshRenderer>().material = m;
+                    pieceManager.PieceChildren.Add(clone.transform); // GetChild()で子オブジェクトを取得
+                    break;
+            }
+
+            Destroy(gameObject);
+        }
+    }
     private void OnTriggerEnter(Collider col)
     {
         PaintManager paintManager = new PaintManager();
@@ -46,18 +79,21 @@ public class ShowerCube : MonoBehaviour
         {
             switch (col.transform.tag)
             {
-                case "Dragon":
-                    Debug.Log("あたった-------------------------");
+                //case "Dragon":
+                //    paintManager.Paint(col, useMethodType, !erase, draBrush, transform, true, DragonTag);
+                //    Destroy(gameObject);
+                //    break;
+                //case "Wall":
+                //    paintManager.Paint(col, useMethodType, erase, brush, transform, true, DragonTag);
+                //    break;
 
-                    paintManager.Paint(col, useMethodType, !erase, draBrush, transform, true, DragonTag);
-                    Destroy(gameObject);
+                case "Dragon":
+                    paintManager.Paint(col, useMethodType, !erase, brush, transform, true, col.transform.tag);
                     break;
                 case "Wall":
-                    Debug.Log("あたった-------------------------");
-
-                    paintManager.Paint(col, useMethodType, erase, brush, transform, true, DragonTag);
+                    paintManager.Paint(col, useMethodType, erase, brush, transform, false, col.transform.tag);
+                    Destroy(gameObject);
                     break;
-
                 //ここに壁を修復するやつかく当たったタグがよこかべだったら当たったオブジェクトのメッシュレンダラーを表示
                 case "yokokabe":
                     Debug.Log("あたった-------------------------");
