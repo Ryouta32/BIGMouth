@@ -48,10 +48,6 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] Sprite InholeSp;
     [SerializeField] Sprite NoholeSp;
     private float cool;
-    bool on = true;
-    Vector3 hitpoint;
-    public bool OnHale;
-    float showerPoint = 0;
 
     AudioSource source=new AudioSource();
     void Start()
