@@ -13,7 +13,6 @@ public class NormalBetaManager : MonoBehaviour
     [SerializeField] BoxCollider[] col;
 
     Animator anim;
-    AudioManager audioM;
     int number;
     int rot;
 
@@ -26,7 +25,6 @@ public class NormalBetaManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         anim = gameObject.GetComponent<Animator>();
         colsignal = true;
         Children = new List<Transform>();
@@ -87,7 +85,7 @@ public class NormalBetaManager : MonoBehaviour
 
     void tyuuOut()
     {
-        audioM.PlayPoint(audioM.data.miniOut, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.miniOut, this.gameObject);
     }
 
     void OutEnabled()
@@ -119,6 +117,6 @@ public class NormalBetaManager : MonoBehaviour
 
     void Stunsound()
     {
-        audioM.PlayPoint(audioM.data.stageScatetr, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.stageScatetr, this.gameObject);
     }
 }

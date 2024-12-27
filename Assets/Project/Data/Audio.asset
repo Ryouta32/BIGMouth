@@ -38,3 +38,8 @@ MonoBehaviour:
   systemBbutton: {fileID: 0}
   systemStage: {fileID: 0}
   systemPointer: {fileID: 0}
+  mainBGM: {fileID: 8300000, guid: 467c5b18a948b324eb8b8b084fa90408, type: 3}
+  tutorialBGM: {fileID: 8300000, guid: 34f43f375e7308c42b790904a013b50a, type: 3}
+  clearBGM: {fileID: 8300000, guid: bfb6d6b0119707348aae048d8b73c765, type: 3}
+  gameoverBGM: {fileID: 8300000, guid: 89f51f32ec684304ebf25ffc22ad539f, type: 3}
+  bossBGM: {fileID: 8300000, guid: 5bdf27293bd66364db61802d94fbd631, type: 3}

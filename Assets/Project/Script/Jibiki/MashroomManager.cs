@@ -11,7 +11,6 @@ public class MashroomManager : MonoBehaviour
     Animator anim;
     BoxCollider boxCollider;
     EnemyScript enemyScript;
-    AudioManager audioM;
 
     [Tooltip("音を再生するアニメーションの名前")]
     public string targetAnimationName;
@@ -23,7 +22,6 @@ public class MashroomManager : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         boxCollider = gameObject.GetComponent<BoxCollider>();
         enemyScript = gameObject.GetComponent<EnemyScript>();
-        audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         InvokeRepeating(nameof(AnimProtection), repeattime, repeattime);
     }
 
@@ -37,7 +35,7 @@ public class MashroomManager : MonoBehaviour
         else
         {
             Debug.Log("なったーーーーーーーーーーーーーーーーーーーーーー");
-            audioM.PlayPoint(audioM.data.mush, this.gameObject);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.mush, this.gameObject);
         }
     }
 
