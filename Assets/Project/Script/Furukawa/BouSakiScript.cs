@@ -41,7 +41,7 @@ public class BouSakiScript : MonoBehaviour
     bool on=true;
    Vector3 hitpoint;
    public bool OnHale;
-    float showerPoint = 0;
+    float showerPoint = 1;
     [SerializeField] float showerLimit;
     [SerializeField] float showerThreshold;
     void Start()
@@ -59,7 +59,7 @@ public class BouSakiScript : MonoBehaviour
             if (on && OVRInput.Get(actionBtn) || (on && Input.GetKey(KeyCode.Space)))
             {
                 ShowerObj.SetActive(true);
-                showerPoint -= Time.deltaTime*10;
+                //showerPoint -= Time.deltaTime*10;
                 StartCoroutine("ShowerTime");
             }
             if (OVRInput.GetUp(actionBtn) || Input.GetKeyUp(KeyCode.Space))

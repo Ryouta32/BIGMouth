@@ -24,6 +24,9 @@ public class PieceManager : MonoBehaviour
     [Tooltip("オブジェクトを消す秒数")]
     [SerializeField] float destroytime;
 
+    [Tooltip("オブジェクトを消す秒数")]
+    [SerializeField] float waittime;
+
     [SerializeField] GameObject beta;
     Rigidbody betarb;
 
@@ -50,64 +53,127 @@ public class PieceManager : MonoBehaviour
             PieceChildren.Add(PieceParent.transform.GetChild(i).GetChild(0)); // GetChild()で子オブジェクトを取得
             //Debug.Log($"検索方法１： {i} 番目の子供は {PieceChildren[i].name} です");
         }
-
-        InvokeRepeating(nameof(FallPiece), StartTime, RepeatTime);
+        StartCoroutine("FallPiece");
+        //InvokeRepeating(nameof(FallPiece), StartTime, RepeatTime);
     }
 
-    void FallPiece()
+    //void FallPiece()
+    //{
+        //Rigidbody obj;
+
+        //int rnd = Random.Range(0, PieceChildren.Count);
+
+        //if (PieceChildren.Count > 0)
+        //{
+        //    obj = PieceChildren[rnd].gameObject.GetComponent<Rigidbody>();
+
+        //    if (!obj)
+        //    {
+        //        //落ちるオブジェクトのリジットボディ取得
+        //        obj = PieceChildren[rnd].gameObject.AddComponent<Rigidbody>();
+        //        obj.isKinematic = true;
+        //    }
+        //    else
+        //    {
+        //        obj.isKinematic = true;
+        //    }
+
+        //    if (obj.isKinematic)
+        //    {
+        //        //キネマティックオフにして重力付ける
+        //        obj.isKinematic = false;
+
+        //        //マテリアルを壁色にする
+        //        PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
+
+        //        //少しちからを入れる
+        //        obj.AddForce(power);
+
+        //        if(beta != null)
+        //        {
+        //            betarb = beta.GetComponent<Rigidbody>();
+        //            Instantiate(beta, PieceChildren[rnd].gameObject.transform.position, Quaternion.Euler(180, 0, 0));
+        //            betarb.AddForce(betapower);
+        //        }
+
+        //        Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
+
+        //        //落ちたオブジェクトはリストから削除
+        //        PieceChildren.Remove(PieceChildren[rnd]);
+        //        Destroy(obj.gameObject, destroytime);
+        //    }
+        //}
+        //else
+        //{
+        //    Debug.Log("やめたーーーーーーーーー");
+        //    //いんぼけやめる
+        //    CancelInvoke();
+
+        //    //ゲームオーバーシーンに行く
+        //    SceneManager.LoadScene("GameOverScene");
+        //}
+    //}
+
+    IEnumerator FallPiece()
     {
-        Rigidbody obj;
+        yield return new WaitForSeconds(15.0f);
 
-        int rnd = Random.Range(0, PieceChildren.Count);
-
-        if (PieceChildren.Count > 0)
+        while (true)
         {
-            obj = PieceChildren[rnd].gameObject.GetComponent<Rigidbody>();
+            yield return new WaitForSeconds(waittime);
+            Rigidbody obj;
 
-            if (!obj)
+            int rnd = Random.Range(0, PieceChildren.Count);
+
+            if (PieceChildren.Count > 0)
             {
-                //落ちるオブジェクトのリジットボディ取得
-                obj = PieceChildren[rnd].gameObject.AddComponent<Rigidbody>();
-                obj.isKinematic = true;
+                obj = PieceChildren[rnd].gameObject.GetComponent<Rigidbody>();
+
+                if (!obj)
+                {
+                    //落ちるオブジェクトのリジットボディ取得
+                    obj = PieceChildren[rnd].gameObject.AddComponent<Rigidbody>();
+                    obj.isKinematic = true;
+                }
+                else
+                {
+                    obj.isKinematic = true;
+                }
+
+                if (obj.isKinematic)
+                {
+                    //キネマティックオフにして重力付ける
+                    obj.isKinematic = false;
+
+                    //マテリアルを壁色にする
+                    PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
+
+                    //少しちからを入れる
+                    obj.AddForce(power);
+
+                    if (beta != null)
+                    {
+                        betarb = beta.GetComponent<Rigidbody>();
+                        Instantiate(beta, PieceChildren[rnd].gameObject.transform.position, Quaternion.Euler(180, 0, 0));
+                        betarb.AddForce(betapower);
+                    }
+
+                    Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
+
+                    //落ちたオブジェクトはリストから削除
+                    PieceChildren.Remove(PieceChildren[rnd]);
+                    Destroy(obj.gameObject, destroytime);
+                }
             }
             else
             {
-                obj.isKinematic = true;
+                Debug.Log("やめたーーーーーーーーー");
+                //いんぼけやめる
+                CancelInvoke();
+
+                //ゲームオーバーシーンに行く
+                SceneManager.LoadScene("GameOverScene");
             }
-
-            if (obj.isKinematic)
-            {
-                //キネマティックオフにして重力付ける
-                obj.isKinematic = false;
-
-                //マテリアルを壁色にする
-                PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
-
-                //少しちからを入れる
-                obj.AddForce(power);
-
-                if(beta != null)
-                {
-                    betarb = beta.GetComponent<Rigidbody>();
-                    Instantiate(beta, PieceChildren[rnd].gameObject.transform.position, Quaternion.Euler(180, 0, 0));
-                    betarb.AddForce(betapower);
-                }
-
-                Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
-
-                //落ちたオブジェクトはリストから削除
-                PieceChildren.Remove(PieceChildren[rnd]);
-                Destroy(obj.gameObject, destroytime);
-            }
-        }
-        else
-        {
-            Debug.Log("やめたーーーーーーーーー");
-            //いんぼけやめる
-            CancelInvoke();
-
-            //ゲームオーバーシーンに行く
-            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

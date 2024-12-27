@@ -47,18 +47,23 @@ public class ShowerCube : MonoBehaviour
             switch (col.transform.tag)
             {
                 case "Dragon":
+                    Debug.Log("あたった-------------------------");
+
                     paintManager.Paint(col, useMethodType, !erase, draBrush, transform, true, DragonTag);
                     Destroy(gameObject);
                     break;
                 case "Wall":
+                    Debug.Log("あたった-------------------------");
+
                     paintManager.Paint(col, useMethodType, erase, brush, transform, true, DragonTag);
                     break;
 
                 //ここに壁を修復するやつかく当たったタグがよこかべだったら当たったオブジェクトのメッシュレンダラーを表示
                 case "yokokabe":
+                    Debug.Log("あたった-------------------------");
                     GameObject clone = Instantiate(col.gameObject, col.gameObject.transform.position, Quaternion.identity);
                     clone.GetComponent<MeshRenderer>().material = m;
-                    pieceManager.PieceChildren.Add(clone.transform); // GetChild()で子オブジェクトを取得
+                    //pieceManager.PieceChildren.Add(clone.transform); // GetChild()で子オブジェクトを取得
                     break;
             }
 

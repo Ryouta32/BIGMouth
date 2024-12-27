@@ -27,12 +27,12 @@ public class MashSpawn : MonoBehaviour
         {
             if　(classification.Contains(OVRSceneManager.Classification.Bed))
             {
-                Vector3 pos = new Vector3(classification.transform.position.x, -1f, classification.transform.position.z);
+                Vector3 pos = new Vector3(classification.transform.position.x, -1.5f, classification.transform.position.z);
 
                 if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
                 {
                     transform.position = hit.point;
-                    Instantiate(kinokoprefab, transform.position, Quaternion.identity);
+                    Instantiate(kinokoprefab, pos, Quaternion.identity);
                 }
                 else
                 {
@@ -41,12 +41,12 @@ public class MashSpawn : MonoBehaviour
             }
             if (classification.Contains(OVRSceneManager.Classification.Lamp))
             {
-                Vector3 pos = new Vector3(classification.transform.position.x, -1f, classification.transform.position.z);
+                Vector3 pos = new Vector3(classification.transform.position.x, -1.5f, classification.transform.position.z);
 
                 if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
                 {
                     transform.position = hit.point;
-                    Instantiate(tentacleprefab, transform.position, Quaternion.identity);
+                    Instantiate(tentacleprefab, pos, Quaternion.identity);
                 }
                 else
                 {
@@ -56,7 +56,7 @@ public class MashSpawn : MonoBehaviour
             if (classification.Contains(OVRSceneManager.Classification.Storage))
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y, 5f);
-                dragonprefab.transform.LookAt(targetObject.transform);
+                //dragonprefab.transform.LookAt(targetObject.transform);
                 dragonprefab.transform.position = pos;
                 //Instantiate(dragonprefab, classification.transform.position, Quaternion.identity);
             }
