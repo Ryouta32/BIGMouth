@@ -1125,6 +1125,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 747806495401477012, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: PlanePrefab
       value: 
       objectReference: {fileID: 563714354872022062, guid: f5dcf2d28f0afc34e8bbab5b682cdbc3, type: 3}
@@ -1202,7 +1206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477014, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 747806495401477035, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1367,7 +1371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3862871813851080895, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4100761273917490640, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1409,6 +1413,18 @@ PrefabInstance:
       propertyPath: ovr
       value: 
       objectReference: {fileID: 558707988}
+    - target: {fileID: 8188297735176210497, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: m_Value
+      value: 0.601
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: showerLimit
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: showerThreshold
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

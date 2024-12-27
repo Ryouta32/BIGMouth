@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
         if (clip == null)
             Debug.Log("音源が設定されてないよ");
         AudioSource audioSource;
-        if (obj.GetComponent<AudioSource>())
+        if (!obj.GetComponent<AudioSource>())
             audioSource = obj.AddComponent<AudioSource>();
         else
             audioSource = obj.GetComponent<AudioSource>();
