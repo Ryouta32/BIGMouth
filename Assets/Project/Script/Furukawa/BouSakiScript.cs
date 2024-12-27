@@ -37,6 +37,10 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] GameObject SuctionObj;
     [Header("シャワーパワー")]
     [SerializeField] Slider slider;
+    bool on=true;
+   Vector3 hitpoint;
+   public bool OnHale;
+    float showerPoint = 1;
     [SerializeField] float showerLimit;
     [SerializeField] float showerThreshold;
     [SerializeField] float coolTime;

@@ -92,12 +92,14 @@ public class ShowerCube : MonoBehaviour
                     break;
                 case "Wall":
                     paintManager.Paint(col, useMethodType, erase, brush, transform, false, col.transform.tag);
+                    Destroy(gameObject);
                     break;
                 //ここに壁を修復するやつかく当たったタグがよこかべだったら当たったオブジェクトのメッシュレンダラーを表示
                 case "yokokabe":
+                    Debug.Log("あたった-------------------------");
                     GameObject clone = Instantiate(col.gameObject, col.gameObject.transform.position, Quaternion.identity);
                     clone.GetComponent<MeshRenderer>().material = m;
-                    pieceManager.PieceChildren.Add(clone.transform); // GetChild()で子オブジェクトを取得
+                    //pieceManager.PieceChildren.Add(clone.transform); // GetChild()で子オブジェクトを取得
                     break;
             }
 
