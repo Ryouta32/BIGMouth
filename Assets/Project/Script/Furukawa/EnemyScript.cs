@@ -13,8 +13,8 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] GameObject stunEffect;
     [SerializeField] GameObject damageEffect;
     [SerializeField] GameObject DestroyEffect;
-    Rigidbody rb;
-    bool inHale;
+    public Rigidbody rb;
+    public bool inHale;
     [HideInInspector]
     public EnemyData data;
     float time=0;
@@ -22,7 +22,6 @@ public class EnemyScript : MonoBehaviour
     {
         initialization();
         data = new EnemyData(_data);
-        manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
         rb = GetComponent<Rigidbody>();
 
     }
@@ -66,7 +65,7 @@ public class EnemyScript : MonoBehaviour
     }
     public void HitDamage()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.miniFollDown,this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.miniFollDown,this.gameObject,3);
         Instantiate(damageEffect, transform.position, Quaternion.identity);
 
         ////吸い込み
@@ -97,8 +96,8 @@ public class EnemyScript : MonoBehaviour
     IEnumerator Stun()//スタン中の処理
     {
         stunEffect.SetActive(true);
-        //Debug.Log("スタンエフェクト");
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.ministun,this.gameObject);
+        Debug.Log("スタンエフェクト");
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.ministun,this.gameObject,3);
         yield return new WaitForSeconds(data.sutnTime);
         SetState(EnemyData.State.general);
         StunReturn();

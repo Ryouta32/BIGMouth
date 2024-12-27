@@ -54,12 +54,12 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -154,7 +154,7 @@ MonoBehaviour:
     rotateAngle: 0
     brushNormalBlend: 0
     brushHeightBlend: 0.245
-    brushColor: {r: 0, g: 0, b: 0, a: 1}
+    brushColor: {r: 0, g: 0, b: 0, a: 0.1764706}
     colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
     rotateAngle: 0
     brushNormalBlend: 0
     brushHeightBlend: 0
-    brushColor: {r: 0, g: 0, b: 0, a: 0}
+    brushColor: {r: 0, g: 0, b: 0, a: 0.18431373}
     colorBlendType: 3
     normalBlendType: 0
     heightBlendType: 0

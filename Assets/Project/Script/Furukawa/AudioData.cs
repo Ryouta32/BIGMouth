@@ -6,6 +6,11 @@ using UnityEngine;
 
 public class AudioData : ScriptableObject
 {
+    public struct AudioSouceItem
+    {
+       public AudioSource souce;
+       public int loopCoun;
+    }
     [Header("ミニベタ関係")]
     [Tooltip("T-1 walk")] public AudioClip miniMove;
     [Tooltip("T-1 Bom")] public AudioClip miniBom;
