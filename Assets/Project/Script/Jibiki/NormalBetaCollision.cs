@@ -12,11 +12,9 @@ public class NormalBetaCollision : MonoBehaviour
     [Tooltip("NormalBetaManagerを付ける")]
     [SerializeField] NormalBetaManager normalBetaManager;
 
-    AudioManager audioM;
 
     private void Start()
     {
-        audioM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -30,7 +28,7 @@ public class NormalBetaCollision : MonoBehaviour
 
                 if (normalBetaManager.Children.Count > 1)
                 {
-                    audioM.PlayPoint(audioM.data.miniIn, this.gameObject);
+                    AudioManager.manager.PlayPoint(AudioManager.manager.data.miniIn, this.gameObject);
                     anim.SetBool("Down", true);
                     enemyScript.data.sutnCount = enemyScript._data.sutnCount;
                 }

@@ -33,7 +33,6 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] string DragonTag = "Dragon";
     [Header("ごしごしエフェクト")]
     [SerializeField] GameObject ShineEffect;
-    [SerializeField] AudioManager audioM;
     [Header("吸い込みエフェクト")]
     [SerializeField] GameObject SuctionObj;
     [Header("シャワーパワー")]
@@ -84,13 +83,13 @@ public class BouSakiScript : MonoBehaviour
     {
         on = false;
         yield return new WaitForSeconds(0.2f);
-        audioM.PlayPoint(audioM.data.cleanerSplash, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.cleanerSplash, this.gameObject);
         on = true;
     }
     private void Inhale()
     {
         OnHale = true;
-        audioM.PlayPoint(audioM.data.cleanerSuction, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.cleanerSuction, this.gameObject);
     }
     private void UpInhale()
     {
