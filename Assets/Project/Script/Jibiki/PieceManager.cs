@@ -40,6 +40,8 @@ public class PieceManager : MonoBehaviour
     [HideInInspector]
     public List<Transform> PieceChildren;
 
+    
+
     void Start()
     {
         PieceParent = this.gameObject;
@@ -163,6 +165,10 @@ public class PieceManager : MonoBehaviour
                     //落ちたオブジェクトはリストから削除
                     PieceChildren.Remove(PieceChildren[rnd]);
                     Destroy(obj.gameObject, destroytime);
+                }
+                if(PieceChildren.Count < PieceChildren.Count / 2)
+                {
+                    AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
                 }
             }
             else

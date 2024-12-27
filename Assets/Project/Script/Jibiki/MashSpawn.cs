@@ -10,6 +10,8 @@ public class MashSpawn : MonoBehaviour
     [SerializeField] GameObject tentacleprefab;
     GameObject dragonprefab;
     [SerializeField] GameObject targetObject;
+    OVRScenePlane floor;
+
 
     private void Awake()
     {
@@ -18,16 +20,30 @@ public class MashSpawn : MonoBehaviour
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
     }
+    void floortranform()
+    {
+    }
+
 
     void onAnchorsLoaded()
     {
+        //OVRSceneRoomの参照取得
+        OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
+        //床
+        floor = sceneRoom.Floor;
+        float posy = floor.transform.position.y + 0.4f;
+
+        floor.transform.position = new Vector3(floor.transform.position.x, posy, floor.transform.position.z);
+
+        floortranform();
+
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
         foreach　(var classification in classifications)
         {
             if　(classification.Contains(OVRSceneManager.Classification.Bed))
             {
-                Vector3 pos = new Vector3(classification.transform.position.x, -1.5f, classification.transform.position.z);
+                Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
 
                 if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
                 {
@@ -41,7 +57,7 @@ public class MashSpawn : MonoBehaviour
             }
             if (classification.Contains(OVRSceneManager.Classification.Lamp))
             {
-                Vector3 pos = new Vector3(classification.transform.position.x, -1.5f, classification.transform.position.z);
+                Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
 
                 if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
                 {
