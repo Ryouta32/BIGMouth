@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class MashSpawn : MonoBehaviour
 {
-    OVRSceneManager ovrSceneManager;
     [SerializeField] GameObject kinokoprefab;
     [SerializeField] GameObject tentacleprefab;
+    OVRSceneManager ovrSceneManager;
     GameObject dragonprefab;
-    [SerializeField] GameObject targetObject;
     OVRScenePlane floor;
 
 
@@ -20,10 +19,6 @@ public class MashSpawn : MonoBehaviour
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
     }
-    void floortranform()
-    {
-    }
-
 
     void onAnchorsLoaded()
     {
@@ -31,16 +26,15 @@ public class MashSpawn : MonoBehaviour
         OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
         //床
         floor = sceneRoom.Floor;
-        float posy = floor.transform.position.y + 0.4f;
+        float posy = floor.transform.position.y;
 
         floor.transform.position = new Vector3(floor.transform.position.x, posy, floor.transform.position.z);
-
-        floortranform();
 
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
         foreach　(var classification in classifications)
         {
+            //キノコ
             if　(classification.Contains(OVRSceneManager.Classification.Bed))
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
@@ -55,6 +49,8 @@ public class MashSpawn : MonoBehaviour
                     Instantiate(kinokoprefab, pos, Quaternion.identity);
                 }
             }
+
+            //触手
             if (classification.Contains(OVRSceneManager.Classification.Lamp))
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
@@ -69,14 +65,19 @@ public class MashSpawn : MonoBehaviour
                     Instantiate(tentacleprefab, pos, Quaternion.identity);
                 }
             }
+
+            //ドラゴンの生成位置
             if (classification.Contains(OVRSceneManager.Classification.Storage))
             {
-                Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y, 5f);
-                //dragonprefab.transform.LookAt(targetObject.transform);
+                Vector3 pos = new Vector3(classification.transform.position.x, posy + 1.0f, classification.transform.position.z + 3f);
                 dragonprefab.transform.position = pos;
-                //Instantiate(dragonprefab, classification.transform.position, Quaternion.identity);
-            }
 
+                if (Physics.Raycast(dragonprefab.transform.position, transform.forward, out RaycastHit hit, 10f, LayerMask.GetMask("Obstacle")))
+                {
+                    Quaternion hitRotation = hit.transform.rotation;
+                    dragonprefab.transform.rotation = hitRotation;
+                }
+            }
         }
     }
 }
