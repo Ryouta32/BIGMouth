@@ -43,6 +43,27 @@ public class ShowerCube : MonoBehaviour
     private void OnCollisionEnter(Collision col)
     {
         PaintManager paintManager = new PaintManager();
+        pieceManager = col.transform.parent.GetComponent<PieceManager>();
+
+        if (col.gameObject.CompareTag("yokokabe"))
+        {
+            //ここに壁を修復するやつかく当たったタグがよこかべだったら当たったオブジェクトのメッシュレンダラーを表示
+            if (col.gameObject.transform.childCount == 0)
+            {
+                Debug.Log("わああああああああああああああああああああ");
+                GameObject clone = Instantiate(col.gameObject, col.gameObject.transform.position, col.transform.rotation);
+                clone.GetComponent<MeshRenderer>().material = m;
+
+                MeshCollider meshcol = clone.GetComponent<MeshCollider>();
+                meshcol.convex = true;
+                meshcol.isTrigger = true;
+                clone.transform.parent = col.transform;
+                clone.tag = "Untagged";
+                clone.transform.localScale = new Vector3(1, 1, 1);
+                pieceManager.AddItem(clone.transform);
+                Debug.Log("追加した！" + pieceManager.PieceChildren.Count);
+            }
+        }
         if (col.gameObject.GetComponent<InkCanvas>())
         {
             switch (col.transform.tag)
@@ -60,12 +81,6 @@ public class ShowerCube : MonoBehaviour
                     break;
                 case "Wall":
                     paintManager.Paint(col, useMethodType, erase, brush, transform, false, col.transform.tag);
-                    break;
-                //ここに壁を修復するやつかく当たったタグがよこかべだったら当たったオブジェクトのメッシュレンダラーを表示
-                case "yokokabe":
-                    GameObject clone = Instantiate(col.gameObject, col.gameObject.transform.position, Quaternion.identity);
-                    clone.GetComponent<MeshRenderer>().material = m;
-                    pieceManager.PieceChildren.Add(clone.transform); // GetChild()で子オブジェクトを取得
                     break;
             }
 
