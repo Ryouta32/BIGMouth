@@ -31,7 +31,7 @@ public class ShowerEffect : MonoBehaviour
     } 
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log("わあ");
+        //Debug.Log("わあ");
 
         PaintManager paintManager = new PaintManager();
 
