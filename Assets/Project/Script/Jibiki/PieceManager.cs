@@ -10,13 +10,13 @@ public class PieceManager : MonoBehaviour
     [SerializeField] Material PieceMaterial;
 
     [Tooltip("崩れるときのちから")]
-    [SerializeField] Vector3 power;
+    [SerializeField] float power;
 
     [Tooltip("崩れるときのちから")]
     [SerializeField] Vector3 betapower;
 
-    [Tooltip("呼び出す間隔")]
-    [SerializeField] float RepeatTime;
+    //[Tooltip("呼び出す間隔")]
+    //[SerializeField] float RepeatTime;
 
     [Tooltip("開始するまでの秒数")]
     [SerializeField] float StartTime;
@@ -116,7 +116,7 @@ public class PieceManager : MonoBehaviour
 
     IEnumerator FallPiece()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(StartTime);
 
         while (true)
         {
@@ -149,13 +149,13 @@ public class PieceManager : MonoBehaviour
                     PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
 
                     //少しちからを入れる
-                    obj.AddForce(power);
+                    obj.AddForce(transform.up * power, ForceMode.Impulse);
 
                     if (beta != null)
                     {
-                        betarb = beta.GetComponent<Rigidbody>();
-                        Instantiate(beta, PieceChildren[rnd].gameObject.transform.position, Quaternion.Euler(180, 0, 0));
-                        betarb.AddForce(betapower);
+                        //betarb = beta.GetComponent<Rigidbody>();
+                        Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.Euler(0, 0, 0));
+                        //betarb.AddForce(transform.up * power, ForceMode.Impulse);
                     }
 
                     Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);

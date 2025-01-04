@@ -316,6 +316,8 @@ MonoBehaviour:
   stunEffect: {fileID: 3748150955440771420}
   damageEffect: {fileID: 2510562678213512748, guid: 0beb1d15c494365458144cc18fef2d60, type: 3}
   DestroyEffect: {fileID: 3349963419385957901, guid: 3d971a8f0b9b77c4f8a6dd9fad3f2df4, type: 3}
+  rb: {fileID: 0}
+  inHale: 0
   data: {fileID: 0}
 --- !u!114 &5449633111380719280
 MonoBehaviour:
