@@ -349,6 +349,10 @@ PrefabInstance:
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: beta
       value: 
+      objectReference: {fileID: 9220339907145939376, guid: f6df70705204e6b49a98ab579b533135, type: 3}
+    - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
+      propertyPath: power
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: power.y
@@ -360,11 +364,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: waittime
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: StartTime
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Enabled
@@ -376,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: destroytime
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1101248885501134011, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_LocalPosition.y
