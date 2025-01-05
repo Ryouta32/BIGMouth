@@ -43,3 +43,4 @@ MonoBehaviour:
   clearBGM: {fileID: 8300000, guid: bfb6d6b0119707348aae048d8b73c765, type: 3}
   gameoverBGM: {fileID: 8300000, guid: 89f51f32ec684304ebf25ffc22ad539f, type: 3}
   bossBGM: {fileID: 8300000, guid: 5bdf27293bd66364db61802d94fbd631, type: 3}
+  announce: {fileID: 8300000, guid: 852710008d5f08d4fadc6f9a6b257031, type: 3}
