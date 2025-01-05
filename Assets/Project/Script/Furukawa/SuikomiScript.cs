@@ -9,7 +9,7 @@ public class SuikomiScript : MonoBehaviour
     [SerializeField] float point;
     private void OnDestroy()
     {
-        Debug.Log(gameObject.name);
+        //Debug.Log(gameObject.name);
         sakiScript.AddShowerPoint(point);
     }
     public void SetBousaki(BouSakiScript bou) => sakiScript = bou;
