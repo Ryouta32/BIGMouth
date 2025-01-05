@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.32357424, g: 0.24220705, b: 0.32967633, a: 1}
+  m_IndirectSpecularColor: {r: 0.32367364, g: 0.24222496, b: 0.32971257, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -630,8 +630,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341710059}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5345668, y: -0.84768915, z: 0.4620335}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1573,6 +1573,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5615801200414332981, guid: 7434598e0d4915b4f8966a00b721679e, type: 3}
+      propertyPath: kinokoprefab
+      value: 
+      objectReference: {fileID: 7627689597627893192, guid: eee307ba7d3cac04b97b8e7fdadbc9c7, type: 3}
     - target: {fileID: 5615801200414332981, guid: 7434598e0d4915b4f8966a00b721679e, type: 3}
       propertyPath: targetObject
       value: 

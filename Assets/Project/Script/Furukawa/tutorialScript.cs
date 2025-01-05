@@ -9,7 +9,7 @@ public class tutorialScript : MonoBehaviour
     [SerializeField] GameObject Timeline;
     private GameObject obj;
     AudioSource source;
-    private bool isAudio;
+    private bool isAudio=true;
     void Start()
     {
 
@@ -23,8 +23,9 @@ public class tutorialScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!source.isPlaying && isAudio)
+        if ((!source.isPlaying && isAudio)||(OVRInput.Get(OVRInput.RawButton.RHandTrigger)))
         {
+            isAudio = false;
             Play();
         }
     }
