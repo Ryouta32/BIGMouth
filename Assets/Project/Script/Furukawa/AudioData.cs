@@ -51,6 +51,9 @@ public class AudioData : ScriptableObject
     [Tooltip("クリア")] public AudioClip clearBGM;
     [Tooltip("ゲームオーバー")] public AudioClip gameoverBGM;
     [Tooltip("ボス")] public AudioClip bossBGM;
+
+    [Header("その他音源")]
+    [Tooltip("アナウンス")] public AudioClip announce;
     //[Tooltip("中ベタ移動音")] public AudioClip tyuuMove;
     //[Tooltip("第ベタ移動音")] public AudioClip bigMove;
     //[Tooltip("打撃音")] public AudioClip attack;

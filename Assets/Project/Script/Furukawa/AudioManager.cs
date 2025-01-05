@@ -9,11 +9,16 @@ public class AudioManager : MonoBehaviour
     [SerializeField] float BGMvol;
     [SerializeField] float SEvol;
     AudioSource source;
-    private void Start()
+
+    private void Awake()
     {
         source = GetComponent<AudioSource>();
         source.volume = BGMvol;
         manager = this;
+    }
+    private void Start()
+    {
+
         
     }
     public AudioData GetData() => data;

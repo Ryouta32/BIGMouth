@@ -8,6 +8,7 @@ public class EnemyManager : MonoBehaviour
    [SerializeField] List<GameObject> enemys;
     [SerializeField] int spawnLimit;
     [SerializeField] GameObject BIGBETA;
+    [SerializeField] GameObject Ball;
     [SerializeField] Transform bossPos;
      BetaSpawn betaSpawn;
     [Tooltip("ボスが出るまでのキル数")][SerializeField] int bossCount;
@@ -24,6 +25,7 @@ public class EnemyManager : MonoBehaviour
         {
            GameObject obj= Instantiate(BIGBETA, bossPos.position, Quaternion.identity);
             obj.GetComponent<Rigidbody>().AddForce(obj.transform.forward.normalized * 300);
+            Instantiate(Ball, bossPos.position, Quaternion.identity);
 
         }
         if (enemys.Count == 0)
