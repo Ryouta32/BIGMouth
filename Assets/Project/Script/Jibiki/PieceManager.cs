@@ -116,6 +116,7 @@ public class PieceManager : MonoBehaviour
 
     IEnumerator FallPiece()
     {
+        ClearList();
         yield return new WaitForSeconds(StartTime);
 
         while (true)
@@ -154,7 +155,7 @@ public class PieceManager : MonoBehaviour
                     if (beta != null)
                     {
                         //betarb = beta.GetComponent<Rigidbody>();
-                        Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.Euler(0, 0, 0));
+                        Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.identity);
                         //betarb.AddForce(transform.up * power, ForceMode.Impulse);
                     }
 

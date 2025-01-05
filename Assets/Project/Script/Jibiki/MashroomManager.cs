@@ -25,6 +25,11 @@ public class MashroomManager : MonoBehaviour
         InvokeRepeating(nameof(AnimProtection), repeattime, repeattime);
     }
 
+    private void Update()
+    {
+        
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);

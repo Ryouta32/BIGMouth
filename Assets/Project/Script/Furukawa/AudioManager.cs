@@ -57,7 +57,7 @@ public class AudioManager : MonoBehaviour
     {
         for (int i = 0; i < loop; i++)
         {
-        Debug.Log("ああ");
+            //Debug.Log("ああ");
             souce.PlayOneShot(clip);
             yield return new WaitWhile(() => source.isPlaying);
         }

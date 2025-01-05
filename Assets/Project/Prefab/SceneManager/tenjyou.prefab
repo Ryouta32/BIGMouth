@@ -261,16 +261,20 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
+      propertyPath: beta
+      value: 
+      objectReference: {fileID: 9220339907145939376, guid: f6df70705204e6b49a98ab579b533135, type: 3}
+    - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: power.y
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: waittime
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: StartTime
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: RepeatTime
@@ -278,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: destroytime
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1446376073229783782, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Layer

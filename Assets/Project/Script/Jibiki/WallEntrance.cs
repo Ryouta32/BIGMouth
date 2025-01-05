@@ -10,11 +10,11 @@ public class WallEntrance : MonoBehaviour
     [SerializeField] Material PieceMaterial;
 
     [Tooltip("崩れるときのちから")]
-    [SerializeField] Vector3 power;
+    [SerializeField] float power;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Dragon"))
         {
             if (!other.gameObject.GetComponent<Rigidbody>())
             {
@@ -23,8 +23,10 @@ public class WallEntrance : MonoBehaviour
 
                 rb = other.gameObject.AddComponent<Rigidbody>();
 
-                rb.useGravity = false;
-                rb.AddForce(power);
+                //rb.useGravity = false;
+                //rb.AddForce(power);
+                rb.AddForce(other.gameObject.transform.up * power, ForceMode.Impulse);
+
 
                 Destroy(other.gameObject, 5.0f);
             }
