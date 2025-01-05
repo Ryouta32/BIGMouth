@@ -10,13 +10,13 @@ public class PieceManager : MonoBehaviour
     [SerializeField] Material PieceMaterial;
 
     [Tooltip("崩れるときのちから")]
-    [SerializeField] Vector3 power;
+    [SerializeField] float power;
 
     [Tooltip("崩れるときのちから")]
     [SerializeField] Vector3 betapower;
 
-    [Tooltip("呼び出す間隔")]
-    [SerializeField] float RepeatTime;
+    //[Tooltip("呼び出す間隔")]
+    //[SerializeField] float RepeatTime;
 
     [Tooltip("開始するまでの秒数")]
     [SerializeField] float StartTime;
@@ -38,16 +38,14 @@ public class PieceManager : MonoBehaviour
 
     //ピースのリスト
     [HideInInspector]
-    public List<Transform> PieceChildren;
+    public List<Transform> PieceChildren = new List<Transform>();
 
-    
+    [HideInInspector]
+    public bool childFlag;
 
     void Start()
     {
         PieceParent = this.gameObject;
-
-        //初期化
-        PieceChildren = new List<Transform>();
 
         //リスト追加
         for (int i = 0; i < PieceParent.transform.childCount; i++)
@@ -118,7 +116,7 @@ public class PieceManager : MonoBehaviour
 
     IEnumerator FallPiece()
     {
-        yield return new WaitForSeconds(15.0f);
+        yield return new WaitForSeconds(StartTime);
 
         while (true)
         {
@@ -151,13 +149,13 @@ public class PieceManager : MonoBehaviour
                     PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
 
                     //少しちからを入れる
-                    obj.AddForce(power);
+                    obj.AddForce(transform.up * power, ForceMode.Impulse);
 
                     if (beta != null)
                     {
-                        betarb = beta.GetComponent<Rigidbody>();
-                        Instantiate(beta, PieceChildren[rnd].gameObject.transform.position, Quaternion.Euler(180, 0, 0));
-                        betarb.AddForce(betapower);
+                        //betarb = beta.GetComponent<Rigidbody>();
+                        Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.Euler(0, 0, 0));
+                        //betarb.AddForce(transform.up * power, ForceMode.Impulse);
                     }
 
                     Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
@@ -166,6 +164,8 @@ public class PieceManager : MonoBehaviour
                     PieceChildren.Remove(PieceChildren[rnd]);
                     Destroy(obj.gameObject, destroytime);
                 }
+
+                //警告音鳴らす
                 if(PieceChildren.Count < PieceChildren.Count / 2)
                 {
                     AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
@@ -181,5 +181,20 @@ public class PieceManager : MonoBehaviour
                 SceneManager.LoadScene("GameOverScene");
             }
         }
+    }
+
+    public void AddItem(Transform item)
+    {
+        PieceChildren.Add(item);
+    }
+
+    public void RemoveItem(Transform item)
+    {
+        PieceChildren.Remove(item);
+    }
+
+    public void ClearList()
+    {
+        PieceChildren.Clear();
     }
 }

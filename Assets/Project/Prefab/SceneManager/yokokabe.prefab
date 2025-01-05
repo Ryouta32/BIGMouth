@@ -99,7 +99,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 0.01}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1933998761215611892
 MeshRenderer:
@@ -264,7 +264,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
@@ -317,7 +317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 170237659715131971, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 223228244133702916, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_LocalPosition.y
@@ -325,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 268319367340678815, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 303432557616144079, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -333,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 03bdf1e47ad802f4e908f81fb17d2ef5, type: 2}
     - target: {fileID: 325638427798199048, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 446234879547557515, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -377,11 +377,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 03bdf1e47ad802f4e908f81fb17d2ef5, type: 2}
     - target: {fileID: 751573793412567311, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 805342118370138676, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 890020758638955029, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -413,7 +413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: waittime
-      value: 5
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: StartTime
@@ -445,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493777074970945667, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1702849717496079310, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Layer
@@ -453,7 +453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1840324755964450542, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1935489178458034565, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2003994815697703721, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2083078928962024853, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_LocalPosition.y
@@ -489,15 +489,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 03bdf1e47ad802f4e908f81fb17d2ef5, type: 2}
     - target: {fileID: 2202216967139213023, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2216782817151481562, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2377100290949092830, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2394428137540531855, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_LocalPosition.y
@@ -509,7 +509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2421480634218643597, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2423597819202112954, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_LocalPosition.y
@@ -549,7 +549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2721220133866963901, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2797445146553280292, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Layer
@@ -557,11 +557,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3118850203645120146, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 3145733430184788975, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 3153842128090887144, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -645,11 +645,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3635617618249801074, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 3676775687955238954, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 3753045465862460572, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Layer
@@ -657,7 +657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3827978887090916405, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 3882114466915652345, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Layer
@@ -693,11 +693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4295299728167883398, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4427496313990496606, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4440741875921052799, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Layer
@@ -717,7 +717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4638096714848218516, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4760816092616012414, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Layer
@@ -741,15 +741,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 03bdf1e47ad802f4e908f81fb17d2ef5, type: 2}
     - target: {fileID: 5013984396774501139, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5039454290813774625, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5077005483563595687, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5138422571842554141, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -757,7 +757,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 03bdf1e47ad802f4e908f81fb17d2ef5, type: 2}
     - target: {fileID: 5232248533649480985, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5239272243796519917, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_LocalPosition.y
@@ -789,7 +789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5502614898003703931, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5507723006337032860, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -797,7 +797,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 03bdf1e47ad802f4e908f81fb17d2ef5, type: 2}
     - target: {fileID: 5509152779319109008, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5536171901623506307, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -809,7 +809,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 03bdf1e47ad802f4e908f81fb17d2ef5, type: 2}
     - target: {fileID: 5652365317946296481, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5752496882550446427, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_LocalPosition.y
@@ -825,7 +825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5858872073256637884, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5947076783014550404, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_LocalPosition.y
@@ -841,7 +841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6135254178691178617, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 6137428787889550103, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Layer
@@ -897,7 +897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6728631014903315062, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 6785454450410608141, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_LocalPosition.y
@@ -917,7 +917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6913571267503224806, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 6944662185293355319, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -961,7 +961,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 03bdf1e47ad802f4e908f81fb17d2ef5, type: 2}
     - target: {fileID: 7393166221557955675, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 7413901282698041052, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Layer
@@ -977,7 +977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7478447748911229734, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 7598584460856567886, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1021,11 +1021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7826475204655207038, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8016571882929120343, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8187261059171580981, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1045,7 +1045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8544399398267101209, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8555599321330751525, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Layer
@@ -1069,7 +1069,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 03bdf1e47ad802f4e908f81fb17d2ef5, type: 2}
     - target: {fileID: 8685936592931974760, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8692620245799582295, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1077,7 +1077,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 03bdf1e47ad802f4e908f81fb17d2ef5, type: 2}
     - target: {fileID: 8709981085523630513, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_TagString
-      value: yokokabe
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8770816980502322518, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_Materials.Array.data[0]

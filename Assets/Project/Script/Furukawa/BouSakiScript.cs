@@ -60,6 +60,7 @@ public class BouSakiScript : MonoBehaviour
     void Update()
     {
         slider.value = showerPoint;
+        //showerPoint = 1; //デバッグ用
         //スキルの判定
         if (showerPoint > 0)
         {
@@ -68,14 +69,12 @@ public class BouSakiScript : MonoBehaviour
                 ShowerObj.SetActive(true);
                 showerPoint -= Time.deltaTime * 10;
                 StartCoroutine("ShowerTime");
-                Debug.Log("waaaa");
             }
             if (OVRInput.GetUp(actionBtn) || Input.GetKeyUp(KeyCode.Space))
             {
                 ShowerObj.SetActive(false);
                 StopCoroutine("ShowerTime");
                 on = true;
-                Debug.Log("waa");
             }
         }
 
