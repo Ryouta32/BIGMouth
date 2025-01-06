@@ -27,8 +27,10 @@ public class BIGBallSC : MonoBehaviour
         {
             borderOver = false;
             matSpeed = overmatSpeed;
-            GameObject obj = Instantiate(BIGBETA, transform.position, Quaternion.identity);
+            GameObject obj = Instantiate(BIGBETA, pa.position, Quaternion.identity);
             obj.transform.parent = pa;
+            obj.transform.position = new Vector3(0,0,0);
+            obj.transform.localEulerAngles = new Vector3(0,0,0);
         }
         if (time <= max)
         {

@@ -14,7 +14,14 @@ public class MashSpawn : MonoBehaviour
     OVRScenePlane floor;
 
 
-    private void Awake()
+    //private void Awake()
+    //{
+    //    dragonprefab = GameObject.Find("DragonPrefab");
+    //    ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
+    //    //ルーム設定の読み込みが成功した時のコールバック登録
+    //    ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
+    //}
+    private void OnEnable()
     {
         dragonprefab = GameObject.Find("DragonPrefab");
         ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();

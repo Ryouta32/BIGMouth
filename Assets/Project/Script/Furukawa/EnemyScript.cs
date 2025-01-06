@@ -53,6 +53,14 @@ public class EnemyScript : MonoBehaviour
     {
         if (collision.transform.tag == "Brush")
             rb.constraints = RigidbodyConstraints.None;
+
+        if (data.sutnCount <= 0)
+        {
+            SetState(EnemyData.State.stun);
+            StartCoroutine("Stun");
+        }
+        else
+            SetState(EnemyData.State.escape);
     }
     public void initialization()
     {
@@ -89,12 +97,7 @@ public class EnemyScript : MonoBehaviour
         }
         data.sutnCount--;
         //Debug.Log(data.sutnCount + "だよｙｙｙｙｙｙｙｙ");
-        if (data.sutnCount <= 0)
-        {
-            SetState(EnemyData.State.stun);
-            StartCoroutine("Stun");
-        }else
-        SetState(EnemyData.State.escape);
+
     }
     IEnumerator Stun()//スタン中の処理
     {

@@ -6,6 +6,7 @@ public class tutorialScript : MonoBehaviour
 {
     [SerializeField] GameObject fastBeta;
     [SerializeField] GameObject Timeline;
+    [SerializeField] GameObject Spawan;
     private GameObject obj;
     AudioSource source;
     private bool isAudio=true;
@@ -13,6 +14,7 @@ public class tutorialScript : MonoBehaviour
     {
 
         Timeline.SetActive(false);
+        Spawan.SetActive(false);
         //AudioManager.manager.PlayPoint(AudioManager.manager.data.announce, this.gameObject);
         source = GetComponent<AudioSource>();
         source.clip = AudioManager.manager.data.announce;
@@ -23,13 +25,11 @@ public class tutorialScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((!source.isPlaying && isAudio)||OVRInput.Get(OVRInput.RawButton.RHandTrigger)||Input.GetKeyDown(KeyCode.LeftShift))
+        if ((!source.isPlaying && isAudio)||(OVRInput.GetDown(OVRInput.RawButton.RHandTrigger)&&isAudio)||Input.GetKeyDown(KeyCode.LeftShift))
         {
             isAudio = false;
             source.Stop();
-            //Play();
-            obj = Instantiate(fastBeta, transform.position, Quaternion.identity);
-            obj.GetComponent<TutorialEnemy>().SetTutorial(this);
+            Play();
             if (Input.GetKeyDown(KeyCode.LeftShift))
                 CLEAR();
         }
@@ -52,6 +52,7 @@ public class tutorialScript : MonoBehaviour
         source.clip = AudioManager.manager.data.announce;
         source.Play();
         Timeline.SetActive(true);
+        Spawan.SetActive(true);
         Debug.Log("げーむかいしー");
         if (obj != null)
             Destroy(obj);
