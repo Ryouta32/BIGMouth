@@ -19,9 +19,12 @@ public class BigEnemyScript : MonoBehaviour
     private void Start()
     {
         data = new EnemyData(_data);
-
     }
-
+    private void Update()
+    {
+        transform.localPosition =new Vector3(0,0,0) ;
+        transform.localEulerAngles = new Vector3(0, 0, 0);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (erase)
@@ -64,6 +67,7 @@ public class BigEnemyScript : MonoBehaviour
         if (obj.name == "Mash")
             Instantiate(obj, EnemyManager.tentPos, Quaternion.identity);
     }
+    public void Erase() => erase = true;
     public void OBJScaleUP()
     {
         //erasedCount++;

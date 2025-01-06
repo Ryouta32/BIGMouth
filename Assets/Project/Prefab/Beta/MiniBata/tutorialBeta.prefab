@@ -341,15 +341,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 9.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 9.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 9.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       propertyPath: m_LocalPosition.x
@@ -460,6 +460,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8907430200015701402}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4294135051480056070}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 359625783544480655}
   m_SourcePrefab: {fileID: 100100000, guid: 5675dcc39c60df941bdd6e5cf0b8f820, type: 3}
 --- !u!4 &8412419435381056266 stripped
 Transform:
@@ -554,5 +560,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stunEffect: {fileID: 3748150955440771420}
   DestroyEffect: {fileID: 3349963419385957901, guid: 3d971a8f0b9b77c4f8a6dd9fad3f2df4, type: 3}
-  _data: {fileID: 11400000, guid: 8da10429ed97e2547a091c063e65ce05, type: 2}
+  _data: {fileID: 11400000, guid: af51c772fff3a294c972b1720aea7336, type: 2}
   bouSaki: {fileID: 0}
+--- !u!114 &4294135051480056070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9220339907145939376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b9d666ba3a3b04b8402fffe789be77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  rotatedis: 0
+  ismove: 1
+  gravityVec: {x: 0, y: 1, z: 0}
+  move: 0
+--- !u!114 &359625783544480655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9220339907145939376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd7ec35d520844a91a1e30b9290a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brush:
+    brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
+    brushNormalTexture: {fileID: 0}
+    brushHeightTexture: {fileID: 0}
+    brushScale: 0.045
+    rotateAngle: 0
+    brushNormalBlend: 0.291
+    brushHeightBlend: 1
+    brushColor: {r: 0.41, g: 0.33, b: 0.265, a: 1}
+    colorBlendType: 3
+    normalBlendType: 0
+    heightBlendType: 0
+  useMethodType: 1
+  DrauseMethodType: 0
+  erase: 0

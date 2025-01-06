@@ -45,6 +45,10 @@ public class BIGEnemyAnima : MonoBehaviour
             }
             setLimit();
         }
+        if (count >= 2)
+        {
+            bigSc.Erase();
+        }
     }
     private void setLimit()
     {

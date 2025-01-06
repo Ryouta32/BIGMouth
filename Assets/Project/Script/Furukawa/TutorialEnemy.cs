@@ -50,10 +50,13 @@ public class TutorialEnemy : MonoBehaviour
                 Debug.Log("しっぱい！");
                 Destroy(this.gameObject);
             }
-            data.sutnCount--;
+            else
+            {
+                data.sutnCount--;
+            }
             if (data.sutnCount <= 0)
             {
-                SetState(EnemyData.State.stun);
+        StunReturn();
                 StartCoroutine("Stun");
             }
             else
@@ -65,9 +68,10 @@ public class TutorialEnemy : MonoBehaviour
         stunEffect.SetActive(true);
         Debug.Log("スタンエフェクト");
         AudioManager.manager.PlayPoint(AudioManager.manager.data.ministun, this.gameObject);
+        SetState(EnemyData.State.stun);
+
         yield return new WaitForSeconds(data.sutnTime);
         SetState(EnemyData.State.general);
-        StunReturn();
         stunEffect.SetActive(false);
     }
     private void OnDestroy()
