@@ -59,6 +59,8 @@ public class BouSakiScript : MonoBehaviour
 
     void Update()
     {
+        if (showerPoint >= showerLimit)
+            showerPoint = showerLimit;
         slider.value = showerPoint;
         //showerPoint = 1; //デバッグ用
         //スキルの判定
