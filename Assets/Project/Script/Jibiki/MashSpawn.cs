@@ -7,6 +7,7 @@ public class MashSpawn : MonoBehaviour
 {
     [SerializeField] GameObject kinokoprefab;
     [SerializeField] GameObject tentacleprefab;
+    [SerializeField] EnemyManager manager;
     OVRSceneManager ovrSceneManager;
     GameObject dragonprefab;
     OVRScenePlane floor;
@@ -42,11 +43,13 @@ public class MashSpawn : MonoBehaviour
                 if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
                 {
                     transform.position = hit.point;
-                    Instantiate(kinokoprefab, pos, Quaternion.identity);
+                    GameObject obj = Instantiate(kinokoprefab, pos, Quaternion.identity);
+                    obj.GetComponent<EnemyScript>().setManager(manager);
                 }
                 else
                 {
-                    Instantiate(kinokoprefab, pos, Quaternion.identity);
+                    GameObject obj = Instantiate(kinokoprefab, pos, Quaternion.identity);
+                    obj.GetComponent<EnemyScript>().setManager(manager);
                 }
             }
 
@@ -58,11 +61,13 @@ public class MashSpawn : MonoBehaviour
                 if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
                 {
                     transform.position = hit.point;
-                    Instantiate(tentacleprefab, pos, Quaternion.identity);
+                    GameObject obj = Instantiate(tentacleprefab, pos, Quaternion.identity);
+                    obj.GetComponent<EnemyScript>().setManager(manager);
                 }
                 else
                 {
-                    Instantiate(tentacleprefab, pos, Quaternion.identity);
+                    GameObject obj = Instantiate(tentacleprefab, pos, Quaternion.identity);
+                    obj.GetComponent<EnemyScript>().setManager(manager);
                 }
             }
 

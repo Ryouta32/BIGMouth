@@ -114,15 +114,15 @@ public class EnemyScript : MonoBehaviour
     public void setManager(EnemyManager x) => manager = x;
     public void destroyObj()
     {
-        //if (GetComponent<NormalBetaManager>())
-        //{
-        //    manager.killNormal();
-        //}
-        //if (GetComponent<MashroomManager>())
-        //{
-        //    manager.killMash();
-        //}
-        //manager.DestroyEnemys(this.gameObject); 
+        if (GetComponent<NormalBetaManager>())
+        {
+            manager.killNormal();
+        }
+        if (GetComponent<MashroomManager>())
+        {
+            manager.killMash();
+        }
+        manager.DestroyEnemys(this.gameObject);
     }
     public void SetState(EnemyData.State sta)=>data.state = sta;
 }
