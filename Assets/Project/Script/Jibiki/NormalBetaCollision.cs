@@ -21,6 +21,7 @@ public class NormalBetaCollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("shower"))
         {
+            anim.SetBool("Stun", true);
             enemyScript.data.sutnCount = 0;
         }
         if (other.gameObject.CompareTag("Brush"))

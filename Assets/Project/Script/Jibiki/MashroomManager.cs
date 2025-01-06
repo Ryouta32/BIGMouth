@@ -22,7 +22,7 @@ public class MashroomManager : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         boxCollider = gameObject.GetComponent<BoxCollider>();
         enemyScript = gameObject.GetComponent<EnemyScript>();
-        InvokeRepeating(nameof(AnimProtection), repeattime, repeattime);
+        //InvokeRepeating(nameof(AnimProtection), repeattime, repeattime);
     }
 
     private void Update()
@@ -40,6 +40,7 @@ public class MashroomManager : MonoBehaviour
         if (other.gameObject.CompareTag("Brush") && stateInfo.IsName(targetAnimationName))
         {
             enemyScript.HitDamage();
+            AnimProtection();
         }
         else
         {
