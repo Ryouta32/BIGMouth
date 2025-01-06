@@ -37,6 +37,7 @@ public class TutorialEnemy : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(data.sutnCount);
         if (collision.gameObject.CompareTag("Brush"))
         {
             AudioManager.manager.PlayPoint(AudioManager.manager.data.miniFollDown, this.gameObject);
@@ -46,7 +47,7 @@ public class TutorialEnemy : MonoBehaviour
             {
                 //失敗アナウンスに変える
                 //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
-                tutorialSC.Retry();
+                //tutorialSC.Retry();
                 Debug.Log("しっぱい！");
                 Destroy(this.gameObject);
             }
@@ -54,13 +55,7 @@ public class TutorialEnemy : MonoBehaviour
             {
                 data.sutnCount--;
             }
-            if (data.sutnCount <= 0)
-            {
-        StunReturn();
-                StartCoroutine("Stun");
-            }
-            else
-                SetState(EnemyData.State.escape);
+
         }
     }
     IEnumerator Stun()//スタン中の処理
@@ -71,8 +66,19 @@ public class TutorialEnemy : MonoBehaviour
         SetState(EnemyData.State.stun);
 
         yield return new WaitForSeconds(data.sutnTime);
+
         SetState(EnemyData.State.general);
         stunEffect.SetActive(false);
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (data.sutnCount == 0)
+        {
+            StunReturn();
+            StartCoroutine("Stun");
+        }
+        else
+            SetState(EnemyData.State.escape);
     }
     private void OnDestroy()
     {

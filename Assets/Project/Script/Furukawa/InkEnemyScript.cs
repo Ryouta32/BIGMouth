@@ -27,7 +27,6 @@ public class InkEnemyScript : MonoBehaviour
     }
     private void OnCollisionStay(Collision collision)
     {
-        Debug.Log("aa");
         time += Time.deltaTime;
         if (time >= 0.1f)
         {
