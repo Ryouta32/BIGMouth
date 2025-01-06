@@ -10,7 +10,7 @@ public class EntranceManager : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = gameObject.GetComponent<Animator>();
     }
     public void AnimSet()
     {

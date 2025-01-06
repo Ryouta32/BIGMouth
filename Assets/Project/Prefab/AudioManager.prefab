@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8ead19f991138e14d93273d3abbc8dd3, type: 2}
+  BGMvol: 100
+  SEvol: 100
 --- !u!82 &2093305452038900104
 AudioSource:
   m_ObjectHideFlags: 0

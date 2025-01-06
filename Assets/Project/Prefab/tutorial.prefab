@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a773341ec8a71f43ad8bdf5fb598cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0
   fastBeta: {fileID: 9220339907145939376, guid: 7d43d8ce4d4760f4ab856d8448460243, type: 3}
   Timeline: {fileID: 0}
+  BetaSpawnManager: {fileID: 0}
 --- !u!82 &2800820805042952136
 AudioSource:
   m_ObjectHideFlags: 0
