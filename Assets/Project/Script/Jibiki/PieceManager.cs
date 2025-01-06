@@ -179,7 +179,7 @@ public class PieceManager : MonoBehaviour
                 CancelInvoke();
 
                 //ゲームオーバーシーンに行く
-                SceneManager.LoadScene("GameOverScene");
+                //SceneManager.LoadScene("GameOverScene");
             }
         }
     }

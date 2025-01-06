@@ -112,7 +112,7 @@ public class NormalBetaManager : MonoBehaviour
     {
         rot = Random.Range(0, 360);
         transform.Rotate(0, rot, 0);
-        anim.SetTrigger("Attack");
+        anim.SetTrigger("Stun");
     }
 
     void Stunsound()
