@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3399245460074078240}
   m_Layer: 0
   m_Name: pass
-  m_TagString: Untagged
+  m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,7 +180,6 @@ MonoBehaviour:
   anim: {fileID: 423200112629932924}
   enemyScript: {fileID: 8011091303193667494}
   normalBetaManager: {fileID: 513471606608136623}
-  repeattime: 0
 --- !u!1001 &2842625100149093487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -559,6 +558,8 @@ MonoBehaviour:
   stunEffect: {fileID: 8273558145407923917}
   damageEffect: {fileID: 2510562678213512748, guid: 0beb1d15c494365458144cc18fef2d60, type: 3}
   DestroyEffect: {fileID: 689374704402498535, guid: 2eeadfe0322da534899490506495a1f6, type: 3}
+  rb: {fileID: 0}
+  inHale: 0
   data: {fileID: 0}
 --- !u!114 &513471606608136623
 MonoBehaviour:
@@ -573,8 +574,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 4087128772947430984, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
-  Children: []
-  colsignal: 0
   InEffect: {fileID: 2273197572554762787}
   repeattime: 5
   col:
@@ -583,6 +582,8 @@ MonoBehaviour:
   - {fileID: 3944703389048032647}
   - {fileID: 1049717184562232028}
   - {fileID: 8351984558009861351}
+  Children: []
+  colsignal: 0
 --- !u!1 &5159553088080615833 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2240151287705473546, guid: bda9727bedd819f47b5b6bb04a39bc66, type: 3}
@@ -803,6 +804,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2376124938231976836}
     m_Modifications:
+    - target: {fileID: 139881414119525500, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
+      propertyPath: m_TagString
+      value: Normal
+      objectReference: {fileID: 0}
     - target: {fileID: 1367224238859608329, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
       propertyPath: InitialModule.startColor.maxGradient.key0.b
       value: 0.5058824
@@ -855,6 +860,14 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0.34117648
       objectReference: {fileID: 0}
+    - target: {fileID: 1807497492873912550, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
+      propertyPath: m_TagString
+      value: Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978012001995285320, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
+      propertyPath: m_TagString
+      value: Normal
+      objectReference: {fileID: 0}
     - target: {fileID: 2424150570057181497, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
       propertyPath: m_Name
       value: ripples_2
@@ -862,6 +875,10 @@ PrefabInstance:
     - target: {fileID: 2424150570057181497, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424150570057181497, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
+      propertyPath: m_TagString
+      value: Normal
       objectReference: {fileID: 0}
     - target: {fileID: 2493256811853412601, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -910,6 +927,14 @@ PrefabInstance:
     - target: {fileID: 5793187486597339855, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990774165741773840, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
+      propertyPath: m_TagString
+      value: Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121242030198274364, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
+      propertyPath: m_TagString
+      value: Normal
       objectReference: {fileID: 0}
     - target: {fileID: 6550439999789638781, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -991,6 +1016,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8787303227023431061, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
+      propertyPath: m_TagString
+      value: Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 9190292543583440508, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
+      propertyPath: m_TagString
+      value: Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1022,9 +1055,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 186174307287954178, guid: 867059f1e9430404784932f6dc226cad, type: 3}
+      propertyPath: m_TagString
+      value: Normal
+      objectReference: {fileID: 0}
     - target: {fileID: 1551405703350216236, guid: 867059f1e9430404784932f6dc226cad, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551405703350216236, guid: 867059f1e9430404784932f6dc226cad, type: 3}
+      propertyPath: m_TagString
+      value: Normal
       objectReference: {fileID: 0}
     - target: {fileID: 2185353936716547790, guid: 867059f1e9430404784932f6dc226cad, type: 3}
       propertyPath: m_LocalScale.x
@@ -1045,6 +1086,10 @@ PrefabInstance:
     - target: {fileID: 3352155709582963434, guid: 867059f1e9430404784932f6dc226cad, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352155709582963434, guid: 867059f1e9430404784932f6dc226cad, type: 3}
+      propertyPath: m_TagString
+      value: Normal
       objectReference: {fileID: 0}
     - target: {fileID: 6453488969280514719, guid: 867059f1e9430404784932f6dc226cad, type: 3}
       propertyPath: m_LocalScale.x
@@ -1137,6 +1182,10 @@ PrefabInstance:
     - target: {fileID: 9014579824286966133, guid: 867059f1e9430404784932f6dc226cad, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014579824286966133, guid: 867059f1e9430404784932f6dc226cad, type: 3}
+      propertyPath: m_TagString
+      value: Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

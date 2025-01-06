@@ -33,6 +33,10 @@ public class MashroomManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        if(other.gameObject.CompareTag("shower") && stateInfo.IsName(targetAnimationName))
+        {
+            enemyScript.data.sutnCount = 0;
+        }
         if (other.gameObject.CompareTag("Brush") && stateInfo.IsName(targetAnimationName))
         {
             enemyScript.HitDamage();
