@@ -6,9 +6,12 @@ public class DragonScript : MonoBehaviour
 {
 
     [SerializeField] Transform bigSpawnPos;
+    [SerializeField] EnemyManager manager;
+    [SerializeField] BetaSpawn spawn;
 
-    private void Start()
+    public void Gamestart()
     {
-        GameObject.Find("EnemyManager").GetComponent<EnemyManager>().SetBossPos(bigSpawnPos);
+        spawn.spawan();
+        manager.GameStart();
     }
 }

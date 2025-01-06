@@ -58,6 +58,11 @@ public class BigEnemyScript : MonoBehaviour
     }
     public void Spawn(GameObject obj)
     {
+        if (obj.name == "TentacleBeta")
+            Instantiate(obj, EnemyManager.tentPos, Quaternion.identity);
+
+        if (obj.name == "Mash")
+            Instantiate(obj, EnemyManager.tentPos, Quaternion.identity);
     }
     public void OBJScaleUP()
     {

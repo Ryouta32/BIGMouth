@@ -10,7 +10,10 @@ public class BIGBallSC : MonoBehaviour
     [SerializeField] float max = 10;
     [SerializeField] float border;
     [SerializeField] float overmatSpeed;
+    [SerializeField] GameObject BIGBETA;
+    private Transform pa;
     float time = 0;
+    bool borderOver=true;
     void Start()
     {
         mat.SetFloat("_hagesisa", 0);
@@ -20,8 +23,13 @@ public class BIGBallSC : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime*matSpeed;
-        if (time >= border)
-            matSpeed =overmatSpeed;
+        if (time >= border&&borderOver)
+        {
+            borderOver = false;
+            matSpeed = overmatSpeed;
+            GameObject obj = Instantiate(BIGBETA, transform.position, Quaternion.identity);
+            obj.transform.parent = pa;
+        }
         if (time <= max)
         {
             mat.SetFloat("_hagesisa", time);
@@ -29,7 +37,8 @@ public class BIGBallSC : MonoBehaviour
         }
         else
         {
-            Destroy(transform.parent.gameObject);
+            Destroy(transform.gameObject);
         }
     }
+    public void setParent(Transform tra) => pa = tra;
 }

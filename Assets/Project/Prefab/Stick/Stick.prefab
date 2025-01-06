@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ovr: {fileID: 0}
   saki: {fileID: 8784399990056825994}
-  offset: {x: 0, y: -0.53, z: 0}
+  offset: {x: 0, y: -0.3, z: 0}
   text: {fileID: 0}
 --- !u!1 &1987312953438335151
 GameObject:
@@ -628,7 +628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4910509503009269442
 Transform:
   m_ObjectHideFlags: 0
@@ -4407,7 +4407,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -6700,13 +6700,13 @@ MonoBehaviour:
   ShineEffect: {fileID: 8162550010733454163, guid: 1306156496910684ea076e09c68aaec2, type: 3}
   SuctionObj: {fileID: 8174670952956734624, guid: 9025369030f808a4d95e63cdc659079b, type: 3}
   slider: {fileID: 8188297735176210497}
-  showerLimit: 0
-  showerThreshold: 0
+  OnHale: 0
+  showerLimit: 100
+  showerThreshold: 30
   coolTime: 5
   image: {fileID: 5097283247662555605}
   InholeSp: {fileID: -1044079551, guid: 2faf94e324453f64d810f6df73ba6fa1, type: 3}
   NoholeSp: {fileID: 1113981920, guid: 2faf94e324453f64d810f6df73ba6fa1, type: 3}
-  OnHale: 0
 --- !u!65 &1195390217049924833
 BoxCollider:
   m_ObjectHideFlags: 0
