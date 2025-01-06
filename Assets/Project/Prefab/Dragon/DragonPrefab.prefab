@@ -103,6 +103,14 @@ PrefabInstance:
       value: 14.668383
       objectReference: {fileID: 0}
     - target: {fileID: 1927598425095657273, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
+      propertyPath: MashTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927598425095657273, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
+      propertyPath: TentaTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927598425095657273, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -321,6 +329,10 @@ MonoBehaviour:
   bigSpawnPos: {fileID: 2784400456790957696}
   manager: {fileID: 4576570194212363637}
   spawn: {fileID: 197184519674163065}
+  TentSeki: {fileID: 2605091130941172133, guid: f9243961de5be2f44ba9cf28cda49236, type: 3}
+  MashSeki: {fileID: 8661002875846161052, guid: 3d6ae1d3c0b71d641879342f735c96e4, type: 3}
+  Cough: {fileID: 1672600128018397333}
+  power: 10
 --- !u!114 &33298924702648174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +357,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4a58326efcdee45ad66547f11a81dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1672600128018397333 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6029607599405119983, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
+  m_PrefabInstance: {fileID: 4943611941093802362}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2784400456790957696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7079396555508375546, guid: 8856aa290f51c164d85380ab140dea6b, type: 3}
