@@ -8,6 +8,7 @@ public class MashSpawn : MonoBehaviour
     [SerializeField] GameObject kinokoprefab;
     [SerializeField] GameObject tentacleprefab;
     [SerializeField] EnemyManager manager;
+    [SerializeField] GameObject Tutorial;
     OVRSceneManager ovrSceneManager;
     GameObject dragonprefab;
     OVRScenePlane floor;
@@ -39,7 +40,7 @@ public class MashSpawn : MonoBehaviour
             if　(classification.Contains(OVRSceneManager.Classification.Bed))
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
-
+                EnemyManager.mashPos=pos;
                 if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
                 {
                     transform.position = hit.point;
@@ -57,6 +58,7 @@ public class MashSpawn : MonoBehaviour
             if (classification.Contains(OVRSceneManager.Classification.Lamp))
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
+                EnemyManager.tentPos = pos;
 
                 if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, 1f, LayerMask.GetMask("Wall")))
                 {
@@ -82,6 +84,11 @@ public class MashSpawn : MonoBehaviour
                 //    Quaternion hitRotation = hit.transform.rotation;
                 //    dragonprefab.transform.rotation = hitRotation;
                 //}
+            }
+            if (classification.Contains(OVRSceneManager.Classification.Desk))
+            {
+                Vector3 pos = new Vector3(classification.transform.position.x, posy + 1.0f, classification.transform.position.z + 2f);
+                Tutorial.transform.position = pos;
             }
         }
     }

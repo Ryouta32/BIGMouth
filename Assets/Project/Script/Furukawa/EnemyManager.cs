@@ -13,20 +13,25 @@ public class EnemyManager : MonoBehaviour
      BetaSpawn betaSpawn;
     [Tooltip("ボスが出るまでのキル数")][SerializeField] int bossCount;
     [HideInInspector] public int killCount;
-    bool normal;
-    bool mash;
-
+    bool normal=false;
+    bool mash=false;
+    bool spawn = true;
+    [SerializeField] bool debugmode;
+    public static Vector3 mashPos;
+    public static Vector3 tentPos;
     private void Start()
     {
         betaSpawn = GetComponent<BetaSpawn>();
-    }
-    public void ClearCheck() {
-        if (bossCount <= killCount&&mash&&normal)
-        {
-           GameObject obj= Instantiate(BIGBETA, bossPos.position, Quaternion.identity);
-            obj.GetComponent<Rigidbody>().AddForce(obj.transform.forward.normalized * 300);
-            Instantiate(Ball, bossPos.position, Quaternion.identity);
 
+    }
+
+    public void ClearCheck() {
+        Debug.Log(bossCount + " " + killCount);
+        if ((bossCount <= killCount)&&mash&&normal&&spawn)
+        {
+            spawn = false;
+            GameObject obj = Instantiate(Ball, bossPos.position, Quaternion.identity);
+            obj.GetComponent<BIGBallSC>().setParent(bossPos);
         }
         if (enemys.Count == 0)
         {
@@ -41,6 +46,16 @@ public class EnemyManager : MonoBehaviour
                 x++;
         }
     }
+
+    public void GameStart()
+    {
+        if (debugmode)
+        {
+            normal = true;
+            mash = true;
+            ClearCheck();
+        }
+    }
     
     public void AddEnemys(GameObject obj) => enemys.Add(obj);
     public void DestroyEnemys(GameObject obj) { 
@@ -52,5 +67,4 @@ public class EnemyManager : MonoBehaviour
     public void killMash() =>mash=true;
     public void ResetEnemys() => enemys=new List<GameObject>();
     public bool SpawnCheck() => enemys.Count>=spawnLimit;
-    public void SetBossPos(Transform tra) => bossPos = tra;
 }

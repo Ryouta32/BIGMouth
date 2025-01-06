@@ -31,7 +31,7 @@ public class TutorialEnemy : MonoBehaviour
             inHale = true;
             //成功アナウンスに変える
             AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
-
+            tutorialSC.CLEAR();
             Destroy(this.gameObject);
         }
     }

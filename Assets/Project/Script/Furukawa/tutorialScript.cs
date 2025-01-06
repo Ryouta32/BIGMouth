@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class tutorialScript : MonoBehaviour
 {
-    [SerializeField] float time;
     [SerializeField] GameObject fastBeta;
     [SerializeField] GameObject Timeline;
     private GameObject obj;
@@ -18,15 +17,21 @@ public class tutorialScript : MonoBehaviour
         source = GetComponent<AudioSource>();
         source.clip = AudioManager.manager.data.announce;
         source.Play();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((!source.isPlaying && isAudio)||(OVRInput.Get(OVRInput.RawButton.RHandTrigger)))
+        if ((!source.isPlaying && isAudio)||OVRInput.Get(OVRInput.RawButton.RHandTrigger)||Input.GetKeyDown(KeyCode.LeftShift))
         {
             isAudio = false;
-            Play();
+            source.Stop();
+            //Play();
+            obj = Instantiate(fastBeta, transform.position, Quaternion.identity);
+            obj.GetComponent<TutorialEnemy>().SetTutorial(this);
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+                CLEAR();
         }
     }
     public void Play()
@@ -48,5 +53,8 @@ public class tutorialScript : MonoBehaviour
         source.Play();
         Timeline.SetActive(true);
         Debug.Log("げーむかいしー");
+        if (obj != null)
+            Destroy(obj);
+        Destroy(gameObject);
     }
 }

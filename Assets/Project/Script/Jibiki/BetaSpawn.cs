@@ -34,11 +34,11 @@ public class BetaSpawn : MonoBehaviour
         // time秒ごとにSpawn呼び出す
         //InvokeRepeating(nameof(Spawn), 1, time);
 
-        StartCoroutine("Spawn");
         Debug.Log("x:" + x + "z:" + z);
 
-        manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
+        manager = gameObject.GetComponent<EnemyManager>();
     }
+
     public void spawan()
     {
         StartCoroutine("Spawn");
@@ -53,7 +53,7 @@ public class BetaSpawn : MonoBehaviour
             // 角度ランダム生成
 
             if(manager.SpawnCheck())
-                yield break;
+                break;
             int rnd = Random.Range(0, 360);
             GameObject obj = Instantiate(spawnPrefab, spawnPos.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
             if (obj.GetComponent<EnemyScript>())

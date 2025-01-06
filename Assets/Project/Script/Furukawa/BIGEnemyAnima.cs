@@ -31,7 +31,6 @@ public class BIGEnemyAnima : MonoBehaviour
         if (time > limit)
         {
             float x = Random.Range(0, 3);
-            Debug.Log("x" + x);
             switch (x)
             {
                 case 0:
@@ -51,7 +50,6 @@ public class BIGEnemyAnima : MonoBehaviour
     {
         limit = Random.Range(5, 10);
         time = 0;
-        Debug.Log(limit + "limi");
             }
     public void Break()
     {
