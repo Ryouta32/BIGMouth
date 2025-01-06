@@ -19,7 +19,11 @@ public class NormalBetaCollision : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Brush"))
+        if (other.gameObject.CompareTag("shower"))
+        {
+            enemyScript.data.sutnCount = 0;
+        }
+        if (other.gameObject.CompareTag("Brush"))
         {
             if (normalBetaManager.colsignal)
             {
