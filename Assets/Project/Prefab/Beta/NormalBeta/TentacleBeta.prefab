@@ -58,6 +58,10 @@ PrefabInstance:
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 3215251464029470389}
+    - target: {fileID: 8553059467459396418, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8575902020261572665, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_Name
       value: shokushuBetaidle 1

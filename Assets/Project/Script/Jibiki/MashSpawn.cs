@@ -14,20 +14,20 @@ public class MashSpawn : MonoBehaviour
     OVRScenePlane floor;
 
 
-    //private void Awake()
-    //{
-    //    dragonprefab = GameObject.Find("DragonPrefab");
-    //    ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
-    //    //ルーム設定の読み込みが成功した時のコールバック登録
-    //    ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
-    //}
-    private void OnEnable()
+    private void Awake()
     {
         dragonprefab = GameObject.Find("DragonPrefab");
         ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
     }
+    //private void OnEnable()
+    //{
+    //    dragonprefab = GameObject.Find("DragonPrefab");
+    //    ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
+    //    //ルーム設定の読み込みが成功した時のコールバック登録
+    //    ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
+    //}
 
     void onAnchorsLoaded()
     {
@@ -80,21 +80,21 @@ public class MashSpawn : MonoBehaviour
                 }
             }
 
-            ////ドラゴンの生成位置
-            //if (classification.Contains(OVRSceneManager.Classification.Storage))
-            //{
-            //    Vector3 pos = new Vector3(classification.transform.position.x, posy + 1.0f, classification.transform.position.z + 2f);
-            //    dragonprefab.transform.position = pos;
-
-            //    //if (Physics.Raycast(dragonprefab.transform.position, transform.forward, out RaycastHit hit, 10f, LayerMask.GetMask("Obstacle")))
-            //    //{
-            //    //    Quaternion hitRotation = hit.transform.rotation;
-            //    //    dragonprefab.transform.rotation = hitRotation;
-            //    //}
-            //}
-            if (classification.Contains(OVRSceneManager.Classification.Desk))
+            //ドラゴンの生成位置
+            if (classification.Contains(OVRSceneManager.Classification.Storage))
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, posy + 1.0f, classification.transform.position.z + 2f);
+                dragonprefab.transform.position = pos;
+
+                //if (Physics.Raycast(dragonprefab.transform.position, transform.forward, out RaycastHit hit, 10f, LayerMask.GetMask("Obstacle")))
+                //{
+                //    Quaternion hitRotation = hit.transform.rotation;
+                //    dragonprefab.transform.rotation = hitRotation;
+                //}
+            }
+            if (classification.Contains(OVRSceneManager.Classification.Desk))
+            {
+                Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
                 Tutorial.transform.position = pos;
             }
         }
