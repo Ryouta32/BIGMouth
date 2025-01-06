@@ -7,17 +7,19 @@ public class MashSpawn : MonoBehaviour
 {
     [SerializeField] GameObject kinokoprefab;
     [SerializeField] GameObject tentacleprefab;
-    [SerializeField] EnemyManager manager;
     [SerializeField] GameObject Tutorial;
-    OVRSceneManager ovrSceneManager;
-    GameObject dragonprefab;
-    OVRScenePlane floor;
+    [SerializeField] EnemyManager manager;
 
+    OVRSceneManager ovrSceneManager;
+    OVRScenePlane floor;
+    GameObject dragonprefab;
+    List<Transform> NormalObj = new List<Transform>();
 
     private void Awake()
     {
         dragonprefab = GameObject.Find("DragonPrefab");
         ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
+
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
     }
@@ -53,11 +55,15 @@ public class MashSpawn : MonoBehaviour
                     transform.position = hit.point;
                     GameObject obj = Instantiate(kinokoprefab, pos, Quaternion.identity);
                     obj.GetComponent<EnemyScript>().setManager(manager);
+                    obj.SetActive(false);
+                    NormalObj.Add(obj.transform);
                 }
                 else
                 {
                     GameObject obj = Instantiate(kinokoprefab, pos, Quaternion.identity);
                     obj.GetComponent<EnemyScript>().setManager(manager);
+                    obj.SetActive(false);
+                    NormalObj.Add(obj.transform);
                 }
             }
 
@@ -72,11 +78,15 @@ public class MashSpawn : MonoBehaviour
                     transform.position = hit.point;
                     GameObject obj = Instantiate(tentacleprefab, pos, Quaternion.identity);
                     obj.GetComponent<EnemyScript>().setManager(manager);
+                    obj.SetActive(false);
+                    NormalObj.Add(obj.transform);
                 }
                 else
                 {
                     GameObject obj = Instantiate(tentacleprefab, pos, Quaternion.identity);
                     obj.GetComponent<EnemyScript>().setManager(manager);
+                    obj.SetActive(false);
+                    NormalObj.Add(obj.transform);
                 }
             }
 
@@ -86,17 +96,28 @@ public class MashSpawn : MonoBehaviour
                 Vector3 pos = new Vector3(classification.transform.position.x, posy + 1.0f, classification.transform.position.z + 2f);
                 dragonprefab.transform.position = pos;
 
-                //if (Physics.Raycast(dragonprefab.transform.position, transform.forward, out RaycastHit hit, 10f, LayerMask.GetMask("Obstacle")))
-                //{
-                //    Quaternion hitRotation = hit.transform.rotation;
-                //    dragonprefab.transform.rotation = hitRotation;
-                //}
+                if (Physics.Raycast(dragonprefab.transform.position, transform.forward, out RaycastHit hit, 10f, LayerMask.GetMask("Wall")))
+                {
+                    Quaternion hitRotation = hit.transform.rotation;
+                    dragonprefab.transform.rotation = hitRotation;
+                }
             }
-            if (classification.Contains(OVRSceneManager.Classification.Desk))
+
+            //チュートリアルオブジェクト
+            if (classification.Contains(OVRSceneManager.Classification.Table))
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
-                Tutorial.transform.position = pos;
+                Instantiate(Tutorial, pos, Quaternion.identity);
             }
+        }
+    }
+
+    //チュートリアルが終わったら中ベタ表示させる
+    public void ActiveObj()
+    {
+        for(int i = 0; i < NormalObj.Count; i++)
+        {
+            NormalObj[i].transform.gameObject.SetActive(true);
         }
     }
 }

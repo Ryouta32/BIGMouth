@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class MashroomManager : MonoBehaviour
 {
-    [Tooltip("キノコブロックするときの間隔")]
-    [SerializeField] float repeattime;
+    //[Tooltip("キノコブロックするときの間隔")]
+    [SerializeField] float waittime;
 
     Animator anim;
     BoxCollider boxCollider;
@@ -40,23 +40,19 @@ public class MashroomManager : MonoBehaviour
         if (other.gameObject.CompareTag("Brush") && stateInfo.IsName(targetAnimationName))
         {
             enemyScript.HitDamage();
-            AnimProtection();
+            StartCoroutine("AnimProtection");
         }
         else
         {
-            Debug.Log("なったーーーーーーーーーーーーーーーーーーーーーー");
+            //Debug.Log("なったーーーーーーーーーーーーーーーーーーーーーー");
             AudioManager.manager.PlayPoint(AudioManager.manager.data.mush, this.gameObject);
         }
     }
 
-    void AnimProtection()
+    IEnumerator AnimProtection()
     {
-        //boxCollider.enabled = false;
         anim.SetTrigger("Protection");
-    }
-
-    void ProtectionEnd()
-    {
-        //boxCollider.enabled = true;
+        yield return new WaitForSeconds(waittime);
+        anim.SetTrigger("up");
     }
 }

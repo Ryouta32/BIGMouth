@@ -9,7 +9,7 @@ public class bouScript : MonoBehaviour
     [SerializeField] OVRCameraRig ovr;
     [SerializeField] BouSakiScript saki;
     [SerializeField] Vector3 offset;
-    [SerializeField] LogSC text;
+    //[SerializeField] LogSC text;
     Vector3 move;
     Vector3 oldPos;
     Vector3 hitpos;

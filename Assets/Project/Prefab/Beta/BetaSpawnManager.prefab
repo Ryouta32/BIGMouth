@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1368633007794997608
 Transform:
   m_ObjectHideFlags: 0
@@ -46,3 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kinokoprefab: {fileID: 7627689597627893192, guid: eee307ba7d3cac04b97b8e7fdadbc9c7, type: 3}
   tentacleprefab: {fileID: 1268547068583936198, guid: f6334ca1f77d5f34f874bd10cf676596, type: 3}
+  Tutorial: {fileID: 0}
+  manager: {fileID: 0}

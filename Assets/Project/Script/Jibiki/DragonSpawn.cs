@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/* 部屋のオブジェクトを取得して生成させる */
+/* 部屋のオブジェクトを取得してドラゴン生成させる */
 
 public class DragonSpawn : MonoBehaviour
 {

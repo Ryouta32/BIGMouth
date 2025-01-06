@@ -6,20 +6,17 @@ public class tutorialScript : MonoBehaviour
 {
     [SerializeField] GameObject fastBeta;
     [SerializeField] GameObject Timeline;
-    [SerializeField] GameObject Spawan;
-    private GameObject obj;
+    [SerializeField] MashSpawn BetaSpawnManager;
+    GameObject obj;
     AudioSource source;
-    private bool isAudio=true;
+    bool isAudio = true;
+
     void Start()
     {
-
         Timeline.SetActive(false);
-        Spawan.SetActive(false);
-        //AudioManager.manager.PlayPoint(AudioManager.manager.data.announce, this.gameObject);
         source = GetComponent<AudioSource>();
         source.clip = AudioManager.manager.data.announce;
         source.Play();
-
     }
 
     // Update is called once per frame
@@ -44,7 +41,6 @@ public class tutorialScript : MonoBehaviour
         obj = Instantiate(fastBeta, transform.position, Quaternion.identity);
         obj.GetComponent<TutorialEnemy>().SetTutorial(this);
         source.clip = AudioManager.manager.data.announce;
-
     }
     public void CLEAR()
     {
@@ -52,7 +48,10 @@ public class tutorialScript : MonoBehaviour
         source.clip = AudioManager.manager.data.announce;
         source.Play();
         Timeline.SetActive(true);
-        Spawan.SetActive(true);
+
+        //中ベタ表示
+        BetaSpawnManager.ActiveObj();
+
         Debug.Log("げーむかいしー");
         if (obj != null)
             Destroy(obj);

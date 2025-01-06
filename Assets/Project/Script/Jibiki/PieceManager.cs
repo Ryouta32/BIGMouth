@@ -12,29 +12,19 @@ public class PieceManager : MonoBehaviour
     [Tooltip("崩れるときのちから")]
     [SerializeField] float power;
 
-    [Tooltip("崩れるときのちから")]
-    [SerializeField] Vector3 betapower;
-
-    //[Tooltip("呼び出す間隔")]
-    //[SerializeField] float RepeatTime;
-
     [Tooltip("開始するまでの秒数")]
     [SerializeField] float StartTime;
+
+    [Tooltip("次が落ちるまでの秒数")]
+    [SerializeField] float waittime;
 
     [Tooltip("オブジェクトを消す秒数")]
     [SerializeField] float destroytime;
 
-    [Tooltip("オブジェクトを消す秒数")]
-    [SerializeField] float waittime;
-
     [SerializeField] GameObject beta;
-    Rigidbody betarb;
 
     //ピースの親オブジェクト
     GameObject PieceParent;
-
-    //ピースのメッシュレンダラー
-    MeshRenderer mr;
 
     //ピースのリスト
     [HideInInspector]
@@ -54,7 +44,6 @@ public class PieceManager : MonoBehaviour
             //Debug.Log($"検索方法１： {i} 番目の子供は {PieceChildren[i].name} です");
         }
         StartCoroutine("FallPiece");
-        //InvokeRepeating(nameof(FallPiece), StartTime, RepeatTime);
     }
 
     //void FallPiece()
@@ -116,7 +105,6 @@ public class PieceManager : MonoBehaviour
 
     IEnumerator FallPiece()
     {
-        ClearList();
         yield return new WaitForSeconds(StartTime);
 
         while (true)
@@ -154,9 +142,7 @@ public class PieceManager : MonoBehaviour
 
                     if (beta != null)
                     {
-                        //betarb = beta.GetComponent<Rigidbody>();
                         Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.identity);
-                        //betarb.AddForce(transform.up * power, ForceMode.Impulse);
                     }
 
                     Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
@@ -174,12 +160,12 @@ public class PieceManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("やめたーーーーーーーーー");
+                //Debug.Log("やめたーーーーーーーーー");
                 //いんぼけやめる
                 CancelInvoke();
 
                 //ゲームオーバーシーンに行く
-                //SceneManager.LoadScene("GameOverScene");
+                SceneManager.LoadScene("GameOverScene");
             }
         }
     }

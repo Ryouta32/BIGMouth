@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8333750449066432663}
   - component: {fileID: 8443009577141216268}
   m_Layer: 0
-  m_Name: TentacleBeta
+  m_Name: Tentacle
   m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,6 +58,10 @@ PrefabInstance:
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 3215251464029470389}
+    - target: {fileID: 5756723874812961070, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8553059467459396418, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -66,6 +70,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shokushuBetaidle 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8881183718323091735, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: enemyScript
+      value: 
+      objectReference: {fileID: 5272713709410257172}
     - target: {fileID: 8955524269023865475, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -109,8 +117,41 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6419129968482568321, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5272713709410257172}
   m_SourcePrefab: {fileID: 100100000, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+--- !u!1 &5562912990493136413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6419129968482568321, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+  m_PrefabInstance: {fileID: 1451913172184735388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5272713709410257172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562912990493136413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53eb8779cd182c545a0cdb5208226df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouSaki: {fileID: 0}
+  _data: {fileID: 11400000, guid: 52d5b6fc94646db47a392be5159cb40b, type: 2}
+  stunEffect: {fileID: 7103488413159759326}
+  damageEffect: {fileID: 2510562678213512748, guid: 0beb1d15c494365458144cc18fef2d60, type: 3}
+  DestroyEffect: {fileID: 689374704402498535, guid: 2eeadfe0322da534899490506495a1f6, type: 3}
+  rb: {fileID: 0}
+  inHale: 0
+  data: {fileID: 0}
+--- !u!1 &7103488413159759326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8553059467459396418, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+  m_PrefabInstance: {fileID: 1451913172184735388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7525042778838316063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8955524269023865475, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
