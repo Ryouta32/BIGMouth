@@ -33,6 +33,8 @@ public class PieceManager : MonoBehaviour
     [HideInInspector]
     public bool childFlag;
 
+    float piececount;
+
     void Start()
     {
         PieceParent = this.gameObject;
@@ -44,6 +46,7 @@ public class PieceManager : MonoBehaviour
             //Debug.Log($"検索方法１： {i} 番目の子供は {PieceChildren[i].name} です");
         }
         StartCoroutine("FallPiece");
+        piececount = PieceChildren.Count;
     }
 
     //void FallPiece()
@@ -142,7 +145,8 @@ public class PieceManager : MonoBehaviour
 
                     if (beta != null)
                     {
-                        Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.identity);
+                        int rot = Random.Range(0, 360);
+                        Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.Euler(0, rot, 0));
                     }
 
                     Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
@@ -153,7 +157,7 @@ public class PieceManager : MonoBehaviour
                 }
 
                 //警告音鳴らす
-                if(PieceChildren.Count < PieceChildren.Count / 2)
+                if (piececount / 2 > PieceChildren.Count)
                 {
                     AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
                 }
@@ -162,11 +166,28 @@ public class PieceManager : MonoBehaviour
             {
                 //Debug.Log("やめたーーーーーーーーー");
                 //いんぼけやめる
-                CancelInvoke();
-
-                //ゲームオーバーシーンに行く
-                SceneManager.LoadScene("GameOverScene");
+                //CancelInvoke();
+                //if (gameObject.transform.root.name == "tenjyou")
+                //{
+                //    //ゲームオーバーシーンに行く
+                //    SceneManager.LoadScene("GameOverScene");
+                //    //CancelInvoke();
+                //}
             }
+            var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
+
+            foreach (var classification in classifications)
+            {
+                if (classification.Contains(OVRSceneManager.Classification.Ceiling))
+                {
+                    //if (classification.transform.name == "tenjyou" && PieceChildren.Count <= 0)
+                    if (PieceChildren.Count <= 0)
+                    {
+                        SceneManager.LoadScene("GameOverScene");
+                    }
+                }
+            }
+
         }
     }
 
