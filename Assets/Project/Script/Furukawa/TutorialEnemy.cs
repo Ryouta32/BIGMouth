@@ -47,7 +47,7 @@ public class TutorialEnemy : MonoBehaviour
             {
                 //失敗アナウンスに変える
                 //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
-                //tutorialSC.Retry();
+                tutorialSC.Retry();
                 Debug.Log("しっぱい！");
                 Destroy(this.gameObject);
             }
@@ -63,16 +63,19 @@ public class TutorialEnemy : MonoBehaviour
         stunEffect.SetActive(true);
         Debug.Log("スタンエフェクト");
         AudioManager.manager.PlayPoint(AudioManager.manager.data.ministun, this.gameObject);
-        SetState(EnemyData.State.stun);
 
-        yield return new WaitForSeconds(data.sutnTime);
+        yield return new WaitForSeconds(1.0f);
+        SetState(EnemyData.State.stun);
+        yield return new WaitForSeconds(data.sutnTime );
+
 
         SetState(EnemyData.State.general);
         stunEffect.SetActive(false);
     }
     private void OnCollisionExit(Collision collision)
     {
-        if (data.sutnCount == 0)
+        Debug.Log("mi-");
+        if (data.sutnCount <= 0)
         {
             StunReturn();
             StartCoroutine("Stun");
