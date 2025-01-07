@@ -27,13 +27,14 @@ public class tutorialScript : MonoBehaviour
             isAudio = false;
             source.Stop();
             Play();
+            //CLEAR();
             if (Input.GetKeyDown(KeyCode.LeftShift))
                 CLEAR();
         }
     }
     public void Play()
     {
-        obj = Instantiate(fastBeta, transform.position, Quaternion.identity);
+        obj = Instantiate(fastBeta, BetaSpawnManager.tutorialpos, Quaternion.identity);
         obj.GetComponent<TutorialEnemy>().SetTutorial(this);
     }
     public void Retry()
