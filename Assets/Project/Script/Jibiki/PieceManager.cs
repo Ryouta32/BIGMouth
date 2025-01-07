@@ -35,8 +35,14 @@ public class PieceManager : MonoBehaviour
 
     float piececount;
 
+    bool betaflag;
+
+    [SerializeField] int fallcount;
+    int count;
+
     void Start()
     {
+        betaflag = true;
         PieceParent = this.gameObject;
 
         //リスト追加
@@ -142,11 +148,13 @@ public class PieceManager : MonoBehaviour
 
                     //少しちからを入れる
                     obj.AddForce(transform.up * power, ForceMode.Impulse);
+                    count++;
 
-                    if (beta != null)
+                    if (beta != null && count == fallcount)
                     {
                         int rot = Random.Range(0, 360);
                         Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.Euler(0, rot, 0));
+                        count = 0;
                     }
 
                     Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
