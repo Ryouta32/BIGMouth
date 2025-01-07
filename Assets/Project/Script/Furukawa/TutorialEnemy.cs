@@ -16,7 +16,7 @@ public class TutorialEnemy : MonoBehaviour
     {
         data = new EnemyData(_data);
         bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
-
+        tutorialSC = GameObject.Find("tutorial").GetComponent<tutorialScript>();
     }
 
     // Update is called once per frame

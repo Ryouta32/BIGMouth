@@ -13,7 +13,9 @@ public class MashSpawn : MonoBehaviour
     OVRSceneManager ovrSceneManager;
     OVRScenePlane floor;
     GameObject dragonprefab;
-    List<Transform> NormalObj = new List<Transform>();
+    [HideInInspector]
+    public List<Transform> NormalObj = new List<Transform>();
+    public Vector3 tutorialpos;
 
     private void Awake()
     {
@@ -55,15 +57,15 @@ public class MashSpawn : MonoBehaviour
                     transform.position = hit.point;
                     GameObject obj = Instantiate(kinokoprefab, pos, Quaternion.identity);
                     obj.GetComponent<EnemyScript>().setManager(manager);
-                    obj.SetActive(false);
                     NormalObj.Add(obj.transform);
+                    obj.SetActive(false);
                 }
                 else
                 {
                     GameObject obj = Instantiate(kinokoprefab, pos, Quaternion.identity);
                     obj.GetComponent<EnemyScript>().setManager(manager);
-                    obj.SetActive(false);
                     NormalObj.Add(obj.transform);
+                    obj.SetActive(false);
                 }
             }
 
@@ -78,15 +80,15 @@ public class MashSpawn : MonoBehaviour
                     transform.position = hit.point;
                     GameObject obj = Instantiate(tentacleprefab, pos, Quaternion.identity);
                     obj.GetComponent<EnemyScript>().setManager(manager);
-                    obj.SetActive(false);
                     NormalObj.Add(obj.transform);
+                    obj.SetActive(false);
                 }
                 else
                 {
                     GameObject obj = Instantiate(tentacleprefab, pos, Quaternion.identity);
                     obj.GetComponent<EnemyScript>().setManager(manager);
-                    obj.SetActive(false);
                     NormalObj.Add(obj.transform);
+                    obj.SetActive(false);
                 }
             }
 
@@ -94,6 +96,7 @@ public class MashSpawn : MonoBehaviour
             if (classification.Contains(OVRSceneManager.Classification.Storage))
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, posy + 1.0f, classification.transform.position.z + 2f);
+                //Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y, classification.transform.position.z);
                 dragonprefab.transform.position = pos;
 
                 if (Physics.Raycast(dragonprefab.transform.position, transform.forward, out RaycastHit hit, 10f, LayerMask.GetMask("Wall")))
@@ -106,8 +109,10 @@ public class MashSpawn : MonoBehaviour
             //チュートリアルオブジェクト
             if (classification.Contains(OVRSceneManager.Classification.Table))
             {
-                Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
-                Instantiate(Tutorial, pos, Quaternion.identity);
+                tutorialpos = new Vector3(classification.transform.position.x, classification.transform.position.y, classification.transform.position.z);
+                Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y, classification.transform.position.z);
+                //Instantiate(Tutorial, pos, Quaternion.identity);
+                Tutorial.transform.position = pos;
             }
         }
     }

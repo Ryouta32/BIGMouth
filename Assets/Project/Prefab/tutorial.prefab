@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 468587536360348702}
   - component: {fileID: 8160376262018768761}
   - component: {fileID: 2800820805042952136}
+  - component: {fileID: 1204382688846219875}
   m_Layer: 0
   m_Name: tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &468587536360348702
 Transform:
   m_ObjectHideFlags: 0
@@ -144,3 +145,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1204382688846219875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777200074544127537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab3ec25e32ce0c4380714d75e39cb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

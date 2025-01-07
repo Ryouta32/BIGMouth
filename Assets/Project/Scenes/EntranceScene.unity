@@ -300,6 +300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 777200074544127537, guid: a3c74c70b8e2c8044a4ed6a110050f6c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8160376262018768761, guid: a3c74c70b8e2c8044a4ed6a110050f6c, type: 3}
       propertyPath: Timeline
       value: 
@@ -1017,6 +1021,22 @@ PrefabInstance:
     - target: {fileID: 443927376246264145, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: m_Name
       value: OVRSceneManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[5].Prefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[5].ClassificationLabel
+      value: TABLE
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[5]._editorClassificationIndex
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 443927376246264172, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: m_LocalPosition.x
