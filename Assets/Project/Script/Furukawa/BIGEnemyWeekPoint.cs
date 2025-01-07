@@ -14,8 +14,8 @@ public class BIGEnemyWeekPoint : MonoBehaviour
     {
         if (other.transform.tag == "Brush")
         {
-        Debug.Log(other.gameObject.name);
             count++;
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.miniBom,this.gameObject);
             if (count >= bigSC.rubCount) { 
                 //爆発
                 for(int i = 0; i < bigSC.dirtCount; i++)
@@ -26,8 +26,9 @@ public class BIGEnemyWeekPoint : MonoBehaviour
                     Vector3 dir = new Vector3(Random.Range(-1f, 1f)*transform.forward.x, Random.Range(-1f, 1f)*transform.forward.y, Random.Range(-1f, 1f)*transform.forward.z).normalized;
                     obj.GetComponent<Rigidbody>().AddForce(dir * 300f);
                     //bigSC.OBJScaleDown();
-                    bigSC.WeekBreak();
                 }
+                bigSC.WeekBreak();
+                Destroy(gameObject);
             }
         }
     }
