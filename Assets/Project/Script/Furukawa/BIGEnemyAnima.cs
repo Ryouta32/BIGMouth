@@ -25,6 +25,7 @@ public class BIGEnemyAnima : MonoBehaviour
         anima = GetComponent<Animator>();
         setLimit();
     }
+
     private void Update()
     {
         time += Time.deltaTime;
@@ -50,17 +51,18 @@ public class BIGEnemyAnima : MonoBehaviour
             bigSc.Erase();
         }
     }
+    public void Break()
+    {
+        //bigSc.Spawn(Enemys[count]);
+        anima.SetTrigger(breakStr);
+        count++;
+    }
     private void setLimit()
     {
         limit = Random.Range(5, 10);
         time = 0;
             }
-    public void Break()
-    {
-        bigSc.Spawn(Enemys[count]);
-        anima.SetTrigger(breakStr);
-        count++;
-    }
+
     public void Attack()
     {
         anima.SetTrigger(attackStr);
