@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class BigEnemyScript : MonoBehaviour
 {
@@ -14,10 +13,12 @@ public class BigEnemyScript : MonoBehaviour
     [SerializeField] GameObject Tentacle;
     [SerializeField] GameObject Mash;
     [SerializeField] BIGEnemyAnima anima;
+    GameClearSC clearSC;
     private EnemyData data;
     private bool erase;
     private void Start()
     {
+        clearSC = GameObject.Find("Clear").GetComponent<GameClearSC>();
         data = new EnemyData(_data);
     }
     private void Update()
@@ -34,8 +35,8 @@ public class BigEnemyScript : MonoBehaviour
                     data.sutnCount--;
                     if (data.sutnCount <= 0)
                     {
-                        //クリア演出
-                        SceneManager.LoadScene("ClereScene");
+                    //クリア演出
+                    clearSC.Clear();
                     }
             }
         }
@@ -50,7 +51,7 @@ public class BigEnemyScript : MonoBehaviour
                 if (data.sutnCount <= 0)
                 {
                     //クリア演出
-                    SceneManager.LoadScene("ClereScene");
+                    clearSC?.Clear();
                 }
             }
         }
