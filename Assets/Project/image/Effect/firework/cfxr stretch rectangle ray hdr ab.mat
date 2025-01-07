@@ -8,24 +8,27 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: cfxr stretch rectangle ray hdr ab
-  m_Shader: {fileID: -6465566751694194690, guid: 1a29b4d27eb8b04479ef89c00dea533d,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 1a29b4d27eb8b04479ef89c00dea533d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHABLEND_ON
-  - _CFXR_HDR_BOOST
-  - _CFXR_SINGLE_CHANNEL
   - _FADING_ON
   m_InvalidKeywords:
   - _
   - _CFXR_DITHERED_SHADOWS_OFF
+  - _CFXR_HDR_BOOST
   - _CFXR_OVERLAYBLEND_RGBA
   - _CFXR_OVERLAYTEX_OFF
+  - _CFXR_SINGLE_CHANNEL
+  - _SINGLECHANNEL_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -50,7 +53,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6169cfc312e54a94ba501b9c3a5d7357, type: 3}
+        m_Texture: {fileID: 2800000, guid: 015f40bff2a90df44b075a4f52b86556, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OverlayTex:
