@@ -304,10 +304,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: tutorial
       objectReference: {fileID: 0}
-    - target: {fileID: 777200074544127537, guid: a3c74c70b8e2c8044a4ed6a110050f6c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8160376262018768761, guid: a3c74c70b8e2c8044a4ed6a110050f6c, type: 3}
       propertyPath: Timeline
       value: 
@@ -1030,22 +1026,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRSceneManager
       objectReference: {fileID: 0}
-    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
-      propertyPath: PrefabOverrides.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
-      propertyPath: PrefabOverrides.Array.data[5].Prefab
-      value: 
-      objectReference: {fileID: 5657038544419831093, guid: 411591a27a4a4a249a5b1ea888b9deb2, type: 3}
-    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
-      propertyPath: PrefabOverrides.Array.data[5].ClassificationLabel
-      value: TABLE
-      objectReference: {fileID: 0}
-    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
-      propertyPath: PrefabOverrides.Array.data[5]._editorClassificationIndex
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: 443927376246264172, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1309,17 +1289,9 @@ PrefabInstance:
       propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2129041026}
-    - target: {fileID: 2333698425631816298, guid: 330dcc9b606bf30489f1da6ea6a68b8f, type: 3}
-      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimSet
-      objectReference: {fileID: 0}
     - target: {fileID: 3805509806629089251, guid: 330dcc9b606bf30489f1da6ea6a68b8f, type: 3}
       propertyPath: m_Name
       value: TimeLine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805509806629089251, guid: 330dcc9b606bf30489f1da6ea6a68b8f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8546749700325328342, guid: 330dcc9b606bf30489f1da6ea6a68b8f, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
@@ -1433,10 +1405,6 @@ PrefabInstance:
     - target: {fileID: 6005538363419842921, guid: 7434598e0d4915b4f8966a00b721679e, type: 3}
       propertyPath: m_Name
       value: BetaSpawnManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6005538363419842921, guid: 7434598e0d4915b4f8966a00b721679e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
