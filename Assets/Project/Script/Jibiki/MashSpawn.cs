@@ -43,7 +43,7 @@ public class MashSpawn : MonoBehaviour
         OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
         //床
         floor = sceneRoom.Floor;
-        float posy = floor.transform.position.y;
+        float posy = floor.transform.position.y + 0.1f;
 
         floor.transform.position = new Vector3(floor.transform.position.x, posy + 0.5f, floor.transform.position.z);
 
