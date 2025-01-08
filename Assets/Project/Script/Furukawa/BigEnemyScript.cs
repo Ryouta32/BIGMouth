@@ -11,7 +11,7 @@ public class BigEnemyScript : MonoBehaviour
     [Tooltip("何回消せばよいか")][SerializeField] public int erasedCount;
     [SerializeField] EnemyData _data;
     [SerializeField] GameObject Tentacle;
-    [SerializeField] GameObject Mash;
+    [SerializeField] GameObject Mush;
     [SerializeField] BIGEnemyAnima anima;
     [SerializeField] GameObject stunEffect;
     public BouSakiScript bouSaki;

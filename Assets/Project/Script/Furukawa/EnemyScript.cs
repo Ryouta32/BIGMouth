@@ -113,7 +113,7 @@ public class EnemyScript : MonoBehaviour
         {
             manager.killNormal();
         }
-        if (GetComponent<MashroomManager>())
+        if (GetComponent<MushroomManager>())
         {
             manager.killMash();
         }
