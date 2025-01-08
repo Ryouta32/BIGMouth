@@ -52,4 +52,6 @@ public class DragonAnima : MonoBehaviour
     {
         AudioManager.manager.PlayBGM(AudioManager.manager.data.mainBGM);
     }
+    public void PlayHelp()=>
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.help, gameObject);
 }
