@@ -1,0 +1,660 @@
+fileFormatVersion: 2
+guid: 951ff63d5c53ce3478ee700d24c528b1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Counter1
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 1901
+        width: 445
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a409ea47b9fcec14686ccf51bda6faef
+      internalID: 2000049916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clear1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1952
+        width: 593
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149eff0c1e05b1e45a7692a7993990fa
+      internalID: -967163684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clear2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1854
+        width: 317
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab44f2dfb9c9a4f40a64d3146dd488ee
+      internalID: 464841511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clear3
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1846
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c60560cf6566a54bbf4453817939d2f
+      internalID: -1381378641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clear4
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1729
+        width: 883
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac838c374988d90449e17a02fbf05584
+      internalID: 1783211901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Counter2
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1777
+        width: 123
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b01fb0805587e45b19d5f32de429be
+      internalID: 1244947761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Counter3
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1777
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0a97dbc3a93f049ab4d5609fa7a749
+      internalID: -170267221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clear5
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1657
+        width: 649
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fe47da8f163244786df7a72967396d
+      internalID: -1636597316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BE1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1609
+        width: 456
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c941af99f6cef7d41ab78daaf38af9d2
+      internalID: -481192207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Counter4
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 1577
+        width: 440
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5cc25df01de1ec41a3598e9a7728bf9
+      internalID: 150979806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BE2
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1505
+        width: 501
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81115d08e4c8a647b4bb6d7755004c4
+      internalID: 1557693797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BE3
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1494
+        width: 112
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8844b931460ce2245b464ac975df3b13
+      internalID: 1696698434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Counter5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1490
+        width: 518
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1333791c182e2104dba6325e6210da01
+      internalID: 2094241435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Counter6
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 1421
+        width: 508
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31075e170c60bd144ab02f4f752e4033
+      internalID: 545749876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass4
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 0
+        width: 401
+        height: 1165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58309c2c3a595f4f8fd77d7101cbedb
+      internalID: 1546597673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 587
+        height: 680
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79d5286c5ca577419d26e17fc4f1fd1
+      internalID: 1785514577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass3
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 850
+        height: 1170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def77068d663d5c4fab953bdb9ed82f1
+      internalID: -1145413660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 686
+        width: 699
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b28519e6871524dacd0a32f88e8078
+      internalID: -172938506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a2d3cf02c0ebab84bbc0c566338c5dd6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BE1: -481192207
+      BE2: 1557693797
+      BE3: 1696698434
+      Clear1: -967163684
+      Clear2: 464841511
+      Clear3: -1381378641
+      Clear4: 1783211901
+      Clear5: -1636597316
+      Counter1: 2000049916
+      Counter2: 1244947761
+      Counter3: -170267221
+      Counter4: 150979806
+      Counter5: 2094241435
+      Counter6: 545749876
+      EndUI_10: 1331970439
+      EndUI_100: -1329936132
+      EndUI_101: -1736181455
+      EndUI_102: -1130618459
+      EndUI_103: -255737237
+      EndUI_104: -1337218050
+      EndUI_105: 946917241
+      EndUI_107: 1738524864
+      EndUI_108: 1658758097
+      EndUI_109: 2087296484
+      EndUI_11: -1440484215
+      EndUI_110: -808076755
+      EndUI_111: 1885181078
+      EndUI_112: 1002610753
+      EndUI_113: 2112248627
+      EndUI_114: -563395474
+      EndUI_115: 397000761
+      EndUI_116: 1251398841
+      EndUI_117: 1272199261
+      EndUI_118: 1442555879
+      EndUI_119: 46521684
+      EndUI_12: -1731069562
+      EndUI_120: 114785718
+      EndUI_121: -1601162343
+      EndUI_122: -1264938650
+      EndUI_123: 490595303
+      EndUI_124: 300644835
+      EndUI_126: 978663493
+      EndUI_127: -1122273156
+      EndUI_128: 1405263144
+      EndUI_129: -1729597379
+      EndUI_13: 1300137442
+      EndUI_130: 726988236
+      EndUI_131: 1750139143
+      EndUI_132: 1831965719
+      EndUI_133: -1451202504
+      EndUI_134: 1897970688
+      EndUI_135: -250301906
+      EndUI_137: -1502627222
+      EndUI_138: -1829409572
+      EndUI_139: -1948926871
+      EndUI_14: -1430286227
+      EndUI_140: -1188605590
+      EndUI_142: 370184231
+      EndUI_143: -1459230273
+      EndUI_144: 1767590239
+      EndUI_145: -184656646
+      EndUI_146: -2017283851
+      EndUI_147: 1771450886
+      EndUI_148: -336781287
+      EndUI_15: -636246873
+      EndUI_150: -2020466668
+      EndUI_151: -770022074
+      EndUI_154: 111768631
+      EndUI_16: -797816147
+      EndUI_17: -1537976985
+      EndUI_18: 756928898
+      EndUI_19: 197738827
+      EndUI_20: -397908484
+      EndUI_21: 1597926628
+      EndUI_22: -1974710317
+      EndUI_23: 1502906835
+      EndUI_24: -212032723
+      EndUI_25: -115859282
+      EndUI_26: -1064081028
+      EndUI_28: 999175964
+      EndUI_29: 1975460715
+      EndUI_3: -388441778
+      EndUI_30: -1130207547
+      EndUI_31: -1502854632
+      EndUI_32: 1012610398
+      EndUI_33: -230097114
+      EndUI_34: 1064467425
+      EndUI_35: 1819910571
+      EndUI_36: -1552021481
+      EndUI_37: 167492525
+      EndUI_38: -1239620034
+      EndUI_39: 2137774159
+      EndUI_4: 203980889
+      EndUI_40: -1704296960
+      EndUI_41: 1627126034
+      EndUI_42: 426041364
+      EndUI_43: -393593013
+      EndUI_44: -2039370099
+      EndUI_45: -569346148
+      EndUI_46: -1221349861
+      EndUI_47: 993533385
+      EndUI_48: 474819518
+      EndUI_50: -1979887607
+      EndUI_51: -470764267
+      EndUI_52: 573353818
+      EndUI_53: 1607535333
+      EndUI_54: 2089713365
+      EndUI_55: 642878947
+      EndUI_56: -1890556076
+      EndUI_57: -358653387
+      EndUI_58: -1163731318
+      EndUI_60: 621852209
+      EndUI_61: -1791066229
+      EndUI_62: 364392002
+      EndUI_65: 2017572681
+      EndUI_66: -1205043447
+      EndUI_67: -583720050
+      EndUI_68: 2093371261
+      EndUI_69: -1837579393
+      EndUI_7: -343105071
+      EndUI_70: -15749019
+      EndUI_72: -205793416
+      EndUI_73: 1926590906
+      EndUI_74: -1409365234
+      EndUI_75: 232805878
+      EndUI_76: 496637298
+      EndUI_77: -1372933684
+      EndUI_78: -1815187691
+      EndUI_79: -1934682789
+      EndUI_8: 405113454
+      EndUI_80: 1986763219
+      EndUI_81: 861122836
+      EndUI_82: -330069226
+      EndUI_83: -1057570644
+      EndUI_84: 909904290
+      EndUI_85: -193786947
+      EndUI_86: -352727014
+      EndUI_87: 1800073064
+      EndUI_88: -2046976806
+      EndUI_89: 1281134281
+      EndUI_9: -369923152
+      EndUI_90: -2050657246
+      EndUI_91: -418639920
+      EndUI_92: -1853657127
+      EndUI_93: 520983129
+      EndUI_94: -857851945
+      EndUI_95: -454869694
+      EndUI_96: 1542396934
+      EndUI_97: 1979104431
+      EndUI_98: 2091293131
+      EndUI_99: -1389212651
+      Glass1: -172938506
+      Glass2: 1785514577
+      Glass3: -1145413660
+      Glass4: 1546597673
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
