@@ -13,6 +13,7 @@ public class EnemyManager : MonoBehaviour
      BetaSpawn betaSpawn;
     [Tooltip("ボスが出るまでのキル数")][SerializeField] int bossCount;
     [HideInInspector] public int killCount;
+    [SerializeField]BouSakiScript bouSakiScript;
     bool normal=false;
     bool mash=false;
     bool spawn = true;
@@ -32,6 +33,7 @@ public class EnemyManager : MonoBehaviour
             spawn = false;
             GameObject obj = Instantiate(Ball, bossPos.position, Quaternion.identity);
             obj.GetComponent<BIGBallSC>().setParent(bossPos);
+            obj.GetComponent<BIGBallSC>().setSaki(bouSakiScript);
         }
         if (enemys.Count == 0)
         {
