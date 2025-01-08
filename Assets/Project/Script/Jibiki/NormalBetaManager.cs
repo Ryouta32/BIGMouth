@@ -85,7 +85,7 @@ public class NormalBetaManager : MonoBehaviour
 
     void tyuuOut()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.miniOut, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.tentacleOut, this.gameObject);
     }
 
     void OutEnabled()
@@ -117,6 +117,6 @@ public class NormalBetaManager : MonoBehaviour
 
     void Stunsound()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.stageScatetr, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.tentacleBetan, this.gameObject);
     }
 }

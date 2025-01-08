@@ -11,39 +11,46 @@ public class AudioData : ScriptableObject
        public AudioSource souce;
        public int loopCoun;
     }
-    [Header("ミニベタ関係")]
-    [Tooltip("T-1 walk")] public AudioClip miniMove;
-    [Tooltip("T-1 Bom")] public AudioClip miniBom;
-    [Tooltip("T-3 foll down")] public AudioClip miniFollDown;
-    [Tooltip("T-4 out")] public AudioClip miniOut;
-    [Tooltip("T-5 in")] public AudioClip miniIn;
-    [Tooltip("T-6 hole")] public AudioClip miniHole;
-    [Tooltip("T-7 boss")] public AudioClip miniBoss;
-    [Tooltip("T-8 fountain")] public AudioClip miniFoimtain;
-    [Tooltip("T-9 stun")] public AudioClip ministun;
-    [Tooltip("T-10 mush")] public AudioClip mush;
+    [Header("ベタ関係")]
+    [Tooltip("あるく")] public AudioClip move;
+    [Tooltip("だめーじ")] public AudioClip damage;
+    [Tooltip("やられる")] public AudioClip kill;
+    [Tooltip("スタン")] public AudioClip stun;
+
+    [Header("中ベタ")]
+    [Tooltip("中ベタ爆発")] public AudioClip normalBom;
+    [Tooltip("触手ぶくぶく")] public AudioClip bukubuku;
+    [Tooltip("触手出現")] public AudioClip tentacleOut;
+    [Tooltip("触手逃げる")] public AudioClip tentacleIn;
+    [Tooltip("触手ベタん")] public AudioClip tentacleBetan;
+    [Tooltip("触手穴ふさぎ")] public AudioClip tentacleHole;
+    [Tooltip("キノコポタん")] public AudioClip mashPotan;
+    [Tooltip("攻撃")] public AudioClip attack;
+    [Tooltip("キノコかさ")] public AudioClip mushKasa;
+
+    [Header("大ベタ")]
+    [Tooltip("大ベタ爆発")] public AudioClip bigBom;
+    [Tooltip("大ベタ出現")] public AudioClip bigArrival;
+    [Tooltip("危険です")] public AudioClip emergency;
 
     [Header("掃除機")]
-    [Tooltip("C-1clean")] public AudioClip cleanerClean;
-    [Tooltip("C-2 charge")] public AudioClip cleanerCharge;
-    [Tooltip("C-3 suction")] public AudioClip cleanerSuction;
-    [Tooltip("C-4 pon")] public AudioClip cleanerPon;
+    [Tooltip("きゅきゅ")] public AudioClip clean;
+    [Tooltip("チャージ")] public AudioClip charge;
+    [Tooltip("吸い込み")] public AudioClip suction;
+    [Tooltip("バブル")] public AudioClip bubble;
     [Tooltip("C-5")] public AudioClip cleaner5;
-    [Tooltip("C-6 splash")] public AudioClip cleanerSplash;
+    [Tooltip("シャワー")] public AudioClip shower;
     [Tooltip("C-7 fix")] public AudioClip cleanerFix;
 
     [Header("ステージ")]
-    [Tooltip("S-2 scatter")] public AudioClip stageScatetr;
-    [Tooltip("S-3 crack")] public AudioClip stageCrack;
-    [Tooltip("S-4 break")] public AudioClip stageBreak;
     [Tooltip("S-5 emergency")] public AudioClip stageEnergency;
     [Tooltip("S-6 emergency2")] public AudioClip stageEnergency2;
 
     [Header("システム")]
-    [Tooltip("0-4 Abutton")] public AudioClip systemAbutton;
-    [Tooltip("0-5 Bbutton")] public AudioClip systemBbutton;
-    [Tooltip("0-6 stage")] public AudioClip systemStage;
-    [Tooltip("0-7 pointer")] public AudioClip systemPointer;
+    [Tooltip("Aぼたん")] public AudioClip Abutton;
+    [Tooltip("Bぼたん")] public AudioClip Bbutton;
+    [Tooltip("stage")] public AudioClip systemStage;
+    [Tooltip("pointer")] public AudioClip systemPointer;
 
     [Header("BGM")]
     [Tooltip("MainBGM")] public AudioClip mainBGM;
@@ -52,8 +59,18 @@ public class AudioData : ScriptableObject
     [Tooltip("ゲームオーバー")] public AudioClip gameoverBGM;
     [Tooltip("ボス")] public AudioClip bossBGM;
 
-    [Header("その他音源")]
+    [Header("ボイス")]
+    [Tooltip("たすけて")] public AudioClip help;
+    [Tooltip("あ、、、せかいがわれてしまった")] public AudioClip worldBreak;
+    [Tooltip("せかいが割れそうだよー")] public AudioClip worldBreakAbout;
+    [Tooltip("よごれおとしてー")] public AudioClip yogoreWash;
+    [Tooltip("ひびがはいったら")] public AudioClip crack;
     [Tooltip("アナウンス")] public AudioClip announce;
+    [Tooltip("あと少し")]public AudioClip littleMore;
+    [Header("その他音源")]
+    [Tooltip("壁ぶつかり")] public AudioClip wallTackle;
+    [Tooltip("壁破壊")] public AudioClip wallBreak;
+
     //[Tooltip("中ベタ移動音")] public AudioClip tyuuMove;
     //[Tooltip("第ベタ移動音")] public AudioClip bigMove;
     //[Tooltip("打撃音")] public AudioClip attack;

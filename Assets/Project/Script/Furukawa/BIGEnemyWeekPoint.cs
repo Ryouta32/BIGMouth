@@ -15,7 +15,7 @@ public class BIGEnemyWeekPoint : MonoBehaviour
         if (other.transform.tag == "Brush")
         {
             count++;
-            AudioManager.manager.PlayPoint(AudioManager.manager.data.miniBom,this.gameObject);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.damage,this.gameObject);
             if (count >= bigSC.rubCount) { 
                 //爆発
                 for(int i = 0; i < bigSC.dirtCount; i++)

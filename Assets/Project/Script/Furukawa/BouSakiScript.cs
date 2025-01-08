@@ -107,13 +107,13 @@ public class BouSakiScript : MonoBehaviour
     {
         on = false;
         yield return new WaitForSeconds(0.2f);
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.cleanerSplash, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.shower, this.gameObject);
         on = true;
     }
     private void Inhale()
     {
         OnHale = true;
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.cleanerSuction, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, this.gameObject);
     }
     private void UpInhale()
     {
