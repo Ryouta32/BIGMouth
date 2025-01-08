@@ -9,7 +9,7 @@ public class DragonScript : MonoBehaviour
     [SerializeField] EnemyManager manager;
     [SerializeField] BetaSpawn spawn;
     [SerializeField] GameObject TentSeki;
-    [SerializeField] GameObject MashSeki;
+    [SerializeField] GameObject MushSeki;
     [SerializeField] Transform Cough;
     [SerializeField] float power;
     public void Gamestart()
@@ -21,8 +21,8 @@ public class DragonScript : MonoBehaviour
     {
         GameObject obj = Instantiate(TentSeki, Cough.position, Quaternion.identity);
     }
-    public void MashCough()
+    public void MushCough()
     {
-        GameObject obj = Instantiate(MashSeki, Cough.position, Quaternion.identity);
+        GameObject obj = Instantiate(MushSeki, Cough.position, Quaternion.identity);
     }
 }

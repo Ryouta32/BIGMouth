@@ -24,7 +24,7 @@ public class AudioData : ScriptableObject
     [Tooltip("触手逃げる")] public AudioClip tentacleIn;
     [Tooltip("触手ベタん")] public AudioClip tentacleBetan;
     [Tooltip("触手穴ふさぎ")] public AudioClip tentacleHole;
-    [Tooltip("キノコポタん")] public AudioClip mashPotan;
+    [Tooltip("キノコポタん")] public AudioClip mushPotan;
     [Tooltip("攻撃")] public AudioClip attack;
     [Tooltip("キノコかさ")] public AudioClip mushKasa;
 

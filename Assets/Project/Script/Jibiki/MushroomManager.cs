@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 /* キノコベタのスクリプト */
 
-public class MashroomManager : MonoBehaviour
+public class MushroomManager : MonoBehaviour
 {
     //[Tooltip("キノコブロックするときの間隔")]
     [SerializeField] float waittime;
@@ -27,13 +27,13 @@ public class MashroomManager : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-        if(other.gameObject.CompareTag("shower") && stateInfo.IsName(targetAnimationName))
+        if (other.gameObject.CompareTag("shower") && stateInfo.IsName(targetAnimationName))
         {
             enemyScript.data.sutnCount = 0;
         }

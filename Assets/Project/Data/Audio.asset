@@ -20,7 +20,7 @@ MonoBehaviour:
   bukubuku: {fileID: 8300000, guid: 839ab6766fb7d09499a11dd4c69a351f, type: 3}
   tentacleOut: {fileID: 8300000, guid: 0e57dafc1832e354f9f9b780b1b5afe9, type: 3}
   tentacleIn: {fileID: 8300000, guid: b0024cfb327a6db43a379b1ffd812850, type: 3}
-  tentacleBetan: {fileID: 8300000, guid: 601835b16e057cf4c886c50aa79c4787, type: 3}
+  tentacleBetan: {fileID: 8300000, guid: d74238cf01b519f4d98e5561c2c9361c, type: 3}
   tentacleHole: {fileID: 8300000, guid: d08ab08d45d2d284dac045efbe8ede2b, type: 3}
   mashPotan: {fileID: 8300000, guid: 9969cfef380799b4f979bf269da6a54c, type: 3}
   attack: {fileID: 8300000, guid: be1af067cf01add43bb071b8a338f112, type: 3}
@@ -35,9 +35,6 @@ MonoBehaviour:
   cleaner5: {fileID: 8300000, guid: 77921070a86a73d4ab0aaf7f4633c5c8, type: 3}
   shower: {fileID: 8300000, guid: 77921070a86a73d4ab0aaf7f4633c5c8, type: 3}
   cleanerFix: {fileID: 8300000, guid: 911980698cc47664f9d53113b932e21d, type: 3}
-  stageScatetr: {fileID: 8300000, guid: d74238cf01b519f4d98e5561c2c9361c, type: 3}
-  stageCrack: {fileID: 8300000, guid: 62cd24adafa4c014b84c23b7a7b1f561, type: 3}
-  stageBreak: {fileID: 8300000, guid: 881f32aa4eb329f4da5749c679fba2b4, type: 3}
   stageEnergency: {fileID: 8300000, guid: 5f29ec45cb81dc64495c7ab087279fe5, type: 3}
   stageEnergency2: {fileID: 8300000, guid: 663731989ea7f7b4c8bd8e3ebcd1b7ac, type: 3}
   Abutton: {fileID: 0}
@@ -46,13 +43,15 @@ MonoBehaviour:
   systemPointer: {fileID: 0}
   mainBGM: {fileID: 0}
   tutorialBGM: {fileID: 8300000, guid: 34f43f375e7308c42b790904a013b50a, type: 3}
-  clearBGM: {fileID: 8300000, guid: bfb6d6b0119707348aae048d8b73c765, type: 3}
-  gameoverBGM: {fileID: 8300000, guid: 89f51f32ec684304ebf25ffc22ad539f, type: 3}
+  clearBGM: {fileID: 8300000, guid: 396202f5a37860d44bcd8bae63cd2eaa, type: 3}
+  gameoverBGM: {fileID: 8300000, guid: 1658fe75b260eb94bbb7b129685e7c87, type: 3}
   bossBGM: {fileID: 8300000, guid: 5bdf27293bd66364db61802d94fbd631, type: 3}
   help: {fileID: 8300000, guid: 6572fac357cabaa4391b7d620e0008e3, type: 3}
   worldBreak: {fileID: 8300000, guid: 88f0e8f1bd8869c40b46ffa978b0a4bc, type: 3}
   worldBreakAbout: {fileID: 8300000, guid: ac5a716b59bad8b46bc9f1a9b2ef1eae, type: 3}
   yogoreWash: {fileID: 8300000, guid: 61f006a93ed27ed40a34c40c8dca85d9, type: 3}
   crack: {fileID: 8300000, guid: fe7a6b6e508465b4db5d52dd2d31a33e, type: 3}
-  littleMore: {fileID: 8300000, guid: 18fe3ecfeb6e6414489c84bb4fc193ac, type: 3}
   announce: {fileID: 8300000, guid: 852710008d5f08d4fadc6f9a6b257031, type: 3}
+  littleMore: {fileID: 8300000, guid: 18fe3ecfeb6e6414489c84bb4fc193ac, type: 3}
+  wallTackle: {fileID: 0}
+  wallBreak: {fileID: 0}

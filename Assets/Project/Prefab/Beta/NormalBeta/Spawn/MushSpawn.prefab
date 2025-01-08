@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3975095181946899962}
   - component: {fileID: 4195935817897164055}
   m_Layer: 0
-  m_Name: MashSpawn
+  m_Name: MushSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

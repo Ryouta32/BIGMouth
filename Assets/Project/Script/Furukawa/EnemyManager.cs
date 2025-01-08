@@ -15,10 +15,10 @@ public class EnemyManager : MonoBehaviour
     [HideInInspector] public int killCount;
     [SerializeField]BouSakiScript bouSakiScript;
     bool normal=false;
-    bool mash=false;
+    bool mush=false;
     bool spawn = true;
     [SerializeField] bool debugmode;
-    public static Vector3 mashPos;
+    public static Vector3 mushPos;
     public static Vector3 tentPos;
     private void Start()
     {
@@ -28,7 +28,7 @@ public class EnemyManager : MonoBehaviour
 
     public void ClearCheck() {
         Debug.Log(bossCount + " " + killCount);
-        if ((bossCount <= killCount)&&mash&&normal&&spawn)
+        if ((bossCount <= killCount)&&mush&&normal&&spawn)
         {
             spawn = false;
             GameObject obj = Instantiate(Ball, bossPos.position, Quaternion.identity);
@@ -54,7 +54,7 @@ public class EnemyManager : MonoBehaviour
         if (debugmode)
         {
             normal = true;
-            mash = true;
+            mush = true;
             ClearCheck();
         }
     }
@@ -66,7 +66,7 @@ public class EnemyManager : MonoBehaviour
         ClearCheck();
     }
     public void killNormal() =>normal=true;
-    public void killMash() =>mash=true;
+    public void killMash() =>mush=true;
     public void ResetEnemys() => enemys=new List<GameObject>();
     public bool SpawnCheck() => enemys.Count>=spawnLimit;
 }

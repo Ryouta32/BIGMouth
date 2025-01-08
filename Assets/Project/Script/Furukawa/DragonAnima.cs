@@ -9,8 +9,8 @@ public class DragonAnima : MonoBehaviour
     float limit;
     [SerializeField] BetaSpawn spawn;
     [SerializeField]float TentaTime;
-    [SerializeField]float MashTime;
-    bool mash=true;
+    [SerializeField]float MushTime;
+    bool mush=true;
     bool tent=true;
     float normalTime = 0;
 
@@ -38,10 +38,10 @@ public class DragonAnima : MonoBehaviour
             anima.SetTrigger("TentacleTrigger");
             tent = false;
         }
-        if (normalTime >= MashTime&&mash)
+        if (normalTime >= MushTime&&mush)
         {
             anima.SetTrigger("MashTrigger");
-            mash = false;
+            mush = false;
         }
     }
     public void Spawn()

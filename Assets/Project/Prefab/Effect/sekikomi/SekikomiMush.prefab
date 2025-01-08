@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5381933407890005129}
   - component: {fileID: 8747592946428691189}
   m_Layer: 0
-  m_Name: SekikomiMash
+  m_Name: SekikomiMush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
