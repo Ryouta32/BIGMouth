@@ -56,7 +56,6 @@ public class EnemyScript : MonoBehaviour
 
         if (data.sutnCount <= 0)
         {
-            SetState(EnemyData.State.stun);
             StartCoroutine("Stun");
         }
         else
@@ -78,16 +77,6 @@ public class EnemyScript : MonoBehaviour
     {
         AudioManager.manager.PlayPoint(AudioManager.manager.data.miniFollDown,this.gameObject,3);
         Instantiate(damageEffect, transform.position, Quaternion.identity);
-
-        ////吸い込み
-        //if (bouSaki.GetInHale() && data.state == EnemyData.State.stun)
-        //{
-        //    destroyObj();
-        //    bouSaki.StartOfSuction(transform.position);
-        //    AudioSource.PlayClipAtPoint(audioM.data.bom, this.gameObject.transform.position);
-        //    Destroy(this.gameObject);
-        //}
-        //スタン状態なら消す
         if (data.state == EnemyData.State.stun)
         {
             destroyObj();
@@ -104,6 +93,9 @@ public class EnemyScript : MonoBehaviour
         stunEffect.SetActive(true);
         Debug.Log("スタンエフェクト");
         AudioManager.manager.PlayPoint(AudioManager.manager.data.ministun,this.gameObject,3);
+        yield return new WaitForSeconds(1f);
+        SetState(EnemyData.State.stun);
+
         yield return new WaitForSeconds(data.sutnTime);
         SetState(EnemyData.State.general);
         StunReturn();

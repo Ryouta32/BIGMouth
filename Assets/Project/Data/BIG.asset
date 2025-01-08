@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BIG
   m_EditorClassIdentifier: 
   sutnCount: 5
-  sutnTime: 0
+  sutnTime: 10
   returnTime: 0
   speed: 0
   state: 0

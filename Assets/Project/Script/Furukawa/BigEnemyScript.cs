@@ -13,6 +13,8 @@ public class BigEnemyScript : MonoBehaviour
     [SerializeField] GameObject Tentacle;
     [SerializeField] GameObject Mash;
     [SerializeField] BIGEnemyAnima anima;
+    [SerializeField] GameObject stunEffect;
+    public BouSakiScript bouSaki;
     GameClearSC clearSC;
     private EnemyData data;
     private bool erase;
@@ -25,6 +27,19 @@ public class BigEnemyScript : MonoBehaviour
     {
         transform.localPosition =new Vector3(0,0,0) ;
         transform.localEulerAngles = new Vector3(0, 0, 0);
+        if (erase)
+        {
+            Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
+        if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
+        {
+            //吸い込みの処理
+
+            bouSaki.StartOfSuction(transform.position - bouSaki.transform.position,true);
+            //clearSC.Clear();
+            Destroy(gameObject);
+
+        }
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -36,7 +51,8 @@ public class BigEnemyScript : MonoBehaviour
                     if (data.sutnCount <= 0)
                     {
                     //クリア演出
-                    clearSC.Clear();
+                    bouSaki.StartOfSuction(transform.position,true);
+                    //clearSC.Clear();
                     }
             }
         }
@@ -48,10 +64,15 @@ public class BigEnemyScript : MonoBehaviour
             if (other.gameObject.tag == "Brush")
             {
                 data.sutnCount--;
+                if(data.state==EnemyData.State.stun)
+                {
+                    Destroy(gameObject);
+                }    
                 if (data.sutnCount <= 0)
                 {
+                    StartCoroutine("Stun");
                     //クリア演出
-                    clearSC?.Clear();
+                    //clearSC.Clear();
                 }
             }
         }
@@ -67,6 +88,18 @@ public class BigEnemyScript : MonoBehaviour
 
         if (obj.name == "Mash")
             Instantiate(obj, EnemyManager.tentPos, Quaternion.identity);
+    }
+    IEnumerator Stun()//スタン中の処理
+    {
+        stunEffect.SetActive(true);
+        Debug.Log("スタンエフェクト");
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.ministun, this.gameObject, 3);
+        yield return new WaitForSeconds(1f);
+        data.state = EnemyData.State.stun;
+        yield return new WaitForSeconds(data.sutnTime);
+        data.state = EnemyData.State.general;
+        data.sutnTime = _data.sutnTime;
+        stunEffect.SetActive(false);
     }
     public void Erase() => erase = true;
     public void OBJScaleUP()

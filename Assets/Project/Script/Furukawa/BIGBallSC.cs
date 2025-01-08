@@ -14,6 +14,7 @@ public class BIGBallSC : MonoBehaviour
     private Transform pa;
     float time = 0;
     bool borderOver=true;
+    BouSakiScript bousaki;
     void Start()
     {
         mat.SetFloat("_hagesisa", 0);
@@ -43,4 +44,5 @@ public class BIGBallSC : MonoBehaviour
         }
     }
     public void setParent(Transform tra) => pa = tra;
+    public void setSaki(BouSakiScript saki) => bousaki = saki;
 }
