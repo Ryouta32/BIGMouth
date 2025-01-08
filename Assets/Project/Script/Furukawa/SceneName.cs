@@ -7,6 +7,6 @@ public class SceneName
 {
     public enum sceneName
     {
-        MainScene, StartScene, EntranceScene, ClearScene, TyuukanGanbare, SubScene
+        StartScene, GameScene, ClearScene, GameOverScene, EntranceScene, SubScene
     }
 }
