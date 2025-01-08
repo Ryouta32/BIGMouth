@@ -30,7 +30,7 @@ public class TutorialEnemy : MonoBehaviour
             bouSaki.StartOfSuction(transform.position - bouSaki.transform.position);
             inHale = true;
             //成功アナウンスに変える
-            AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
+            AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);
             tutorialSC.CLEAR();
             Destroy(this.gameObject);
         }
@@ -40,7 +40,7 @@ public class TutorialEnemy : MonoBehaviour
         Debug.Log(data.sutnCount);
         if (collision.gameObject.CompareTag("Brush"))
         {
-            AudioManager.manager.PlayPoint(AudioManager.manager.data.miniFollDown, this.gameObject);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.kill, this.gameObject);
 
             //スタン状態なら消す
             if (data.state == EnemyData.State.stun)
@@ -62,7 +62,7 @@ public class TutorialEnemy : MonoBehaviour
     {
         stunEffect.SetActive(true);
         Debug.Log("スタンエフェクト");
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.ministun, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject);
 
         yield return new WaitForSeconds(1.0f);
         SetState(EnemyData.State.stun);

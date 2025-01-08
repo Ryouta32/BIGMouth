@@ -18,7 +18,7 @@ public class ParticleCollision : MonoBehaviour
             if (audioflag)
             {
                 audioflag = false;
-                AudioManager.manager.PlayPoint(AudioManager.manager.data.miniHole, this.gameObject);
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.tentacleHole, this.gameObject);
             }
             transform.GetChild(0).gameObject.SetActive(false);
             Destroy(gameObject, 1f);

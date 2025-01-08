@@ -45,7 +45,7 @@ public class MashroomManager : MonoBehaviour
         else
         {
             //Debug.Log("なったーーーーーーーーーーーーーーーーーーーーーー");
-            AudioManager.manager.PlayPoint(AudioManager.manager.data.mush, this.gameObject);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.mushKasa, this.gameObject);
         }
     }
 

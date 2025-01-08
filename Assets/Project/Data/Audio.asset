@@ -12,30 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefbaeb5cabb9b946885fba15d529a2d, type: 3}
   m_Name: Audio
   m_EditorClassIdentifier: 
-  miniMove: {fileID: 8300000, guid: 01ce244da7f57e245babbac7b98383c7, type: 3}
-  miniBom: {fileID: 8300000, guid: d6ced4e9dac85ef48b9932330bd6c27f, type: 3}
-  miniFollDown: {fileID: 8300000, guid: f5edf40c2177dcb4aa61ba9b2d3ae462, type: 3}
-  miniOut: {fileID: 8300000, guid: 0e57dafc1832e354f9f9b780b1b5afe9, type: 3}
-  miniIn: {fileID: 8300000, guid: b0024cfb327a6db43a379b1ffd812850, type: 3}
-  miniHole: {fileID: 8300000, guid: d08ab08d45d2d284dac045efbe8ede2b, type: 3}
-  miniBoss: {fileID: 8300000, guid: d94bffa1d5e686844aafeada638f2a94, type: 3}
-  miniFoimtain: {fileID: 8300000, guid: 601835b16e057cf4c886c50aa79c4787, type: 3}
-  ministun: {fileID: 8300000, guid: 99dd1fe9849443746b3a1b1faf56d4d3, type: 3}
-  mush: {fileID: 8300000, guid: 6092004608c7bcf4eba48fcd8df11ed2, type: 3}
-  cleanerClean: {fileID: 8300000, guid: c2437e594076cc24d9357186b0769306, type: 3}
-  cleanerCharge: {fileID: 8300000, guid: 6e908f9f20b65754fb8729249ab91bfc, type: 3}
-  cleanerSuction: {fileID: 8300000, guid: d821ed87c0bed0a4a9672b8c2b328a2d, type: 3}
-  cleanerPon: {fileID: 8300000, guid: 60bf1d28a3ccd76498eba5ffd910edd1, type: 3}
-  cleaner5: {fileID: 0}
-  cleanerSplash: {fileID: 8300000, guid: 77921070a86a73d4ab0aaf7f4633c5c8, type: 3}
+  move: {fileID: 0}
+  damage: {fileID: 0}
+  kill: {fileID: 0}
+  stun: {fileID: 8300000, guid: 99dd1fe9849443746b3a1b1faf56d4d3, type: 3}
+  normalBom: {fileID: 8300000, guid: d6ced4e9dac85ef48b9932330bd6c27f, type: 3}
+  bukubuku: {fileID: 8300000, guid: 839ab6766fb7d09499a11dd4c69a351f, type: 3}
+  tentacleOut: {fileID: 8300000, guid: 0e57dafc1832e354f9f9b780b1b5afe9, type: 3}
+  tentacleIn: {fileID: 8300000, guid: b0024cfb327a6db43a379b1ffd812850, type: 3}
+  tentacleBetan: {fileID: 8300000, guid: 601835b16e057cf4c886c50aa79c4787, type: 3}
+  tentacleHole: {fileID: 8300000, guid: d08ab08d45d2d284dac045efbe8ede2b, type: 3}
+  mashPotan: {fileID: 8300000, guid: 9969cfef380799b4f979bf269da6a54c, type: 3}
+  attack: {fileID: 8300000, guid: be1af067cf01add43bb071b8a338f112, type: 3}
+  mushKasa: {fileID: 0}
+  bigBom: {fileID: 8300000, guid: b0748ce537aa9d248bcc432f54be9091, type: 3}
+  bigArrival: {fileID: 0}
+  emergency: {fileID: 8300000, guid: d94bffa1d5e686844aafeada638f2a94, type: 3}
+  clean: {fileID: 8300000, guid: c2437e594076cc24d9357186b0769306, type: 3}
+  charge: {fileID: 8300000, guid: 6e908f9f20b65754fb8729249ab91bfc, type: 3}
+  suction: {fileID: 8300000, guid: d821ed87c0bed0a4a9672b8c2b328a2d, type: 3}
+  bubble: {fileID: 8300000, guid: 60bf1d28a3ccd76498eba5ffd910edd1, type: 3}
+  cleaner5: {fileID: 8300000, guid: 77921070a86a73d4ab0aaf7f4633c5c8, type: 3}
+  shower: {fileID: 8300000, guid: 77921070a86a73d4ab0aaf7f4633c5c8, type: 3}
   cleanerFix: {fileID: 8300000, guid: 911980698cc47664f9d53113b932e21d, type: 3}
   stageScatetr: {fileID: 8300000, guid: d74238cf01b519f4d98e5561c2c9361c, type: 3}
   stageCrack: {fileID: 8300000, guid: 62cd24adafa4c014b84c23b7a7b1f561, type: 3}
   stageBreak: {fileID: 8300000, guid: 881f32aa4eb329f4da5749c679fba2b4, type: 3}
   stageEnergency: {fileID: 8300000, guid: 5f29ec45cb81dc64495c7ab087279fe5, type: 3}
   stageEnergency2: {fileID: 8300000, guid: 663731989ea7f7b4c8bd8e3ebcd1b7ac, type: 3}
-  systemAbutton: {fileID: 0}
-  systemBbutton: {fileID: 0}
+  Abutton: {fileID: 0}
+  Bbutton: {fileID: 0}
   systemStage: {fileID: 0}
   systemPointer: {fileID: 0}
   mainBGM: {fileID: 0}
@@ -43,4 +49,10 @@ MonoBehaviour:
   clearBGM: {fileID: 8300000, guid: bfb6d6b0119707348aae048d8b73c765, type: 3}
   gameoverBGM: {fileID: 8300000, guid: 89f51f32ec684304ebf25ffc22ad539f, type: 3}
   bossBGM: {fileID: 8300000, guid: 5bdf27293bd66364db61802d94fbd631, type: 3}
+  help: {fileID: 8300000, guid: 6572fac357cabaa4391b7d620e0008e3, type: 3}
+  worldBreak: {fileID: 8300000, guid: 88f0e8f1bd8869c40b46ffa978b0a4bc, type: 3}
+  worldBreakAbout: {fileID: 8300000, guid: ac5a716b59bad8b46bc9f1a9b2ef1eae, type: 3}
+  yogoreWash: {fileID: 8300000, guid: 61f006a93ed27ed40a34c40c8dca85d9, type: 3}
+  crack: {fileID: 8300000, guid: fe7a6b6e508465b4db5d52dd2d31a33e, type: 3}
+  littleMore: {fileID: 8300000, guid: 18fe3ecfeb6e6414489c84bb4fc193ac, type: 3}
   announce: {fileID: 8300000, guid: 852710008d5f08d4fadc6f9a6b257031, type: 3}

@@ -75,13 +75,13 @@ public class EnemyScript : MonoBehaviour
     }
     public void HitDamage()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.miniFollDown,this.gameObject,3);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.kill,this.gameObject,3);
         Instantiate(damageEffect, transform.position, Quaternion.identity);
         if (data.state == EnemyData.State.stun)
         {
             destroyObj();
             Debug.Log("削除");
-            AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
+            AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);
             Destroy(this.gameObject);
         }
         data.sutnCount--;
@@ -92,7 +92,7 @@ public class EnemyScript : MonoBehaviour
     {
         stunEffect.SetActive(true);
         Debug.Log("スタンエフェクト");
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.ministun,this.gameObject,3);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.stun,this.gameObject,3);
         yield return new WaitForSeconds(1f);
         SetState(EnemyData.State.stun);
 
@@ -103,7 +103,7 @@ public class EnemyScript : MonoBehaviour
     }
     public void MoveAudio()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.miniMove,this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.move,this.gameObject);
     }
     public void StunReturn() => data.sutnCount = _data.sutnCount;
     public void setManager(EnemyManager x) => manager = x;
