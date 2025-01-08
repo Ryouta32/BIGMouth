@@ -37,6 +37,7 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] GameObject SuctionObj;
     [Header("シャワーパワー")]
     [SerializeField] Slider slider;
+    [SerializeField] GameClearSC clearSC;
     bool on=true;
    Vector3 hitpoint;
    public bool OnHale;
@@ -55,6 +56,8 @@ public class BouSakiScript : MonoBehaviour
         hitpoint = Vector3.zero;
         slider.maxValue = showerLimit;
         showerPoint = showerThreshold;
+        if (clearSC != null)
+            clearSC = GameObject.Find("Clear").GetComponent<GameClearSC>();
     }
 
     void Update()
@@ -208,6 +211,17 @@ public class BouSakiScript : MonoBehaviour
         var sh = psy.shape;
 
         sh.position = pos;
+    }
+    public void StartOfSuction(Vector3 pos,bool clear)
+    {
+        GameObject obj = Instantiate(SuctionObj, transform.position, Quaternion.identity);
+        obj.GetComponent<SuikomiScript>().SetBousaki(this);
+        ParticleSystem psy = obj.GetComponent<ParticleSystem>();
+        var sh = psy.shape;
+
+        sh.position = pos;
+        if(clear)
+        obj.GetComponent<SuikomiScript>().SetClear(clearSC);
 
     }
     public Vector3 GetHit() => hitpoint;
