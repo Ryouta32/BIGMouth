@@ -160,3 +160,4 @@ MonoBehaviour:
     heightBlendType: 0
   useMethodType: 1
   erase: 1
+  fallcount: 3
