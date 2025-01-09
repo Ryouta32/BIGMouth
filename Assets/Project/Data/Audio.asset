@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move: {fileID: 0}
   damage: {fileID: 0}
-  kill: {fileID: 0}
+  kill: {fileID: 8300000, guid: 135d75db3b4760243b449a02c43946a1, type: 3}
   stun: {fileID: 8300000, guid: 99dd1fe9849443746b3a1b1faf56d4d3, type: 3}
   normalBom: {fileID: 8300000, guid: d6ced4e9dac85ef48b9932330bd6c27f, type: 3}
   bukubuku: {fileID: 8300000, guid: 839ab6766fb7d09499a11dd4c69a351f, type: 3}
