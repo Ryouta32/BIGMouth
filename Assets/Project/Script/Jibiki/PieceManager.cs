@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 /* プレイ中の壁が(時間経過)崩れていく挙動 */
 
 public class PieceManager : MonoBehaviour
@@ -21,7 +21,10 @@ public class PieceManager : MonoBehaviour
     [Tooltip("オブジェクトを消す秒数")]
     [SerializeField] float destroytime;
 
+    [Tooltip("生成するベタ")]
     [SerializeField] GameObject beta;
+
+    GameObject UI_HP;
 
     //ピースの親オブジェクト
     GameObject PieceParent;
@@ -43,6 +46,7 @@ public class PieceManager : MonoBehaviour
 
     void Start()
     {
+        UI_HP = GameObject.Find("HP");
         cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
         betaflag = true;
         PieceParent = this.gameObject;
@@ -164,10 +168,13 @@ public class PieceManager : MonoBehaviour
                         count = 0;
                     }
 
-                    Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
-
+                    //Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
                     //落ちたオブジェクトはリストから削除
                     PieceChildren.Remove(PieceChildren[rnd]);
+                    if (gameObject.transform.root.name == "tenjyou")
+                    {
+                        UI_HP.GetComponent<Image>().fillAmount = PieceChildren.Count / piececount;
+                    }
                     Destroy(obj.gameObject, destroytime);
                 }
 
