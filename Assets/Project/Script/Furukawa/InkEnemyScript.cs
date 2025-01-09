@@ -48,18 +48,4 @@ public class InkEnemyScript : MonoBehaviour
         }
         else return;
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Wall"))
-        {
-            if (gameObject.tag == "Normal")
-            {
-                PaintManager paintManager = new PaintManager();
-
-                paintManager.Paint(other, useMethodType, erase, brush, transform, false, other.transform.tag);
-            }
-        }
-
-    }
 }

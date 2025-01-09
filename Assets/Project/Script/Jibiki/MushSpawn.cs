@@ -5,20 +5,22 @@ using UnityEngine;
 
 public class MashSpawn : MonoBehaviour
 {
-    [SerializeField] GameObject kinokoprefab;
-    [SerializeField] GameObject tentacleprefab;
+    //[SerializeField] GameObject kinokoprefab;
+    //[SerializeField] GameObject tentacleprefab;
     [SerializeField] GameObject Tutorial;
-    [SerializeField] EnemyManager manager;
+    //[SerializeField] EnemyManager manager;
 
     OVRSceneManager ovrSceneManager;
     OVRScenePlane floor;
     GameObject dragonprefab;
     [HideInInspector]
     public List<Transform> NormalObj = new List<Transform>();
+    [HideInInspector]
     public Vector3 tutorialpos;
     [SerializeField]
     GameObject camerac;
 
+    [SerializeField] GameObject plane;
     private void Awake()
     {
         dragonprefab = GameObject.Find("DragonPrefab");
@@ -46,7 +48,7 @@ public class MashSpawn : MonoBehaviour
         float posy = floor.transform.position.y + 0.1f;
 
         floor.transform.position = new Vector3(floor.transform.position.x, posy + 0.5f, floor.transform.position.z);
-
+        Instantiate(plane, floor.transform.position, Quaternion.identity);
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
         foreach　(var classification in classifications)

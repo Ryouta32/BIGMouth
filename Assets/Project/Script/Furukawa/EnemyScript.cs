@@ -23,7 +23,6 @@ public class EnemyScript : MonoBehaviour
         initialization();
         data = new EnemyData(_data);
         rb = GetComponent<Rigidbody>();
-
     }
     private void Update()
     {
