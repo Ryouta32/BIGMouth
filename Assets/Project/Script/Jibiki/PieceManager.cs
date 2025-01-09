@@ -23,6 +23,8 @@ public class PieceManager : MonoBehaviour
 
     [SerializeField] GameObject beta;
 
+    GameObject FailCanvas;
+
     //ピースの親オブジェクト
     GameObject PieceParent;
 
@@ -44,7 +46,7 @@ public class PieceManager : MonoBehaviour
     {
         betaflag = true;
         PieceParent = this.gameObject;
-
+        FailCanvas = GameObject.Find("FailUI");
         //リスト追加
         for (int i = 0; i < PieceParent.transform.childCount; i++)
         {
@@ -150,6 +152,12 @@ public class PieceManager : MonoBehaviour
                     obj.AddForce(transform.up * power, ForceMode.Impulse);
                     count++;
 
+                    //警告音鳴らす
+                    if (piececount / 2 > PieceChildren.Count && count == fallcount)
+                    {
+                        AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
+                    }
+
                     if (beta != null && count == fallcount)
                     {
                         int rot = Random.Range(0, 360);
@@ -164,11 +172,6 @@ public class PieceManager : MonoBehaviour
                     Destroy(obj.gameObject, destroytime);
                 }
 
-                //警告音鳴らす
-                if (piececount / 2 > PieceChildren.Count)
-                {
-                    AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
-                }
             }
             else
             {
@@ -191,7 +194,8 @@ public class PieceManager : MonoBehaviour
                     //if (classification.transform.name == "tenjyou" && PieceChildren.Count <= 0)
                     if (PieceChildren.Count <= 0)
                     {
-                        SceneManager.LoadScene("GameOverScene");
+                        FailCanvas.SetActive(true);
+                        //SceneManager.LoadScene("GameOverScene");
                     }
                 }
             }
