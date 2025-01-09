@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1416259710628001016}
   - component: {fileID: 9038243804745951194}
   m_Layer: 0
-  m_Name: DragonSpawn
+  m_Name: DragonManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

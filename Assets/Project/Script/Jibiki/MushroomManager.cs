@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class MushroomManager : MonoBehaviour
 {
-    //[Tooltip("キノコブロックするときの間隔")]
+    [Tooltip("しゃがむときの秒数")]
     [SerializeField] float waittime;
 
     Animator anim;
     BoxCollider boxCollider;
     EnemyScript enemyScript;
 
-    [Tooltip("音を再生するアニメーションの名前")]
-    public string targetAnimationName;
+    //[Tooltip("音を再生するアニメーションの名前")]
+    //public string targetAnimationName;
 
     private bool isPlayingSound = false;
 
@@ -33,16 +33,16 @@ public class MushroomManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-        if (other.gameObject.CompareTag("shower") && stateInfo.IsName(targetAnimationName))
+        if (other.gameObject.CompareTag("shower") && stateInfo.IsName("Idle"))
         {
             enemyScript.data.sutnCount = 0;
         }
-        if (other.gameObject.CompareTag("Brush") && stateInfo.IsName(targetAnimationName))
+        if (other.gameObject.CompareTag("Brush") && stateInfo.IsName("Idle"))
         {
             enemyScript.HitDamage();
             StartCoroutine("AnimProtection");
         }
-        else
+        else if(other.gameObject.CompareTag("Brush"))
         {
             //Debug.Log("なったーーーーーーーーーーーーーーーーーーーーーー");
             AudioManager.manager.PlayPoint(AudioManager.manager.data.mushKasa, this.gameObject);
