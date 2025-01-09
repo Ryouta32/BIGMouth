@@ -23,8 +23,6 @@ public class PieceManager : MonoBehaviour
 
     [SerializeField] GameObject beta;
 
-    GameObject FailCanvas;
-
     //ピースの親オブジェクト
     GameObject PieceParent;
 
@@ -41,12 +39,13 @@ public class PieceManager : MonoBehaviour
 
     [SerializeField] int fallcount;
     int count;
+    CanvasChange cc;
 
     void Start()
     {
+        cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
         betaflag = true;
         PieceParent = this.gameObject;
-        FailCanvas = GameObject.Find("FailUI");
         //リスト追加
         for (int i = 0; i < PieceParent.transform.childCount; i++)
         {
@@ -194,7 +193,8 @@ public class PieceManager : MonoBehaviour
                     //if (classification.transform.name == "tenjyou" && PieceChildren.Count <= 0)
                     if (PieceChildren.Count <= 0)
                     {
-                        FailCanvas.SetActive(true);
+                        cc.Phase[0] = false;
+                        cc.Phase[2] = true;
                         //SceneManager.LoadScene("GameOverScene");
                     }
                 }

@@ -6,22 +6,12 @@ public class CanvasChange : MonoBehaviour
 {
     [SerializeField] GameObject[] Canvas;
 
-    [SerializeField] bool[] Phase; 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Phase = new bool[Canvas.Length];
-    }
-
-    // Update is called once per frame
+    [SerializeField] public bool[] Phase; 
     void Update()
     {
         for(int i = 0; i < Canvas.Length; i++)
         {
-            if (Phase[i])
-            {
-                Canvas[i].SetActive(true);
-            }
+            Canvas[i].SetActive(Phase[i]);
         }
     }
 }
