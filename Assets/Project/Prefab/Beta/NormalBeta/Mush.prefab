@@ -255,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d069906031d49e64fa452696f6350d8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d069906031d49e64fa452696f6350d8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -263,7 +263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d069906031d49e64fa452696f6350d8a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d069906031d49e64fa452696f6350d8a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -650,4 +650,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waittime: 5
-  targetAnimationName: Idle

@@ -153,24 +153,10 @@ MonoBehaviour:
     brushScale: 0.04
     rotateAngle: 0
     brushNormalBlend: 0
-    brushHeightBlend: 0.245
+    brushHeightBlend: 0.22
     brushColor: {r: 0, g: 0, b: 0, a: 0.2}
     colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
-  draBrush:
-    brushTexture: {fileID: 0}
-    brushNormalTexture: {fileID: 0}
-    brushHeightTexture: {fileID: 0}
-    brushScale: 0.04
-    rotateAngle: 0
-    brushNormalBlend: 0
-    brushHeightBlend: 0
-    brushColor: {r: 0, g: 0, b: 0, a: 0.2}
-    colorBlendType: 3
-    normalBlendType: 0
-    heightBlendType: 0
   useMethodType: 1
   erase: 1
-  DragonTag: Dragon
-  m: {fileID: 2100000, guid: 6a19fbe10b0b5394091e88cdea081dc8, type: 2}
