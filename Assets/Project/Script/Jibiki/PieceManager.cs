@@ -177,12 +177,11 @@ public class PieceManager : MonoBehaviour
                 //Debug.Log("やめたーーーーーーーーー");
                 //いんぼけやめる
                 //CancelInvoke();
-                //if (gameObject.transform.root.name == "tenjyou")
-                //{
-                //    //ゲームオーバーシーンに行く
-                //    SceneManager.LoadScene("GameOverScene");
-                //    //CancelInvoke();
-                //}
+                if (gameObject.transform.root.name == "tenjyou")
+                {
+                    cc.Phase[0] = false;
+                    cc.Phase[2] = true;
+                }
             }
             var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 

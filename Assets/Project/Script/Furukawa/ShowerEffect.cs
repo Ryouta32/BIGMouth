@@ -24,6 +24,9 @@ public class ShowerEffect : MonoBehaviour
     [SerializeField, Tooltip("ヒット位置の通知")]
     private List<ParticleCollisionEvent> p_CollisionEventList;
 
+    [SerializeField] int fallcount;
+    int count;
+
     private void Start()
     {
         p_RefParticle = GetComponent<ParticleSystem>();
@@ -44,6 +47,15 @@ public class ShowerEffect : MonoBehaviour
                 //Debug.Log("Particle Hit : object name = " + other.name + ", position = " + pos.ToString());
 
                 Instantiate(PaintObj, pos, Quaternion.identity);
+                count++;
+
+                if (gameObject.transform.root.name == "Mush" && count == fallcount)
+                {
+                    AudioManager.manager.PlayPoint(AudioManager.manager.data.mushPotan, this.gameObject);
+                    count = 0;
+                }
+
+
                 // 今回は1つ目のヒット情報のみ処理する
                 break;
             }

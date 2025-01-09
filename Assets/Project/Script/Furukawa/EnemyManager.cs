@@ -20,9 +20,13 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] bool debugmode;
     public static Vector3 mushPos;
     public static Vector3 tentPos;
+
+    CanvasChange cc;
+
     private void Start()
     {
         betaSpawn = GetComponent<BetaSpawn>();
+        cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
 
     }
 
@@ -38,6 +42,8 @@ public class EnemyManager : MonoBehaviour
         if (enemys.Count == 0)
         {
             //ここにゲームクリアの処理
+            cc.Phase[0] = false;
+            cc.Phase[1] = true;
             //SceneManager.LoadScene(SceneName.sceneName.ClearScene.ToString());
         }
 

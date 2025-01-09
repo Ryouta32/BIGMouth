@@ -69,13 +69,13 @@ public class BouSakiScript : MonoBehaviour
         //スキルの判定
         if (showerPoint > 0)
         {
-            if (on && OVRInput.Get(actionBtn) || (on && Input.GetKey(KeyCode.Space)))
+            if (on && OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) || (on && Input.GetKey(KeyCode.Space)))
             {
                 ShowerObj.SetActive(true);
                 showerPoint -= Time.deltaTime * 10;
                 StartCoroutine("ShowerTime");
             }
-            if (OVRInput.GetUp(actionBtn) || Input.GetKeyUp(KeyCode.Space))
+            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) || Input.GetKeyUp(KeyCode.Space))
             {
                 ShowerObj.SetActive(false);
                 StopCoroutine("ShowerTime");
@@ -90,12 +90,12 @@ public class BouSakiScript : MonoBehaviour
             cool = 0;
             image.sprite = InholeSp;
             //s\吸い込み判定
-            if (!OnHale &&( OVRInput.Get(OVRInput.RawButton.B) || Input.GetMouseButton(0)))
+            if (!OnHale &&( OVRInput.Get(OVRInput.RawButton.B) || OVRInput.Get(OVRInput.RawButton.A) || Input.GetMouseButton(0)))
             {
                 Inhale();
             }
         }
-        if (OnHale&&( OVRInput.GetUp(OVRInput.RawButton.B) || Input.GetMouseButtonUp(0)))
+        if (OnHale&&( OVRInput.GetUp(OVRInput.RawButton.B) || OVRInput.GetUp(OVRInput.RawButton.A) || Input.GetMouseButtonUp(0)))
         {
             UpInhale();
             image.sprite = NoholeSp;

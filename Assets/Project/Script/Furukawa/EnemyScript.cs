@@ -93,7 +93,7 @@ public class EnemyScript : MonoBehaviour
         stunEffect.SetActive(true);
         Debug.Log("スタンエフェクト");
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun,this.gameObject,3);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.2f);
         SetState(EnemyData.State.stun);
 
         yield return new WaitForSeconds(data.sutnTime);
