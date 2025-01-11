@@ -24,7 +24,7 @@ public class PieceManager : MonoBehaviour
     [Tooltip("生成するベタ")]
     [SerializeField] GameObject beta;
 
-    GameObject UI_HP;
+    Image UI_HP;
 
     //ピースの親オブジェクト
     GameObject PieceParent;
@@ -38,17 +38,14 @@ public class PieceManager : MonoBehaviour
 
     float piececount;
 
-    bool betaflag;
-
     [SerializeField] int fallcount;
     int count;
     CanvasChange cc;
 
     void Start()
     {
-        UI_HP = GameObject.Find("HP");
+        UI_HP = GameObject.Find("HP").GetComponent<Image>();
         cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
-        betaflag = true;
         PieceParent = this.gameObject;
         //リスト追加
         for (int i = 0; i < PieceParent.transform.childCount; i++)
@@ -173,7 +170,7 @@ public class PieceManager : MonoBehaviour
                     PieceChildren.Remove(PieceChildren[rnd]);
                     if (gameObject.transform.root.name == "tenjyou")
                     {
-                        UI_HP.GetComponent<Image>().fillAmount = PieceChildren.Count / piececount;
+                        UI_HP.fillAmount = PieceChildren.Count / piececount;
                     }
                     Destroy(obj.gameObject, destroytime);
                 }
@@ -196,12 +193,10 @@ public class PieceManager : MonoBehaviour
             {
                 if (classification.Contains(OVRSceneManager.Classification.Ceiling))
                 {
-                    //if (classification.transform.name == "tenjyou" && PieceChildren.Count <= 0)
                     if (PieceChildren.Count <= 0)
                     {
                         cc.Phase[0] = false;
                         cc.Phase[2] = true;
-                        //SceneManager.LoadScene("GameOverScene");
                     }
                 }
             }

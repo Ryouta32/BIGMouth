@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2881200661804771099}
   - component: {fileID: 4058337382689675206}
   - component: {fileID: 4500967067303173081}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5335383063546065340}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: baburu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ovr: {fileID: 0}
   saki: {fileID: 8784399990056825994}
-  offset: {x: 0, y: -0.3, z: 0}
+  offset: {x: 0, y: 1.2, z: 0}
 --- !u!1 &1987312953438335151
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 5129391773198577382}
   - component: {fileID: 2648655848110748788}
   - component: {fileID: 6008278464820239674}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 5043924606021925218}
   - component: {fileID: 2403273992530655016}
   - component: {fileID: 3966073088474922783}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 8811410625068943190}
   - component: {fileID: 8376797106463284842}
   - component: {fileID: 3992685946433913850}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 8011758837273460814}
   - component: {fileID: 6804267146926229033}
   - component: {fileID: 6912584748812590552}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5477,7 +5477,7 @@ MonoBehaviour:
     normalBlendType: 0
     heightBlendType: 0
   useMethodType: 0
-  erase: 1
+  erase: 0
   PaintObj: {fileID: 5025516467825413144, guid: f1facb0529e85284bacc65622c68592d, type: 3}
   DragonTag: Dragon
   fallcount: 0
@@ -5492,7 +5492,7 @@ GameObject:
   - component: {fileID: 119117061498043642}
   - component: {fileID: 8785531767147523273}
   - component: {fileID: 1702726694330384970}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5683,7 +5683,7 @@ GameObject:
   - component: {fileID: 5312076462758592206}
   - component: {fileID: 752137824180539608}
   - component: {fileID: 3680027834096655219}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5758,7 +5758,7 @@ GameObject:
   - component: {fileID: 3352100931364111347}
   - component: {fileID: 1902826582967791189}
   - component: {fileID: 1442452898627383148}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5833,7 +5833,7 @@ GameObject:
   - component: {fileID: 6248652365741546217}
   - component: {fileID: 2481751954902206044}
   - component: {fileID: 7435018136307554564}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5908,7 +5908,7 @@ GameObject:
   - component: {fileID: 184542578291480926}
   - component: {fileID: 334103661833571466}
   - component: {fileID: 6794960532639959908}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Suikomi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5984,7 +5984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2093072979557886304}
   - component: {fileID: 8188297735176210497}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6167,7 +6167,7 @@ GameObject:
   - component: {fileID: 3449591067946729270}
   - component: {fileID: 7881874459930435705}
   - component: {fileID: 6930238494219374221}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6242,7 +6242,7 @@ GameObject:
   - component: {fileID: 7106686348249860669}
   - component: {fileID: 9151211177767859370}
   - component: {fileID: 6449659299357585177}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6317,7 +6317,7 @@ GameObject:
   - component: {fileID: 4823702670891233041}
   - component: {fileID: 3008003024963600499}
   - component: {fileID: 2421678941032009903}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6392,7 +6392,7 @@ GameObject:
   - component: {fileID: 1739226691801221117}
   - component: {fileID: 7489855393987335549}
   - component: {fileID: 5642514968048423980}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6838,6 +6838,7 @@ MonoBehaviour:
   image: {fileID: 5097283247662555605}
   InholeSp: {fileID: -1044079551, guid: 2faf94e324453f64d810f6df73ba6fa1, type: 3}
   NoholeSp: {fileID: 1113981920, guid: 2faf94e324453f64d810f6df73ba6fa1, type: 3}
+  yogosi: {fileID: 0}
 --- !u!65 &1195390217049924833
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -33,9 +33,8 @@ public class bouScript : MonoBehaviour
         //if(Hitdis<dis)
         {
             transform.position -= move;
-
-            transform.LookAt(ovr.leftHandAnchor.position+offset);
-
+            Vector3 pos = new Vector3 (ovr.leftHandAnchor.position.x, ovr.leftHandAnchor.position.y * offset.y, ovr.leftHandAnchor.position.z);
+            transform.LookAt(pos);
         }
         //else
         //{

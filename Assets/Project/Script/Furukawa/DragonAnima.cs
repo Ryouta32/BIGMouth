@@ -28,7 +28,7 @@ public class DragonAnima : MonoBehaviour
 
         if (time >= limit)
         {
-            anima.SetTrigger("Cough");
+            //anima.SetTrigger("Cough");
             time = 0;
             limit = Random.Range(0, 10);
         }

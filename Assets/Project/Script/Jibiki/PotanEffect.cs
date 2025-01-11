@@ -15,9 +15,6 @@ public class PotanEffect : MonoBehaviour
     [SerializeField]
     bool erase = false;
 
-    [SerializeField] int fallcount;
-    public static int count;
-
     private void OnCollisionEnter(Collision col)
     {
         PaintManager paintManager = new PaintManager();
@@ -27,21 +24,14 @@ public class PotanEffect : MonoBehaviour
             switch (col.transform.tag)
             {
                 case "Wall":
-                    //if(count == fallcount)
-                    //{
-                    //    AudioManager.manager.PlayPoint(AudioManager.manager.data.mushPotan, this.gameObject);
-                    //    Debug.Log("なったーーーーーーーー");
-                    //    count = 0;
-                    //}
                     paintManager.Paint(col, useMethodType, erase, brush, transform, false, col.transform.tag);
-                    count++;
-                    Destroy(gameObject, 10.0f);
+                    Destroy(gameObject, 1.0f);
                     break;
                 default:
-                    Destroy(gameObject, 10.0f);
+                    Destroy(gameObject, 1.0f);
                     break;
             }
-            Destroy(gameObject , 10.0f);
+            Destroy(gameObject , 1.0f);
         }
     }
 }

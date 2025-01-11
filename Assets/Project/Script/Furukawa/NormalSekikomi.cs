@@ -18,17 +18,18 @@ public class NormalSekikomi : MonoBehaviour
     {
         Debug.Log(other.name);
 
-        if(other.name == "Cube.1")
+        if (other.name == "Cube.1")
         {
             p_system.GetCollisionEvents(other, p_CollisionEventList);
             foreach (ParticleCollisionEvent collisionEvent in p_CollisionEventList)
             {
                 Vector3 pos = collisionEvent.intersection;
                 Instantiate(Beta, pos, Quaternion.identity);
+                Debug.Log("きたーーーーーーせいせい");
                 // 今回は1つ目のヒット情報のみ処理する
                 break;
             }
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
