@@ -509,6 +509,7 @@ MonoBehaviour:
   stunEffect: {fileID: 5041463460301384239}
   DestroyEffect: {fileID: 3349963419385957901, guid: 3d971a8f0b9b77c4f8a6dd9fad3f2df4, type: 3}
   _data: {fileID: 11400000, guid: af51c772fff3a294c972b1720aea7336, type: 2}
+  damageEffect: {fileID: 1407828865367593221, guid: 2bd066f9184380a429305ae492ef40cc, type: 3}
   bouSaki: {fileID: 0}
 --- !u!114 &4294135051480056070
 MonoBehaviour:

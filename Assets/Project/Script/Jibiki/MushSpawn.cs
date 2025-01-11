@@ -20,7 +20,7 @@ public class MashSpawn : MonoBehaviour
     [SerializeField]
     GameObject camerac;
 
-    [SerializeField] GameObject plane;
+    //[SerializeField] GameObject plane;
     private void Awake()
     {
         dragonprefab = GameObject.Find("DragonPrefab");
@@ -48,7 +48,7 @@ public class MashSpawn : MonoBehaviour
         float posy = floor.transform.position.y + 0.1f;
 
         floor.transform.position = new Vector3(floor.transform.position.x, posy + 0.5f, floor.transform.position.z);
-        Instantiate(plane, floor.transform.position, Quaternion.identity);
+        //Instantiate(plane, floor.transform.position, Quaternion.identity);
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
         foreach　(var classification in classifications)
