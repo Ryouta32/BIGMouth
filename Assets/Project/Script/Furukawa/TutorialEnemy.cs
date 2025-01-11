@@ -7,16 +7,19 @@ public class TutorialEnemy : MonoBehaviour
     [SerializeField] GameObject stunEffect;
     [SerializeField] GameObject DestroyEffect;
     [SerializeField] public EnemyData _data;
+    [SerializeField] GameObject damageEffect;
     public BouSakiScript bouSaki;
     private EnemyData data;
     private tutorialScript tutorialSC;
     bool inHale;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         data = new EnemyData(_data);
         bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
         tutorialSC = GameObject.Find("tutorial").GetComponent<tutorialScript>();
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -41,13 +44,15 @@ public class TutorialEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Brush"))
         {
             AudioManager.manager.PlayPoint(AudioManager.manager.data.kill, this.gameObject);
-
+            GameObject clone = Instantiate(damageEffect, transform.position, Quaternion.identity);
+            Destroy(clone, 1.0f);
             //スタン状態なら消す
             if (data.state == EnemyData.State.stun)
             {
                 //失敗アナウンスに変える
                 //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
                 tutorialSC.Retry();
+                anim.SetFloat("Speed", 1);
                 Debug.Log("しっぱい！");
                 Destroy(this.gameObject);
             }
@@ -60,6 +65,7 @@ public class TutorialEnemy : MonoBehaviour
     }
     IEnumerator Stun()//スタン中の処理
     {
+        anim.SetFloat("Speed", 0);
         stunEffect.SetActive(true);
         Debug.Log("スタンエフェクト");
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject);

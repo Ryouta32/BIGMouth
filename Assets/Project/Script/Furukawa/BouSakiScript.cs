@@ -51,6 +51,8 @@ public class BouSakiScript : MonoBehaviour
     private float cool;
 
     AudioSource source=new AudioSource();
+
+    [SerializeField] GameObject yogosi;
     void Start()
     {
         hitpoint = Vector3.zero;
@@ -141,6 +143,7 @@ public class BouSakiScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        //yogosi.SetActive(true);
         PaintManager pManager = new PaintManager();
         Paint(collision);
 

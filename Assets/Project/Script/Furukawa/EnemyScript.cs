@@ -18,11 +18,13 @@ public class EnemyScript : MonoBehaviour
     [HideInInspector]
     public EnemyData data;
     float time=0;
+    Animator anim;
     private void Start()
     {
         initialization();
         data = new EnemyData(_data);
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -89,6 +91,7 @@ public class EnemyScript : MonoBehaviour
     }
     IEnumerator Stun()//スタン中の処理
     {
+        anim.SetFloat("Speed", 0);
         stunEffect.SetActive(true);
         Debug.Log("スタンエフェクト");
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun,this.gameObject,3);
@@ -99,6 +102,7 @@ public class EnemyScript : MonoBehaviour
         SetState(EnemyData.State.general);
         StunReturn();
         stunEffect.SetActive(false);
+        anim.SetFloat("Speed", 1);
     }
     public void MoveAudio()
     {
