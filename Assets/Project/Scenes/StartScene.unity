@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d3948e168f5bb304f8bc300a1493cc03, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.10917774, g: 0.043262184, b: 0.08598444, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tagName: Brush
-  name: 5
+  name: 1
 --- !u!65 &609748411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 443927376246264145, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: m_Name
-      value: OVRSceneManager Variant
+      value: OVRSceneManager
       objectReference: {fileID: 0}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PlanePrefab
@@ -436,19 +436,55 @@ PrefabInstance:
       objectReference: {fileID: 563714354872022062, guid: f5dcf2d28f0afc34e8bbab5b682cdbc3, type: 3}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[0].Prefab
       value: 
       objectReference: {fileID: 563714354872022062, guid: 3a1c1b89a2445814b8f6367409fdda32, type: 3}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[1].Prefab
+      value: 
+      objectReference: {fileID: 5657038544419831093, guid: 411591a27a4a4a249a5b1ea888b9deb2, type: 3}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[2].Prefab
+      value: 
+      objectReference: {fileID: 5657038544419831093, guid: 411591a27a4a4a249a5b1ea888b9deb2, type: 3}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[3].Prefab
+      value: 
+      objectReference: {fileID: 5657038544419831093, guid: 411591a27a4a4a249a5b1ea888b9deb2, type: 3}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[0].ClassificationLabel
       value: FLOOR
       objectReference: {fileID: 0}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[1].ClassificationLabel
+      value: WALL_ART
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[2].ClassificationLabel
+      value: LAMP
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[3].ClassificationLabel
+      value: BED
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[0]._editorClassificationIndex
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[1]._editorClassificationIndex
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[2]._editorClassificationIndex
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[3]._editorClassificationIndex
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 443927376246264172, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: m_LocalPosition.x
@@ -573,7 +609,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8433172181977966714, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
       propertyPath: m_Name
-      value: OVRCameraRig Variant
+      value: OVRCameraRig
       objectReference: {fileID: 0}
     - target: {fileID: 8433172181978395738, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -699,11 +735,67 @@ PrefabInstance:
       propertyPath: ovr
       value: 
       objectReference: {fileID: 1584144588}
+    - target: {fileID: 7732509683089046725, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: offset.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+--- !u!1 &2131632770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131632772}
+  - component: {fileID: 2131632771}
+  m_Layer: 0
+  m_Name: Ornament
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2131632771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131632770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c93d3dc35616f45b2065ac37ab63e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Case: {fileID: 4499066190803700623, guid: a2ea6ce470f055148b450b05a0e7a096, type: 3}
+  Case2: {fileID: 887111662723137071, guid: 7a9b2592eb2dc02448d8268038a30f73, type: 3}
+  Panel:
+  - {fileID: 2078710642465776936, guid: d74c4cf42ac404046bd6462b5e3847bd, type: 3}
+  - {fileID: 5258903817399353453, guid: 64a2a3d13c83a2d45b6e81ccfa124d54, type: 3}
+  - {fileID: 858970786054622411, guid: a5f3303e7907f9441b1802ca9330874c, type: 3}
+  - {fileID: 8143074490468885638, guid: 62a45aa5e95638c43848e89a1606d13c, type: 3}
+  - {fileID: 235798006615312317, guid: 33557d4f4c11d954eb6376a9a46ec405, type: 3}
+--- !u!4 &2131632772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131632770}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -715,3 +807,4 @@ SceneRoots:
   - {fileID: 1234302911}
   - {fileID: 1727037630}
   - {fileID: 609748414}
+  - {fileID: 2131632772}

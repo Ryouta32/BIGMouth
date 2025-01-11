@@ -352,7 +352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d069906031d49e64fa452696f6350d8a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2726568780636716469, guid: d069906031d49e64fa452696f6350d8a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -610,7 +610,7 @@ MonoBehaviour:
   bouSaki: {fileID: 0}
   _data: {fileID: 11400000, guid: 52d5b6fc94646db47a392be5159cb40b, type: 2}
   stunEffect: {fileID: 4678831881019927832}
-  damageEffect: {fileID: 2510562678213512748, guid: 0beb1d15c494365458144cc18fef2d60, type: 3}
+  damageEffect: {fileID: 1407828865367593221, guid: 2bd066f9184380a429305ae492ef40cc, type: 3}
   DestroyEffect: {fileID: 689374704402498535, guid: 2eeadfe0322da534899490506495a1f6, type: 3}
   rb: {fileID: 0}
   inHale: 0

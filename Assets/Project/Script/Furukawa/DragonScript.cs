@@ -19,10 +19,14 @@ public class DragonScript : MonoBehaviour
     }
     public void TentacleCough()
     {
-        GameObject obj = Instantiate(TentSeki, Cough.position, Quaternion.identity);
+        Debug.Log("きたーーーーーーーーーーー触手");
+
+        GameObject obj = Instantiate(TentSeki, Cough.position, Quaternion.Euler(0, 180, 0));
     }
     public void MushCough()
     {
-        GameObject obj = Instantiate(MushSeki, Cough.position, Quaternion.identity);
+        Debug.Log("きたーーーーーーーーーーーキノコ");
+
+        GameObject obj = Instantiate(MushSeki, Cough.position, Quaternion.Euler(0, 180, 0));
     }
 }

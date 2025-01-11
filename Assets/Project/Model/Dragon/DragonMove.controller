@@ -216,7 +216,7 @@ AnimatorStateMachine:
     m_Position: {x: 530, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9123710378648359043}
-    m_Position: {x: 270, y: 0, z: 0}
+    m_Position: {x: 270, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -978729163694032551}
     m_Position: {x: 436.43292, y: 345.31284, z: 0}
@@ -228,7 +228,7 @@ AnimatorStateMachine:
     m_Position: {x: 530, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -477810859351816011}
-    m_Position: {x: 690, y: 40, z: 0}
+    m_Position: {x: 790, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7206705559806853261}
     m_Position: {x: 534.1787, y: 201.67218, z: 0}
@@ -251,18 +251,6 @@ AnimatorController:
   m_Name: DragonMove
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Cough
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: dragon_BreakIn_Take_001
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
   - m_Name: TentacleCough
     m_Type: 9
     m_DefaultFloat: 0
@@ -270,6 +258,18 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: MashTrigger
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Cough
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: dragon_BreakIn_Take_001
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0

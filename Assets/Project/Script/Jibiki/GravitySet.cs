@@ -25,11 +25,8 @@ public class GravitySet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-        //GetComponent<Rigidbody>().useGravity = true;
         mask = LayerMask.GetMask("Wall");
         rotate = true;
-
     }
     public void OnMove()
     {
@@ -41,11 +38,8 @@ public class GravitySet : MonoBehaviour
     }
     void Update()
     {
-        // どんな向きでもベタに対して下向きに重力をかける
-        //rb.AddForce(-transform.up * 9.8f*Time.deltaTime, ForceMode.Acceleration);
         if (!ismove)
         {
-
             if (move)
                 this.transform.position += transform.forward * speed * Time.deltaTime;
             distance = 100;
@@ -64,11 +58,10 @@ public class GravitySet : MonoBehaviour
                     Debug.DrawRay(rayStartPos, transform.forward * hit.distance, Color.blue);
                     if (distance < rotatedis)
                     {
-
                         //transform.position = hit.point;
                         //Vector3.Lerp(transform.position, hit.point, 1f);
                         gravityVec = (transform.position - hit.point);
-                        Debug.Log(gravityVec);
+                        //Debug.Log(gravityVec);
                         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation, 0.1f);
                         StartCoroutine("TriggerOnRotate");
                         //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
@@ -121,7 +114,6 @@ public class GravitySet : MonoBehaviour
         rotate = false;
         yield return new WaitForSeconds(0.1f);
         rotate = true;
-
     }
 
     private void FixedUpdate()

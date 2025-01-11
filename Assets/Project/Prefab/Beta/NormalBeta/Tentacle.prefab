@@ -86,6 +86,10 @@ PrefabInstance:
       propertyPath: stunEffect
       value: 
       objectReference: {fileID: 6336671008124005423}
+    - target: {fileID: 5756723874812961070, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: damageEffect
+      value: 
+      objectReference: {fileID: 1407828865367593221, guid: 2bd066f9184380a429305ae492ef40cc, type: 3}
     - target: {fileID: 6454785965030692701, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_IsTrigger
       value: 0
