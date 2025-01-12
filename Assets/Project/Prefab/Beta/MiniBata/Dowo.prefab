@@ -684,7 +684,7 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 8da10429ed97e2547a091c063e65ce05, type: 2}
   stunEffect: {fileID: 1932882898789275969}
   damageEffect: {fileID: 1407828865367593221, guid: 2bd066f9184380a429305ae492ef40cc, type: 3}
-  DestroyEffect: {fileID: 689374704402498535, guid: 2eeadfe0322da534899490506495a1f6, type: 3}
+  DestroyEffect: {fileID: 3349963419385957901, guid: 3d971a8f0b9b77c4f8a6dd9fad3f2df4, type: 3}
   destorySplash: {fileID: 5025516467825413144, guid: 1dcd40f4248f1004ea8449729878e456, type: 3}
   rb: {fileID: 0}
   inHale: 0
