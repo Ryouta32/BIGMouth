@@ -13,6 +13,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] GameObject stunEffect;
     [SerializeField] GameObject damageEffect;
     [SerializeField] GameObject DestroyEffect;
+    [SerializeField] GameObject destorySplash;
     public Rigidbody rb;
     public bool inHale;
     [HideInInspector]
@@ -95,6 +96,8 @@ public class EnemyScript : MonoBehaviour
         {
             destroyObj();
             Debug.Log("削除");
+            if (destorySplash != null)
+                Instantiate(destorySplash, transform.position, Quaternion.identity);
             AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);
             Destroy(this.gameObject);
         }

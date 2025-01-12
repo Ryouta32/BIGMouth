@@ -22,6 +22,7 @@ public class BigEnemyScript : MonoBehaviour
     {
         clearSC = GameObject.Find("Clear").GetComponent<GameClearSC>();
         data = new EnemyData(_data);
+        bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
     }
     private void Update()
     {

@@ -171,6 +171,6 @@ MonoBehaviour:
     normalBlendType: 0
     heightBlendType: 0
   useMethodType: 1
-  erase: 1
+  erase: 0
   DragonTag: Dragon
   m: {fileID: 0}
