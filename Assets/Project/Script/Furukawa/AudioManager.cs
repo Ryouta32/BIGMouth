@@ -53,6 +53,13 @@ public class AudioManager : MonoBehaviour
         StartCoroutine( loop(audioSource, count, clip));
     }
 
+    public void StopPoint(GameObject obj)
+    {
+        if (obj.GetComponent<AudioSource>())
+        {
+            obj.GetComponent<AudioSource>().Stop();
+        }
+    }
     IEnumerator loop(AudioSource souce, int loop, AudioClip clip)
     {
         for (int i = 0; i < loop; i++)

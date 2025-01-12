@@ -6524,6 +6524,10 @@ PrefabInstance:
       propertyPath: CollisionModule.collisionMessages
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 199000011340400198, guid: 56c8840d0d830444c88c0daa7ece9bfa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76da44fb54c567648b91a36ad003c584, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6821,7 +6825,7 @@ MonoBehaviour:
   useMethodType: 1
   erase: 1
   text: {fileID: 0}
-  actionBtn: 1
+  actionBtn: 201326592
   ShowerObj: {fileID: 575774188122526065}
   power: 200
   inHaleDis: 10
@@ -6832,8 +6836,8 @@ MonoBehaviour:
   slider: {fileID: 8188297735176210497}
   clearSC: {fileID: 0}
   OnHale: 0
-  showerLimit: 100
-  showerThreshold: 30
+  showerLimit: 10
+  showerThreshold: 5
   coolTime: 5
   image: {fileID: 5097283247662555605}
   InholeSp: {fileID: -1044079551, guid: 2faf94e324453f64d810f6df73ba6fa1, type: 3}

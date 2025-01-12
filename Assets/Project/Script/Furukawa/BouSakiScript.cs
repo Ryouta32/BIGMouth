@@ -67,6 +67,7 @@ public class BouSakiScript : MonoBehaviour
         if (showerPoint >= showerLimit)
             showerPoint = showerLimit;
         slider.value = showerPoint;
+        Debug.Log(showerPoint);
         //showerPoint = 1; //デバッグ用
         //スキルの判定
         if (showerPoint > 0)
@@ -77,10 +78,11 @@ public class BouSakiScript : MonoBehaviour
                 showerPoint -= Time.deltaTime * 10;
                 StartCoroutine("ShowerTime");
             }
-            if (OVRInput.Get(actionBtn) || Input.GetKeyUp(KeyCode.Space))
+            if (OVRInput.GetUp(actionBtn) || Input.GetKeyUp(KeyCode.Space))
             {
                 ShowerObj.SetActive(false);
                 StopCoroutine("ShowerTime");
+                AudioManager.manager.StopPoint(gameObject);
                 on = true;
             }
         }
