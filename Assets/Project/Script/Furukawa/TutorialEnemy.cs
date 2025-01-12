@@ -67,16 +67,15 @@ public class TutorialEnemy : MonoBehaviour
     {
         anim.SetFloat("Speed", 0);
         stunEffect.SetActive(true);
-        Debug.Log("スタンエフェクト");
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject);
 
         yield return new WaitForSeconds(1.0f);
         SetState(EnemyData.State.stun);
         yield return new WaitForSeconds(data.sutnTime );
 
-
         SetState(EnemyData.State.general);
         stunEffect.SetActive(false);
+        anim.SetFloat("Speed", 1);
     }
     private void OnCollisionExit(Collision collision)
     {

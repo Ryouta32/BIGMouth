@@ -23,10 +23,7 @@ public class WallEntrance : MonoBehaviour
 
                 rb = other.gameObject.AddComponent<Rigidbody>();
 
-                //rb.useGravity = false;
-                //rb.AddForce(power);
                 rb.AddForce(other.gameObject.transform.up * power, ForceMode.Impulse);
-
 
                 Destroy(other.gameObject, 5.0f);
             }
