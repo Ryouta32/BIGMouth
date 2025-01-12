@@ -62,6 +62,19 @@ public class EnemyScript : MonoBehaviour
         else
             SetState(EnemyData.State.escape);
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(gameObject.tag == "Normal")
+        {
+            if (data.sutnCount <= 0)
+            {
+                StartCoroutine("Stun");
+            }
+            else
+                SetState(EnemyData.State.escape);
+        }
+    }
     public void initialization()
     {
         bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
@@ -87,7 +100,6 @@ public class EnemyScript : MonoBehaviour
         }
         data.sutnCount--;
         //Debug.Log(data.sutnCount + "だよｙｙｙｙｙｙｙｙ");
-
     }
     IEnumerator Stun()//スタン中の処理
     {
@@ -112,15 +124,18 @@ public class EnemyScript : MonoBehaviour
     public void setManager(EnemyManager x) => manager = x;
     public void destroyObj()
     {
-        if (GetComponent<NormalBetaManager>())
+        if(manager != null)
         {
-            manager.killNormal();
+            if (GetComponent<NormalBetaManager>())
+            {
+                manager.killNormal();
+            }
+            if (GetComponent<MushroomManager>())
+            {
+                manager.killMash();
+            }
         }
-        if (GetComponent<MushroomManager>())
-        {
-            manager.killMash();
-        }
-        manager.DestroyEnemys(this.gameObject);
+        //manager.DestroyEnemys(this.gameObject);
     }
     public void SetState(EnemyData.State sta)=>data.state = sta;
 }

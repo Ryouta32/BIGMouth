@@ -42,8 +42,10 @@ public class PieceManager : MonoBehaviour
     int count;
     CanvasChange cc;
 
+
     void Start()
     {
+        childFlag = false;
         UI_HP = GameObject.Find("HP").GetComponent<Image>();
         cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
         PieceParent = this.gameObject;
@@ -168,21 +170,21 @@ public class PieceManager : MonoBehaviour
                     //Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
                     //落ちたオブジェクトはリストから削除
                     PieceChildren.Remove(PieceChildren[rnd]);
-                    if (gameObject.transform.root.name == "tenjyou")
-                    {
-                        UI_HP.fillAmount = PieceChildren.Count / piececount;
-                    }
+                    //if (gameObject.transform.root.name == "tenjyou")
+                    //{
+                    //    UI_HP.fillAmount = PieceChildren.Count / piececount;
+                    //}
                     Destroy(obj.gameObject, destroytime);
                 }
-
             }
             else
             {
                 //Debug.Log("やめたーーーーーーーーー");
                 //いんぼけやめる
                 //CancelInvoke();
-                if (gameObject.transform.root.name == "tenjyou")
+                if (gameObject.transform.root.name == "tenjyou" && childFlag)
                 {
+                    childFlag = false;
                     cc.Phase[0] = false;
                     cc.Phase[2] = true;
                 }
@@ -193,8 +195,10 @@ public class PieceManager : MonoBehaviour
             {
                 if (classification.Contains(OVRSceneManager.Classification.Ceiling))
                 {
-                    if (PieceChildren.Count <= 0)
+                    UI_HP.fillAmount = PieceChildren.Count / piececount;
+                    if (PieceChildren.Count <= 0 && childFlag)
                     {
+                        childFlag = false;
                         cc.Phase[0] = false;
                         cc.Phase[2] = true;
                     }
