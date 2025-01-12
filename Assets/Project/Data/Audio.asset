@@ -53,5 +53,6 @@ MonoBehaviour:
   crack: {fileID: 8300000, guid: fe7a6b6e508465b4db5d52dd2d31a33e, type: 3}
   announce: {fileID: 8300000, guid: 852710008d5f08d4fadc6f9a6b257031, type: 3}
   littleMore: {fileID: 8300000, guid: 18fe3ecfeb6e6414489c84bb4fc193ac, type: 3}
+  TutorialClear: {fileID: 8300000, guid: a54d89c01ec99bb4fac5ab648c4f1cea, type: 3}
   wallTackle: {fileID: 0}
   wallBreak: {fileID: 0}
