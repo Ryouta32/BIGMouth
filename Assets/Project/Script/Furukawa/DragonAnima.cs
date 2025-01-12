@@ -40,7 +40,7 @@ public class DragonAnima : MonoBehaviour
         }
         if (normalTime >= MushTime&&mush)
         {
-            anima.SetTrigger("MashTrigger");
+            anima.SetTrigger("MushTrigger");
             mush = false;
         }
     }
