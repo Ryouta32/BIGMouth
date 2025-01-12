@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 777200074544127537, guid: a3c74c70b8e2c8044a4ed6a110050f6c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8160376262018768761, guid: a3c74c70b8e2c8044a4ed6a110050f6c, type: 3}
       propertyPath: Timeline
@@ -1383,21 +1383,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 558707988}
     - target: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
-      propertyPath: erase
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
-      propertyPath: OnHale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: clearSC
       value: 
       objectReference: {fileID: 740024802}
-    - target: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
-      propertyPath: actionBtn
-      value: 201326592
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
