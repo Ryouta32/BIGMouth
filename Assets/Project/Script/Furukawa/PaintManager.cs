@@ -19,6 +19,7 @@ public class PaintManager
         Vector3 hitPos;
         if (col.transform.tag != tag)
             erase = !erase;
+
         foreach (ContactPoint point in col.contacts)
         {
             hitPos = point.normal;
@@ -28,6 +29,7 @@ public class PaintManager
                 bool success = true;
                 foreach (RaycastHit hit in Physics.RaycastAll(ray))
                 {
+
                     Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
                     InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
 
@@ -44,7 +46,6 @@ public class PaintManager
 
                                 break;
                             case UseMethodType.WorldPoint:
-
                                 success = erase ? paint.Erase(brush, hit.point) : paint.Paint(brush, hit.point);
                                 break;
 
