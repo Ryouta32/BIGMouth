@@ -9,42 +9,34 @@ public class MushroomManager : MonoBehaviour
     [SerializeField] float waittime;
 
     Animator anim;
-    BoxCollider boxCollider;
     EnemyScript enemyScript;
-
-    //[Tooltip("音を再生するアニメーションの名前")]
-    //public string targetAnimationName;
-
-    private bool isPlayingSound = false;
 
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
-        boxCollider = gameObject.GetComponent<BoxCollider>();
         enemyScript = gameObject.GetComponent<EnemyScript>();
-        //InvokeRepeating(nameof(AnimProtection), repeattime, repeattime);
-    }
-
-    private void Update()
-    {
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+
         if (other.gameObject.CompareTag("shower") && stateInfo.IsName("Idle"))
         {
+            //Idleモーションの時にシャワーが当たったとき
             enemyScript.data.sutnCount = 0;
         }
-        if (other.gameObject.CompareTag("Brush") && stateInfo.IsName("Idle"))
+        else if (other.gameObject.CompareTag("Brush") && stateInfo.IsName("Idle"))
         {
+            //Idleモーションの時にブラシが当たったとき
             enemyScript.HitDamage();
+            Debug.Log(enemyScript.data.sutnCount + "だよｙｙｙｙｙｙｙｙ");
+
             StartCoroutine("AnimProtection");
         }
         else if(other.gameObject.CompareTag("Brush"))
         {
-            //Debug.Log("なったーーーーーーーーーーーーーーーーーーーーーー");
+            //防御してるときの音再生
             AudioManager.manager.PlayPoint(AudioManager.manager.data.mushKasa, this.gameObject);
         }
     }

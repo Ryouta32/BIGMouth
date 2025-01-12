@@ -22,12 +22,13 @@ public class EnemyManager : MonoBehaviour
     public static Vector3 tentPos;
 
     CanvasChange cc;
+    bool clearflag;
 
     private void Start()
     {
         betaSpawn = GetComponent<BetaSpawn>();
         cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
-
+        clearflag = true;
     }
 
     public void ClearCheck() {
@@ -39,9 +40,10 @@ public class EnemyManager : MonoBehaviour
             obj.GetComponent<BIGBallSC>().setParent(bossPos);
             obj.GetComponent<BIGBallSC>().setSaki(bouSakiScript);
         }
-        if (enemys.Count == 0)
+        if (enemys.Count == 0 && clearflag)
         {
             //ここにゲームクリアの処理
+            clearflag = false;
             cc.Phase[0] = false;
             cc.Phase[1] = true;
             //SceneManager.LoadScene(SceneName.sceneName.ClearScene.ToString());
