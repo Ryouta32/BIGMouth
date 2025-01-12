@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameClearSC : MonoBehaviour
 {
     [SerializeField] Animation imageanima;
+    [SerializeField] SceneName.sceneName sceneName;
     bool on = false;
     public void Clear()
     {
-        imageanima.Play();
-        on = true;
+        SceneManager.LoadScene(sceneName.ToString());
+        //imageanima.Play();
+        //on = true;
     }
 
 }
