@@ -66,7 +66,7 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(gameObject.tag == "Normal")
+        if(gameObject.tag == "Normal" && other.transform.tag == "Brush")
         {
             if (data.sutnCount <= 0)
             {

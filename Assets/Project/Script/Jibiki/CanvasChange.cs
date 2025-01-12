@@ -6,7 +6,8 @@ public class CanvasChange : MonoBehaviour
 {
     [SerializeField] GameObject[] Canvas;
 
-    [SerializeField] public bool[] Phase; 
+    [SerializeField] public bool[] Phase;
+
     void Update()
     {
         for(int i = 0; i < Canvas.Length; i++)

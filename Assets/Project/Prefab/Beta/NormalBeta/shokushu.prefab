@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3641230447595735772}
   - component: {fileID: 1371886200285390098}
   - component: {fileID: 8881183718323091735}
+  - component: {fileID: 855445050478835581}
   m_Layer: 0
   m_Name: Cllider
   m_TagString: Normal
@@ -95,8 +96,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 5654622454749728693}
-  enemyScript: {fileID: 5756723874812961070}
+  enemyScript: {fileID: 855445050478835581}
   normalBetaManager: {fileID: 1785918634418855042}
+--- !u!114 &855445050478835581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419129968482568321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53eb8779cd182c545a0cdb5208226df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouSaki: {fileID: 0}
+  _data: {fileID: 11400000, guid: 52d5b6fc94646db47a392be5159cb40b, type: 2}
+  stunEffect: {fileID: 0}
+  damageEffect: {fileID: 2510562678213512748, guid: 0beb1d15c494365458144cc18fef2d60, type: 3}
+  DestroyEffect: {fileID: 689374704402498535, guid: 2eeadfe0322da534899490506495a1f6, type: 3}
+  destorySplash: {fileID: 0}
+  rb: {fileID: 0}
+  inHale: 0
+  data: {fileID: 0}
 --- !u!1 &8639283448200495710
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2424150570057181497, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2424150570057181497, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
       propertyPath: m_TagString
@@ -423,6 +445,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7478147362926391760, guid: 540fc87ac9c34e34fb8c9c8d430648e8, type: 3}
   m_PrefabInstance: {fileID: 2678777777251172210}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7222348730930085746
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8955524269023865475}
+    m_Modifications:
+    - target: {fileID: 2196966185867044072, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_Name
+      value: Fainting
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196966185867044072, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142996232358818684, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142996232358818684, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142996232358818684, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142996232358818684, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142996232358818684, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142996232358818684, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142996232358818684, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142996232358818684, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142996232358818684, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142996232358818684, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+--- !u!4 &512261221079567374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7142996232358818684, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+  m_PrefabInstance: {fileID: 7222348730930085746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8811256372356373402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2196966185867044072, guid: 9c99fd2b39df49249bc55a3462916237, type: 3}
+  m_PrefabInstance: {fileID: 7222348730930085746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8917919609272913256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -433,19 +526,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -548,6 +641,9 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 512261221079567374}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 4822046051060174498}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       insertIndex: -1
@@ -570,31 +666,31 @@ PrefabInstance:
       addedObject: {fileID: 5755896223568937425}
     - targetCorrespondingSourceObject: {fileID: -412989040442181847, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2680235880184382329}
+      addedObject: {fileID: 350144936158202890}
     - targetCorrespondingSourceObject: {fileID: -2240151287705473546, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6454785965030692701}
     - targetCorrespondingSourceObject: {fileID: -2240151287705473546, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5156748384290842090}
+      addedObject: {fileID: 5826566930030457881}
     - targetCorrespondingSourceObject: {fileID: 4140668533725440856, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9051188106348751071}
     - targetCorrespondingSourceObject: {fileID: 4140668533725440856, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5739981825627253972}
+      addedObject: {fileID: 5131795947138114825}
     - targetCorrespondingSourceObject: {fileID: -3441741364759053172, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1755089387529420880}
     - targetCorrespondingSourceObject: {fileID: -3441741364759053172, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5302183803050839315}
+      addedObject: {fileID: 5253123272913830641}
     - targetCorrespondingSourceObject: {fileID: -3385604430752132528, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3092328130372574210}
     - targetCorrespondingSourceObject: {fileID: -3385604430752132528, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7124864687912438111}
+      addedObject: {fileID: 3096932446885246813}
   m_SourcePrefab: {fileID: 100100000, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
 --- !u!1 &109797253872597569 stripped
 GameObject:
@@ -622,7 +718,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2680235880184382329
+--- !u!114 &350144936158202890
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -631,24 +727,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 109797253872597569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11cd7ec35d520844a91a1e30b9290a49, type: 3}
+  m_Script: {fileID: 11500000, guid: c8f0e8c2e277e5d45b9a26da1965fb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   brush:
     brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushNormalTexture: {fileID: 0}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.1
+    brushScale: 0.01
     rotateAngle: 0
-    brushNormalBlend: 0.291
-    brushHeightBlend: 1
-    brushColor: {r: 1, g: 1, b: 1, a: 1}
-    colorBlendType: 3
+    brushNormalBlend: 0
+    brushHeightBlend: 0
+    brushColor: {r: 0, g: 0, b: 0, a: 0.2}
+    colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
   useMethodType: 1
-  DrauseMethodType: 0
-  erase: 0
+  DrauseMethodType: 1
+  erase: 1
 --- !u!1 &1957855169892688030 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2240151287705473546, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
@@ -675,7 +771,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5156748384290842090
+--- !u!114 &5826566930030457881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -684,24 +780,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1957855169892688030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11cd7ec35d520844a91a1e30b9290a49, type: 3}
+  m_Script: {fileID: 11500000, guid: c8f0e8c2e277e5d45b9a26da1965fb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   brush:
     brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushNormalTexture: {fileID: 0}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.1
+    brushScale: 0.01
     rotateAngle: 0
-    brushNormalBlend: 0.291
-    brushHeightBlend: 1
-    brushColor: {r: 1, g: 1, b: 1, a: 1}
-    colorBlendType: 3
+    brushNormalBlend: 0
+    brushHeightBlend: 0
+    brushColor: {r: 0, g: 0, b: 0, a: 0.2}
+    colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
   useMethodType: 1
-  DrauseMethodType: 0
-  erase: 0
+  DrauseMethodType: 1
+  erase: 1
 --- !u!1 &3080807493060009784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3385604430752132528, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
@@ -728,7 +824,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7124864687912438111
+--- !u!114 &3096932446885246813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -737,24 +833,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 3080807493060009784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11cd7ec35d520844a91a1e30b9290a49, type: 3}
+  m_Script: {fileID: 11500000, guid: c8f0e8c2e277e5d45b9a26da1965fb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   brush:
     brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushNormalTexture: {fileID: 0}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.1
+    brushScale: 0.01
     rotateAngle: 0
-    brushNormalBlend: 0.291
-    brushHeightBlend: 1
-    brushColor: {r: 1, g: 1, b: 1, a: 1}
-    colorBlendType: 3
+    brushNormalBlend: 0
+    brushHeightBlend: 0
+    brushColor: {r: 0, g: 0, b: 0, a: 0.2}
+    colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
   useMethodType: 1
-  DrauseMethodType: 0
-  erase: 0
+  DrauseMethodType: 1
+  erase: 1
 --- !u!1 &3170159017086906852 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3441741364759053172, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
@@ -781,7 +877,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5302183803050839315
+--- !u!114 &5253123272913830641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -790,24 +886,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 3170159017086906852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11cd7ec35d520844a91a1e30b9290a49, type: 3}
+  m_Script: {fileID: 11500000, guid: c8f0e8c2e277e5d45b9a26da1965fb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   brush:
     brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushNormalTexture: {fileID: 0}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.1
+    brushScale: 0.01
     rotateAngle: 0
-    brushNormalBlend: 0.291
-    brushHeightBlend: 1
-    brushColor: {r: 1, g: 1, b: 1, a: 1}
-    colorBlendType: 3
+    brushNormalBlend: 0
+    brushHeightBlend: 0
+    brushColor: {r: 0, g: 0, b: 0, a: 0.2}
+    colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
   useMethodType: 1
-  DrauseMethodType: 0
-  erase: 0
+  DrauseMethodType: 1
+  erase: 1
 --- !u!1 &4806551044519913008 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4140668533725440856, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
@@ -834,7 +930,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5739981825627253972
+--- !u!114 &5131795947138114825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -843,24 +939,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 4806551044519913008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11cd7ec35d520844a91a1e30b9290a49, type: 3}
+  m_Script: {fileID: 11500000, guid: c8f0e8c2e277e5d45b9a26da1965fb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   brush:
     brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushNormalTexture: {fileID: 0}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.1
+    brushScale: 0.01
     rotateAngle: 0
-    brushNormalBlend: 0.291
-    brushHeightBlend: 1
-    brushColor: {r: 1, g: 1, b: 1, a: 1}
-    colorBlendType: 3
+    brushNormalBlend: 0
+    brushHeightBlend: 0
+    brushColor: {r: 0, g: 0, b: 0, a: 0.2}
+    colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
   useMethodType: 1
-  DrauseMethodType: 0
-  erase: 0
+  DrauseMethodType: 1
+  erase: 1
 --- !u!1 &8575902020261572665 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 86de6f7736d1f7c43af70f7f24ffad2e, type: 3}
@@ -901,9 +997,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bouSaki: {fileID: 0}
   _data: {fileID: 11400000, guid: 52d5b6fc94646db47a392be5159cb40b, type: 2}
-  stunEffect: {fileID: 0}
-  damageEffect: {fileID: 2510562678213512748, guid: 0beb1d15c494365458144cc18fef2d60, type: 3}
+  stunEffect: {fileID: 8811256372356373402}
+  damageEffect: {fileID: 1407828865367593221, guid: 2bd066f9184380a429305ae492ef40cc, type: 3}
   DestroyEffect: {fileID: 689374704402498535, guid: 2eeadfe0322da534899490506495a1f6, type: 3}
+  destorySplash: {fileID: 0}
   rb: {fileID: 0}
   inHale: 0
   data: {fileID: 0}
@@ -919,11 +1016,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f3c1de021796a4cb1eca3a7b777b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoint: {fileID: 4087128772947430984, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+  SpawnPoint: {fileID: 0}
   InEffect: {fileID: 326720067546224203}
   repeattime: 5
   col:
-  - {fileID: 5755896223568937425}
+  - {fileID: 0}
   - {fileID: 6454785965030692701}
   - {fileID: 9051188106348751071}
   - {fileID: 1755089387529420880}

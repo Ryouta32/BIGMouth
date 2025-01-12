@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: MashTrigger
+    m_ConditionEvent: MushTrigger
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -477810859351816011}
@@ -130,7 +130,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: TentacleCough
+    m_ConditionEvent: TentacleTrigger
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6385268249300247586}
@@ -251,13 +251,13 @@ AnimatorController:
   m_Name: DragonMove
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: TentacleCough
+  - m_Name: TentacleTrigger
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: MashTrigger
+  - m_Name: MushTrigger
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0

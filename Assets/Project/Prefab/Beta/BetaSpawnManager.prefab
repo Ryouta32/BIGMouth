@@ -44,9 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c0baaa25c5e66428dc2ceefd2a5f10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kinokoprefab: {fileID: 7627689597627893192, guid: eee307ba7d3cac04b97b8e7fdadbc9c7, type: 3}
-  tentacleprefab: {fileID: 1268547068583936198, guid: f6334ca1f77d5f34f874bd10cf676596, type: 3}
   Tutorial: {fileID: 0}
-  manager: {fileID: 0}
   NormalObj: []
   tutorialpos: {x: 0, y: 0, z: 0}
+  camerac: {fileID: 0}
