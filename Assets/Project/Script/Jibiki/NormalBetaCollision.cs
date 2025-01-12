@@ -7,15 +7,9 @@ public class NormalBetaCollision : MonoBehaviour
 {
     [Tooltip("中ベタのアニメーターを付ける")]
     [SerializeField] Animator anim;
-    [Tooltip("EnemyManagerのEnemyScriptを付ける")]
     [SerializeField] EnemyScript enemyScript;
     [Tooltip("NormalBetaManagerを付ける")]
     [SerializeField] NormalBetaManager normalBetaManager;
-
-
-    private void Start()
-    {
-    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -30,6 +24,7 @@ public class NormalBetaCollision : MonoBehaviour
             {
                 normalBetaManager.colsignal = false;
                 enemyScript.HitDamage();
+                //Debug.Log(enemyScript.data.sutnCount);
 
                 if (normalBetaManager.Children.Count > 1)
                 {

@@ -28,7 +28,7 @@ public class PotanEffect : MonoBehaviour
                     Destroy(gameObject, 10.0f);
                     break;
                 default:
-                    Destroy(gameObject, 110.0f);
+                    Destroy(gameObject, 10.0f);
                     break;
             }
             Destroy(gameObject , 10.0f);

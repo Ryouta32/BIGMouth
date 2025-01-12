@@ -6,20 +6,21 @@ using UnityEngine.UI;
 
 public class EnemyScript : MonoBehaviour
 {
-    BetaLife betaLife;
     EnemyManager manager;
+    [HideInInspector]
     public BouSakiScript bouSaki;
     [SerializeField] public EnemyData _data;
     [SerializeField] GameObject stunEffect;
     [SerializeField] GameObject damageEffect;
     [SerializeField] GameObject DestroyEffect;
     [SerializeField] GameObject destorySplash;
+    [HideInInspector]
     public Rigidbody rb;
     public bool inHale;
     [HideInInspector]
     public EnemyData data;
-    float time=0;
     Animator anim;
+
     private void Start()
     {
         initialization();
@@ -49,7 +50,6 @@ public class EnemyScript : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezeAll;
         else
             rb.constraints = RigidbodyConstraints.None;
-
     }
     private void OnCollisionExit(Collision collision)
     {
@@ -64,27 +64,33 @@ public class EnemyScript : MonoBehaviour
             SetState(EnemyData.State.escape);
     }
 
+    //中ベタ用
     private void OnTriggerExit(Collider other)
     {
-        if(gameObject.tag == "Normal" && other.transform.tag == "Brush")
+        if(this.gameObject.tag == "Normal" && other.transform.tag == "Brush")
         {
+            Debug.Log("きたーーーーーーー2");
+            Debug.Log(data.sutnCount);
             if (data.sutnCount <= 0)
             {
+                Debug.Log("きたーーーーーーー3");
+
                 StartCoroutine("Stun");
             }
             else
+            {
                 SetState(EnemyData.State.escape);
+            }
         }
     }
+    //初期化
     public void initialization()
     {
         bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
         data = new EnemyData(_data);
-        betaLife = GetComponent<BetaLife>();
     }
     private void OnDestroy()
     {
-        //Destroy(DestroyEffect, 5);
         if(!inHale)
         Instantiate(DestroyEffect, transform.position, Quaternion.identity);
     }
@@ -95,20 +101,19 @@ public class EnemyScript : MonoBehaviour
         if (data.state == EnemyData.State.stun)
         {
             destroyObj();
-            Debug.Log("削除");
             if (destorySplash != null)
                 Instantiate(destorySplash, transform.position, Quaternion.identity);
             AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
         data.sutnCount--;
-        //Debug.Log(data.sutnCount + "だよｙｙｙｙｙｙｙｙ");
+        //Debug.Log(data.sutnCount);
     }
     IEnumerator Stun()//スタン中の処理
     {
-        anim.SetFloat("Speed", 0);
+        //スタンになったらアニメーション止める
+        //anim.SetFloat("Speed", 0);
         stunEffect.SetActive(true);
-        Debug.Log("スタンエフェクト");
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun,this.gameObject,3);
         yield return new WaitForSeconds(0.2f);
         SetState(EnemyData.State.stun);
@@ -117,7 +122,7 @@ public class EnemyScript : MonoBehaviour
         SetState(EnemyData.State.general);
         StunReturn();
         stunEffect.SetActive(false);
-        anim.SetFloat("Speed", 1);
+        //anim.SetFloat("Speed", 1);
     }
     public void MoveAudio()
     {
