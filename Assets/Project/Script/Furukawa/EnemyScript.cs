@@ -40,7 +40,10 @@ public class EnemyScript : MonoBehaviour
             destroyObj();
 
             inHale = true;
-
+            Debug.Log("おやのなまえはーーー" + transform.root.name);
+            if(transform.root != null)
+                Destroy(transform.root.gameObject);
+            else
             Destroy(this.gameObject);
         }
     }
