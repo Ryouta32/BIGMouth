@@ -57,12 +57,12 @@ public class TutorialSpawn : MonoBehaviour
             }
             if (classification.Contains(OVRSceneManager.Classification.WallArt))
             {
-                Instantiate(Panel[i], classification.transform.position, Quaternion.Euler(0, 0, 0));
+                Instantiate(Panel[i], classification.transform.position, Quaternion.identity);
                 i++;
             }
             if (classification.Contains(OVRSceneManager.Classification.Table))
             {
-                Vector3 pos = new Vector3(classification.transform.position.x, floor.transform.position.y, classification.transform.position.z);
+                Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y - 0.4f, classification.transform.position.z);
                 Tutorial.transform.position = pos;
             }
         }
