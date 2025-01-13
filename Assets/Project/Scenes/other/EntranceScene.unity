@@ -270,6 +270,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6199644935454327777, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
   m_PrefabInstance: {fileID: 558707987}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &558707991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6788187192559106478, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
+  m_PrefabInstance: {fileID: 558707987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &558707992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 25976866295045698, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
@@ -744,15 +749,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2348601602758071861, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2348601602758071861, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2348601602758071861, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 100
+      value: 7.13
       objectReference: {fileID: 0}
     - target: {fileID: 2348601602758071861, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -785,18 +790,6 @@ PrefabInstance:
     - target: {fileID: 3680326740319455547, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: m_Name
       value: DragonPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 3680326740319455547, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
-      propertyPath: bossCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
-      propertyPath: debugmode
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1128,6 +1121,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5615801200414332981, guid: 7434598e0d4915b4f8966a00b721679e, type: 3}
+      propertyPath: Fade
+      value: 
+      objectReference: {fileID: 558707991}
     - target: {fileID: 5615801200414332981, guid: 7434598e0d4915b4f8966a00b721679e, type: 3}
       propertyPath: camerac
       value: 

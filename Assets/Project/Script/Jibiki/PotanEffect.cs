@@ -25,13 +25,13 @@ public class PotanEffect : MonoBehaviour
             {
                 case "Wall":
                     paintManager.Paint(col, useMethodType, erase, brush, transform, false, col.transform.tag);
-                    Destroy(gameObject, 10.0f);
+                    Destroy(gameObject);
                     break;
                 default:
-                    Destroy(gameObject, 10.0f);
+                    Destroy(gameObject);
                     break;
             }
-            Destroy(gameObject , 10.0f);
+            Destroy(gameObject);
         }
     }
 }

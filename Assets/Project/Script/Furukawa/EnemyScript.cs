@@ -28,6 +28,9 @@ public class EnemyScript : MonoBehaviour
         data = new EnemyData(_data);
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+
+        if (manager == null)
+            manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
     }
     private void Update()
     {
@@ -107,7 +110,10 @@ public class EnemyScript : MonoBehaviour
             if (destorySplash != null)
                 Instantiate(destorySplash, transform.position, Quaternion.identity);
             AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);
-            //Destroy(this.gameObject);
+            if (root)
+                Destroy(transform.root.gameObject);
+            else
+            Destroy(this.gameObject);
         }
         data.sutnCount--;
         //Debug.Log(data.sutnCount);
@@ -137,16 +143,18 @@ public class EnemyScript : MonoBehaviour
     {
         if(manager != null)
         {
-            if (GetComponent<NormalBetaManager>())
+            if (GetComponent<NormalBetaCollision>())
             {
                 manager.killNormal();
-            }
-            if (GetComponent<MushroomManager>())
+            }else if (GetComponent<MushroomManager>())
             {
                 manager.killMash();
             }
+            else
+            {
+                manager.DestroyEnemys();
+            }
         }
-        //manager.DestroyEnemys(this.gameObject);
     }
     public void SetState(EnemyData.State sta)=>data.state = sta;
 }
