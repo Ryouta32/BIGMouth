@@ -23,7 +23,7 @@ public class BouSakiScript : MonoBehaviour
     float time;
     [SerializeField] private OVRInput.RawButton actionBtn;
     [SerializeField] private OVRInput.RawButton showerBtn;
-    [SerializeField] GameObject ShowerObj;
+    [SerializeField] ParticleSystem ShowerObj;
     [Header("噴射の塗り判定を都飛ばす強さ")]
     [SerializeField] float power;
     [Header("吸い込みの距離")]
@@ -36,6 +36,9 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] GameObject ShineEffect;
     [Header("吸い込みエフェクト")]
     [SerializeField] GameObject SuctionObj;
+    [SerializeField] GameObject SuctionTentacleObj;
+    [SerializeField] GameObject SuctionMushObj;
+    [SerializeField] GameObject SuctionBIGObj;
     [Header("シャワーパワー")]
     [SerializeField] Slider slider;
     [SerializeField] GameClearSC clearSC;
@@ -76,7 +79,7 @@ public class BouSakiScript : MonoBehaviour
         {
             if (on && OVRInput.Get(actionBtn) || (on && Input.GetKey(KeyCode.Space)))
             {
-                ShowerObj.SetActive(true);
+                ShowerObj.Play();
                 showerPoint -= Time.deltaTime * 10;
                 StartCoroutine("ShowerTime");
             }
@@ -117,7 +120,7 @@ public class BouSakiScript : MonoBehaviour
     }
     private void ShowerStop()
     {
-        ShowerObj.SetActive(false);
+        ShowerObj.Stop();
         StopCoroutine("ShowerTime");
         AudioManager.manager.StopPoint(gameObject);
         on = true;
@@ -216,9 +219,39 @@ public class BouSakiScript : MonoBehaviour
                 break;
         }
     }
-    public void StartOfSuction(Vector3 pos)
+    //public void StartOfSuction(Vector3 pos)
+    //{
+    //    GameObject obj = Instantiate(SuctionObj, transform.position, Quaternion.identity);
+    //    obj.GetComponent<SuikomiScript>().SetBousaki(this);
+    //    ParticleSystem psy = obj.GetComponent<ParticleSystem>();
+    //    var sh = psy.shape;
+
+    //    sh.position = pos;
+    //}
+    public void StartOfSuction(Vector3 pos,EnemyData.Type type)
     {
-        GameObject obj = Instantiate(SuctionObj, transform.position, Quaternion.identity);
+        GameObject suction;
+        switch (type)
+        {
+            case EnemyData.Type.dowo:
+            case EnemyData.Type.slime:
+                suction = SuctionObj;
+                break;
+            case EnemyData.Type.Tentacle:
+                suction = SuctionTentacleObj;
+                break;
+            case EnemyData.Type.Mush:
+                suction = SuctionMushObj;
+                break;
+            case EnemyData.Type.BIG:
+                suction = SuctionBIGObj;
+                break;
+
+                default:
+                suction= SuctionObj;
+                break;
+        }
+        GameObject obj = Instantiate(suction, transform.position, Quaternion.identity);
         obj.GetComponent<SuikomiScript>().SetBousaki(this);
         ParticleSystem psy = obj.GetComponent<ParticleSystem>();
         var sh = psy.shape;
