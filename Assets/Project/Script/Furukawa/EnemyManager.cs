@@ -64,8 +64,8 @@ public class EnemyManager : MonoBehaviour
     }
     
     public void AddEnemys(GameObject obj) => enemys.Add(obj);
-    public void DestroyEnemys(GameObject obj) { 
-        enemys.Remove(obj);
+    public void DestroyEnemys() { 
+        //enemys.Remove(obj);
         killCount++;
         ClearCheck();
     }

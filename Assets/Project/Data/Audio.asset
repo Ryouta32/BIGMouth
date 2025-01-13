@@ -56,3 +56,4 @@ MonoBehaviour:
   TutorialClear: {fileID: 8300000, guid: 22ef39d9241b29f4494e2bf920fd1965, type: 3}
   wallTackle: {fileID: 0}
   wallBreak: {fileID: 0}
+  debug: {fileID: 8300000, guid: 74b0974267f046d47abd1a7eebacb201, type: 3}

@@ -6884,7 +6884,7 @@ MonoBehaviour:
   SuctionObj: {fileID: 8174670952956734624, guid: 9025369030f808a4d95e63cdc659079b, type: 3}
   slider: {fileID: 8188297735176210497}
   clearSC: {fileID: 0}
-  OnHale: 1
+  OnHale: 0
   showerLimit: 10
   showerThreshold: 5
   coolTime: 5

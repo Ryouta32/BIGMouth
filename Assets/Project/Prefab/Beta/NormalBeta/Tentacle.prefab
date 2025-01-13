@@ -82,6 +82,10 @@ PrefabInstance:
       propertyPath: DestroyEffect
       value: 
       objectReference: {fileID: 3349963419385957901, guid: 3d971a8f0b9b77c4f8a6dd9fad3f2df4, type: 3}
+    - target: {fileID: 855445050478835581, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: destorySplash
+      value: 
+      objectReference: {fileID: 5025516467825413144, guid: 1dcd40f4248f1004ea8449729878e456, type: 3}
     - target: {fileID: 1785918634418855042, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: SpawnPoint
       value: 
