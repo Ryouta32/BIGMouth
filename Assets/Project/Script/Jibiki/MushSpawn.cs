@@ -10,8 +10,12 @@ public class MushSpawn : MonoBehaviour
     GameObject dragonprefab;
     GameObject CenterCamera;
 
+    [SerializeField] GameObject Fade;
+
+
     private void Awake()
     {
+        Fade.SetActive(true);
         //ドラゴンの位置設定
         CenterCamera = GameObject.Find("CenterEyeAnchor");
         dragonprefab = GameObject.Find("DragonPrefab");
@@ -20,6 +24,7 @@ public class MushSpawn : MonoBehaviour
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
+        Fade.SetActive(false);
     }
     void onAnchorsLoaded()
     {
