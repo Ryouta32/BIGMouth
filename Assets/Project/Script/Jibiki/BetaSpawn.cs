@@ -56,6 +56,7 @@ public class BetaSpawn : MonoBehaviour
                 break;
             int rnd = Random.Range(0, 360);
             GameObject obj = Instantiate(spawnPrefab, spawnPos.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
+            BetaText.betacount++;
             if (obj.GetComponent<EnemyScript>())
             {
                 obj.GetComponent<EnemyScript>().setManager(manager);

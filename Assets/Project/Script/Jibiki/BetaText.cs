@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
-public class Text_Debug : MonoBehaviour
+public class BetaText : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textText;
-    
+    public static int betacount;
 
     // Start is called before the first frame update
     void Start()
@@ -18,5 +17,6 @@ public class Text_Debug : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        textText.text = betacount.ToString();
     }
 }
