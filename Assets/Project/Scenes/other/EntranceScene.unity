@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: 8885325654693178558, guid: 2cba001f8fb92624aa4f2b121df37541, type: 3}
       propertyPath: Canvas.Array.data[1]
       value: 
-      objectReference: {fileID: 558707991}
+      objectReference: {fileID: 0}
     - target: {fileID: 8885325654693178558, guid: 2cba001f8fb92624aa4f2b121df37541, type: 3}
       propertyPath: Canvas.Array.data[2]
       value: 
@@ -268,11 +268,6 @@ GameObject:
 --- !u!1 &558707990 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6199644935454327777, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
-  m_PrefabInstance: {fileID: 558707987}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &558707991 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6530521001911450440, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
   m_PrefabInstance: {fileID: 558707987}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &558707992 stripped
@@ -793,7 +788,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3680326740319455547, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: bossCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: debugmode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
