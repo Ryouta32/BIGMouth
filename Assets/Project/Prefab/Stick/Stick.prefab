@@ -6826,6 +6826,7 @@ MonoBehaviour:
   erase: 1
   text: {fileID: 0}
   actionBtn: 201326592
+  showerBtn: 3
   ShowerObj: {fileID: 575774188122526065}
   power: 200
   inHaleDis: 10

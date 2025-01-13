@@ -22,6 +22,7 @@ public class BouSakiScript : MonoBehaviour
     TextMeshProUGUI text;
     float time;
     [SerializeField] private OVRInput.RawButton actionBtn;
+    [SerializeField] private OVRInput.RawButton showerBtn;
     [SerializeField] GameObject ShowerObj;
     [Header("噴射の塗り判定を都飛ばす強さ")]
     [SerializeField] float power;
@@ -94,12 +95,12 @@ public class BouSakiScript : MonoBehaviour
             cool = 0;
             image.sprite = InholeSp;
             //s\吸い込み判定
-            if (!OnHale &&( OVRInput.Get(OVRInput.RawButton.A) || Input.GetMouseButton(0)))
+            if (!OnHale && OVRInput.Get(showerBtn) || Input.GetMouseButton(0))
             {
                 Inhale();
             }
         }
-        if (OnHale&&( OVRInput.GetUp(OVRInput.RawButton.A) || Input.GetMouseButtonUp(0)))
+        if (OnHale&&( OVRInput.GetUp(showerBtn) || Input.GetMouseButtonUp(0)))
         {
             UpInhale();
             image.sprite = NoholeSp;
