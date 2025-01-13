@@ -164,6 +164,7 @@ public class PieceManager : MonoBehaviour
                     {
                         int rot = Random.Range(0, 360);
                         Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.Euler(0, rot, 0));
+                        BetaText.betacount++;
                         count = 0;
                     }
 
@@ -181,7 +182,7 @@ public class PieceManager : MonoBehaviour
             {
                 //Debug.Log("やめたーーーーーーーーー");
                 //いんぼけやめる
-                //CancelInvoke();
+                CancelInvoke();
                 //if (PieceChildren.Count <= 0 && childFlag)
                 //{
                 //    childFlag = false;
@@ -204,7 +205,6 @@ public class PieceManager : MonoBehaviour
                     }
                 }
             }
-
         }
     }
 

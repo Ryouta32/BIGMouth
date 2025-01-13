@@ -25,6 +25,7 @@ public class NormalSekikomi : MonoBehaviour
             {
                 Vector3 pos = collisionEvent.intersection;
                 Instantiate(Beta, pos, Quaternion.identity);
+                BetaText.betacount++;
                 Debug.Log("きたーーーーーーせいせい");
                 // 今回は1つ目のヒット情報のみ処理する
                 break;
