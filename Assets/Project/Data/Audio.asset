@@ -22,7 +22,7 @@ MonoBehaviour:
   tentacleIn: {fileID: 8300000, guid: b0024cfb327a6db43a379b1ffd812850, type: 3}
   tentacleBetan: {fileID: 8300000, guid: d74238cf01b519f4d98e5561c2c9361c, type: 3}
   tentacleHole: {fileID: 8300000, guid: d08ab08d45d2d284dac045efbe8ede2b, type: 3}
-  mushPotan: {fileID: 8300000, guid: 9969cfef380799b4f979bf269da6a54c, type: 3}
+  mushPotan: {fileID: 8300000, guid: 9bdd03ef1b41ad8499cfbd17e244e3c5, type: 3}
   attack: {fileID: 8300000, guid: be1af067cf01add43bb071b8a338f112, type: 3}
   mushKasa: {fileID: 8300000, guid: 6092004608c7bcf4eba48fcd8df11ed2, type: 3}
   bigBom: {fileID: 8300000, guid: b0748ce537aa9d248bcc432f54be9091, type: 3}
