@@ -45,9 +45,15 @@ public class EnemyScript : MonoBehaviour
 
             inHale = true;
             if(root)
+            {
                 Destroy(transform.root.gameObject);
+                BetaText.betacount--;
+            }
             else
-            Destroy(this.gameObject);
+            {
+                Destroy(this.gameObject);
+                BetaText.betacount--;
+            }
         }
     }
     private void OnCollisionEnter(Collision collision)

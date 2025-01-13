@@ -656,13 +656,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 378704680514118971, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: InitialModule.startRotation.minScalar
+      value: 0.23980823
+      objectReference: {fileID: 0}
     - target: {fileID: 1929214901695738195, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_Name
       value: Stick
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929214901695738195, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3352100931364111347, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_AnchorMax.y
@@ -707,10 +707,6 @@ PrefabInstance:
     - target: {fileID: 3583260703045846482, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5811813571609664408, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
