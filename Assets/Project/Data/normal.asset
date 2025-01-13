@@ -17,3 +17,4 @@ MonoBehaviour:
   returnTime: 0
   speed: 0
   state: 0
+  type: 2

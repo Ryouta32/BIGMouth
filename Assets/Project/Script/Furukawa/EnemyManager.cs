@@ -44,13 +44,6 @@ public class EnemyManager : MonoBehaviour
             clearflag = false;
             //SceneManager.LoadScene(SceneName.sceneName.ClearScene.ToString());
         }
-
-        int x = 0;
-        foreach (var item in enemys)
-        {
-            if (item.GetComponent<NormalBetaManager>())
-                x++;
-        }
     }
 
     public void GameStart()

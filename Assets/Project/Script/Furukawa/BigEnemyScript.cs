@@ -74,6 +74,7 @@ public class BigEnemyScript : MonoBehaviour
                     StartCoroutine("Stun");
                     //クリア演出
                     //clearSC.Clear();
+                    bouSaki.StartOfSuction(transform.position, true);
                 }
             }
         }

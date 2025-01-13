@@ -30,7 +30,7 @@ public class TutorialEnemy : MonoBehaviour
         {
             //吸い込みの処理
 
-            bouSaki.StartOfSuction(transform.position - bouSaki.transform.position);
+            bouSaki.StartOfSuction(transform.position - bouSaki.transform.position,data.type);
             inHale = true;
             //成功アナウンスに変える
             AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);

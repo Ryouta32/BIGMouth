@@ -43,7 +43,7 @@ public class BIGEnemyChaildSC : MonoBehaviour
             {
                 //吸い込みの処理
 
-                bouSaki.StartOfSuction(transform.position - bouSaki.transform.position);
+                bouSaki.StartOfSuction(transform.position - bouSaki.transform.position,data.type);
                 Destroy(this.gameObject);
             }
         }

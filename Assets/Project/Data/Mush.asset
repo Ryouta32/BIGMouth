@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4330d238d2ade1e4b871dac3dca46af0, type: 3}
-  m_Name: BIG
+  m_Name: Mush
   m_EditorClassIdentifier: 
-  sutnCount: 5
-  sutnTime: 10
+  sutnCount: 3
+  sutnTime: 5
   returnTime: 0
   speed: 0
   state: 0
-  type: 4
+  type: 3

@@ -21,7 +21,7 @@ public class EnemyData : ScriptableObject
     [Tooltip("復帰時間")] public float returnTime;
     [Tooltip("移動速度")] public float speed;
     [Tooltip("状態")] public State state;
-
+    [Tooltip("タイプ")] public Type type;
     public EnemyData(EnemyData _data)
     {
         sutnCount = _data.sutnCount;
@@ -29,5 +29,11 @@ public class EnemyData : ScriptableObject
         returnTime = _data.returnTime;
         speed = _data.speed;
         state = _data.state;
+        type = _data.type;
+    }
+
+    public enum Type
+    {
+        dowo,slime,Tentacle,Mush,BIG
     }
 }

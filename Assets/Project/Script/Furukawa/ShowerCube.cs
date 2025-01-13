@@ -43,10 +43,12 @@ public class ShowerCube : MonoBehaviour
     private void OnCollisionEnter(Collision col)
     {
         PaintManager paintManager = new PaintManager();
-        pieceManager = col.transform.parent.GetComponent<PieceManager>();
+
 
         if (col.gameObject.CompareTag("yokokabe"))
         {
+            pieceManager = col.transform.parent.GetComponent<PieceManager>();
+
             //ここに壁を修復するやつかく当たったタグがよこかべだったら当たったオブジェクトのメッシュレンダラーを表示
             if (col.gameObject.transform.childCount == 0)
             {
