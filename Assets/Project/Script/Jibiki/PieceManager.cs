@@ -45,7 +45,7 @@ public class PieceManager : MonoBehaviour
 
     void Start()
     {
-        childFlag = false;
+        childFlag = true;
         UI_HP = GameObject.Find("HP").GetComponent<Image>();
         cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
         PieceParent = this.gameObject;
@@ -182,12 +182,12 @@ public class PieceManager : MonoBehaviour
                 //Debug.Log("やめたーーーーーーーーー");
                 //いんぼけやめる
                 //CancelInvoke();
-                if (gameObject.transform.root.name == "tenjyou" && childFlag)
-                {
-                    childFlag = false;
-                    cc.Phase[0] = false;
-                    cc.Phase[2] = true;
-                }
+                //if (PieceChildren.Count <= 0 && childFlag)
+                //{
+                //    childFlag = false;
+                //    cc.Phase[0] = false;
+                //    cc.Phase[2] = true;
+                //}
             }
             var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 

@@ -813,6 +813,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRSceneManager
       objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PlanePrefab
+      value: 
+      objectReference: {fileID: 5657038544419831093, guid: 411591a27a4a4a249a5b1ea888b9deb2, type: 3}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[4].Prefab
+      value: 
+      objectReference: {fileID: 563714354872022062, guid: f5dcf2d28f0afc34e8bbab5b682cdbc3, type: 3}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[4].ClassificationLabel
+      value: FLOOR
+      objectReference: {fileID: 0}
+    - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+      propertyPath: PrefabOverrides.Array.data[4]._editorClassificationIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 443927376246264172, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

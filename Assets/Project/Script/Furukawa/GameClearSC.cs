@@ -14,4 +14,9 @@ public class GameClearSC : MonoBehaviour
         //on = true;
     }
 
+    public void Fail()
+    {
+        SceneManager.LoadScene(sceneName.ToString());
+    }
+
 }
