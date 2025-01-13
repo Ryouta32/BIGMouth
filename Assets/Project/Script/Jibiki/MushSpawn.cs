@@ -24,7 +24,6 @@ public class MushSpawn : MonoBehaviour
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
-        Fade.SetActive(false);
     }
     void onAnchorsLoaded()
     {
