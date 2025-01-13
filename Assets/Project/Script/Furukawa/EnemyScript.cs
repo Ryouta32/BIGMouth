@@ -14,6 +14,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] GameObject damageEffect;
     [SerializeField] GameObject DestroyEffect;
     [SerializeField] GameObject destorySplash;
+    [SerializeField] bool root=false;
     [HideInInspector]
     public Rigidbody rb;
     public bool inHale;
@@ -40,8 +41,7 @@ public class EnemyScript : MonoBehaviour
             destroyObj();
 
             inHale = true;
-            Debug.Log("おやのなまえはーーー" + transform.root.name);
-            if(transform.root != null)
+            if(root)
                 Destroy(transform.root.gameObject);
             else
             Destroy(this.gameObject);

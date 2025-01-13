@@ -67,6 +67,10 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 855445050478835581, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: root
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 855445050478835581, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: stunEffect
       value: 
       objectReference: {fileID: 7953890939447723270}
