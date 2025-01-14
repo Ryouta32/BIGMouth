@@ -1,7 +1,4 @@
 ﻿using Es.InkPainter.Effective;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class RoomPlaneScript : MonoBehaviour
@@ -17,13 +14,6 @@ public class RoomPlaneScript : MonoBehaviour
     {
         heightFluid = GetComponent<HeightFluid>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionStay(Collision collision)
     {
 
@@ -36,7 +26,9 @@ public class RoomPlaneScript : MonoBehaviour
             _isHitHorizontalPlane = angle >= _approximatelyAngle;
         }
         else
+        {
             _isHitHorizontalPlane = false;
+        }
         if (_isHitHorizontalPlane)
         {
             heightFluid.SetFlowDirection(Vector2.up);

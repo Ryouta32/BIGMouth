@@ -1,32 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.Events;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System;
-using static PaintManager;
 using Es.InkPainter;
 
 public class ShowerEffect : MonoBehaviour
 {
-    [SerializeField]
-    private Brush brush;
-    [SerializeField]
-    private Brush draBrush;
-
-    [SerializeField]
-    private PaintManager.UseMethodType useMethodType = PaintManager.UseMethodType.RaycastHitInfo;
-
-    [SerializeField]
-    bool erase = false;
     [SerializeField] GameObject PaintObj;
-    [SerializeField] string DragonTag = "Dragon";
     private ParticleSystem p_RefParticle;
     [SerializeField, Tooltip("ヒット位置の通知")]
     private List<ParticleCollisionEvent> p_CollisionEventList;
 
     [SerializeField] int fallcount;
     int count;
-
     private void Start()
     {
         p_RefParticle = GetComponent<ParticleSystem>();
@@ -54,8 +38,6 @@ public class ShowerEffect : MonoBehaviour
                     AudioManager.manager.PlayPoint(AudioManager.manager.data.mushPotan, this.gameObject);
                     count = 0;
                 }
-
-
                 // 今回は1つ目のヒット情報のみ処理する
                 break;
             }

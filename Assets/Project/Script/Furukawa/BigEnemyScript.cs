@@ -1,5 +1,4 @@
-﻿using Oculus.Interaction;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -105,37 +104,4 @@ public class BigEnemyScript : MonoBehaviour
         stunEffect.SetActive(false);
     }
     public void Erase() => erase = true;
-    public void OBJScaleUP()
-    {
-        //erasedCount++;
-        //erase = false;
-
-        //StartCoroutine("ScaleUp");
-
-    }
-    public void OBJScaleDown()
-    {
-        //erasedCount--;
-        //if (erasedCount == 0)
-        //    erase = true;
-
-        //StartCoroutine("ScaleDown");
-
-    }
-    //IEnumerator ScaleUp()
-    //{
-    //    //for (float i = 0; i < 0.005f; i += 0.001f)
-    //    //{
-    //    //    this.transform.localScale = new Vector3(this.transform.localScale.x + i, this.transform.localScale.x+ i, this.transform.localScale.x+ i);
-    //    yield return new WaitForSeconds(0.1f);
-    //    //}
-    //}
-    //IEnumerator ScaleDown()
-    //{
-    //    //for (float i = 0.005f; i > 0; i -= 0.001f)
-    //    //{
-    //    //    this.transform.localScale = new Vector3(this.transform.localScale.x - i, this.transform.localScale.x - i, this.transform.localScale.x - i);
-    //    yield return new WaitForSeconds(0.1f);
-    //    //}
-    //}
 }

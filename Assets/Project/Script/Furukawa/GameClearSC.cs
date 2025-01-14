@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameClearSC : MonoBehaviour
 {
@@ -22,7 +20,6 @@ public class GameClearSC : MonoBehaviour
         //imageanima.Play();
         //on = true;
     }
-
     public void Fail()
     {
         SceneManager.LoadScene(sceneName.ToString());

@@ -1,16 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BouncingBallLogic : MonoBehaviour
 {
     [SerializeField] private float TTL = 5.0f;
-    //[SerializeField] private AudioClip pop;
-    //[SerializeField] private AudioClip bounce;
-    //[SerializeField] private AudioClip loadball;
     [SerializeField] private Material visibleMat;
     [SerializeField] private Material hiddenMat;
-    private AudioSource audioSource;
     private Transform centerEyeCamera;
     private bool isVisible = true;
 
@@ -18,12 +13,8 @@ public class BouncingBallLogic : MonoBehaviour
     private bool isReleased = false;
     private bool isReadyForDestroy = false;
 
-    //private void OnCollisionEnter() => audioSource.PlayOneShot(bounce);
-
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        //audioSource.PlayOneShot(loadball);
         centerEyeCamera = OVRManager.instance.GetComponentInChildren<OVRCameraRig>().centerEyeAnchor;
     }
 
@@ -36,9 +27,6 @@ public class BouncingBallLogic : MonoBehaviour
         if (!isReadyForDestroy && timer >= TTL)
         {
             isReadyForDestroy = true;
-            //float clipLength = pop.length;
-            //audioSource.PlayOneShot(pop);
-            //StartCoroutine(PlayPopCallback(clipLength));
         }
     }
 

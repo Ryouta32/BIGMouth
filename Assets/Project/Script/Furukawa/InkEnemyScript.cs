@@ -1,6 +1,4 @@
 ﻿using Es.InkPainter;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InkEnemyScript : MonoBehaviour
