@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7779282c6fb584546b00eb8c5d28cf3c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 207f362de59e3e84d9871b821d3d9aa4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2228,11 +2228,7 @@ MonoBehaviour:
   Case: {fileID: 4499066190803700623, guid: a2ea6ce470f055148b450b05a0e7a096, type: 3}
   Case2: {fileID: 887111662723137071, guid: 7a9b2592eb2dc02448d8268038a30f73, type: 3}
   Panel:
-  - {fileID: 2078710642465776936, guid: d74c4cf42ac404046bd6462b5e3847bd, type: 3}
-  - {fileID: 5258903817399353453, guid: 64a2a3d13c83a2d45b6e81ccfa124d54, type: 3}
-  - {fileID: 858970786054622411, guid: a5f3303e7907f9441b1802ca9330874c, type: 3}
-  - {fileID: 8143074490468885638, guid: 62a45aa5e95638c43848e89a1606d13c, type: 3}
-  - {fileID: 235798006615312317, guid: 33557d4f4c11d954eb6376a9a46ec405, type: 3}
+  - {fileID: 2309856849908597991, guid: dfe960f838ed7594e9db19ca760a9f0d, type: 3}
   Tutorial: {fileID: 1520319377}
 --- !u!4 &2131632772
 Transform:

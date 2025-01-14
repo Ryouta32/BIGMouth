@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom
       objectReference: {fileID: 0}
+    - target: {fileID: 4142290706333692838, guid: 4704e4c532170304eaf788e848ee6b43, type: 3}
+      propertyPath: m_TagString
+      value: Normal
+      objectReference: {fileID: 0}
     - target: {fileID: 8641605530572633983, guid: 4704e4c532170304eaf788e848ee6b43, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -102,34 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a087466f049bcff478deeb3604e77bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brush:
-    brushTexture: {fileID: 0}
-    brushNormalTexture: {fileID: 0}
-    brushHeightTexture: {fileID: 0}
-    brushScale: 0
-    rotateAngle: 0
-    brushNormalBlend: 0
-    brushHeightBlend: 0
-    brushColor: {r: 0, g: 0, b: 0, a: 0}
-    colorBlendType: 0
-    normalBlendType: 0
-    heightBlendType: 0
-  draBrush:
-    brushTexture: {fileID: 0}
-    brushNormalTexture: {fileID: 0}
-    brushHeightTexture: {fileID: 0}
-    brushScale: 0
-    rotateAngle: 0
-    brushNormalBlend: 0
-    brushHeightBlend: 0
-    brushColor: {r: 0, g: 0, b: 0, a: 0}
-    colorBlendType: 0
-    normalBlendType: 0
-    heightBlendType: 0
-  useMethodType: 0
-  erase: 0
   PaintObj: {fileID: 5025516467825413144, guid: 78a5d3fe18af5cf4784e891af2c7a3e5, type: 3}
-  DragonTag: Dragon
   fallcount: 10
 --- !u!1001 &6814999384805165552
 PrefabInstance:

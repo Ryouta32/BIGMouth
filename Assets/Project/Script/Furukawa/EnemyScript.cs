@@ -34,6 +34,11 @@ public class EnemyScript : MonoBehaviour
     }
     private void Update()
     {
+        if (transform.position.y > 10 || transform.position.y < -10)
+        {
+            kill();
+        }
+
         Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
         if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
         {
@@ -44,6 +49,7 @@ public class EnemyScript : MonoBehaviour
             destroyObj();
 
             inHale = true;
+<<<<<<< Updated upstream
             if(root)
             {
                 Destroy(transform.root.gameObject);
@@ -54,6 +60,22 @@ public class EnemyScript : MonoBehaviour
                 Destroy(this.gameObject);
                 BetaText.betacount--;
             }
+=======
+            kill();
+        }
+    }
+    private void kill()
+    {
+        if (root)
+        {
+            Destroy(transform.root.gameObject);
+            BetaText.betacount--;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+            BetaText.betacount--;
+>>>>>>> Stashed changes
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -116,10 +138,14 @@ public class EnemyScript : MonoBehaviour
             if (destorySplash != null)
                 Instantiate(destorySplash, transform.position, Quaternion.identity);
             AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);
+<<<<<<< Updated upstream
             if (root)
                 Destroy(transform.root.gameObject);
             else
             Destroy(this.gameObject);
+=======
+            kill();
+>>>>>>> Stashed changes
         }
         data.sutnCount--;
         //Debug.Log(data.sutnCount);
