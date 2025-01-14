@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: pCube6_polySurface4Mat
-    second: {fileID: 2100000, guid: 9a9b24c42c7223046a7cbf2ee74e268c, type: 2}
+    second: {fileID: 2100000, guid: 8bd9f2bea54335e4088b38c9533507bc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

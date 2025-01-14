@@ -15,7 +15,7 @@ public class MushSpawn : MonoBehaviour
 
     private void Awake()
     {
-        Fade.SetActive(true);
+        Fade.SetActive(false);
         //ドラゴンの位置設定
         CenterCamera = GameObject.Find("CenterEyeAnchor");
         dragonprefab = GameObject.Find("DragonPrefab");
