@@ -20,11 +20,8 @@ public class TutorialSpawn : MonoBehaviour
     OVRScenePlane floor;
 
     int i = 0;
-
-    [SerializeField] GameObject Fade;
     private void Awake()
     {
-        Fade.SetActive(true);
         ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
 
         //ルーム設定の読み込みが成功した時のコールバック登録
