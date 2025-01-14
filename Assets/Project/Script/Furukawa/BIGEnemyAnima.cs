@@ -11,17 +11,22 @@ public class BIGEnemyAnima : MonoBehaviour
     [SerializeField] GameObject mush;
     [SerializeField] ParticleSystem third;
     [SerializeField] ParticleSystem forth;
-    private Vector3 tentaPos;
-    private Vector3 mushPos;
+    Vector3 tentaPos;
+    Vector3 mushPos;
+    OVRSceneManager ovrSceneManager;
+    OVRScenePlane floor;
+
     private int count = 0;
     Animator anima;
-    string DamageStr="Damage";
+    string DamageStr = "Damage";
     // Start is called before the first frame update
     void Start()
     {
         anima = GetComponent<Animator>();
-        tentaPos = GameObject.Find("TentaPos").transform.position;
-        tentaPos = GameObject.Find("MushPos").transform.position;
+        ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
+        //ルーム設定の読み込みが成功した時のコールバック登録
+        //ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
+        onAnchorsLoaded();
     }
 
     private void Update()
@@ -67,5 +72,28 @@ public class BIGEnemyAnima : MonoBehaviour
     public void forthAttackStop()
     {
         forth.Stop();
+    }
+    void onAnchorsLoaded()
+    {
+        //OVRSceneRoomの参照取得
+        OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
+
+        var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
+        float y = 0;
+        floor = sceneRoom.Floor;
+        float posy = floor.transform.position.y;
+        foreach (var classification in classifications)
+        {
+            if (classification.Contains(OVRSceneManager.Classification.Bed))
+            {
+                tentaPos = classification.transform.position;
+            }
+            if (classification.Contains(OVRSceneManager.Classification.Lamp))
+            {
+                mushPos = classification.transform.position;
+            }
+        }
+        tentaPos.y = posy;
+        mushPos.y = posy;
     }
 }
