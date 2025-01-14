@@ -5,6 +5,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+
+enum rotate
+{
+    ue,sita,naname,gyakunaname
+}
 public class BouSakiScript : MonoBehaviour
 {
 
@@ -53,7 +58,7 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] Sprite InholeSp;
     [SerializeField] Sprite NoholeSp;
     private float cool;
-
+    [SerializeField] Sprite[] brushPaints;
     AudioSource source=new AudioSource();
 
     [SerializeField] GameObject yogosi;
@@ -73,6 +78,7 @@ public class BouSakiScript : MonoBehaviour
         slider.value = showerPoint;
 
         Debug.Log(showerPoint);
+
         //showerPoint = 1; //デバッグ用
         //スキルの判定
         if (showerPoint > 0)
@@ -193,7 +199,7 @@ public class BouSakiScript : MonoBehaviour
     private void Paint(Collision other)
     {
         PaintManager pManager = new PaintManager();
-
+        //brush.BrushTexture = (Texture)CheckPaintTex();
         switch (other.transform.tag)
         {
             case "Dragon":
@@ -218,6 +224,21 @@ public class BouSakiScript : MonoBehaviour
                 pManager.Paint(other, useMethodType, erase, brush, transform, true, DragonTag);
                 break;
         }
+    }
+    private Sprite CheckPaintTex()
+    {
+        float rotateZ = transform.root.localRotation.z;
+
+        if (rotateZ > 0 && rotateZ < 45)
+            return brushPaints[(int)rotate.sita];
+        if (rotateZ > 45 && rotateZ < 90)
+            return brushPaints[(int)rotate.gyakunaname];
+        if (rotateZ > 90 && rotateZ < 135)
+            return brushPaints[(int)rotate.naname];
+        if (rotateZ > 135 && rotateZ < 180)
+            return brushPaints[(int)rotate.ue];
+
+        return brushPaints[0];
     }
     //public void StartOfSuction(Vector3 pos)
     //{
