@@ -48,13 +48,14 @@ public class BigEnemyScript : MonoBehaviour
         {
             if (collision.gameObject.tag == "Brush")
             {
-                    data.sutnCount--;
-                    if (data.sutnCount <= 0)
-                    {
+                data.sutnCount--;
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, this.gameObject);
+                if (data.sutnCount <= 0)
+                {
                     //クリア演出
-                    bouSaki.StartOfSuction(transform.position,true);
+                    bouSaki.StartOfSuction(transform.position, true);
                     //clearSC.Clear();
-                    }
+                }
             }
         }
     }
