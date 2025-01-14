@@ -33,7 +33,7 @@ public class ShowerEffect : MonoBehaviour
                 Instantiate(PaintObj, pos, Quaternion.identity);
                 count++;
 
-                if (gameObject.transform.root.name == "Mush" && count == fallcount)
+                if (gameObject.tag == "Normal" && count == fallcount)
                 {
                     AudioManager.manager.PlayPoint(AudioManager.manager.data.mushPotan, this.gameObject);
                     count = 0;

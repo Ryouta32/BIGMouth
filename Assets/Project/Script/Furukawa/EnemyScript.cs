@@ -1,5 +1,8 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -11,35 +14,44 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] GameObject damageEffect;
     [SerializeField] GameObject DestroyEffect;
     [SerializeField] GameObject destorySplash;
-    [SerializeField] bool root = false;
+    [SerializeField] bool root=false;
     [HideInInspector]
     public Rigidbody rb;
     public bool inHale;
     [HideInInspector]
     public EnemyData data;
+    Animator anim;
 
     private void Start()
     {
         initialization();
         data = new EnemyData(_data);
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
 
         if (manager == null)
             manager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
     }
     private void Update()
     {
+        if (transform.position.y > 10 || transform.position.y < -10)
+        {
+            kill();
+        }
+
         Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
         if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
         {
             //吸い込みの処理
 
-            bouSaki.StartOfSuction(transform.position - bouSaki.transform.position, data.type);
+            bouSaki.StartOfSuction(transform.position - bouSaki.transform.position,data.type);
 
             destroyObj();
 
             inHale = true;
-            if (root)
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+            if(root)
             {
                 Destroy(transform.root.gameObject);
                 BetaText.betacount--;
@@ -49,6 +61,27 @@ public class EnemyScript : MonoBehaviour
                 Destroy(this.gameObject);
                 BetaText.betacount--;
             }
+=======
+=======
+>>>>>>> Stashed changes
+            kill();
+        }
+    }
+    private void kill()
+    {
+        if (root)
+        {
+            Destroy(transform.root.gameObject);
+            BetaText.betacount--;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+            BetaText.betacount--;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -74,7 +107,7 @@ public class EnemyScript : MonoBehaviour
     //中ベタ用
     private void OnTriggerExit(Collider other)
     {
-        if (this.gameObject.tag == "Normal" && other.transform.tag == "Brush")
+        if(this.gameObject.tag == "Normal" && other.transform.tag == "Brush")
         {
             Debug.Log("きたーーーーーーー2");
             Debug.Log(data.sutnCount);
@@ -98,12 +131,12 @@ public class EnemyScript : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if (!inHale)
-            Instantiate(DestroyEffect, transform.position, Quaternion.identity);
+        if(!inHale)
+        Instantiate(DestroyEffect, transform.position, Quaternion.identity);
     }
     public void HitDamage()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.kill, this.gameObject, 3);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.kill,this.gameObject,3);
         Instantiate(damageEffect, transform.position, Quaternion.identity);
         if (data.state == EnemyData.State.stun)
         {
@@ -111,10 +144,18 @@ public class EnemyScript : MonoBehaviour
             if (destorySplash != null)
                 Instantiate(destorySplash, transform.position, Quaternion.identity);
             AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
             if (root)
                 Destroy(transform.root.gameObject);
             else
-                Destroy(this.gameObject);
+            Destroy(this.gameObject);
+=======
+            kill();
+>>>>>>> Stashed changes
+=======
+            kill();
+>>>>>>> Stashed changes
         }
         data.sutnCount--;
         //Debug.Log(data.sutnCount);
@@ -124,7 +165,7 @@ public class EnemyScript : MonoBehaviour
         //スタンになったらアニメーション止める
         //anim.SetFloat("Speed", 0);
         stunEffect.SetActive(true);
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject, 3);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.stun,this.gameObject,3);
         yield return new WaitForSeconds(0.2f);
         SetState(EnemyData.State.stun);
 
@@ -136,19 +177,18 @@ public class EnemyScript : MonoBehaviour
     }
     public void MoveAudio()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.move, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.move,this.gameObject);
     }
     public void StunReturn() => data.sutnCount = _data.sutnCount;
     public void setManager(EnemyManager x) => manager = x;
     public void destroyObj()
     {
-        if (manager != null)
+        if(manager != null)
         {
             if (GetComponent<NormalBetaCollision>())
             {
                 manager.killNormal();
-            }
-            else if (GetComponent<MushroomManager>())
+            }else if (GetComponent<MushroomManager>())
             {
                 manager.killMash();
             }
@@ -158,5 +198,5 @@ public class EnemyScript : MonoBehaviour
             }
         }
     }
-    public void SetState(EnemyData.State sta) => data.state = sta;
+    public void SetState(EnemyData.State sta)=>data.state = sta;
 }
