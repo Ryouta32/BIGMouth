@@ -6,6 +6,7 @@ using UnityEngine;
 public class ParticleCollision : MonoBehaviour
 {
     bool audioflag;
+    [SerializeField] Animator anim;
 
     void Start()
     {
@@ -13,7 +14,9 @@ public class ParticleCollision : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Brush"))
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+
+        if (other.gameObject.CompareTag("Brush") && stateInfo.IsName("Base"))
         {
             if (audioflag)
             {
