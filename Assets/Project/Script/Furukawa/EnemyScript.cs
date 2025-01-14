@@ -50,6 +50,7 @@ public class EnemyScript : MonoBehaviour
 
             inHale = true;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             if(root)
             {
                 Destroy(transform.root.gameObject);
@@ -61,6 +62,8 @@ public class EnemyScript : MonoBehaviour
                 BetaText.betacount--;
             }
 =======
+=======
+>>>>>>> Stashed changes
             kill();
         }
     }
@@ -75,6 +78,9 @@ public class EnemyScript : MonoBehaviour
         {
             Destroy(this.gameObject);
             BetaText.betacount--;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
     }
@@ -139,10 +145,14 @@ public class EnemyScript : MonoBehaviour
                 Instantiate(destorySplash, transform.position, Quaternion.identity);
             AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             if (root)
                 Destroy(transform.root.gameObject);
             else
             Destroy(this.gameObject);
+=======
+            kill();
+>>>>>>> Stashed changes
 =======
             kill();
 >>>>>>> Stashed changes
