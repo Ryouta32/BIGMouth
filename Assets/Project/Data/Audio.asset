@@ -54,6 +54,8 @@ MonoBehaviour:
   announce: {fileID: 8300000, guid: 852710008d5f08d4fadc6f9a6b257031, type: 3}
   littleMore: {fileID: 8300000, guid: 18fe3ecfeb6e6414489c84bb4fc193ac, type: 3}
   TutorialClear: {fileID: 8300000, guid: 22ef39d9241b29f4494e2bf920fd1965, type: 3}
+  weekAnnounce: {fileID: 8300000, guid: 7164be4290dec7446a7871ccada60052, type: 3}
+  killAnnounce: {fileID: 8300000, guid: deced1c5a2907d745acb4b2cd10004fc, type: 3}
   wallTackle: {fileID: 0}
   wallBreak: {fileID: 0}
   debug: {fileID: 8300000, guid: 74b0974267f046d47abd1a7eebacb201, type: 3}

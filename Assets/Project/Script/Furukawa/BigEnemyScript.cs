@@ -14,14 +14,18 @@ public class BigEnemyScript : MonoBehaviour
     [SerializeField] BIGEnemyAnima anima;
     [SerializeField] GameObject stunEffect;
     public BouSakiScript bouSaki;
+    [SerializeField] Renderer mainRender;
+    Material mat;
     GameClearSC clearSC;
     private EnemyData data;
     private bool erase;
+    float hagesisa = 0;
     private void Start()
     {
         clearSC = GameObject.Find("Clear").GetComponent<GameClearSC>();
         data = new EnemyData(_data);
         bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
+        mat = mainRender.material;
     }
     private void Update()
     {
@@ -49,6 +53,9 @@ public class BigEnemyScript : MonoBehaviour
             {
                 data.sutnCount--;
                 AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, this.gameObject);
+                hagesisa += 1f;
+                mat.SetFloat("_hagesisa", hagesisa);
+                
                 if (data.sutnCount <= 0)
                 {
                     //クリア演出
@@ -65,7 +72,9 @@ public class BigEnemyScript : MonoBehaviour
             if (other.gameObject.tag == "Brush")
             {
                 data.sutnCount--;
-                if(data.state==EnemyData.State.stun)
+                hagesisa += 1f;
+                mat.SetFloat("_hagesisa", hagesisa);
+                if (data.state==EnemyData.State.stun)
                 {
                     Destroy(gameObject);
                 }    
@@ -104,4 +113,5 @@ public class BigEnemyScript : MonoBehaviour
         stunEffect.SetActive(false);
     }
     public void Erase() => erase = true;
+    public BIGEnemyAnima GetAnima() => anima;
 }

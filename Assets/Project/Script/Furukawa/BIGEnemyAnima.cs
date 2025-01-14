@@ -13,19 +13,18 @@ public class BIGEnemyAnima : MonoBehaviour
     [SerializeField] ParticleSystem forth;
     Vector3 tentaPos;
     Vector3 mushPos;
-    OVRSceneManager ovrSceneManager;
     OVRScenePlane floor;
-
-    private int count = 0;
+    GameObject tentaObj;
+    GameObject mushObj;
+    bool tentakill=false; 
+    bool mushkill=false;
+    int count = 0;
     Animator anima;
     string DamageStr = "Damage";
     // Start is called before the first frame update
     void Start()
     {
         anima = GetComponent<Animator>();
-        ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
-        //ルーム設定の読み込みが成功した時のコールバック登録
-        //ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
         onAnchorsLoaded();
     }
 
@@ -36,6 +35,10 @@ public class BIGEnemyAnima : MonoBehaviour
         {
             bigSc.Erase();
         }
+        if (tentakill && tentaObj != null)
+            bigSc.GetAnima().anima.SetTrigger("kill");
+        if (mushkill && mushObj != null)
+            bigSc.GetAnima().anima.SetTrigger("kill");
     }
     public void Break()
     {
@@ -43,19 +46,22 @@ public class BIGEnemyAnima : MonoBehaviour
         anima.SetTrigger(DamageStr);
 
     }
-    public void Damage()
+    public void WeekAudio()
     {
-        anima.SetTrigger(DamageStr);
-        //anima.SetTrigger(abareruStr);
+        AudioManager.manager.Play(AudioManager.manager.data.weekAnnounce);
+    }
+    public void KillAudio()
+    {
+        AudioManager.manager.Play(AudioManager.manager.data.killAnnounce);
     }
 
     public void fast()
     {
-        Instantiate(tentacle, tentaPos, Quaternion.identity);
+        tentaObj = Instantiate(tentacle, tentaPos, Quaternion.identity);
     }
     public void second()
     {
-        Instantiate(mush, mushPos, Quaternion.identity);
+        mushObj = Instantiate(mush, mushPos, Quaternion.identity);
     }
     public void thirdAttack()
     {
