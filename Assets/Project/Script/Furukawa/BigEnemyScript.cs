@@ -1,5 +1,4 @@
-﻿using Oculus.Interaction;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,14 +14,18 @@ public class BigEnemyScript : MonoBehaviour
     [SerializeField] BIGEnemyAnima anima;
     [SerializeField] GameObject stunEffect;
     public BouSakiScript bouSaki;
+    [SerializeField] Renderer mainRender;
+    Material mat;
     GameClearSC clearSC;
     private EnemyData data;
     private bool erase;
+    float hagesisa = 0;
     private void Start()
     {
         clearSC = GameObject.Find("Clear").GetComponent<GameClearSC>();
         data = new EnemyData(_data);
         bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
+        mat = mainRender.material;
     }
     private void Update()
     {
@@ -50,6 +53,9 @@ public class BigEnemyScript : MonoBehaviour
             {
                 data.sutnCount--;
                 AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, this.gameObject);
+                hagesisa += 1f;
+                mat.SetFloat("_hagesisa", hagesisa);
+                
                 if (data.sutnCount <= 0)
                 {
                     //クリア演出
@@ -66,7 +72,9 @@ public class BigEnemyScript : MonoBehaviour
             if (other.gameObject.tag == "Brush")
             {
                 data.sutnCount--;
-                if(data.state==EnemyData.State.stun)
+                hagesisa += 1f;
+                mat.SetFloat("_hagesisa", hagesisa);
+                if (data.state==EnemyData.State.stun)
                 {
                     Destroy(gameObject);
                 }    
@@ -105,37 +113,5 @@ public class BigEnemyScript : MonoBehaviour
         stunEffect.SetActive(false);
     }
     public void Erase() => erase = true;
-    public void OBJScaleUP()
-    {
-        //erasedCount++;
-        //erase = false;
-
-        //StartCoroutine("ScaleUp");
-
-    }
-    public void OBJScaleDown()
-    {
-        //erasedCount--;
-        //if (erasedCount == 0)
-        //    erase = true;
-
-        //StartCoroutine("ScaleDown");
-
-    }
-    //IEnumerator ScaleUp()
-    //{
-    //    //for (float i = 0; i < 0.005f; i += 0.001f)
-    //    //{
-    //    //    this.transform.localScale = new Vector3(this.transform.localScale.x + i, this.transform.localScale.x+ i, this.transform.localScale.x+ i);
-    //    yield return new WaitForSeconds(0.1f);
-    //    //}
-    //}
-    //IEnumerator ScaleDown()
-    //{
-    //    //for (float i = 0.005f; i > 0; i -= 0.001f)
-    //    //{
-    //    //    this.transform.localScale = new Vector3(this.transform.localScale.x - i, this.transform.localScale.x - i, this.transform.localScale.x - i);
-    //    yield return new WaitForSeconds(0.1f);
-    //    //}
-    //}
+    public BIGEnemyAnima GetAnima() => anima;
 }

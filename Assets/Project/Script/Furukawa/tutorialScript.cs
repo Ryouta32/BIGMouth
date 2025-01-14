@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class tutorialScript : MonoBehaviour
@@ -20,7 +18,6 @@ public class tutorialScript : MonoBehaviour
         source.Play();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(!isClear){

@@ -11,17 +11,21 @@ public class BIGEnemyAnima : MonoBehaviour
     [SerializeField] GameObject mush;
     [SerializeField] ParticleSystem third;
     [SerializeField] ParticleSystem forth;
-    private Vector3 tentaPos;
-    private Vector3 mushPos;
-    private int count = 0;
+    Vector3 tentaPos;
+    Vector3 mushPos;
+    OVRScenePlane floor;
+    GameObject tentaObj;
+    GameObject mushObj;
+    bool tentakill=false; 
+    bool mushkill=false;
+    int count = 0;
     Animator anima;
-    string DamageStr="Damage";
+    string DamageStr = "Damage";
     // Start is called before the first frame update
     void Start()
     {
         anima = GetComponent<Animator>();
-        tentaPos = GameObject.Find("TentaPos").transform.position;
-        tentaPos = GameObject.Find("MushPos").transform.position;
+        onAnchorsLoaded();
     }
 
     private void Update()
@@ -31,6 +35,10 @@ public class BIGEnemyAnima : MonoBehaviour
         {
             bigSc.Erase();
         }
+        if (tentakill && tentaObj != null)
+            bigSc.GetAnima().anima.SetTrigger("kill");
+        if (mushkill && mushObj != null)
+            bigSc.GetAnima().anima.SetTrigger("kill");
     }
     public void Break()
     {
@@ -38,19 +46,22 @@ public class BIGEnemyAnima : MonoBehaviour
         anima.SetTrigger(DamageStr);
 
     }
-    public void Damage()
+    public void WeekAudio()
     {
-        anima.SetTrigger(DamageStr);
-        //anima.SetTrigger(abareruStr);
+        AudioManager.manager.Play(AudioManager.manager.data.weekAnnounce);
+    }
+    public void KillAudio()
+    {
+        AudioManager.manager.Play(AudioManager.manager.data.killAnnounce);
     }
 
     public void fast()
     {
-        Instantiate(tentacle, tentaPos, Quaternion.identity);
+        tentaObj = Instantiate(tentacle, tentaPos, Quaternion.identity);
     }
     public void second()
     {
-        Instantiate(mush, mushPos, Quaternion.identity);
+        mushObj = Instantiate(mush, mushPos, Quaternion.identity);
     }
     public void thirdAttack()
     {
@@ -67,5 +78,28 @@ public class BIGEnemyAnima : MonoBehaviour
     public void forthAttackStop()
     {
         forth.Stop();
+    }
+    void onAnchorsLoaded()
+    {
+        //OVRSceneRoomの参照取得
+        OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
+
+        var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
+        float y = 0;
+        floor = sceneRoom.Floor;
+        float posy = floor.transform.position.y;
+        foreach (var classification in classifications)
+        {
+            if (classification.Contains(OVRSceneManager.Classification.Bed))
+            {
+                tentaPos = classification.transform.position;
+            }
+            if (classification.Contains(OVRSceneManager.Classification.Lamp))
+            {
+                mushPos = classification.transform.position;
+            }
+        }
+        tentaPos.y = posy;
+        mushPos.y = posy;
     }
 }

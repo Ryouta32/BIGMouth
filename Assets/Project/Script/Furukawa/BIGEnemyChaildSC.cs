@@ -23,8 +23,6 @@ public class BIGEnemyChaildSC : MonoBehaviour
         bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
         StartCoroutine("GraSet");
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (move)
@@ -34,7 +32,6 @@ public class BIGEnemyChaildSC : MonoBehaviour
             if (dis <= 1) { 
                 if (biSC != null)
                 {
-                    biSC.OBJScaleUP();
                     Destroy(this.gameObject);
                 }
             }

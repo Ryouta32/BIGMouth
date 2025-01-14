@@ -1,14 +1,12 @@
 ﻿using Es.InkPainter;
-using Oculus.Interaction;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
 enum rotate
 {
-    ue,sita,naname,gyakunaname
+    ue, sita, naname, gyakunaname
 }
 public class BouSakiScript : MonoBehaviour
 {
@@ -47,7 +45,7 @@ public class BouSakiScript : MonoBehaviour
     [Header("シャワーパワー")]
     [SerializeField] Slider slider;
     [SerializeField] GameClearSC clearSC;
-    bool on=true;
+    bool on = true;
     Vector3 hitpoint;
     public bool OnHale;
     float showerPoint = 1;
@@ -59,7 +57,6 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] Sprite NoholeSp;
     private float cool;
     [SerializeField] Sprite[] brushPaints;
-    AudioSource source=new AudioSource();
 
     [SerializeField] GameObject yogosi;
     void Start()
@@ -67,8 +64,6 @@ public class BouSakiScript : MonoBehaviour
         hitpoint = Vector3.zero;
         slider.maxValue = showerLimit;
         showerPoint = showerThreshold;
-        if (clearSC != null)
-            clearSC = GameObject.Find("Clear").GetComponent<GameClearSC>();
     }
 
     void Update()
@@ -107,7 +102,7 @@ public class BouSakiScript : MonoBehaviour
                 Inhale();
             }
         }
-        if (OnHale&&( OVRInput.GetUp(showerBtn) || Input.GetMouseButtonUp(0)))
+        if (OnHale && (OVRInput.GetUp(showerBtn) || Input.GetMouseButtonUp(0)))
         {
             UpInhale();
             image.sprite = NoholeSp;
@@ -247,7 +242,7 @@ public class BouSakiScript : MonoBehaviour
 
     //    sh.position = pos;
     //}
-    public void StartOfSuction(Vector3 pos,EnemyData.Type type)
+    public void StartOfSuction(Vector3 pos, EnemyData.Type type)
     {
         GameObject suction;
         switch (type)
@@ -266,8 +261,8 @@ public class BouSakiScript : MonoBehaviour
                 suction = SuctionBIGObj;
                 break;
 
-                default:
-                suction= SuctionObj;
+            default:
+                suction = SuctionObj;
                 break;
         }
         GameObject obj = Instantiate(suction, transform.position, Quaternion.identity);
@@ -277,7 +272,7 @@ public class BouSakiScript : MonoBehaviour
 
         sh.position = pos;
     }
-    public void StartOfSuction(Vector3 pos,bool clear)
+    public void StartOfSuction(Vector3 pos, bool clear)
     {
         GameObject obj = Instantiate(SuctionObj, transform.position, Quaternion.identity);
         obj.GetComponent<SuikomiScript>().SetBousaki(this);
@@ -285,8 +280,9 @@ public class BouSakiScript : MonoBehaviour
         var sh = psy.shape;
 
         sh.position = pos;
-        if(clear)
-        obj.GetComponent<SuikomiScript>().SetClear(clearSC);
+
+        if (clear&&clearSC!=null)
+            obj.GetComponent<SuikomiScript>().SetClear(clearSC);
 
     }
     public Vector3 GetHit() => hitpoint;

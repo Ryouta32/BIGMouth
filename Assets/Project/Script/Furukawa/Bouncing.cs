@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,11 +12,6 @@ public class Bouncing : MonoBehaviour
     private GameObject currentBall;
     private bool ballGrabbed = false;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if (!ballGrabbed && OVRInput.GetDown(actionBtn))

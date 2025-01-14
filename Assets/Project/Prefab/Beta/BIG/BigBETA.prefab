@@ -5017,34 +5017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a087466f049bcff478deeb3604e77bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brush:
-    brushTexture: {fileID: 0}
-    brushNormalTexture: {fileID: 0}
-    brushHeightTexture: {fileID: 0}
-    brushScale: 0
-    rotateAngle: 0
-    brushNormalBlend: 0
-    brushHeightBlend: 0
-    brushColor: {r: 0, g: 0, b: 0, a: 0}
-    colorBlendType: 0
-    normalBlendType: 0
-    heightBlendType: 0
-  draBrush:
-    brushTexture: {fileID: 0}
-    brushNormalTexture: {fileID: 0}
-    brushHeightTexture: {fileID: 0}
-    brushScale: 0
-    rotateAngle: 0
-    brushNormalBlend: 0
-    brushHeightBlend: 0
-    brushColor: {r: 0, g: 0, b: 0, a: 0}
-    colorBlendType: 0
-    normalBlendType: 0
-    heightBlendType: 0
-  useMethodType: 0
-  erase: 0
   PaintObj: {fileID: 5002865995272999683, guid: 3f6d33b50e984c240b845e397cdde731, type: 3}
-  DragonTag: Dragon
   fallcount: 0
 --- !u!1 &2519195955629103253
 GameObject:
@@ -9935,6 +9908,7 @@ MonoBehaviour:
   anima: {fileID: 2351061004932218624}
   stunEffect: {fileID: 4656759769855482497}
   bouSaki: {fileID: 0}
+  mainRender: {fileID: 5491856026002258210}
 --- !u!54 &1816758352693366227
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14805,34 +14779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a087466f049bcff478deeb3604e77bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brush:
-    brushTexture: {fileID: 0}
-    brushNormalTexture: {fileID: 0}
-    brushHeightTexture: {fileID: 0}
-    brushScale: 0
-    rotateAngle: 0
-    brushNormalBlend: 0
-    brushHeightBlend: 0
-    brushColor: {r: 0, g: 0, b: 0, a: 0}
-    colorBlendType: 0
-    normalBlendType: 0
-    heightBlendType: 0
-  draBrush:
-    brushTexture: {fileID: 0}
-    brushNormalTexture: {fileID: 0}
-    brushHeightTexture: {fileID: 0}
-    brushScale: 0
-    rotateAngle: 0
-    brushNormalBlend: 0
-    brushHeightBlend: 0
-    brushColor: {r: 0, g: 0, b: 0, a: 0}
-    colorBlendType: 0
-    normalBlendType: 0
-    heightBlendType: 0
-  useMethodType: 0
-  erase: 0
   PaintObj: {fileID: 5002865995272999683, guid: 3f6d33b50e984c240b845e397cdde731, type: 3}
-  DragonTag: Dragon
   fallcount: 0
 --- !u!1 &5198925697554295895
 GameObject:
@@ -21155,6 +21102,11 @@ Rigidbody:
 --- !u!4 &5488808689461285217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7822517382169977452, guid: 49a9d8c5482cfb447863e8b6b708edaa, type: 3}
+  m_PrefabInstance: {fileID: 2351723916200096525}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5491856026002258210 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1398933363811268049, guid: 49a9d8c5482cfb447863e8b6b708edaa, type: 3}
   m_PrefabInstance: {fileID: 2351723916200096525}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7073184435771062070 stripped

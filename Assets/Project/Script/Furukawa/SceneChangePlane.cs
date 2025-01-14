@@ -1,10 +1,6 @@
-//using Meta.XR.Editor.Tags;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿//using Meta.XR.Editor.Tags;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 public class SceneChangePlane : MonoBehaviour
 {

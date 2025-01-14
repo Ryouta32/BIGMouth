@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &500333606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4063161737051803050, guid: f5a499176eaa5b84f85f9c25e95a2e3c, type: 3}
+  m_PrefabInstance: {fileID: 1189915669}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef80a9865dca64044b9161c8ea794372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &538794118 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6530521001911450440, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
@@ -137,6 +148,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6199644935454327777, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6530521001911450440, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -489,6 +504,10 @@ PrefabInstance:
       propertyPath: OnHale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: clearSC
+      value: 
+      objectReference: {fileID: 500333606}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -808,11 +827,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: bossCount
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: debugmode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: bouSakiScript
@@ -931,11 +950,11 @@ PrefabInstance:
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[5].Prefab
       value: 
-      objectReference: {fileID: 5642021374998335667, guid: d9252d7dc900614409b3fa48a5c5c2cb, type: 3}
+      objectReference: {fileID: 5657038544419831093, guid: 411591a27a4a4a249a5b1ea888b9deb2, type: 3}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[6].Prefab
       value: 
-      objectReference: {fileID: 425811984473718396, guid: fd8c6dbdfecc7b24eb6f3f6135eccb1d, type: 3}
+      objectReference: {fileID: 5657038544419831093, guid: 411591a27a4a4a249a5b1ea888b9deb2, type: 3}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[1].ClassificationLabel
       value: CEILING
