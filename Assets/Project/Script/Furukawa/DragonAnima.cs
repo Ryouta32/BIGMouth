@@ -44,10 +44,6 @@ public class DragonAnima : MonoBehaviour
             mush = false;
         }
     }
-    public void Spawn()
-    {
-        //spawn.StartSpawan();
-    }
     public void StartBGM() 
     {
         AudioManager.manager.PlayBGM(AudioManager.manager.data.mainBGM);

@@ -22,7 +22,6 @@ public class TutorialEnemy : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 diff = bouSaki.gameObject.transform.position - transform.position;

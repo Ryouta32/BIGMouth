@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -9,17 +8,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] float BGMvol;
     [SerializeField] float SEvol;
     AudioSource source;
-
     private void Awake()
     {
         source = GetComponent<AudioSource>();
         source.volume = BGMvol;
         manager = this;
-    }
-    private void Start()
-    {
-
-        
     }
     public AudioData GetData() => data;
     public void SetAudioScale(float vol) => source.volume = vol;
@@ -64,7 +57,6 @@ public class AudioManager : MonoBehaviour
     {
         for (int i = 0; i < loop; i++)
         {
-            //Debug.Log("ああ");
             souce.PlayOneShot(clip);
             yield return new WaitWhile(() => source.isPlaying);
         }

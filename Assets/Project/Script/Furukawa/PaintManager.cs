@@ -1,9 +1,7 @@
 ﻿using Es.InkPainter;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintManager 
+public class PaintManager
 {
     [System.Serializable]
     public enum UseMethodType
@@ -13,8 +11,7 @@ public class PaintManager
         NearestSurfacePoint,
         DirectUV,
     }
-
-    public void Paint(Collision col, UseMethodType useMethodType, bool erase, Brush brush,Transform tra,bool rotate,string tag)
+    public void Paint(Collision col, UseMethodType useMethodType, bool erase, Brush brush, Transform tra, bool rotate, string tag)
     {
         Vector3 hitPos;
         if (col.transform.tag != tag)
@@ -70,66 +67,65 @@ public class PaintManager
         Vector3 hitPos;
         if (col.transform.tag != tag)
             erase = !erase;
-        //foreach (ContactPoint point in col.contacts)
+
+        hitPos = col.ClosestPointOnBounds(tra.position);
+        Ray ray = new Ray(tra.position, -hitPos);
+        Debug.Log(ray);
+        if (col.transform.GetComponent<InkCanvas>())
         {
-            hitPos = col.ClosestPointOnBounds(tra.position);
-            Ray ray = new Ray(tra.position, -hitPos);
-            Debug.Log(ray);
-            if (col.transform.GetComponent<InkCanvas>())
+            bool success = true;
+            foreach (RaycastHit hit in Physics.RaycastAll(ray))
             {
-                bool success = true;
-                foreach (RaycastHit hit in Physics.RaycastAll(ray))
+
+                //Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
+                InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
+                if (paint != null)
                 {
-
-                    //Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
-                    InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
-                    if (paint != null)
+                    if (rotate)
                     {
-                        if (rotate)
-                        {
-                            //tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
-                        }
-                        switch (useMethodType)
-                        {
-                            case UseMethodType.RaycastHitInfo:
-                                success = erase ? paint.Erase(brush, hit) : paint.Paint(brush, hit);
-
-                                break;
-                            case UseMethodType.WorldPoint:
-                                success = erase ? paint.Erase(brush, hit.point) : paint.Paint(brush, hit.point);
-                                break;
-
-                            case UseMethodType.NearestSurfacePoint:
-                                success = erase ? paint.EraseNearestTriangleSurface(brush, hit.point) : paint.PaintNearestTriangleSurface(brush, hit.point);
-                                break;
-
-                            case UseMethodType.DirectUV:
-                                if (!(hit.collider is MeshCollider))
-                                    Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
-                                success = erase ? paint.EraseUVDirect(brush, hit.textureCoord) : paint.PaintUVDirect(brush, hit.textureCoord);
-                                break;
-                        }
+                        //tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
                     }
+                    switch (useMethodType)
+                    {
+                        case UseMethodType.RaycastHitInfo:
+                            success = erase ? paint.Erase(brush, hit) : paint.Paint(brush, hit);
+
+                            break;
+                        case UseMethodType.WorldPoint:
+                            success = erase ? paint.Erase(brush, hit.point) : paint.Paint(brush, hit.point);
+                            break;
+
+                        case UseMethodType.NearestSurfacePoint:
+                            success = erase ? paint.EraseNearestTriangleSurface(brush, hit.point) : paint.PaintNearestTriangleSurface(brush, hit.point);
+                            break;
+
+                        case UseMethodType.DirectUV:
+                            if (!(hit.collider is MeshCollider))
+                                Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
+                            success = erase ? paint.EraseUVDirect(brush, hit.textureCoord) : paint.PaintUVDirect(brush, hit.textureCoord);
+                            break;
+                    }
+
                 }
             }
         }
 
     }
-    public void Paint(ParticleCollisionEvent col, UseMethodType useMethodType, bool erase, Brush brush, GameObject obj,Transform tra)
+    public void Paint(ParticleCollisionEvent col, UseMethodType useMethodType, bool erase, Brush brush, GameObject obj, Transform tra)
     {
         Vector3 hitPos;
-            hitPos = col.intersection;
-            if (obj.GetComponent<InkCanvas>())
-            {
-                bool success = true;
+        hitPos = col.intersection;
+        if (obj.GetComponent<InkCanvas>())
+        {
+            bool success = true;
 
-                RaycastHit hit;
+            RaycastHit hit;
 
             Ray ray = new Ray(tra.position, tra.TransformDirection(hitPos));
 
             Debug.Log(ray);
-            if (Physics.Raycast(ray,out hit,Mathf.Infinity))
-                {
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            {
                 var dir = ray.origin + ray.direction * hit.distance;
 
                 //Debug.DrawLine(tra.position, dir, Color.red, 1f);
@@ -141,62 +137,31 @@ public class PaintManager
 
                 ////Debug.Log(hit.transform.gameObject.name);
                 if (paint != null)
+                {
+
+                    //tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
+                    switch (useMethodType)
                     {
+                        case UseMethodType.RaycastHitInfo:
+                            success = erase ? paint.Erase(brush, hit) : paint.Paint(brush, hit);
 
-                        //tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
-                        switch (useMethodType)
-                        {
-                            case UseMethodType.RaycastHitInfo:
-                                success = erase ? paint.Erase(brush, hit) : paint.Paint(brush, hit);
+                            break;
+                        case UseMethodType.WorldPoint:
+                            success = erase ? paint.Erase(brush, hit.point) : paint.Paint(brush, hit.point);
+                            break;
 
-                                break;
-                            case UseMethodType.WorldPoint:
-                                success = erase ? paint.Erase(brush, hit.point) : paint.Paint(brush, hit.point);
-                                break;
+                        case UseMethodType.NearestSurfacePoint:
+                            success = erase ? paint.EraseNearestTriangleSurface(brush, hit.point) : paint.PaintNearestTriangleSurface(brush, hit.point);
+                            break;
 
-                            case UseMethodType.NearestSurfacePoint:
-                                success = erase ? paint.EraseNearestTriangleSurface(brush, hit.point) : paint.PaintNearestTriangleSurface(brush, hit.point);
-                                break;
-
-                            case UseMethodType.DirectUV:
-                                if (!(hit.collider is MeshCollider))
-                                    Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
-                                success = erase ? paint.EraseUVDirect(brush, hit.textureCoord) : paint.PaintUVDirect(brush, hit.textureCoord);
-                                break;
-                        }
+                        case UseMethodType.DirectUV:
+                            if (!(hit.collider is MeshCollider))
+                                Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
+                            success = erase ? paint.EraseUVDirect(brush, hit.textureCoord) : paint.PaintUVDirect(brush, hit.textureCoord);
+                            break;
                     }
-                //}
-                //foreach (RaycastHit hit in Physics.RaycastAll(ray))
-                //{
-                //    Debug.Log("色塗れてる");
-                //    InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
-
-
-                //    if (paint != null)
-                //    {
-                //        tra.rotation = Quaternion.FromToRotation(tra.up, hit.normal) * tra.rotation;
-                //        switch (useMethodType)
-                //        {
-                //            case UseMethodType.RaycastHitInfo:
-                //                success = erase ? paint.Erase(brush, hit) : paint.Paint(brush, hit);
-
-                //                break;
-                //            case UseMethodType.WorldPoint:
-                //                success = erase ? paint.Erase(brush, hit.point) : paint.Paint(brush, hit.point);
-                //                break;
-
-                //            case UseMethodType.NearestSurfacePoint:
-                //                success = erase ? paint.EraseNearestTriangleSurface(brush, hit.point) : paint.PaintNearestTriangleSurface(brush, hit.point);
-                //                break;
-
-                //            case UseMethodType.DirectUV:
-                //                if (!(hit.collider is MeshCollider))
-                //                    Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
-                //                success = erase ? paint.EraseUVDirect(brush, hit.textureCoord) : paint.PaintUVDirect(brush, hit.textureCoord);
-                //                break;
-                //        }
-                //    }
                 }
             }
         }
     }
+}

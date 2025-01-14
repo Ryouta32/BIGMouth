@@ -1,13 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-//[System.Serializable]
-//public struct Konsekis
-//{
-//    [Tooltip("痕跡の種類を入力")] public EnemyData KonsekiData;
-//    [Tooltip("痕跡を与えた際の好感度を入力")] public int like;
-//}
+﻿using UnityEngine;
 [CreateAssetMenu]
 
 public class EnemyData : ScriptableObject

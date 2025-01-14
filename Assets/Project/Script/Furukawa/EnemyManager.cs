@@ -1,16 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EnemyManager : MonoBehaviour
 {
-   [SerializeField] List<GameObject> enemys;
     [SerializeField] int spawnLimit;
     [SerializeField] GameObject BIGBETA;
     [SerializeField] GameObject Ball;
     [SerializeField] Transform bossPos;
-     BetaSpawn betaSpawn;
     [Tooltip("ボスが出るまでのキル数")][SerializeField] int bossCount;
     [HideInInspector] public int killCount;
     [SerializeField]BouSakiScript bouSakiScript;
@@ -25,11 +21,11 @@ public class EnemyManager : MonoBehaviour
 
     private void Start()
     {
-        betaSpawn = GetComponent<BetaSpawn>();
         clearflag = true;
     }
 
-    public void ClearCheck() {
+    public void ClearCheck() 
+    {
         Debug.Log(bossCount + " " + killCount);
         if ((bossCount <= killCount)&&mush&&normal&&spawn)
         {
@@ -37,12 +33,6 @@ public class EnemyManager : MonoBehaviour
             GameObject obj = Instantiate(Ball, bossPos.position, Quaternion.identity);
             obj.GetComponent<BIGBallSC>().setParent(bossPos);
             obj.GetComponent<BIGBallSC>().setSaki(bouSakiScript);
-        }
-        if (enemys.Count == 0 && clearflag)
-        {
-            //ここにゲームクリアの処理
-            clearflag = false;
-            //SceneManager.LoadScene(SceneName.sceneName.ClearScene.ToString());
         }
     }
 
@@ -56,7 +46,6 @@ public class EnemyManager : MonoBehaviour
         }
     }
     
-    public void AddEnemys(GameObject obj) => enemys.Add(obj);
     public void DestroyEnemys() { 
         //enemys.Remove(obj);
         killCount++;
@@ -64,6 +53,4 @@ public class EnemyManager : MonoBehaviour
     }
     public void killNormal() =>normal=true;
     public void killMash() =>mush=true;
-    public void ResetEnemys() => enemys=new List<GameObject>();
-    public bool SpawnCheck() => enemys.Count>=spawnLimit;
 }
