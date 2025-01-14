@@ -3,49 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //それぞれのTrigger
-//Abare
-//Attack
-//Attack2
-//Break
+//Damage
 public class BIGEnemyAnima : MonoBehaviour
 {
     [SerializeField] BigEnemyScript bigSc;
-    [SerializeField][Tooltip("上から順番に出てくる")] List<GameObject> Enemys;
+    [SerializeField] GameObject tentacle;
+    [SerializeField] GameObject mush;
+    [SerializeField] ParticleSystem third;
+    [SerializeField] ParticleSystem forth;
+    private Vector3 tentaPos;
+    private Vector3 mushPos;
     private int count = 0;
     Animator anima;
-    string abareruStr="Abare";
-    string attackStr= "Attack";
-    string attack2Str= "Attack2";
-    string breakStr= "Break";
-    float time=0;
-    float limit;
+    string DamageStr="Damage";
     // Start is called before the first frame update
     void Start()
     {
         anima = GetComponent<Animator>();
-        setLimit();
+        tentaPos = GameObject.Find("TentaPos").transform.position;
+        tentaPos = GameObject.Find("MushPos").transform.position;
     }
 
     private void Update()
     {
-        time += Time.deltaTime;
-        if (time > limit)
-        {
-            float x = Random.Range(0, 3);
-            switch (x)
-            {
-                case 0:
-                    Attack();
-                    break;
-                case 1:
-                    Attack2();
-                    break;
-                case 2:
-                    Abare();
-                    break;
-            }
-            setLimit();
-        }
+
         if (count >= 2)
         {
             bigSc.Erase();
@@ -53,26 +34,38 @@ public class BIGEnemyAnima : MonoBehaviour
     }
     public void Break()
     {
-        //bigSc.Spawn(Enemys[count]);
-        anima.SetTrigger(breakStr);
         count++;
-    }
-    private void setLimit()
-    {
-        limit = Random.Range(5, 10);
-        time = 0;
-            }
+        anima.SetTrigger(DamageStr);
 
-    public void Attack()
-    {
-        anima.SetTrigger(attackStr);
     }
-    public void Attack2()
+    public void Damage()
     {
-        anima.SetTrigger(attack2Str);
+        anima.SetTrigger(DamageStr);
+        //anima.SetTrigger(abareruStr);
     }
-    public void Abare()
+
+    public void fast()
     {
-        anima.SetTrigger(abareruStr);
+        Instantiate(tentacle, tentaPos, Quaternion.identity);
+    }
+    public void second()
+    {
+        Instantiate(mush, mushPos, Quaternion.identity);
+    }
+    public void thirdAttack()
+    {
+        third.Play();
+    }
+    public void thirdAttackStop()
+    {
+        third.Stop();
+    }
+    public void forthAttack()
+    {
+        forth.Play();
+    }
+    public void forthAttackStop()
+    {
+        forth.Stop();
     }
 }
