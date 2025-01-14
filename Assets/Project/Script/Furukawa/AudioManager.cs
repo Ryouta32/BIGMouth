@@ -21,10 +21,22 @@ public class AudioManager : MonoBehaviour
         source.clip = clip;
         source.Play();
     }
+    public void Play(AudioClip clip)
+    {
+        if (clip == null)
+        {
+            Debug.Log("音源が設定されてないよ");
+            return;
+        }
+        source.PlayOneShot(clip);
+    }
     public void PlayPoint(AudioClip clip,GameObject obj)
     {
         if (clip == null)
+        {
             Debug.Log("音源が設定されてないよ");
+            return;
+        }
         AudioSource audioSource;
         if (!obj.GetComponent<AudioSource>())
             audioSource = obj.AddComponent<AudioSource>();

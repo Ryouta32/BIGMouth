@@ -64,8 +64,6 @@ public class BouSakiScript : MonoBehaviour
         hitpoint = Vector3.zero;
         slider.maxValue = showerLimit;
         showerPoint = showerThreshold;
-        if (clearSC != null)
-            clearSC = GameObject.Find("Clear").GetComponent<GameClearSC>();
     }
 
     void Update()
@@ -282,7 +280,8 @@ public class BouSakiScript : MonoBehaviour
         var sh = psy.shape;
 
         sh.position = pos;
-        if (clear)
+
+        if (clear&&clearSC!=null)
             obj.GetComponent<SuikomiScript>().SetClear(clearSC);
 
     }

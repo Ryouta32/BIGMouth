@@ -68,7 +68,8 @@ public class AudioData : ScriptableObject
     [Tooltip("アナウンス")] public AudioClip announce;
     [Tooltip("あと少し")]public AudioClip littleMore;
     [Tooltip("チュートリアル完了")] public AudioClip TutorialClear;
-
+    [Tooltip("弱点を壊そう！")] public AudioClip weekAnnounce;
+    [Tooltip("びっぐをころせー")] public AudioClip killAnnounce;
     [Header("その他音源")]
     [Tooltip("壁ぶつかり")] public AudioClip wallTackle;
     [Tooltip("壁破壊")] public AudioClip wallBreak;
