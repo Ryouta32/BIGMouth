@@ -66,6 +66,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 350144936158202890, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: brush.brushScale
+      value: 0.045
+      objectReference: {fileID: 0}
     - target: {fileID: 855445050478835581, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: root
       value: 1
@@ -130,6 +134,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 3096932446885246813, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: brush.brushScale
+      value: 0.045
+      objectReference: {fileID: 0}
     - target: {fileID: 3170159017086906852, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -154,9 +162,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 5131795947138114825, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: brush.brushScale
+      value: 0.045
+      objectReference: {fileID: 0}
     - target: {fileID: 5250104015253430578, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253123272913830641, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: brush.brushScale
+      value: 0.045
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826566930030457881, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: brush.brushScale
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: 6419129968482568321, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_TagString
