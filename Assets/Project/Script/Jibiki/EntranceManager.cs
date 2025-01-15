@@ -7,7 +7,6 @@ using UnityEngine;
 public class EntranceManager : MonoBehaviour
 {
     Animator animator;
-
     private void Start()
     {
         animator = gameObject.GetComponent<Animator>();
