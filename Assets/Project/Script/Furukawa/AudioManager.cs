@@ -8,6 +8,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] float BGMvol;
     [SerializeField] float SEvol;
     AudioSource source;
+    AudioClip loopClip;
+    AudioSource loopSouce;
+    int loopCount;
     private void Awake()
     {
         source = GetComponent<AudioSource>();
@@ -55,7 +58,10 @@ public class AudioManager : MonoBehaviour
             audioSource = obj.GetComponent<AudioSource>();
 
         audioSource.volume = manager.SEvol;
-        StartCoroutine( loop(audioSource, count, clip));
+        loopClip = clip;
+        loopCount= count;
+        source = audioSource;
+        StartCoroutine("loop");
     }
 
     public void StopPoint(GameObject obj)
@@ -65,11 +71,11 @@ public class AudioManager : MonoBehaviour
             obj.GetComponent<AudioSource>().Stop();
         }
     }
-    IEnumerator loop(AudioSource souce, int loop, AudioClip clip)
+    IEnumerator loop()
     {
-        for (int i = 0; i < loop; i++)
+        for (int i = 0; i < loopCount; i++)
         {
-            souce.PlayOneShot(clip);
+            source.PlayOneShot(loopClip);
             yield return new WaitWhile(() => source.isPlaying);
         }
     }

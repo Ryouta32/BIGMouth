@@ -55,6 +55,7 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] SpriteRenderer image;
     [SerializeField] Sprite InholeSp;
     [SerializeField] Sprite NoholeSp;
+    [SerializeField] float inHoleTime;
     private float cool;
     [SerializeField] Sprite[] brushPaints;
 
@@ -102,13 +103,6 @@ public class BouSakiScript : MonoBehaviour
                 Inhale();
             }
         }
-        if (OnHale && (OVRInput.GetUp(showerBtn) || Input.GetMouseButtonUp(0)))
-        {
-            UpInhale();
-            image.sprite = NoholeSp;
-
-            cool = coolTime;
-        }
     }
     IEnumerator ShowerTime()
     {
@@ -128,11 +122,13 @@ public class BouSakiScript : MonoBehaviour
     {
         OnHale = true;
         AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, this.gameObject);
+        StartCoroutine("UpInhale");
+        image.sprite = NoholeSp;
+        cool = coolTime;
     }
-    private void UpInhale()
+    IEnumerable UpInhale()
     {
-        if (OnHale == false)
-            return;
+        yield return new WaitForSeconds(inHoleTime);
         OnHale = false;
         GetComponent<AudioSource>().Stop();
     }
