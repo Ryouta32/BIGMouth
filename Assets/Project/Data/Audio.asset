@@ -41,6 +41,7 @@ MonoBehaviour:
   Bbutton: {fileID: 0}
   systemStage: {fileID: 0}
   systemPointer: {fileID: 0}
+  sippai: {fileID: 8300000, guid: 108826e7958153f4b9a57d8d12b9c0f4, type: 3}
   mainBGM: {fileID: 0}
   tutorialBGM: {fileID: 8300000, guid: 34f43f375e7308c42b790904a013b50a, type: 3}
   clearBGM: {fileID: 8300000, guid: 396202f5a37860d44bcd8bae63cd2eaa, type: 3}
@@ -58,4 +59,5 @@ MonoBehaviour:
   killAnnounce: {fileID: 8300000, guid: deced1c5a2907d745acb4b2cd10004fc, type: 3}
   wallTackle: {fileID: 0}
   wallBreak: {fileID: 0}
+  tutorialSippai: {fileID: 8300000, guid: f7537258beba860449ab19c427a8d8fd, type: 3}
   debug: {fileID: 8300000, guid: 74b0974267f046d47abd1a7eebacb201, type: 3}

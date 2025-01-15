@@ -5,11 +5,15 @@ public class tutorialScript : MonoBehaviour
 {
     [SerializeField] GameObject fastBeta;
     [SerializeField] SceneName.sceneName sceneName;
+    [SerializeField] Animator UIanima;
+    [SerializeField] TutorialUIScript uIScript;
     //[SerializeField] GameObject Timeline;
     GameObject obj;
     AudioSource source;
     bool isAudio = true;
     bool isClear=false;
+    bool isRetry = false;
+    bool uianima = false;
     void Start()
     {
         //Timeline.SetActive(false);
@@ -27,8 +31,8 @@ public class tutorialScript : MonoBehaviour
                 source.Stop();
                 Play();
                 //CLEAR();
-                if (Input.GetKeyDown(KeyCode.LeftShift))
-                    CLEAR();
+                //if (Input.GetKeyDown(KeyCode.LeftShift))
+                    //CLEAR();
             }
         }else
         if(!source.isPlaying && isAudio)
@@ -40,6 +44,15 @@ public class tutorialScript : MonoBehaviour
                 Destroy(obj);
             Destroy(gameObject);
         }
+
+        if (isRetry && !source.isPlaying&&uianima)
+        {
+            isRetry = false;
+            obj = Instantiate(fastBeta, transform.position, Quaternion.identity);
+            obj.GetComponent<TutorialEnemy>().SetTutorial(this);
+            source.clip = AudioManager.manager.data.announce;
+        }
+
     }
     public void Play()
     {
@@ -48,9 +61,13 @@ public class tutorialScript : MonoBehaviour
     }
     public void Retry()
     {
-        obj = Instantiate(fastBeta, transform.position, Quaternion.identity);
-        obj.GetComponent<TutorialEnemy>().SetTutorial(this);
-        source.clip = AudioManager.manager.data.announce;
+        isRetry = true;
+        UIanima.gameObject.SetActive(true);
+        uIScript.Retry();
+    }
+    public void SetState(tutorialUIState state)
+    {
+        uIScript.SetState(state);
     }
     public void CLEAR()
     {
@@ -60,6 +77,6 @@ public class tutorialScript : MonoBehaviour
         isAudio = true;
         //Timeline.SetActive(true);
         isClear = true;
-
     }
+    public void setanima(bool a) => uianima = a;
 }
