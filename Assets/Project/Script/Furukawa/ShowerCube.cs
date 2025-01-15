@@ -57,27 +57,4 @@ public class ShowerCube : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter(Collider col)
-    {
-        PaintManager paintManager = new PaintManager();
-        if (col.gameObject.GetComponent<InkCanvas>())
-        {
-            switch (col.transform.tag)
-            {
-                case "Dragon":
-                    paintManager.Paint(col, useMethodType, !erase, brush, transform, true, col.transform.tag);
-                    break;
-                case "Wall":
-                    paintManager.Paint(col, useMethodType, erase, brush, transform, false, col.transform.tag);
-                    Destroy(gameObject);
-                    break;
-                //ここに壁を修復するやつかく当たったタグがよこかべだったら当たったオブジェクトのメッシュレンダラーを表示
-                case "yokokabe":
-                    GameObject clone = Instantiate(col.gameObject, col.gameObject.transform.position, Quaternion.identity);
-                    clone.GetComponent<MeshRenderer>().material = m;
-                    //pieceManager.PieceChildren.Add(clone.transform); // GetChild()で子オブジェクトを取得
-                    break;
-            }
-        }
-    }
 }
