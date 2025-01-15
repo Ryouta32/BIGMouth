@@ -1504,7 +1504,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.01}
+  m_LocalScale: {x: 1, y: 1, z: 0.010000001}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7027861140733532373}
@@ -1987,7 +1987,6 @@ MonoBehaviour:
   waittime: 4
   destroytime: 2
   beta: {fileID: 0}
-  FailCanvas: {fileID: 0}
   PieceChildren: []
   childFlag: 0
   fallcount: 0
@@ -21661,10 +21660,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6603425783505209073}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6463892256341695477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25691,7 +25690,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6306165986085046434}
   m_Father: {fileID: 6463892256341695477}

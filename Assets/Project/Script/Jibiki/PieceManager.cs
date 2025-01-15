@@ -24,6 +24,8 @@ public class PieceManager : MonoBehaviour
     [Tooltip("生成するベタ")]
     [SerializeField] GameObject beta;
 
+    Animation Fadeanim;
+
     Image UI_HP;
 
     //ピースの親オブジェクト
@@ -47,6 +49,10 @@ public class PieceManager : MonoBehaviour
     {
         childFlag = true;
         UI_HP = GameObject.Find("HP").GetComponent<Image>();
+        if(GameObject.Find("RedFade"))
+        {
+            Fadeanim = GameObject.Find("RedFade").GetComponent<Animation>();
+        }
         cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
         PieceParent = this.gameObject;
         //リスト追加
@@ -155,9 +161,10 @@ public class PieceManager : MonoBehaviour
                     count++;
 
                     //警告音鳴らす
-                    if (piececount / 2 > PieceChildren.Count && count == fallcount)
+                    if (UI_HP.fillAmount < 0.5 && count == fallcount)
                     {
                         AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
+                        Fadeanim.Play("RedFade");
                     }
 
                     if (beta != null && count == fallcount)
@@ -199,9 +206,15 @@ public class PieceManager : MonoBehaviour
                     UI_HP.fillAmount = PieceChildren.Count / piececount;
                     if (PieceChildren.Count <= 0 && childFlag)
                     {
+                        AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject, 5);
+
                         childFlag = false;
                         cc.Phase[0] = false;
                         cc.Phase[2] = true;
+                    }
+                    else if(PieceChildren.Count <= 0)
+                    {
+                        Fadeanim.Play("RedFade");
                     }
                 }
             }

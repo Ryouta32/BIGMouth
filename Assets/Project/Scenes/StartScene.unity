@@ -1311,7 +1311,7 @@ PrefabInstance:
       objectReference: {fileID: 5657038544419831093, guid: 411591a27a4a4a249a5b1ea888b9deb2, type: 3}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.size
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[0].Prefab
@@ -1343,7 +1343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[2].ClassificationLabel
-      value: LAMP
+      value: TABLE
       objectReference: {fileID: 0}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[3].ClassificationLabel
@@ -1363,7 +1363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[2]._editorClassificationIndex
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[3]._editorClassificationIndex
@@ -2230,6 +2230,7 @@ MonoBehaviour:
   Panel:
   - {fileID: 2309856849908597991, guid: dfe960f838ed7594e9db19ca760a9f0d, type: 3}
   Tutorial: {fileID: 1520319377}
+  Ornament: {fileID: 0}
 --- !u!4 &2131632772
 Transform:
   m_ObjectHideFlags: 0
