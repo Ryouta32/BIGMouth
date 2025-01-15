@@ -16,6 +16,8 @@ public class TutorialSpawn : MonoBehaviour
 
     [SerializeField] GameObject Tutorial;
 
+    [SerializeField] GameObject Ornament;
+
     OVRSceneManager ovrSceneManager;
     OVRScenePlane floor;
 
@@ -61,6 +63,10 @@ public class TutorialSpawn : MonoBehaviour
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y - 0.4f, classification.transform.position.z);
                 Tutorial.transform.position = pos;
+            }
+            if (classification.Contains(OVRSceneManager.Classification.WallArt))
+            {
+                Instantiate(Ornament, classification.transform.position, Quaternion.Euler(0, 90, 0));
             }
         }
     }
