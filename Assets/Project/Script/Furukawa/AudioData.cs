@@ -51,6 +51,7 @@ public class AudioData : ScriptableObject
     [Tooltip("Bぼたん")] public AudioClip Bbutton;
     [Tooltip("stage")] public AudioClip systemStage;
     [Tooltip("pointer")] public AudioClip systemPointer;
+    [Tooltip("失敗")] public AudioClip sippai;
 
     [Header("BGM")]
     [Tooltip("MainBGM")] public AudioClip mainBGM;
@@ -73,6 +74,7 @@ public class AudioData : ScriptableObject
     [Header("その他音源")]
     [Tooltip("壁ぶつかり")] public AudioClip wallTackle;
     [Tooltip("壁破壊")] public AudioClip wallBreak;
+    [Tooltip("チュートリアル失敗")] public AudioClip tutorialSippai;
     [Tooltip("デバッグ用")] public AudioClip debug;
 
 }

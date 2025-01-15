@@ -52,7 +52,8 @@ public class TutorialEnemy : MonoBehaviour
                 //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
                 tutorialSC.Retry();
                 anim.SetFloat("Speed", 1);
-                Debug.Log("しっぱい！");
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.tutorialSippai,tutorialSC.gameObject);
+                AudioManager.manager.Play(AudioManager.manager.data.sippai);
                 Destroy(this.gameObject);
             }
             else
@@ -60,6 +61,8 @@ public class TutorialEnemy : MonoBehaviour
                 data.sutnCount--;
             }
 
+            //UIをスタン状態にする
+            tutorialSC.SetState(tutorialUIState.stun);
         }
     }
     IEnumerator Stun()//スタン中の処理
@@ -68,6 +71,8 @@ public class TutorialEnemy : MonoBehaviour
         stunEffect.SetActive(true);
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject);
 
+        //UIキル状態にする
+        tutorialSC.SetState(tutorialUIState.kill);
         yield return new WaitForSeconds(1.0f);
         SetState(EnemyData.State.stun);
         yield return new WaitForSeconds(data.sutnTime );
@@ -75,6 +80,8 @@ public class TutorialEnemy : MonoBehaviour
         SetState(EnemyData.State.general);
         stunEffect.SetActive(false);
         anim.SetFloat("Speed", 1);
+
+        tutorialSC.SetState(tutorialUIState.start);
     }
     private void OnCollisionExit(Collision collision)
     {
