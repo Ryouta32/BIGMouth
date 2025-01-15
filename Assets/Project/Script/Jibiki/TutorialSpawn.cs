@@ -54,11 +54,11 @@ public class TutorialSpawn : MonoBehaviour
                 Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
                 Instantiate(Case2, pos, Quaternion.identity);
             }
-            if (classification.Contains(OVRSceneManager.Classification.WallArt))
-            {
-                Instantiate(Panel[i], classification.transform.position, Quaternion.identity);
-                i++;
-            }
+            //if (classification.Contains(OVRSceneManager.Classification.WallArt))
+            //{
+            //    Instantiate(Panel[i], classification.transform.position, Quaternion.identity);
+            //    i++;
+            //}
             if (classification.Contains(OVRSceneManager.Classification.Table))
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y - 0.4f, classification.transform.position.z);

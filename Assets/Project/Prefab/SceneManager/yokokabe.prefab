@@ -1916,7 +1916,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7631464117106282272}
-  - component: {fileID: 8561543433964676263}
+  - component: {fileID: 3658908216595327313}
   m_Layer: 0
   m_Name: piece
   m_TagString: Untagged
@@ -1969,7 +1969,7 @@ Transform:
   - {fileID: 6196052645685064008}
   m_Father: {fileID: 6306165986085046434}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8561543433964676263
+--- !u!114 &3658908216595327313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1978,18 +1978,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 979084303639133168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d16b4a8d17ce60f43b6db8eef4459e47, type: 3}
+  m_Script: {fileID: 11500000, guid: 200fb3cf71c290945b1696c84612d85f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PieceMaterial: {fileID: 2100000, guid: 418d04e4deb31a14c95e5852c2527f01, type: 2}
   power: 1
-  StartTime: 1
-  waittime: 4
+  StartTime: 5
+  waittime: 8
   destroytime: 2
-  beta: {fileID: 0}
-  PieceChildren: []
-  childFlag: 0
-  fallcount: 0
 --- !u!1 &990284251933541324
 GameObject:
   m_ObjectHideFlags: 0
