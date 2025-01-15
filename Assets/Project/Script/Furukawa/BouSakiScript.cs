@@ -55,6 +55,7 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] SpriteRenderer image;
     [SerializeField] Sprite InholeSp;
     [SerializeField] Sprite NoholeSp;
+    [SerializeField] float inHoleTime;
     private float cool;
     [SerializeField] Sprite[] brushPaints;
 
@@ -68,6 +69,7 @@ public class BouSakiScript : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(GetCool());
         if (showerPoint >= showerLimit)
             showerPoint = showerLimit;
         slider.value = showerPoint;
@@ -90,6 +92,7 @@ public class BouSakiScript : MonoBehaviour
         {
             ShowerStop();
         }
+
         if (cool > 0)
             cool -= Time.deltaTime;
         else
@@ -97,17 +100,11 @@ public class BouSakiScript : MonoBehaviour
             cool = 0;
             image.sprite = InholeSp;
             //s\吸い込み判定
-            if (!OnHale && OVRInput.Get(showerBtn) || Input.GetMouseButton(0))
+            if (!OnHale && OVRInput.Get(showerBtn) || !OnHale&& Input.GetMouseButton(0))
             {
+                OnHale = true;
                 Inhale();
             }
-        }
-        if (OnHale && (OVRInput.GetUp(showerBtn) || Input.GetMouseButtonUp(0)))
-        {
-            UpInhale();
-            image.sprite = NoholeSp;
-
-            cool = coolTime;
         }
     }
     IEnumerator ShowerTime()
@@ -126,15 +123,16 @@ public class BouSakiScript : MonoBehaviour
     }
     private void Inhale()
     {
-        OnHale = true;
         AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, this.gameObject);
+        StartCoroutine("UpInhale");
     }
-    private void UpInhale()
+    IEnumerator UpInhale()
     {
-        if (OnHale == false)
-            return;
+        yield return new WaitForSeconds(inHoleTime);
         OnHale = false;
         GetComponent<AudioSource>().Stop();
+        image.sprite = NoholeSp;
+        cool = coolTime;
     }
 
     private void OnCollisionStay(Collision other)
@@ -291,4 +289,5 @@ public class BouSakiScript : MonoBehaviour
     public bool GetInHale() => OnHale;
     public float GetInHaleSpeed() => inHaleSpeed;
     public void AddShowerPoint(float x) => showerPoint += x;
+    public float GetCool() =>cool / coolTime;
 }

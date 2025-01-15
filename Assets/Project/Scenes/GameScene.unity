@@ -596,10 +596,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 558707988}
     - target: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
-      propertyPath: OnHale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: clearSC
       value: 
       objectReference: {fileID: 500333606}
