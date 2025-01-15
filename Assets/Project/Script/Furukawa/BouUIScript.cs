@@ -24,7 +24,7 @@ public class BouUIScript : MonoBehaviour
         if (saki.GetCool() > 0)
         {
             for (int i = 0; i < suikomis.Length; i++)
-                suikomis[i].color = new Color(suikomis[i].color.r, suikomis[i].color.g, suikomis[i].color.b, 0.5f);
+                suikomis[i].color = new Color(suikomis[i].color.r, suikomis[i].color.g, suikomis[i].color.b, 0.3f);
             on = false;
         }
         else if(!on)
