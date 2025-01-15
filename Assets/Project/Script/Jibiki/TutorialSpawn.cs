@@ -66,7 +66,7 @@ public class TutorialSpawn : MonoBehaviour
             }
             if (classification.Contains(OVRSceneManager.Classification.WallArt))
             {
-                Instantiate(Ornament, classification.transform.position, Quaternion.identity);
+                Instantiate(Ornament, classification.transform.position, Quaternion.Euler(0, 90, 0));
             }
         }
     }
