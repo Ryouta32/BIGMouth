@@ -28,7 +28,10 @@ public class ShowerCube : MonoBehaviour
 
         if (col.gameObject.CompareTag("yokokabe"))
         {
-            pieceManager = col.transform.parent.GetComponent<PieceManager>();
+            if(col.transform.parent.GetComponent<PieceManager>())
+            {
+                pieceManager = col.transform.parent.GetComponent<PieceManager>();
+            }
 
             //ここに壁を修復するやつかく当たったタグがよこかべだったら当たったオブジェクトのメッシュレンダラーを表示
             if (col.gameObject.transform.childCount == 0)
@@ -40,7 +43,7 @@ public class ShowerCube : MonoBehaviour
                 anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Animation/Scale");
                 if(anim.runtimeAnimatorController == null)
                 {
-                    Debug.Log("ないーーーーーー");
+                    //Debug.Log("ないーーーーーー");
                 }
                 clone.GetComponent<MeshRenderer>().material = m;
 
@@ -49,8 +52,8 @@ public class ShowerCube : MonoBehaviour
                 meshcol.isTrigger = true;
                 clone.transform.parent = col.transform;
                 clone.tag = "Untagged";
-                //clone.transform.localScale = new Vector3(1, 1, 1);
                 pieceManager.AddItem(clone.transform);
+                HPManager.hpPiece += 1;
             }
         }
         if (col.gameObject.GetComponent<InkCanvas>())
