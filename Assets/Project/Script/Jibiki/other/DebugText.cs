@@ -17,13 +17,15 @@ public class Text_Debug : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        obj = GameObject.Find("yukaCollider");
+
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
         foreach (var classification in classifications)
         {
             if (classification.Contains(OVRSceneManager.Classification.Floor))
             {
-                textText.text = classification.transform.localScale.ToString();
+                textText.text = obj.transform.localScale.ToString();
             }
         }
     }
