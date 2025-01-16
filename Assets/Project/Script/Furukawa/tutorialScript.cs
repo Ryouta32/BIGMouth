@@ -54,7 +54,7 @@ public class tutorialScript : MonoBehaviour
         if (isRetry && !source.isPlaying&&uianima)
         {
             isRetry = false;
-            obj = Instantiate(fastBeta, transform.position, Quaternion.identity);
+            //obj = Instantiate(fastBeta, transform.position, Quaternion.identity);
             obj.GetComponent<TutorialEnemy>().SetTutorial(this);
             source.clip = AudioManager.manager.data.announce;
         }
@@ -62,7 +62,7 @@ public class tutorialScript : MonoBehaviour
     }
     public void Play()
     {
-        obj = Instantiate(fastBeta,transform.position, Quaternion.identity);
+        obj = Instantiate(fastBeta,fastPos, Quaternion.identity);
         obj.GetComponent<TutorialEnemy>().SetTutorial(this);
         uIScript.gameObject.SetActive(false);
     }
@@ -88,4 +88,5 @@ public class tutorialScript : MonoBehaviour
     public void setanima(bool a) => uianima = a;
     public void setStageAnima(Animator animator) => StageAnima = animator;
     public void SetObj(Vector3 pos) => fastPos = pos;
+    public Vector3 GetPos() => fastPos;
 }

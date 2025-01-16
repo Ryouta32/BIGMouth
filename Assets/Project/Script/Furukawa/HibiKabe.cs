@@ -5,20 +5,21 @@ using UnityEngine;
 public class HibiKabe : MonoBehaviour
 {
     [SerializeField] Material[] materials;
+    OVRSceneManager ovrSceneManager;
     int val=0;
     MeshRenderer meshRenderer;
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        onAnchorsLoaded();
-    }
+        ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
 
-    private void Update()
-    {
-        transform.position += new Vector3( 0.001f,0,0.003f);
+        //ルーム設定の読み込みが成功した時のコールバック登録
+        ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
     }
     public void SetHibi()
     {
+        if (val == 2)
+            Destroy(gameObject);
         meshRenderer.material=materials[val];
         val ++ ;
     }
@@ -34,7 +35,7 @@ public class HibiKabe : MonoBehaviour
         {
             if (classification.Contains(OVRSceneManager.Classification.WallArt))
             {
-                transform.position = new Vector3(classification.transform.position.x-5,classification.transform.position.y, classification.transform.position.z);
+                transform.position = new Vector3(classification.transform.position.x,classification.transform.position.y, classification.transform.position.z-0.3f);
             }
         }
     }

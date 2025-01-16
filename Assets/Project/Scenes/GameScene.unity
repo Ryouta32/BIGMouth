@@ -1353,7 +1353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8546749700325328342, guid: 330dcc9b606bf30489f1da6ea6a68b8f, type: 3}
       propertyPath: m_SceneBindings.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8546749700325328342, guid: 330dcc9b606bf30489f1da6ea6a68b8f, type: 3}
       propertyPath: m_SceneBindings.Array.data[3].key
@@ -1363,6 +1363,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[4].key
       value: 
       objectReference: {fileID: -2839745365629783285, guid: 8b5e672cd4bac354fb0df6606ebb5437, type: 2}
+    - target: {fileID: 8546749700325328342, guid: 330dcc9b606bf30489f1da6ea6a68b8f, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].key
+      value: 
+      objectReference: {fileID: 6925411102302394810, guid: 8b5e672cd4bac354fb0df6606ebb5437, type: 2}
     - target: {fileID: 8546749700325328342, guid: 330dcc9b606bf30489f1da6ea6a68b8f, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
@@ -1377,6 +1381,10 @@ PrefabInstance:
       objectReference: {fileID: 5555395803385110254}
     - target: {fileID: 8546749700325328342, guid: 330dcc9b606bf30489f1da6ea6a68b8f, type: 3}
       propertyPath: m_SceneBindings.Array.data[4].value
+      value: 
+      objectReference: {fileID: 5555395803385110254}
+    - target: {fileID: 8546749700325328342, guid: 330dcc9b606bf30489f1da6ea6a68b8f, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].value
       value: 
       objectReference: {fileID: 5555395803385110254}
     - target: {fileID: 8702220085567163595, guid: 330dcc9b606bf30489f1da6ea6a68b8f, type: 3}
@@ -1521,6 +1529,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 295393890268905315, guid: 31f2244546dcf5440a3a3973b914ab8b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.47674
+      objectReference: {fileID: 0}
+    - target: {fileID: 295393890268905315, guid: 31f2244546dcf5440a3a3973b914ab8b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.47674
+      objectReference: {fileID: 0}
+    - target: {fileID: 295393890268905315, guid: 31f2244546dcf5440a3a3973b914ab8b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.47674
+      objectReference: {fileID: 0}
+    - target: {fileID: 295393890268905315, guid: 31f2244546dcf5440a3a3973b914ab8b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.865767
       objectReference: {fileID: 0}
@@ -1564,6 +1584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HIbikabe
       objectReference: {fileID: 0}
+    - target: {fileID: 3830879109385605857, guid: 31f2244546dcf5440a3a3973b914ab8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f139a9bff2d864949b3ba1048442f550, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

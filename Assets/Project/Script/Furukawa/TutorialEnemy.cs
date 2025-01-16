@@ -8,12 +8,12 @@ public class TutorialEnemy : MonoBehaviour
     [SerializeField] GameObject DestroyEffect;
     [SerializeField] public EnemyData _data;
     [SerializeField] GameObject damageEffect;
+    [SerializeField] bool SetOff;
     public BouSakiScript bouSaki;
     private EnemyData data;
     private tutorialScript tutorialSC;
     bool inHale;
     Animator anim;
-    OVRSceneManager ovrSceneManager;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +23,9 @@ public class TutorialEnemy : MonoBehaviour
         tutorialSC = GameObject.Find("tutorial").GetComponent<tutorialScript>();
         //anim = gameObject.GetComponent<Animator>();
 
-        ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
-
-        //ルーム設定の読み込みが成功した時のコールバック登録
-        ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
         tutorialSC.SetObj(transform.position);
+        if (SetOff)
+            Destroy(gameObject);
     }
 
     void Update()
@@ -77,10 +75,7 @@ public class TutorialEnemy : MonoBehaviour
     {
         //anim.SetFloat("Speed", 0);
         stunEffect.SetActive(true);
-        DebugText.LogText.Log("すたん");
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject);
-
-        DebugText.LogText.Log("すたん");
         //UIキル状態にする
         tutorialSC.SetState(tutorialUIState.kill);
         yield return new WaitForSeconds(1.0f);
@@ -109,22 +104,6 @@ public class TutorialEnemy : MonoBehaviour
         //Destroy(DestroyEffect, 5);
         if (!inHale)
             Instantiate(DestroyEffect, transform.position, Quaternion.identity);
-    }
-    void onAnchorsLoaded()
-    {
-        //OVRSceneRoomの参照取得
-        OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
-        //dragonprefab.transform.position = new Vector3(CenterCamera.transform.position.x, floor.transform.position.y + 0.4f, CenterCamera.transform.position.z + 5);
-
-        var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
-
-        foreach (var classification in classifications)
-        {
-            if (classification.Contains(OVRSceneManager.Classification.Table))
-            {
-                transform.position = new Vector3(classification.transform.position.x - 5, classification.transform.position.y, classification.transform.position.z);
-            }
-        }
     }
     public void StunReturn() => data.sutnCount = _data.sutnCount;
 
