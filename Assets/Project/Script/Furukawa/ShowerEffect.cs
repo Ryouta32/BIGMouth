@@ -4,13 +4,14 @@ using Es.InkPainter;
 
 public class ShowerEffect : MonoBehaviour
 {
-    [SerializeField] GameObject PaintObj;
+    [SerializeField] GameObject[] PaintObj;
     private ParticleSystem p_RefParticle;
     [SerializeField, Tooltip("ヒット位置の通知")]
     private List<ParticleCollisionEvent> p_CollisionEventList;
 
     [SerializeField] int fallcount;
     int count;
+    int i = 0;
     private void Start()
     {
         p_RefParticle = GetComponent<ParticleSystem>();
@@ -29,8 +30,19 @@ public class ShowerEffect : MonoBehaviour
             {
                 Vector3 pos = collisionEvent.intersection;
                 //Debug.Log("Particle Hit : object name = " + other.name + ", position = " + pos.ToString());
-
-                Instantiate(PaintObj, pos, Quaternion.identity);
+                if(PaintObj.Length == 1)
+                {
+                    Instantiate(PaintObj[0], pos, Quaternion.identity);
+                }
+                else
+                {
+                    if (i > 2)
+                    {
+                        i = 0;
+                    }
+                    Instantiate(PaintObj[i], pos, Quaternion.identity);
+                    i++;
+                }
                 count++;
 
                 if (gameObject.tag == "Normal" && count == fallcount)

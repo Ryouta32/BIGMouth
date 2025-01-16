@@ -18,6 +18,9 @@ public class PieceManager : MonoBehaviour
     [Tooltip("オブジェクトを消す秒数")]
     [SerializeField] float destroytime;
 
+    //ベタが出てくるタイミング
+    [SerializeField] int fallcount;
+
     [Tooltip("生成するベタ")]
     [SerializeField] GameObject beta;
 
@@ -37,13 +40,9 @@ public class PieceManager : MonoBehaviour
     //UIの最大値
     float piececount;
 
-    //ベタが出てくるタイミング
-    [SerializeField] int fallcount;
-
-    int count;
-
     CanvasChange cc;
 
+    float count;
 
     void Start()
     {
@@ -65,6 +64,10 @@ public class PieceManager : MonoBehaviour
 
         StartCoroutine("FallPiece");
     }
+    private void Update()
+    {
+        count = waittime - BetaText.betacount;
+    }
 
     IEnumerator FallPiece()
     {
@@ -72,7 +75,7 @@ public class PieceManager : MonoBehaviour
 
         while (true)
         {
-            yield return new WaitForSeconds(waittime);
+            yield return new WaitForSeconds(count);
             Rigidbody obj;
 
             int rnd = Random.Range(0, PieceChildren.Count);

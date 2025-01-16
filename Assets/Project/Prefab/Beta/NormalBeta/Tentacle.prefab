@@ -32,7 +32,6 @@ Transform:
   m_Children:
   - {fileID: 3119698052789722185}
   - {fileID: 7525042778838316063}
-  - {fileID: 3835238525642813117}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8443009577141216268
@@ -47,37 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab3ec25e32ce0c4380714d75e39cb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &7917022711925531058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3835238525642813117}
-  m_Layer: 0
-  m_Name: IMG_1304
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &3835238525642813117
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7917022711925531058}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8333750449066432663}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1451913172184735388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -271,6 +239,10 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8811256372356373402, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811256372356373402, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -388,10 +360,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 1011193144837056810, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2008615490453199300, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: anim
       value: 
       objectReference: {fileID: 6512058274941374761}
+    - target: {fileID: 2571756645001665085, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2631702228690576830, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -484,10 +464,42 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 4928273645375203604, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928273645375203604, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928273645375203604, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Size.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928273645375203604, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5626300641021014046, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: anim
       value: 
       objectReference: {fileID: 6512058274941374761}
+    - target: {fileID: 6159753041618671293, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159753041618671293, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159753041618671293, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Size.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159753041618671293, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6810301872186345964, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: anim
       value: 
@@ -495,6 +507,26 @@ PrefabInstance:
     - target: {fileID: 6892400852309836476, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447083038400465662, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447083038400465662, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447083038400465662, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_Size.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447083038400465662, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877304828389710927, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7941634546569034295, guid: bf636c51e0406ef4399c50f9553599e5, type: 3}
       propertyPath: m_TagString
@@ -552,7 +584,7 @@ MonoBehaviour:
     brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushNormalTexture: {fileID: 0}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.06
+    brushScale: 0.1
     rotateAngle: 0
     brushNormalBlend: 0
     brushHeightBlend: 0
@@ -584,7 +616,7 @@ MonoBehaviour:
     brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushNormalTexture: {fileID: 0}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.045
+    brushScale: 0.1
     rotateAngle: 0
     brushNormalBlend: 0
     brushHeightBlend: 0
@@ -626,7 +658,7 @@ MonoBehaviour:
     brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushNormalTexture: {fileID: 0}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.045
+    brushScale: 0.1
     rotateAngle: 0
     brushNormalBlend: 0
     brushHeightBlend: 0

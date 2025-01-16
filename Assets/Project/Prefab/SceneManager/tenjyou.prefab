@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 398450158840157092}
   - component: {fileID: 4477223036650365225}
   m_Layer: 9
-  m_Name: Collider
+  m_Name: tenjyouCollider
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,7 +332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: waittime
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: StartTime
@@ -348,7 +348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1008043084357224306, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: destroytime
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1115680819190938557, guid: 32e2ef18967de4342a070ac9c1f18946, type: 3}
       propertyPath: m_VersionIndex

@@ -7,12 +7,11 @@ using TMPro;
 public class Text_Debug : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textText;
-    
+    GameObject obj;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -22,7 +21,7 @@ public class Text_Debug : MonoBehaviour
 
         foreach (var classification in classifications)
         {
-            if (classification.Contains(OVRSceneManager.Classification.WallFace))
+            if (classification.Contains(OVRSceneManager.Classification.Floor))
             {
                 textText.text = classification.transform.localScale.ToString();
             }
