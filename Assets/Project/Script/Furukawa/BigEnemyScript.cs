@@ -8,24 +8,27 @@ public class BigEnemyScript : MonoBehaviour
     [Tooltip("弱点こする回数")][SerializeField] public int rubCount;
     [Tooltip("弱点から出る汚れの数")][SerializeField] public int dirtCount;
     [Tooltip("何回消せばよいか")][SerializeField] public int erasedCount;
+    [SerializeField] GameObject LookOnObj;
     [SerializeField] EnemyData _data;
     [SerializeField] GameObject Tentacle;
     [SerializeField] GameObject Mush;
     [SerializeField] BIGEnemyAnima anima;
     [SerializeField] GameObject stunEffect;
+    [SerializeField] GameObject HitObject;
     public BouSakiScript bouSaki;
     [SerializeField] Renderer mainRender;
     Material mat;
     GameClearSC clearSC;
-    private EnemyData data;
+    public EnemyData data;
     private bool erase;
     float hagesisa = 0;
     private void Start()
     {
-        clearSC = GameObject.Find("Clear").GetComponent<GameClearSC>();
-        data = new EnemyData(_data);
-        bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
         mat = mainRender.material;
+        data = new EnemyData(_data);
+        clearSC = GameObject.Find("Clear").GetComponent<GameClearSC>();
+        bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
+        LookOnObj.SetActive(false);
     }
     private void Update()
     {
@@ -33,6 +36,7 @@ public class BigEnemyScript : MonoBehaviour
         transform.localEulerAngles = new Vector3(0, 0, 0);
         if (erase)
         {
+            LookOnObj.SetActive(true);
             Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
         if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
         {
@@ -45,26 +49,6 @@ public class BigEnemyScript : MonoBehaviour
         }
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (erase)
-        {
-            if (collision.gameObject.tag == "Brush")
-            {
-                data.sutnCount--;
-                AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, this.gameObject);
-                hagesisa += 1f;
-                mat.SetFloat("_hagesisa", hagesisa);
-                
-                if (data.sutnCount <= 0)
-                {
-                    //クリア演出
-                    bouSaki.StartOfSuction(transform.position, true);
-                    //clearSC.Clear();
-                }
-            }
-        }
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (erase)
@@ -73,6 +57,8 @@ public class BigEnemyScript : MonoBehaviour
             {
                 data.sutnCount--;
                 hagesisa += 1f;
+                Instantiate(HitObject, transform.position, Quaternion.identity);
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, gameObject);
                 mat.SetFloat("_hagesisa", hagesisa);
                 if (data.state==EnemyData.State.stun)
                 {

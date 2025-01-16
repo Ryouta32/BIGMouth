@@ -17,6 +17,7 @@ public class TutorialSpawn : MonoBehaviour
     [SerializeField] GameObject Tutorial;
 
     [SerializeField] GameObject Ornament;
+    [SerializeField] GameObject Main;
 
     OVRSceneManager ovrSceneManager;
     OVRScenePlane floor;
@@ -44,30 +45,32 @@ public class TutorialSpawn : MonoBehaviour
 
         foreach (var classification in classifications)
         {
-            if (classification.Contains(OVRSceneManager.Classification.Bed))
-            {
-                Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
-                Instantiate(Case, pos, Quaternion.identity);
-            }
-            if (classification.Contains(OVRSceneManager.Classification.Lamp))
-            {
-                Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
-                Instantiate(Case2, pos, Quaternion.identity);
-            }
-            //if (classification.Contains(OVRSceneManager.Classification.WallArt))
+            //if (classification.Contains(OVRSceneManager.Classification.Bed))
             //{
-            //    Instantiate(Panel[i], classification.transform.position, Quaternion.identity);
-            //    i++;
+            //    Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
+            //    Instantiate(Case, pos, Quaternion.identity);
             //}
-            if (classification.Contains(OVRSceneManager.Classification.Table))
-            {
-                Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y - 0.4f, classification.transform.position.z);
-                Tutorial.transform.position = pos;
-            }
+            //if (classification.Contains(OVRSceneManager.Classification.Lamp))
+            //{
+            //    Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
+            //    Instantiate(Case2, pos, Quaternion.identity);
+            //}
             if (classification.Contains(OVRSceneManager.Classification.WallArt))
             {
-                Instantiate(Ornament, classification.transform.position, Quaternion.Euler(0, 90, 0));
+                //Instantiate(Panel[i], classification.transform.position, Quaternion.identity);
+                //i++;
+               GameObject obj = Instantiate(Main, classification.transform.position, Quaternion.identity);
+            obj.transform.localEulerAngles = new Vector3(0,90,0);
             }
+            //    if (classification.Contains(OVRSceneManager.Classification.Table))
+            //    {
+            //        Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y - 0.4f, classification.transform.position.z);
+            //        Tutorial.transform.position = pos;
+            //    }
+            //    if (classification.Contains(OVRSceneManager.Classification.WallArt))
+            //    {
+            //        Instantiate(Ornament, classification.transform.position, Quaternion.Euler(0, 90, 0));
+            //    }
         }
     }
 }
