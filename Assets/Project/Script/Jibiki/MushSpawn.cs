@@ -23,12 +23,6 @@ public class MushSpawn : MonoBehaviour
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
         Fade.SetActive(false);
     }
-
-    private void Update()
-    {
-        floor.transform.position = new Vector3(floor.transform.position.x, posy, floor.transform.position.z);
-    }
-
     void onAnchorsLoaded()
     {
         //OVRSceneRoomの参照取得
@@ -36,6 +30,7 @@ public class MushSpawn : MonoBehaviour
         //床
         floor = sceneRoom.Floor;
         posy = floor.transform.position.y;
+        floor.transform.position = new Vector3(floor.transform.position.x, posy, floor.transform.position.z);
 
         //dragonprefab.transform.position = new Vector3(CenterCamera.transform.position.x, floor.transform.position.y + 0.4f, CenterCamera.transform.position.z + 5);
 
@@ -45,7 +40,7 @@ public class MushSpawn : MonoBehaviour
         {
             if (classification.Contains(OVRSceneManager.Classification.Storage))
             {
-                dragonprefab.transform.position = new Vector3(classification.transform.position.x, posy + 0.5f, classification.transform.position.z + 2f);
+                dragonprefab.transform.position = new Vector3(classification.transform.position.x, posy + 0.7f, classification.transform.position.z + 2f);
 
                 Ray ray = new Ray(transform.position, transform.forward);
                 RaycastHit hit;

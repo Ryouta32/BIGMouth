@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-/* プレイ中の壁が(時間経過)崩れていく挙動 */
+/* プレイ中の天井が(時間経過)崩れていく挙動 */
 
 public class PieceManager : MonoBehaviour
 {
     [Tooltip("崩れる時のマテリアル")]
     [SerializeField] Material PieceMaterial;
-
-    [Tooltip("崩れるときのちから")]
-    [SerializeField] float power;
 
     [Tooltip("開始するまでの秒数")]
     [SerializeField] float StartTime;
@@ -32,95 +29,42 @@ public class PieceManager : MonoBehaviour
     GameObject PieceParent;
 
     //ピースのリスト
-    [HideInInspector]
-    public List<Transform> PieceChildren = new List<Transform>();
+    List<Transform> PieceChildren = new List<Transform>();
 
-    [HideInInspector]
-    public bool childFlag;
+    //ゲームオーバーのフラッグ
+    bool childFlag;
 
+    //UIの最大値
     float piececount;
 
+    //ベタが出てくるタイミング
     [SerializeField] int fallcount;
+
     int count;
+
     CanvasChange cc;
 
 
     void Start()
     {
-        childFlag = true;
-        UI_HP = GameObject.Find("HP").GetComponent<Image>();
-        if(GameObject.Find("RedFade"))
-        {
-            Fadeanim = GameObject.Find("RedFade").GetComponent<Animation>();
-        }
-        cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
         PieceParent = this.gameObject;
+
+        childFlag = true;
+
+        UI_HP = GameObject.Find("HP").GetComponent<Image>();
+        cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
+        Fadeanim = GameObject.Find("RedFade").GetComponent<Animation>();
+
         //リスト追加
         for (int i = 0; i < PieceParent.transform.childCount; i++)
         {
             PieceChildren.Add(PieceParent.transform.GetChild(i).GetChild(0)); // GetChild()で子オブジェクトを取得
             //Debug.Log($"検索方法１： {i} 番目の子供は {PieceChildren[i].name} です");
         }
-        StartCoroutine("FallPiece");
         piececount = PieceChildren.Count;
+
+        StartCoroutine("FallPiece");
     }
-
-    //void FallPiece()
-    //{
-        //Rigidbody obj;
-
-        //int rnd = Random.Range(0, PieceChildren.Count);
-
-        //if (PieceChildren.Count > 0)
-        //{
-        //    obj = PieceChildren[rnd].gameObject.GetComponent<Rigidbody>();
-
-        //    if (!obj)
-        //    {
-        //        //落ちるオブジェクトのリジットボディ取得
-        //        obj = PieceChildren[rnd].gameObject.AddComponent<Rigidbody>();
-        //        obj.isKinematic = true;
-        //    }
-        //    else
-        //    {
-        //        obj.isKinematic = true;
-        //    }
-
-        //    if (obj.isKinematic)
-        //    {
-        //        //キネマティックオフにして重力付ける
-        //        obj.isKinematic = false;
-
-        //        //マテリアルを壁色にする
-        //        PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
-
-        //        //少しちからを入れる
-        //        obj.AddForce(power);
-
-        //        if(beta != null)
-        //        {
-        //            betarb = beta.GetComponent<Rigidbody>();
-        //            Instantiate(beta, PieceChildren[rnd].gameObject.transform.position, Quaternion.Euler(180, 0, 0));
-        //            betarb.AddForce(betapower);
-        //        }
-
-        //        Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
-
-        //        //落ちたオブジェクトはリストから削除
-        //        PieceChildren.Remove(PieceChildren[rnd]);
-        //        Destroy(obj.gameObject, destroytime);
-        //    }
-        //}
-        //else
-        //{
-        //    Debug.Log("やめたーーーーーーーーー");
-        //    //いんぼけやめる
-        //    CancelInvoke();
-
-        //    //ゲームオーバーシーンに行く
-        //    SceneManager.LoadScene("GameOverScene");
-        //}
-    //}
 
     IEnumerator FallPiece()
     {
@@ -156,8 +100,6 @@ public class PieceManager : MonoBehaviour
                     //マテリアルを壁色にする
                     PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
 
-                    //少しちからを入れる
-                    obj.AddForce(transform.up * power, ForceMode.Impulse);
                     count++;
 
                     //警告音鳴らす
@@ -175,42 +117,25 @@ public class PieceManager : MonoBehaviour
                         count = 0;
                     }
 
-                    //Debug.Log("おちたーーーーーーーーーーーーーーー" + PieceChildren[rnd].name);
                     //落ちたオブジェクトはリストから削除
                     PieceChildren.Remove(PieceChildren[rnd]);
-                    //if (gameObject.transform.root.name == "tenjyou")
-                    //{
-                    //    UI_HP.fillAmount = PieceChildren.Count / piececount;
-                    //}
+                    UI_HP.fillAmount = PieceChildren.Count / piececount;
                     Destroy(obj.gameObject, destroytime);
                 }
             }
-            else
-            {
-                //Debug.Log("やめたーーーーーーーーー");
-                //いんぼけやめる
-                CancelInvoke();
-                //if (PieceChildren.Count <= 0 && childFlag)
-                //{
-                //    childFlag = false;
-                //    cc.Phase[0] = false;
-                //    cc.Phase[2] = true;
-                //}
-            }
+
             var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
             foreach (var classification in classifications)
             {
                 if (classification.Contains(OVRSceneManager.Classification.Ceiling))
                 {
-                    UI_HP.fillAmount = PieceChildren.Count / piececount;
                     if (PieceChildren.Count <= 0 && childFlag)
                     {
-                        AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject, 5);
-
                         childFlag = false;
                         cc.Phase[0] = false;
                         cc.Phase[2] = true;
+                        AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject, 5);
                     }
                     else if(PieceChildren.Count <= 0)
                     {
@@ -224,15 +149,5 @@ public class PieceManager : MonoBehaviour
     public void AddItem(Transform item)
     {
         PieceChildren.Add(item);
-    }
-
-    public void RemoveItem(Transform item)
-    {
-        PieceChildren.Remove(item);
-    }
-
-    public void ClearList()
-    {
-        PieceChildren.Clear();
     }
 }

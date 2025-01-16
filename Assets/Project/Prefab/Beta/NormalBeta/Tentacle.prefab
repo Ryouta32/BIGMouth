@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 3119698052789722185}
   - {fileID: 7525042778838316063}
+  - {fileID: 3835238525642813117}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8443009577141216268
@@ -46,6 +47,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab3ec25e32ce0c4380714d75e39cb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7917022711925531058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3835238525642813117}
+  m_Layer: 0
+  m_Name: IMG_1304
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3835238525642813117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7917022711925531058}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8333750449066432663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1451913172184735388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70,6 +102,10 @@ PrefabInstance:
       propertyPath: brush.brushScale
       value: 0.045
       objectReference: {fileID: 0}
+    - target: {fileID: 350144936158202890, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: brush.brushTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     - target: {fileID: 855445050478835581, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: root
       value: 1
@@ -138,6 +174,10 @@ PrefabInstance:
       propertyPath: brush.brushScale
       value: 0.045
       objectReference: {fileID: 0}
+    - target: {fileID: 3096932446885246813, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: brush.brushTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     - target: {fileID: 3170159017086906852, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -166,6 +206,10 @@ PrefabInstance:
       propertyPath: brush.brushScale
       value: 0.045
       objectReference: {fileID: 0}
+    - target: {fileID: 5131795947138114825, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: brush.brushTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     - target: {fileID: 5250104015253430578, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -174,10 +218,18 @@ PrefabInstance:
       propertyPath: brush.brushScale
       value: 0.045
       objectReference: {fileID: 0}
+    - target: {fileID: 5253123272913830641, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: brush.brushTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     - target: {fileID: 5826566930030457881, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: brush.brushScale
       value: 0.045
       objectReference: {fileID: 0}
+    - target: {fileID: 5826566930030457881, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: brush.brushTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     - target: {fileID: 6419129968482568321, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_TagString
       value: Normal
@@ -500,7 +552,7 @@ MonoBehaviour:
     brushTexture: {fileID: 2800000, guid: e6613e8fb7736154993a316d0942b2fb, type: 3}
     brushNormalTexture: {fileID: 0}
     brushHeightTexture: {fileID: 0}
-    brushScale: 0.045
+    brushScale: 0.06
     rotateAngle: 0
     brushNormalBlend: 0
     brushHeightBlend: 0
