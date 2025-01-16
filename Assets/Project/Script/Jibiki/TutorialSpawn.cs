@@ -59,7 +59,8 @@ public class TutorialSpawn : MonoBehaviour
             {
                 //Instantiate(Panel[i], classification.transform.position, Quaternion.identity);
                 //i++;
-                Instantiate(Main, classification.transform.position, Quaternion.identity);
+               GameObject obj = Instantiate(Main, classification.transform.position, Quaternion.identity);
+            obj.transform.localEulerAngles = new Vector3(0,90,0);
             }
             //    if (classification.Contains(OVRSceneManager.Classification.Table))
             //    {
