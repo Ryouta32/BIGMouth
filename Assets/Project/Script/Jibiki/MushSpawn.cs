@@ -40,7 +40,7 @@ public class MushSpawn : MonoBehaviour
         {
             if (classification.Contains(OVRSceneManager.Classification.Storage))
             {
-                dragonprefab.transform.position = new Vector3(classification.transform.position.x, posy + 0.7f, classification.transform.position.z + 2f);
+                dragonprefab.transform.position = new Vector3(classification.transform.position.x, posy + 0.8f, classification.transform.position.z + 2f);
 
                 Ray ray = new Ray(transform.position, transform.forward);
                 RaycastHit hit;

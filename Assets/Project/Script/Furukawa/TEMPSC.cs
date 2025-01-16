@@ -4,4 +4,8 @@ using UnityEngine;
 
 public class TEMPSC : MonoBehaviour
 {
+    private void Update()
+    {
+        transform.localScale = Vector3.one;
+    }
 }

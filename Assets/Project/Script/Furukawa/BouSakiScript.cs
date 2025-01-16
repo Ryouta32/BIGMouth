@@ -69,7 +69,7 @@ public class BouSakiScript : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(GetCool());
+        //Debug.Log(GetCool());
         if (showerPoint >= showerLimit)
             showerPoint = showerLimit;
         slider.value = showerPoint;

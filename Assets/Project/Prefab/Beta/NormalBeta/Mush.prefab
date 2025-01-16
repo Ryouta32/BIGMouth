@@ -106,7 +106,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a087466f049bcff478deeb3604e77bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PaintObj: {fileID: 5025516467825413144, guid: 78a5d3fe18af5cf4784e891af2c7a3e5, type: 3}
+  PaintObj:
+  - {fileID: 5025516467825413144, guid: 78a5d3fe18af5cf4784e891af2c7a3e5, type: 3}
+  - {fileID: 5025516467825413144, guid: 533a3d64b1e21344aa172992933e6cfc, type: 3}
+  - {fileID: 5025516467825413144, guid: b396f7c70dc51c145bd4400fbfabcffc, type: 3}
   fallcount: 10
 --- !u!1001 &6814999384805165552
 PrefabInstance:
