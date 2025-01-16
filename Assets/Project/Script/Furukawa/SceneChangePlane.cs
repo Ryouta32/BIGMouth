@@ -12,4 +12,8 @@ public class SceneChangePlane : MonoBehaviour
         if (collision.gameObject.CompareTag(_tagName.ToString()))
             SceneManager.LoadScene(name.ToString());
     }
+    public void SceneChange()
+    {
+        SceneManager.LoadScene(name.ToString());
+    }
 }

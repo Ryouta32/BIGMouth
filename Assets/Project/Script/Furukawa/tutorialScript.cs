@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
 public class tutorialScript : MonoBehaviour
 {
     [SerializeField] GameObject fastBeta;
     [SerializeField] SceneName.sceneName sceneName;
     [SerializeField] Animator UIanima;
+    Animator StageAnima;
     [SerializeField] TutorialUIScript uIScript;
     //[SerializeField] GameObject Timeline;
     GameObject obj;
@@ -38,11 +39,11 @@ public class tutorialScript : MonoBehaviour
         if(!source.isPlaying && isAudio)
         {
             isAudio=false;
-            SceneManager.LoadScene(sceneName.ToString());
+            StageAnima.SetTrigger("Start");
+            //SceneManager.LoadScene(sceneName.ToString());
             Debug.Log("げーむかいしー");
             if (obj != null)
                 Destroy(obj);
-            Destroy(gameObject);
         }
 
         if (isRetry && !source.isPlaying&&uianima)
@@ -79,4 +80,5 @@ public class tutorialScript : MonoBehaviour
         isClear = true;
     }
     public void setanima(bool a) => uianima = a;
+    public void setStageAnima(Animator animator) => StageAnima = animator;
 }
