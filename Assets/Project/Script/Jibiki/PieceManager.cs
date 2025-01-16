@@ -18,6 +18,9 @@ public class PieceManager : MonoBehaviour
     [Tooltip("オブジェクトを消す秒数")]
     [SerializeField] float destroytime;
 
+    [Tooltip("崩れるときのちから")]
+    [SerializeField] float power;
+
     //ベタが出てくるタイミング
     [SerializeField] int fallcount;
 
@@ -60,7 +63,8 @@ public class PieceManager : MonoBehaviour
             PieceChildren.Add(PieceParent.transform.GetChild(i).GetChild(0)); // GetChild()で子オブジェクトを取得
             //Debug.Log($"検索方法１： {i} 番目の子供は {PieceChildren[i].name} です");
         }
-        piececount = PieceChildren.Count;
+        HPManager.hp += PieceChildren.Count;
+        HPManager.hpPiece += PieceChildren.Count;
 
         StartCoroutine("FallPiece");
     }
@@ -80,51 +84,44 @@ public class PieceManager : MonoBehaviour
 
             int rnd = Random.Range(0, PieceChildren.Count);
 
-            if (PieceChildren.Count > 0)
+            obj = PieceChildren[rnd].gameObject.GetComponent<Rigidbody>();
+
+            if (!obj)
             {
-                obj = PieceChildren[rnd].gameObject.GetComponent<Rigidbody>();
+                //落ちるオブジェクトのリジットボディ取得
+                obj = PieceChildren[rnd].gameObject.AddComponent<Rigidbody>();
+                obj.isKinematic = true;
+            }
+            else
+            {
+                obj.isKinematic = true;
+            }
 
-                if (!obj)
+            if (obj.isKinematic)
+            {
+                //キネマティックオフにして重力付ける
+                obj.isKinematic = false;
+
+                //マテリアルを壁色にする
+                PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
+
+                //少しちからを入れる
+                obj.AddForce(transform.up * power, ForceMode.Impulse);
+
+                count++;
+
+                if (beta != null && count == fallcount)
                 {
-                    //落ちるオブジェクトのリジットボディ取得
-                    obj = PieceChildren[rnd].gameObject.AddComponent<Rigidbody>();
-                    obj.isKinematic = true;
-                }
-                else
-                {
-                    obj.isKinematic = true;
+                    int rot = Random.Range(0, 360);
+                    Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.Euler(0, rot, 0));
+                    BetaText.betacount++;
+                    count = 0;
                 }
 
-                if (obj.isKinematic)
-                {
-                    //キネマティックオフにして重力付ける
-                    obj.isKinematic = false;
-
-                    //マテリアルを壁色にする
-                    PieceChildren[rnd].gameObject.GetComponent<MeshRenderer>().material = PieceMaterial;
-
-                    count++;
-
-                    //警告音鳴らす
-                    if (UI_HP.fillAmount < 0.5 && count == fallcount)
-                    {
-                        AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
-                        Fadeanim.Play("RedFade");
-                    }
-
-                    if (beta != null && count == fallcount)
-                    {
-                        int rot = Random.Range(0, 360);
-                        Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.Euler(0, rot, 0));
-                        BetaText.betacount++;
-                        count = 0;
-                    }
-
-                    //落ちたオブジェクトはリストから削除
-                    PieceChildren.Remove(PieceChildren[rnd]);
-                    UI_HP.fillAmount = PieceChildren.Count / piececount;
-                    Destroy(obj.gameObject, destroytime);
-                }
+                //落ちたオブジェクトはリストから削除
+                PieceChildren.Remove(PieceChildren[rnd]);
+                HPManager.hpPiece -= 1;
+                Destroy(obj.gameObject, destroytime);
             }
 
             var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
@@ -133,6 +130,13 @@ public class PieceManager : MonoBehaviour
             {
                 if (classification.Contains(OVRSceneManager.Classification.Ceiling))
                 {
+                    //警告音鳴らす
+                    if (UI_HP.fillAmount < 0.5 && count == fallcount)
+                    {
+                        AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
+                        Fadeanim.Play("RedFade");
+                    }
+
                     if (PieceChildren.Count <= 0 && childFlag)
                     {
                         childFlag = false;
@@ -152,5 +156,12 @@ public class PieceManager : MonoBehaviour
     public void AddItem(Transform item)
     {
         PieceChildren.Add(item);
+    }
+
+    public int watch()
+    {
+        int c = PieceChildren.Count;
+
+        return c;
     }
 }
