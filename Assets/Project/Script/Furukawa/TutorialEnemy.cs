@@ -13,13 +13,21 @@ public class TutorialEnemy : MonoBehaviour
     private tutorialScript tutorialSC;
     bool inHale;
     Animator anim;
+    OVRSceneManager ovrSceneManager;
+
     // Start is called before the first frame update
     void Start()
     {
         data = new EnemyData(_data);
         bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
         tutorialSC = GameObject.Find("tutorial").GetComponent<tutorialScript>();
-        anim = gameObject.GetComponent<Animator>();
+        //anim = gameObject.GetComponent<Animator>();
+
+        ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
+
+        //ルーム設定の読み込みが成功した時のコールバック登録
+        ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
+        tutorialSC.SetObj(transform.position);
     }
 
     void Update()
@@ -51,7 +59,7 @@ public class TutorialEnemy : MonoBehaviour
                 //失敗アナウンスに変える
                 //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
                 tutorialSC.Retry();
-                anim.SetFloat("Speed", 1);
+                //anim.SetFloat("Speed", 1);
                 AudioManager.manager.PlayPoint(AudioManager.manager.data.tutorialSippai,tutorialSC.gameObject);
                 AudioManager.manager.Play(AudioManager.manager.data.sippai);
                 Destroy(this.gameObject);
@@ -67,10 +75,12 @@ public class TutorialEnemy : MonoBehaviour
     }
     IEnumerator Stun()//スタン中の処理
     {
-        anim.SetFloat("Speed", 0);
+        //anim.SetFloat("Speed", 0);
         stunEffect.SetActive(true);
+        DebugText.LogText.Log("すたん");
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject);
 
+        DebugText.LogText.Log("すたん");
         //UIキル状態にする
         tutorialSC.SetState(tutorialUIState.kill);
         yield return new WaitForSeconds(1.0f);
@@ -79,13 +89,13 @@ public class TutorialEnemy : MonoBehaviour
 
         SetState(EnemyData.State.general);
         stunEffect.SetActive(false);
-        anim.SetFloat("Speed", 1);
+        //anim.SetFloat("Speed", 1);
 
         tutorialSC.SetState(tutorialUIState.start);
     }
     private void OnCollisionExit(Collision collision)
     {
-        Debug.Log("mi-");
+
         if (data.sutnCount <= 0)
         {
             StunReturn();
@@ -99,6 +109,22 @@ public class TutorialEnemy : MonoBehaviour
         //Destroy(DestroyEffect, 5);
         if (!inHale)
             Instantiate(DestroyEffect, transform.position, Quaternion.identity);
+    }
+    void onAnchorsLoaded()
+    {
+        //OVRSceneRoomの参照取得
+        OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
+        //dragonprefab.transform.position = new Vector3(CenterCamera.transform.position.x, floor.transform.position.y + 0.4f, CenterCamera.transform.position.z + 5);
+
+        var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
+
+        foreach (var classification in classifications)
+        {
+            if (classification.Contains(OVRSceneManager.Classification.Table))
+            {
+                transform.position = new Vector3(classification.transform.position.x - 5, classification.transform.position.y, classification.transform.position.z);
+            }
+        }
     }
     public void StunReturn() => data.sutnCount = _data.sutnCount;
 

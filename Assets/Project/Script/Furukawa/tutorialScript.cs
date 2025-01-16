@@ -15,12 +15,14 @@ public class tutorialScript : MonoBehaviour
     bool isClear=false;
     bool isRetry = false;
     bool uianima = false;
+    Vector3 fastPos;
     void Start()
     {
         //Timeline.SetActive(false);
         source = GetComponent<AudioSource>();
         source.clip = AudioManager.manager.data.announce;
         source.Play();
+        uIScript.gameObject.SetActive(false);
     }
 
     void Update()
@@ -39,9 +41,12 @@ public class tutorialScript : MonoBehaviour
         if(!source.isPlaying && isAudio)
         {
             isAudio=false;
+            DebugText.LogText.Log(StageAnima.name);
             StageAnima.SetTrigger("Start");
             //SceneManager.LoadScene(sceneName.ToString());
             Debug.Log("げーむかいしー");
+            uIScript.gameObject.SetActive(true);
+
             if (obj != null)
                 Destroy(obj);
         }
@@ -59,6 +64,7 @@ public class tutorialScript : MonoBehaviour
     {
         obj = Instantiate(fastBeta,transform.position, Quaternion.identity);
         obj.GetComponent<TutorialEnemy>().SetTutorial(this);
+        uIScript.gameObject.SetActive(false);
     }
     public void Retry()
     {
@@ -81,4 +87,5 @@ public class tutorialScript : MonoBehaviour
     }
     public void setanima(bool a) => uianima = a;
     public void setStageAnima(Animator animator) => StageAnima = animator;
+    public void SetObj(Vector3 pos) => fastPos = pos;
 }
