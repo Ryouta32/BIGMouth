@@ -50,6 +50,7 @@ MonoBehaviour:
   help: {fileID: 8300000, guid: 6572fac357cabaa4391b7d620e0008e3, type: 3}
   worldBreak: {fileID: 8300000, guid: 88f0e8f1bd8869c40b46ffa978b0a4bc, type: 3}
   worldBreakAbout: {fileID: 8300000, guid: ac5a716b59bad8b46bc9f1a9b2ef1eae, type: 3}
+  helpme: {fileID: 8300000, guid: c2b1c7e8d07172a4a94f5c9b8ba9af01, type: 3}
   yogoreWash: {fileID: 8300000, guid: 61f006a93ed27ed40a34c40c8dca85d9, type: 3}
   crack: {fileID: 8300000, guid: fe7a6b6e508465b4db5d52dd2d31a33e, type: 3}
   announce: {fileID: 8300000, guid: 852710008d5f08d4fadc6f9a6b257031, type: 3}
