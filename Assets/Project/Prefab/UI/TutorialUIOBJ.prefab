@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2301679707536649902}
   - component: {fileID: 6355510440217834608}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: waku
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 2493715898739885055}
   - component: {fileID: 4388012669283695446}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Waku
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 8388914567909472332}
   - component: {fileID: 8795139684271390160}
   m_Layer: 0
-  m_Name: Back
+  m_Name: main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,11 +453,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e2ab1cb54ee34a9d602acf02985ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  back: {fileID: 6906290629387116483}
-  main: {fileID: 1098472427530742523}
+  waku: {fileID: 1098472427530742523}
   mainPos: {x: 0, y: 0, z: -0.2}
-  backPos: {x: 0, y: 0, z: -0.1}
   mystate: 0
+  image: {fileID: 4069969745235193954}
 --- !u!1 &3630558874347248218
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,11 +503,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e2ab1cb54ee34a9d602acf02985ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  back: {fileID: 6167277723194251489}
-  main: {fileID: 6538819310433596393}
+  waku: {fileID: 6538819310433596393}
   mainPos: {x: 0, y: 0, z: -0.2}
-  backPos: {x: 0, y: 0, z: -0.1}
   mystate: 1
+  image: {fileID: 3359961270346926779}
 --- !u!1 &6167277723194251489
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +519,7 @@ GameObject:
   - component: {fileID: 2164463752322351136}
   - component: {fileID: 3359961270346926779}
   m_Layer: 0
-  m_Name: Back
+  m_Name: main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,7 +602,7 @@ GameObject:
   - component: {fileID: 3742945232495474167}
   - component: {fileID: 1784332010156641441}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Waku
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -687,7 +685,7 @@ GameObject:
   - component: {fileID: 2607364865881911174}
   - component: {fileID: 4069969745235193954}
   m_Layer: 0
-  m_Name: Back
+  m_Name: main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -805,8 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e2ab1cb54ee34a9d602acf02985ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  back: {fileID: 2104573754027473083}
-  main: {fileID: 95539126436304561}
+  waku: {fileID: 95539126436304561}
   mainPos: {x: 0, y: 0, z: -0.2}
-  backPos: {x: 0, y: 0, z: -0.1}
   mystate: 2
+  image: {fileID: 8795139684271390160}
