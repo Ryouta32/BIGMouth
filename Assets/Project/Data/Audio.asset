@@ -53,7 +53,7 @@ MonoBehaviour:
   helpme: {fileID: 8300000, guid: c2b1c7e8d07172a4a94f5c9b8ba9af01, type: 3}
   yogoreWash: {fileID: 8300000, guid: 61f006a93ed27ed40a34c40c8dca85d9, type: 3}
   crack: {fileID: 8300000, guid: fe7a6b6e508465b4db5d52dd2d31a33e, type: 3}
-  announce: {fileID: 8300000, guid: 852710008d5f08d4fadc6f9a6b257031, type: 3}
+  announce: {fileID: 8300000, guid: b798082b027f3a445a570851e1efe856, type: 3}
   littleMore: {fileID: 8300000, guid: 18fe3ecfeb6e6414489c84bb4fc193ac, type: 3}
   TutorialClear: {fileID: 8300000, guid: 22ef39d9241b29f4494e2bf920fd1965, type: 3}
   weekAnnounce: {fileID: 8300000, guid: 7164be4290dec7446a7871ccada60052, type: 3}
@@ -61,4 +61,7 @@ MonoBehaviour:
   wallTackle: {fileID: 0}
   wallBreak: {fileID: 0}
   tutorialSippai: {fileID: 8300000, guid: f7537258beba860449ab19c427a8d8fd, type: 3}
+  tutorial1: {fileID: 8300000, guid: f27a111bdf6a44948a27a35657c5c272, type: 3}
+  tutorial2: {fileID: 8300000, guid: dc21dba1ed3d66640994f5e4b06d0980, type: 3}
+  tutorial3: {fileID: 8300000, guid: f3365893621f4c646b73d2d49d256b84, type: 3}
   debug: {fileID: 8300000, guid: 74b0974267f046d47abd1a7eebacb201, type: 3}

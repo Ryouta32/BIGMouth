@@ -8,18 +8,24 @@ public class TutorialEnemy : MonoBehaviour
     [SerializeField] GameObject DestroyEffect;
     [SerializeField] public EnemyData _data;
     [SerializeField] GameObject damageEffect;
+    [SerializeField] bool SetOff;
     public BouSakiScript bouSaki;
     private EnemyData data;
     private tutorialScript tutorialSC;
     bool inHale;
     Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
         data = new EnemyData(_data);
         bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
         tutorialSC = GameObject.Find("tutorial").GetComponent<tutorialScript>();
-        anim = gameObject.GetComponent<Animator>();
+        //anim = gameObject.GetComponent<Animator>();
+
+        tutorialSC.SetObj(transform.position);
+        if (SetOff)
+            Destroy(gameObject);
     }
 
     void Update()
@@ -51,7 +57,7 @@ public class TutorialEnemy : MonoBehaviour
                 //失敗アナウンスに変える
                 //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
                 tutorialSC.Retry();
-                anim.SetFloat("Speed", 1);
+                //anim.SetFloat("Speed", 1);
                 AudioManager.manager.PlayPoint(AudioManager.manager.data.tutorialSippai,tutorialSC.gameObject);
                 AudioManager.manager.Play(AudioManager.manager.data.sippai);
                 Destroy(this.gameObject);
@@ -67,10 +73,9 @@ public class TutorialEnemy : MonoBehaviour
     }
     IEnumerator Stun()//スタン中の処理
     {
-        anim.SetFloat("Speed", 0);
+        //anim.SetFloat("Speed", 0);
         stunEffect.SetActive(true);
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject);
-
         //UIキル状態にする
         tutorialSC.SetState(tutorialUIState.kill);
         yield return new WaitForSeconds(1.0f);
@@ -79,13 +84,13 @@ public class TutorialEnemy : MonoBehaviour
 
         SetState(EnemyData.State.general);
         stunEffect.SetActive(false);
-        anim.SetFloat("Speed", 1);
+        //anim.SetFloat("Speed", 1);
 
         tutorialSC.SetState(tutorialUIState.start);
     }
     private void OnCollisionExit(Collision collision)
     {
-        Debug.Log("mi-");
+
         if (data.sutnCount <= 0)
         {
             StunReturn();
