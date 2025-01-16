@@ -18,6 +18,9 @@ public class ShowerCube : MonoBehaviour
 
     [SerializeField] Material m;
     PieceManager pieceManager;
+
+    Animator anim;
+
     private void OnCollisionEnter(Collision col)
     {
         PaintManager paintManager = new PaintManager();
@@ -31,6 +34,14 @@ public class ShowerCube : MonoBehaviour
             if (col.gameObject.transform.childCount == 0)
             {
                 GameObject clone = Instantiate(col.gameObject, col.gameObject.transform.position, col.transform.rotation);
+                clone.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+                //ここにアニメーション再生
+                anim = clone.AddComponent<Animator>();
+                anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Animation/Scale");
+                if(anim.runtimeAnimatorController == null)
+                {
+                    Debug.Log("ないーーーーーー");
+                }
                 clone.GetComponent<MeshRenderer>().material = m;
 
                 MeshCollider meshcol = clone.GetComponent<MeshCollider>();
@@ -38,7 +49,7 @@ public class ShowerCube : MonoBehaviour
                 meshcol.isTrigger = true;
                 clone.transform.parent = col.transform;
                 clone.tag = "Untagged";
-                clone.transform.localScale = new Vector3(1, 1, 1);
+                //clone.transform.localScale = new Vector3(1, 1, 1);
                 pieceManager.AddItem(clone.transform);
             }
         }

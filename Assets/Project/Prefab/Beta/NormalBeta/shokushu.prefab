@@ -116,6 +116,7 @@ MonoBehaviour:
   damageEffect: {fileID: 2510562678213512748, guid: 0beb1d15c494365458144cc18fef2d60, type: 3}
   DestroyEffect: {fileID: 689374704402498535, guid: 2eeadfe0322da534899490506495a1f6, type: 3}
   destorySplash: {fileID: 0}
+  root: 0
   rb: {fileID: 0}
   inHale: 0
   data: {fileID: 0}
@@ -1001,6 +1002,7 @@ MonoBehaviour:
   damageEffect: {fileID: 1407828865367593221, guid: 2bd066f9184380a429305ae492ef40cc, type: 3}
   DestroyEffect: {fileID: 3349963419385957901, guid: 3d971a8f0b9b77c4f8a6dd9fad3f2df4, type: 3}
   destorySplash: {fileID: 0}
+  root: 0
   rb: {fileID: 0}
   inHale: 0
   data: {fileID: 0}
@@ -1018,7 +1020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 0}
   InEffect: {fileID: 326720067546224203}
-  repeattime: 5
+  repeattime: 7
   col:
   - {fileID: 0}
   - {fileID: 6454785965030692701}
