@@ -18,7 +18,6 @@ public class TutorialUIScript : MonoBehaviour
         batten.SetActive(false);
         anima = GetComponent<Animator>();
         SetState(tutorialUIState.start);
-        transform.position = tutorialScript.GetPos();
     }
     public void SetState(tutorialUIState state)
     {
@@ -60,6 +59,7 @@ public class TutorialUIScript : MonoBehaviour
     public void animaEnd()
     {
         tutorialScript.setanima(true);
+        tutorialScript.Play();
         batten.SetActive(false);
     }
 
