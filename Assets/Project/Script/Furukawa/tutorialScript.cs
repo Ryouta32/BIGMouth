@@ -22,7 +22,6 @@ public class tutorialScript : MonoBehaviour
         source = GetComponent<AudioSource>();
         source.clip = AudioManager.manager.data.announce;
         source.Play();
-        uIScript.gameObject.SetActive(false);
     }
 
     void Update()
@@ -41,7 +40,6 @@ public class tutorialScript : MonoBehaviour
         if(!source.isPlaying && isAudio)
         {
             isAudio=false;
-            DebugText.LogText.Log(StageAnima.name);
             StageAnima.SetTrigger("Start");
             //SceneManager.LoadScene(sceneName.ToString());
             Debug.Log("げーむかいしー");
@@ -87,6 +85,11 @@ public class tutorialScript : MonoBehaviour
     }
     public void setanima(bool a) => uianima = a;
     public void setStageAnima(Animator animator) => StageAnima = animator;
-    public void SetObj(Vector3 pos) => fastPos = pos;
+    public void SetPos(Vector3 pos) 
+    {
+        uIScript.gameObject.transform.position = new Vector3(pos.x,pos.y +2,pos.z);
+        fastPos = pos; 
+    }
+
     public Vector3 GetPos() => fastPos;
 }
