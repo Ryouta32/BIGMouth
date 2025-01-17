@@ -60,6 +60,7 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] Sprite[] brushPaints;
 
     [SerializeField] GameObject yogosi;
+    [SerializeField] float showerSpeed = 10;
     void Start()
     {
         hitpoint = Vector3.zero;
@@ -80,7 +81,7 @@ public class BouSakiScript : MonoBehaviour
             if (on && OVRInput.Get(actionBtn) || (on && Input.GetKey(KeyCode.Space)))
             {
                 ShowerObj.Play();
-                showerPoint -= Time.deltaTime * 10;
+                showerPoint -= Time.deltaTime *showerSpeed;
                 StartCoroutine("ShowerTime");
             }
         }
