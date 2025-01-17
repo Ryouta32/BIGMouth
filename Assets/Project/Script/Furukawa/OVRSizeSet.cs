@@ -10,7 +10,6 @@ public class OVRSizeSet : MonoBehaviour
     GameObject mark;
     void Start()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.announce, gameObject);
         transform.parent = null;
         transform.localScale = size ;
         mark = Instantiate(obj, transform.position, Quaternion.identity);
