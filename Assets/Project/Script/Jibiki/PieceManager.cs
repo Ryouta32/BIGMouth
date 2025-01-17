@@ -70,7 +70,11 @@ public class PieceManager : MonoBehaviour
     }
     private void Update()
     {
-        count = waittime - BetaText.betacount;
+        count = waittime - (BetaText.betacount / 2);
+        if(count <= 0)
+        {
+            count = 1;
+        }
     }
 
     IEnumerator FallPiece()
