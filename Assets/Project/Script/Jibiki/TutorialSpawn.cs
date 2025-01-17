@@ -14,7 +14,7 @@ public class TutorialSpawn : MonoBehaviour
     [Tooltip("パネル")]
     [SerializeField] GameObject[] Panel;
 
-    [SerializeField] GameObject Tutorial;
+    [SerializeField] tutorialScript Tutorial;
 
     [SerializeField] GameObject Ornament;
     [SerializeField] GameObject Main;
@@ -61,7 +61,7 @@ public class TutorialSpawn : MonoBehaviour
                 //i++;
                GameObject obj = Instantiate(Main, classification.transform.position, Quaternion.identity);
             obj.transform.localEulerAngles = new Vector3(0,90,0);
-                Tutorial.GetComponent<tutorialScript>().setStageAnima(obj.GetComponent<Animator>());
+                Tutorial.setStageAnima(obj.GetComponent<Animator>());
             }
             //    if (classification.Contains(OVRSceneManager.Classification.Table))
             //    {
