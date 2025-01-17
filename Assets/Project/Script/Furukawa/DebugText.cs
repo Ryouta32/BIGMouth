@@ -19,6 +19,8 @@ public class DebugText : MonoBehaviour
 
     public void Log<T>(T a)
     {
+        if (logtext == null)
+            return;
         string b;
         logtext = "";
         for (int i = 0; i < logs.Count; i++)
