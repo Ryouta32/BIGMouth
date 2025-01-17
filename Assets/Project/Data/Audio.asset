@@ -46,7 +46,7 @@ MonoBehaviour:
   tutorialBGM: {fileID: 8300000, guid: 34f43f375e7308c42b790904a013b50a, type: 3}
   clearBGM: {fileID: 8300000, guid: 396202f5a37860d44bcd8bae63cd2eaa, type: 3}
   gameoverBGM: {fileID: 8300000, guid: 1658fe75b260eb94bbb7b129685e7c87, type: 3}
-  bossBGM: {fileID: 8300000, guid: 5bdf27293bd66364db61802d94fbd631, type: 3}
+  bossBGM: {fileID: 8300000, guid: bae71525a26f28746982db98188d9a59, type: 3}
   help: {fileID: 8300000, guid: 6572fac357cabaa4391b7d620e0008e3, type: 3}
   worldBreak: {fileID: 8300000, guid: 88f0e8f1bd8869c40b46ffa978b0a4bc, type: 3}
   worldBreakAbout: {fileID: 8300000, guid: ac5a716b59bad8b46bc9f1a9b2ef1eae, type: 3}

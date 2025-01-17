@@ -29,6 +29,7 @@ public class BIGBallSC : MonoBehaviour
             borderOver = false;
             matSpeed = overmatSpeed;
             GameObject obj = Instantiate(BIGBETA, pa.position, Quaternion.identity);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.bossBGM, this.gameObject);
             obj.transform.parent = pa;
             obj.transform.position = new Vector3(0,0,0);
             obj.transform.localEulerAngles = new Vector3(0,0,0);
