@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public enum tutorialUIState
 {
-    start,stun,kill
+    start,stun,kill,wall
 }
 public class TutorialUIScript : MonoBehaviour
 {
@@ -46,6 +46,13 @@ public class TutorialUIScript : MonoBehaviour
                 if (states[(int)tutorialUIState.kill])
                 {
                     states[(int)tutorialUIState.kill] = false;
+                    AudioManager.manager.Play(AudioManager.manager.data.tutorial3);
+                }
+                break;
+            case tutorialUIState.wall:
+                if (states[(int)tutorialUIState.wall])
+                {
+                    states[(int)tutorialUIState.wall] = false;
                     AudioManager.manager.Play(AudioManager.manager.data.tutorial3);
                 }
                 break;

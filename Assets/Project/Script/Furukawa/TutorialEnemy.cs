@@ -35,17 +35,16 @@ public class TutorialEnemy : MonoBehaviour
         {
             //吸い込みの処理
 
-            bouSaki.StartOfSuction(transform.position - bouSaki.transform.position,data.type);
+            bouSaki.StartOfSuction(transform.position - bouSaki.transform.position, data.type);
             inHale = true;
             //成功アナウンスに変える
-            AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);
-            tutorialSC.CLEAR();
+            AudioSource.PlayClipAtPoint(AudioManager.manager.data.debug, this.gameObject.transform.position);
+            tutorialSC.PlayWall();
             Destroy(this.gameObject);
         }
     }
     public void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(data.sutnCount);
         if (collision.gameObject.CompareTag("Brush"))
         {
             AudioManager.manager.PlayPoint(AudioManager.manager.data.kill, this.gameObject);
@@ -58,7 +57,7 @@ public class TutorialEnemy : MonoBehaviour
                 //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
                 tutorialSC.Retry();
                 //anim.SetFloat("Speed", 1);
-                AudioManager.manager.PlayPoint(AudioManager.manager.data.tutorialSippai,tutorialSC.gameObject);
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.tutorialSippai, tutorialSC.gameObject);
                 AudioManager.manager.Play(AudioManager.manager.data.sippai);
                 Destroy(this.gameObject);
             }
@@ -68,7 +67,8 @@ public class TutorialEnemy : MonoBehaviour
             }
 
             //UIをスタン状態にする
-            tutorialSC.SetState(tutorialUIState.stun);
+            if (data.sutnCount == _data.sutnCount - 1)
+                tutorialSC.SetState(tutorialUIState.stun);
         }
     }
     IEnumerator Stun()//スタン中の処理
@@ -80,7 +80,7 @@ public class TutorialEnemy : MonoBehaviour
         tutorialSC.SetState(tutorialUIState.kill);
         yield return new WaitForSeconds(1.0f);
         SetState(EnemyData.State.stun);
-        yield return new WaitForSeconds(data.sutnTime );
+        yield return new WaitForSeconds(data.sutnTime);
 
         SetState(EnemyData.State.general);
         stunEffect.SetActive(false);
@@ -107,6 +107,6 @@ public class TutorialEnemy : MonoBehaviour
     }
     public void StunReturn() => data.sutnCount = _data.sutnCount;
 
-    public void SetState(EnemyData.State sta)=>data.state = sta;
+    public void SetState(EnemyData.State sta) => data.state = sta;
     public void SetTutorial(tutorialScript sc) => tutorialSC = sc;
 }

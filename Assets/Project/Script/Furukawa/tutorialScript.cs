@@ -16,6 +16,7 @@ public class tutorialScript : MonoBehaviour
     bool isRetry = false;
     bool uianima = false;
     Vector3 fastPos;
+    tutorialWall tutorialWall;
     void Start()
     {
         //Timeline.SetActive(false);
@@ -69,6 +70,7 @@ public class tutorialScript : MonoBehaviour
         isRetry = true;
         UIanima.gameObject.SetActive(true);
         uIScript.Retry();
+        SetState(tutorialUIState.start);
     }
     public void SetState(tutorialUIState state)
     {
@@ -83,6 +85,12 @@ public class tutorialScript : MonoBehaviour
         //Timeline.SetActive(true);
         isClear = true;
     }
+    public void PlayWall()
+    {
+        tutorialWall.Play();
+        AudioManager.manager.Play(AudioManager.manager.data.announce);//壁アナウンス
+        SetState(tutorialUIState.wall);
+    }
     public void setanima(bool a) => uianima = a;
     public void setStageAnima(Animator animator) => StageAnima = animator;
     public void SetPos(Vector3 pos) 
@@ -90,6 +98,6 @@ public class tutorialScript : MonoBehaviour
         uIScript.gameObject.transform.position = new Vector3(pos.x,pos.y +2,pos.z);
         fastPos = pos; 
     }
-
     public Vector3 GetPos() => fastPos;
+    public void SetWall(tutorialWall a) => tutorialWall = a;
 }
