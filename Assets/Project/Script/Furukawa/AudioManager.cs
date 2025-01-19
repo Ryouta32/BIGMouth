@@ -73,11 +73,13 @@ public class AudioManager : MonoBehaviour
     }
     IEnumerator loop()
     {
+        source.clip = loopClip;
         for (int i = 0; i < loopCount; i++)
         {
             source.PlayOneShot(loopClip);
             yield return new WaitWhile(() => source.isPlaying);
         }
+        source.clip = null;
     }
     
 }

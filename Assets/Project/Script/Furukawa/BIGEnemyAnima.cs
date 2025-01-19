@@ -35,10 +35,18 @@ public class BIGEnemyAnima : MonoBehaviour
         {
             bigSc.Erase();
         }
-        if (tentakill && tentaObj != null)
+        if (tentakill && tentaObj == null)
+        {
+            tentakill = false;
+            bigSc.SetInvincible(true);
             bigSc.GetAnima().anima.SetTrigger("kill");
-        if (mushkill && mushObj != null)
+        }
+        if (mushkill && mushObj == null)
+        {
+            mushkill = false;
+            bigSc.SetInvincible(true);
             bigSc.GetAnima().anima.SetTrigger("kill");
+        }
     }
     public void Break()
     {
@@ -58,10 +66,12 @@ public class BIGEnemyAnima : MonoBehaviour
     public void fast()
     {
         tentaObj = Instantiate(tentacle, tentaPos, Quaternion.identity);
+        tentakill = true;
     }
     public void second()
     {
         mushObj = Instantiate(mush, mushPos, Quaternion.identity);
+        mushkill = true;
     }
     public void thirdAttack()
     {
@@ -78,6 +88,10 @@ public class BIGEnemyAnima : MonoBehaviour
     public void forthAttackStop()
     {
         forth.Stop();
+    }
+    public void Invincible()
+    {
+        bigSc.SetInvincible(false);
     }
     void onAnchorsLoaded()
     {
