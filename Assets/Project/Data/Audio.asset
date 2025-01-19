@@ -26,8 +26,10 @@ MonoBehaviour:
   attack: {fileID: 8300000, guid: be1af067cf01add43bb071b8a338f112, type: 3}
   mushKasa: {fileID: 8300000, guid: 6092004608c7bcf4eba48fcd8df11ed2, type: 3}
   bigBom: {fileID: 8300000, guid: b0748ce537aa9d248bcc432f54be9091, type: 3}
-  bigArrival: {fileID: 8300000, guid: 7b4489a111e7e354b9ab8673f8c80992, type: 3}
+  bigArrival: {fileID: 8300000, guid: 6cf790622af272a4692c3981494bceec, type: 3}
+  Bigdelete: {fileID: 8300000, guid: 239a67fcad039044ab11605d47d39212, type: 3}
   emergency: {fileID: 8300000, guid: d94bffa1d5e686844aafeada638f2a94, type: 3}
+  BigInvincible: {fileID: 8300000, guid: 481b8bd69b25721438248f841c4827a3, type: 3}
   clean: {fileID: 8300000, guid: c2437e594076cc24d9357186b0769306, type: 3}
   charge: {fileID: 8300000, guid: 6e908f9f20b65754fb8729249ab91bfc, type: 3}
   suction: {fileID: 8300000, guid: d821ed87c0bed0a4a9672b8c2b328a2d, type: 3}
