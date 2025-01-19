@@ -31,6 +31,7 @@ public class AudioData : ScriptableObject
     [Header("大ベタ")]
     [Tooltip("大ベタ爆発")] public AudioClip bigBom;
     [Tooltip("大ベタ出現")] public AudioClip bigArrival;
+    [Tooltip("大ベタ倒した")] public AudioClip Bigdelete;
     [Tooltip("危険")] public AudioClip emergency;
     [Tooltip("効かない")] public AudioClip BigInvincible;
 
