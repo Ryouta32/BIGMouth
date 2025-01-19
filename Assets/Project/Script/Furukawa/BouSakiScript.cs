@@ -42,6 +42,7 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] GameObject SuctionTentacleObj;
     [SerializeField] GameObject SuctionMushObj;
     [SerializeField] GameObject SuctionBIGObj;
+    [SerializeField] GameObject InHoleObj;
     [Header("シャワーパワー")]
     [SerializeField] Slider slider;
     [SerializeField] GameClearSC clearSC;
@@ -66,6 +67,7 @@ public class BouSakiScript : MonoBehaviour
         hitpoint = Vector3.zero;
         slider.maxValue = showerLimit;
         showerPoint = showerThreshold;
+        InHoleObj.SetActive(false);
     }
 
     void Update()
@@ -81,7 +83,7 @@ public class BouSakiScript : MonoBehaviour
             if (on && OVRInput.Get(actionBtn) || (on && Input.GetKey(KeyCode.Space)))
             {
                 ShowerObj.Play();
-                showerPoint -= Time.deltaTime *showerSpeed;
+                showerPoint -= Time.deltaTime * showerSpeed;
                 StartCoroutine("ShowerTime");
             }
         }
@@ -100,7 +102,7 @@ public class BouSakiScript : MonoBehaviour
             cool = 0;
             image.sprite = InholeSp;
             //s\吸い込み判定
-            if (!OnHale && OVRInput.Get(showerBtn) || !OnHale&& Input.GetMouseButton(0))
+            if (!OnHale && OVRInput.Get(showerBtn) || !OnHale && Input.GetMouseButton(0))
             {
                 OnHale = true;
                 Inhale();
@@ -128,8 +130,10 @@ public class BouSakiScript : MonoBehaviour
     }
     IEnumerator UpInhale()
     {
+        InHoleObj.SetActive(true);
         yield return new WaitForSeconds(inHoleTime);
         OnHale = false;
+        InHoleObj.SetActive(false);
         GetComponent<AudioSource>().Stop();
         image.sprite = NoholeSp;
         cool = coolTime;
@@ -279,7 +283,7 @@ public class BouSakiScript : MonoBehaviour
 
         sh.position = pos;
 
-        if (clear&&clearSC!=null)
+        if (clear && clearSC != null)
             obj.GetComponent<SuikomiScript>().SetClear(clearSC);
 
     }
@@ -289,5 +293,5 @@ public class BouSakiScript : MonoBehaviour
     public bool GetInHale() => OnHale;
     public float GetInHaleSpeed() => inHaleSpeed;
     public void AddShowerPoint(float x) => showerPoint += x;
-    public float GetCool() =>cool / coolTime;
+    public float GetCool() => cool / coolTime;
 }
