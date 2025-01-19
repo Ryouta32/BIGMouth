@@ -62,7 +62,7 @@ public class tutorialScript : MonoBehaviour
     {
         obj = Instantiate(fastBeta,fastPos, Quaternion.identity);
         obj.GetComponent<TutorialEnemy>().SetTutorial(this);
-        uIScript.gameObject.SetActive(false);
+        uIScript.gameObject.SetActive(true);
     }
     public void Retry()
     {
