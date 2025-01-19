@@ -15,6 +15,7 @@ public class BigEnemyScript : MonoBehaviour
     [SerializeField] BIGEnemyAnima anima;
     [SerializeField] GameObject stunEffect;
     [SerializeField] GameObject HitObject;
+    [SerializeField] GameObject barrierObj;
     public BouSakiScript bouSaki;
     [SerializeField] Renderer mainRender;
     Material mat;
@@ -22,6 +23,7 @@ public class BigEnemyScript : MonoBehaviour
     public EnemyData data;
     private bool erase;
     float hagesisa = 0;
+    bool invincible=true;
     private void Start()
     {
         mat = mainRender.material;
@@ -29,24 +31,28 @@ public class BigEnemyScript : MonoBehaviour
         clearSC = GameObject.Find("Clear").GetComponent<GameClearSC>();
         bouSaki = GameObject.Find("Stick").GetComponent<bouScript>().GetSaki();
         LookOnObj.SetActive(false);
+        barrierObj.SetActive(false);
     }
     private void Update()
     {
         transform.localPosition =new Vector3(0,0,0) ;
         transform.localEulerAngles = new Vector3(0, 0, 0);
-        if (erase)
+        if (invincible)
         {
-            LookOnObj.SetActive(true);
-            Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
-        if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
-        {
-            //吸い込みの処理
+            if (erase)
+            {
+                LookOnObj.SetActive(true);
+                Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
+                if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
+                {
+                    //吸い込みの処理
 
-            bouSaki.StartOfSuction(transform.position - bouSaki.transform.position,true);
-            //clearSC.Clear();
-            Destroy(gameObject);
+                    bouSaki.StartOfSuction(transform.position - bouSaki.transform.position, true);
+                    //clearSC.Clear();
+                    Destroy(gameObject);
 
-        }
+                }
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -55,27 +61,35 @@ public class BigEnemyScript : MonoBehaviour
         {
             if (other.gameObject.tag == "Brush")
             {
-                data.sutnCount--;
-                hagesisa += 1f;
-                Instantiate(HitObject, transform.position, Quaternion.identity);
-                AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, gameObject);
-                mat.SetFloat("_hagesisa", hagesisa);
-                if (data.state==EnemyData.State.stun)
+                if (invincible)
                 {
-                    Destroy(gameObject);
-                }    
-                if (data.sutnCount <= 0)
+                    data.sutnCount--;
+                    hagesisa += 1f;
+                    Instantiate(HitObject, transform.position, Quaternion.identity);
+                    AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, gameObject);
+                    mat.SetFloat("_hagesisa", hagesisa);
+                    if (data.state == EnemyData.State.stun)
+                    {
+                        Destroy(gameObject);
+                    }
+                    if (data.sutnCount <= 0)
+                    {
+                        StartCoroutine("Stun");
+                        //クリア演出
+                        //clearSC.Clear();
+                        bouSaki.StartOfSuction(transform.position, true);
+                    }
+                }
+                else
                 {
-                    StartCoroutine("Stun");
-                    //クリア演出
-                    //clearSC.Clear();
-                    bouSaki.StartOfSuction(transform.position, true);
+                    //近々みたい直人
                 }
             }
         }
     }
     public void WeekBreak()
     {
+        SetInvincible(false);
         anima.Break();
     }
     public void Spawn(GameObject obj)
@@ -100,4 +114,10 @@ public class BigEnemyScript : MonoBehaviour
     }
     public void Erase() => erase = true;
     public BIGEnemyAnima GetAnima() => anima;
+    public void SetInvincible(bool x)
+    {
+        barrierObj.SetActive(!x);
+        invincible = x;
+    }
+    public bool GetInvincible()=>invincible;
 }
