@@ -1811,6 +1811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialUIOBJ
       objectReference: {fileID: 0}
+    - target: {fileID: 640574264553864682, guid: 5cf4fb47023f28f49b4780c125bf8cf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1538716766630425555, guid: 5cf4fb47023f28f49b4780c125bf8cf4, type: 3}
       propertyPath: tutorialScript
       value: 
