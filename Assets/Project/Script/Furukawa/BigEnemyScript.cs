@@ -75,6 +75,7 @@ public class BigEnemyScript : MonoBehaviour
                     if (data.sutnCount <= 0)
                     {
                         StartCoroutine("Stun");
+                        AudioManager.manager.PlayPoint(AudioManager.manager.data.Bigdelete, gameObject);
                         //クリア演出
                         //clearSC.Clear();
                         bouSaki.StartOfSuction(transform.position, true);
@@ -82,6 +83,7 @@ public class BigEnemyScript : MonoBehaviour
                 }
                 else
                 {
+                    AudioManager.manager.PlayPoint(AudioManager.manager.data.BigInvincible, gameObject);
                     //近々みたい直人
                 }
             }

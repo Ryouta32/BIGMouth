@@ -36,6 +36,7 @@ public class BIGBallSC : MonoBehaviour
         }
         if (time <= max)
         {
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.bigArrival, this.gameObject);
             mat.SetFloat("_hagesisa", time);
             transform.localScale += Vector3.one * 0.01f*scaleSpeed;
         }
