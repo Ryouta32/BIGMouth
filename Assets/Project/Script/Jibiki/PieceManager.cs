@@ -83,7 +83,6 @@ public class PieceManager : MonoBehaviour
 
         while (true)
         {
-            yield return new WaitForSeconds(count);
             Rigidbody obj;
 
             int rnd = Random.Range(0, PieceChildren.Count);
@@ -128,32 +127,33 @@ public class PieceManager : MonoBehaviour
                 Destroy(obj.gameObject, destroytime);
             }
 
-            var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
+            //var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
-            foreach (var classification in classifications)
-            {
-                if (classification.Contains(OVRSceneManager.Classification.Ceiling))
-                {
-                    //警告音鳴らす
-                    if (UI_HP.fillAmount < 0.5 && count == fallcount)
-                    {
-                        AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
-                        Fadeanim.Play("RedFade");
-                    }
+            //foreach (var classification in classifications)
+            //{
+            //    if (classification.Contains(OVRSceneManager.Classification.Ceiling))
+            //    {
+            //        //警告音鳴らす
+            //        if (UI_HP.fillAmount < 0.5 && count == fallcount)
+            //        {
+            //            AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
+            //            Fadeanim.Play("RedFade");
+            //        }
 
-                    if (PieceChildren.Count <= 0 && childFlag)
-                    {
-                        childFlag = false;
-                        cc.Phase[0] = false;
-                        cc.Phase[2] = true;
-                        AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject, 5);
-                    }
-                    else if(PieceChildren.Count <= 0)
-                    {
-                        Fadeanim.Play("RedFade");
-                    }
-                }
-            }
+            //        if (PieceChildren.Count <= 0 && childFlag)
+            //        {
+            //            childFlag = false;
+            //            cc.Phase[0] = false;
+            //            cc.Phase[2] = true;
+            //            AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject, 5);
+            //        }
+            //        else if(PieceChildren.Count <= 0)
+            //        {
+            //            Fadeanim.Play("RedFade");
+            //        }
+            //    }
+            //}
+            yield return new WaitForSeconds(count);
         }
     }
 
@@ -162,10 +162,10 @@ public class PieceManager : MonoBehaviour
         PieceChildren.Add(item);
     }
 
-    public int watch()
-    {
-        int c = PieceChildren.Count;
+    //public int watch()
+    //{
+    //    int c = PieceChildren.Count;
 
-        return c;
-    }
+    //    return c;
+    //}
 }
