@@ -11,16 +11,15 @@ public class BIGBallSC : MonoBehaviour
     [SerializeField] float border;
     [SerializeField] float overmatSpeed;
     [SerializeField] GameObject BIGBETA;
-    GameObject MainBGM;
     private Transform pa;
     float time = 0;
     bool borderOver=true;
     BouSakiScript bousaki;
 
     bool bigArrivalFalg = true;
+    public static bool BIGFlag = false;
     void Start()
     {
-        MainBGM = GameObject.Find("BGMAudio");
         mat.SetFloat("_hagesisa", 0);
     }
 
@@ -33,8 +32,7 @@ public class BIGBallSC : MonoBehaviour
             borderOver = false;
             matSpeed = overmatSpeed;
             GameObject obj = Instantiate(BIGBETA, pa.position, Quaternion.identity);
-            AudioManager.manager.PlayPoint(AudioManager.manager.data.bossBGM, this.gameObject);
-            Destroy(MainBGM);
+            BIGFlag = true;
             obj.transform.parent = pa;
             obj.transform.position = new Vector3(0,0,0);
             obj.transform.localEulerAngles = new Vector3(0,0,0);

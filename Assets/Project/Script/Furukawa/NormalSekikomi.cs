@@ -18,7 +18,7 @@ public class NormalSekikomi : MonoBehaviour
     {
         Debug.Log(other.name);
 
-        if (other.name == "Cube.1")
+        if (other.name == "yukaCollider")
         {
             p_system.GetCollisionEvents(other, p_CollisionEventList);
             foreach (ParticleCollisionEvent collisionEvent in p_CollisionEventList)
