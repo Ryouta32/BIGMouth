@@ -33,7 +33,7 @@ public class tutorialScript : MonoBehaviour
     {
         if (!isClear)
         {
-            if ((!source.isPlaying && isAudio) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) && isAudio) || Input.GetKeyDown(KeyCode.LeftShift))
+            if ((!source.isPlaying && isAudio) || (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger) && isAudio) || Input.GetKeyDown(KeyCode.LeftShift))
             {
                 isAudio = false;
                 source.Stop();
