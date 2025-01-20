@@ -915,17 +915,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 613156736382511516, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: paintSet.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 613156736382511516, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: paintSet.Array.data[0].useMainPaint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 613156736382511516, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: paintSet.Array.data[0].mainTextureName
+      value: _MainTex
+      objectReference: {fileID: 0}
+    - target: {fileID: 613156736382511516, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: paintSet.Array.data[0].heightTextureName
+      value: _ParallaxMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 613156736382511516, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: paintSet.Array.data[0].normalTextureName
+      value: _BumpMap
+      objectReference: {fileID: 0}
     - target: {fileID: 2348601602758071861, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2348601602758071861, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2348601602758071861, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2348601602758071861, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -971,6 +991,26 @@ PrefabInstance:
       propertyPath: bouSakiScript
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6458889251349204214, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: paintSet.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458889251349204214, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: paintSet.Array.data[0].useMainPaint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458889251349204214, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: paintSet.Array.data[0].mainTextureName
+      value: _MainTex
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458889251349204214, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: paintSet.Array.data[0].heightTextureName
+      value: _ParallaxMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458889251349204214, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: paintSet.Array.data[0].normalTextureName
+      value: _BumpMap
+      objectReference: {fileID: 0}
     - target: {fileID: 6799037203162551875, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: MashTime
       value: 30
@@ -979,7 +1019,15 @@ PrefabInstance:
       propertyPath: TentaTime
       value: 40
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4954600807155226364, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+    - {fileID: 3569927991406474606, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+    - {fileID: 6458889251349204214, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+    - {fileID: 2582691266915870377, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+    - {fileID: 7081442306522994122, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+    - {fileID: 613156736382511516, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+    - {fileID: 2453021168252974059, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+    - {fileID: 797247281870582813, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
