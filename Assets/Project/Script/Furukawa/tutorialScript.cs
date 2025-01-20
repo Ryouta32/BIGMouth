@@ -85,11 +85,14 @@ public class tutorialScript : MonoBehaviour
     public void CLEAR()
     {
         //スタート処理。ドラゴンどうやったら時間弄れるんや
-        source.clip = AudioManager.manager.data.TutorialClear;
-        source.Play();
-        isAudio = true;
-        //Timeline.SetActive(true);
-        isClear = true;
+        if (!isClear)
+        {
+            source.clip = AudioManager.manager.data.TutorialClear;
+            source.Play();
+            isAudio = true;
+            //Timeline.SetActive(true);
+            isClear = true;
+        }
     }
     public void PlayWall()
     {

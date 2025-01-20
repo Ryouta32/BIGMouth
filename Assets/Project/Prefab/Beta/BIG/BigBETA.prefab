@@ -5102,9 +5102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PaintObj:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5025516467825413144, guid: f1facb0529e85284bacc65622c68592d, type: 3}
   fallcount: 0
 --- !u!1 &2519195955629103253
 GameObject:
@@ -14873,9 +14871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PaintObj:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5025516467825413144, guid: f1facb0529e85284bacc65622c68592d, type: 3}
   fallcount: 0
 --- !u!1 &5198925697554295895
 GameObject:
