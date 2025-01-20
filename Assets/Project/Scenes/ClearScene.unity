@@ -144,7 +144,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2093305452038900104, guid: 6e5d1da9d4635764ebc7636a411e239d, type: 3}
       propertyPath: Loop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2093305452038900104, guid: 6e5d1da9d4635764ebc7636a411e239d, type: 3}
       propertyPath: m_Volume
@@ -153,7 +153,7 @@ PrefabInstance:
     - target: {fileID: 2093305452038900104, guid: 6e5d1da9d4635764ebc7636a411e239d, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 620068d0c3554bc46a88ff3d7efa77c6, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2093305452038900104, guid: 6e5d1da9d4635764ebc7636a411e239d, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -207,6 +207,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e5d1da9d4635764ebc7636a411e239d, type: 3}
+--- !u!82 &510890762 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2093305452038900104, guid: 6e5d1da9d4635764ebc7636a411e239d, type: 3}
+  m_PrefabInstance: {fileID: 510890761}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &553284252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -349,6 +354,57 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+--- !u!1 &979695754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 979695756}
+  - component: {fileID: 979695755}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &979695755
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979695754}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 055753d9ed3b9bf44a503503023ad581, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 7377293273465591705, guid: 055753d9ed3b9bf44a503503023ad581, type: 2}
+    value: {fileID: 510890762}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &979695756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979695754}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 100.05541, y: 98.68556, z: 102.81604}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1034252865
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,3 +919,4 @@ SceneRoots:
   - {fileID: 1417648544}
   - {fileID: 510890761}
   - {fileID: 1395611174}
+  - {fileID: 979695756}

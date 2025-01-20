@@ -22,9 +22,9 @@ public class WallEntrance : MonoBehaviour
                 mr.material = PieceMaterial;
 
                 rb = other.gameObject.AddComponent<Rigidbody>();
-
                 rb.AddForce(other.gameObject.transform.up * power, ForceMode.Impulse);
 
+                HPManager.hpPiece -= 1;
                 Destroy(other.gameObject, 5.0f);
             }
         }
