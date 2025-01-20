@@ -57,8 +57,8 @@ public class TutorialEnemy : MonoBehaviour
                 //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
                 tutorialSC.Retry();
                 //anim.SetFloat("Speed", 1);
-                AudioManager.manager.PlayPoint(AudioManager.manager.data.tutorialSippai, tutorialSC.gameObject);
-                AudioManager.manager.Play(AudioManager.manager.data.sippai);
+                AudioManager.manager.Stop();
+                AudioManager.manager.Play(AudioManager.manager.data.tutorialSippai);
                 Destroy(this.gameObject);
             }
             else

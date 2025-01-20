@@ -33,6 +33,10 @@ public class AudioManager : MonoBehaviour
         }
         source.PlayOneShot(clip);
     }
+    public void Stop()
+    {
+        source.Stop();
+    }
     public void PlayPoint(AudioClip clip,GameObject obj)
     {
         if (clip == null)
