@@ -70,7 +70,7 @@ public class PieceManager : MonoBehaviour
     }
     private void Update()
     {
-        count = waittime - (BetaText.betacount / 1.5f);
+        count = waittime - (BetaText.betacount);
         if(count <= 0)
         {
             count = 1;
@@ -116,8 +116,11 @@ public class PieceManager : MonoBehaviour
                 if (beta != null && count == fallcount)
                 {
                     int rot = Random.Range(0, 360);
-                    Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.Euler(0, rot, 0));
-                    BetaText.betacount++;
+                    if(BetaText.betacount <= 10)
+                    {
+                        Instantiate(beta, PieceChildren[rnd].gameObject.transform.position + transform.up, Quaternion.Euler(0, rot, 0));
+                        BetaText.betacount++;
+                    }
                     count = 0;
                 }
 

@@ -18,9 +18,13 @@ public class BGMAudio : MonoBehaviour
     {
         if(BIGBallSC.BIGFlag)
         {
-            audio.clip = clip;
-            BIGBallSC.BIGFlag = false;
-            audio.Play();
+            if(clip != null)
+            {
+                audio.clip = clip;
+                BIGBallSC.BIGFlag = false;
+                audio.volume = 0.5f;
+                audio.Play();
+            }
         }
     }
 }

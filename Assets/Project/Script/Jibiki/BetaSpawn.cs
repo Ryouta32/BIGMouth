@@ -39,13 +39,16 @@ public class BetaSpawn : MonoBehaviour
 
             // 角度ランダム生成
             int rnd = Random.Range(0, 360);
-            GameObject obj = Instantiate(spawnPrefab, spawnPos.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
-            BetaText.betacount++;
-            if (obj.GetComponent<EnemyScript>())
+            if(BetaText.betacount <= 10)
             {
-                obj.GetComponent<EnemyScript>().setManager(manager);
-                obj.GetComponent<EnemyScript>().initialization();
-                obj.GetComponent<Rigidbody>().AddForce(spawnPos.transform.forward.normalized * 300);
+                GameObject obj = Instantiate(spawnPrefab, spawnPos.transform.position, Quaternion.Euler(0, rnd, 0), manager.gameObject.transform);
+                BetaText.betacount++;
+                if (obj.GetComponent<EnemyScript>())
+                {
+                    obj.GetComponent<EnemyScript>().setManager(manager);
+                    obj.GetComponent<EnemyScript>().initialization();
+                    obj.GetComponent<Rigidbody>().AddForce(spawnPos.transform.forward.normalized * 300);
+                }
             }
         }
     }
