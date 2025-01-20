@@ -20,6 +20,7 @@ public class BGMAudio : MonoBehaviour
         {
             audio.clip = clip;
             BIGBallSC.BIGFlag = false;
+            audio.Play();
         }
     }
 }
