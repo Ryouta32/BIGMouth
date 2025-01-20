@@ -28,9 +28,10 @@ public class HPManager : MonoBehaviour
     void Update()
     {
         UI_HP.fillAmount = hpPiece / hp;
+        Debug.Log(UI_HP.fillAmount.ToString());
 
         //警告音鳴らす
-        if (UI_HP.fillAmount < 0.3 && count)
+        if (UI_HP.fillAmount < 0.5 && count)
         {
             count = false;
             StartCoroutine("UIcount");
