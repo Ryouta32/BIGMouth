@@ -80,9 +80,16 @@ public class AudioManager : MonoBehaviour
         source.clip = loopClip;
         for (int i = 0; i < loopCount; i++)
         {
-            source.PlayOneShot(loopClip);
-            yield return new WaitWhile(() => source.isPlaying);
+
+            if (source != null)
+            {
+                source.PlayOneShot(loopClip);
+                Debug.Log(source.isPlaying);
+                yield return new WaitForSeconds(source.time);
+            }
+            else break;
         }
+        if(source!=null)
         source.clip = null;
     }
     

@@ -11,13 +11,16 @@ public class BIGEnemyAnima : MonoBehaviour
     [SerializeField] GameObject mush;
     [SerializeField] ParticleSystem third;
     [SerializeField] ParticleSystem forth;
+    [SerializeField] int weekCount;
+    [SerializeField] GameObject week;
+    [SerializeField] Transform[] weekPos;
     Vector3 tentaPos;
     Vector3 mushPos;
     OVRScenePlane floor;
     GameObject tentaObj;
     GameObject mushObj;
-    bool tentakill=false; 
-    bool mushkill=false;
+    bool tentakill = false;
+    bool mushkill = false;
     int count = 0;
     Animator anima;
     string DamageStr = "Damage";
@@ -31,7 +34,7 @@ public class BIGEnemyAnima : MonoBehaviour
     private void Update()
     {
 
-        if (count >= 2)
+        if (count >= weekCount)
         {
             bigSc.Erase();
         }
@@ -46,6 +49,11 @@ public class BIGEnemyAnima : MonoBehaviour
             mushkill = false;
             bigSc.SetInvincible(true);
             bigSc.GetAnima().anima.SetTrigger("kill");
+            for (int i = 0; i < weekPos.Length; i++)
+            {
+                GameObject obj = Instantiate(week, weekPos[i].position, Quaternion.identity, weekPos[i]);
+                obj.GetComponent<BIGEnemyWeekPoint>().SetBig(bigSc);
+            }
         }
     }
     public void Break()
@@ -75,11 +83,11 @@ public class BIGEnemyAnima : MonoBehaviour
     }
     public void thirdAttack()
     {
-        third.Play();
+        //third.Play();
     }
     public void thirdAttackStop()
     {
-        third.Stop();
+        //third.Stop();
     }
     public void forthAttack()
     {
