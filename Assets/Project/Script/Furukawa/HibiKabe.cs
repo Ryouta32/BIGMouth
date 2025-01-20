@@ -18,7 +18,7 @@ public class HibiKabe : MonoBehaviour
     }
     public void SetHibi()
     {
-        if (val == 2)
+        if (val == 1)
             Destroy(gameObject);
         meshRenderer.material=materials[val];
         val ++ ;

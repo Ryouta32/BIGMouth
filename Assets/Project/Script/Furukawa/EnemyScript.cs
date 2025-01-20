@@ -117,7 +117,7 @@ public class EnemyScript : MonoBehaviour
     }
     public void HitDamage()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.kill,this.gameObject,3);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.kill,this.gameObject);
         Instantiate(damageEffect, transform.position, Quaternion.identity);
         if (data.state == EnemyData.State.stun)
         {
