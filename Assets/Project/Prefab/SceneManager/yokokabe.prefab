@@ -1986,7 +1986,7 @@ MonoBehaviour:
   waittime: 10
   destroytime: 2
   power: 1
-  fallcount: 3
+  fallcount: 0
   beta: {fileID: 0}
 --- !u!1 &990284251933541324
 GameObject:

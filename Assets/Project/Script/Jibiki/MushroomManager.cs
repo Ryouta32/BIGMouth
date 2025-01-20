@@ -11,10 +11,14 @@ public class MushroomManager : MonoBehaviour
     Animator anim;
     EnemyScript enemyScript;
 
+    [SerializeField] float repeattime;
+
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         enemyScript = gameObject.GetComponent<EnemyScript>();
+
+        InvokeRepeating(nameof(mushsound), repeattime, repeattime);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -46,5 +50,10 @@ public class MushroomManager : MonoBehaviour
         anim.SetTrigger("Protection");
         yield return new WaitForSeconds(waittime);
         anim.SetTrigger("up");
+    }
+
+    void mushsound()
+    {
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.mushidle, this.gameObject);
     }
 }
