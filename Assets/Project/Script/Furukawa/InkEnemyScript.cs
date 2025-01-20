@@ -14,9 +14,13 @@ public class InkEnemyScript : MonoBehaviour
 
     float time;
 
+    [SerializeField, Range(0, 1)]
+    public float Scale = 0.01f;
+
     void Start()
     {
         time = 0;
+        //brush.brushScale = Scale;
     }
     private void OnCollisionStay(Collision collision)
     {
@@ -32,6 +36,10 @@ public class InkEnemyScript : MonoBehaviour
                     paintManager.Paint(collision, DrauseMethodType, !erase, brush, transform, true, collision.transform.tag);
                     break;
                 case "Wall":
+                    paintManager.Paint(collision, useMethodType, erase, brush, transform, false, collision.transform.tag);
+                    break;
+                case "Plane":
+                    brush.brushScale = 0.01f;
                     paintManager.Paint(collision, useMethodType, erase, brush, transform, false, collision.transform.tag);
                     break;
                 default:

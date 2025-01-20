@@ -14,6 +14,8 @@ TagManager:
   - Ceiling
   - yokokabe
   - Enemy
+  - shower
+  - Plane
   layers:
   - Default
   - TransparentFX

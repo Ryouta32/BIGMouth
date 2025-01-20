@@ -1982,7 +1982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PieceMaterial: {fileID: 2100000, guid: 418d04e4deb31a14c95e5852c2527f01, type: 2}
-  StartTime: 1
+  StartTime: 10
   waittime: 10
   destroytime: 2
   power: 1
@@ -21645,7 +21645,7 @@ GameObject:
   - component: {fileID: 7114110841682265971}
   m_Layer: 9
   m_Name: yokokabeCollider
-  m_TagString: Wall
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
