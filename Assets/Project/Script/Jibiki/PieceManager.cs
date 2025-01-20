@@ -70,7 +70,7 @@ public class PieceManager : MonoBehaviour
     }
     private void Update()
     {
-        count = waittime - (BetaText.betacount / 2);
+        count = waittime - (BetaText.betacount / 1.5f);
         if(count <= 0)
         {
             count = 1;
