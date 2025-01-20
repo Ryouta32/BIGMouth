@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
+using System.Collections;
 public class tutorialScript : MonoBehaviour
 {
     [SerializeField] GameObject fastBeta;
@@ -8,25 +10,29 @@ public class tutorialScript : MonoBehaviour
     [SerializeField] Animator UIanima;
     Animator StageAnima;
     [SerializeField] TutorialUIScript uIScript;
+    List<TutorialPieceManager> pieceManagers;
     //[SerializeField] GameObject Timeline;
     GameObject obj;
     AudioSource source;
     bool isAudio = true;
-    bool isClear=false;
+    bool isClear = false;
     bool isRetry = false;
     bool uianima = false;
     Vector3 fastPos;
+    tutorialWall tutorialWall;
     void Start()
     {
         //Timeline.SetActive(false);
         source = GetComponent<AudioSource>();
         source.clip = AudioManager.manager.data.announce;
         source.Play();
+        pieceManagers = new List<TutorialPieceManager>();
     }
 
     void Update()
     {
-        if(!isClear){
+        if (!isClear)
+        {
             if ((!source.isPlaying && isAudio) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) && isAudio) || Input.GetKeyDown(KeyCode.LeftShift))
             {
                 isAudio = false;
@@ -34,12 +40,13 @@ public class tutorialScript : MonoBehaviour
                 Play();
                 //CLEAR();
                 //if (Input.GetKeyDown(KeyCode.LeftShift))
-                    //CLEAR();
+                //CLEAR();
             }
-        }else
-        if(!source.isPlaying && isAudio)
+        }
+        else
+        if (!source.isPlaying && isAudio)
         {
-            isAudio=false;
+            isAudio = false;
             StageAnima.SetTrigger("Start");
             //SceneManager.LoadScene(sceneName.ToString());
             Debug.Log("げーむかいしー");
@@ -49,7 +56,7 @@ public class tutorialScript : MonoBehaviour
                 Destroy(obj);
         }
 
-        if (isRetry && !source.isPlaying&&uianima)
+        if (isRetry && !source.isPlaying && uianima)
         {
             isRetry = false;
             //obj = Instantiate(fastBeta, transform.position, Quaternion.identity);
@@ -60,7 +67,7 @@ public class tutorialScript : MonoBehaviour
     }
     public void Play()
     {
-        obj = Instantiate(fastBeta,fastPos, Quaternion.identity);
+        obj = Instantiate(fastBeta, fastPos, Quaternion.identity);
         obj.GetComponent<TutorialEnemy>().SetTutorial(this);
         uIScript.gameObject.SetActive(true);
     }
@@ -69,6 +76,7 @@ public class tutorialScript : MonoBehaviour
         isRetry = true;
         UIanima.gameObject.SetActive(true);
         uIScript.Retry();
+        SetState(tutorialUIState.start);
     }
     public void SetState(tutorialUIState state)
     {
@@ -83,13 +91,24 @@ public class tutorialScript : MonoBehaviour
         //Timeline.SetActive(true);
         isClear = true;
     }
+    public void PlayWall()
+    {
+        AudioManager.manager.Play(AudioManager.manager.data.announce);//壁アナウンス
+        SetState(tutorialUIState.wall);
+        for (int i = 0; i < pieceManagers.Count; i++)
+            pieceManagers[i].WallStart();
+    }
     public void setanima(bool a) => uianima = a;
     public void setStageAnima(Animator animator) => StageAnima = animator;
-    public void SetPos(Vector3 pos) 
+    public void SetPos(Vector3 pos)
     {
-        uIScript.gameObject.transform.position = new Vector3(pos.x,pos.y +2,pos.z);
-        fastPos = pos; 
+        uIScript.gameObject.transform.position = new Vector3(pos.x, pos.y + 2, pos.z);
+        fastPos = pos;
     }
-
     public Vector3 GetPos() => fastPos;
+    public void SetWall(tutorialWall a) => tutorialWall = a;
+    public void SetPiece(TutorialPieceManager piece)
+    {
+        pieceManagers.Add(piece);
+    }
 }
