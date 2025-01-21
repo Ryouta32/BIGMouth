@@ -10,7 +10,7 @@ public class tutorialScript : MonoBehaviour
     [SerializeField] Animator UIanima;
     Animator StageAnima;
     [SerializeField] TutorialUIScript uIScript;
-    List<TutorialPieceManager> pieceManagers;
+    [SerializeField]List<TutorialPieceManager> pieceManagers = new List<TutorialPieceManager>();
     //[SerializeField] GameObject Timeline;
     GameObject obj;
     AudioSource source;
@@ -26,7 +26,6 @@ public class tutorialScript : MonoBehaviour
         source = GetComponent<AudioSource>();
         source.clip = AudioManager.manager.data.announce;
         source.Play();
-        pieceManagers = new List<TutorialPieceManager>();
     }
 
     void Update()
@@ -51,7 +50,6 @@ public class tutorialScript : MonoBehaviour
             //SceneManager.LoadScene(sceneName.ToString());
             Debug.Log("げーむかいしー");
             uIScript.gameObject.SetActive(true);
-
             if (obj != null)
                 Destroy(obj);
         }
@@ -87,7 +85,8 @@ public class tutorialScript : MonoBehaviour
         //スタート処理。ドラゴンどうやったら時間弄れるんや
         if (!isClear)
         {
-            source.clip = AudioManager.manager.data.TutorialClear;
+            source.clip = AudioManager.manager.data.free;
+            source.Stop();
             source.Play();
             isAudio = true;
             //Timeline.SetActive(true);
@@ -96,7 +95,17 @@ public class tutorialScript : MonoBehaviour
     }
     public void PlayWall()
     {
-        AudioManager.manager.Play(AudioManager.manager.data.announce);//壁アナウンス
+        AudioManager.manager.Stop();
+        AudioManager.manager.Play(AudioManager.manager.data.handle);
+        StartCoroutine("wallStart");
+
+    }
+    IEnumerator wallStart()
+    {
+        AudioSource source = GetComponent<AudioSource>();
+        yield return new WaitWhile(() => source.isPlaying);
+        AudioManager.manager.Stop();
+        AudioManager.manager.Play(AudioManager.manager.data.tutorial4);//壁アナウンス
         SetState(tutorialUIState.wall);
         for (int i = 0; i < pieceManagers.Count; i++)
             pieceManagers[i].WallStart();

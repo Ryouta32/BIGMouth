@@ -31,6 +31,7 @@ public class TutorialEnemy : MonoBehaviour
     void Update()
     {
         Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
+        Debug.Log(bouSaki.GetInHale());
         if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
         {
             //吸い込みの処理
@@ -38,7 +39,6 @@ public class TutorialEnemy : MonoBehaviour
             bouSaki.StartOfSuction(transform.position - bouSaki.transform.position, data.type);
             inHale = true;
             //成功アナウンスに変える
-            AudioSource.PlayClipAtPoint(AudioManager.manager.data.debug, this.gameObject.transform.position);
             tutorialSC.PlayWall();
             Destroy(this.gameObject);
         }
@@ -57,8 +57,8 @@ public class TutorialEnemy : MonoBehaviour
                 //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
                 tutorialSC.Retry();
                 //anim.SetFloat("Speed", 1);
-                AudioManager.manager.Stop();
-                AudioManager.manager.Play(AudioManager.manager.data.tutorialSippai);
+                //AudioManager.manager.Stop();
+                //AudioManager.manager.Play(AudioManager.manager.data.tutorialSippai);
                 Destroy(this.gameObject);
             }
             else

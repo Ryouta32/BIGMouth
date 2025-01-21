@@ -37,7 +37,7 @@ public class TutorialPieceManager : MonoBehaviour
             PieceChildren.Add(PieceParent.transform.GetChild(i).GetChild(0)); // GetChild()で子オブジェクトを取得
             //Debug.Log($"検索方法１： {i} 番目の子供は {PieceChildren[i].name} です");
         }
-        GameObject.Find("tutorial").GetComponent<tutorialScript>().SetPiece(this);
+        GameObject.Find("tutorial").GetComponent<tutorialScript>().SetPiece(this.gameObject.GetComponent<TutorialPieceManager>());
 
     }
     private void Update()
@@ -55,7 +55,7 @@ public class TutorialPieceManager : MonoBehaviour
     IEnumerator FallPiece()
     {
         yield return new WaitForSeconds(StartTime);
-
+        Debug.Log("よあれたよ");
         while (true)
         {
             Rigidbody obj;

@@ -10,8 +10,8 @@ public class SuikomiScript : MonoBehaviour
         //Debug.Log(gameObject.name);
         sakiScript.AddShowerPoint(point);
 
-        if (clearSC != null)
-            clearSC.Clear();
+        //if (clearSC != null)
+        //    clearSC.Clear();
     }
     public void SetClear(GameClearSC sc) => clearSC = sc;
     public void SetBousaki(BouSakiScript bou) => sakiScript = bou;

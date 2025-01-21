@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4572110456967191778}
   - component: {fileID: 6764616251495121557}
   - component: {fileID: 5500402752751733133}
+  - component: {fileID: 2124186919685034861}
   m_Layer: 0
   m_Name: LightLine
   m_TagString: Untagged
@@ -27,9 +28,9 @@ Transform:
   m_GameObject: {fileID: 453407045826943307}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.31, y: 0.543, z: -0.14}
+  m_LocalPosition: {x: 0, y: 0, z: 0.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -169,7 +170,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 3.91
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4831,3 +4832,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2124186919685034861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453407045826943307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c7857191d37454e8f83fb2683b3016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

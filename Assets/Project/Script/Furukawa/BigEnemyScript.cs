@@ -41,15 +41,15 @@ public class BigEnemyScript : MonoBehaviour
         {
             if (erase)
             {
-                LookOnObj.SetActive(true);
+                //LookOnObj.SetActive(true);
                 Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
                 if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
                 {
                     //吸い込みの処理
 
-                    bouSaki.StartOfSuction(transform.position - bouSaki.transform.position, true);
-                    //clearSC.Clear();
-                    Destroy(gameObject);
+                    //bouSaki.StartOfSuction(transform.position - bouSaki.transform.position, true);
+                    ////clearSC.Clear();
+                    //Destroy(gameObject);
 
                 }
             }
@@ -57,37 +57,43 @@ public class BigEnemyScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (erase)
-        {
-            if (other.gameObject.tag == "Brush")
-            {
-                if (invincible)
-                {
-                    data.sutnCount--;
-                    hagesisa += 1f;
-                    Instantiate(HitObject, transform.position, Quaternion.identity);
-                    AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, gameObject);
-                    mat.SetFloat("_hagesisa", hagesisa);
-                    if (data.state == EnemyData.State.stun)
-                    {
-                        Destroy(gameObject);
-                    }
-                    if (data.sutnCount <= 0)
-                    {
-                        StartCoroutine("Stun");
-                        AudioManager.manager.PlayPoint(AudioManager.manager.data.Bigdelete, gameObject);
-                        //クリア演出
-                        //clearSC.Clear();
-                        bouSaki.StartOfSuction(transform.position, true);
-                    }
-                }
-                else
+        //if (erase)
+        //{
+        //    if (other.gameObject.tag == "Brush")
+        //    {
+        //        if (invincible)
+        //        {
+        //            data.sutnCount--;
+        //            //hagesisa += 1f;
+        //            Instantiate(HitObject, transform.position, Quaternion.identity);
+        //            AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, gameObject);
+        //            //mat.SetFloat("_hagesisa", hagesisa);
+        //            if (data.state == EnemyData.State.stun)
+        //            {
+        //                Destroy(gameObject);
+        //            }
+        //            if (data.sutnCount <= 0)
+        //            {
+        //                //StartCoroutine("Stun");
+        //                //AudioManager.manager.PlayPoint(AudioManager.manager.data.Bigdelete, gameObject);
+        //                ////クリア演出
+        //                ////clearSC.Clear();
+        //                //bouSaki.StartOfSuction(transform.position, true);
+        //            }
+        //        }
+                //else
                 {
                     AudioManager.manager.PlayPoint(AudioManager.manager.data.BigInvincible, gameObject);
                     //近々みたい直人
                 }
-            }
-        }
+        //    }
+        //}
+    }
+    public void Clear()
+    {
+        clearSC.Clear();
+        //clearSC.Clear();
+        Destroy(gameObject);
     }
     public void WeekBreak(bool x)
     {
