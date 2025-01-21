@@ -72,11 +72,11 @@ public class PieceManager : MonoBehaviour
     }
     private void Update()
     {
-        count = waittime - (BetaText.betacount);
-        if(count <= 0)
-        {
-            count = 1;
-        }
+        //count = waittime - (BetaText.betacount);
+        //if(count <= 0)
+        //{
+        //    count = 1;
+        //}
     }
 
     IEnumerator FallPiece()
@@ -139,7 +139,7 @@ public class PieceManager : MonoBehaviour
                 Destroy(obj.gameObject, destroytime);
             }
 
-            yield return new WaitForSeconds(count);
+            yield return new WaitForSeconds(waittime);
         }
     }
 
