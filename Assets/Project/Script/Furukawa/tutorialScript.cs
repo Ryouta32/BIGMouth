@@ -82,6 +82,7 @@ public class tutorialScript : MonoBehaviour
     }
     public void CLEAR()
     {
+        uIScript.gameObject.SetActive(false);
         //スタート処理。ドラゴンどうやったら時間弄れるんや
         if (!isClear)
         {
