@@ -31,14 +31,15 @@ public class ShowerCube : MonoBehaviour
             if(col.transform.parent.GetComponent<PieceManager>())
             {
                 pieceManager = col.transform.parent.GetComponent<PieceManager>();
-            }
 
             //ここに壁を修復するやつかく当たったタグがよこかべだったら当たったオブジェクトのメッシュレンダラーを表示
             if (col.gameObject.transform.childCount == 0)
             {
                 GameObject clone = Instantiate(col.gameObject, col.gameObject.transform.position, col.transform.rotation);
                 clone.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-                //ここにアニメーション再生
+                    //ここにアニメーション再生
+                //Rigidbody rb = clone.AddComponent<Rigidbody>();
+                //rb.useGravity = false;
                 anim = clone.AddComponent<Animator>();
                 anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Animation/Scale");
                 if(anim.runtimeAnimatorController == null)
@@ -54,8 +55,11 @@ public class ShowerCube : MonoBehaviour
                 clone.tag = "Untagged";
                 if(pieceManager!=null)
                 pieceManager.AddItem(clone.transform);
+                    pieceManager.CountStart();
                 HPManager.hpPiece += 1;
             }
+            }
+
         }
         if (col.gameObject.GetComponent<InkCanvas>())
         {

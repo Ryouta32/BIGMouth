@@ -90,7 +90,7 @@ public class TutorialPieceManager : MonoBehaviour
 
                 //落ちたオブジェクトはリストから削除
                 PieceChildren.Remove(PieceChildren[rnd]);
-                HPManager.hpPiece -= 1;
+                //HPManager.hpPiece -= 1;
                 Destroy(obj.gameObject, destroytime);
             }
             yield return new WaitForSeconds(count);

@@ -47,6 +47,8 @@ public class PieceManager : MonoBehaviour
 
     float count;
 
+    bool x;
+
     void Start()
     {
         PieceParent = this.gameObject;
@@ -81,15 +83,21 @@ public class PieceManager : MonoBehaviour
     {
         yield return new WaitForSeconds(StartTime);
 
+        
         while (true)
         {
             Rigidbody obj;
 
             int rnd = Random.Range(0, PieceChildren.Count);
 
-            obj = PieceChildren[rnd].gameObject.GetComponent<Rigidbody>();
+            if (PieceChildren.Count == 0)
+            {
+                x = false;
+                break;
+            
+            }
 
-            if (!obj)
+            if (!PieceChildren[rnd].gameObject.GetComponent<Rigidbody>())
             {
                 //落ちるオブジェクトのリジットボディ取得
                 obj = PieceChildren[rnd].gameObject.AddComponent<Rigidbody>();
@@ -97,6 +105,7 @@ public class PieceManager : MonoBehaviour
             }
             else
             {
+                obj = PieceChildren[rnd].gameObject.GetComponent<Rigidbody>();
                 obj.isKinematic = true;
             }
 
@@ -141,5 +150,14 @@ public class PieceManager : MonoBehaviour
     public void RemoveItem(Transform item)
     {
         PieceChildren.Remove(item);
+    }
+
+    public void CountStart()
+    {
+        if(!x)
+        {
+            StartCoroutine("FallPiece");
+            x = true;
+        }
     }
 }
