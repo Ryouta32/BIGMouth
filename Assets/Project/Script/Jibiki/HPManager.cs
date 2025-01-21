@@ -22,13 +22,15 @@ public class HPManager : MonoBehaviour
         UI_HP = GameObject.Find("HP").GetComponent<Image>();
         cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
         Fadeanim = GameObject.Find("RedFade").GetComponent<Animation>();
+        UI_HP.fillAmount = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
         UI_HP.fillAmount = hpPiece / hp;
-        Debug.Log(UI_HP.fillAmount.ToString());
+        //Debug.Log("hp：" + hp);
+        //Debug.Log("hpPiece：" + hpPiece);
 
         //警告音鳴らす
         if (UI_HP.fillAmount < 0.5 && count)
@@ -37,7 +39,7 @@ public class HPManager : MonoBehaviour
             StartCoroutine("UIcount");
         }
 
-        if (UI_HP.fillAmount <= 0 && childFlag)
+        if (UI_HP.fillAmount <= 0.2f && childFlag)
         {
             childFlag = false;
             cc.Phase[0] = false;
