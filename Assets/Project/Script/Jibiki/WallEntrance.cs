@@ -12,10 +12,16 @@ public class WallEntrance : MonoBehaviour
     [Tooltip("崩れるときのちから")]
     [SerializeField] float power;
 
+    PieceManager pieceManager;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Dragon"))
         {
+            if (other.transform.parent.parent.GetComponent<PieceManager>())
+            {
+                pieceManager = other.transform.parent.GetComponent<PieceManager>();
+            }
             if (!other.gameObject.GetComponent<Rigidbody>())
             {
                 mr = other.gameObject.GetComponent<MeshRenderer>();
@@ -23,8 +29,9 @@ public class WallEntrance : MonoBehaviour
 
                 rb = other.gameObject.AddComponent<Rigidbody>();
                 rb.AddForce(other.gameObject.transform.up * power, ForceMode.Impulse);
-
-                HPManager.hpPiece -= 1;
+                if (pieceManager != null)
+                    pieceManager.RemoveItem(other.transform);
+                HPManager.hp -= 1;
                 Destroy(other.gameObject, 5.0f);
             }
         }
