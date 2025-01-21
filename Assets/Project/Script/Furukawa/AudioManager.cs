@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
     public void SetAudioScale(float vol) => source.volume = vol;
     public void PlayBGM(AudioClip clip)
     {
+        NullCheck();
         source.clip = clip;
         source.Play();
     }
@@ -31,6 +32,7 @@ public class AudioManager : MonoBehaviour
             Debug.Log("音源が設定されてないよ");
             return;
         }
+        NullCheck();
         source.PlayOneShot(clip);
     }
     public void Stop()
@@ -74,6 +76,11 @@ public class AudioManager : MonoBehaviour
         {
             obj.GetComponent<AudioSource>().Stop();
         }
+    }
+    private void NullCheck()
+    {
+        if (source == null)
+            source.GetComponent<AudioSource>();
     }
     IEnumerator loop()
     {

@@ -78,10 +78,13 @@ public class AudioData : ScriptableObject
     [Header("その他音源")]
     [Tooltip("壁ぶつかり")] public AudioClip wallTackle;
     [Tooltip("壁破壊")] public AudioClip wallBreak;
-    [Tooltip("チュートリアル失敗")] public AudioClip tutorialSippai;
+    //[Tooltip("チュートリアル失敗")] public AudioClip tutorialSippai;
     [Tooltip("チュートリアル1")] public AudioClip tutorial1;
     [Tooltip("チュートリアル2")] public AudioClip tutorial2;
     [Tooltip("チュートリアル3")] public AudioClip tutorial3;
+    [Tooltip("チュートリアル4")] public AudioClip tutorial4;
+    [Tooltip("対処")] public AudioClip handle;
+    [Tooltip("自由に清掃してみよう")] public AudioClip free;
     [Tooltip("デバッグ用")] public AudioClip debug;
 
 }
