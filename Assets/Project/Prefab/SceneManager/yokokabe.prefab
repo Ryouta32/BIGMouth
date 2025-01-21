@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 4708599293681961939}
   m_Layer: 0
   m_Name: PolyShape.5
-  m_TagString: Dragon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1539,7 +1539,7 @@ GameObject:
   - component: {fileID: 1767184929901865300}
   m_Layer: 0
   m_Name: PolyShape.34
-  m_TagString: Dragon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1986,7 +1986,7 @@ MonoBehaviour:
   waittime: 10
   destroytime: 2
   power: 1
-  fallcount: 0
+  fallcount: 99
   beta: {fileID: 0}
 --- !u!1 &990284251933541324
 GameObject:
@@ -3149,7 +3149,7 @@ GameObject:
   - component: {fileID: 8540555780039254097}
   m_Layer: 0
   m_Name: PolyShape.56
-  m_TagString: yokokabe
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3495,7 +3495,7 @@ GameObject:
   - component: {fileID: 3270907812903508391}
   m_Layer: 0
   m_Name: PolyShape.55
-  m_TagString: yokokabe
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4738,7 +4738,7 @@ GameObject:
   - component: {fileID: 8691619956068269490}
   m_Layer: 0
   m_Name: PolyShape.44
-  m_TagString: yokokabe
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6431,7 +6431,7 @@ GameObject:
   - component: {fileID: 6537784843483064890}
   m_Layer: 0
   m_Name: PolyShape.17
-  m_TagString: Dragon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10039,7 +10039,7 @@ GameObject:
   - component: {fileID: 1662993064098034773}
   m_Layer: 0
   m_Name: PolyShape.35
-  m_TagString: Dragon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12827,7 +12827,7 @@ GameObject:
   - component: {fileID: 3495695551972901183}
   m_Layer: 0
   m_Name: PolyShape.73
-  m_TagString: yokokabe
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13867,7 +13867,7 @@ GameObject:
   - component: {fileID: 3994789601044375413}
   m_Layer: 0
   m_Name: PolyShape.18
-  m_TagString: Dragon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14560,7 +14560,7 @@ GameObject:
   - component: {fileID: 4193916290020637764}
   m_Layer: 0
   m_Name: PolyShape.6
-  m_TagString: Dragon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15561,7 +15561,7 @@ GameObject:
   - component: {fileID: 4499254702871554705}
   m_Layer: 0
   m_Name: PolyShape.16
-  m_TagString: Dragon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16021,7 +16021,7 @@ GameObject:
   - component: {fileID: 3874733038340361874}
   m_Layer: 0
   m_Name: PolyShape.46
-  m_TagString: yokokabe
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16367,7 +16367,7 @@ GameObject:
   - component: {fileID: 6241080514997641619}
   m_Layer: 0
   m_Name: PolyShape.74
-  m_TagString: yokokabe
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18694,7 +18694,7 @@ GameObject:
   - component: {fileID: 1901024830213843982}
   m_Layer: 0
   m_Name: PolyShape.15
-  m_TagString: Dragon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19078,7 +19078,7 @@ GameObject:
   - component: {fileID: 5263230017025322116}
   m_Layer: 0
   m_Name: PolyShape.54
-  m_TagString: yokokabe
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22232,7 +22232,7 @@ GameObject:
   - component: {fileID: 2254587409735258678}
   m_Layer: 0
   m_Name: PolyShape.7
-  m_TagString: Dragon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24546,7 +24546,7 @@ GameObject:
   - component: {fileID: 3773984054301964255}
   m_Layer: 0
   m_Name: PolyShape.57
-  m_TagString: yokokabe
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26031,7 +26031,7 @@ GameObject:
   - component: {fileID: 5916668606123829831}
   m_Layer: 0
   m_Name: PolyShape.45
-  m_TagString: yokokabe
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

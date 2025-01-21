@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HPManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class HPManager : MonoBehaviour
     public static float hp;
     public static float hpPiece;
 
+    TextMeshProUGUI textText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,7 @@ public class HPManager : MonoBehaviour
         UI_HP = GameObject.Find("HP").GetComponent<Image>();
         cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
         Fadeanim = GameObject.Find("RedFade").GetComponent<Animation>();
+        textText = GameObject.Find("UIText").GetComponent<TextMeshProUGUI>();
         UI_HP.fillAmount = 1;
     }
 
@@ -31,6 +35,7 @@ public class HPManager : MonoBehaviour
         UI_HP.fillAmount = hpPiece / hp;
         //Debug.Log("hp：" + hp);
         //Debug.Log("hpPiece：" + hpPiece);
+        //textText.text = UI_HP.fillAmount.ToString();
 
         //警告音鳴らす
         if (UI_HP.fillAmount < 0.5 && count)
@@ -39,7 +44,7 @@ public class HPManager : MonoBehaviour
             StartCoroutine("UIcount");
         }
 
-        if (UI_HP.fillAmount <= 0.2f && childFlag)
+        if (UI_HP.fillAmount < 0.2f && childFlag)
         {
             childFlag = false;
             cc.Phase[0] = false;
