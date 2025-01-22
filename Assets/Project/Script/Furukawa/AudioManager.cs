@@ -91,7 +91,7 @@ public class AudioManager : MonoBehaviour
             if (source != null)
             {
                 source.PlayOneShot(loopClip);
-                Debug.Log(source.isPlaying);
+                //Debug.Log(source.isPlaying);
                 yield return new WaitForSeconds(source.time);
             }
             else break;

@@ -90,11 +90,11 @@ public class EnemyScript : MonoBehaviour
     {
         if(this.gameObject.tag == "Normal" && other.transform.tag == "Brush")
         {
-            Debug.Log("きたーーーーーーー2");
-            Debug.Log(data.sutnCount);
+            //Debug.Log("きたーーーーーーー2");
+            //Debug.Log(data.sutnCount);
             if (data.sutnCount <= 0)
             {
-                Debug.Log("きたーーーーーーー3");
+                //Debug.Log("きたーーーーーーー3");
 
                 StartCoroutine("Stun");
             }
