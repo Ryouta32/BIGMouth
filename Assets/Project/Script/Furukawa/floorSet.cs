@@ -13,8 +13,6 @@ public class floorSet : MonoBehaviour
     {
         onAnchorsLoaded();
     }
-
-
     void onAnchorsLoaded()
     {
         //OVRSceneRoomの参照取得

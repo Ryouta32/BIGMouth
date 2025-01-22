@@ -31,7 +31,6 @@ public class TutorialEnemy : MonoBehaviour
     void Update()
     {
         Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
-        //Debug.Log(bouSaki.GetInHale());
         if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
         {
             //吸い込みの処理

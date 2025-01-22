@@ -42836,7 +42836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8412419435381056266, guid: 7d43d8ce4d4760f4ab856d8448460243, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.631
+      value: 3.315
       objectReference: {fileID: 0}
     - target: {fileID: 8412419435381056266, guid: 7d43d8ce4d4760f4ab856d8448460243, type: 3}
       propertyPath: m_LocalPosition.y
@@ -42972,7 +42972,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plane
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 366768716656294995, guid: f5dcf2d28f0afc34e8bbab5b682cdbc3, type: 3}
+    - {fileID: 1445512941659159310, guid: f5dcf2d28f0afc34e8bbab5b682cdbc3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -23,7 +23,7 @@ public class BigEnemyScript : MonoBehaviour
     public EnemyData data;
     private bool erase;
     float hagesisa = 0;
-    bool invincible = true;
+    bool invincible = false;
     private void Start()
     {
         mat = mainRender.material;
@@ -124,7 +124,7 @@ public class BigEnemyScript : MonoBehaviour
     public BIGEnemyAnima GetAnima() => anima;
     public void SetInvincible(bool x)
     {
-        barrierObj.SetActive(!x);
+        barrierObj.SetActive(x);
         invincible = x;
     }
     public bool GetInvincible() => invincible;

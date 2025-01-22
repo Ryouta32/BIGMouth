@@ -94,20 +94,16 @@ public class BouSakiScript : MonoBehaviour
         {
             ShowerStop();
         }
-
-        if (cool > 0)
-            cool -= Time.deltaTime;
-        else
+        cool = 0;
+        image.sprite = InholeSp;
+        //s\吸い込み判定
+        if (OVRInput.Get(showerBtn) || Input.GetMouseButton(0))
         {
-            cool = 0;
-            image.sprite = InholeSp;
-            //s\吸い込み判定
-            if (!OnHale && OVRInput.Get(showerBtn) || !OnHale && Input.GetMouseButton(0))
-            {
-                OnHale = true;
-                Inhale();
-            }
+            OnHale = true;
+            Inhale();
         }
+        if (OVRInput.GetUp(showerBtn))
+            UpInhale();
     }
     IEnumerator ShowerTime()
     {
@@ -125,18 +121,24 @@ public class BouSakiScript : MonoBehaviour
     }
     private void Inhale()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, this.gameObject);
-        StartCoroutine("UpInhale");
-    }
-    IEnumerator UpInhale()
-    {
+        if (GetComponent<AudioSource>())
+        {
+            if (!GetComponent<AudioSource>().isPlaying)
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, this.gameObject);
+        }
+        else
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, this.gameObject);
         InHoleObj.SetActive(true);
-        yield return new WaitForSeconds(inHoleTime);
+        //StartCoroutine("UpInhale");
+    }
+    private void UpInhale()
+    {
+        //yield return new WaitForSeconds(inHoleTime);
         OnHale = false;
         InHoleObj.SetActive(false);
         GetComponent<AudioSource>().Stop();
-        image.sprite = NoholeSp;
-        cool = coolTime;
+        //image.sprite = NoholeSp;
+        //cool = coolTime;
     }
 
     private void OnCollisionStay(Collision other)

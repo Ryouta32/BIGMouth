@@ -48,7 +48,7 @@ public class BIGEnemyAnima : MonoBehaviour
         if (count >= weekCount && bossDamage[3])
         {
             bossDamage[3] = false;
-            mat.SetFloat("_hagesisa", 10f);
+            mat.SetFloat("_hagesisa", 5f);
             ballObj.GetComponent<BIGBallDestroy>().SetHagesisa(5.8f);
             bigSc.Erase();
             StartCoroutine("Clear");
@@ -56,7 +56,7 @@ public class BIGEnemyAnima : MonoBehaviour
         if(count>= weekCount - 1 && bossDamage[2])
         {
             bossDamage[2] = false;
-            mat.SetFloat("_hagesisa", 7.5f);
+            mat.SetFloat("_hagesisa", 3.5f);
             ballObj = Instantiate(ball,transform.position,Quaternion.identity,transform);
             ballObj.GetComponent<BIGBallDestroy>().SetHagesisa(7);
             ballObj.GetComponent<BIGBallDestroy>().SetBIG(bigSc);
@@ -65,25 +65,25 @@ public class BIGEnemyAnima : MonoBehaviour
         if (count >= weekCount - 2 && bossDamage[1])
         {
             bossDamage[1] = false;
-            mat.SetFloat("_hagesisa", 5f);
+            mat.SetFloat("_hagesisa", 2f);
 
         }
         if (count >= weekCount - 3 && bossDamage[0])
         {
             bossDamage[0] = false;
-            mat.SetFloat("_hagesisa", 2.5f);
+            mat.SetFloat("_hagesisa", 1f);
         }
 
         if (tentakill && tentaObj == null)
         {
             tentakill = false;
-            bigSc.SetInvincible(true);
+            bigSc.SetInvincible(false);
             bigSc.GetAnima().anima.SetTrigger("kill");
         }
         if (mushkill && mushObj == null)
         {
             mushkill = false;
-            bigSc.SetInvincible(true);
+            bigSc.SetInvincible(false);
             bigSc.GetAnima().anima.SetTrigger("kill");
             for (int i = 0; i < weekPos.Length; i++)
             {
