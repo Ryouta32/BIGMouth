@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 /* キノコベタのスクリプト */
 
-public class MushroomManager : MonoBehaviour
+public class MushroomManager1 : MonoBehaviour
 {
     [Tooltip("しゃがむときの秒数")]
     [SerializeField] float waittime;
@@ -15,18 +15,13 @@ public class MushroomManager : MonoBehaviour
 
     AnimatorStateInfo stateInfo;
 
-    public static bool mushflag;
-
-    BoxCollider box;
+    BoxCollider box1;
 
     void Start()
     {
-        mushflag = true;
-        box = gameObject.GetComponent<BoxCollider>();
-        anim = gameObject.GetComponent<Animator>();
-        enemyScript = gameObject.GetComponent<EnemyScript>();
-
-        InvokeRepeating(nameof(mushsound), repeattime, repeattime);
+        box1 = gameObject.GetComponent<BoxCollider>();
+        anim = gameObject.transform.root.GetComponent<Animator>();
+        enemyScript = gameObject.transform.root.GetComponent<EnemyScript>();
     }
 
     private void Update()
@@ -35,11 +30,11 @@ public class MushroomManager : MonoBehaviour
 
         if (!stateInfo.IsName("Idle"))
         {
-            box.enabled = false;
+            box1.enabled = false;
         }
         else
         {
-            box.enabled = true;
+            box1.enabled = true;
         }
     }
 
@@ -53,15 +48,15 @@ public class MushroomManager : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Brush") && stateInfo.IsName("Idle"))
         {
-            if(mushflag)
+            if (MushroomManager.mushflag)
             {
                 //Debug.Log(enemyScript.data.sutnCount + "だよｙｙｙｙｙｙｙｙ");
-                Debug.Log("キノコ");
 
+                Debug.Log("キノコ棒");
                 StartCoroutine("AnimProtection");
                 //Idleモーションの時にブラシが当たったとき
                 enemyScript.HitDamage();
-                mushflag = false;
+                MushroomManager.mushflag = false;
             }
         }
         else if(other.gameObject.CompareTag("Brush"))
@@ -76,11 +71,6 @@ public class MushroomManager : MonoBehaviour
         anim.SetTrigger("Protection");
         yield return new WaitForSeconds(waittime);
         anim.SetTrigger("up");
-        mushflag = true;
-    }
-
-    void mushsound()
-    {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.mushidle, this.gameObject);
+        MushroomManager.mushflag = true;
     }
 }
