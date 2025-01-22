@@ -18,7 +18,7 @@ public class HPManager : MonoBehaviour
     TextMeshProUGUI textText;
 
     public static float time;
-    float maxtime = 180.0f;
+    float maxtime = 120.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +37,10 @@ public class HPManager : MonoBehaviour
     {
         time += Time.deltaTime;
         UI_HP.fillAmount = 1 - (time / maxtime);
+        if(time < 0)
+        {
+            time = 0;
+        }
         //UI_HP.fillAmount = hpPiece / hp;
         //Debug.Log("hp：" + hp);
         //Debug.Log("hpPiece：" + hpPiece);
@@ -49,14 +53,14 @@ public class HPManager : MonoBehaviour
             StartCoroutine("UIcount");
         }
 
-        if (UI_HP.fillAmount < 0 && childFlag)
+        if (UI_HP.fillAmount <= 0 && childFlag)
         {
             childFlag = false;
             cc.Phase[0] = false;
             cc.Phase[2] = true;
             AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject, 5);
         }
-        else if (UI_HP.fillAmount < 0f)
+        else if (UI_HP.fillAmount <= 0f)
         {
             Fadeanim.Play("RedFade");
         }

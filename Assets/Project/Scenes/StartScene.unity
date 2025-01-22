@@ -2285,7 +2285,7 @@ MonoBehaviour:
   Panel:
   - {fileID: 2309856849908597991, guid: dfe960f838ed7594e9db19ca760a9f0d, type: 3}
   Tutorial: {fileID: 990828456}
-  Ornament: {fileID: 3615035441252494632, guid: 04e7e74d8a7700246a14845687904a8f, type: 3}
+  Ornament: {fileID: 7307105946524589043, guid: 411591a27a4a4a249a5b1ea888b9deb2, type: 3}
   Main: {fileID: 3615035441252494632, guid: 04e7e74d8a7700246a14845687904a8f, type: 3}
 --- !u!4 &2131632772
 Transform:

@@ -60,7 +60,7 @@ public class TutorialSpawn : MonoBehaviour
                 Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y - 0.4f, classification.transform.position.z);
                 //i++;
                 GameObject obj = Instantiate(Main, pos, Quaternion.identity);
-            obj.transform.localEulerAngles = new Vector3(0,90,0);
+                obj.transform.localEulerAngles = new Vector3(0, 90, 0);
                 Tutorial.setStageAnima(obj.GetComponent<Animator>());
             }
             //    if (classification.Contains(OVRSceneManager.Classification.Table))

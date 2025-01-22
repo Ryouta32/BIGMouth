@@ -18,11 +18,13 @@ public class tutorialScript : MonoBehaviour
     bool isClear = false;
     bool isRetry = false;
     bool uianima = false;
+    bool wall;
     Vector3 fastPos;
     tutorialWall tutorialWall;
     void Start()
     {
         //Timeline.SetActive(false);
+        wall = false;
         source = GetComponent<AudioSource>();
         source.clip = AudioManager.manager.data.announce;
         source.Play();
@@ -32,7 +34,7 @@ public class tutorialScript : MonoBehaviour
     {
         if (!isClear)
         {
-            if ((!source.isPlaying && isAudio) || (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger) && isAudio) || Input.GetKeyDown(KeyCode.LeftShift))
+            if ((!source.isPlaying && isAudio) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) && isAudio) || Input.GetKeyDown(KeyCode.LeftShift))
             {
                 isAudio = false;
                 source.Stop();
@@ -54,6 +56,8 @@ public class tutorialScript : MonoBehaviour
                 Destroy(obj);
         }
 
+        if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger))
+            CLEAR();
         if (isRetry && !source.isPlaying && uianima)
         {
             isRetry = false;
@@ -82,6 +86,8 @@ public class tutorialScript : MonoBehaviour
     }
     public void CLEAR()
     {
+        if (!wall)
+            return;
         uIScript.gameObject.SetActive(false);
         //スタート処理。ドラゴンどうやったら時間弄れるんや
         if (!isClear)
@@ -98,6 +104,7 @@ public class tutorialScript : MonoBehaviour
     {
         AudioManager.manager.Stop();
         AudioManager.manager.Play(AudioManager.manager.data.handle);
+        wall = true;
         StartCoroutine("wallStart");
 
     }

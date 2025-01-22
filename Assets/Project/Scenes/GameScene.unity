@@ -616,6 +616,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+--- !u!114 &1467920366 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+  m_PrefabInstance: {fileID: 1467920365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bb9d1b63275b046a6c0dceb0635b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1477202568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -985,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: bossCount
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: debugmode
@@ -994,7 +1005,7 @@ PrefabInstance:
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: bouSakiScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1467920366}
     - target: {fileID: 6458889251349204214, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: paintSet.Array.size
       value: 1

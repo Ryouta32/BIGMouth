@@ -20,7 +20,6 @@ public class bouScript : MonoBehaviour
         float dis = Vector3.Distance(saki.GetHit(), ovr.rightHandAnchor.position);
 
         move = hit();
-        LogSC.log = transform.position.ToString();
         transform.position -= move;
         Vector3 pos = new Vector3(ovr.leftHandAnchor.position.x, ovr.leftHandAnchor.position.y * offset.y, ovr.leftHandAnchor.position.z);
         transform.LookAt(pos);
