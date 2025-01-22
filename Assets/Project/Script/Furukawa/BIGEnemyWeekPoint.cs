@@ -7,7 +7,7 @@ public class BIGEnemyWeekPoint : MonoBehaviour
     private int count = 0;
     private void OnTriggerEnter(Collider other)
     {
-        if (bigSC.GetInvincible())
+        if (!bigSC.GetInvincible())
             if (other.transform.tag == "Brush")
             {
                 count++;

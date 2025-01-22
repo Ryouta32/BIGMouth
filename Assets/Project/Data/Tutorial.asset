@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Tutorial
   m_EditorClassIdentifier: 
   sutnCount: 5
-  sutnTime: 10
+  sutnTime: 20
   returnTime: 0
   speed: 0
   state: 0
+  type: 0
