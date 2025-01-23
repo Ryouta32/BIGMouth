@@ -46,28 +46,20 @@ public class MushroomManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.CompareTag("shower") && stateInfo.IsName("Idle"))
-        {
-            //Idleモーションの時にシャワーが当たったとき
-            enemyScript.data.sutnCount = 0;
-        }
-        else if (other.gameObject.CompareTag("Brush") && stateInfo.IsName("Idle"))
+        if (other.gameObject.CompareTag("Brush") && stateInfo.IsName("Idle"))
         {
             if(mushflag)
             {
-                //Debug.Log(enemyScript.data.sutnCount + "だよｙｙｙｙｙｙｙｙ");
-                Debug.Log("キノコ");
-
                 StartCoroutine("AnimProtection");
                 //Idleモーションの時にブラシが当たったとき
                 enemyScript.HitDamage();
                 mushflag = false;
             }
         }
-        else if(other.gameObject.CompareTag("Brush"))
+        else if (other.gameObject.CompareTag("shower") && stateInfo.IsName("Idle"))
         {
-            //防御してるときの音再生
-            AudioManager.manager.PlayPoint(AudioManager.manager.data.mushKasa, this.gameObject);
+            //Idleモーションの時にシャワーが当たったとき
+            enemyScript.data.sutnCount = 0;
         }
     }
 

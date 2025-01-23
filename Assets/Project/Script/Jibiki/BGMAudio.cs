@@ -22,7 +22,7 @@ public class BGMAudio : MonoBehaviour
             {
                 audio.clip = clip;
                 BIGBallSC.BIGFlag = false;
-                audio.volume = 0.5f;
+                audio.volume = 0.8f;
                 audio.Play();
             }
         }

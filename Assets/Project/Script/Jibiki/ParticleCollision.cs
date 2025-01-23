@@ -30,9 +30,9 @@ public class ParticleCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        //AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
 
-        if (collision.gameObject.CompareTag("Brush") && stateInfo.IsName("Base"))
+        if (collision.gameObject.CompareTag("Brush"))
         {
             if (audioflag)
             {

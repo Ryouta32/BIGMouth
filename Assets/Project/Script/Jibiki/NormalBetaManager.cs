@@ -44,21 +44,30 @@ public class NormalBetaManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
+    //スポーン位置の選択
+    void SpawnSelect()
+    {
         //これはupdateでやる必要はないと思う
         Children.Clear();
         for (int i = 0; i < SpawnPoint.transform.childCount; i++)
         {
             Children.Add(SpawnPoint.transform.GetChild(i)); // GetChild()で子オブジェクトを取得
         }
-    }
-    //スポーン位置の選択
-    void SpawnSelect()
-    {
-        //number = Random.Range(0, Children.Count);
-        number = GetRandomValue(number);
 
-        //ここのｙ座標どうしたいいのかあんまりわかってないよ
-        gameObject.transform.position = new Vector3(Children[number].transform.position.x, SpawnPoint.transform.position.y, Children[number].transform.position.z);
+        //number = Random.Range(0, Children.Count);
+        
+        if(Children.Count == 0)
+        {
+            gameObject.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        }
+        else
+        {
+            number = GetRandomValue(number);
+            //ここのｙ座標どうしたいいのかあんまりわかってないよ
+            gameObject.transform.position = new Vector3(Children[number].transform.position.x, SpawnPoint.transform.position.y, Children[number].transform.position.z);
+        }
+
 
         anim.SetBool("Down", false);
         colsignal = true;
