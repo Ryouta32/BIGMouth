@@ -8,9 +8,9 @@ public class CanvasChange : MonoBehaviour
 
     [SerializeField] public bool[] Phase;
 
-    void Update()
+    public void CanvasActive()
     {
-        for(int i = 0; i < Canvas.Length; i++)
+        for (int i = 0; i < Canvas.Length; i++)
         {
             Canvas[i].SetActive(Phase[i]);
         }

@@ -45,7 +45,6 @@ public class MushroomManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.gameObject.CompareTag("Brush") && stateInfo.IsName("Idle"))
         {
             if(mushflag)
@@ -55,11 +54,6 @@ public class MushroomManager : MonoBehaviour
                 enemyScript.HitDamage();
                 mushflag = false;
             }
-        }
-        else if (other.gameObject.CompareTag("shower") && stateInfo.IsName("Idle"))
-        {
-            //Idleモーションの時にシャワーが当たったとき
-            enemyScript.data.sutnCount = 0;
         }
     }
 

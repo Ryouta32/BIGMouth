@@ -13,11 +13,6 @@ public class NormalBetaCollision : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("shower"))
-        {
-            anim.SetBool("Stun", true);
-            enemyScript.data.sutnCount = 0;
-        }
         if (other.gameObject.CompareTag("Brush"))
         {
             if (normalBetaManager.colsignal)
@@ -31,6 +26,10 @@ public class NormalBetaCollision : MonoBehaviour
                     AudioManager.manager.PlayPoint(AudioManager.manager.data.tentacleIn, this.gameObject);
                     anim.SetBool("Down", true);
                     enemyScript.data.sutnCount = enemyScript._data.sutnCount;
+                    if(enemyScript._data.sutnCount == 0)
+                    {
+                        anim.SetBool("Stun", true);
+                    }
                 }
                 else
                 {

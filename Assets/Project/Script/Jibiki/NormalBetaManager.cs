@@ -41,10 +41,6 @@ public class NormalBetaManager : MonoBehaviour
         InvokeRepeating(nameof(StunStart), repeattime, repeattime);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
     //スポーン位置の選択
     void SpawnSelect()
     {

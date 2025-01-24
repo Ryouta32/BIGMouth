@@ -10,18 +10,14 @@ public class MushSpawn : MonoBehaviour
     GameObject dragonprefab;
     float posy;
 
-    [SerializeField] GameObject Fade;
-
     private void Awake()
     {
-        Fade.SetActive(false);
         //ドラゴンの位置設定
         dragonprefab = GameObject.Find("DragonPrefab");
 
         //ルーム設定の読み込みが成功した時のコールバック登録
         ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
         ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
-        Fade.SetActive(false);
     }
     void onAnchorsLoaded()
     {
@@ -30,9 +26,6 @@ public class MushSpawn : MonoBehaviour
         //床
         floor = sceneRoom.Floor;
         posy = floor.transform.position.y;
-        floor.transform.position = new Vector3(floor.transform.position.x, posy, floor.transform.position.z);
-
-        //dragonprefab.transform.position = new Vector3(CenterCamera.transform.position.x, floor.transform.position.y + 0.4f, CenterCamera.transform.position.z + 5);
 
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
