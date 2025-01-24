@@ -16,6 +16,7 @@ public class GameClearSC : MonoBehaviour
         SceneManager.LoadScene(sceneName.ToString());
         cc.Phase[0] = false;
         cc.Phase[1] = true;
+        cc.CanvasActive();
         Debug.Log("くりあ");
         //imageanima.Play();
         //on = true;

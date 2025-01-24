@@ -15,11 +15,8 @@ public class MushroomManager1 : MonoBehaviour
 
     AnimatorStateInfo stateInfo;
 
-    BoxCollider box1;
-
     void Start()
     {
-        box1 = gameObject.GetComponent<BoxCollider>();
         anim = gameObject.transform.root.GetComponent<Animator>();
         enemyScript = gameObject.transform.root.GetComponent<EnemyScript>();
     }
@@ -37,11 +34,6 @@ public class MushroomManager1 : MonoBehaviour
                 enemyScript.HitDamage();
                 MushroomManager.mushflag = false;
             }
-        }
-        else if (other.gameObject.CompareTag("shower") && stateInfo.IsName("Idle"))
-        {
-            //Idleモーションの時にシャワーが当たったとき
-            enemyScript.data.sutnCount = 0;
         }
         else if (other.gameObject.CompareTag("Brush"))
         {

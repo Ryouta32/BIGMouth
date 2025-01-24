@@ -58,6 +58,7 @@ public class HPManager : MonoBehaviour
             childFlag = false;
             cc.Phase[0] = false;
             cc.Phase[2] = true;
+            cc.CanvasActive();
             AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject, 5);
         }
         else if (UI_HP.fillAmount <= 0f)
