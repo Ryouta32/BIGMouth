@@ -27,74 +27,50 @@ public class PieceManager : MonoBehaviour
     [Tooltip("生成するベタ")]
     [SerializeField] GameObject beta;
 
-    Animation Fadeanim;
-
-    Image UI_HP;
-
     //ピースの親オブジェクト
     GameObject PieceParent;
 
     //ピースのリスト
     List<Transform> PieceChildren = new List<Transform>();
 
-    //ゲームオーバーのフラッグ
-    bool childFlag;
-
-    //UIの最大値
-    float piececount;
-
-    CanvasChange cc;
-
     float count;
 
     bool x;
+
+    Rigidbody obj;
 
     void Start()
     {
         PieceParent = this.gameObject;
 
-        childFlag = true;
-
-        UI_HP = GameObject.Find("HP").GetComponent<Image>();
-        cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
-        Fadeanim = GameObject.Find("RedFade").GetComponent<Animation>();
-
-        //リスト追加
+        //壁の数を管理するリスト追加
         for (int i = 0; i < PieceParent.transform.childCount; i++)
         {
             PieceChildren.Add(PieceParent.transform.GetChild(i).GetChild(0)); // GetChild()で子オブジェクトを取得
             //Debug.Log($"検索方法１： {i} 番目の子供は {PieceChildren[i].name} です");
         }
+
+        //hP.hPPieceに崩れるオブジェクト全てを数える
         HPManager.hp += PieceChildren.Count;
         HPManager.hpPiece += PieceChildren.Count;
 
+        //崩れるコルーチンスタート
         StartCoroutine("FallPiece");
-    }
-    private void Update()
-    {
-        //count = waittime - (BetaText.betacount);
-        //if(count <= 0)
-        //{
-        //    count = 1;
-        //}
     }
 
     IEnumerator FallPiece()
     {
+        //壁が崩れるまでの待機時間（ドラゴンの喋りが終わったら始めるとかがいいかな？）
         yield return new WaitForSeconds(StartTime);
-
         
         while (true)
         {
-            Rigidbody obj;
-
             int rnd = Random.Range(0, PieceChildren.Count);
 
             if (PieceChildren.Count == 0)
             {
                 x = false;
                 break;
-            
             }
 
             if (!PieceChildren[rnd].gameObject.GetComponent<Rigidbody>())

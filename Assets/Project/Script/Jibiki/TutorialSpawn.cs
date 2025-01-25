@@ -5,18 +5,7 @@ using UnityEngine;
 
 public class TutorialSpawn : MonoBehaviour
 {
-    [Tooltip("ショーケース")]
-    [SerializeField] GameObject Case;
-
-    [Tooltip("ショーケース2")]
-    [SerializeField] GameObject Case2;
-
-    [Tooltip("パネル")]
-    [SerializeField] GameObject[] Panel;
-
     [SerializeField] tutorialScript Tutorial;
-
-    [SerializeField] GameObject Ornament;
     [SerializeField] GameObject Main;
 
     OVRSceneManager ovrSceneManager;
@@ -45,33 +34,13 @@ public class TutorialSpawn : MonoBehaviour
 
         foreach (var classification in classifications)
         {
-            //if (classification.Contains(OVRSceneManager.Classification.Bed))
-            //{
-            //    Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
-            //    Instantiate(Case, pos, Quaternion.identity);
-            //}
-            //if (classification.Contains(OVRSceneManager.Classification.Lamp))
-            //{
-            //    Vector3 pos = new Vector3(classification.transform.position.x, posy, classification.transform.position.z);
-            //    Instantiate(Case2, pos, Quaternion.identity);
-            //}
             if (classification.Contains(OVRSceneManager.Classification.WallArt))
             {
                 Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y - 0.4f, classification.transform.position.z);
-                //i++;
                 GameObject obj = Instantiate(Main, pos, Quaternion.identity);
                 obj.transform.localEulerAngles = new Vector3(0, 90, 0);
                 Tutorial.setStageAnima(obj.GetComponent<Animator>());
             }
-            //    if (classification.Contains(OVRSceneManager.Classification.Table))
-            //    {
-            //        Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y - 0.4f, classification.transform.position.z);
-            //        Tutorial.transform.position = pos;
-            //    }
-            //    if (classification.Contains(OVRSceneManager.Classification.WallArt))
-            //    {
-            //        Instantiate(Ornament, classification.transform.position, Quaternion.Euler(0, 90, 0));
-            //    }
         }
     }
 }

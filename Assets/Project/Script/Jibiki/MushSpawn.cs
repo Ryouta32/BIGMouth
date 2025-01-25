@@ -33,6 +33,7 @@ public class MushSpawn : MonoBehaviour
         {
             if (classification.Contains(OVRSceneManager.Classification.Storage))
             {
+                //ドラゴン座標指定。高さは床からとってます
                 dragonprefab.transform.position = new Vector3(classification.transform.position.x, posy + 0.8f, classification.transform.position.z + 2f);
 
                 Ray ray = new Ray(transform.position, transform.forward);
