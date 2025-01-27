@@ -1815,6 +1815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialUIOBJ
       objectReference: {fileID: 0}
+    - target: {fileID: 640574264553864682, guid: 5cf4fb47023f28f49b4780c125bf8cf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1538716766630425555, guid: 5cf4fb47023f28f49b4780c125bf8cf4, type: 3}
       propertyPath: tutorialScript
       value: 
@@ -2280,12 +2284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c93d3dc35616f45b2065ac37ab63e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Case: {fileID: 4499066190803700623, guid: a2ea6ce470f055148b450b05a0e7a096, type: 3}
-  Case2: {fileID: 887111662723137071, guid: 7a9b2592eb2dc02448d8268038a30f73, type: 3}
-  Panel:
-  - {fileID: 2309856849908597991, guid: dfe960f838ed7594e9db19ca760a9f0d, type: 3}
   Tutorial: {fileID: 990828456}
-  Ornament: {fileID: 7307105946524589043, guid: 411591a27a4a4a249a5b1ea888b9deb2, type: 3}
   Main: {fileID: 3615035441252494632, guid: 04e7e74d8a7700246a14845687904a8f, type: 3}
 --- !u!4 &2131632772
 Transform:

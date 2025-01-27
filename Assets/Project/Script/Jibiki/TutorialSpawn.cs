@@ -27,8 +27,7 @@ public class TutorialSpawn : MonoBehaviour
         //床
         floor = sceneRoom.Floor;
         float posy = floor.transform.position.y;
-
-        floor.transform.position = new Vector3(floor.transform.position.x, posy, floor.transform.position.z);
+        float posx = floor.transform.position.x / 2;
 
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
@@ -36,7 +35,7 @@ public class TutorialSpawn : MonoBehaviour
         {
             if (classification.Contains(OVRSceneManager.Classification.WallArt))
             {
-                Vector3 pos = new Vector3(classification.transform.position.x, classification.transform.position.y - 0.4f, classification.transform.position.z);
+                Vector3 pos = new Vector3(posx, posy + 1.0f, classification.transform.position.z);
                 GameObject obj = Instantiate(Main, pos, Quaternion.identity);
                 obj.transform.localEulerAngles = new Vector3(0, 90, 0);
                 Tutorial.setStageAnima(obj.GetComponent<Animator>());
