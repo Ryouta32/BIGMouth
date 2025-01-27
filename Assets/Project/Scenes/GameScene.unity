@@ -215,6 +215,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331715496}
   m_CullTransparentMesh: 1
+--- !u!4 &471258667 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2784400456790957696, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+  m_PrefabInstance: {fileID: 1619914390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &500333606 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4063161737051803050, guid: f5a499176eaa5b84f85f9c25e95a2e3c, type: 3}
@@ -926,6 +931,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 197184519674163065, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: time
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 613156736382511516, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: paintSet.Array.size
       value: 1
@@ -995,12 +1004,16 @@ PrefabInstance:
       value: DragonPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: linepos
+      value: 
+      objectReference: {fileID: 471258667}
+    - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: bossCount
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: debugmode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: bouSakiScript

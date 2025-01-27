@@ -5,20 +5,20 @@ using TMPro;
 
 public class DebugText : MonoBehaviour
 {
-    public static DebugText LogText=new DebugText();
+    public static DebugText LogText = new DebugText();
     private TextMeshProUGUI text;
     private List<string> logs = new List<string>();
     private int count=20;
-    private string logtext;
+    private string logtext = "";
     // Start is called before the first frame update
     void Start()
     {
         LogText.text = GetComponent<TextMeshProUGUI>();
-        text = GetComponent<TextMeshProUGUI>();
     }
 
     public void Log<T>(T a)
     {
+
         if (logtext == null)
             return;
         string b;
@@ -27,11 +27,12 @@ public class DebugText : MonoBehaviour
             logtext += logs[i] + "\n";
 
          text.text = logtext;
-        if (logtext.Contains(a.ToString()))
-        {
-            return;
-        }
-        else
+        //if (logtext.Contains(a.ToString()))
+        //{
+        //    AudioManager.manager.Play(AudioManager.manager.data.debug);
+        //    //return;
+        //}
+        //else
         {
             logs.Add(a.ToString());
 

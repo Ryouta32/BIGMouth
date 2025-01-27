@@ -24,6 +24,7 @@ public class BigEnemyScript : MonoBehaviour
     private bool erase;
     float hagesisa = 0;
     bool invincible = false;
+    public Transform linePos { get; set;}
     private void Start()
     {
         mat = mainRender.material;
