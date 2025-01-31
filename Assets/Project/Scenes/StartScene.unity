@@ -1039,6 +1039,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1490787224}
     - target: {fileID: 8160376262018768761, guid: a3c74c70b8e2c8044a4ed6a110050f6c, type: 3}
+      propertyPath: fastBeta
+      value: 
+      objectReference: {fileID: 74955073074823763, guid: d29a7afcde95e97498ba2d2784e09049, type: 3}
+    - target: {fileID: 8160376262018768761, guid: a3c74c70b8e2c8044a4ed6a110050f6c, type: 3}
       propertyPath: uIScript
       value: 
       objectReference: {fileID: 1490787225}

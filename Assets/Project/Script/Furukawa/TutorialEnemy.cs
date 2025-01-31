@@ -14,7 +14,7 @@ public class TutorialEnemy : MonoBehaviour
     private tutorialScript tutorialSC;
     bool inHale;
     Animator anim;
-
+    float time;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,28 +46,28 @@ public class TutorialEnemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Brush"))
         {
-            AudioManager.manager.PlayPoint(AudioManager.manager.data.kill, this.gameObject);
-            GameObject clone = Instantiate(damageEffect, transform.position, Quaternion.identity);
-            Destroy(clone, 1.0f);
-            //スタン状態なら消す
-            if (data.state == EnemyData.State.stun)
-            {
-                //失敗アナウンスに変える
-                //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
-                tutorialSC.Retry();
-                //anim.SetFloat("Speed", 1);
-                //AudioManager.manager.Stop();
-                //AudioManager.manager.Play(AudioManager.manager.data.tutorialSippai);
-                Destroy(this.gameObject);
-            }
-            else
-            {
-                data.sutnCount--;
-            }
+            //AudioManager.manager.PlayPoint(AudioManager.manager.data.kill, this.gameObject);
+            //GameObject clone = Instantiate(damageEffect, transform.position, Quaternion.identity);
+            //Destroy(clone, 1.0f);
+            ////スタン状態なら消す
+            //if (data.state == EnemyData.State.stun)
+            //{
+            //    //失敗アナウンスに変える
+            //    //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
+            //    tutorialSC.Retry();
+            //    //anim.SetFloat("Speed", 1);
+            //    //AudioManager.manager.Stop();
+            //    //AudioManager.manager.Play(AudioManager.manager.data.tutorialSippai);
+            //    Destroy(this.gameObject);
+            //}
+            //else
+            //{
+            //    data.sutnCount--;
+            //}
 
-            //UIをスタン状態にする
-            if (data.sutnCount == _data.sutnCount - 1)
-                tutorialSC.SetState(tutorialUIState.stun);
+            ////UIをスタン状態にする
+            //if (data.sutnCount == _data.sutnCount - 1)
+            //    tutorialSC.SetState(tutorialUIState.stun);
         }
     }
     IEnumerator Stun()//スタン中の処理
@@ -76,7 +76,7 @@ public class TutorialEnemy : MonoBehaviour
         stunEffect.SetActive(true);
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject);
         //UIキル状態にする
-        tutorialSC.SetState(tutorialUIState.kill);
+        tutorialSC.SetState(tutorialUIState.stun);
         yield return new WaitForSeconds(1.0f);
         SetState(EnemyData.State.stun);
         yield return new WaitForSeconds(data.sutnTime);
@@ -92,11 +92,51 @@ public class TutorialEnemy : MonoBehaviour
 
         if (data.sutnCount <= 0)
         {
-            StunReturn();
-            StartCoroutine("Stun");
+            //StunReturn();
+            //StartCoroutine("Stun");
         }
         else
             SetState(EnemyData.State.escape);
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Brush"))
+        {
+            time += Time.deltaTime;
+
+            if (time >= 0.3f)
+            {
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.kill, this.gameObject);
+                GameObject clone = Instantiate(damageEffect, transform.position, Quaternion.identity);
+                Destroy(clone, 1.0f);
+                //スタン状態なら消す
+                if (data.state == EnemyData.State.stun)
+                {
+                    //失敗アナウンスに変える
+                    //AudioSource.PlayClipAtPoint(AudioManager.manager.data.miniBom, this.gameObject.transform.position);
+                    //tutorialSC.Retry();
+                    //anim.SetFloat("Speed", 1);
+                    //AudioManager.manager.Stop();
+                    //AudioManager.manager.Play(AudioManager.manager.data.tutorialSippai);
+                    //Destroy(this.gameObject);
+                }
+                else
+                {
+                    data.sutnCount--;
+                }
+
+                //UIをスタン状態にする
+                if (data.sutnCount == _data.sutnCount - 1)
+                    tutorialSC.SetState(tutorialUIState.stun);
+
+                time = 0.0f;
+                if (data.sutnCount <= 0)
+                {
+                    StunReturn();
+                    StartCoroutine("Stun");
+                }
+            }
+        }
     }
     private void OnDestroy()
     {
