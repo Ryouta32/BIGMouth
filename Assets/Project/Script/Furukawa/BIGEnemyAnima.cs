@@ -115,14 +115,14 @@ public class BIGEnemyAnima : MonoBehaviour
     {
         tentaObj = Instantiate(tentacle, tentaPos, Quaternion.identity);
         GameObject obj = Instantiate(lightLine,new Vector3(tentaPos.x,tentaPos.y+0.5f,tentaPos.z), Quaternion.identity,tentaObj.transform);
-        obj.GetComponent<lightLine>().setPos(transform.position);
+        obj.GetComponent<lightLine>().setPos(transform.position - obj.transform.position);
         tentakill = true;
     }
     public void second()
     {
         mushObj = Instantiate(mush, mushPos, Quaternion.identity);
         GameObject obj = Instantiate(lightLine, new Vector3(mushPos.x,mushPos.y+0.5f,mushPos.z), Quaternion.identity,mushObj.transform);
-        obj.GetComponent<lightLine>().setPos(transform.position);
+        obj.GetComponent<lightLine>().setPos(transform.position - obj.transform.position);
         //ParticleSystem ps = obj.GetComponent<ParticleSystem>();
         //var sp = ps.shape;
         //sp.position = transform.position;

@@ -15,6 +15,7 @@ public class BIGBallSC : MonoBehaviour
     float time = 0;
     bool borderOver=true;
     BouSakiScript bousaki;
+    private Transform linepos;
 
     bool bigArrivalFalg = true;
     public static bool BIGFlag = false;
@@ -32,6 +33,7 @@ public class BIGBallSC : MonoBehaviour
             borderOver = false;
             matSpeed = overmatSpeed;
             GameObject obj = Instantiate(BIGBETA, pa.position, Quaternion.identity);
+            obj.GetComponent<BigEnemyScript>().linePos = linepos;
             BIGFlag = true;
             obj.transform.parent = pa;
             obj.transform.position = new Vector3(0,0,0);
@@ -54,4 +56,5 @@ public class BIGBallSC : MonoBehaviour
     }
     public void setParent(Transform tra) => pa = tra;
     public void setSaki(BouSakiScript saki) => bousaki = saki;
+    public void setLinePos(Transform s) => linepos = s;
 }
