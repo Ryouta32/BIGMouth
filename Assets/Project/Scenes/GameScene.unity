@@ -258,7 +258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788187192559106478, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7858607844015260681, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
       propertyPath: m_Enabled
@@ -328,8 +328,7 @@ PrefabInstance:
       propertyPath: m_ClearFlags
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5693254927435535778, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5571227293387096314, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
