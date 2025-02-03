@@ -49,7 +49,7 @@ public class BouSakiScript : MonoBehaviour
     bool on = true;
     Vector3 hitpoint;
     public bool OnHale;
-    float showerPoint = 1;
+    public float showerPoint = 1;
     [SerializeField] float showerLimit;
     [SerializeField] float showerThreshold;
     [SerializeField] float coolTime;
@@ -62,6 +62,7 @@ public class BouSakiScript : MonoBehaviour
 
     [SerializeField] GameObject yogosi;
     [SerializeField] float showerSpeed = 10;
+    public float t = 0;
     void Start()
     {
         hitpoint = Vector3.zero;
@@ -74,8 +75,11 @@ public class BouSakiScript : MonoBehaviour
     {
         if (showerPoint >= showerLimit)
             showerPoint = showerLimit;
-        slider.value = showerPoint;
 
+        Debug.Log("みー");
+           
+        slider.value = Mathf.Lerp(slider.value,showerPoint,Time.deltaTime);
+        //t += Time.deltaTime; 
         //showerPoint = 1; //デバッグ用
         //スキルの判定
         if (showerPoint > 0)
@@ -150,6 +154,8 @@ public class BouSakiScript : MonoBehaviour
             time = 0;
             Instantiate(ShineEffect, transform.position, transform.rotation);
         }
+        if (other.transform.tag == "Wall")
+            showerPoint += Time.deltaTime * 10;
     }
     private void OnCollisionExit(Collision col)
     {
@@ -177,6 +183,8 @@ public class BouSakiScript : MonoBehaviour
             time = 0;
             Instantiate(ShineEffect, transform.position, transform.rotation);
         }
+        if (other.tag == "Wall")
+            showerPoint += Time.deltaTime*10;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -294,6 +302,8 @@ public class BouSakiScript : MonoBehaviour
     public float GetInhaleDis() => inHaleDis;
     public bool GetInHale() => OnHale;
     public float GetInHaleSpeed() => inHaleSpeed;
-    public void AddShowerPoint(float x) => showerPoint += x;
+    public void AddShowerPoint(float x) {
+       showerPoint = x; 
+    }
     public float GetCool() => cool / coolTime;
 }

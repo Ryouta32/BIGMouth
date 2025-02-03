@@ -113,17 +113,22 @@ public class EnemyScript : MonoBehaviour
     }
     public void HitDamage()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.kill,this.gameObject);
-        Instantiate(damageEffect, transform.position, Quaternion.identity);
+
         if (data.state == EnemyData.State.stun)
         {
-            destroyObj();
-            if (destorySplash != null)
-                Instantiate(destorySplash, transform.position, Quaternion.identity);
-            AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);
-            kill();
+            //destroyObj();
+            //if (destorySplash != null)
+            //    Instantiate(destorySplash, transform.position, Quaternion.identity);
+            //AudioSource.PlayClipAtPoint(AudioManager.manager.data.damage, this.gameObject.transform.position);
+            //kill();
+            return;
         }
-        data.sutnCount--;
+        else
+        {
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.kill, this.gameObject);
+            Instantiate(damageEffect, transform.position, Quaternion.identity);
+            data.sutnCount--;
+        }
         //Debug.Log(data.sutnCount);
     }
     IEnumerator Stun()//スタン中の処理
