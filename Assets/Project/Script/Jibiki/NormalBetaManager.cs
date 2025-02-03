@@ -11,6 +11,7 @@ public class NormalBetaManager : MonoBehaviour
     [SerializeField] GameObject InEffect;
     [SerializeField] float repeattime;
     [SerializeField] BoxCollider[] col;
+    [SerializeField] tentacleLine line;
 
     Animator anim;
     int number;
@@ -63,7 +64,7 @@ public class NormalBetaManager : MonoBehaviour
             //ここのｙ座標どうしたいいのかあんまりわかってないよ
             gameObject.transform.position = new Vector3(Children[number].transform.position.x, SpawnPoint.transform.position.y, Children[number].transform.position.z);
         }
-
+        line.setPos();
 
         anim.SetBool("Down", false);
         colsignal = true;

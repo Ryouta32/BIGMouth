@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8333750449066432663}
   - component: {fileID: 8443009577141216268}
+  - component: {fileID: 4493777503630997705}
   m_Layer: 0
   m_Name: Tentacle
   m_TagString: Untagged
@@ -46,6 +47,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab3ec25e32ce0c4380714d75e39cb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4493777503630997705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268547068583936198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03095f5e578e12247a633359940b4ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos: {fileID: 7525042778838316063}
 --- !u!1001 &886971816779213091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -250,6 +264,10 @@ PrefabInstance:
       propertyPath: destorySplash
       value: 
       objectReference: {fileID: 5025516467825413144, guid: 1dcd40f4248f1004ea8449729878e456, type: 3}
+    - target: {fileID: 1785918634418855042, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: line
+      value: 
+      objectReference: {fileID: 4493777503630997705}
     - target: {fileID: 1785918634418855042, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: SpawnPoint
       value: 
