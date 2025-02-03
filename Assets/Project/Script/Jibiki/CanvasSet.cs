@@ -5,14 +5,17 @@ using UnityEngine;
 public class CanvasSet : MonoBehaviour
 {
     RectTransform rect;
-
     OVRScenePlane floor;
+    OVRSceneManager ovrSceneManager;
     float posy;
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        onAnchorsLoaded();
+        ovrSceneManager = GameObject.Find("OVRSceneManager").GetComponent<OVRSceneManager>();
+
+        //ルーム設定の読み込みが成功した時のコールバック登録
+        ovrSceneManager.SceneModelLoadedSuccessfully += onAnchorsLoaded;
     }
 
     void onAnchorsLoaded()
