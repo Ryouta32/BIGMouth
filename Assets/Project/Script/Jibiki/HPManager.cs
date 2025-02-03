@@ -18,7 +18,7 @@ public class HPManager : MonoBehaviour
     TextMeshProUGUI textText;
 
     public static float time;
-    float maxtime = 120.0f;
+    float maxtime = 180.0f;
 
     // Start is called before the first frame update
     void Start()
