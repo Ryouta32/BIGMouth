@@ -15,7 +15,7 @@ public class lightLine : MonoBehaviour
     {
             var sp = ps.shape;
             sp.position = pos;
-            transform.localPosition = new Vector3(0,1,0);
+            //transform.localPosition = new Vector3(0,1,0);
     }
     public void setPos(Vector3 x) => pos = x;
 
