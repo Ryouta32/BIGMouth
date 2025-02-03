@@ -33,7 +33,7 @@ public class TutorialSpawn : MonoBehaviour
         {
             if (classification.Contains(OVRSceneManager.Classification.WallArt))
             {
-                Vector3 pos = new Vector3(classification.transform.position.x, floor.transform.position.y + 2f, classification.transform.position.z);
+                Vector3 pos = new Vector3(classification.transform.position.x, floor.transform.position.y + 1.4f, classification.transform.position.z);
                 GameObject obj = Instantiate(Main, pos, Quaternion.identity);
                 obj.transform.localEulerAngles = new Vector3(0, 90, 0);
                 Tutorial.setStageAnima(obj.GetComponent<Animator>());

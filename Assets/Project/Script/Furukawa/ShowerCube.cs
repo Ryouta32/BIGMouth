@@ -58,7 +58,7 @@ public class ShowerCube : MonoBehaviour
                         pieceManager.AddItem(clone.transform);
                         pieceManager.CountStart();
                     }
-                    HPManager.time -= 2;
+                    HPManager.time -= 1;
                     HPManager.hpPiece += 1;
                 }
             }

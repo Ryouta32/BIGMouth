@@ -63,8 +63,23 @@ public class AudioData : ScriptableObject
     [Tooltip("ゲームオーバー")] public AudioClip gameoverBGM;
     [Tooltip("ボス")] public AudioClip bossBGM;
 
-    [Header("ボイス")]
+    [Header("ドラゴンボイス")]
     [Tooltip("たすけて")] public AudioClip help;
+    [Tooltip("うぉえ")] public AudioClip haki;
+    [Tooltip("ぎゃおん")] public AudioClip gyaon;
+    [Tooltip("このバリア何かから力を得ているようだ")] public AudioClip konobaria;
+    [Tooltip("よごれを落としてくれてありがとう")] public AudioClip arigatou;
+    [Tooltip("キノコと触手を倒すんだ")] public AudioClip kinokotosyokusyu;
+    [Tooltip("キノコと触手を倒せばバリアが壊れる")] public AudioClip kinokotosyokusyubaria;
+    [Tooltip("キノコを倒すんだ")] public AudioClip kinokotaosu;
+    [Tooltip("触手を倒すんだ")] public AudioClip syokusyutaosu;
+    [Tooltip("君の持っているそのクリーナーでベタを退治してくれ")] public AudioClip taiji;
+    [Tooltip("咳1")] public AudioClip seki1;
+    [Tooltip("咳2")] public AudioClip seki2;
+    [Tooltip("空間が崩壊してきているバブルで直すんだ")] public AudioClip baburudenaosu;
+
+
+    [Header("ボイス")]
     [Tooltip("あ、、、せかいがわれてしまった")] public AudioClip worldBreak;
     [Tooltip("せかいが割れそうだよー")] public AudioClip worldBreakAbout;
     [Tooltip("へるぷみー")] public AudioClip helpme;
