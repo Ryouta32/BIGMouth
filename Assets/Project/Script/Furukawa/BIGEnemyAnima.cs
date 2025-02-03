@@ -122,7 +122,7 @@ public class BIGEnemyAnima : MonoBehaviour
     {
         mushObj = Instantiate(mush, mushPos, Quaternion.identity);
         GameObject obj = Instantiate(lightLine, new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), Quaternion.identity,mushObj.transform);
-        obj.GetComponent<lightLine>().setPos( tentaPos - transform.position );
+        obj.GetComponent<lightLine>().setPos( mushPos - transform.position );
         //ParticleSystem ps = obj.GetComponent<ParticleSystem>();
         //var sp = ps.shape;
         //sp.position = transform.position;
