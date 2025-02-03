@@ -122,7 +122,7 @@ public class tutorialScript : MonoBehaviour
     public void setStageAnima(Animator animator) => StageAnima = animator;
     public void SetPos(Vector3 pos)
     {
-        uIScript.gameObject.transform.position = new Vector3(pos.x, pos.y + 2, pos.z);
+        uIScript.gameObject.transform.position = new Vector3(pos.x, pos.y, pos.z);
         fastPos = pos;
     }
     public Vector3 GetPos() => fastPos;

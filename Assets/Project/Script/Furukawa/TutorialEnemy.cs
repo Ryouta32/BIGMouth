@@ -23,7 +23,7 @@ public class TutorialEnemy : MonoBehaviour
         tutorialSC = GameObject.Find("tutorial").GetComponent<tutorialScript>();
         //anim = gameObject.GetComponent<Animator>();
 
-        tutorialSC.SetPos(transform.position);
+        //tutorialSC.SetPos(transform.position);
         if (SetOff)
             Destroy(gameObject);
     }
@@ -76,7 +76,7 @@ public class TutorialEnemy : MonoBehaviour
         stunEffect.SetActive(true);
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject);
         //UIキル状態にする
-        tutorialSC.SetState(tutorialUIState.stun);
+        tutorialSC.SetState(tutorialUIState.kill);
         yield return new WaitForSeconds(1.0f);
         SetState(EnemyData.State.stun);
         yield return new WaitForSeconds(data.sutnTime);

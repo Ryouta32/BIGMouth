@@ -5562,7 +5562,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4873773045731372756}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -5970,7 +5970,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5589002578052551937}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -6435,7 +6435,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8732551517823867366}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -6880,6 +6880,7 @@ MonoBehaviour:
   slider: {fileID: 8188297735176210497}
   clearSC: {fileID: 0}
   OnHale: 0
+  showerPoint: 1
   showerLimit: 10
   showerThreshold: 5
   coolTime: 5
@@ -6890,6 +6891,7 @@ MonoBehaviour:
   brushPaints: []
   yogosi: {fileID: 0}
   showerSpeed: 10
+  t: 0
 --- !u!65 &1195390217049924833
 BoxCollider:
   m_ObjectHideFlags: 0
