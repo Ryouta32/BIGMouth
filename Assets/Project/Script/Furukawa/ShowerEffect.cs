@@ -54,5 +54,9 @@ public class ShowerEffect : MonoBehaviour
                 break;
             }
         }
+        if (other.GetComponent<BIGEnemyWeekPoint>())
+        {
+            other.GetComponent<BIGEnemyWeekPoint>().Damage();
+        }
     }
 }
