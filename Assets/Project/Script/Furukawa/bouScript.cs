@@ -31,7 +31,7 @@ public class bouScript : MonoBehaviour
 
         if (saki.GetHit() == Vector3.zero)
             return oldPos - ovr.rightHandAnchor.position;
-        float hitdis = Vector3.Distance(hitpos, saki.GetHit()); ;
+        float hitdis = Vector3.Distance(hitpos, saki.GetHit());
 
         return pos;
     }
