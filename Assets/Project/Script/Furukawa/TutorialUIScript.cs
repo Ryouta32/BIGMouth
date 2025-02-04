@@ -57,7 +57,7 @@ public class TutorialUIScript : MonoBehaviour
                 {
                     states[(int)tutorialUIState.wall] = false;
                     AudioManager.manager.Stop();
-                    AudioManager.manager.Play(AudioManager.manager.data.tutorial3);
+                    AudioManager.manager.Play(AudioManager.manager.data.tutorial4);
                 }
                 break;
         }

@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 6251023661799588135}
   - component: {fileID: 8736027962353961517}
   - component: {fileID: 7264764975052780740}
+  - component: {fileID: 8179952909670615252}
   m_Layer: 11
   m_Name: Sphere.1
   m_TagString: Enemy
@@ -218,7 +219,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -238,6 +239,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bigSC: {fileID: -5267865566224933534}
   barrier: 1
+--- !u!54 &8179952909670615252
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454166069861802582}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2106212261557812782
 GameObject:
   m_ObjectHideFlags: 0
@@ -16345,7 +16373,6 @@ MonoBehaviour:
   lightLine: {fileID: 453407045826943307, guid: 9015fff77cd573d48b95cebb288b482d, type: 3}
   DestroyEffect: {fileID: 7344035406724909251, guid: 667329117f92a9845a84f95cb5ed4ce9, type: 3}
   mainRender: {fileID: 5491856026002258210}
-  ligthtPos: {fileID: 9206104243817590102}
   ball: {fileID: 7143367345093843689, guid: 1ce3fbe706ff34f4b8480e59466c4717, type: 3}
 --- !u!4 &3554532013456081295 stripped
 Transform:
@@ -16691,11 +16718,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!4 &9206104243817590102 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6872958647615561307, guid: 49a9d8c5482cfb447863e8b6b708edaa, type: 3}
-  m_PrefabInstance: {fileID: 2351723916200096525}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6835641033715793513
 PrefabInstance:
   m_ObjectHideFlags: 0

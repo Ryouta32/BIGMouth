@@ -76,8 +76,6 @@ public class BouSakiScript : MonoBehaviour
         if (showerPoint >= showerLimit)
             showerPoint = showerLimit;
 
-        Debug.Log("みー");
-           
         slider.value = Mathf.Lerp(slider.value,showerPoint,Time.deltaTime);
         //t += Time.deltaTime; 
         //showerPoint = 1; //デバッグ用
