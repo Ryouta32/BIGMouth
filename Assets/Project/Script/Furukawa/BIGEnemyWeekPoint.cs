@@ -7,7 +7,10 @@ public class BIGEnemyWeekPoint : MonoBehaviour
     private int count = 0;
     private void OnTriggerEnter(Collider other)
     {
-        if (!bigSC.GetInvincible())
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+
             if (other.transform.tag == "Brush")
             {
                 Damage();
@@ -15,7 +18,9 @@ public class BIGEnemyWeekPoint : MonoBehaviour
     }
     public void Damage()
     {
-        count++;
+        if (bigSC.GetInvincible())
+            return;
+            count++;
         AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, this.gameObject);
         if (count >= bigSC.rubCount)
         {

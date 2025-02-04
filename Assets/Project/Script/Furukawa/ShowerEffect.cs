@@ -19,7 +19,7 @@ public class ShowerEffect : MonoBehaviour
     } 
     private void OnParticleCollision(GameObject other)
     {
-        //Debug.Log("わあ");
+        Debug.Log(other.gameObject.name+ other.GetComponent<BIGEnemyWeekPoint>());
 
         PaintManager paintManager = new PaintManager();
 
@@ -56,7 +56,15 @@ public class ShowerEffect : MonoBehaviour
         }
         if (other.GetComponent<BIGEnemyWeekPoint>())
         {
-            other.GetComponent<BIGEnemyWeekPoint>().Damage();
+            p_RefParticle.GetCollisionEvents(other, p_CollisionEventList);
+            Debug.Log("waa");
+            foreach (ParticleCollisionEvent collisionEvent in p_CollisionEventList)
+            {
+
+                other.GetComponent<BIGEnemyWeekPoint>().Damage();
+                // 今回は1つ目のヒット情報のみ処理する
+                break;
+            }
         }
     }
 }

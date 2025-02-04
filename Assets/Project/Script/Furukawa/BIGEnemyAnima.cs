@@ -116,6 +116,7 @@ public class BIGEnemyAnima : MonoBehaviour
         tentaObj = Instantiate(tentacle, tentaPos, Quaternion.identity);
         GameObject obj = Instantiate(lightLine,new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), Quaternion.identity,tentaObj.transform);
         obj.GetComponent<lightLine>().setPos( tentaPos - transform.position );
+        tentaObj.GetComponent<tentacleLine>().SetLine(obj.GetComponent<lightLine>());
         tentakill = true;
     }
     public void second()

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4330d238d2ade1e4b871dac3dca46af0, type: 3}
   m_Name: Tutorial
   m_EditorClassIdentifier: 
-  sutnCount: 5
-  sutnTime: 20
+  sutnCount: 12
+  sutnTime: 90000
   returnTime: 0
   speed: 0
   state: 0

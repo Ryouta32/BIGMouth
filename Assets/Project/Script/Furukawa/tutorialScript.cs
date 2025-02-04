@@ -13,7 +13,6 @@ public class tutorialScript : MonoBehaviour
     [SerializeField]List<TutorialPieceManager> pieceManagers = new List<TutorialPieceManager>();
     //[SerializeField] GameObject Timeline;
     GameObject obj;
-    AudioSource source;
     bool isAudio = true;
     bool isClear = false;
     bool isRetry = false;
@@ -25,19 +24,17 @@ public class tutorialScript : MonoBehaviour
     {
         //Timeline.SetActive(false);
         wall = false;
-        source = GetComponent<AudioSource>();
-        source.clip = AudioManager.manager.data.announce;
-        source.Play();
+        AudioManager.manager.Play(AudioManager.manager.data.announce);
     }
 
     void Update()
     {
         if (!isClear)
         {
-            if ((!source.isPlaying && isAudio) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) && isAudio) || Input.GetKeyDown(KeyCode.LeftShift))
+            if ((!AudioManager.manager.GetSource().isPlaying && isAudio) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) && isAudio) || Input.GetKeyDown(KeyCode.LeftShift))
             {
                 isAudio = false;
-                source.Stop();
+                AudioManager.manager.GetSource().Stop();
                 Play();
                 //CLEAR();
                 //if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -45,7 +42,7 @@ public class tutorialScript : MonoBehaviour
             }
         }
         else
-        if (!source.isPlaying && isAudio)
+        if (!AudioManager.manager.GetSource().isPlaying && isAudio)
         {
             isAudio = false;
             StageAnima.SetTrigger("Start");
@@ -58,13 +55,13 @@ public class tutorialScript : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger))
             CLEAR();
-        if (isRetry && !source.isPlaying && uianima)
-        {
-            isRetry = false;
-            //obj = Instantiate(fastBeta, transform.position, Quaternion.identity);
-            obj.GetComponent<TutorialEnemy>().SetTutorial(this);
-            source.clip = AudioManager.manager.data.announce;
-        }
+        //if (isRetry && !source.isPlaying && uianima)
+        //{
+        //    isRetry = false;
+        //    //obj = Instantiate(fastBeta, transform.position, Quaternion.identity);
+        //    obj.GetComponent<TutorialEnemy>().SetTutorial(this);
+        //    source.clip = AudioManager.manager.data.announce;
+        //}
 
     }
     public void Play()
@@ -92,9 +89,8 @@ public class tutorialScript : MonoBehaviour
         //スタート処理。ドラゴンどうやったら時間弄れるんや
         if (!isClear)
         {
-            source.clip = AudioManager.manager.data.free;
-            source.Stop();
-            source.Play();
+            AudioManager.manager.Stop();
+            AudioManager.manager.Play(AudioManager.manager.data.free);
             isAudio = true;
             //Timeline.SetActive(true);
             isClear = true;
@@ -110,10 +106,7 @@ public class tutorialScript : MonoBehaviour
     }
     IEnumerator wallStart()
     {
-        AudioSource source = GetComponent<AudioSource>();
-        yield return new WaitWhile(() => source.isPlaying);
-        AudioManager.manager.Stop();
-        AudioManager.manager.Play(AudioManager.manager.data.tutorial4);//壁アナウンス
+        yield return new WaitWhile(() =>AudioManager.manager.GetSource().isPlaying);
         SetState(tutorialUIState.wall);
         for (int i = 0; i < pieceManagers.Count; i++)
             pieceManagers[i].WallStart();

@@ -45,49 +45,58 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] GameObject InHoleObj;
     [Header("シャワーパワー")]
     [SerializeField] Slider slider;
+    [SerializeField] Slider sliderLight;
     [SerializeField] GameClearSC clearSC;
     bool on = true;
     Vector3 hitpoint;
     public bool OnHale;
     public float showerPoint = 1;
+    [Header("シャワーパワーの上限")]
     [SerializeField] float showerLimit;
+    [Header("シャワーパワーの初期値")]
     [SerializeField] float showerThreshold;
-    [SerializeField] float coolTime;
+    [Header("床壁をこすった時の回復量")]
+    [SerializeField] float showerHeelPower;
+    //[SerializeField] float coolTime;
     [SerializeField] SpriteRenderer image;
     [SerializeField] Sprite InholeSp;
     [SerializeField] Sprite NoholeSp;
     [SerializeField] float inHoleTime;
-    private float cool;
+    //private float cool;
     [SerializeField] Sprite[] brushPaints;
 
     [SerializeField] GameObject yogosi;
     [SerializeField] float showerSpeed = 10;
-    public float t = 0;
+    float ShowerPointVal=0;
+
     void Start()
     {
         hitpoint = Vector3.zero;
         slider.maxValue = showerLimit;
+        sliderLight.maxValue = showerLimit;
         showerPoint = showerThreshold;
-        InHoleObj.SetActive(false);
     }
 
     void Update()
     {
         if (showerPoint >= showerLimit)
             showerPoint = showerLimit;
+        if (ShowerPointVal >= showerLimit)
+            ShowerPointVal = showerLimit;
 
-        Debug.Log("みー");
-           
-        slider.value = Mathf.Lerp(slider.value,showerPoint,Time.deltaTime);
+        ShowerPointVal = Mathf.Lerp(slider.value,showerPoint,Time.deltaTime);
+        slider.value = ShowerPointVal;
+        sliderLight.value = showerPoint;
         //t += Time.deltaTime; 
         //showerPoint = 1; //デバッグ用
         //スキルの判定
-        if (showerPoint > 0)
+        if (ShowerPointVal > 0)
         {
             if (on && OVRInput.Get(actionBtn) || (on && Input.GetKey(KeyCode.Space)))
             {
                 ShowerObj.Play();
                 showerPoint -= Time.deltaTime * showerSpeed;
+                ShowerPointVal -= Time.deltaTime * showerSpeed;
                 StartCoroutine("ShowerTime");
             }
         }
@@ -98,15 +107,15 @@ public class BouSakiScript : MonoBehaviour
         {
             ShowerStop();
         }
-        cool = 0;
+        //cool = 0;
         image.sprite = InholeSp;
         //s\吸い込み判定
-        if (OVRInput.Get(showerBtn) || Input.GetMouseButton(0))
+        if (OVRInput.GetDown(showerBtn) || Input.GetMouseButtonDown(0))
         {
             OnHale = true;
             Inhale();
         }
-        if (OVRInput.GetUp(showerBtn))
+        if (OVRInput.GetUp(showerBtn)|| Input.GetMouseButtonUp(0))
             UpInhale();
     }
     IEnumerator ShowerTime()
@@ -132,14 +141,15 @@ public class BouSakiScript : MonoBehaviour
         }
         else
                 AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, this.gameObject);
-        InHoleObj.SetActive(true);
+        InHoleObj.GetComponent<ParticleSystem>().Play() ;
         //StartCoroutine("UpInhale");
     }
     private void UpInhale()
     {
         //yield return new WaitForSeconds(inHoleTime);
         OnHale = false;
-        InHoleObj.SetActive(false);
+        InHoleObj.GetComponent<ParticleSystem>().Stop();
+
         GetComponent<AudioSource>().Stop();
         //image.sprite = NoholeSp;
         //cool = coolTime;
@@ -184,7 +194,7 @@ public class BouSakiScript : MonoBehaviour
             Instantiate(ShineEffect, transform.position, transform.rotation);
         }
         if (other.tag == "Wall")
-            showerPoint += Time.deltaTime*10;
+            showerPoint += Time.deltaTime*showerHeelPower;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -305,5 +315,5 @@ public class BouSakiScript : MonoBehaviour
     public void AddShowerPoint(float x) {
        showerPoint = x; 
     }
-    public float GetCool() => cool / coolTime;
+    //public float GetCool() => cool / coolTime;
 }

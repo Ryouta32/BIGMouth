@@ -564,6 +564,10 @@ PrefabInstance:
       value: Stick
       objectReference: {fileID: 0}
     - target: {fileID: 3352100931364111347, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352100931364111347, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -615,6 +619,14 @@ PrefabInstance:
       propertyPath: clearSC
       value: 
       objectReference: {fileID: 500333606}
+    - target: {fileID: 9083625445422866713, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083625445422866713, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -23,9 +23,11 @@ public class TutorialEnemy : MonoBehaviour
         tutorialSC = GameObject.Find("tutorial").GetComponent<tutorialScript>();
         //anim = gameObject.GetComponent<Animator>();
 
-        //tutorialSC.SetPos(transform.position);
         if (SetOff)
+        {
+            tutorialSC.SetPos(transform.position);
             Destroy(gameObject);
+        }
     }
 
     void Update()
@@ -77,7 +79,6 @@ public class TutorialEnemy : MonoBehaviour
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject);
         //UIキル状態にする
         tutorialSC.SetState(tutorialUIState.kill);
-        yield return new WaitForSeconds(1.0f);
         SetState(EnemyData.State.stun);
         yield return new WaitForSeconds(data.sutnTime);
 
@@ -90,13 +91,13 @@ public class TutorialEnemy : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
 
-        if (data.sutnCount <= 0)
-        {
-            //StunReturn();
-            //StartCoroutine("Stun");
-        }
-        else
-            SetState(EnemyData.State.escape);
+        //if (data.sutnCount <= 0)
+        //{
+        //    //StunReturn();
+        //    //StartCoroutine("Stun");
+        //}
+        //else
+        //    SetState(EnemyData.State.escape);
     }
     private void OnCollisionStay(Collision collision)
     {
@@ -106,9 +107,7 @@ public class TutorialEnemy : MonoBehaviour
 
             if (time >= 0.3f)
             {
-                AudioManager.manager.PlayPoint(AudioManager.manager.data.kill, this.gameObject);
-                GameObject clone = Instantiate(damageEffect, transform.position, Quaternion.identity);
-                Destroy(clone, 1.0f);
+
                 //スタン状態なら消す
                 if (data.state == EnemyData.State.stun)
                 {
@@ -122,6 +121,9 @@ public class TutorialEnemy : MonoBehaviour
                 }
                 else
                 {
+                    AudioManager.manager.PlayPoint(AudioManager.manager.data.kill, this.gameObject);
+                    GameObject clone = Instantiate(damageEffect, transform.position, Quaternion.identity);
+                    Destroy(clone, 1.0f);
                     data.sutnCount--;
                 }
 

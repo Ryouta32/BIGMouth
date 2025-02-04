@@ -99,5 +99,5 @@ public class AudioManager : MonoBehaviour
         if(source!=null)
         source.clip = null;
     }
-    
+    public AudioSource GetSource() => source;
 }
