@@ -45,6 +45,7 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] GameObject InHoleObj;
     [Header("シャワーパワー")]
     [SerializeField] Slider slider;
+    [SerializeField] Slider sliderLight;
     [SerializeField] GameClearSC clearSC;
     bool on = true;
     Vector3 hitpoint;
@@ -62,11 +63,13 @@ public class BouSakiScript : MonoBehaviour
 
     [SerializeField] GameObject yogosi;
     [SerializeField] float showerSpeed = 10;
-    public float t = 0;
+    float ShowerPointVal=0;
+
     void Start()
     {
         hitpoint = Vector3.zero;
         slider.maxValue = showerLimit;
+        sliderLight.maxValue = showerLimit;
         showerPoint = showerThreshold;
         InHoleObj.SetActive(false);
     }
@@ -75,17 +78,22 @@ public class BouSakiScript : MonoBehaviour
     {
         if (showerPoint >= showerLimit)
             showerPoint = showerLimit;
+        if (ShowerPointVal >= showerLimit)
+            ShowerPointVal = showerLimit;
 
-        slider.value = Mathf.Lerp(slider.value,showerPoint,Time.deltaTime);
+        ShowerPointVal = Mathf.Lerp(slider.value,showerPoint,Time.deltaTime);
+        slider.value = ShowerPointVal;
+        sliderLight.value = showerPoint;
         //t += Time.deltaTime; 
         //showerPoint = 1; //デバッグ用
         //スキルの判定
-        if (showerPoint > 0)
+        if (ShowerPointVal > 0)
         {
             if (on && OVRInput.Get(actionBtn) || (on && Input.GetKey(KeyCode.Space)))
             {
                 ShowerObj.Play();
                 showerPoint -= Time.deltaTime * showerSpeed;
+                ShowerPointVal -= Time.deltaTime * showerSpeed;
                 StartCoroutine("ShowerTime");
             }
         }
@@ -182,7 +190,7 @@ public class BouSakiScript : MonoBehaviour
             Instantiate(ShineEffect, transform.position, transform.rotation);
         }
         if (other.tag == "Wall")
-            showerPoint += Time.deltaTime*10;
+            showerPoint += Time.deltaTime*2;
     }
     private void OnTriggerEnter(Collider other)
     {

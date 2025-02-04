@@ -23,9 +23,11 @@ public class TutorialEnemy : MonoBehaviour
         tutorialSC = GameObject.Find("tutorial").GetComponent<tutorialScript>();
         //anim = gameObject.GetComponent<Animator>();
 
-        //tutorialSC.SetPos(transform.position);
         if (SetOff)
+        {
+            tutorialSC.SetPos(transform.position);
             Destroy(gameObject);
+        }
     }
 
     void Update()

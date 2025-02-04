@@ -21,5 +21,6 @@ public class floorSet : MonoBehaviour
         floor = sceneRoom.Floor;
         posy = floor.transform.position.y;
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, posy, gameObject.transform.position.z);
+        transform.position += Vector3.up*0.1f;
     }
 }
