@@ -220,7 +220,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1106
         y: 1427
-        width: 918
+        width: 615
         height: 309
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -294,27 +294,6 @@ TextureImporter:
       bones: []
       spriteID: c715252d35955ec4bad1f4dace31aff1
       internalID: -56176204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BouUI_40
-      rect:
-        serializedVersion: 2
-        x: 1337
-        y: 692
-        width: 699
-        height: 700
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c91b1cb668543945bc10cbcad9b81b5
-      internalID: -1297418109
       vertices: []
       indices: 
       edges: []
@@ -433,7 +412,7 @@ TextureImporter:
         width: 309
         height: 309
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,6 +420,27 @@ TextureImporter:
       bones: []
       spriteID: cf37ef72749a9bc4fa93e923d4ee6151
       internalID: 266462335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_3
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 16
+        width: 158
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac6d4475c2587d49830b95f812cfedd
+      internalID: -442073069
       vertices: []
       indices: 
       edges: []
