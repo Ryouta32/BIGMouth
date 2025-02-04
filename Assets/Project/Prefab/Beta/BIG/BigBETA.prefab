@@ -15362,10 +15362,6 @@ PrefabInstance:
       propertyPath: bigSC
       value: 
       objectReference: {fileID: -5267865566224933534}
-    - target: {fileID: 6773358513172569715, guid: cefb4b067a42c5a438aa63fb0019129c, type: 3}
-      propertyPath: barrier
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

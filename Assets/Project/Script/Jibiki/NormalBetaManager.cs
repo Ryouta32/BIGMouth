@@ -47,6 +47,7 @@ public class NormalBetaManager : MonoBehaviour
     {
         //これはupdateでやる必要はないと思う
         Children.Clear();
+        Debug.Log(SpawnPoint.transform.childCount);
         for (int i = 0; i < SpawnPoint.transform.childCount; i++)
         {
             Children.Add(SpawnPoint.transform.GetChild(i)); // GetChild()で子オブジェクトを取得

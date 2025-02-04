@@ -7366,7 +7366,7 @@ MonoBehaviour:
   showerPoint: 1
   showerLimit: 10
   showerThreshold: 5
-  coolTime: 5
+  showerHeelPower: 0
   image: {fileID: 5097283247662555605}
   InholeSp: {fileID: -1044079551, guid: 2faf94e324453f64d810f6df73ba6fa1, type: 3}
   NoholeSp: {fileID: 1113981920, guid: 2faf94e324453f64d810f6df73ba6fa1, type: 3}
@@ -7514,6 +7514,14 @@ PrefabInstance:
     - target: {fileID: 2670915625262751152, guid: 6b38687b736fac347b4085aa2b0a6858, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138354511998821129, guid: 6b38687b736fac347b4085aa2b0a6858, type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138354511998821129, guid: 6b38687b736fac347b4085aa2b0a6858, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

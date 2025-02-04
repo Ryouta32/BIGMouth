@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bigSC: {fileID: 0}
-  barrier: 0
+  barrier: 1
 --- !u!54 &6762600072382241532
 Rigidbody:
   m_ObjectHideFlags: 0

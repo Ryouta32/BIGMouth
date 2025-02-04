@@ -51,14 +51,18 @@ public class BouSakiScript : MonoBehaviour
     Vector3 hitpoint;
     public bool OnHale;
     public float showerPoint = 1;
+    [Header("シャワーパワーの上限")]
     [SerializeField] float showerLimit;
+    [Header("シャワーパワーの初期値")]
     [SerializeField] float showerThreshold;
-    [SerializeField] float coolTime;
+    [Header("床壁をこすった時の回復量")]
+    [SerializeField] float showerHeelPower;
+    //[SerializeField] float coolTime;
     [SerializeField] SpriteRenderer image;
     [SerializeField] Sprite InholeSp;
     [SerializeField] Sprite NoholeSp;
     [SerializeField] float inHoleTime;
-    private float cool;
+    //private float cool;
     [SerializeField] Sprite[] brushPaints;
 
     [SerializeField] GameObject yogosi;
@@ -71,7 +75,6 @@ public class BouSakiScript : MonoBehaviour
         slider.maxValue = showerLimit;
         sliderLight.maxValue = showerLimit;
         showerPoint = showerThreshold;
-        InHoleObj.SetActive(false);
     }
 
     void Update()
@@ -104,15 +107,15 @@ public class BouSakiScript : MonoBehaviour
         {
             ShowerStop();
         }
-        cool = 0;
+        //cool = 0;
         image.sprite = InholeSp;
         //s\吸い込み判定
-        if (OVRInput.Get(showerBtn) || Input.GetMouseButton(0))
+        if (OVRInput.GetDown(showerBtn) || Input.GetMouseButtonDown(0))
         {
             OnHale = true;
             Inhale();
         }
-        if (OVRInput.GetUp(showerBtn))
+        if (OVRInput.GetUp(showerBtn)|| Input.GetMouseButtonUp(0))
             UpInhale();
     }
     IEnumerator ShowerTime()
@@ -138,14 +141,15 @@ public class BouSakiScript : MonoBehaviour
         }
         else
                 AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, this.gameObject);
-        InHoleObj.SetActive(true);
+        InHoleObj.GetComponent<ParticleSystem>().Play() ;
         //StartCoroutine("UpInhale");
     }
     private void UpInhale()
     {
         //yield return new WaitForSeconds(inHoleTime);
         OnHale = false;
-        InHoleObj.SetActive(false);
+        InHoleObj.GetComponent<ParticleSystem>().Stop();
+
         GetComponent<AudioSource>().Stop();
         //image.sprite = NoholeSp;
         //cool = coolTime;
@@ -190,7 +194,7 @@ public class BouSakiScript : MonoBehaviour
             Instantiate(ShineEffect, transform.position, transform.rotation);
         }
         if (other.tag == "Wall")
-            showerPoint += Time.deltaTime*2;
+            showerPoint += Time.deltaTime*showerHeelPower;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -311,5 +315,5 @@ public class BouSakiScript : MonoBehaviour
     public void AddShowerPoint(float x) {
        showerPoint = x; 
     }
-    public float GetCool() => cool / coolTime;
+    //public float GetCool() => cool / coolTime;
 }
