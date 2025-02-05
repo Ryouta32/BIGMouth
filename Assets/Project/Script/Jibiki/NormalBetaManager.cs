@@ -90,6 +90,11 @@ public class NormalBetaManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        DragonVoice.TentacleDown = false;
+    }
+
     void tyuuOut()
     {
         AudioManager.manager.PlayPoint(AudioManager.manager.data.tentacleOut, this.gameObject);
