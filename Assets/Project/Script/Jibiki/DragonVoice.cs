@@ -26,10 +26,6 @@ public class DragonVoice : MonoBehaviour
             {
                 TentacleVoice();
             }
-            else if (!MushDown && !TentacleDown)
-            {
-                BothVoice();
-            }
             else
             {
                 gameObject.SetActive(false);
