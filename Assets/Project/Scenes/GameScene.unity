@@ -387,6 +387,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textText: {fileID: 558707991}
+--- !u!1 &595506640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 595506642}
+  - component: {fileID: 595506641}
+  m_Layer: 0
+  m_Name: DragonVoice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &595506641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595506640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b6d4f36d5bf7f4888c1831b2f7d3a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &595506642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595506640}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604656380 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8433172181977966716, guid: 0295ad4847b9d364bb974f59318b90e5, type: 3}
@@ -1030,6 +1074,10 @@ PrefabInstance:
       propertyPath: bouSakiScript
       value: 
       objectReference: {fileID: 1467920366}
+    - target: {fileID: 6362263773273006664, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6458889251349204214, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: paintSet.Array.size
       value: 1
@@ -1051,6 +1099,10 @@ PrefabInstance:
       value: _BumpMap
       objectReference: {fileID: 0}
     - target: {fileID: 6799037203162551875, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      propertyPath: doragon
+      value: 
+      objectReference: {fileID: 595506640}
+    - target: {fileID: 6799037203162551875, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: MashTime
       value: 30
       objectReference: {fileID: 0}
@@ -1069,7 +1121,10 @@ PrefabInstance:
     - {fileID: 797247281870582813, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6362263773273006664, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2100918356}
   m_SourcePrefab: {fileID: 100100000, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
 --- !u!1001 &1672288328
 PrefabInstance:
@@ -1310,6 +1365,32 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7216347029b3c56489486c327dfc5729, type: 3}
+--- !u!1 &2100918354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6362263773273006664, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
+  m_PrefabInstance: {fileID: 1619914390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2100918356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100918354}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.5, y: 1.5, z: 2}
+  m_Center: {x: -1.75, y: 0, z: -0.5}
 --- !u!114 &2129041026 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 33298924702648174, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
@@ -1809,3 +1890,4 @@ SceneRoots:
   - {fileID: 1672288328}
   - {fileID: 5855245441988531978}
   - {fileID: 1580719671}
+  - {fileID: 595506642}

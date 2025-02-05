@@ -11,6 +11,9 @@ public class TutorialSpawn : MonoBehaviour
     OVRSceneManager ovrSceneManager;
     OVRScenePlane floor;
 
+    RectTransform rect;
+    float posy;
+
     int i = 0;
     private void Awake()
     {
@@ -26,6 +29,10 @@ public class TutorialSpawn : MonoBehaviour
         OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
         //床
         floor = sceneRoom.Floor;
+        posy = floor.transform.position.y;
+
+        rect = GetComponent<RectTransform>();
+        rect.position = new Vector3(0, posy, 1.5f);
 
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 
