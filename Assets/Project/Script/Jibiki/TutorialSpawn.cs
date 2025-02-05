@@ -31,8 +31,8 @@ public class TutorialSpawn : MonoBehaviour
         floor = sceneRoom.Floor;
         posy = floor.transform.position.y+0.1f;
 
-        rect = GetComponent<RectTransform>();
-        rect.position = new Vector3(0, posy, 1.5f);
+        //rect = GetComponent<RectTransform>();
+        //rect.position = new Vector3(0, posy, 1.5f);
 
         var classifications = FindObjectsByType<OVRSemanticClassification>(FindObjectsSortMode.None);
 

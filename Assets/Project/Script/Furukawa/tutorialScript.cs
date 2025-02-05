@@ -71,10 +71,8 @@ public class tutorialScript : MonoBehaviour
     {
         obj = Instantiate(fastBeta, fastPos, Quaternion.identity);
         obj.GetComponent<TutorialEnemy>().SetTutorial(this);
-        uIScript.gameObject.transform.parent = obj.transform;
-        uIScript.transform.position = Vector3.zero;
-        uIScript.gameObject.transform.parent = null;
         uIScript.gameObject.SetActive(true);
+        uIScript.transform.position = fastPos;
     }
     public void Retry()
     {

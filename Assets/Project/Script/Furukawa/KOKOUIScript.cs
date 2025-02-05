@@ -5,6 +5,7 @@ using UnityEngine;
 public class KOKOUIScript : MonoBehaviour
 {
     [SerializeField] tutorialScript tutorialScript;
+    [SerializeField] GameObject main;
     private void Start()
     {
         tutorialScript = GameObject.Find("tutorial").GetComponent<tutorialScript>();
@@ -14,7 +15,7 @@ public class KOKOUIScript : MonoBehaviour
         if (collision.gameObject.tag == "Brush")
         {
             tutorialScript.KOKO();
-            Destroy(transform.root.gameObject);
+            Destroy(main);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -22,7 +23,7 @@ public class KOKOUIScript : MonoBehaviour
         if (other.tag == "Brush")
         {
             tutorialScript.KOKO();
-            Destroy(transform.root.gameObject);
+            Destroy(main);
         }
     }
 }
