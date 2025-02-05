@@ -25,8 +25,16 @@ public class NormalSekikomi : MonoBehaviour
             {
                 Vector3 pos = collisionEvent.intersection;
                 Instantiate(Beta, pos, Quaternion.identity);
+                if(Beta.name == "Mush")
+                {
+                    DragonVoice.MushDown = true;
+                }
+                else if(Beta.name == "Tentacle")
+                {
+                    DragonVoice.TentacleDown = true;
+                }
                 BetaText.betacount++;
-                Debug.Log("きたーーーーーーせいせい");
+                //Debug.Log("きたーーーーーーせいせい");
                 // 今回は1つ目のヒット情報のみ処理する
                 break;
             }

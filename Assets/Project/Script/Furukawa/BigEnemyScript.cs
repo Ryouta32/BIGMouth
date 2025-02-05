@@ -24,6 +24,8 @@ public class BigEnemyScript : MonoBehaviour
     private bool erase;
     float hagesisa = 0;
     bool invincible = false;
+
+    bool barrierFirst = false;
     public Transform linePos { get; set;}
     private void Start()
     {
@@ -126,6 +128,15 @@ public class BigEnemyScript : MonoBehaviour
     public void SetInvincible(bool x)
     {
         barrierObj.SetActive(x);
+        if(!x)
+        {
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.barriarkowareta, this.gameObject);
+        }
+        else if(x && !barrierFirst)
+        {
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.barriardeta, this.gameObject);
+            barrierFirst = true;
+        }
         invincible = x;
     }
     public bool GetInvincible() => invincible;

@@ -56,6 +56,10 @@ public class MushroomManager : MonoBehaviour
             }
         }
     }
+    void OnDestroy()
+    {
+        DragonVoice.MushDown = false;
+    }
 
     IEnumerator AnimProtection()
     {

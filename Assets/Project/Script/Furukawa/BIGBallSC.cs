@@ -33,6 +33,8 @@ public class BIGBallSC : MonoBehaviour
             borderOver = false;
             matSpeed = overmatSpeed;
             GameObject obj = Instantiate(BIGBETA, pa.position, Quaternion.identity);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.bigbetaato, this.gameObject);
+
             obj.GetComponent<BigEnemyScript>().linePos = linepos;
             BIGFlag = true;
             obj.transform.parent = pa;
@@ -43,6 +45,8 @@ public class BIGBallSC : MonoBehaviour
         {
             if(bigArrivalFalg)
             {
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.bigbetadeta, this.gameObject);
+
                 AudioManager.manager.PlayPoint(AudioManager.manager.data.bigArrival, this.gameObject);
                 bigArrivalFalg = false;
             }

@@ -48,6 +48,7 @@ public class AudioData : ScriptableObject
     [Header("ステージ")]
     [Tooltip("S-5 emergency")] public AudioClip stageEnergency;
     [Tooltip("S-6 emergency2")] public AudioClip stageEnergency2;
+    [Tooltip("壁崩れ")] public AudioClip kabekuzure;
 
     [Header("システム")]
     [Tooltip("Aぼたん")] public AudioClip Abutton;
@@ -77,6 +78,12 @@ public class AudioData : ScriptableObject
     [Tooltip("咳1")] public AudioClip seki1;
     [Tooltip("咳2")] public AudioClip seki2;
     [Tooltip("空間が崩壊してきているバブルで直すんだ")] public AudioClip baburudenaosu;
+    [Tooltip("大ベタ出現時")] public AudioClip bigbetadeta;
+    [Tooltip("大ベタが出現したあと")] public AudioClip bigbetaato;
+    [Tooltip("バリアがでたとき")] public AudioClip barriardeta;
+    [Tooltip("バリアが壊れたとき")] public AudioClip barriarkowareta;
+    [Tooltip("いたっ")] public AudioClip ita;
+    [Tooltip("僕じゃないよ")] public AudioClip bokujyanai;
 
 
     [Header("ボイス")]
