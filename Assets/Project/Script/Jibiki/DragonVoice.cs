@@ -26,7 +26,7 @@ public class DragonVoice : MonoBehaviour
             {
                 TentacleVoice();
             }
-            else if (!MushDown && !TentacleDown)
+            else if (MushDown && TentacleDown)
             {
                 BothVoice();
             }

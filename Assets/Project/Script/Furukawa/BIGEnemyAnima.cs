@@ -123,6 +123,7 @@ public class BIGEnemyAnima : MonoBehaviour
         obj.GetComponent<lightLine>().setPos( tentaPos - transform.position );
         tentaObj.GetComponent<tentacleLine>().SetLine(obj.GetComponent<lightLine>());
         tentakill = true;
+        DragonVoice.TentacleDown = true;
         Dragonvoice.SetActive(true);
     }
     public void second()
@@ -133,6 +134,8 @@ public class BIGEnemyAnima : MonoBehaviour
         //ParticleSystem ps = obj.GetComponent<ParticleSystem>();
         //var sp = ps.shape;
         //sp.position = transform.position;
+        DragonVoice.MushDown = true;
+
         mushkill = true;
     }
     public void thirdAttack()
