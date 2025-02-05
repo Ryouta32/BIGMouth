@@ -7,33 +7,35 @@ public class DragonVoice : MonoBehaviour
     public static bool MushDown = false;
     public static bool TentacleDown = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        StartCoroutine("TyuubetaVoice");
     }
 
     IEnumerator TyuubetaVoice()
     {
-        if(MushDown)
+        while (true)
         {
-            MushVoice();
+            yield return new WaitForSeconds(5);
+
+            if (MushDown)
+            {
+                MushVoice();
+            }
+            else if (TentacleDown)
+            {
+                TentacleVoice();
+            }
+            else if (!MushDown && !TentacleDown)
+            {
+                BothVoice();
+            }
+            else
+            {
+                gameObject.SetActive(false);
+                break;
+            }
         }
-        else if(TentacleDown)
-        {
-            TentacleVoice();
-        }
-        else if(!MushDown && !TentacleDown)
-        {
-            BothVoice();
-        }
-        yield return new WaitForSeconds(5);
     }
 
     void MushVoice()

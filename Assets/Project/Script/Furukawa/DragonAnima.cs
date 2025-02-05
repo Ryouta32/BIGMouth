@@ -13,6 +13,7 @@ public class DragonAnima : MonoBehaviour
     bool mush=true;
     bool tent=true;
     float normalTime = 0;
+    [SerializeField] GameObject doragon;
 
     void Start()
     {
@@ -37,7 +38,7 @@ public class DragonAnima : MonoBehaviour
         {
             anima.SetTrigger("TentacleTrigger");
             AudioManager.manager.PlayBGM(AudioManager.manager.data.seki1);
-
+            doragon.SetActive(true);
             tent = false;
         }
         if (normalTime >= MushTime&&mush)
