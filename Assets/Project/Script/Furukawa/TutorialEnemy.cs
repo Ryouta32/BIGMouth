@@ -33,10 +33,14 @@ public class TutorialEnemy : MonoBehaviour
     void Update()
     {
         Vector3 diff = bouSaki.gameObject.transform.position - transform.position;
+        var direction = bouSaki.gameObject.transform.position - transform.position;
+        direction.y = 0;
+
+        var lookRotation = Quaternion.LookRotation(direction, Vector3.up);
+        transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, 0.1f);
         if (diff.magnitude < bouSaki.GetInhaleDis() && bouSaki.GetInHale() && data.state == EnemyData.State.stun)
         {
             //吸い込みの処理
-
             bouSaki.StartOfSuction(transform.position - bouSaki.transform.position, data.type);
             inHale = true;
             //成功アナウンスに変える

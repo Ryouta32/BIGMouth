@@ -15,8 +15,7 @@ public class tutorialScript : MonoBehaviour
     GameObject obj;
     bool isAudio = true;
     bool isClear = false;
-    bool isRetry = false;
-    bool uianima = false;
+    bool koko = false;
     bool wall;
     Vector3 fastPos;
     tutorialWall tutorialWall;
@@ -24,12 +23,11 @@ public class tutorialScript : MonoBehaviour
     {
         //Timeline.SetActive(false);
         wall = false;
-        AudioManager.manager.Play(AudioManager.manager.data.announce);
     }
 
     void Update()
     {
-        if (!isClear)
+        if (!isClear&&koko)
         {
             if ((!AudioManager.manager.GetSource().isPlaying && isAudio) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) && isAudio) || Input.GetKeyDown(KeyCode.LeftShift))
             {
@@ -41,8 +39,8 @@ public class tutorialScript : MonoBehaviour
                 //CLEAR();
             }
         }
-        else
-        if (!AudioManager.manager.GetSource().isPlaying && isAudio)
+
+        if (!AudioManager.manager.GetSource().isPlaying && isAudio&&isClear)
         {
             isAudio = false;
             StageAnima.SetTrigger("Start");
@@ -64,15 +62,22 @@ public class tutorialScript : MonoBehaviour
         //}
 
     }
+    public void KOKO()
+    {
+        AudioManager.manager.Play(AudioManager.manager.data.announce);
+        koko = true;
+    }
     public void Play()
     {
         obj = Instantiate(fastBeta, fastPos, Quaternion.identity);
         obj.GetComponent<TutorialEnemy>().SetTutorial(this);
+        uIScript.gameObject.transform.parent = obj.transform;
+        uIScript.transform.position = Vector3.zero;
+        uIScript.gameObject.transform.parent = null;
         uIScript.gameObject.SetActive(true);
     }
     public void Retry()
     {
-        isRetry = true;
         UIanima.gameObject.SetActive(true);
         uIScript.Retry();
         SetState(tutorialUIState.start);
@@ -111,11 +116,9 @@ public class tutorialScript : MonoBehaviour
         for (int i = 0; i < pieceManagers.Count; i++)
             pieceManagers[i].WallStart();
     }
-    public void setanima(bool a) => uianima = a;
     public void setStageAnima(Animator animator) => StageAnima = animator;
     public void SetPos(Vector3 pos)
     {
-        uIScript.gameObject.transform.position = pos;
         fastPos = pos;
     }
     public Vector3 GetPos() => fastPos;

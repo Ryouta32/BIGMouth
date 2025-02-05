@@ -29,7 +29,7 @@ public class TutorialSpawn : MonoBehaviour
         OVRSceneRoom sceneRoom = FindAnyObjectByType<OVRSceneRoom>();
         //床
         floor = sceneRoom.Floor;
-        posy = floor.transform.position.y;
+        posy = floor.transform.position.y+0.1f;
 
         rect = GetComponent<RectTransform>();
         rect.position = new Vector3(0, posy, 1.5f);

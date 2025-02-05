@@ -40,7 +40,7 @@ MonoBehaviour:
   cleanerFix: {fileID: 8300000, guid: 911980698cc47664f9d53113b932e21d, type: 3}
   stageEnergency: {fileID: 8300000, guid: 5f29ec45cb81dc64495c7ab087279fe5, type: 3}
   stageEnergency2: {fileID: 8300000, guid: 663731989ea7f7b4c8bd8e3ebcd1b7ac, type: 3}
-  kabekuzure: {fileID: 8300000, guid: 3837f8e309be6364494f2ee165b8910f, type: 3}
+  kabekuzure: {fileID: 8300000, guid: 3ac05bbc0a8fae5459f2bcffb3d14212, type: 3}
   Abutton: {fileID: 0}
   Bbutton: {fileID: 0}
   systemStage: {fileID: 0}
