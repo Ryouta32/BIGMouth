@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialScript: {fileID: 0}
+  main: {fileID: 5460856187431763945}
 --- !u!1 &108002419027618890
 GameObject:
   m_ObjectHideFlags: 0
@@ -26956,7 +26957,6 @@ GameObject:
   - component: {fileID: 6594868794421371092}
   - component: {fileID: 7528761759152192535}
   - component: {fileID: 4237112964838860167}
-  - component: {fileID: 7090068089491606531}
   m_Layer: 5
   m_Name: Canvas.1
   m_TagString: Untagged
@@ -27048,20 +27048,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7090068089491606531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5460856187431763945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96c93d3dc35616f45b2065ac37ab63e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Tutorial: {fileID: 0}
-  Main: {fileID: 3615035441252494632}
 --- !u!1 &5488517183391046524
 GameObject:
   m_ObjectHideFlags: 0
@@ -43356,7 +43342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8412419435381056266, guid: 7d43d8ce4d4760f4ab856d8448460243, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.71
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 8412419435381056266, guid: 7d43d8ce4d4760f4ab856d8448460243, type: 3}
       propertyPath: m_LocalPosition.y
@@ -43364,7 +43350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8412419435381056266, guid: 7d43d8ce4d4760f4ab856d8448460243, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.086
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 8412419435381056266, guid: 7d43d8ce4d4760f4ab856d8448460243, type: 3}
       propertyPath: m_LocalRotation.w
