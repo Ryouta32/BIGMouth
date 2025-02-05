@@ -32,7 +32,8 @@ public class DragonVoice : MonoBehaviour
             }
             else
             {
-                gameObject.SetActive(false);
+                gameObject.GetComponent<DragonVoice>().enabled = false;
+                //gameObject.SetActive(false);
                 break;
             }
         }

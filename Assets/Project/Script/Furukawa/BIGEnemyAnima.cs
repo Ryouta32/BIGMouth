@@ -33,7 +33,7 @@ public class BIGEnemyAnima : MonoBehaviour
     bool[] bossDamage =new bool[4];
     GameObject ballObj;
 
-    GameObject Dragonvoice;
+    DragonVoice Dragonvoice;
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +44,7 @@ public class BIGEnemyAnima : MonoBehaviour
         mat = mainRender.material;
         onAnchorsLoaded();
 
-        Dragonvoice = GameObject.Find("DragonVoice");
+        Dragonvoice = GameObject.Find("DragonVoice").GetComponent<DragonVoice>();
     }
 
     private void Update()
@@ -124,7 +124,7 @@ public class BIGEnemyAnima : MonoBehaviour
         tentaObj.GetComponent<tentacleLine>().SetLine(obj.GetComponent<lightLine>());
         tentakill = true;
         DragonVoice.TentacleDown = true;
-        Dragonvoice.SetActive(true);
+        Dragonvoice.enabled = true;
     }
     public void second()
     {
