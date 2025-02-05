@@ -95,7 +95,8 @@ public class PieceManager : MonoBehaviour
 
                 //少しちからを入れる
                 obj.AddForce(transform.up * power, ForceMode.Impulse);
-
+                //崩れる音入れ
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.kabekuzure,obj.gameObject);
                 count++;
 
                 if (beta != null && count == fallcount)
