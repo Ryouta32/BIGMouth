@@ -5,6 +5,10 @@ using UnityEngine;
 public class KOKOUIScript : MonoBehaviour
 {
     [SerializeField] tutorialScript tutorialScript;
+    private void Start()
+    {
+        tutorialScript = GameObject.Find("tutorial").GetComponent<tutorialScript>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Brush")
