@@ -64,7 +64,8 @@ public class HPManager : MonoBehaviour
         //警告音鳴らす
         if(UI_HP.fillAmount >= 0.5f)
         {
-            //HPanim.Stop();
+            HPanim.SetBool("Play", false);
+            UI_HP.GetComponent<Image>().color = Color.white;
         }
 
         if (UI_HP.fillAmount < 0.5f && count)
@@ -91,7 +92,7 @@ public class HPManager : MonoBehaviour
     {
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
         Fadeanim.Play("RedFade");
-        HPanim.SetTrigger("Play");
+        HPanim.SetBool("Play", true);
         yield return new WaitForSeconds(2.0f);
         AudioManager.manager.PlayPoint(AudioManager.manager.data.baburudenaosu, this.gameObject, 2);
         yield return new WaitForSeconds(3.3f);
