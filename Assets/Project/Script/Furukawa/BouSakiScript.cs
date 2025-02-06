@@ -165,7 +165,7 @@ public class BouSakiScript : MonoBehaviour
             Instantiate(ShineEffect, transform.position, transform.rotation);
         }
         if (other.transform.tag == "Wall")
-            showerPoint += Time.deltaTime * 10;
+            showerPoint += Time.deltaTime;
     }
     private void OnCollisionExit(Collision col)
     {

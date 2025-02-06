@@ -1365,7 +1365,7 @@ PrefabInstance:
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[0].Prefab
       value: 
-      objectReference: {fileID: 5657038544419831093, guid: 411591a27a4a4a249a5b1ea888b9deb2, type: 3}
+      objectReference: {fileID: 563714354872022062, guid: 072ec2f5b2d067d43897b43271fc1322, type: 3}
     - target: {fileID: 443927376246264147, guid: 7216347029b3c56489486c327dfc5729, type: 3}
       propertyPath: PrefabOverrides.Array.data[1].Prefab
       value: 
@@ -1856,6 +1856,10 @@ PrefabInstance:
     - target: {fileID: 640574264553864682, guid: 5cf4fb47023f28f49b4780c125bf8cf4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538716766630425555, guid: 5cf4fb47023f28f49b4780c125bf8cf4, type: 3}
+      propertyPath: UIs.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1538716766630425555, guid: 5cf4fb47023f28f49b4780c125bf8cf4, type: 3}
       propertyPath: tutorialScript

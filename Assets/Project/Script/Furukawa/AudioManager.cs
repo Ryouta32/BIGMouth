@@ -52,6 +52,7 @@ public class AudioManager : MonoBehaviour
         else
             audioSource = obj.GetComponent<AudioSource>();
 
+        audioSource.spatialBlend = 1;
         audioSource.volume = manager.SEvol;
         audioSource.PlayOneShot(clip);
     }
@@ -65,6 +66,7 @@ public class AudioManager : MonoBehaviour
 
         audioSource.volume = manager.SEvol;
         loopClip = clip;
+        audioSource.spatialBlend = 1;
         loopCount= count;
         source = audioSource;
         StartCoroutine("loop");

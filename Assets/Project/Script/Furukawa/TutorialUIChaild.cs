@@ -12,15 +12,15 @@ public class TutorialUIChaild : MonoBehaviour
     [SerializeField]tutorialUIState mystate;
     [SerializeField] MeshRenderer image;
     private Vector3 startPos;
-    private void Awake()
+    private void OnEnable()
     {
         startPos = transform.position;
         mainPos += startPos;
-        //backPos += startPos;
     }
     public void SetState(tutorialUIState state)
     {
-        if(state ==mystate)
+
+        if (state ==mystate)
         {
             transform.position = mainPos;
             image.material.color = Color.white;
