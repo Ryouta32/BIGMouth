@@ -73,6 +73,7 @@ public class tutorialScript : MonoBehaviour
         obj.GetComponent<TutorialEnemy>().SetTutorial(this);
         uIScript.gameObject.SetActive(true);
         uIScript.transform.position = fastPos;
+        uIScript.transform.parent = obj.transform;
     }
     public void Retry()
     {
