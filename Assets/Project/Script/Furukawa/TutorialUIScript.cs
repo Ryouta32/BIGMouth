@@ -16,7 +16,7 @@ public class TutorialUIScript : MonoBehaviour
     private void Start()
     {
         batten.SetActive(false);
-        anima = GetComponent<Animator>();
+        //anima = GetComponent<Animator>();
         SetState(tutorialUIState.start);
     }
     public void SetState(tutorialUIState state)
@@ -65,11 +65,10 @@ public class TutorialUIScript : MonoBehaviour
     public void Retry()
     {
         batten.SetActive(true);
-        anima.SetTrigger("Sippai");
+        //anima.SetTrigger("Sippai");
     }
     public void animaEnd()
     {
-        tutorialScript.setanima(true);
         tutorialScript.Play();
         batten.SetActive(false);
     }
