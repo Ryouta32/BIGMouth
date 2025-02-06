@@ -85,8 +85,6 @@ public class ShowerCube : MonoBehaviour
                         meshcol.isTrigger = true;
                         clone.transform.parent = col.transform;
                         clone.tag = "Untagged";
-                        HPManager.time -= 2;
-                        HPManager.hpPiece += 1;
                     }
                 }
 

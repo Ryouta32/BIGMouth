@@ -9,6 +9,7 @@ public class HPManager : MonoBehaviour
     Image UI_HP;
     CanvasChange cc;
     Animation Fadeanim;
+    Animation HPanim;
     bool childFlag;
     bool count;
 
@@ -20,6 +21,10 @@ public class HPManager : MonoBehaviour
     public static float time;
     float maxtime = 180.0f;
 
+    bool timeStop = false;
+
+    float ima;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +33,7 @@ public class HPManager : MonoBehaviour
         UI_HP = GameObject.Find("HP").GetComponent<Image>();
         cc = GameObject.Find("CanvasChange").GetComponent<CanvasChange>();
         Fadeanim = GameObject.Find("RedFade").GetComponent<Animation>();
+        HPanim = GameObject.Find("HP").GetComponent<Animation>();
         textText = GameObject.Find("UIText").GetComponent<TextMeshProUGUI>();
         UI_HP.fillAmount = 1;
     }
@@ -35,19 +41,33 @@ public class HPManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float mae = UI_HP.fillAmount;
+
         time += Time.deltaTime;
-        UI_HP.fillAmount = 1 - (time / maxtime);
+        //UI_HP.fillAmount = 1 - (time / maxtime);
+        ima = hpPiece / hp;
+        //UI_HP.fillAmount = hpPiece / hp;
         if(time < 0)
         {
             time = 0;
         }
+
+        float ato = UI_HP.fillAmount;
+        UI_HP.fillAmount = hpPiece / hp;
+
+
         //UI_HP.fillAmount = hpPiece / hp;
         //Debug.Log("hp：" + hp);
         //Debug.Log("hpPiece：" + hpPiece);
         //textText.text = UI_HP.fillAmount.ToString();
 
         //警告音鳴らす
-        if (UI_HP.fillAmount < 0.5 && count)
+        if(UI_HP.fillAmount >= 0.5f && HPanim.isPlaying)
+        {
+            HPanim.Stop();
+        }
+
+        if (UI_HP.fillAmount < 0.5f && count)
         {
             count = false;
             StartCoroutine("UIcount");
@@ -71,6 +91,7 @@ public class HPManager : MonoBehaviour
     {
         AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject);
         Fadeanim.Play("RedFade");
+        HPanim.Play("HPSign");
         yield return new WaitForSeconds(2.0f);
         AudioManager.manager.PlayPoint(AudioManager.manager.data.baburudenaosu, this.gameObject);
         yield return new WaitForSeconds(3.3f);

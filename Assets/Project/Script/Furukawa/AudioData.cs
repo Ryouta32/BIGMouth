@@ -28,6 +28,7 @@ public class AudioData : ScriptableObject
     [Tooltip("攻撃")] public AudioClip attack;
     [Tooltip("キノコかさ")] public AudioClip mushKasa;
     [Tooltip("キノコかさ")] public AudioClip mushidle;
+    [Tooltip("中ベタ登場")] public AudioClip toujyou;
 
     [Header("大ベタ")]
     [Tooltip("大ベタ爆発")] public AudioClip bigBom;

@@ -25,7 +25,9 @@ public class NormalSekikomi : MonoBehaviour
             {
                 Vector3 pos = collisionEvent.intersection;
                 Instantiate(Beta, pos, Quaternion.identity);
-                if(Beta.name == "Mush")
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.toujyou, this.gameObject);
+
+                if (Beta.name == "Mush")
                 {
                     DragonVoice.MushDown = true;
                 }
