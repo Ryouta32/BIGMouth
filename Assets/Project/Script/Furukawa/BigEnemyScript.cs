@@ -130,11 +130,11 @@ public class BigEnemyScript : MonoBehaviour
         barrierObj.SetActive(x);
         if(!x)
         {
-            AudioManager.manager.PlayPoint(AudioManager.manager.data.barriarkowareta, this.gameObject);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.barriarkowareta, this.gameObject, 2);
         }
         else if(x && !barrierFirst)
         {
-            AudioManager.manager.PlayPoint(AudioManager.manager.data.barriardeta, this.gameObject);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.barriardeta, this.gameObject, 2);
             barrierFirst = true;
         }
         invincible = x;
