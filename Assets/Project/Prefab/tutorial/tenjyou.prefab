@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 8463449849579088496}
   - component: {fileID: 9013432086871214838}
   - component: {fileID: 398450158840157092}
+  - component: {fileID: 7346588514234142197}
   m_Layer: 9
   m_Name: tenjyouCollider
   m_TagString: Wall
@@ -152,6 +153,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7346588514234142197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681236843939633005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintSet:
+  - mainTextureName: _MainTex
+    normalTextureName: _BumpMap
+    heightTextureName: _ParallaxMap
+    useMainPaint: 0
+    useNormalPaint: 0
+    useHeightPaint: 0
 --- !u!1 &7662737963277018369
 GameObject:
   m_ObjectHideFlags: 0

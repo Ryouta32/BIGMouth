@@ -19,7 +19,6 @@ public class ShowerEffect : MonoBehaviour
     } 
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log(other.gameObject.name+ other.GetComponent<BIGEnemyWeekPoint>());
 
         PaintManager paintManager = new PaintManager();
 
