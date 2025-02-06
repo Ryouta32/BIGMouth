@@ -119,6 +119,7 @@ public class BIGEnemyAnima : MonoBehaviour
     public void fast()
     {
         tentaObj = Instantiate(tentacle, tentaPos, Quaternion.identity);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.toujyou, this.gameObject);
         GameObject obj = Instantiate(lightLine,new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), Quaternion.identity,tentaObj.transform);
         obj.GetComponent<lightLine>().setPos( tentaPos - transform.position );
         tentaObj.GetComponent<tentacleLine>().SetLine(obj.GetComponent<lightLine>());
@@ -129,6 +130,7 @@ public class BIGEnemyAnima : MonoBehaviour
     public void second()
     {
         mushObj = Instantiate(mush, mushPos, Quaternion.identity);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.toujyou, this.gameObject);
         GameObject obj = Instantiate(lightLine, new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), Quaternion.identity,mushObj.transform);
         obj.GetComponent<lightLine>().setPos( mushPos - transform.position );
         //ParticleSystem ps = obj.GetComponent<ParticleSystem>();
