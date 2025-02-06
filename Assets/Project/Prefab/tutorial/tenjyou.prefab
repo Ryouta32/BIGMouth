@@ -2027,7 +2027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PieceMaterial: {fileID: 2100000, guid: 418d04e4deb31a14c95e5852c2527f01, type: 2}
   StartTime: 0
-  waittime: 7
+  waittime: 1
   destroytime: 2
   power: 0
 --- !u!1 &7578591158677581545 stripped
