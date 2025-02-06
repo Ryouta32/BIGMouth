@@ -20,6 +20,10 @@ public class HPManager : MonoBehaviour
     public static float time;
     float maxtime = 180.0f;
 
+    bool timeStop = false;
+
+    float ima;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,12 +39,21 @@ public class HPManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float mae = UI_HP.fillAmount;
+
         time += Time.deltaTime;
-        UI_HP.fillAmount = 1 - (time / maxtime);
+        //UI_HP.fillAmount = 1 - (time / maxtime);
+        ima = hpPiece / hp;
+        //UI_HP.fillAmount = hpPiece / hp;
         if(time < 0)
         {
             time = 0;
         }
+
+        float ato = UI_HP.fillAmount;
+        UI_HP.fillAmount = hpPiece / hp;
+
+
         //UI_HP.fillAmount = hpPiece / hp;
         //Debug.Log("hp：" + hp);
         //Debug.Log("hpPiece：" + hpPiece);
