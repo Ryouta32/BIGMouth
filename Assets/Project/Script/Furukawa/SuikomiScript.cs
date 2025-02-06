@@ -9,7 +9,7 @@ public class SuikomiScript : MonoBehaviour
     {
         //Debug.Log(gameObject.name);
         sakiScript.AddShowerPoint(point);
-
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.suuta, sakiScript.gameObject);
         //if (clearSC != null)
         //    clearSC.Clear();
     }

@@ -24,6 +24,7 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI text;
     float time;
+    float pontime=0;
     [SerializeField] private OVRInput.RawButton actionBtn;
     [SerializeField] private OVRInput.RawButton showerBtn;
     [SerializeField] ParticleSystem ShowerObj;
@@ -158,14 +159,24 @@ public class BouSakiScript : MonoBehaviour
     private void OnCollisionStay(Collision other)
     {
         Paint(other);
-        time += Time.deltaTime;
-        if (time > 0.8f)
-        {
-            time = 0;
-            Instantiate(ShineEffect, transform.position, transform.rotation);
-        }
+
+
         if (other.transform.tag == "Wall")
-            showerPoint += Time.deltaTime * 10;
+        {
+            showerPoint += Time.deltaTime;
+            time += Time.deltaTime;
+            pontime += Time.deltaTime;
+            if (time > 0.8f)
+            {
+                time = 0;
+                Instantiate(ShineEffect, transform.position, transform.rotation);
+            }
+            if (pontime > 0.15f)
+            {
+                pontime = 0;
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.lowpon, gameObject,0.5f);
+            }
+        }
     }
     private void OnCollisionExit(Collision col)
     {
