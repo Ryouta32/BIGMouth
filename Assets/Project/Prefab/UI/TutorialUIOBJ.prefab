@@ -732,7 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waku: {fileID: 1098472427530742523}
-  mainPos: {x: 0, y: 0, z: -0.2}
+  mainPos: {x: 0, y: 0.2, z: 0}
   mystate: 0
   image: {fileID: 4069969745235193954}
 --- !u!1 &3630558874347248218
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waku: {fileID: 6538819310433596393}
-  mainPos: {x: 0, y: 0, z: -0.2}
+  mainPos: {x: 0, y: 0.2, z: 0}
   mystate: 1
   image: {fileID: 3359961270346926779}
 --- !u!1 &4151965156703278153
@@ -1529,7 +1529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waku: {fileID: 7707627168241122265}
-  mainPos: {x: 0, y: 0, z: -0.2}
+  mainPos: {x: 0, y: 0.2, z: 0}
   mystate: 3
   image: {fileID: 2152477014852270472}
 --- !u!1 &6428135260186480491
@@ -1557,7 +1557,7 @@ Transform:
   m_GameObject: {fileID: 6428135260186480491}
   serializedVersion: 2
   m_LocalRotation: {x: 0.572417, y: -0, z: -0, w: 0.81996274}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.535, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1784,7 +1784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waku: {fileID: 95539126436304561}
-  mainPos: {x: 0, y: 0, z: -0.2}
+  mainPos: {x: 0, y: 0.2, z: 0}
   mystate: 2
   image: {fileID: 8795139684271390160}
 --- !u!1 &7707627168241122265

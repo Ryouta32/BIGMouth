@@ -56,6 +56,23 @@ public class AudioManager : MonoBehaviour
         audioSource.volume = manager.SEvol;
         audioSource.PlayOneShot(clip);
     }
+    public void PlayPoint(AudioClip clip, GameObject obj,float val)
+    {
+        if (clip == null)
+        {
+            Debug.Log("音源が設定されてないよ");
+            return;
+        }
+        AudioSource audioSource;
+        if (!obj.GetComponent<AudioSource>())
+            audioSource = obj.AddComponent<AudioSource>();
+        else
+            audioSource = obj.GetComponent<AudioSource>();
+
+        audioSource.spatialBlend = 1;
+        audioSource.volume = manager.SEvol*val;
+        audioSource.PlayOneShot(clip);
+    }
     public void PlayPoint(AudioClip clip, GameObject obj,int count)
     {
         AudioSource audioSource;
