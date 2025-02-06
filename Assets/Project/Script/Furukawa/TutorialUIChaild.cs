@@ -15,14 +15,13 @@ public class TutorialUIChaild : MonoBehaviour
     private void OnEnable()
     {
         startPos = transform.position;
-        mainPos += startPos;
     }
     public void SetState(tutorialUIState state)
     {
 
         if (state ==mystate)
         {
-            transform.position = mainPos;
+            transform.localPosition += mainPos;
             image.material.color = Color.white;
             waku.SetActive(true);
             //back.transform.position = backPos;
