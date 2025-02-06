@@ -328,6 +328,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 3641230447595735772, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: m_Size.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641230447595735772, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641230447595735772, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: m_Size.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641230447595735772, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
+      propertyPath: m_Center.x
+      value: -1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3708020857275675862, guid: 19ce760d357e1384ea39e3abfa978571, type: 3}
       propertyPath: m_TagString
       value: Untagged
