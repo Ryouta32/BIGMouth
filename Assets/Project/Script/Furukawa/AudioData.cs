@@ -45,6 +45,9 @@ public class AudioData : ScriptableObject
     [Tooltip("C-5")] public AudioClip cleaner5;
     [Tooltip("シャワー")] public AudioClip shower;
     [Tooltip("C-7 fix")] public AudioClip cleanerFix;
+    [Tooltip("ポン高い")] public AudioClip highpon;
+    [Tooltip("ポン低い")] public AudioClip lowpon;
+    [Tooltip("吸った")] public AudioClip suuta;
 
     [Header("ステージ")]
     [Tooltip("S-5 emergency")] public AudioClip stageEnergency;

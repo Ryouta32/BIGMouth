@@ -26,6 +26,7 @@ MonoBehaviour:
   attack: {fileID: 8300000, guid: be1af067cf01add43bb071b8a338f112, type: 3}
   mushKasa: {fileID: 8300000, guid: 6092004608c7bcf4eba48fcd8df11ed2, type: 3}
   mushidle: {fileID: 8300000, guid: d262ec4297434bf41bdda2c88fa2f8df, type: 3}
+  toujyou: {fileID: 0}
   bigBom: {fileID: 8300000, guid: b0748ce537aa9d248bcc432f54be9091, type: 3}
   bigArrival: {fileID: 8300000, guid: 6cf790622af272a4692c3981494bceec, type: 3}
   Bigdelete: {fileID: 8300000, guid: 239a67fcad039044ab11605d47d39212, type: 3}
@@ -38,6 +39,9 @@ MonoBehaviour:
   cleaner5: {fileID: 8300000, guid: 77921070a86a73d4ab0aaf7f4633c5c8, type: 3}
   shower: {fileID: 8300000, guid: 77921070a86a73d4ab0aaf7f4633c5c8, type: 3}
   cleanerFix: {fileID: 8300000, guid: 911980698cc47664f9d53113b932e21d, type: 3}
+  highpon: {fileID: 8300000, guid: 0e260a675d843134fbaf5fc98c368d5e, type: 3}
+  lowpon: {fileID: 8300000, guid: 829a5aa15fa25c745a3993b3c1edd074, type: 3}
+  suuta: {fileID: 8300000, guid: 3c15cd0a1630cc3438bfac7548769421, type: 3}
   stageEnergency: {fileID: 8300000, guid: 5f29ec45cb81dc64495c7ab087279fe5, type: 3}
   stageEnergency2: {fileID: 8300000, guid: 663731989ea7f7b4c8bd8e3ebcd1b7ac, type: 3}
   kabekuzure: {fileID: 8300000, guid: 3ac05bbc0a8fae5459f2bcffb3d14212, type: 3}
