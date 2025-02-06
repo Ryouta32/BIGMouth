@@ -37,14 +37,14 @@ public class DragonAnima : MonoBehaviour
         if (normalTime >= TentaTime&&tent)
         {
             anima.SetTrigger("TentacleTrigger");
-            AudioManager.manager.PlayPoint(AudioManager.manager.data.seki1, gameObject);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.seki1, gameObject, 2);
             doragon.SetActive(true);
             tent = false;
         }
         if (normalTime >= MushTime&&mush)
         {
             anima.SetTrigger("MushTrigger");
-            AudioManager.manager.PlayPoint(AudioManager.manager.data.seki2, gameObject);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.seki2, gameObject, 2);
             mush = false;
         }
     }
@@ -53,5 +53,5 @@ public class DragonAnima : MonoBehaviour
         AudioManager.manager.PlayBGM(AudioManager.manager.data.mainBGM);
     }
     public void PlayHelp()=>
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.help, gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.help, gameObject, 2);
 }

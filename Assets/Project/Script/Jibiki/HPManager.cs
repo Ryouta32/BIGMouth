@@ -93,7 +93,7 @@ public class HPManager : MonoBehaviour
         Fadeanim.Play("RedFade");
         HPanim.SetTrigger("Play");
         yield return new WaitForSeconds(2.0f);
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.baburudenaosu, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.baburudenaosu, this.gameObject, 2);
         yield return new WaitForSeconds(3.3f);
         count = true;
     }
