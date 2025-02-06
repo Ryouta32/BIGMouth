@@ -31,7 +31,7 @@ public class WallEntrance : MonoBehaviour
                 rb.AddForce(other.gameObject.transform.up * power, ForceMode.Impulse);
                 if (pieceManager != null)
                     pieceManager.RemoveItem(other.transform);
-                //HPManager.hp -= 1;
+                HPManager.hp -= 1;
                 Destroy(other.gameObject, 5.0f);
             }
         }
