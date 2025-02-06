@@ -46,7 +46,7 @@ public class tutorialScript : MonoBehaviour
             StageAnima.SetTrigger("Start");
             //SceneManager.LoadScene(sceneName.ToString());
             Debug.Log("げーむかいしー");
-            uIScript.gameObject.SetActive(true);
+            //uIScript.gameObject.SetActive(true);
             if (obj != null)
                 Destroy(obj);
         }
