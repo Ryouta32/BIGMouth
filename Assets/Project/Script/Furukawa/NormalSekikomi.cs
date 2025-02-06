@@ -9,8 +9,12 @@ public class NormalSekikomi : MonoBehaviour
     ParticleSystem p_system;
     private List<ParticleCollisionEvent> p_CollisionEventList;
 
+    DragonVoice Dragonvoice;
+
     private void Start()
     {
+        Dragonvoice = GameObject.Find("DragonVoice").GetComponent<DragonVoice>();
+
         p_system = GetComponent<ParticleSystem>();
         p_CollisionEventList = new List<ParticleCollisionEvent>();
     }
@@ -30,6 +34,7 @@ public class NormalSekikomi : MonoBehaviour
                 if (Beta.name == "Mush")
                 {
                     DragonVoice.MushDown = true;
+                    Dragonvoice.enabled = true;
                 }
                 else if(Beta.name == "Tentacle")
                 {
