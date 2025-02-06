@@ -64,7 +64,7 @@ public class HPManager : MonoBehaviour
         //警告音鳴らす
         if(UI_HP.fillAmount >= 0.5f && HPanim.isPlaying)
         {
-            HPanim.Stop();
+            //HPanim.Stop();
         }
 
         if (UI_HP.fillAmount < 0.5f && count)
