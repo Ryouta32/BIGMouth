@@ -24,7 +24,7 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI text;
     float time;
-    float pontime=0;
+    float pontime = 0;
     [SerializeField] private OVRInput.RawButton actionBtn;
     [SerializeField] private OVRInput.RawButton showerBtn;
     [SerializeField] ParticleSystem ShowerObj;
@@ -48,6 +48,12 @@ public class BouSakiScript : MonoBehaviour
     [SerializeField] Slider slider;
     [SerializeField] Slider sliderLight;
     [SerializeField] GameClearSC clearSC;
+    [SerializeField] Image showerUILight;
+    [SerializeField] Vector3 showerUIScale;
+    [SerializeField] Vector3 defaultShowerUIScale;
+    [SerializeField] GameObject lightLine;
+    [SerializeField] Transform lineEndTra;
+    [SerializeField] Transform lineStartTra;
     bool on = true;
     Vector3 hitpoint;
     public bool OnHale;
@@ -68,14 +74,16 @@ public class BouSakiScript : MonoBehaviour
 
     [SerializeField] GameObject yogosi;
     [SerializeField] float showerSpeed = 10;
-    float ShowerPointVal=0;
-
+    float ShowerPointVal = 0;
+    bool showerOn;
     void Start()
     {
         hitpoint = Vector3.zero;
         slider.maxValue = showerLimit;
         sliderLight.maxValue = showerLimit;
         showerPoint = showerThreshold;
+        sliderLight.maxValue = showerPoint;
+        slider.value = showerPoint;
     }
 
     void Update()
@@ -85,7 +93,22 @@ public class BouSakiScript : MonoBehaviour
         if (ShowerPointVal >= showerLimit)
             ShowerPointVal = showerLimit;
 
-        ShowerPointVal = Mathf.Lerp(slider.value,showerPoint,Time.deltaTime);
+        if (slider.value + 0.1f < showerPoint)
+        {
+            showerUILight.gameObject.SetActive(true);
+            slider.transform.localScale = Vector3.Lerp(slider.transform.localScale, showerUIScale, Time.deltaTime * 10);
+            sliderLight.gameObject.transform.localScale = Vector3.Lerp(sliderLight.gameObject.transform.localScale, showerUIScale, Time.deltaTime * 10);
+            //slider.gameObject.transform.localScale = showerUIScale;
+            //sliderLight.gameObject.transform.localScale = showerUIScale;
+        }
+        else
+        {
+            showerUILight.gameObject.SetActive(false);
+            slider.transform.localScale = Vector3.Lerp(slider.transform.localScale, defaultShowerUIScale, Time.deltaTime * 10);
+            sliderLight.gameObject.transform.localScale = Vector3.Lerp(sliderLight.gameObject.transform.localScale, defaultShowerUIScale, Time.deltaTime * 10);
+
+        }
+        ShowerPointVal = Mathf.Lerp(slider.value, showerPoint, Time.deltaTime);
         slider.value = ShowerPointVal;
         sliderLight.value = showerPoint;
         //t += Time.deltaTime; 
@@ -93,6 +116,8 @@ public class BouSakiScript : MonoBehaviour
         //スキルの判定
         if (ShowerPointVal > 0)
         {
+            showerOn = true;
+
             if (on && OVRInput.Get(actionBtn) || (on && Input.GetKey(KeyCode.Space)))
             {
                 ShowerObj.Play();
@@ -102,8 +127,19 @@ public class BouSakiScript : MonoBehaviour
             }
         }
         else
-            ShowerStop();
+        {
+            if (showerOn)
+            {
+                ShowerStop();
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.NoGageShower, gameObject, 0.4f);
+            showerOn = false;
 
+            }
+        }
+        if (ShowerPointVal < 0 && (OVRInput.GetDown(actionBtn) || Input.GetKeyDown(KeyCode.Space)))
+        {
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.NoGageShower, gameObject,0.4f);
+        }
         if (OVRInput.GetUp(actionBtn) || Input.GetKeyUp(KeyCode.Space))
         {
             ShowerStop();
@@ -116,33 +152,33 @@ public class BouSakiScript : MonoBehaviour
             OnHale = true;
             Inhale();
         }
-        if (OVRInput.GetUp(showerBtn)|| Input.GetMouseButtonUp(0))
+        if (OVRInput.GetUp(showerBtn) || Input.GetMouseButtonUp(0))
             UpInhale();
     }
     IEnumerator ShowerTime()
     {
         on = false;
         yield return new WaitForSeconds(0.2f);
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.shower, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.shower, ShowerObj.gameObject);
         on = true;
     }
     private void ShowerStop()
     {
         ShowerObj.Stop();
         StopCoroutine("ShowerTime");
-        AudioManager.manager.StopPoint(gameObject);
+        AudioManager.manager.StopPoint(ShowerObj.gameObject);
         on = true;
     }
     private void Inhale()
     {
-        if (GetComponent<AudioSource>())
+        if (InHoleObj.gameObject.GetComponent<AudioSource>())
         {
-            if (!GetComponent<AudioSource>().isPlaying)
-                AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, this.gameObject);
+            if (!InHoleObj.gameObject.GetComponent<AudioSource>().isPlaying)
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, InHoleObj.gameObject);
         }
         else
-                AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, this.gameObject);
-        InHoleObj.GetComponent<ParticleSystem>().Play() ;
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.suction, InHoleObj.gameObject);
+        InHoleObj.GetComponent<ParticleSystem>().Play();
         //StartCoroutine("UpInhale");
     }
     private void UpInhale()
@@ -151,7 +187,7 @@ public class BouSakiScript : MonoBehaviour
         OnHale = false;
         InHoleObj.GetComponent<ParticleSystem>().Stop();
 
-        GetComponent<AudioSource>().Stop();
+        InHoleObj.GetComponent<AudioSource>().Stop();
         //image.sprite = NoholeSp;
         //cool = coolTime;
     }
@@ -163,7 +199,7 @@ public class BouSakiScript : MonoBehaviour
 
         if (other.transform.tag == "Wall")
         {
-            showerPoint += Time.deltaTime;
+            showerPoint += Time.deltaTime*showerHeelPower;
             time += Time.deltaTime;
             pontime += Time.deltaTime;
             if (time > 0.8f)
@@ -174,7 +210,7 @@ public class BouSakiScript : MonoBehaviour
             if (pontime > 0.15f)
             {
                 pontime = 0;
-                AudioManager.manager.PlayPoint(AudioManager.manager.data.lowpon, gameObject,0.5f);
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.lowpon, gameObject, 0.5f);
             }
         }
     }
@@ -205,7 +241,7 @@ public class BouSakiScript : MonoBehaviour
             Instantiate(ShineEffect, transform.position, transform.rotation);
         }
         if (other.tag == "Wall")
-            showerPoint += Time.deltaTime*showerHeelPower;
+            showerPoint += Time.deltaTime * showerHeelPower;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -318,13 +354,19 @@ public class BouSakiScript : MonoBehaviour
             obj.GetComponent<SuikomiScript>().SetClear(clearSC);
 
     }
+    public void LineSet(float point)
+    {
+        GameObject obj = Instantiate(lightLine, lineEndTra.position, Quaternion.identity, transform);
+        obj.GetComponent<showerLine>().SetPotision(point, lineStartTra, this);
+    }
     public Vector3 GetHit() => hitpoint;
     public void SetHit(Vector3 x) => hitpoint = x;
     public float GetInhaleDis() => inHaleDis;
     public bool GetInHale() => OnHale;
     public float GetInHaleSpeed() => inHaleSpeed;
-    public void AddShowerPoint(float x) {
-       showerPoint = x; 
+    public void AddShowerPoint(float x)
+    {
+        showerPoint = x;
     }
     //public float GetCool() => cool / coolTime;
 }

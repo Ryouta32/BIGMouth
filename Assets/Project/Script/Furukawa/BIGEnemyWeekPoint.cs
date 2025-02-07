@@ -21,7 +21,6 @@ public class BIGEnemyWeekPoint : MonoBehaviour
         if (bigSC.GetInvincible())
             return;
             count++;
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, this.gameObject);
         if (count >= bigSC.rubCount)
         {
             //爆発
@@ -35,7 +34,12 @@ public class BIGEnemyWeekPoint : MonoBehaviour
             //    //bigSC.OBJScaleDown();
             //}
             bigSC.WeekBreak(barrier);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.gyaon, transform.parent.gameObject);
             Destroy(gameObject);
+        }
+        else
+        {
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.damage, this.gameObject);
         }
     }
     public void SetBig(BigEnemyScript big) => bigSC = big;

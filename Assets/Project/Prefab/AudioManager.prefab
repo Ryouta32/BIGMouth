@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8ead19f991138e14d93273d3abbc8dd3, type: 2}
-  BGMvol: 100
-  SEvol: 100
+  BGMvol: 1
+  SEvol: 1
 --- !u!82 &2093305452038900104
 AudioSource:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

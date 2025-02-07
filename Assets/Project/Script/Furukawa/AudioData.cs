@@ -48,6 +48,7 @@ public class AudioData : ScriptableObject
     [Tooltip("ポン高い")] public AudioClip highpon;
     [Tooltip("ポン低い")] public AudioClip lowpon;
     [Tooltip("吸った")] public AudioClip suuta;
+    [Tooltip("ゲージない時に吸い込もうとしたら")] public AudioClip NoGageShower;
 
     [Header("ステージ")]
     [Tooltip("S-5 emergency")] public AudioClip stageEnergency;
