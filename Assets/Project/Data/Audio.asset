@@ -42,6 +42,7 @@ MonoBehaviour:
   highpon: {fileID: 8300000, guid: 0e260a675d843134fbaf5fc98c368d5e, type: 3}
   lowpon: {fileID: 8300000, guid: 829a5aa15fa25c745a3993b3c1edd074, type: 3}
   suuta: {fileID: 8300000, guid: 3c15cd0a1630cc3438bfac7548769421, type: 3}
+  NoGageShower: {fileID: 8300000, guid: bb51f8c96d2964444a6eff4d1d62eb5f, type: 3}
   stageEnergency: {fileID: 8300000, guid: 5f29ec45cb81dc64495c7ab087279fe5, type: 3}
   stageEnergency2: {fileID: 8300000, guid: 663731989ea7f7b4c8bd8e3ebcd1b7ac, type: 3}
   kabekuzure: {fileID: 8300000, guid: 3ac05bbc0a8fae5459f2bcffb3d14212, type: 3}
@@ -86,7 +87,7 @@ MonoBehaviour:
   killAnnounce: {fileID: 8300000, guid: deced1c5a2907d745acb4b2cd10004fc, type: 3}
   wallTackle: {fileID: 0}
   wallBreak: {fileID: 0}
-  tutorial1: {fileID: 8300000, guid: f27a111bdf6a44948a27a35657c5c272, type: 3}
+  tutorial1: {fileID: 8300000, guid: 136954990d521aa42a107d8483f2d15a, type: 3}
   tutorial2: {fileID: 8300000, guid: dc21dba1ed3d66640994f5e4b06d0980, type: 3}
   tutorial3: {fileID: 8300000, guid: f3365893621f4c646b73d2d49d256b84, type: 3}
   tutorial4: {fileID: 8300000, guid: 696198cf5ad438144ac12fcdbad051cf, type: 3}

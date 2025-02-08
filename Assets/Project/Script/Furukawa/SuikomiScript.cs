@@ -8,7 +8,7 @@ public class SuikomiScript : MonoBehaviour
     private void OnDestroy()
     {
         //Debug.Log(gameObject.name);
-        sakiScript.AddShowerPoint(point);
+        sakiScript.LineSet(point);//ひかりのライン出してからポイント追加
         AudioManager.manager.PlayPoint(AudioManager.manager.data.suuta, sakiScript.gameObject);
         //if (clearSC != null)
         //    clearSC.Clear();

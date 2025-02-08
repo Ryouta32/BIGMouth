@@ -70,7 +70,7 @@ public class AudioManager : MonoBehaviour
             audioSource = obj.GetComponent<AudioSource>();
 
         audioSource.spatialBlend = 1;
-        audioSource.volume = manager.SEvol*val;
+        audioSource.volume = val;
         audioSource.PlayOneShot(clip);
     }
     public void PlayPoint(AudioClip clip, GameObject obj,int count)
