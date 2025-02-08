@@ -74,7 +74,7 @@ public class HPManager : MonoBehaviour
             StartCoroutine("UIcount");
         }
 
-        if (UI_HP.fillAmount <= 0 && childFlag)
+        if (UI_HP.fillAmount < 0.1f && childFlag)
         {
             childFlag = false;
             cc.Phase[0] = false;
@@ -82,7 +82,7 @@ public class HPManager : MonoBehaviour
             cc.CanvasActive();
             AudioManager.manager.PlayPoint(AudioManager.manager.data.stageEnergency, this.gameObject, 5);
         }
-        else if (UI_HP.fillAmount <= 0f)
+        else if (UI_HP.fillAmount < 0.1f)
         {
             Fadeanim.Play("RedFade");
         }
@@ -94,7 +94,7 @@ public class HPManager : MonoBehaviour
         Fadeanim.Play("RedFade");
         HPanim.SetBool("Play", true);
         yield return new WaitForSeconds(2.0f);
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.baburudenaosu, this.gameObject, 2);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.baburudenaosu, this.gameObject, 2.0f);
         yield return new WaitForSeconds(3.3f);
         count = true;
     }

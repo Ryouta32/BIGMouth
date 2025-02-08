@@ -16,11 +16,11 @@ public class DragonBrush : MonoBehaviour
             }
             if(count == 0)
             {
-                AudioManager.manager.PlayPoint(AudioManager.manager.data.ita, gameObject, 2);
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.ita, gameObject, 2.0f);
             }
             else if(count == 1)
             {
-                AudioManager.manager.PlayPoint(AudioManager.manager.data.bokujyanai, gameObject, 2);
+                AudioManager.manager.PlayPoint(AudioManager.manager.data.bokujyanai, gameObject, 2.0f);
             }
 
             count++;

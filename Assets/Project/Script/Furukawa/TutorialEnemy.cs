@@ -25,7 +25,8 @@ public class TutorialEnemy : MonoBehaviour
 
         if (SetOff)
         {
-            tutorialSC.SetPos(transform.position);
+            tutorialSC.SetPos(new Vector3(transform.position.x, transform.position.y, transform.position.z - 1.5f));
+            //tutorialSC.SetPos(transform.position);
             Destroy(gameObject);
         }
     }
