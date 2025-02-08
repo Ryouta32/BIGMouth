@@ -1983,7 +1983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PieceMaterial: {fileID: 2100000, guid: 418d04e4deb31a14c95e5852c2527f01, type: 2}
   StartTime: 10
-  waittime: 6
+  waittime: 5
   destroytime: 2
   power: 1
   fallcount: 99

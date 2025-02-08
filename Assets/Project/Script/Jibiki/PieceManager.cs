@@ -39,6 +39,8 @@ public class PieceManager : MonoBehaviour
 
     Rigidbody obj;
 
+    float time;
+
     void Start()
     {
         PieceParent = this.gameObject;
@@ -115,8 +117,13 @@ public class PieceManager : MonoBehaviour
                 HPManager.hpPiece -= 1;
                 Destroy(obj.gameObject, destroytime);
             }
+            time = waittime - (BetaText.betacount / 3);
 
-            yield return new WaitForSeconds(waittime);
+            if(time <= 1.0f)
+            {
+                time = 1.0f;
+            }
+            yield return new WaitForSeconds(time);
         }
     }
 

@@ -41,16 +41,16 @@ public class DragonVoice : MonoBehaviour
 
     void MushVoice()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.kinokotaosu, this.gameObject, 2);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.kinokotaosu, this.gameObject, 2.0f);
     }
 
     void TentacleVoice()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.syokusyutaosu, this.gameObject, 2);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.syokusyutaosu, this.gameObject, 2.0f);
     }
 
     void BothVoice()
     {
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.kinokotosyokusyu, this.gameObject, 2);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.kinokotosyokusyu, this.gameObject, 2.0f);
     }
 }
