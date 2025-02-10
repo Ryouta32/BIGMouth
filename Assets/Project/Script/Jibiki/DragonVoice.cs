@@ -16,7 +16,7 @@ public class DragonVoice : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(10);
 
             if (MushDown)
             {

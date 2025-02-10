@@ -21,7 +21,7 @@ public class HPManager : MonoBehaviour
     public static float time;
     float maxtime = 180.0f;
 
-    bool timeStop = false;
+    int UICount = 0;
 
     float ima;
 
@@ -94,8 +94,16 @@ public class HPManager : MonoBehaviour
         Fadeanim.Play("RedFade");
         HPanim.SetBool("Play", true);
         yield return new WaitForSeconds(2.0f);
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.baburudenaosu, this.gameObject, 2.0f);
+        if(UICount == 2)
+        {
+            UICount = 0;
+        }
+        if(UICount == 0)
+        {
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.baburudenaosu, this.gameObject, 2.0f);
+        }
         yield return new WaitForSeconds(3.3f);
         count = true;
+        UICount++;
     }
 }
