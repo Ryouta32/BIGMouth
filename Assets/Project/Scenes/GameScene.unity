@@ -710,6 +710,10 @@ PrefabInstance:
       propertyPath: showerSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8784399990056825994, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
+      propertyPath: showerHeelPower
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9083625445422866713, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1111,7 +1115,7 @@ PrefabInstance:
       objectReference: {fileID: 471258667}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: bossCount
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: debugmode

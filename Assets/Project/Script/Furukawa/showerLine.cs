@@ -30,8 +30,4 @@ public class showerLine : MonoBehaviour
         target = tra;
         saki = _saki;
     }
-    private void OnDestroy()
-    {
-        saki.AddShowerPoint(point);
-    }
 }

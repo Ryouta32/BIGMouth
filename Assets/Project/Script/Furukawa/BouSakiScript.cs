@@ -362,6 +362,7 @@ public class BouSakiScript : MonoBehaviour
     {
         GameObject obj = Instantiate(lightLine, lineEndTra.position, Quaternion.identity, transform);
         obj.GetComponent<showerLine>().SetPotision(point, lineStartTra, this);
+        AddShowerPoint(point);
     }
     public Vector3 GetHit() => hitpoint;
     public void SetHit(Vector3 x) => hitpoint = x;
@@ -370,7 +371,7 @@ public class BouSakiScript : MonoBehaviour
     public float GetInHaleSpeed() => inHaleSpeed;
     public void AddShowerPoint(float x)
     {
-        showerPoint = x;
+        showerPoint += x;
     }
     //public float GetCool() => cool / coolTime;
 }
