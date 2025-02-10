@@ -433,7 +433,7 @@ TextureImporter:
         width: 158
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,6 +441,27 @@ TextureImporter:
       bones: []
       spriteID: 1ac6d4475c2587d49830b95f812cfedd
       internalID: -442073069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouUI_4
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1006
+        width: 703
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c3f6578d981ae4ebd636939e7bdf07
+      internalID: -904812100
       vertices: []
       indices: 
       edges: []
