@@ -81,7 +81,7 @@ public class TutorialEnemy : MonoBehaviour
     {
         //anim.SetFloat("Speed", 0);
         stunEffect.SetActive(true);
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject, 0.5f);
         //UIキル状態にする
         tutorialSC.SetState(tutorialUIState.kill);
         SetState(EnemyData.State.stun);

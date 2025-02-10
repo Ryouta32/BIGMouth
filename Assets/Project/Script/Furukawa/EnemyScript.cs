@@ -136,7 +136,7 @@ public class EnemyScript : MonoBehaviour
         //スタンになったらアニメーション止める
         //anim.SetFloat("Speed", 0);
         stunEffect.SetActive(true);
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.stun,this.gameObject);
+        AudioManager.manager.PlayPoint(AudioManager.manager.data.stun,this.gameObject, 0.5f);
         yield return new WaitForSeconds(0.2f);
         SetState(EnemyData.State.stun);
 
