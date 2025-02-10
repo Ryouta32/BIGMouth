@@ -22,6 +22,7 @@ public class KOKOUIScript : MonoBehaviour
     {
         if (other.tag == "Brush")
         {
+        //AudioManager.manager.Play(AudioManager.manager.data.debug);
             tutorialScript.KOKO();
             Destroy(main);
         }
