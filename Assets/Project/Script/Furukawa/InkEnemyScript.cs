@@ -30,6 +30,7 @@ public class InkEnemyScript : MonoBehaviour
             time = 0;
 
             PaintManager paintManager = new PaintManager();
+        Debug.Log(collision.gameObject.name);
             switch (collision.transform.tag)
             {
                 case "Dragon":

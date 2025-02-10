@@ -68,21 +68,16 @@ public class EnemyScript : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.tag == "Brush")
-            rb.constraints = RigidbodyConstraints.FreezeAll;
+            rb.isKinematic = true;
         else
-            rb.constraints = RigidbodyConstraints.None;
+            rb.isKinematic = false;
     }
     private void OnCollisionExit(Collision collision)
     {
         if (collision.transform.tag == "Brush")
             rb.constraints = RigidbodyConstraints.None;
 
-        if (data.sutnCount <= 0)
-        {
-            StartCoroutine("Stun");
-        }
-        else
-            SetState(EnemyData.State.escape);
+        StunCheck();
     }
 
     //中ベタ用
@@ -129,6 +124,8 @@ public class EnemyScript : MonoBehaviour
             Instantiate(damageEffect, transform.position, Quaternion.identity);
             data.sutnCount--;
         }
+
+        StunCheck();
         //Debug.Log(data.sutnCount);
     }
     IEnumerator Stun()//スタン中の処理
@@ -149,6 +146,16 @@ public class EnemyScript : MonoBehaviour
     public void MoveAudio()
     {
         AudioManager.manager.PlayPoint(AudioManager.manager.data.move,this.gameObject);
+    }
+    private void StunCheck()
+    {
+
+        if (data.sutnCount <= 0)
+        {
+            StartCoroutine("Stun");
+        }
+        else
+            SetState(EnemyData.State.escape);
     }
     public void StunReturn() => data.sutnCount = _data.sutnCount;
     public void setManager(EnemyManager x) => manager = x;

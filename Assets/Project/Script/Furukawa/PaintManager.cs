@@ -20,14 +20,14 @@ public class PaintManager
         foreach (ContactPoint point in col.contacts)
         {
             hitPos = point.normal;
-            Ray ray = new Ray(tra.position, -hitPos);
+            Ray ray = new Ray(tra.position+(Vector3.up*0.1f), -hitPos);
             if (col.transform.GetComponent<InkCanvas>())
             {
+                    Debug.DrawLine(tra.position + (Vector3.up * 0.1f), -hitPos, Color.red, 1f);
                 bool success = true;
                 foreach (RaycastHit hit in Physics.RaycastAll(ray))
                 {
 
-                    Debug.DrawLine(tra.position, -hitPos, Color.red, 1f);
                     InkCanvas paint = hit.transform.GetComponent<InkCanvas>();
 
                     if (paint != null)
