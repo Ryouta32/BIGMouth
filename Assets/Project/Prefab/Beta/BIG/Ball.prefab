@@ -47,12 +47,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 263439384126c134c8f1c93410cd4c67, type: 2}
   matSpeed: 1
-  scaleSpeed: 1
+  scaleSpeed: 0.2
   max: 10
   border: 3
   overmatSpeed: 10
   BIGBETA: {fileID: 2523666926619658130, guid: 0c2fd76776987434c8eeedb26640cdec, type: 3}
-  MainBGM: {fileID: 1762101517440086154, guid: b878e8ec5c0d206459c5a103b8418a72, type: 3}
+  pa: {fileID: 0}
 --- !u!1001 &1700584784993701408
 PrefabInstance:
   m_ObjectHideFlags: 0

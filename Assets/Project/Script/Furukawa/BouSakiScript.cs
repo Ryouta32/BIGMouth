@@ -82,7 +82,7 @@ public class BouSakiScript : MonoBehaviour
         slider.maxValue = showerLimit;
         sliderLight.maxValue = showerLimit;
         showerPoint = showerThreshold;
-        sliderLight.maxValue = showerPoint;
+        sliderLight.maxValue = showerLimit;
         slider.value = showerPoint;
     }
 
@@ -92,6 +92,10 @@ public class BouSakiScript : MonoBehaviour
             showerPoint = showerLimit;
         if (ShowerPointVal >= showerLimit)
             ShowerPointVal = showerLimit;
+        if (showerPoint <= 0)
+            showerPoint = -0.1f;
+        if (ShowerPointVal <= 0)
+            ShowerPointVal = -0.1f;
 
         if (slider.value + 0.1f < showerPoint)
         {
