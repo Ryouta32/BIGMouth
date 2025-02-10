@@ -159,9 +159,11 @@ public class EnemyScript : MonoBehaviour
             if (GetComponent<NormalBetaCollision>())
             {
                 manager.killNormal();
+                manager.DestroyEnemys();
             }else if (GetComponent<MushroomManager>())
             {
                 manager.killMash();
+                manager.DestroyEnemys();
             }
             else
             {

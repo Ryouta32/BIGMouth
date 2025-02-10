@@ -117,7 +117,7 @@ public class PieceManager : MonoBehaviour
                 HPManager.hpPiece -= 1;
                 Destroy(obj.gameObject, destroytime);
             }
-            time = waittime - (BetaText.betacount / 3);
+            time = waittime - (BetaText.betacount / 4);
 
             if(time <= 1.0f)
             {

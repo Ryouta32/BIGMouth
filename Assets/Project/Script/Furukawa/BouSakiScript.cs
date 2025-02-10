@@ -370,7 +370,7 @@ public class BouSakiScript : MonoBehaviour
     public float GetInHaleSpeed() => inHaleSpeed;
     public void AddShowerPoint(float x)
     {
-        showerPoint = x;
+        showerPoint += x;
     }
     //public float GetCool() => cool / coolTime;
 }
