@@ -34,7 +34,25 @@ public class BetaLife : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        if(collision.gameObject.CompareTag(""))
+        if(collision.gameObject.CompareTag("Brush"))
         time = 0 ;
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Brush"))
+        {
+            time += Time.deltaTime;
+            if (time > 0.2f)
+            {
+                time = 0;
+                enemySC.HitDamage();
+
+            }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Brush"))
+            time = 0;
     }
 }
