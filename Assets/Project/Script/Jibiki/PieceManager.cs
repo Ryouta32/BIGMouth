@@ -123,7 +123,7 @@ public class PieceManager : MonoBehaviour
             {
                 time = 1.0f;
             }
-            yield return new WaitForSeconds(time);
+            yield return new WaitForSeconds(waittime);
         }
     }
 
