@@ -490,11 +490,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1929214901695738195, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3352100931364111347, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3583260703045846482, guid: 68f825498ac0dc54a9d1baac522236f9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -678,6 +678,8 @@ PlayableDirector:
     value: {fileID: 510890762}
   - key: {fileID: 7684865153816858531, guid: 055753d9ed3b9bf44a503503023ad581, type: 2}
     value: {fileID: 564803898}
+  - key: {fileID: -1194220780269006064, guid: 055753d9ed3b9bf44a503503023ad581, type: 2}
+    value: {fileID: 1864057273}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &979695756
@@ -1102,6 +1104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGMAudio
       objectReference: {fileID: 0}
+    - target: {fileID: 1762101517440086154, guid: b878e8ec5c0d206459c5a103b8418a72, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5120637240796755256, guid: b878e8ec5c0d206459c5a103b8418a72, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -1301,6 +1307,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff2fd6ceb17db54290a6886eb72dcb3, type: 3}
+--- !u!1 &1864057273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1762101517440086154, guid: b878e8ec5c0d206459c5a103b8418a72, type: 3}
+  m_PrefabInstance: {fileID: 1395611174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1979325193
 PrefabInstance:
   m_ObjectHideFlags: 0

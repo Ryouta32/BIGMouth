@@ -1115,7 +1115,7 @@ PrefabInstance:
       objectReference: {fileID: 471258667}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: bossCount
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4576570194212363637, guid: cbd8ab7e6660fae4ab5db07ad2afab7e, type: 3}
       propertyPath: debugmode
