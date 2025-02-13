@@ -132,15 +132,18 @@ public class EnemyScript : MonoBehaviour
     {
         //スタンになったらアニメーション止める
         //anim.SetFloat("Speed", 0);
-        stunEffect.SetActive(true);
-        AudioManager.manager.PlayPoint(AudioManager.manager.data.stun,this.gameObject, 0.5f);
-        yield return new WaitForSeconds(0.2f);
-        SetState(EnemyData.State.stun);
+        if (data.state != EnemyData.State.stun)
+        {
+            stunEffect.SetActive(true);
+            AudioManager.manager.PlayPoint(AudioManager.manager.data.stun, this.gameObject, 0.5f);
+            SetState(EnemyData.State.stun);
 
-        yield return new WaitForSeconds(data.sutnTime);
-        SetState(EnemyData.State.general);
-        StunReturn();
-        stunEffect.SetActive(false);
+            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(data.sutnTime);
+            SetState(EnemyData.State.general);
+            StunReturn();
+            stunEffect.SetActive(false);
+        }
         //anim.SetFloat("Speed", 1);
     }
     public void MoveAudio()
