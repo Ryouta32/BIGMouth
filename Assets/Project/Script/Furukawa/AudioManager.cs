@@ -13,6 +13,11 @@ public class AudioManager : MonoBehaviour
     int loopCount;
     private void Awake()
     {
+        if (manager != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
         source = GetComponent<AudioSource>();
         source.volume = BGMvol;
         manager = this;

@@ -50,6 +50,19 @@ public class BetaLife : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Brush"))
+        {
+            time += Time.deltaTime;
+            if (time > 0.2f)
+            {
+                time = 0;
+                enemySC.HitDamage();
+
+            }
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Brush"))
