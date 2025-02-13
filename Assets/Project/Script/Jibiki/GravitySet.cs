@@ -24,6 +24,7 @@ public class GravitySet : MonoBehaviour
     private bool rotate;
     bool isground;
     float graRay = 0;
+    float posY = 0;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -39,12 +40,24 @@ public class GravitySet : MonoBehaviour
     {
         move = false;
     }
+    public void SetY(float z)
+    {
+        if (!isground)
+        {
+            isground = true;
+            posY = z;
+        }
+    }
     void Update()
     {
         if (!ismove)
         {
             if (move)
+            {
+                if (isground)
+                    this.transform.position = new Vector3(transform.position.x, posY, transform.position.z);
                 this.transform.position += transform.forward * speed * Time.deltaTime;
+            }
             distance = 100;
             RaycastHit hit;
 
@@ -75,36 +88,36 @@ public class GravitySet : MonoBehaviour
                         //transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal);
                     }
                 }
-                //else if (Physics.Raycast(rayStartPos, -transform.up, out hit, 1f, mask))
-                //{
-                //    distance = hit.distance;
-                //    Debug.DrawRay(rayStartPos, -transform.up * hit.distance, Color.blue);
+            //else if (Physics.Raycast(rayStartPos, -transform.up, out hit, 1f, mask))
+            //{
+            //    distance = hit.distance;
+            //    Debug.DrawRay(rayStartPos, -transform.up * hit.distance, Color.blue);
 
-                //    if (distance < graRay)
-                //    {
-                //        //gravityVec = (transform.position - hit.point);
+            //    if (distance < graRay)
+            //    {
+            //        //gravityVec = (transform.position - hit.point);
 
-                //        if (gravityVec.x < 0.001f)
-                //            gravityVec.x = 0;
-                //        if (gravityVec.y < 0.001f)
-                //            gravityVec.y = 0;
-                //        if (gravityVec.z < 0.001f)
-                //            gravityVec.z = 0;
+            //        if (gravityVec.x < 0.001f)
+            //            gravityVec.x = 0;
+            //        if (gravityVec.y < 0.001f)
+            //            gravityVec.y = 0;
+            //        if (gravityVec.z < 0.001f)
+            //            gravityVec.z = 0;
 
-                //        isground = true;
-                //        //Vector3.Lerp(transform.position, hit.point, 1f);
-                //        //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
-                //        //transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
-                //        //rb.MoveRotation(rot * transform.rotation);
-                //    }
+            //        isground = true;
+            //        //Vector3.Lerp(transform.position, hit.point, 1f);
+            //        //Quaternion rot = Quaternion.FromToRotation(transform.up, hit.normal);
+            //        //transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
+            //        //rb.MoveRotation(rot * transform.rotation);
+            //    }
 
-                //}
-                //else
-                //{
-                //    gravityVec = Vector3.up;
-                //    isground=false;
-                //    //transform.transform.rotation = new Quaternion() ;
-                //}
+            //}
+            //else
+            //{
+            //    gravityVec = Vector3.up;
+            //    isground=false;
+            //    //transform.transform.rotation = new Quaternion() ;
+            //}
             //if (Physics.Raycast(player.transform.position, player.transform.transform.forward, out hit, Mathf.Infinity))
             //{
             //    Debug.DrawRay(player.transform.position, player.transform.transform.forward * hit.distance, Color.yellow);
@@ -128,8 +141,8 @@ public class GravitySet : MonoBehaviour
         if (!ismove)
         {
             rb.velocity = Vector3.zero;
-            //if(!isground)
-            rb.AddForce(gravityVec.normalized * -30f);
+            if (!isground)
+                rb.AddForce(gravityVec.normalized * -30f);
 
             //transform.rotation = Quaternion.FromToRotation(transform.up, gravityVec) * transform.rotation;
         }

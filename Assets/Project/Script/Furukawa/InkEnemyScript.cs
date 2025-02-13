@@ -11,7 +11,7 @@ public class InkEnemyScript : MonoBehaviour
     private PaintManager.UseMethodType DrauseMethodType = PaintManager.UseMethodType.RaycastHitInfo;
     [SerializeField]
     bool erase = false;
-
+    [SerializeField] GravitySet set;
     float time;
 
     [SerializeField, Range(0, 1)]
@@ -30,16 +30,21 @@ public class InkEnemyScript : MonoBehaviour
             time = 0;
 
             PaintManager paintManager = new PaintManager();
-        Debug.Log(collision.gameObject.name);
+
             switch (collision.transform.tag)
             {
                 case "Dragon":
                     paintManager.Paint(collision, DrauseMethodType, !erase, brush, transform, true, collision.transform.tag);
                     break;
                 case "Wall":
+                    if (set != null)
+                        set.SetY(transform.position.y);
                     paintManager.Paint(collision, useMethodType, erase, brush, transform, false, collision.transform.tag);
+                    
                     break;
                 case "Plane":
+                    if (set != null)
+                        set.SetY(transform.position.y);
                     brush.brushScale = 0.01f;
                     paintManager.Paint(collision, useMethodType, erase, brush, transform, false, collision.transform.tag);
                     break;

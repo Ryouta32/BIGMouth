@@ -29,7 +29,7 @@ public class tutorialScript : MonoBehaviour
     {
         if (!isClear&&koko)
         {
-            if ((!AudioManager.manager.GetSource().isPlaying && isAudio) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) && isAudio) || Input.GetKeyDown(KeyCode.LeftShift))
+            if ((!AudioManager.manager.GetSource().isPlaying && isAudio) || (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger) && isAudio) || Input.GetKeyDown(KeyCode.LeftShift))
             {
                 isAudio = false;
                 AudioManager.manager.GetSource().Stop();
