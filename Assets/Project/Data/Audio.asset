@@ -59,7 +59,7 @@ MonoBehaviour:
   help: {fileID: 8300000, guid: 74c820fd86057704d91536c2fa34de67, type: 3}
   haki: {fileID: 8300000, guid: 4acfb4065253c444fb123c7402315026, type: 3}
   gyaon: {fileID: 8300000, guid: 3a99f024a0fd09f48adc48b14f0bd1cf, type: 3}
-  konobaria: {fileID: 8300000, guid: 23c594fdc6825b045af07d8ca1ccba3c, type: 3}
+  konobaria: {fileID: 8300000, guid: ba8aef137ee743749aa7b64ca8fc3f01, type: 3}
   arigatou: {fileID: 8300000, guid: d8bb4cc6f57f6794297589538a7a63ca, type: 3}
   kinokotosyokusyu: {fileID: 8300000, guid: 9baef769302e72c4c9bc569d666ac9da, type: 3}
   kinokotosyokusyubaria: {fileID: 8300000, guid: b01a5e09c5e5f584a93eb4129c449336, type: 3}
@@ -70,11 +70,11 @@ MonoBehaviour:
   seki2: {fileID: 8300000, guid: 5e60b05550a2caf41ab7375e231b060b, type: 3}
   baburudenaosu: {fileID: 8300000, guid: 15410fff28f6d824aa72b0b77507cfac, type: 3}
   bigbetadeta: {fileID: 8300000, guid: 38eec04ff79b5eb4c87ba72983bc486d, type: 3}
-  bigbetaato: {fileID: 8300000, guid: c8e155bdddec7034da3d857b8665e94f, type: 3}
-  barriardeta: {fileID: 8300000, guid: 9d1f070a936e19d4faff7373c2be537c, type: 3}
-  barriarkowareta: {fileID: 8300000, guid: 78091f62cd3ad0240bd278aa9479571e, type: 3}
-  ita: {fileID: 8300000, guid: aeec966ee278f3341bc681cdb1e38e81, type: 3}
-  bokujyanai: {fileID: 8300000, guid: d057f80718338a04e9ca58044c59ed3c, type: 3}
+  bigbetaato: {fileID: 8300000, guid: b9e72f70db631174aa98758d8db046d5, type: 3}
+  barriardeta: {fileID: 8300000, guid: fc669433ca691154fa9fc95b0f665b1e, type: 3}
+  barriarkowareta: {fileID: 8300000, guid: 730c14a8ed6cdfe46ae9069c3dbadd55, type: 3}
+  ita: {fileID: 8300000, guid: 7cdc699eabead244c814802eb8e7eead, type: 3}
+  bokujyanai: {fileID: 8300000, guid: 48e5c8b2243b75d4fa45e6d84713a9a9, type: 3}
   worldBreak: {fileID: 8300000, guid: 04008b3d46f96d74b84af07751abe13c, type: 3}
   worldBreakAbout: {fileID: 8300000, guid: 30f7186cdb30f524e9caf96625a0c399, type: 3}
   helpme: {fileID: 8300000, guid: 3d37b7558aa45ef429942e0059192539, type: 3}
